@@ -191,7 +191,7 @@
      "2025",
      "Bristol & West AC",
      "Highgate Harriers",
-     "Tonbridge AC",
+     "Cambridge & Coleridge AC",
      "6"
     ],
     [
@@ -4978,6 +4978,11 @@
    "added": "2026-10-23",
    "what": "6-stage 2026: no Belgrave senior men's team in the results.",
    "source": "ERRA Autumn Road Relays 2026 official results (race-results.co.uk)"
+  },
+  {
+   "added": "2026-10-23",
+   "what": "12-stage 2025: third place corrected from Tonbridge AC to Cambridge & Coleridge AC (Tonbridge were 4th), at Steve Gardner's request.",
+   "source": "ERRA National Road Relays, 12 April 2025, official results (race-results.co.uk nat1225.pdf)"
   }
  ]
 }
