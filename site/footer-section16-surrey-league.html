@@ -2,14 +2,20 @@
      Display only. Some Surrey League match reports carry the full results, laid out as on Steve's
      Surrey League compendium (slarchive.org) but in Belgrave's typefaces. The results are saved copies
      kept at github.com/stephengardner1/belgrave-harriers-data (slarchive/<article>.json), so they stay
-     on our page even if the compendium moves. -->
+     on our page even if the compendium moves. A report on both races gets a Men / Women switch; a report
+     with a "Full results" link per match gets each match's results under its link, and a report with
+     a section per race gets each race's results at the end of its section. -->
 <style>
 .bh-sl{--g9:#1e1a1a;--g7:#3d3838;--g5:#6b6565;--g2:#e7e3dc;--g1:#f3f1ec;font-family:"Public Sans",system-ui,sans-serif;color:var(--g9);
-  -webkit-font-smoothing:antialiased;max-width:850px;width:100%;margin:24px 0 48px;order:5}
+  -webkit-font-smoothing:antialiased;max-width:850px;width:100%;margin:24px 0 48px;order:5;container:bhsl/inline-size}
+.sqs-html-content .bh-sl{margin:28px 0 36px}
 .bh-sl *{box-sizing:border-box}
 .bh-sl .num{font-variant-numeric:tabular-nums}
 .bh-sl .mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
 .bh-sl-head{margin:0 0 20px}
+.bh-sl-sex{display:inline-flex;padding:2px;border-radius:8px;background:var(--g1);margin:0 0 14px}
+.bh-sl-sex button{font:inherit;font-size:14px;font-weight:500;line-height:20px;border:0;border-radius:6px;background:transparent;color:var(--g5);padding:4px 12px;cursor:pointer}
+.bh-sl-sex button[aria-pressed="true"]{background:#fff;color:var(--g9);box-shadow:0 1px 2px rgba(0,0,0,.05)}
 .bh-sl-meta{font-size:14px;line-height:20px;color:var(--g5);margin:0 0 2px}
 .bh-sl-venue{font:600 28px/1.15 "Castoro Belgrave",Georgia,serif;color:var(--g9);margin:0 0 8px;letter-spacing:-.005em}
 .bh-sl-line{display:flex;align-items:center;gap:6px;font-size:14px;line-height:22px;color:var(--g5);margin:0}
@@ -27,7 +33,7 @@
 .bh-sl-panel{display:none;position:absolute;z-index:20;left:0;top:calc(100% + 8px);width:min(448px,calc(100vw - 32px));background:#fff;border:1px solid var(--g2);
   border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.08);padding:12px 14px;font-size:14px;line-height:20px;color:var(--g7)}
 .bh-sl-fq.open .bh-sl-panel{display:block}
-.bh-sl-panel p{margin:0 0 10px}
+.bh-sl-panel>div{margin:0 0 10px}.bh-sl-panel>div:last-child{margin:0}
 .bh-sl-panel .sm{font-size:12px;line-height:16px;color:var(--g5)}
 .bh-sl-panel .t{color:var(--g9);font-weight:600;margin:0}
 .bh-sl-panel .t span{font-weight:400;color:var(--g5)}
@@ -82,7 +88,7 @@
 .bh-sl-src a{color:var(--g5);text-decoration:underline;text-decoration-color:#cfc9c0;text-underline-offset:2px}
 .bh-sl-src a:hover{color:#7a001d}
 .bh-sl button:focus-visible,.bh-sl a:focus-visible{outline:2px solid #7a001d;outline-offset:2px}
-@media (max-width:820px){
+@container bhsl (max-width:760px){
   .bh-sl-tabs{display:inline-flex}
   .bh-sl-cols{display:block}
   .bh-sl-ind{padding-right:0;border-right:0}
@@ -92,8 +98,8 @@
   .bh-sl .c-pos{width:34px}.bh-sl .c-pts{width:32px}.bh-sl .c-club{width:58px}
   .bh-sl .nm{font-size:13px}
 }
-@media (min-width:821px){.bh-sl [data-pane][hidden]{display:block}}
-@media (max-width:420px){.bh-sl .sc span{width:20px}.bh-sl .team .c-pos{width:20px}.bh-sl .team .c-tn{width:40px}.bh-sl .team .c-tp{width:40px;padding-right:6px}.bh-sl-venue{font-size:24px}}
+@container bhsl (min-width:761px){.bh-sl [data-pane][hidden]{display:block}}
+@container bhsl (max-width:420px){.bh-sl .sc span{width:20px}.bh-sl .team .c-pos{width:20px}.bh-sl .team .c-tn{width:40px}.bh-sl .team .c-tp{width:40px;padding-right:6px}.bh-sl-venue{font-size:24px}}
 </style>
 <script>
 (function(){
@@ -102,14 +108,44 @@
   var slug=location.pathname.replace(/\/$/,'').split('/').pop();
   var DATA='https://stephengardner1.github.io/belgrave-harriers-data/slarchive/';
   var SHOW=50; // finishers shown before "Show all"
+  var n=0;
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-  fetch(DATA+encodeURIComponent(slug)+'.json').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
+  function slugName(nm){return nm.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'')}
+  fetch(DATA+encodeURIComponent(slug)+'.json').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(file){
     if(!document.querySelector('link[href*="IBM+Plex+Mono"]')){var f=document.createElement('link');f.rel='stylesheet';
       f.href='https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap';document.head.appendChild(f)}
-    var n=0,clubs=d.clubs||{};
-    function vest(c,size){var s=(d.vests||{})[c]||d.vests[''];if(!s)return'';n++;
+    var clubs=file.clubs||{};
+    var blocks=file.blocks||[{races:[file]}];
+    blocks.forEach(function(bl){
+      var box=document.createElement('section');box.className='bh-sl';box.setAttribute('aria-label','Results');
+      var races=bl.races||[],cur=0,inner=document.createElement('div');
+      if(races.length>1){
+        var sw=document.createElement('div');sw.className='bh-sl-sex';sw.setAttribute('role','group');sw.setAttribute('aria-label','Race');
+        sw.innerHTML=races.map(function(r,i){return '<button type="button" aria-pressed="'+(i===0)+'">'+esc(r.sex||('Race '+(i+1)))+'</button>'}).join('');
+        [].slice.call(sw.children).forEach(function(b,i){b.addEventListener('click',function(){
+          [].slice.call(sw.children).forEach(function(x,j){x.setAttribute('aria-pressed',j===i)});cur=i;draw(inner,races[i],clubs)})});
+        box.appendChild(sw);
+      }
+      box.appendChild(inner);draw(inner,races[0],clubs);
+      // where it goes: under the article's own link to these results, or at the end of the article
+      var at=null,after=[].concat(bl.after||[]);
+      if(after.length){var a=[].slice.call(article.querySelectorAll('a[href]')).filter(function(x){
+        return after.indexOf(x.getAttribute('href'))>=0||after.indexOf(x.href)>=0})[0];if(a)at=a.closest('p,h1,h2,h3,h4,li')||a}
+      if(!at&&bl.afterText){var norm=function(t){return t.replace(/\s+/g,' ').trim().toLowerCase()},want=norm(bl.afterText);
+        at=[].slice.call(article.querySelectorAll('.sqs-html-content p,.sqs-html-content h2,.sqs-html-content h3,.sqs-html-content h4,.sqs-html-content li')).filter(function(x){return norm(x.textContent).indexOf(want)===0})[0]||null}
+      if(at){at.parentNode.insertBefore(box,at.nextSibling);
+        // a text column is narrower than the article: let the results use the full width
+        var fit=function(){box.style.width='';box.style.maxWidth='';var lw=layout.getBoundingClientRect().width,bw=box.getBoundingClientRect().width;
+          if(lw-bw>40){box.style.width=Math.min(850,lw)+'px';box.style.maxWidth='none'}};
+        fit();var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(fit,150)});
+      } else layout.parentNode.insertBefore(box,layout.nextSibling);
+    });
+  }).catch(function(){});
+
+  function draw(root,d,clubs){
+    clubs=Object.assign({},clubs,d.clubs||{});
+    function vest(c,size){var s=(d.vests||{})[c]||(d.vests||{})[''];if(!s)return'';n++;
       return s.replace('<svg','<svg class="bh-sl-vest" width="'+size+'" height="'+size+'" aria-hidden="true"').replace(/VID/g,'bhv'+n)}
-    function slugName(nm){return nm.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'')}
     function marks(ms){return (ms||[]).map(function(m){
       var t=m.t,ti=m.title?' title="'+esc(m.title)+'" aria-label="'+esc(m.title)+'"':'';
       if(t.charAt(0)==='(')return '<span class="tag">'+esc(t)+'</span>';
@@ -125,49 +161,47 @@
         rows.map(function(t){return '<tr data-team="'+esc(t.club)+'"><td class="c-pos num">'+esc(t.pos)+'</td><td class="c-v" data-pick="'+esc(t.club)+'" title="Show only '+esc(clubs[t.club]||t.club)+'">'+vest(t.club,16)+'</td><td class="c-tn"><button type="button" class="pick" data-pick="'+esc(t.club)+'" title="Show only '+esc(clubs[t.club]||t.club)+'">'+esc(t.club)+'</button>'+
           '</td><td class="c-tp num">'+esc(t.pts)+'</td><td><div class="sc num">'+t.scores.map(function(s){return '<span>'+esc(s)+'</span>'}).join('')+'</div></td></tr>'}).join('')+'</tbody></table>'}
     var f=d.field,ind=d.individual||[];
-    var box=document.createElement('section');box.className='bh-sl';box.setAttribute('aria-label','Results');
-    box.innerHTML=
-      '<div class="bh-sl-head"><p class="bh-sl-meta">'+esc(d.meta)+'</p><h2 class="bh-sl-venue">'+esc(d.venue)+'</h2>'+
-      (d.lines||[]).map(function(l){return '<p class="bh-sl-line">'+vest(l.club,14)+'<span><b>'+esc(l.strong)+'</b> '+esc(l.rest)+'</span></p>'}).join('')+
+    root.innerHTML=
+      '<div class="bh-sl-head"><div class="bh-sl-meta">'+esc(d.meta)+(d.sex?' · '+esc(d.sex):'')+'</div><div class="bh-sl-venue" role="heading" aria-level="3">'+esc(d.venue)+'</div>'+
+      (d.lines||[]).map(function(l){return '<div class="bh-sl-line">'+vest(l.club,14)+'<span><b>'+esc(l.strong)+'</b> '+esc(l.rest)+'</span></div>'}).join('')+
       (f?'<div class="bh-sl-fq"><button type="button" aria-expanded="false"><span style="color:var(--g5)">Field quality</span>'+
         '<span>Stacked <b class="num">'+f.stacked+'</b><span class="bh-sl-bar"><i style="width:'+f.stacked+'%"></i></span></span>'+
         '<span>Deep <b class="num">'+f.deep+'</b><span class="bh-sl-bar"><i style="width:'+f.deep+'%"></i></span></span>'+
         '<svg class="chev" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'+
-        '<div class="bh-sl-panel"><p class="sm">'+esc(f.intro)+'</p>'+f.items.map(function(it){return '<p class="t">'+esc(it[0])+' <span>· '+esc(it[1])+'</span></p><p>'+esc(it[2])+'</p>'}).join('')+
-        '<p class="sm">'+esc(f.note)+'</p>'+(f.link?'<p style="margin:0"><a href="'+esc(f.link[1])+'">'+esc(f.link[0])+'</a></p>':'')+'</div></div>':'')+
+        '<div class="bh-sl-panel"><div class="sm">'+esc(f.intro)+'</div>'+f.items.map(function(it){return '<div class="t">'+esc(it[0])+' <span>· '+esc(it[1])+'</span></div><div>'+esc(it[2])+'</div>'}).join('')+
+        '<div class="sm">'+esc(f.note)+'</div>'+(f.link?'<div><a href="'+esc(f.link[1])+'">'+esc(f.link[0])+'</a></div>':'')+'</div></div>':'')+
       '</div>'+
       '<div class="bh-sl-tabs" role="group" aria-label="Results view"><button type="button" aria-pressed="true" data-show="ind">Individual</button><button type="button" aria-pressed="false" data-show="a">A Teams</button><button type="button" aria-pressed="false" data-show="b">B Teams</button></div>'+
       '<div class="bh-sl-cols"><div class="bh-sl-ind" data-pane="ind"><div class="bh-sl-filter" hidden><span>Showing:</span><button type="button" class="bh-sl-chip" aria-label="Show all clubs"></button></div><table class="ind"><thead><tr><th class="lead c-pos">Pos</th><th class="c-pts">Pts</th><th class="c-club">Club</th><th>Name</th><th class="c-time">Time</th></tr></thead><tbody>'+
         ind.map(indRow).join('')+'</tbody></table>'+
         (ind.length>SHOW?'<button type="button" class="bh-sl-more">Show all '+ind.length+' finishers</button>':'')+'</div>'+
       '<div class="bh-sl-teams">'+teamTable('A Teams',d.aTeams||[],'a')+teamTable('B Teams',d.bTeams||[],'b')+'</div></div>'+
-      '<p class="bh-sl-src">Results from the <a href="'+esc(d.url)+'">Surrey League compendium</a>, with each runner\'s form against their last Surrey League race.</p>';
-    // small screens: one table at a time, as on the compendium
-    var panes=[].slice.call(box.querySelectorAll('[data-pane]')),tabs=[].slice.call(box.querySelectorAll('.bh-sl-tabs button'));
+      '<div class="bh-sl-src">Results from the <a href="'+esc(d.url)+'">Surrey League compendium</a>, with each runner\'s form against their last Surrey League race.</div>';
+    // small spaces: one table at a time, as on the compendium
+    var panes=[].slice.call(root.querySelectorAll('[data-pane]')),tabs=[].slice.call(root.querySelectorAll('.bh-sl-tabs button'));
     function show(k){panes.forEach(function(p){p.hidden=p.getAttribute('data-pane')!==k});tabs.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-show')===k)})}
     tabs.forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-show'))})});show('ind');
     // "Show all" and the club filter, as on the compendium: click a club's vest or letters to see only its runners
-    var more=box.querySelector('.bh-sl-more'),rows=[].slice.call(box.querySelectorAll('.ind tbody tr')),filt=box.querySelector('.bh-sl-filter'),chip=filt.querySelector('.bh-sl-chip');
+    var more=root.querySelector('.bh-sl-more'),rows=[].slice.call(root.querySelectorAll('.ind tbody tr')),filt=root.querySelector('.bh-sl-filter'),chip=filt.querySelector('.bh-sl-chip');
     var club=null,all=false;
     function apply(){
       rows.forEach(function(r,i){r.hidden=club?r.getAttribute('data-club')!==club:(!all&&i>=SHOW)});
       if(more)more.hidden=!!club||all;
       filt.hidden=!club;
       if(club)chip.innerHTML=vest(club,14)+esc(clubs[club]||club)+'<i aria-hidden="true">×</i>';
-      [].slice.call(box.querySelectorAll('tr[data-team]')).forEach(function(t){t.classList.toggle('on',t.getAttribute('data-team')===club)});
+      [].slice.call(root.querySelectorAll('tr[data-team]')).forEach(function(t){t.classList.toggle('on',t.getAttribute('data-team')===club)});
     }
     if(more)more.addEventListener('click',function(){all=true;apply()});
     chip.addEventListener('click',function(){club=null;apply()});
-    box.addEventListener('click',function(e){var p=e.target.closest('[data-pick]');if(!p||!box.contains(p))return;
+    root.addEventListener('click',function(e){var p=e.target.closest('[data-pick]');if(!p||!root.contains(p))return;
       var c=p.getAttribute('data-pick');club=club===c?null:c;apply();
-      if(p.closest('.team')){show('ind');var top=box.querySelector('.bh-sl-ind').getBoundingClientRect().top;if(top<80||top>innerHeight-100)window.scrollBy({top:top-100,behavior:'smooth'})}});
+      if(p.closest('.team')){show('ind');var top=root.querySelector('.bh-sl-ind').getBoundingClientRect().top;if(top<80||top>innerHeight-100)window.scrollBy({top:top-100,behavior:'smooth'})}});
     apply();
-    var fq=box.querySelector('.bh-sl-fq');
+    var fq=root.querySelector('.bh-sl-fq');
     if(fq){var fb=fq.querySelector('button');
       fb.addEventListener('click',function(e){e.stopPropagation();var o=fq.classList.toggle('open');fb.setAttribute('aria-expanded',o)});
       document.addEventListener('click',function(e){if(!fq.contains(e.target)){fq.classList.remove('open');fb.setAttribute('aria-expanded','false')}});
       document.addEventListener('keydown',function(e){if(e.key==='Escape'){fq.classList.remove('open');fb.setAttribute('aria-expanded','false')}})}
-    layout.parentNode.insertBefore(box,layout.nextSibling);
-  }).catch(function(){});
+  }
 })();
 </script>
