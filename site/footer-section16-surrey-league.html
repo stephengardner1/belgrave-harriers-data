@@ -63,7 +63,7 @@
 .bh-sl .team .c-v{width:22px;padding-right:4px}
 .bh-sl .team .c-tn{font-weight:500;width:46px}
 .bh-sl .team .c-tp{width:44px;text-align:right;padding-right:8px;font-weight:700}
-.bh-sl .sc{display:flex;flex-wrap:wrap;font-size:12px;line-height:16px;color:var(--g5)}
+.bh-sl .sc{display:flex;flex-wrap:wrap;column-gap:2px;font-size:12px;line-height:16px;color:var(--g5)}
 .bh-sl .sc span{width:22px;text-align:center}
 .bh-sl .team+.team{margin-top:36px}
 .bh-sl-more{display:block;width:100%;margin:8px 0 0;padding:10px;font:inherit;font-size:14px;font-weight:500;color:var(--g9);background:var(--g1);border:0;border-radius:8px;cursor:pointer}
@@ -106,7 +106,7 @@
       var k=t==='▲'?'up':t==='▼'?'down':t==='='?'same':t==='✦'?'new':'emo';
       return '<span class="mk '+k+'"'+ti+'>'+esc(t)+'</span>'}).join('')}
     function indRow(r,i){
-      var name=r.name==='Unknown'?'<span style="color:var(--g5)">Unknown</span>':'<a href="https://slarchive.org/athlete/'+slugName(r.ath||r.name)+'">'+esc(r.name)+'</a>';
+      var name=r.name==='Unknown'?'<span style="color:var(--g5)">Unknown</span>':'<a href="'+(d.athleteBase||'https://slarchive.org/athlete/')+slugName(r.ath||r.name)+'">'+esc(r.name)+'</a>';
       return '<tr'+(i>=SHOW?' data-more hidden':'')+'><td class="c-pos num">'+esc(r.pos)+'</td><td class="c-pts num">'+esc(r.pts)+'</td>'+
         '<td class="c-club" title="'+esc(clubs[r.club]||'')+'">'+vest(r.club,14)+'<span>'+esc(r.club)+'</span></td>'+
         '<td class="nm">'+name+marks(r.marks)+'</td><td class="c-time mono">'+esc(r.time)+'</td></tr>'}
