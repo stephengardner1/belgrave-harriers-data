@@ -66,6 +66,16 @@
 .bh-sl .sc{display:flex;flex-wrap:wrap;column-gap:2px;font-size:12px;line-height:16px;color:var(--g5)}
 .bh-sl .sc span{width:22px;text-align:center}
 .bh-sl .team+.team{margin-top:36px}
+.bh-sl .pick{display:inline-flex;align-items:center;gap:4px;font:inherit;color:inherit;background:none;border:0;padding:0;margin:0;cursor:pointer;white-space:nowrap}
+.bh-sl .pick:hover span,.bh-sl .pick:hover{color:#7a001d}
+.bh-sl .c-club .pick span{margin-left:0}
+.bh-sl .team .c-v{cursor:pointer}
+.bh-sl .team tr.on td{background:var(--g1)}
+.bh-sl-filter{display:flex;align-items:center;gap:10px;font-size:14px;line-height:20px;color:var(--g5);margin:0 0 10px}
+.bh-sl-filter[hidden]{display:none}
+.bh-sl-chip{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:14px;color:var(--g9);background:var(--g1);border:0;border-radius:6px;padding:4px 8px;cursor:pointer}
+.bh-sl-chip:hover{background:var(--g2)}
+.bh-sl-chip i{font-style:normal;color:var(--g5);font-size:16px;line-height:1;margin-left:2px}
 .bh-sl-more{display:block;width:100%;margin:8px 0 0;padding:10px;font:inherit;font-size:14px;font-weight:500;color:var(--g9);background:var(--g1);border:0;border-radius:8px;cursor:pointer}
 .bh-sl-more:hover{background:var(--g2)}
 .bh-sl-src{font-size:13px;line-height:18px;color:var(--g5);margin:20px 0 0}
@@ -107,12 +117,12 @@
       return '<span class="mk '+k+'"'+ti+'>'+esc(t)+'</span>'}).join('')}
     function indRow(r,i){
       var name=r.name==='Unknown'?'<span style="color:var(--g5)">Unknown</span>':'<a href="'+(d.athleteBase||'https://slarchive.org/athlete/')+slugName(r.ath||r.name)+'">'+esc(r.name)+'</a>';
-      return '<tr'+(i>=SHOW?' data-more hidden':'')+'><td class="c-pos num">'+esc(r.pos)+'</td><td class="c-pts num">'+esc(r.pts)+'</td>'+
-        '<td class="c-club" title="'+esc(clubs[r.club]||'')+'">'+vest(r.club,14)+'<span>'+esc(r.club)+'</span></td>'+
+      return '<tr data-club="'+esc(r.club)+'"'+(i>=SHOW?' hidden':'')+'><td class="c-pos num">'+esc(r.pos)+'</td><td class="c-pts num">'+esc(r.pts)+'</td>'+
+        '<td class="c-club">'+(r.club?'<button type="button" class="pick" data-pick="'+esc(r.club)+'" title="Show only '+esc(clubs[r.club]||r.club)+'">'+vest(r.club,14)+'<span>'+esc(r.club)+'</span></button>':vest('',14))+'</td>'+
         '<td class="nm">'+name+marks(r.marks)+'</td><td class="c-time mono">'+esc(r.time)+'</td></tr>'}
     function teamTable(label,rows,pane){
       return '<table class="team" data-pane="'+pane+'"><thead><tr><th class="lead" colspan="3">'+label+'</th><th style="text-align:right;padding-right:8px">Pts</th><th>Scores</th></tr></thead><tbody>'+
-        rows.map(function(t){return '<tr><td class="c-pos num">'+esc(t.pos)+'</td><td class="c-v" title="'+esc(clubs[t.club]||'')+'">'+vest(t.club,16)+'</td><td class="c-tn">'+esc(t.club)+
+        rows.map(function(t){return '<tr data-team="'+esc(t.club)+'"><td class="c-pos num">'+esc(t.pos)+'</td><td class="c-v" data-pick="'+esc(t.club)+'" title="Show only '+esc(clubs[t.club]||t.club)+'">'+vest(t.club,16)+'</td><td class="c-tn"><button type="button" class="pick" data-pick="'+esc(t.club)+'" title="Show only '+esc(clubs[t.club]||t.club)+'">'+esc(t.club)+'</button>'+
           '</td><td class="c-tp num">'+esc(t.pts)+'</td><td><div class="sc num">'+t.scores.map(function(s){return '<span>'+esc(s)+'</span>'}).join('')+'</div></td></tr>'}).join('')+'</tbody></table>'}
     var f=d.field,ind=d.individual||[];
     var box=document.createElement('section');box.className='bh-sl';box.setAttribute('aria-label','Results');
@@ -127,7 +137,7 @@
         '<p class="sm">'+esc(f.note)+'</p>'+(f.link?'<p style="margin:0"><a href="'+esc(f.link[1])+'">'+esc(f.link[0])+'</a></p>':'')+'</div></div>':'')+
       '</div>'+
       '<div class="bh-sl-tabs" role="group" aria-label="Results view"><button type="button" aria-pressed="true" data-show="ind">Individual</button><button type="button" aria-pressed="false" data-show="a">A Teams</button><button type="button" aria-pressed="false" data-show="b">B Teams</button></div>'+
-      '<div class="bh-sl-cols"><div class="bh-sl-ind" data-pane="ind"><table class="ind"><thead><tr><th class="lead c-pos">Pos</th><th class="c-pts">Pts</th><th class="c-club">Club</th><th>Name</th><th class="c-time">Time</th></tr></thead><tbody>'+
+      '<div class="bh-sl-cols"><div class="bh-sl-ind" data-pane="ind"><div class="bh-sl-filter" hidden><span>Showing:</span><button type="button" class="bh-sl-chip" aria-label="Show all clubs"></button></div><table class="ind"><thead><tr><th class="lead c-pos">Pos</th><th class="c-pts">Pts</th><th class="c-club">Club</th><th>Name</th><th class="c-time">Time</th></tr></thead><tbody>'+
         ind.map(indRow).join('')+'</tbody></table>'+
         (ind.length>SHOW?'<button type="button" class="bh-sl-more">Show all '+ind.length+' finishers</button>':'')+'</div>'+
       '<div class="bh-sl-teams">'+teamTable('A Teams',d.aTeams||[],'a')+teamTable('B Teams',d.bTeams||[],'b')+'</div></div>'+
@@ -136,8 +146,22 @@
     var panes=[].slice.call(box.querySelectorAll('[data-pane]')),tabs=[].slice.call(box.querySelectorAll('.bh-sl-tabs button'));
     function show(k){panes.forEach(function(p){p.hidden=p.getAttribute('data-pane')!==k});tabs.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-show')===k)})}
     tabs.forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-show'))})});show('ind');
-    var more=box.querySelector('.bh-sl-more');
-    if(more)more.addEventListener('click',function(){[].slice.call(box.querySelectorAll('tr[data-more]')).forEach(function(r){r.hidden=false});more.remove()});
+    // "Show all" and the club filter, as on the compendium: click a club's vest or letters to see only its runners
+    var more=box.querySelector('.bh-sl-more'),rows=[].slice.call(box.querySelectorAll('.ind tbody tr')),filt=box.querySelector('.bh-sl-filter'),chip=filt.querySelector('.bh-sl-chip');
+    var club=null,all=false;
+    function apply(){
+      rows.forEach(function(r,i){r.hidden=club?r.getAttribute('data-club')!==club:(!all&&i>=SHOW)});
+      if(more)more.hidden=!!club||all;
+      filt.hidden=!club;
+      if(club)chip.innerHTML=vest(club,14)+esc(clubs[club]||club)+'<i aria-hidden="true">×</i>';
+      [].slice.call(box.querySelectorAll('tr[data-team]')).forEach(function(t){t.classList.toggle('on',t.getAttribute('data-team')===club)});
+    }
+    if(more)more.addEventListener('click',function(){all=true;apply()});
+    chip.addEventListener('click',function(){club=null;apply()});
+    box.addEventListener('click',function(e){var p=e.target.closest('[data-pick]');if(!p||!box.contains(p))return;
+      var c=p.getAttribute('data-pick');club=club===c?null:c;apply();
+      if(p.closest('.team')){show('ind');var top=box.querySelector('.bh-sl-ind').getBoundingClientRect().top;if(top<80||top>innerHeight-100)window.scrollBy({top:top-100,behavior:'smooth'})}});
+    apply();
     var fq=box.querySelector('.bh-sl-fq');
     if(fq){var fb=fq.querySelector('button');
       fb.addEventListener('click',function(e){e.stopPropagation();var o=fq.classList.toggle('open');fb.setAttribute('aria-expanded',o)});
