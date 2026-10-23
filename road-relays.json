@@ -1,6 +1,6 @@
 {
  "taken": "2026-10-23",
- "source": "Steve Gardner's 'Bels at Sutton Park' Google Sheet, as shown on belgraveharriers.com/national-road-relays. Values copied exactly; only surrounding spaces trimmed.",
+ "source": "Steve Gardner's 'Bels at Sutton Park' Google Sheet, as shown on belgraveharriers.com/national-road-relays. Values copied exactly; only surrounding spaces trimmed. Rows for 2025 and 2026 were added later from official results; see 'additions'.",
  "tables": {
   "winners12": {
    "tab": "12-stage results",
@@ -193,6 +193,13 @@
      "Highgate Harriers",
      "Tonbridge AC",
      "6"
+    ],
+    [
+     "2026",
+     "Bristol & West AC",
+     "Tonbridge AC",
+     "Cambridge & Coleridge AC",
+     "19"
     ]
    ]
   },
@@ -211,6 +218,318 @@
      "Pace",
      "Winning team",
      "Delta"
+    ],
+    [
+     "2026",
+     "1",
+     "",
+     "Simon Coppard",
+     "17:11",
+     "19",
+     "3:30:00",
+     "",
+     "",
+     "3:16:49",
+     "-0:13:11"
+    ],
+    [
+     "2026",
+     "2",
+     "",
+     "Matthew Holman",
+     "18:33",
+     "19",
+     "3:30:00",
+     "",
+     "",
+     "3:16:49",
+     "-0:13:11"
+    ],
+    [
+     "2026",
+     "3",
+     "",
+     "James Hancock",
+     "16:31",
+     "19",
+     "3:30:00",
+     "",
+     "",
+     "3:16:49",
+     "-0:13:11"
+    ],
+    [
+     "2026",
+     "4",
+     "",
+     "Ray Lahart",
+     "18:25",
+     "19",
+     "3:30:00",
+     "",
+     "",
+     "3:16:49",
+     "-0:13:11"
+    ],
+    [
+     "2026",
+     "5",
+     "",
+     "Ollie Garrod",
+     "17:21",
+     "19",
+     "3:30:00",
+     "",
+     "",
+     "3:16:49",
+     "-0:13:11"
+    ],
+    [
+     "2026",
+     "6",
+     "",
+     "Daniel Prendergast",
+     "18:07",
+     "19",
+     "3:30:00",
+     "",
+     "",
+     "3:16:49",
+     "-0:13:11"
+    ],
+    [
+     "2026",
+     "7",
+     "",
+     "Jonathan Scott",
+     "17:56",
+     "19",
+     "3:30:00",
+     "",
+     "",
+     "3:16:49",
+     "-0:13:11"
+    ],
+    [
+     "2026",
+     "8",
+     "",
+     "Conall Whelan",
+     "17:30",
+     "19",
+     "3:30:00",
+     "",
+     "",
+     "3:16:49",
+     "-0:13:11"
+    ],
+    [
+     "2026",
+     "9",
+     "",
+     "Conall McNally",
+     "17:19",
+     "19",
+     "3:30:00",
+     "",
+     "",
+     "3:16:49",
+     "-0:13:11"
+    ],
+    [
+     "2026",
+     "10",
+     "",
+     "Nic Lukies",
+     "17:28",
+     "19",
+     "3:30:00",
+     "",
+     "",
+     "3:16:49",
+     "-0:13:11"
+    ],
+    [
+     "2026",
+     "11",
+     "",
+     "Raif Serif",
+     "16:31",
+     "19",
+     "3:30:00",
+     "",
+     "",
+     "3:16:49",
+     "-0:13:11"
+    ],
+    [
+     "2026",
+     "12",
+     "",
+     "Sam Sommerville",
+     "17:02",
+     "19",
+     "3:30:00",
+     "",
+     "",
+     "3:16:49",
+     "-0:13:11"
+    ],
+    [
+     "2025",
+     "1",
+     "",
+     "Matthew Merrick",
+     "14:46",
+     "6",
+     "3:07:00",
+     "5.08",
+     "02:54",
+     "3:02:35",
+     "-0:04:25"
+    ],
+    [
+     "2025",
+     "2",
+     "",
+     "Ollie Garrod",
+     "15:39",
+     "6",
+     "3:07:00",
+     "5.08",
+     "03:05",
+     "3:02:35",
+     "-0:04:25"
+    ],
+    [
+     "2025",
+     "3",
+     "",
+     "Hugo Fry",
+     "15:27",
+     "6",
+     "3:07:00",
+     "5.08",
+     "03:02",
+     "3:02:35",
+     "-0:04:25"
+    ],
+    [
+     "2025",
+     "4",
+     "",
+     "Rob Kelly",
+     "16:20",
+     "6",
+     "3:07:00",
+     "5.08",
+     "03:13",
+     "3:02:35",
+     "-0:04:25"
+    ],
+    [
+     "2025",
+     "5",
+     "",
+     "Eddie Jodrell",
+     "16:03",
+     "6",
+     "3:07:00",
+     "5.08",
+     "03:10",
+     "3:02:35",
+     "-0:04:25"
+    ],
+    [
+     "2025",
+     "6",
+     "",
+     "Sam Sommerville",
+     "15:56",
+     "6",
+     "3:07:00",
+     "5.08",
+     "03:08",
+     "3:02:35",
+     "-0:04:25"
+    ],
+    [
+     "2025",
+     "7",
+     "",
+     "Ben Coughlan",
+     "16:02",
+     "6",
+     "3:07:00",
+     "5.08",
+     "03:09",
+     "3:02:35",
+     "-0:04:25"
+    ],
+    [
+     "2025",
+     "8",
+     "",
+     "Henry Hart",
+     "15:15",
+     "6",
+     "3:07:00",
+     "5.08",
+     "03:00",
+     "3:02:35",
+     "-0:04:25"
+    ],
+    [
+     "2025",
+     "9",
+     "",
+     "Raif Serif",
+     "15:12",
+     "6",
+     "3:07:00",
+     "5.08",
+     "03:00",
+     "3:02:35",
+     "-0:04:25"
+    ],
+    [
+     "2025",
+     "10",
+     "",
+     "James Hancock",
+     "15:33",
+     "6",
+     "3:07:00",
+     "5.08",
+     "03:04",
+     "3:02:35",
+     "-0:04:25"
+    ],
+    [
+     "2025",
+     "11",
+     "",
+     "Andrew Fyfe",
+     "15:40",
+     "6",
+     "3:07:00",
+     "5.08",
+     "03:05",
+     "3:02:35",
+     "-0:04:25"
+    ],
+    [
+     "2025",
+     "12",
+     "",
+     "Nick Goolab",
+     "15:07",
+     "6",
+     "3:07:00",
+     "5.08",
+     "02:59",
+     "3:02:35",
+     "-0:04:25"
     ],
     [
      "2024",
@@ -4581,8 +4900,84 @@
      "00:19:48",
      "10",
      "01:49:56"
+    ],
+    [
+     "",
+     "2025",
+     "1",
+     "Raif Serif",
+     "00:16:08",
+     "25",
+     "01:43:24"
+    ],
+    [
+     "",
+     "2025",
+     "2",
+     "Samuel Harry",
+     "00:17:11",
+     "25",
+     "01:43:24"
+    ],
+    [
+     "",
+     "2025",
+     "3",
+     "James Hancock",
+     "00:17:16",
+     "25",
+     "01:43:24"
+    ],
+    [
+     "",
+     "2025",
+     "4",
+     "Larry Ryan",
+     "00:17:38",
+     "25",
+     "01:43:24"
+    ],
+    [
+     "",
+     "2025",
+     "5",
+     "William Driscoll",
+     "00:17:35",
+     "25",
+     "01:43:24"
+    ],
+    [
+     "",
+     "2025",
+     "6",
+     "Sam Sommerville",
+     "00:17:36",
+     "25",
+     "01:43:24"
     ]
    ]
   }
- }
+ },
+ "additions": [
+  {
+   "added": "2026-10-23",
+   "what": "12-stage 2026: winners row and Belgrave's 12 legs (19th of 59, 3:30:00). All legs the same length; distance not published in the results, so no pace.",
+   "source": "ERRA National Spring Road Relays, Sutton Park, 11 April 2026, official results (racetecresults.com; race-results.co.uk 'erra spring road relays 2026 - results.xlsx')"
+  },
+  {
+   "added": "2026-10-23",
+   "what": "12-stage 2025: Belgrave's 12 legs (6th, 3:07:00). All legs were 5.08 km that year; pace worked out from that.",
+   "source": "ERRA National Road Relays, Sutton Park, 12 April 2025, official results (race-results.co.uk nat1225.pdf)"
+  },
+  {
+   "added": "2026-10-23",
+   "what": "6-stage 2025: Belgrave's 6 legs (25th, 1:43:24). Added at the end; the page ranks legs by time.",
+   "source": "ERRA Autumn Road Relays, Sutton Park, 4 October 2025, official results (race-results.co.uk)"
+  },
+  {
+   "added": "2026-10-23",
+   "what": "6-stage 2026: no Belgrave senior men's team in the results.",
+   "source": "ERRA Autumn Road Relays 2026 official results (race-results.co.uk)"
+  }
+ ]
 }

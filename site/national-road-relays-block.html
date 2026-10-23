@@ -117,10 +117,15 @@
         '<td class="num mk">'+dash(tidy(x[4]))+'</td><td class="num wide dim">'+dash(x[7])+'</td><td class="num">'+dash(tidy(x[8]))+'</td>'+
         (all?'<td class="num wide">'+dash(x[5])+'</td>':'')+'</tr>'});
     h+='</tbody></table></div>'+(all?more(n):'');
-    return h+'<p class="bh-rr-note">Every Belgrave leg in the national 12-stage, alternating long and short legs. Tap Time or Pace to sort'+(all?'':', or pick “All years” to compare across years')+'.</p>'}
+    var same=!all&&r.length&&!r[0][2];
+    return h+'<p class="bh-rr-note">'+(same?'In '+esc(y)+' all twelve legs were the same length. ':'Every Belgrave leg in the national 12-stage'+(all?'':', alternating long and short legs')+'. ')+
+      'Tap Time or Pace to sort'+(all?'':', or pick “All years” to compare across years')+'. 2025 and 2026 are from the official ERRA results.</p>'}
 
   function l6(){
-    var r=T.legs6.rows.slice(1),y=state.year.l6;
+    var r=T.legs6.rows.slice(1).map(function(x,i){return {x:x,i:i}});
+    r.sort(function(a,b){return secs(a.x[4])-secs(b.x[4])||a.i-b.i});        // fastest first
+    r=r.map(function(o,k){var x=o.x.slice();x[0]=String(k+1);return x});
+    var y=state.year.l6;
     if(y!=='all')r=r.filter(function(x){return x[1]===y});
     var n=r.length,show=y==='all'&&!state.all?r.slice(0,SHOW):r;
     var h='<div class="bh-rr-scroll"><table><thead><tr><th class="num">#</th><th>Year</th><th class="num">Leg</th><th>Runner</th><th class="num">Leg time</th><th class="num wide">Team pos</th><th class="num wide">Team time</th></tr></thead><tbody>';
@@ -128,7 +133,7 @@
       h+='<tr><td class="num dim">'+esc(x[0])+'</td><td class="yr">'+esc(x[1])+'</td><td class="num">'+esc(x[2])+'</td><td class="who">'+nameCell(x[3])+'</td>'+
         '<td class="num mk">'+dash(tidy(x[4]))+'</td><td class="num wide">'+dash(x[5])+'</td><td class="num wide dim">'+dash(tidy(x[6]))+'</td></tr>'});
     return h+'</tbody></table></div>'+(y==='all'?more(n):'')+
-      '<p class="bh-rr-note">All Belgrave senior men’s national 6-stage legs since 1999, fastest first.</p>'}
+      '<p class="bh-rr-note">All Belgrave senior men’s national 6-stage legs since 1999, fastest first. 2025 is from the official ERRA results; Belgrave didn’t enter a men’s team in 2026.</p>'}
 
   function years(view){
     var r=view==='l12'?T.legs12.rows.slice(1).map(function(x){return x[0]}):T.legs6.rows.slice(1).map(function(x){return x[1]});
