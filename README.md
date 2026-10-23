@@ -15,6 +15,8 @@ show the results in its own house style without depending on Google.
   rows and columns exactly as readers saw them. Filtered tabs (for example
   "Belgrave finishers") keep only the rows the author's filter showed; hidden
   rows and columns stay hidden. Nothing has been edited.
+  Entries with a `link` were added later: results an article linked to on a site that
+  has since removed them, rebuilt from the official results (source given in each entry).
 - `hero-framing.json` — where the eyes sit in each news article's featured photo (found by face
   detection), so the hero photo at the top of an article can be framed with the eyeline on the top third.
   For the 548 older articles whose featured image is only a blank placeholder, it records the
