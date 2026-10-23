@@ -25,9 +25,10 @@
 .bh-vi .using h2{font:600 44px/1.12 var(--head);color:var(--ink)}
 @media (max-width:640px){.bh-vi .card-band .wrap{padding-left:20px;padding-right:20px}.bh-vi .using h2{font-size:33px}}
 
-.bh-vi .title{background:var(--cream);box-shadow:0 0 0 100vmax var(--cream);clip-path:inset(0 -100vmax);padding-block:56px 48px !important;margin-bottom:0}
+.bh-vi .title{background:var(--cream);box-shadow:0 0 0 100vmax var(--cream);clip-path:inset(-25px -100vmax 0 -100vmax);padding-block:56px 48px !important;margin-bottom:0}
 .bh-vi .title .jump a{border-bottom-color:#d9cbb0}
 .bh-vi .title + .chapter{border-top:0}
+@media (max-width:640px){.bh-vi .title{clip-path:inset(-42px -100vmax 0 -100vmax)}}
 </style>
 <div class="bh-vi">
 <section class="title wrap">
