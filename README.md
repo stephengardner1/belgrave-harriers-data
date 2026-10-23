@@ -34,3 +34,18 @@ show the results in its own house style without depending on Google.
 The file is published at
 `https://stephengardner1.github.io/belgrave-harriers-data/news-results.json`
 and read by code on the club website.
+
+## Fonts
+
+`fonts/` holds Castoro Belgrave, the club's headline typeface, used by the club
+website's custom CSS:
+
+- `CastoroBelgrave-Semibold` (weight 600) and `CastoroBelgrave-Bold` (700) for
+  headlines, subheads, news cards and navigation.
+- `CastoroBelgraveTitlingLight-Regular` for large heritage capitals, such as the
+  history page title.
+
+Each comes as `.woff2` with a `.woff` fallback. Castoro Belgrave is a modified
+version of [Castoro](https://github.com/TiroTypeworks/Castoro) by Tiro Typeworks,
+redrawn after the 1960s Belgravian mastheads. It is released under the SIL Open
+Font License 1.1, as the original requires; see `fonts/OFL.txt`.
