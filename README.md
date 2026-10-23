@@ -22,7 +22,9 @@ show the results in its own house style without depending on Google.
 - `road-relays.json` — Belgrave men at the national 12-stage and 6-stage road relays: 12-stage
   winners by year, every Belgrave 12-stage leg, and every Belgrave 6-stage leg. Copied on
   23 October 2026 from Steve Gardner's "Bels at Sutton Park" sheet for
-  belgraveharriers.com/national-road-relays. Nothing has been edited.
+  belgraveharriers.com/national-road-relays. Nothing has been edited. Later
+  additions (2025 and 2026 results, 6-stage winners from ERRA's official list, and one
+  correction) are listed with their sources under `additions` in the file.
 - `tools/snapshot_published.py` — the script that made the copy, kept for the
   record. `tools/eyes.py` and `tools/run_eyes.py` made the hero framing file.
 

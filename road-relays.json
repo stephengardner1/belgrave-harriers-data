@@ -4956,6 +4956,242 @@
      "01:43:24"
     ]
    ]
+  },
+  "winners6": {
+   "tab": "(new) official ERRA list",
+   "rows": [
+    [
+     "Year",
+     "1st team",
+     "2nd team",
+     "3rd team",
+     "Bel pos"
+    ],
+    [
+     "1995",
+     "Bingley Harriers",
+     "Salford Harriers",
+     "Tipton Harriers",
+     ""
+    ],
+    [
+     "1996",
+     "Bingley Harriers",
+     "Salford Harriers",
+     "Birchfield Harriers",
+     ""
+    ],
+    [
+     "1997",
+     "Birchfield Harriers",
+     "London Irish AC",
+     "Bingley Harriers",
+     ""
+    ],
+    [
+     "1998",
+     "Birchfield Harriers",
+     "Salford Harriers",
+     "Tipton Harriers",
+     ""
+    ],
+    [
+     "1999",
+     "Cardiff AAC",
+     "Tipton Harriers",
+     "Birchfield Harriers",
+     "4"
+    ],
+    [
+     "2000",
+     "Morpeth Harriers & AC",
+     "Tipton Harriers",
+     "Birchfield Harriers",
+     "6"
+    ],
+    [
+     "2001",
+     "Belgrave Harriers",
+     "Windsor, Slough, Eton & Hounslow AC",
+     "Cardiff AAC",
+     "1"
+    ],
+    [
+     "2002",
+     "Belgrave Harriers",
+     "Morpeth Harriers & AC",
+     "Birchfield Harriers",
+     "1"
+    ],
+    [
+     "2003",
+     "Belgrave Harriers",
+     "Salford Harriers",
+     "Bedford & County AC",
+     "1"
+    ],
+    [
+     "2004",
+     "Belgrave Harriers",
+     "Aldershot Farnham & District",
+     "Birchfield Harriers",
+     "1"
+    ],
+    [
+     "2005",
+     "Belgrave Harriers",
+     "Morpeth Harriers & AC",
+     "Notts AC",
+     "1"
+    ],
+    [
+     "2006",
+     "Newham & Essex Beagles",
+     "Tipton Harriers",
+     "Bristol & West AC",
+     "4"
+    ],
+    [
+     "2007",
+     "Belgrave Harriers",
+     "Leeds City AC",
+     "Newham & Essex Beagles",
+     "1"
+    ],
+    [
+     "2008",
+     "Belgrave Harriers",
+     "Notts AC",
+     "Newham & Essex Beagles",
+     "1"
+    ],
+    [
+     "2009",
+     "Newham & Essex Beagles",
+     "Belgrave Harriers",
+     "Aldershot Farnham & District",
+     "2"
+    ],
+    [
+     "2010",
+     "Bedford & County AC",
+     "Shettleston Harriers",
+     "Tipton Harriers",
+     "4"
+    ],
+    [
+     "2011",
+     "Aldershot Farnham & District",
+     "Birchfield Harriers",
+     "Newham & Essex Beagles",
+     "14"
+    ],
+    [
+     "2012",
+     "Newham & Essex Beagles",
+     "Liverpool Harriers & AC",
+     "Belgrave Harriers",
+     "3"
+    ],
+    [
+     "2013",
+     "Sale Harriers Manchester",
+     "Belgrave Harriers",
+     "Tipton Harriers",
+     "2"
+    ],
+    [
+     "2014",
+     "Aldershot Farnham & District",
+     "Highgate Harriers",
+     "Sale Harriers Manchester",
+     "10"
+    ],
+    [
+     "2015",
+     "Tonbridge AC",
+     "Derby AC",
+     "Central AC",
+     ""
+    ],
+    [
+     "2016",
+     "Cardiff AAC",
+     "Swansea Harriers",
+     "Liverpool Harriers & AC",
+     ""
+    ],
+    [
+     "2017",
+     "Swansea Harriers",
+     "Tonbridge AC",
+     "Lincoln Wellington AC",
+     ""
+    ],
+    [
+     "2018",
+     "Stockport Harriers & AC",
+     "Leeds City AC",
+     "Aldershot Farnham & District",
+     ""
+    ],
+    [
+     "2019",
+     "Leeds City AC",
+     "Aldershot Farnham & District",
+     "Cambridge & Coleridge AC",
+     ""
+    ],
+    [
+     "2020",
+     "-",
+     "-",
+     "-",
+     "-"
+    ],
+    [
+     "2021",
+     "Aldershot Farnham & District",
+     "Leeds City AC",
+     "Shaftesbury Barnet Harriers",
+     "30"
+    ],
+    [
+     "2022",
+     "Aldershot Farnham & District",
+     "Leeds City AC",
+     "Cambridge & Coleridge AC",
+     "35"
+    ],
+    [
+     "2023",
+     "Leeds City AC",
+     "Aldershot Farnham & District",
+     "Cambridge & Coleridge AC",
+     "17"
+    ],
+    [
+     "2024",
+     "Leeds City AC",
+     "Shaftesbury Barnet Harriers",
+     "Cambridge & Coleridge AC",
+     "29"
+    ],
+    [
+     "2025",
+     "Cambridge & Coleridge AC",
+     "Tonbridge AC",
+     "Highgate Harriers",
+     "25"
+    ],
+    [
+     "2026",
+     "Cambridge & Coleridge AC",
+     "Tonbridge AC",
+     "Western Tempo",
+     "-"
+    ]
+   ]
   }
  },
  "additions": [
@@ -4983,6 +5219,22 @@
    "added": "2026-10-23",
    "what": "12-stage 2025: third place corrected from Tonbridge AC to Cambridge & Coleridge AC (Tonbridge were 4th), at Steve Gardner's request.",
    "source": "ERRA National Road Relays, 12 April 2025, official results (race-results.co.uk nat1225.pdf)"
+  },
+  {
+   "added": "2026-10-23",
+   "what": "6-stage winners 1995–2025: first three teams each year at Sutton Park. Club names written out in full (the list abbreviates them). 2020 not held. 2012 was held at Clumber Park.",
+   "source": "ERRA Men's 6 Stage & Women's 4 Stage Relay Stats at Sutton Park, compiled by ERRA statistician Martin Duff, updated 7 October 2025 (englishroadrunningassociation.co.uk)"
+  },
+  {
+   "added": "2026-10-23",
+   "what": "6-stage winners 2026 and 'no Belgrave team' that year.",
+   "source": "ERRA Autumn Road Relays 2026 official results (race-results.co.uk)"
+  },
+  {
+   "added": "2026-10-23",
+   "what": "Belgrave's 6-stage positions come from the 'Final team pos' in the 6-stage legs table (best-placed team where Belgrave had two); 2012 (3rd) from the ERRA list. Blank where we have no record.",
+   "source": "Steve Gardner's sheet; ERRA list"
   }
- ]
+ ],
+ "notes6": "Lap lengths: 3.7 miles in 1996–2000, 5.847 km from 2001 to 2024, 5.47 km from 2025 after part of the road was closed (ERRA)."
 }

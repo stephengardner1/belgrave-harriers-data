@@ -10,6 +10,7 @@
     <div class="bh-seg" role="tablist" aria-label="Table">
       <button role="tab" data-view="w12" aria-selected="true">12-stage winners</button>
       <button role="tab" data-view="l12" aria-selected="false">12-stage legs</button>
+      <button role="tab" data-view="w6" aria-selected="false">6-stage winners</button>
       <button role="tab" data-view="l6" aria-selected="false">6-stage legs</button>
     </div>
     <label class="bh-rr-year" hidden><span>Year</span><select aria-label="Year"></select></label>
@@ -83,21 +84,22 @@
   function dash(v){return v===''||v==='-'?'<span class="dim">–</span>':esc(v)}
   function nameCell(n){var tag='';var m=n.match(/\s*\[([^\]]+)\]\s*$/);if(m){tag=m[1];n=n.slice(0,m.index)}
     return esc(n)+(tag?'<span class="tag">'+esc(tag)+'</span>':'')}
-  function posCell(p){return /^[A-Za-z]+$/.test(p)&&p!=='-'?'<span class="tag" style="margin:0">'+esc(p)+'</span>':dash(p)}
+  function posCell(p){if(p==='')return '';return /^[A-Za-z]+$/.test(p)&&p!=='-'?'<span class="tag" style="margin:0">'+esc(p)+'</span>':dash(p)}
   function isUs(s){return /^belgrave/i.test(s)}
   function th(label,key,num,wide){var c=(num?'num ':'')+(wide?'wide':'');
     var s=state.sort===key?' aria-sort="ascending"':'';
     return '<th'+(c.trim()?' class="'+c.trim()+'"':'')+s+'>'+(key?'<button type="button" data-sort="'+key+'">'+label+'</button>':label)+'</th>'}
   function more(n){return n>SHOW&&!state.all?'<button type="button" class="bh-rr-more">Show all '+n+' rows</button>':''}
 
-  function w12(){
-    var r=T.winners12.rows.slice(1);
+  function w12(six){
+    var r=(six?T.winners6:T.winners12).rows.slice(1);
     var h='<div class="bh-rr-scroll"><table><thead><tr><th>Year</th><th>Winners</th><th>Second</th><th>Third</th><th class="num">Belgrave</th></tr></thead><tbody>';
     r.slice().reverse().forEach(function(x){var pod=[x[1],x[2],x[3]].some(isUs);
       h+='<tr'+(pod?' class="us"':'')+'><td class="yr">'+esc(x[0])+'</td>'+
         [x[1],x[2],x[3]].map(function(t){return '<td'+(isUs(t)?' class="bel"':'')+'>'+dash(t)+'</td>'}).join('')+
         '<td class="num mk">'+posCell(x[4])+'</td></tr>'});
-    return h+'</tbody></table></div><p class="bh-rr-note">The first three teams each year, and where Belgrave finished. Years when Belgrave made the podium are highlighted.</p>'}
+    return h+'</tbody></table></div><p class="bh-rr-note">The first three teams each year, and where Belgrave finished. Years when Belgrave made the podium are highlighted.'+
+      (six?' Belgrave’s position is left blank where we have no record. 2020 wasn’t held; 2012 was run at Clumber Park. Source: ERRA’s official list of winners at Sutton Park, and the 2026 results.':'')+'</p>'}
 
   function l12(){
     var head=T.legs12.rows[0],r=T.legs12.rows.slice(1),y=state.year.l12,h='';
@@ -122,30 +124,33 @@
       'Tap Time or Pace to sort'+(all?'':', or pick “All years” to compare across years')+'. 2025 and 2026 are from the official ERRA results.</p>'}
 
   function l6(){
+    // from 2025 the lap is shorter (5.47 km, was 5.847 km), so those legs are listed after the
+    // others and not ranked against them
+    function short(x){return +x[1]>=2025}
     var r=T.legs6.rows.slice(1).map(function(x,i){return {x:x,i:i}});
-    r.sort(function(a,b){return secs(a.x[4])-secs(b.x[4])||a.i-b.i});        // fastest first
-    r=r.map(function(o,k){var x=o.x.slice();x[0]=String(k+1);return x});
+    r.sort(function(a,b){return (short(a.x)-short(b.x))||secs(a.x[4])-secs(b.x[4])||a.i-b.i});
+    var k=0;r=r.map(function(o){var x=o.x.slice();x[0]=short(x)?'':String(++k);x.s=short(x);return x});
     var y=state.year.l6;
     if(y!=='all')r=r.filter(function(x){return x[1]===y});
     var n=r.length,show=y==='all'&&!state.all?r.slice(0,SHOW):r;
     var h='<div class="bh-rr-scroll"><table><thead><tr><th class="num">#</th><th>Year</th><th class="num">Leg</th><th>Runner</th><th class="num">Leg time</th><th class="num wide">Team pos</th><th class="num wide">Team time</th></tr></thead><tbody>';
     show.forEach(function(x){
-      h+='<tr><td class="num dim">'+esc(x[0])+'</td><td class="yr">'+esc(x[1])+'</td><td class="num">'+esc(x[2])+'</td><td class="who">'+nameCell(x[3])+'</td>'+
+      h+='<tr><td class="num dim">'+esc(x[0])+'</td><td class="yr">'+esc(x[1])+'</td><td class="num">'+esc(x[2])+'</td><td class="who">'+nameCell(x[3])+(x.s?'<span class="tag">5.47 km</span>':'')+'</td>'+
         '<td class="num mk">'+dash(tidy(x[4]))+'</td><td class="num wide">'+dash(x[5])+'</td><td class="num wide dim">'+dash(tidy(x[6]))+'</td></tr>'});
     return h+'</tbody></table></div>'+(y==='all'?more(n):'')+
-      '<p class="bh-rr-note">All Belgrave senior men’s national 6-stage legs since 1999, fastest first. 2025 is from the official ERRA results; there is no Belgrave men’s team in the 2026 results.</p>'}
+      '<p class="bh-rr-note">All Belgrave senior men’s national 6-stage legs since 1999, fastest first. The lap was 3.7 miles in 1999 and 2000 and 5.847 km from 2001. Since 2025 it has been 5.47 km, so those legs are listed separately at the end. 2025 is from the official ERRA results; there is no Belgrave men’s team in the 2026 results.</p>'}
 
   function years(view){
     var r=view==='l12'?T.legs12.rows.slice(1).map(function(x){return x[0]}):T.legs6.rows.slice(1).map(function(x){return x[1]});
     return r.filter(function(v,i){return r.indexOf(v)===i}).sort().reverse()}
   function setYears(){
-    var v=state.view;if(v==='w12'){yearBox.hidden=true;return}
+    var v=state.view;if(v==='w12'||v==='w6'){yearBox.hidden=true;return}
     var ys=years(v);if(!state.year[v])state.year[v]=ys[0];
     sel.innerHTML='<option value="all">All years</option>'+ys.map(function(y){return '<option>'+y+'</option>'}).join('');
     sel.value=state.year[v];yearBox.hidden=false}
   function render(){
     if(!T)return;setYears();
-    body.innerHTML=state.view==='w12'?w12():state.view==='l12'?l12():l6()}
+    body.innerHTML=state.view==='w12'?w12():state.view==='w6'?w12(true):state.view==='l12'?l12():l6()}
 
   root.querySelector('.bh-seg').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
     root.querySelectorAll('[data-view]').forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});
@@ -156,7 +161,7 @@
   body.addEventListener('click',function(e){
     var s=e.target.closest('[data-sort]');if(s){state.sort=state.sort===s.dataset.sort?null:s.dataset.sort;render();return}
     if(e.target.closest('.bh-rr-more')){state.all=true;render()}});
-  var hm=(location.hash||'').match(/^#(w12|l12|l6)$/);
+  var hm=(location.hash||'').match(/^#(w12|l12|w6|l6)$/);
   if(hm){state.view=hm[1];root.querySelectorAll('[data-view]').forEach(function(x){x.setAttribute('aria-selected',x.dataset.view===state.view?'true':'false')})}
   fetch(DATA).then(function(r){if(!r.ok)throw 0;return r.json()})
     .then(function(d){T=d.tables;render()})
