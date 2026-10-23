@@ -4968,32 +4968,214 @@
      "Bel pos"
     ],
     [
+     "1969",
+     "City of Stoke AC",
+     "Manchester & District Harriers & AC",
+     "Belgrave Harriers",
+     "3"
+    ],
+    [
+     "1970",
+     "City of Stoke AC",
+     "Cambridge Harriers",
+     "Tipton Harriers",
+     "-"
+    ],
+    [
+     "1971",
+     "City of Stoke AC",
+     "Bolton United Harriers & AC",
+     "Sheffield United Harriers",
+     "-"
+    ],
+    [
+     "1972",
+     "City of Stoke AC",
+     "Liverpool Harriers & AC",
+     "Bolton United Harriers & AC",
+     "-"
+    ],
+    [
+     "1973",
+     "Bolton United Harriers & AC",
+     "Birmingham University",
+     "Cardiff AAC",
+     "-"
+    ],
+    [
+     "1974",
+     "Liverpool Harriers & AC",
+     "Invicta AC",
+     "Cardiff AAC",
+     "18"
+    ],
+    [
+     "1975",
+     "Liverpool Harriers & AC",
+     "Shaftesbury Harriers",
+     "Cardiff AAC",
+     "24"
+    ],
+    [
+     "1976",
+     "Liverpool Harriers & AC",
+     "Aldershot Farnham & District",
+     "Airdale & Spen Valley AC",
+     "-"
+    ],
+    [
+     "1977",
+     "Tipton Harriers",
+     "Aldershot Farnham & District",
+     "Airdale & Spen Valley AC",
+     "-"
+    ],
+    [
+     "1978",
+     "Cambridge & Coleridge AC",
+     "Shaftesbury Harriers",
+     "Aldershot Farnham & District",
+     "28"
+    ],
+    [
+     "1979",
+     "Bingley Harriers & AC",
+     "Gateshead Harriers & AC",
+     "Tipton Harriers",
+     "-"
+    ],
+    [
+     "1980",
+     "Tipton Harriers",
+     "Aldershot Farnham & District",
+     "Bolton United Harriers & AC",
+     "-"
+    ],
+    [
+     "1981",
+     "Aldershot Farnham & District",
+     "Invicta AC",
+     "Tipton Harriers",
+     "-"
+    ],
+    [
+     "1982",
+     "Tipton Harriers",
+     "Derby & County AC",
+     "Bingley Harriers & AC",
+     "-"
+    ],
+    [
+     "1983",
+     "Shaftesbury Harriers",
+     "Aldershot Farnham & District",
+     "Gateshead Harriers & AC",
+     "-"
+    ],
+    [
+     "1984",
+     "Stretford AC",
+     "Aldershot Farnham & District",
+     "Tipton Harriers",
+     "-"
+    ],
+    [
+     "1985",
+     "Gateshead Harriers & AC",
+     "Tipton Harriers",
+     "Stretford AC",
+     "-"
+    ],
+    [
+     "1986",
+     "Gateshead Harriers & AC",
+     "Tipton Harriers",
+     "Stretford AC",
+     "-"
+    ],
+    [
+     "1987",
+     "Gateshead Harriers & AC",
+     "Stretford AC",
+     "Aldershot Farnham & District",
+     "-"
+    ],
+    [
+     "1988",
+     "Swansea Harriers",
+     "Tipton Harriers",
+     "Birchfield Harriers",
+     "-"
+    ],
+    [
+     "1989",
+     "Stretford AC",
+     "Tipton Harriers",
+     "Bristol AC",
+     "-"
+    ],
+    [
+     "1990",
+     "Bingley Harriers & AC",
+     "Tipton Harriers",
+     "Stretford AC",
+     "-"
+    ],
+    [
+     "1991",
+     "Swansea Harriers",
+     "Shaftesbury Barnet Harriers",
+     "Tipton Harriers",
+     "-"
+    ],
+    [
+     "1992",
+     "Tipton Harriers",
+     "Bingley Harriers & AC",
+     "Copeland AC",
+     "-"
+    ],
+    [
+     "1993",
+     "Blackheath Harriers",
+     "Cannock & Stafford AC",
+     "Swansea Harriers",
+     "-"
+    ],
+    [
+     "1994",
+     "Bingley Harriers & AC",
+     "Blackheath Harriers",
+     "Salford Harriers",
+     "-"
+    ],
+    [
      "1995",
      "Bingley Harriers",
      "Salford Harriers",
      "Tipton Harriers",
-     ""
+     "-"
     ],
     [
      "1996",
      "Bingley Harriers",
      "Salford Harriers",
      "Birchfield Harriers",
-     ""
+     "-"
     ],
     [
      "1997",
      "Birchfield Harriers",
      "London Irish AC",
      "Bingley Harriers",
-     ""
+     "-"
     ],
     [
      "1998",
      "Birchfield Harriers",
      "Salford Harriers",
      "Tipton Harriers",
-     ""
+     "-"
     ],
     [
      "1999",
@@ -5112,35 +5294,35 @@
      "Tonbridge AC",
      "Derby AC",
      "Central AC",
-     ""
+     "-"
     ],
     [
      "2016",
      "Cardiff AAC",
      "Swansea Harriers",
      "Liverpool Harriers & AC",
-     ""
+     "-"
     ],
     [
      "2017",
      "Swansea Harriers",
      "Tonbridge AC",
      "Lincoln Wellington AC",
-     ""
+     "-"
     ],
     [
      "2018",
      "Stockport Harriers & AC",
      "Leeds City AC",
      "Aldershot Farnham & District",
-     ""
+     "-"
     ],
     [
      "2019",
      "Leeds City AC",
      "Aldershot Farnham & District",
      "Cambridge & Coleridge AC",
-     ""
+     "-"
     ],
     [
      "2020",
@@ -5234,6 +5416,11 @@
    "added": "2026-10-23",
    "what": "Belgrave's 6-stage positions come from the 'Final team pos' in the 6-stage legs table (best-placed team where Belgrave had two); 2012 (3rd) from the ERRA list. Blank where we have no record.",
    "source": "Steve Gardner's sheet; ERRA list"
+  },
+  {
+   "added": "2026-10-23",
+   "what": "6-stage winners 1969–1994 (first three teams and Belgrave position), and a dash for Belgrave in years Belgrave did not take part (1995–1998, 2015–2019). Club names written out in full.",
+   "source": "Alan Mead, 'English National 6-Stage Road Relay Championship – Senior Men', version 10.1, 22 October 2024 (belgraveharriers.info). Where it overlaps the ERRA list (1995–2024) the first three teams agree."
   }
  ],
  "notes6": "Lap lengths: 3.7 miles in 1996–2000, 5.847 km from 2001 to 2024, 5.47 km from 2025 after part of the road was closed (ERRA)."
