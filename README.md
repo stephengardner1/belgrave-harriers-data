@@ -15,8 +15,11 @@ show the results in its own house style without depending on Google.
   rows and columns exactly as readers saw them. Filtered tabs (for example
   "Belgrave finishers") keep only the rows the author's filter showed; hidden
   rows and columns stay hidden. Nothing has been edited.
+- `hero-framing.json` — where the eyes sit in each news article's featured photo (found by face
+  detection), so the hero photo at the top of an article can be framed with the eyeline on the top third.
+  Articles whose featured image is only a blank placeholder are left out.
 - `tools/snapshot_published.py` — the script that made the copy, kept for the
-  record.
+  record. `tools/eyes.py` and `tools/run_eyes.py` made the hero framing file.
 
 ## Rules
 
