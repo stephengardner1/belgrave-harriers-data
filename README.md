@@ -17,7 +17,8 @@ show the results in its own house style without depending on Google.
   rows and columns stay hidden. Nothing has been edited.
 - `hero-framing.json` — where the eyes sit in each news article's featured photo (found by face
   detection), so the hero photo at the top of an article can be framed with the eyeline on the top third.
-  Articles whose featured image is only a blank placeholder are left out.
+  For the 548 older articles whose featured image is only a blank placeholder, it records the
+  first photo inside the article instead (or that there is none).
 - `tools/snapshot_published.py` — the script that made the copy, kept for the
   record. `tools/eyes.py` and `tools/run_eyes.py` made the hero framing file.
 
