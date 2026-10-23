@@ -52,9 +52,28 @@ PHOTO_RESOLVER = None
 IMG_TOKEN = "\u27e6IMG{}\u27e7"
 
 
+def close_paragraphs(s):
+    """An unclosed paragraph ends where the next one starts (as browsers read it). One pass."""
+    out, pos, open_p = [], 0, False
+    for m in re.finditer(r"<(/?)p\b[^>]*>", s, re.I):
+        out.append(s[pos:m.start()])
+        if m.group(1):              # </p>
+            if open_p:
+                out.append(m.group(0)); open_p = False
+        else:                        # <p ...>
+            if open_p:
+                out.append("</p>")
+            out.append(m.group(0)); open_p = True
+        pos = m.end()
+    out.append(s[pos:])
+    if open_p:
+        out.append("</p>")
+    return "".join(out)
+
+
 def clean(fragment_html):
     """Old layout HTML -> simple HTML (paragraphs, bold, italics, lists, tables, photos)."""
-    soup = BeautifulSoup(fragment_html, "html.parser")
+    soup = BeautifulSoup(close_paragraphs(fragment_html), "html.parser")
     for c in soup.find_all(string=lambda s: isinstance(s, Comment)):
         c.extract()
     images = [i.get("src", "") for i in soup.find_all("img")]
@@ -69,11 +88,11 @@ def clean(fragment_html):
         t.decompose()
     for t in soup.find_all(True):
         style = (t.get("style") or "").replace(" ", "").lower()
-        if t.name in ("span", "font") and ("font-weight:700" in style or "font-weight:bold" in style):
+        if t.name in ("span", "font") and re.search(r"(^|;)font-weight:(700|bold)", style):
             t.name = "strong"
             t.attrs = {}
             continue
-        if t.name in ("span", "font") and "font-style:italic" in style:
+        if t.name in ("span", "font") and re.search(r"(^|;)font-style:italic", style):
             t.name = "em"
             t.attrs = {}
             continue
@@ -85,16 +104,16 @@ def clean(fragment_html):
             t.unwrap()
             continue
         t.attrs = {k: v for k, v in t.attrs.items() if k in ("colspan", "rowspan")}
-    # bold done with a style attribute was lost above; that's fine, headings handled separately
     html = str(soup)
     html = html.replace("\xa0", " ")
     html = re.sub(r"[ \t\r\n]+", " ", html)
-    html = re.sub(r"<(b|strong|i|em|u)>\s*</\1>", "", html)
+    html = re.sub(r"<(b|strong|i|em|u)></\1>", "", html)
+    html = re.sub(r"<(b|strong|i|em|u)>\s+</\1>", " ", html)
     html = re.sub(r"<p>\s*(<br/?>\s*)*</p>", "", html)
     html = re.sub(r"\s*<br/?>\s*</p>", "</p>", html)
-    html = re.sub(r"<(strong|b|em|i)>\s+", r"<\1>", html)
+    html = re.sub(r"\s*<(strong|b|em|i)>\s+", r" <\1>", html)   # keep the space, just outside the tag
+    html = re.sub(r"\s+</(strong|b|em|i)>\s*", r"</\1> ", html)
     html = re.sub(r"<p>\s+", "<p>", html)
-    html = re.sub(r"<p>((?:<(?:b|strong|i|em)>)*)([A-Z])((?:</(?:b|strong|i|em)>)*) (?=[a-z]{2,})", r"<p>\1\2\3", html)  # drop capitals
     html = re.sub(r"\s+</p>", "</p>", html)
     html = re.sub(r"(</p>|</table>|</ul>|</ol>)\s*", r"\1\n", html)
     # photos: each on its own line, just before the block it sat in, caption underneath
@@ -128,6 +147,12 @@ def clean(fragment_html):
     return html, images
 
 
+def heading_text(html):
+    """Text of a heading line as the reader saw it: formatting pieces are joined without adding spaces."""
+    h = re.sub(r"<br\s*/?>", " ", html)
+    return re.sub(r"\s+", " ", BeautifulSoup(h, "html.parser").get_text("")).strip()
+
+
 def text_of(html):
     return re.sub(r"\s+", " ", BeautifulSoup(html, "html.parser").get_text(" ")).strip()
 
@@ -146,7 +171,7 @@ def split_season_page(page_html):
             continue
         # the heading is the first paragraph that contains a date
         for i, p in enumerate(paras[:3]):
-            ptxt = text_of(p)
+            ptxt = heading_text(p)
             d, m = parse_date(ptxt)
             if d and len(ptxt) < 220:
                 break
@@ -167,6 +192,7 @@ def split_season_page(page_html):
 def headline_from_heading(heading):
     """'AAA Men's 12-Stage Road Relay Championship, Sutton Coldfield, 23 April 2005.'
     -> 'AAA Men's 12-Stage Road Relay Championship, Sutton Coldfield' (words unchanged)."""
+    heading = re.sub(r"\b(Day\s+\d+)\s*[-–]\s*(?=\d{1,2}\s+[A-Z][a-z]+\s+\d{4})", r"\1, ", heading)
     d, m = parse_date(heading)
     h = heading
     if m:
@@ -239,7 +265,7 @@ def extract_feature(page_html):
     html = re.sub(r"<strong>\s+", "<strong>", html)
     html = re.sub(r"<b>\s+", "<b>", html)
     paras = re.findall(r"<p>(.*?)</p>|(<table>.*?</table>)", html, re.S)
-    blocks = [(f"<p>{p}</p>" if p else t, text_of(p or t)) for p, t in paras]
+    blocks = [(f"<p>{p}</p>" if p else t, heading_text(p) if p else text_of(t)) for p, t in paras]
     # drop menu lines at the start and end
     def junk(b):
         return "<img" not in b[0] and (NAV.match(b[1]) or len(b[1]) < 3)

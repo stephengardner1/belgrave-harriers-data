@@ -45,7 +45,6 @@ def tidy_title(h):
     h = re.sub(r"^[\s\-–:,.|]+", "", h or "")
     h = re.sub(r"[\s,(]+[a-g]\s*=\s*\d{1,2}(st|nd|rd|th)?\b.*$", "", h)   # 'a=2, b=3' day labels and anything after
     h = re.sub(r":?\s*Date of release$", "", h, flags=re.I)
-    h = re.sub(r"^([A-Z]) (?=[a-z]{2,})", r"\1", h)    # old drop-capital styling: 'S lugfest' -> 'Slugfest'
     return h.strip()
 
 
@@ -144,6 +143,10 @@ for page in sorted(ix):
         short = []
         for e in dated:
             h = tidy_title(no_shouting(tidy_headline(headline_from_heading(e["heading"]), title)))
+            if re.fullmatch(r"(Date\s*:\s*)?(Mon|Tues|Wednes|Thurs|Fri|Satur|Sun)day", h):
+                own = re.sub(r"^Date\s*:\s*", "", e["heading"]).strip(" .")
+                own = re.sub(r"\s+(19|20)\d\d$", "", own)
+                h = f"{tidy_title(no_shouting(subject_of(title)))}: {own}"
             if e["words"] >= 150 and h:
                 body = e["body"]
                 writer = find_writer(body)
@@ -176,6 +179,8 @@ for page in sorted(ix):
     if sec == "skippers_corner":
         h = re.sub(r"^Skipper'?s Corner\s*[-–:]?\s*", "", h, flags=re.I) or h
     h = tidy_title(no_shouting(tidy_headline(h)))
+    if re.fullmatch(r"(Date\s*:\s*)?(Mon|Tues|Wednes|Thurs|Fri|Satur|Sun)day", h or ""):
+        h = tidy_title(no_shouting(subject_of(f["page_title"])))
     if not h:   # no title anywhere: use the article's own opening line if it is short
         first = next((t for b, t in f["blocks"] if t and len(t) < 90), "")
         h = tidy_title(no_shouting(first))

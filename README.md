@@ -66,8 +66,8 @@ Wayback Machine and is being restored to the News page, tagged "Archive".
   or resized.
 - `archive/photos.json` — for each photo: its original address on the old site, the date
   of the Wayback Machine copy, and the old page it appeared on.
-- `archive/stories/` — the 767 restored stories, one HTML file each, filed by year: 508 race
-  reports, 191 features (Skipper's Corner, obituaries, club news, history pieces) and 68
+- `archive/stories/` — the 774 restored stories, one HTML file each, filed by year: 514 race
+  reports, 192 features (Skipper's Corner, obituaries, club news, history pieces) and 68
   round-ups of the short results entries, one per old results page. Every paragraph is word for
   word as published on the old site; only the old layout code and menus were removed.
 - `archive/stories.json` — the index: title, date, categories, tags, writer and original page
