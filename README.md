@@ -19,6 +19,10 @@ show the results in its own house style without depending on Google.
   detection), so the hero photo at the top of an article can be framed with the eyeline on the top third.
   For the 548 older articles whose featured image is only a blank placeholder, it records the
   first photo inside the article instead (or that there is none).
+- `road-relays.json` — Belgrave men at the national 12-stage and 6-stage road relays: 12-stage
+  winners by year, every Belgrave 12-stage leg, and every Belgrave 6-stage leg. Copied on
+  23 October 2026 from Steve Gardner's "Bels at Sutton Park" sheet for
+  belgraveharriers.com/national-road-relays. Nothing has been edited.
 - `tools/snapshot_published.py` — the script that made the copy, kept for the
   record. `tools/eyes.py` and `tools/run_eyes.py` made the hero framing file.
 
