@@ -810,7 +810,9 @@
    "Archive",
    "Syreeta Stracey",
    "Helen Alsop",
-   "Getenesh Tamirat"
+   "Getenesh Tamirat",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2001/south-of-england-aa-womens-4-x-3851m-road-relay-rushmoor-arena-nr-alde-2001.html",
@@ -826,7 +828,8 @@
    "Mens Road&XC"
   ],
   "tags": [
-   "Archive"
+   "Archive",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2001/sweatshop-surrey-cc-league-mens-full-result-13-10-2001.html",
@@ -935,7 +938,8 @@
    "Womens Road&XC"
   ],
   "tags": [
-   "Archive"
+   "Archive",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2001/surrey-womens-cross-country-league-division-two-race-3-15-12-2001.html",
@@ -1759,7 +1763,9 @@
    "Padraic Buckley",
    "Vicky Edwards",
    "Peter Fallenius",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Surrey Road Relays"
   ],
   "writer": null,
   "file": "stories/2002/surrey-county-aa-road-relays-wimbledon-park-2002.html",
@@ -1796,7 +1802,9 @@
   ],
   "tags": [
    "Archive",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2002/south-of-england-aa-mens-6-x-6-kms-road-relay-rushmoor-arena-nr-alders-2002.html",
@@ -1814,7 +1822,8 @@
   "tags": [
    "Archive",
    "Padraic Buckley",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2002/sweatshop-mens-surrey-cc-league-division-one-race-1-brockwell-park-2002.html",
@@ -1832,7 +1841,8 @@
   "tags": [
    "Archive",
    "Maria Sharp",
-   "Getenesh Tamirat"
+   "Getenesh Tamirat",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2002/womens-surrey-cc-league-division-one-match-1-epsom-downs-2002.html",
@@ -1869,7 +1879,9 @@
    "Sutton Park",
    "6-Stage Road Relay",
    "Will Cockerell",
-   "Richard Ward"
+   "Richard Ward",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2002/aaa-mens-6-stage-road-relay-sutton-park-sutton-coldfield-2002.html",
@@ -1890,7 +1902,9 @@
    "4-Stage Road Relay",
    "Maria Sharp",
    "Getenesh Tamirat",
-   "Vicky Edwards"
+   "Vicky Edwards",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2002/aaa-womens-4-stage-road-relay-sutton-park-sutton-coldfield-2002.html",
@@ -1928,7 +1942,8 @@
    "Wimbledon Common",
    "Phil Carstairs",
    "Padraic Buckley",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2002/sweatshop-mens-surrey-cc-league-division-one-match-2-wimbledon-common-2002.html",
@@ -1947,7 +1962,8 @@
    "Archive",
    "Wimbledon Common",
    "Tilly Heaton",
-   "Syreeta Stracey"
+   "Syreeta Stracey",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2002/womens-surrey-cc-league-division-one-match-2-wimbledon-common-2002.html",
@@ -2069,7 +2085,8 @@
    "Tim Bayley",
    "Phil Carstairs",
    "Mike Webb",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2003/sweatshop-mens-surrey-cc-league-division-one-match-three-petersham-ric-2003.html",
@@ -2090,7 +2107,8 @@
    "Petersham",
    "Tilly Heaton",
    "Maria Sharp",
-   "Nina Mills"
+   "Nina Mills",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2003/womens-surrey-cc-league-division-one-race-three-petersham-richmond-par-2003.html",
@@ -2140,7 +2158,8 @@
    "Mens Road&XC"
   ],
   "tags": [
-   "Archive"
+   "Archive",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2003/sweatshop-mens-surrey-cc-league-division-one-match-four-farthing-downs-2003.html",
@@ -2191,7 +2210,8 @@
   "tags": [
    "Archive",
    "Maria Sharp",
-   "Steve Zealey"
+   "Steve Zealey",
+   "Road relays"
   ],
   "writer": null,
   "file": "stories/2003/thames-valley-5x3-5-miles-road-relay-stockley-park-2003.html",
@@ -2230,7 +2250,9 @@
    "James Browne",
    "Junior Galley",
    "Will Cockerell",
-   "Richard Ward"
+   "Richard Ward",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2003/seaa-12-stage-road-relay-milton-keynes-2003.html",
@@ -2248,7 +2270,9 @@
   "tags": [
    "Archive",
    "6-Stage Road Relay",
-   "Maria Sharp"
+   "Maria Sharp",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": "Catherine Eastham",
   "file": "stories/2003/seaa-womens-6-stage-road-relay-2003.html",
@@ -2270,7 +2294,9 @@
    "Maria Sharp",
    "Helen Alsop",
    "Getenesh Tamirat",
-   "Catherine Berry"
+   "Catherine Berry",
+   "Road relays",
+   "National road relays"
   ],
   "writer": "Catherine Eastham",
   "file": "stories/2003/aaa-6-stage-road-relay-sutton-park-sutton-coldfield-2003.html",
@@ -2292,7 +2318,9 @@
    "Maria Sharp",
    "Adam Zawadski",
    "Will Cockerell",
-   "Richard Ward"
+   "Richard Ward",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2003/aaa-mens-12-stage-road-relay-sutton-park-sutton-coldfield-2003.html",
@@ -3152,7 +3180,9 @@
    "Helen Alsop",
    "Simon Marwood",
    "Junior Galley",
-   "Harry Corbett"
+   "Harry Corbett",
+   "Road relays",
+   "Surrey Road Relays"
   ],
   "writer": null,
   "file": "stories/2003/surrey-county-road-relays-wimbledon-park-2003.html",
@@ -3194,7 +3224,9 @@
    "Charles Herrington",
    "Will Cockerell",
    "Richard Ward",
-   "Tim Watson"
+   "Tim Watson",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2003/seaa-mens-6-stage-road-relay-rushmoor-arena-nr-aldershot-2003.html",
@@ -3213,7 +3245,9 @@
    "Archive",
    "4-Stage Road Relay",
    "Tilly Heaton",
-   "Helen Alsop"
+   "Helen Alsop",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2003/seaa-womens-4-stage-road-relay-rushmoor-arena-nr-aldershot-2003.html",
@@ -3365,7 +3399,8 @@
    "Archive",
    "Richmond Park",
    "Chris Axe",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2003/surrey-cc-league-division-1-race-1-kingston-gate-richmond-park-2003.html",
@@ -3383,7 +3418,8 @@
   "tags": [
    "Archive",
    "Richmond Park",
-   "Syreeta Stracey"
+   "Syreeta Stracey",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2003/womens-surrey-cc-league-division-1-race-1-kingston-gate-richmond-park-2003.html",
@@ -3464,7 +3500,9 @@
    "Archive",
    "Sutton Park",
    "6-Stage Road Relay",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2003/aaa-mens-6-stage-road-relay-sutton-park-sutton-coldfield-2003.html",
@@ -3483,7 +3521,9 @@
    "Archive",
    "Sutton Park",
    "4-Stage Road Relay",
-   "Tilly Heaton"
+   "Tilly Heaton",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2003/aaa-womens-4-stage-road-relay-sutton-park-sutton-coldfield-2003.html",
@@ -3784,7 +3824,8 @@
   ],
   "tags": [
    "Archive",
-   "Frank Ward"
+   "Frank Ward",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2003/surrey-cc-league-division-1-race-2-reigate-priory-park-2003.html",
@@ -3802,7 +3843,8 @@
   "tags": [
    "Archive",
    "Tilly Heaton",
-   "Syreeta Stracey"
+   "Syreeta Stracey",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2003/surrey-womens-cc-league-division-1-race-2-lightwater-2003.html",
@@ -3878,7 +3920,8 @@
    "Richmond Park",
    "Phil Carstairs",
    "Chris Axe",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2004/surrey-cc-league-division-1-race-3-richmond-park-2004.html",
@@ -3901,7 +3944,8 @@
    "Syreeta Stracey",
    "Vicky Edwards",
    "Gemma Williams",
-   "Chloe Sanders"
+   "Chloe Sanders",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2004/surrey-womens-cc-league-division-1-race-3-richmond-park-2004.html",
@@ -3935,7 +3979,8 @@
   "tags": [
    "Archive",
    "James Beech",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2004/surrey-cc-league-division-1-race-4-farthing-downs-2004.html",
@@ -3957,7 +4002,8 @@
    "Syreeta Stracey",
    "Helen Alsop",
    "Nina Mills",
-   "Vicky Edwards"
+   "Vicky Edwards",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2004/surrey-cc-league-division-1-race-4-lloyd-park-2004.html",
@@ -4100,7 +4146,9 @@
    "Richard Partridge",
    "James Beech",
    "Will Cockerell",
-   "Richard Ward"
+   "Richard Ward",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2004/seaa-12-stage-road-relay-milton-keynes-2004.html",
@@ -4137,7 +4185,9 @@
    "Simon Marwood",
    "Will Cockerell",
    "Richard Ward",
-   "Tim Watson"
+   "Tim Watson",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2004/aaa-12-stage-road-relay-sutton-park-sutton-coldfield-2004.html",
@@ -4159,7 +4209,9 @@
    "Anne Hegvold",
    "Helen Alsop",
    "Getenesh Tamirat",
-   "Catherine Berry"
+   "Catherine Berry",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2004/aaa-womens-6-stage-road-relay-sutton-park-sutton-coldfield-2004.html",
@@ -4822,7 +4874,9 @@
    "Helen Alsop",
    "James Browne",
    "Junior Galley",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Surrey Road Relays"
   ],
   "writer": null,
   "file": "stories/2004/surrey-county-road-relays-wimbledon-park-2004.html",
@@ -4838,7 +4892,8 @@
   ],
   "tags": [
    "Archive",
-   "Skipper's Corner"
+   "Skipper's Corner",
+   "Road relays"
   ],
   "writer": null,
   "file": "stories/2004/road-relay-ramblings-2004.html",
@@ -4855,7 +4910,9 @@
   ],
   "tags": [
    "Archive",
-   "6-Stage Road Relay"
+   "6-Stage Road Relay",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2004/aldershot-mens-6-stage-road-relay-inc-seaa-championship-rushmoor-arena-2004.html",
@@ -4872,7 +4929,9 @@
   ],
   "tags": [
    "Archive",
-   "4-Stage Road Relay"
+   "4-Stage Road Relay",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2004/aldershot-womens-4-stage-road-relay-inc-seaa-championship-rushmoor-are-2004.html",
@@ -4953,7 +5012,8 @@
    "Mens Road&XC"
   ],
   "tags": [
-   "Archive"
+   "Archive",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2004/sweatshop-mens-surrey-cc-league-division-1-brockwell-park-2004.html",
@@ -4972,7 +5032,8 @@
    "Archive",
    "Wimbledon Common",
    "Tilly Heaton",
-   "Sarah Castle"
+   "Sarah Castle",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2004/womens-surrey-cc-league-division-1-wimbledon-common-2004.html",
@@ -5006,7 +5067,9 @@
   "tags": [
    "Archive",
    "Sutton Park",
-   "6-Stage Road Relay"
+   "6-Stage Road Relay",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2004/aaa-mens-6-stage-road-relay-champs-sutton-park-2004.html",
@@ -5027,7 +5090,9 @@
    "4-Stage Road Relay",
    "Alan Mead",
    "Tilly Heaton",
-   "Vicky Edwards"
+   "Vicky Edwards",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2004/aaa-womens-4-stage-road-relay-champs-sutton-park-2004.html",
@@ -5175,7 +5240,8 @@
    "Archive",
    "Eliot Lyne",
    "Andrew Porteous",
-   "Tim Watson"
+   "Tim Watson",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2004/sweatshop-surrey-cc-league-division-one-race-2-roehampton-2004.html",
@@ -5192,7 +5258,8 @@
   ],
   "tags": [
    "Archive",
-   "Richmond Park"
+   "Richmond Park",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2004/womens-surrey-cc-league-division-one-race-2-richmond-park-2004.html",
@@ -5400,7 +5467,8 @@
   "tags": [
    "Archive",
    "Wimbledon Common",
-   "Tilly Heaton"
+   "Tilly Heaton",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2005/surrey-cc-league-race-3-wimbledon-common-2005.html",
@@ -5417,7 +5485,8 @@
   "tags": [
    "Archive",
    "Wimbledon Common",
-   "Eliot Lyne"
+   "Eliot Lyne",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2005/sweatshop-surrey-cc-league-race-3-wimbledon-common-2005.html",
@@ -5575,7 +5644,8 @@
   ],
   "tags": [
    "Archive",
-   "Harry Corbett"
+   "Harry Corbett",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2005/sweatshop-mens-surrey-cc-league-race-4-coulsdon-2005.html",
@@ -5594,7 +5664,8 @@
    "Archive",
    "Tilly Heaton",
    "Syreeta Stracey",
-   "Sarah Castle"
+   "Sarah Castle",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2005/womens-surrey-cc-league-race-4-ewell-2005.html",
@@ -5831,7 +5902,9 @@
    "Chris Axe",
    "Fabien Bernard-Gaudin",
    "Charles Herrington",
-   "Tim Watson"
+   "Tim Watson",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2005/seaa-12-stage-road-relay-milton-keynes-2005.html",
@@ -5850,7 +5923,9 @@
    "Archive",
    "6-Stage Road Relay",
    "Tilly Heaton",
-   "Jayne Lawrence"
+   "Jayne Lawrence",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": "Catherine Eastham",
   "file": "stories/2005/seaa-womens-6-stage-relays-milton-keynes-2005.html",
@@ -5888,7 +5963,9 @@
    "Erwin McRae",
    "Will Cockerell",
    "Richard Ward",
-   "Tim Watson"
+   "Tim Watson",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2005/aaa-mens-12-stage-road-relay-championship-sutton-coldfield-2005.html",
@@ -5908,7 +5985,9 @@
    "Sutton Park",
    "6-Stage Road Relay",
    "Tilly Heaton",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "National road relays"
   ],
   "writer": "Catherine Eastham",
   "file": "stories/2005/aaa-womens-6-stage-road-relay-championship-sutton-coldfield-2005.html",
@@ -6438,7 +6517,9 @@
   ],
   "tags": [
    "Archive",
-   "Heidi Cayzer"
+   "Heidi Cayzer",
+   "Road relays",
+   "Surrey Road Relays"
   ],
   "writer": null,
   "file": "stories/2005/surrey-county-aa-road-relays-wimbledon-park-2005.html",
@@ -6484,7 +6565,9 @@
    "Adam Zawadski",
    "Andrew Swearman",
    "Shugri Omar",
-   "Tim Watson"
+   "Tim Watson",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2005/aldershot-road-relays-seaa-6-stage-championship-rushmoor-arena-2005.html",
@@ -6503,7 +6586,9 @@
    "Archive",
    "4-Stage Road Relay",
    "Tilly Heaton",
-   "Heidi Cayzer"
+   "Heidi Cayzer",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2005/aldershot-road-relays-seaa-womens-4-stage-championships-rushmoor-arena-2005.html",
@@ -6520,7 +6605,9 @@
   "tags": [
    "Archive",
    "Skipper's Corner",
-   "6-Stage Road Relay"
+   "6-Stage Road Relay",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2005/congratulations-to-our-southern-6-stage-team-2005.html",
@@ -6552,7 +6639,8 @@
   ],
   "tags": [
    "Archive",
-   "Peter Fallenius"
+   "Peter Fallenius",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2005/sweatshop-surrey-cc-league-division-one-brockwell-park-2005.html",
@@ -6571,7 +6659,8 @@
    "Archive",
    "Wimbledon Common",
    "Tilly Heaton",
-   "Heidi Cayzer"
+   "Heidi Cayzer",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2005/womens-surrey-cc-league-division-one-wimbledon-common-2005.html",
@@ -6625,7 +6714,9 @@
    "Sutton Park",
    "6-Stage Road Relay",
    "Kassa Tadesse",
-   "Simon Marwood"
+   "Simon Marwood",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2005/aaa-mens-6-stage-road-relay-sutton-park-full-result-2005.html",
@@ -6645,7 +6736,9 @@
    "Sutton Park",
    "4-Stage Road Relay",
    "Tilly Heaton",
-   "Heidi Cayzer"
+   "Heidi Cayzer",
+   "Road relays",
+   "National road relays"
   ],
   "writer": "Catherine Eastham",
   "file": "stories/2005/aaa-womens-4-stage-road-relay-sutton-park-full-result-2005.html",
@@ -6694,7 +6787,8 @@
   ],
   "tags": [
    "Archive",
-   "Tom Barry"
+   "Tom Barry",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2005/sweatshop-surrey-cc-league-division-one-reigate-priory-park-2005.html",
@@ -6713,7 +6807,8 @@
    "Archive",
    "Tilly Heaton",
    "Erica Fogg",
-   "Heidi Cayzer"
+   "Heidi Cayzer",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2005/womens-surrey-cc-league-division-one-reigate-priory-park-2005.html",
@@ -6842,7 +6937,8 @@
    "Petersham",
    "4-Stage Road Relay",
    "Surrey Championships",
-   "Heidi Cayzer"
+   "Heidi Cayzer",
+   "Road relays"
   ],
   "writer": null,
   "file": "stories/2005/road-running-cross-country-results-2005-may-december.html",
@@ -6894,7 +6990,8 @@
   "tags": [
    "Archive",
    "James Fairbourn",
-   "Tom Barry"
+   "Tom Barry",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2006/sweatshop-surrey-cc-league-division-one-race-3-newlands-corner-nr-guil-2006.html",
@@ -6911,7 +7008,8 @@
   ],
   "tags": [
    "Archive",
-   "Tilly Heaton"
+   "Tilly Heaton",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2006/womens-surrey-cc-league-division-one-race-3-newlands-corner-nr-guildfo-2006.html",
@@ -7190,7 +7288,9 @@
    "Harry Corbett",
    "Karl O'Connell",
    "Andrew Swearman",
-   "Tim Watson"
+   "Tim Watson",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2006/seaa-mens-12-stage-road-relay-milton-keynes-2006.html",
@@ -7210,7 +7310,9 @@
    "6-Stage Road Relay",
    "Tilly Heaton",
    "Heidi Cayzer",
-   "Charlie Dickinson"
+   "Charlie Dickinson",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2006/seaa-womens-6-stage-road-relay-milton-keynes-2006.html",
@@ -7251,7 +7353,9 @@
    "Karl O'Connell",
    "Will Cockerell",
    "Richard Ward",
-   "Tim Watson"
+   "Tim Watson",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2006/erra-mens-12-stage-road-relay-sutton-park-sutton-coldfield-2006.html",
@@ -7271,7 +7375,9 @@
    "Sutton Park",
    "6-Stage Road Relay",
    "Tilly Heaton",
-   "Vicky Edwards"
+   "Vicky Edwards",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2006/erra-womens-6-stage-road-relay-sutton-park-sutton-coldfield-2006.html",
@@ -7870,7 +7976,9 @@
    "Padraic Buckley",
    "Peter Fallenius",
    "Will Cockerell",
-   "Richard Ward"
+   "Richard Ward",
+   "Road relays",
+   "Surrey Road Relays"
   ],
   "writer": null,
   "file": "stories/2006/surrey-road-relays-wimbledon-park-2006.html",
@@ -7912,7 +8020,9 @@
    "6-Stage Road Relay",
    "Shugri Omar",
    "Richard Ward",
-   "Tim Watson"
+   "Tim Watson",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2006/aldershot-relays-inc-seaa-mens-6-stage-road-relay-rushmoor-arena-2006.html",
@@ -7947,7 +8057,8 @@
    "Archive",
    "Tilly Heaton",
    "Erica Fogg",
-   "Chrissie Wellington"
+   "Chrissie Wellington",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2006/surrey-womens-cc-league-division-one-race-1-epsom-downs-2006.html",
@@ -7966,7 +8077,8 @@
    "Archive",
    "James Fairbourn",
    "John Kimaiyo",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2006/sweatshop-mens-surrey-cc-league-division-one-race-1-brockwell-park-2006.html",
@@ -8004,7 +8116,9 @@
    "Archive",
    "Sutton Park",
    "6-Stage Road Relay",
-   "Richard Ward"
+   "Richard Ward",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2006/erra-mens-6-stage-road-relay-sutton-park-full-result-2006.html",
@@ -8075,7 +8189,8 @@
    "Erica Fogg",
    "Junior Galley",
    "Chrissie Wellington",
-   "Krystal Galley"
+   "Krystal Galley",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2006/surrey-womens-cc-league-division-one-race-2-lightwater-2006.html",
@@ -8094,7 +8209,8 @@
    "Archive",
    "James Fairbourn",
    "John Kimaiyo",
-   "Matt Taylor"
+   "Matt Taylor",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2006/sweatshop-mens-surrey-cc-league-division-one-race-2-coulsdon-2006.html",
@@ -8316,7 +8432,8 @@
    "Alasdair McLean-Foreman",
    "Joan Rhodes",
    "Will Cockerell",
-   "Tim Watson"
+   "Tim Watson",
+   "Road relays"
   ],
   "writer": null,
   "file": "stories/2006/road-running-cross-country-results-2006.html",
@@ -8508,7 +8625,9 @@
   ],
   "tags": [
    "Archive",
-   "6-Stage Road Relay"
+   "6-Stage Road Relay",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2007/seaa-womens-6-stage-road-relay-milton-keynes-2007.html",
@@ -8561,7 +8680,9 @@
    "12-Stage Road Relay",
    "Padraic Buckley",
    "Shugri Omar",
-   "Richard Ward"
+   "Richard Ward",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2007/erra-mens-national-12-stage-road-relay-sutton-park-2007.html",
@@ -8580,7 +8701,9 @@
    "Archive",
    "Sutton Park",
    "6-Stage Road Relay",
-   "Tilly Heaton"
+   "Tilly Heaton",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2007/erra-womens-national-6-stage-road-relay-sutton-park-2007.html",
@@ -9019,7 +9142,9 @@
   "tags": [
    "Archive",
    "James Fairbourn",
-   "Richard Ward"
+   "Richard Ward",
+   "Road relays",
+   "Surrey Road Relays"
   ],
   "writer": null,
   "file": "stories/2007/surrey-county-aa-road-relays-2007.html",
@@ -9036,7 +9161,9 @@
   "tags": [
    "Archive",
    "Surrey Championships",
-   "Alan Mead"
+   "Alan Mead",
+   "Road relays",
+   "Surrey Road Relays"
   ],
   "writer": null,
   "file": "stories/2007/surrey-road-relays-2007.html",
@@ -9069,7 +9196,9 @@
   ],
   "tags": [
    "Archive",
-   "6-Stage Road Relay"
+   "6-Stage Road Relay",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2007/aldershot-road-relays-inc-mens-seaa-6-stage-championship-photos-2007.html",
@@ -9213,7 +9342,8 @@
   "tags": [
    "Archive",
    "Tilly Heaton",
-   "Erica Fogg"
+   "Erica Fogg",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2007/surrey-womens-cc-league-west-end-esher-2007.html",
@@ -9231,7 +9361,8 @@
   "tags": [
    "Archive",
    "Wimbledon Common",
-   "James Fairbourn"
+   "James Fairbourn",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2007/sweatshop-mens-surrey-cc-league-wimbledon-common-2007.html",
@@ -9267,7 +9398,9 @@
    "Sutton Park",
    "6-Stage Road Relay",
    "James Fairbourn",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2007/erra-mens-national-6-stage-road-relay-sutton-park-2007.html",
@@ -9303,7 +9436,8 @@
    "Wimbledon Common",
    "James Fairbourn",
    "Kassa Tadesse",
-   "Steve Zealey"
+   "Steve Zealey",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2007/sweatshop-mens-surrey-cc-league-race-2-wimbledon-common-2007.html",
@@ -9319,7 +9453,8 @@
    "Womens Road&XC"
   ],
   "tags": [
-   "Archive"
+   "Archive",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2007/womens-surrey-cc-league-race-2-cranford-2007.html",
@@ -9469,7 +9604,8 @@
    "Inter-Counties",
    "London Marathon",
    "Surrey Championships",
-   "Joan Rhodes"
+   "Joan Rhodes",
+   "Road relays"
   ],
   "writer": null,
   "file": "stories/2007/road-running-cross-country-results-2007.html",
@@ -9507,7 +9643,8 @@
   ],
   "tags": [
    "Archive",
-   "Evan Langmuir"
+   "Evan Langmuir",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2008/mens-surrey-cc-league-division-one-reigate-priory-park-2008.html",
@@ -9524,7 +9661,8 @@
   ],
   "tags": [
    "Archive",
-   "Jennifer Beecroft"
+   "Jennifer Beecroft",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2008/womens-surrey-cc-league-division-one-reigate-priory-park-2008.html",
@@ -9562,7 +9700,8 @@
   ],
   "tags": [
    "Archive",
-   "Petersham"
+   "Petersham",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2008/sweatshop-mens-surrey-cc-league-division-one-petersham-2008.html",
@@ -9581,7 +9720,8 @@
    "Archive",
    "Petersham",
    "Tilly Heaton",
-   "Jennifer Beecroft"
+   "Jennifer Beecroft",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2008/womens-surrey-cc-league-division-one-petersham-2008.html",
@@ -9657,7 +9797,9 @@
    "Shaun Moralee",
    "Phil Burkart",
    "Pete Marsh",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2008/seaa-12-stage-road-relay-rushmoor-arena-2008.html",
@@ -9678,7 +9820,9 @@
    "Justin Chaston",
    "Shaun Moralee",
    "Will Cockerell",
-   "Richard Ward"
+   "Richard Ward",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2008/erra-national-12-stage-road-relay-sutton-park-sutton-coldfield-2008.html",
@@ -10002,7 +10146,9 @@
   "tags": [
    "Archive",
    "Hazel Mead",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Surrey Road Relays"
   ],
   "writer": null,
   "file": "stories/2008/surrey-county-aa-road-relays-wimbledon-park-2008.html",
@@ -10040,7 +10186,9 @@
    "Archive",
    "6-Stage Road Relay",
    "Shaun Moralee",
-   "Graeme Hyett"
+   "Graeme Hyett",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2008/aldershot-road-relays-inc-seaa-mens-6-stage-road-relay-2008.html",
@@ -10107,7 +10255,9 @@
    "Archive",
    "Sutton Park",
    "4-Stage Road Relay",
-   "Tilly Heaton"
+   "Tilly Heaton",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2008/erra-national-4-stage-road-relay-sutton-coldfield-2008.html",
@@ -10127,7 +10277,9 @@
    "6-Stage Road Relay",
    "Shaun Moralee",
    "Graeme Hyett",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2008/erra-national-6-stage-road-relay-sutton-coldfield-2008.html",
@@ -10400,7 +10552,9 @@
    "Justin Chaston",
    "Ben Hurley",
    "Lander Eguia",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2009/seaa-12-stage-road-relay-milton-keynes-2009.html",
@@ -10848,7 +11002,9 @@
    "Archive",
    "6-Stage Road Relay",
    "Ben Hurley",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2009/aldershot-road-relays-inc-seaa-mens-6-stage-road-relay-2009.html",
@@ -10893,7 +11049,8 @@
    "John Kimaiyo",
    "Ben Hurley",
    "Mike Webb",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2009/sweatshop-surrey-cc-league-race-1-reigate-priory-park-2009.html",
@@ -10912,7 +11069,9 @@
    "Archive",
    "Sutton Park",
    "6-Stage Road Relay",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2009/erra-mens-national-6-stage-road-relay-sutton-coldfield-2009.html",
@@ -10934,7 +11093,9 @@
    "Tilly Heaton",
    "Zoe Vail",
    "Jennifer Beecroft",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2009/erra-womens-national-4-stage-road-relay-sutton-coldfield-2009.html",
@@ -10951,7 +11112,8 @@
   "tags": [
    "Archive",
    "Gerry North",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2009/sweatshop-surrey-cc-league-race-2-coulsdon-2009.html",
@@ -10967,7 +11129,8 @@
    "Womens Road&XC"
   ],
   "tags": [
-   "Archive"
+   "Archive",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2009/womens-surrey-cc-league-dorking-2009.html",
@@ -11006,7 +11169,8 @@
   "tags": [
    "Archive",
    "Petersham",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2009/sweatshop-mens-surrey-cc-league-petersham-2009.html",
@@ -11023,7 +11187,8 @@
   ],
   "tags": [
    "Archive",
-   "Petersham"
+   "Petersham",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2009/womens-surrey-cc-league-petersham-2009.html",
@@ -11098,7 +11263,8 @@
    "Inter-Counties",
    "London Marathon",
    "Alan Mead",
-   "Ben Hurley"
+   "Ben Hurley",
+   "Road relays"
   ],
   "writer": null,
   "file": "stories/2009/road-running-cross-country-results-2009.html",
@@ -11114,7 +11280,8 @@
    "Mens Road&XC"
   ],
   "tags": [
-   "Archive"
+   "Archive",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2010/sweatshop-mens-surrey-cc-league-newlands-corner-nr-guildford-2010.html",
@@ -11187,7 +11354,9 @@
    "12-Stage Road Relay",
    "James Fairbourn",
    "Lander Eguia",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2010/seaa-mens-12-stage-road-relay-milton-keynes-2010.html",
@@ -11205,7 +11374,9 @@
   "tags": [
    "Archive",
    "6-Stage Road Relay",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2010/seaa-womens-6-stage-road-relay-milton-keynes-2010.html",
@@ -11242,7 +11413,9 @@
    "Alan Mead",
    "Phil Carstairs",
    "Will Cockerell",
-   "Richard Ward"
+   "Richard Ward",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2010/erra-national-12-stage-road-relay-sutton-coldfield-2010.html",
@@ -11588,7 +11761,9 @@
    "Steve Zealey",
    "Gerry Adams",
    "Alistair Lang",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Surrey Road Relays"
   ],
   "writer": null,
   "file": "stories/2010/surrey-road-relays-wimbledon-park-2010.html",
@@ -11630,7 +11805,9 @@
    "Archive",
    "4-Stage Road Relay",
    "Amy Linford",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2010/afd-road-relays-inc-seaa-womens-4-stage-championship-2010.html",
@@ -11648,7 +11825,9 @@
   "tags": [
    "Archive",
    "6-Stage Road Relay",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2010/afd-road-relays-inc-seaa-mens-6-stage-championship-rushmoor-arena-nr-a-2010.html",
@@ -11727,7 +11906,8 @@
   "tags": [
    "Archive",
    "Richmond Park",
-   "Tilly Heaton"
+   "Tilly Heaton",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2010/surrey-womens-cross-country-league-division-1-match-1-richmond-park-ki-2010.html",
@@ -11745,7 +11925,9 @@
   "tags": [
    "Archive",
    "Sutton Park",
-   "6-Stage Road Relay"
+   "6-Stage Road Relay",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2010/erra-national-mens-6-stage-road-relay-sutton-park-sutton-coldfield-2010.html",
@@ -11765,7 +11947,9 @@
    "Sutton Park",
    "4-Stage Road Relay",
    "Tilly Heaton",
-   "Amy Linford"
+   "Amy Linford",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2010/erra-national-womens-4-stage-road-relay-sutton-park-sutton-coldfield-2010.html",
@@ -11797,7 +11981,8 @@
    "Mens Road&XC"
   ],
   "tags": [
-   "Archive"
+   "Archive",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2010/2xu-surrey-mens-cc-league-division-1-match-2-denbies-vineyard-dorking-2010.html",
@@ -11814,7 +11999,8 @@
   ],
   "tags": [
    "Archive",
-   "Tilly Heaton"
+   "Tilly Heaton",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2010/surrey-womens-cross-country-league-division-1-denbies-vineyard-dorking-2010.html",
@@ -12050,7 +12236,9 @@
    "Wormwood Scrubs",
    "3-Stage Road Relay",
    "Felicity Cole",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2011/seaa-womens-3-stage-cross-country-road-relay-wormwood-scrubs-2011.html",
@@ -12068,7 +12256,9 @@
   "tags": [
    "Archive",
    "12-Stage Road Relay",
-   "Richard Ward"
+   "Richard Ward",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2011/seaa-mens-12-stage-road-relay-milton-keynes-2011.html",
@@ -12087,7 +12277,9 @@
    "Archive",
    "6-Stage Road Relay",
    "Mary Spalton",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2011/seaa-womens-6-stage-road-relay-milton-keynes-2011.html",
@@ -12123,7 +12315,9 @@
    "Sutton Park",
    "12-Stage Road Relay",
    "Will Cockerell",
-   "Richard Ward"
+   "Richard Ward",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2011/erra-national-mens-12-stage-road-relay-sutton-coldfield-2011.html",
@@ -12142,7 +12336,9 @@
    "Archive",
    "Sutton Park",
    "6-Stage Road Relay",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2011/erra-womens-6-stage-road-relay-sutton-park-2011.html",
@@ -12681,7 +12877,9 @@
    "Hester Barsham-Rolfe",
    "Rieko Trees",
    "Nelleke Quispel",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Surrey Road Relays"
   ],
   "writer": null,
   "file": "stories/2011/surrey-county-road-relays-wimbledon-park-2011.html",
@@ -12699,7 +12897,9 @@
    "Archive",
    "6-Stage Road Relay",
    "Will Cockerell",
-   "Richard Ward"
+   "Richard Ward",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2011/aldershot-relays-inc-seaa-6-stage-championship-rushmoor-arena-2011.html",
@@ -12773,7 +12973,9 @@
   "tags": [
    "Archive",
    "Sutton Park",
-   "6-Stage Road Relay"
+   "6-Stage Road Relay",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2011/erra-national-mens-6-stage-road-relay-sutton-park-sutton-coldfield-2011.html",
@@ -12793,7 +12995,9 @@
    "Sutton Park",
    "4-Stage Road Relay",
    "Fee Maycock",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2011/erra-national-womens-4-stage-road-relay-sutton-park-sutton-coldfield-2011.html",
@@ -12874,7 +13078,8 @@
    "Malik Nehaili",
    "Martin Holm",
    "Stuart Kollmorgen",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2011/2xu-surrey-c-league-race-2-ham-lands-2011.html",
@@ -13043,7 +13248,8 @@
   "tags": [
    "Archive",
    "Malik Nehaili",
-   "Nick Dilley"
+   "Nick Dilley",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2012/2xu-surrey-cc-league-race-3-farthing-downs-coulsdon-2012.html",
@@ -13192,7 +13398,9 @@
    "12-Stage Road Relay",
    "Alan Mead",
    "James Fairbourn",
-   "Andrew Connick"
+   "Andrew Connick",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2012/seaa-mens-12-stage-road-relay-stantonbury-stadium-milton-keynes-2012.html",
@@ -13210,7 +13418,9 @@
   "tags": [
    "Archive",
    "6-Stage Road Relay",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": "Will Cockerell",
   "file": "stories/2012/seaa-womens-6-stage-road-relay-stantonbury-stadium-milton-keynes-2012.html",
@@ -13247,7 +13457,9 @@
    "12-Stage Road Relay",
    "Alan Mead",
    "Andrew Connick",
-   "Martin Holm"
+   "Martin Holm",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2012/erra-national-mens-12-stage-road-relay-sutton-park-sutton-coldfield-2012.html",
@@ -13667,7 +13879,8 @@
    "Archive",
    "Alan Mead",
    "Matt Taylor",
-   "Malik Nehaili"
+   "Malik Nehaili",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2013/2xu-surrey-cc-league-division-one-race-3-ham-lands-near-kingston-2013.html",
@@ -13685,7 +13898,8 @@
   "tags": [
    "Archive",
    "Mitcham Common",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Surrey League"
   ],
   "writer": "Will Cockerell",
   "file": "stories/2013/surrey-womens-cross-country-league-division-1-race-3-mitcham-common-2013.html",
@@ -13721,7 +13935,8 @@
    "Archive",
    "Alan Mead",
    "Matt Taylor",
-   "Malik Nehaili"
+   "Malik Nehaili",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2013/2xu-surrey-cc-league-division-one-race-4-farthing-downs-coulsdon-2013.html",
@@ -13739,7 +13954,8 @@
   "tags": [
    "Archive",
    "Petra Kasperova",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2013/surrey-womens-cross-country-league-division-1-race-4-denbies-vineyard-2013.html",
@@ -13833,7 +14049,9 @@
    "6-Stage Road Relay",
    "Fee Maycock",
    "Rose O'Brien",
-   "Alison Heydenrych"
+   "Alison Heydenrych",
+   "Road relays",
+   "National road relays"
   ],
   "writer": "Charlie Dickinson",
   "file": "stories/2013/erra-womens-national-6-stage-road-relay-sutton-coldfield-2013.html",
@@ -14127,7 +14345,9 @@
   ],
   "tags": [
    "Archive",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Surrey Road Relays"
   ],
   "writer": null,
   "file": "stories/2013/surrey-county-aa-road-relays-wimbledon-park-2013.html",
@@ -14146,7 +14366,9 @@
    "Archive",
    "4-Stage Road Relay",
    "Zoe Doyle",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2013/afd-road-relays-inc-seaa-womens-4-stage-championship-2013.html",
@@ -14167,7 +14389,9 @@
    "James Browne",
    "Craig Ruddy",
    "Roy Maddams",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "Southern road relays"
   ],
   "writer": null,
   "file": "stories/2013/aldershot-f-d-relays-inc-seaa-6-stage-championship-rushmoor-arena-2013.html",
@@ -14252,7 +14476,9 @@
    "Sutton Park",
    "6-Stage Road Relay",
    "Alan Mead",
-   "Craig Ruddy"
+   "Craig Ruddy",
+   "Road relays",
+   "National road relays"
   ],
   "writer": null,
   "file": "stories/2013/erra-national-mens-6-stage-road-relay-sutton-coldfield-2013.html",
@@ -14271,7 +14497,9 @@
    "Archive",
    "Sutton Park",
    "4-Stage Road Relay",
-   "Will Cockerell"
+   "Will Cockerell",
+   "Road relays",
+   "National road relays"
   ],
   "writer": "Will Cockerell",
   "file": "stories/2013/erra-national-womens-4-stage-road-relay-sutton-park-sutton-coldfield-2013.html",
@@ -14368,7 +14596,8 @@
    "Mens Road&XC"
   ],
   "tags": [
-   "Archive"
+   "Archive",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2013/2xu-mens-surrey-cc-league-division-one-match-two-2013.html",

@@ -33,7 +33,8 @@ NOTE = ('<p><em>Restored from the club\'s earlier website, belgraveharriers.com,
 
 # Races, leagues and venues -> tag (matched on the headline and the text)
 PLACES = [
-    (r"surrey (cross[- ]country |xc |road and country )?league|surrey league", "Surrey League"),
+    (r"surrey.{0,25}league", "Surrey League"),
+    (r"road relay|\d[- ]stage", "Road relays"),
     (r"south of (the )?thames", "South of the Thames"),
     (r"lloyd park", "Lloyd Park"), (r"wimbledon common", "Wimbledon Common"),
     (r"parliament hill", "Parliament Hill"), (r"sutton park|sutton coldfield", "Sutton Park"),
