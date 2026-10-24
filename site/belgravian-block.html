@@ -43,7 +43,7 @@
 .bv-decade header{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .bv-decade header p{margin:0;font-size:14px;color:var(--slate)}
 .bv-covers{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:18px 14px}
-.bv-cover{display:grid;gap:6px;text-decoration:none;color:var(--ink)}
+.bv .bv-cover{display:grid;gap:6px;text-decoration:none;color:var(--ink)}
 .bv-cover img{width:100%;aspect-ratio:5/8;object-fit:cover;object-position:top;background:var(--scan-bg);border:1px solid var(--rule);display:block;transition:transform .15s}
 .bv-cover:hover img{transform:translateY(-2px);box-shadow:0 6px 18px rgba(30,26,26,.12)}
 .bv-cover b{font:600 14px/18px var(--text)}
@@ -102,14 +102,14 @@
 .bv-fig figcaption b{font-weight:600;color:var(--ink)}
 .bv-figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
 .bv-chips{display:flex;flex-wrap:wrap;gap:6px}
-.bv-chip{font:500 13px/18px var(--text);color:var(--ink);background:var(--cream);border:0;border-radius:9999px;padding:3px 10px;text-decoration:none}
-a.bv-chip:hover{background:var(--sand)}
+.bv .bv-chip{font:500 13px/18px var(--text);color:var(--ink);background:var(--cream);border:0;border-radius:9999px;padding:3px 10px;text-decoration:none}
+.bv a.bv-chip:hover{background:var(--sand)}
 .bv-chip.tag{color:var(--slate);background:transparent;box-shadow:inset 0 0 0 1px var(--rule)}
 .bv-item .sum{font:400 14px/20px var(--text);color:var(--slate);margin:0}
 
 /* search */
 .bv-results{display:grid;gap:0;border-top:3px solid var(--gold)}
-.bv-hit{display:grid;gap:4px;padding:14px 0;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink)}
+.bv .bv-hit{display:grid;gap:4px;padding:14px 0;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink)}
 .bv-hit:hover h3{color:var(--claret)}
 .bv-hit h3{font:600 19px/24px var(--display);margin:0}
 .bv-hit p{font:400 15px/22px var(--text);color:var(--body);margin:0}
@@ -120,11 +120,11 @@ a.bv-chip:hover{background:var(--sand)}
 
 /* people */
 .bv-people{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:2px 24px}
-.bv-people a{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink);font:500 15px/20px var(--text)}
+.bv .bv-people a{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink);font:500 15px/20px var(--text)}
 .bv-people a span{font:400 13px/20px var(--mono);color:var(--slate)}
 .bv-people a:hover{color:var(--claret)}
 .bv-legends{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
-.bv-legend-card{display:grid;gap:8px;text-decoration:none;color:var(--ink)}
+.bv .bv-legend-card{display:grid;gap:8px;text-decoration:none;color:var(--ink)}
 .bv-legend-card img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;border:1px solid var(--rule);background:var(--scan-bg);filter:grayscale(.2)}
 .bv-legend-card b{font:600 20px/24px var(--display)}
 .bv-legend-card span{font:400 14px/20px var(--text);color:var(--slate)}
@@ -144,7 +144,7 @@ a.bv-chip:hover{background:var(--sand)}
 .bv-timeline{display:grid;gap:0;border-top:3px solid var(--gold)}
 .bv-tl{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:12px 0;border-bottom:1px solid var(--rule)}
 .bv-tl .when{font:600 14px/20px var(--mono);color:var(--claret)}
-.bv-tl a{color:var(--ink);text-decoration:none;font:600 16px/22px var(--text)}
+.bv .bv-tl a{color:var(--ink);text-decoration:none;font:600 16px/22px var(--text)}
 .bv-tl a:hover{color:var(--claret)}
 .bv-tl p{margin:2px 0 0;font:400 14px/20px var(--text);color:var(--slate)}
 .bv-tl p q{color:var(--body)}
@@ -221,7 +221,7 @@ a.bv-chip:hover{background:var(--sand)}
     }
     Object.keys(by).sort().forEach(function(d){
       var list=by[d].sort(function(a,b){return a.date<b.date?-1:1});
-      h+='<section class="bv-decade" id="d'+d+'"><header><h2>'+d+'s</h2><p>'+list.length+' issues</p></header><div class="bv-covers">'+
+      h+='<section class="bv-decade" id="d'+d+'"><header><h2>'+d+'s</h2><p>'+list.length+(list.length===1?' issue':' issues')+'</p></header><div class="bv-covers">'+
         list.map(function(x){return '<a class="bv-cover" href="#'+issueKey(x.issue)+'"><img src="'+pageImg(x.issue,1)+'" alt="Cover of The Belgravian, '+esc(x.label)+'" loading="lazy"><b>'+esc(x.label)+'</b><span>No. '+x.issue+'</span></a>'}).join('')+'</div></section>';
     });
     if(IDX.coming)h+='<section class="bv-decade"><header><h2>Still to come</h2><p>These decades are being digitised. Meanwhile every issue is on <a href="https://www.belgraveharriers.info/thebelgravian">Alan Mead’s Belgrave history site</a>.</p></header><div class="bv-later">'+IDX.coming.map(function(c){return '<span>'+esc(c)+'</span>'}).join('')+'</div></section>';
