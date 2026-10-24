@@ -1,7 +1,7 @@
 <!-- 19. News page: pointer to the news archive (24 Oct 2026)
      Display only. On the main News page (not filtered views or articles), a small cream panel sits to
      the right of the NEWS heading and its subtitle, telling readers about the 774 stories restored from 2000-2013 and
-     linking to the searchable archive at /news-archive. On phones it sits under the heading. -->
+     linking to the searchable archive at /news-archive. On phones it shrinks to a small label beside the heading. -->
 <style>
 .bh-newshead{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px}
 .bh-newshead-main{flex:1 1 360px;min-width:0}
@@ -10,7 +10,18 @@
 .bh-arch-t{display:block;font:400 15px/22px "Public Sans",system-ui,sans-serif;color:#4a4343;margin:0 0 8px}
 .bh-arch a{font:600 15px/22px "Public Sans",system-ui,sans-serif;color:#7a001d !important;text-decoration:none;border-bottom:1px solid rgba(122,0,29,.35)}
 .bh-arch a:hover{border-bottom-color:#7a001d}
-@media (max-width:640px){.bh-arch{flex:1 1 100%}}
+.bh-arch-s{display:none}
+@media (max-width:640px){
+  .bh-newshead{display:grid;grid-template-columns:1fr auto;align-items:center;gap:0 16px}
+  .bh-newshead-main{display:contents}
+  .bh-newshead-main>*{grid-column:1/-1}
+  .bh-newshead-main>h1{grid-column:1;grid-row:1}
+  .bh-arch{grid-column:2;grid-row:1;max-width:150px;padding:8px 10px 9px;border-top-width:3px;border-bottom-width:3px}
+  .bh-arch-l{font-size:10px;line-height:14px;margin:0 0 3px}
+  .bh-arch-t{display:none}
+  .bh-arch a{font-size:13px;line-height:18px}
+  .bh-arch-f{display:none}.bh-arch-s{display:inline}
+}
 </style>
 <script>
 (function(){
@@ -23,7 +34,7 @@
     h.parentNode.insertBefore(wrap,h);wrap.appendChild(main);
     var n=h;while(n){var nx=n.nextElementSibling;main.appendChild(n);n=nx}
     var box=document.createElement('aside');box.className='bh-arch';box.setAttribute('aria-label','News archive');
-    box.innerHTML='<span class="bh-arch-l">From the archive</span><span class="bh-arch-t">774 reports and features from 2000 to 2013, restored from the club’s earlier website.</span><a href="/news-archive">Search the news archive →</a>';
+    box.innerHTML='<span class="bh-arch-l">From the archive</span><span class="bh-arch-t">774 reports and features from 2000 to 2013, restored from the club’s earlier website.</span><a href="/news-archive"><span class="bh-arch-f">Search the news archive</span><span class="bh-arch-s">2000–2013</span> →</a>';
     wrap.appendChild(box);
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',add);else add();
