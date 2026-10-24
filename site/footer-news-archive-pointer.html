@@ -1,10 +1,10 @@
 <!-- 18. News page: pointer to the news archive (24 Oct 2026)
      Display only. On the main News page (not filtered views or articles), a small cream panel sits to
-     the right of the NEWS heading, telling readers about the 774 stories restored from 2000-2013 and
+     the right of the NEWS heading and its subtitle, telling readers about the 774 stories restored from 2000-2013 and
      linking to the searchable archive at /news-archive. On phones it sits under the heading. -->
 <style>
 .bh-newshead{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px}
-.bh-newshead>h1{margin-bottom:0 !important}
+.bh-newshead-main{flex:1 1 360px;min-width:0}
 .bh-arch{flex:0 1 340px;box-sizing:border-box;background:#f5efe4;border-top:3px double #d6b97a;border-bottom:3px double #d6b97a;padding:14px 18px 15px;font-family:"Public Sans",system-ui,sans-serif;text-align:left}
 .bh-arch-l{display:block;font:600 12px/16px "Public Sans",system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#7a5e1c;margin:0 0 6px}
 .bh-arch-t{display:block;font:400 15px/22px "Public Sans",system-ui,sans-serif;color:#4a4343;margin:0 0 8px}
@@ -17,9 +17,11 @@
   function add(){
     if(location.pathname.replace(/\/$/,'')!=='/news'||location.search)return;
     var h=document.querySelector('[id$="_intro"] h1');
-    if(!h||h.parentNode.classList.contains('bh-newshead'))return;
+    if(!h||h.closest('.bh-newshead'))return;
     var wrap=document.createElement('div');wrap.className='bh-newshead';
-    h.parentNode.insertBefore(wrap,h);wrap.appendChild(h);
+    var main=document.createElement('div');main.className='bh-newshead-main';
+    h.parentNode.insertBefore(wrap,h);wrap.appendChild(main);
+    var n=h;while(n){var nx=n.nextElementSibling;main.appendChild(n);n=nx}
     var box=document.createElement('aside');box.className='bh-arch';box.setAttribute('aria-label','News archive');
     box.innerHTML='<span class="bh-arch-l">From the archive</span><span class="bh-arch-t">774 reports and features from 2000 to 2013, restored from the club’s earlier website.</span><a href="/news-archive">Search the news archive →</a>';
     wrap.appendChild(box);

@@ -15,25 +15,25 @@
   var PHOS=[['','All'],['1','With photos'],['0','Without photos']];
   var SECNAME={rx:'Road and cross country',tf:'Track and field',club:'Club'};
   var MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  var data=[],text=null,textLoading=false,state={q:'',s:'',p:'',y:''},shown=60,PAGE=60;
+  var data=[],text=null,textN=null,textLoading=false,state={q:'',s:'',p:'',y:''},shown=60,PAGE=60;
   function norm(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’‘`]/g,"'")}
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   function fmtDate(d){var p=d.split('-');return (+p[2])+' '+MONTHS[+p[1]-1]+' '+p[0]}
   function words(){return norm(state.q).split(/\s+/).filter(function(w){return w.length>0})}
   function readHash(){var h=location.hash.replace(/^#/,'');h.split('&').forEach(function(kv){var a=kv.split('=');if(a[0] in state)state[a[0]]=decodeURIComponent(a[1]||'')})}
   function writeHash(){var parts=[];for(var k in state)if(state[k])parts.push(k+'='+encodeURIComponent(state[k]));var h=parts.length?'#'+parts.join('&'):'';if(location.hash!==h)try{history.replaceState(null,'',location.pathname+location.search+h)}catch(e){}}
-  function hay(r){return r._h||(r._h=norm(r.t+' '+r.g.join(' ')+' '+r.w+' '+r.x))}
+  function hay(r){return r._h||(r._h=norm(r.t+' '+r.g.join(' ')+' '+r.w+' '+r.x+' '+r.d.slice(0,4)))}
   function matches(r,ws,ignore){
     if(ignore!=='s'&&state.s&&r.c!==state.s)return false;
     if(ignore!=='p'&&state.p==='1'&&!r.p)return false;
     if(ignore!=='p'&&state.p==='0'&&r.p)return false;
     if(ignore!=='y'&&state.y&&r.d.slice(0,4)!==state.y)return false;
-    if(ws.length){var h=hay(r),full=text&&text[r.s]?norm(text[r.s]):'';for(var i=0;i<ws.length;i++)if(h.indexOf(ws[i])<0&&full.indexOf(ws[i])<0)return false}
+    if(ws.length){var h=hay(r),ph=ws.join(' ');if(h.indexOf(ph)>=0)return true;var all=true;for(var i=0;i<ws.length;i++)if(h.indexOf(ws[i])<0){all=false;break}if(all)return true;return !!(textN&&textN[r.s]&&textN[r.s].indexOf(ph)>=0)}
     return true}
   function snippet(r,ws){
     if(!ws.length)return esc(r.x);
     var src=r.x,n=norm(src),hit=ws.some(function(w){return n.indexOf(w)>=0});
-    if(!hit&&text&&text[r.s]){var t=text[r.s],nt=norm(t),pos=-1;ws.forEach(function(w){var k=nt.indexOf(w);if(k>=0&&(pos<0||k<pos))pos=k});
+    if(!hit&&text&&text[r.s]){var t=text[r.s].replace(/\s+/g,' '),nt=norm(t),pos=nt.indexOf(ws.join(' '));if(pos<0)ws.forEach(function(w){var k=nt.indexOf(w);if(k>=0&&(pos<0||k<pos))pos=k});
       if(pos>=0){var a=Math.max(0,pos-90),b=Math.min(t.length,pos+150);while(a>0&&t[a-1]!==' ')a--;while(b<t.length&&t[b]!==' ')b++;src=(a>0?'…':'')+t.slice(a,b).trim()+(b<t.length?'…':'')}}
     var out=esc(src),re;ws.forEach(function(w){if(w.length<2)return;try{re=new RegExp('('+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');out=out.replace(re,'<mark>$1</mark>')}catch(e){}});
     return out}
@@ -69,7 +69,7 @@
     if(res.length>shown)html+='<div class="bna-more"><button type="button" id="bna-morebtn">Show more ('+(res.length-shown)+' left)</button></div>';
     out.innerHTML=html}
   function loadText(){if(text||textLoading)return;textLoading=true;
-    fetch(BASE+'news-archive-text.json').then(function(r){return r.json()}).then(function(j){text=j;render()}).catch(function(){text={};render()})}
+    fetch(BASE+'news-archive-text.json').then(function(r){return r.json()}).then(function(j){var n={};for(var k in j)n[k]=norm(j[k]).replace(/\s+/g,' ');textN=n;text=j;render()}).catch(function(){text={};textN={};render()})}
   var tmr;
   $('bna-q').addEventListener('input',function(e){state.q=e.target.value;shown=PAGE;$('bna-q').parentNode.classList.toggle('has-q',!!state.q);if(state.q.trim().length>=2)loadText();clearTimeout(tmr);tmr=setTimeout(function(){writeHash();render()},120)});
   $('bna-clear').addEventListener('click',function(){state.q='';$('bna-q').value='';$('bna-q').parentNode.classList.remove('has-q');writeHash();render();$('bna-q').focus()});
