@@ -963,18 +963,20 @@
  },
  {
   "slug": "sweatshop-surrey-young-athletes-cross-country-league-division-one-race-2001",
-  "title": "Sweatshop Surrey Young Athletes Cross Country League Division One, Race 3, 15-12-2001",
+  "title": "Surrey Women's Cross Country League Division Two, Race 3: Under 15 and Under 13 Girls",
   "date": "2001-12-15",
   "kind": "feature",
   "categories": [
    "Road and Cross Country"
   ],
   "tags": [
-   "Archive"
+   "Archive",
+   "Surrey League"
   ],
   "writer": null,
   "file": "stories/2001/sweatshop-surrey-young-athletes-cross-country-league-division-one-race-2001.html",
-  "original_page": "https://www.belgraveharriers.com/results/rc_w_surreycclg_2001-12-15_ya.htm"
+  "original_page": "https://www.belgraveharriers.com/results/rc_w_surreycclg_2001-12-15_ya.htm",
+  "original_headline_used": "Sweatshop Surrey Young Athletes Cross Country League Division One, Race 3, 15-12-2001"
  },
  {
   "slug": "aaa-championships-2001-belgrave-h-results",
@@ -3629,7 +3631,7 @@
  },
  {
   "slug": "press-release-2003",
-  "title": "Press Release",
+  "title": "London 2004: London Inter-Club Challenge",
   "date": "2003-11-26",
   "kind": "feature",
   "categories": [
@@ -3640,7 +3642,8 @@
   ],
   "writer": null,
   "file": "stories/2003/press-release-2003.html",
-  "original_page": "https://www.belgraveharriers.com/general/pr_20031126_licc.htm"
+  "original_page": "https://www.belgraveharriers.com/general/pr_20031126_licc.htm",
+  "original_headline_used": "Press Release"
  },
  {
   "slug": "arthur-penny-1907-2003",
@@ -4156,7 +4159,7 @@
  },
  {
   "slug": "press-release-2004",
-  "title": "Press Release",
+  "title": "London Inter-Club Challenge – at the forefront of modernisation",
   "date": "2004-04-19",
   "kind": "feature",
   "categories": [
@@ -4167,7 +4170,8 @@
   ],
   "writer": null,
   "file": "stories/2004/press-release-2004.html",
-  "original_page": "https://www.belgraveharriers.com/general/pr_20040419_licc.htm"
+  "original_page": "https://www.belgraveharriers.com/general/pr_20040419_licc.htm",
+  "original_headline_used": "Press Release"
  },
  {
   "slug": "aaa-12-stage-road-relay-sutton-park-sutton-coldfield-2004",
@@ -5133,7 +5137,7 @@
  },
  {
   "slug": "press-release-2004-2",
-  "title": "Press Release",
+  "title": "Belgrave Harriers and Sutton & District AC to become partners",
   "date": "2004-11-01",
   "kind": "feature",
   "categories": [
@@ -5145,7 +5149,8 @@
   ],
   "writer": null,
   "file": "stories/2004/press-release-2004-2.html",
-  "original_page": "https://www.belgraveharriers.com/general/pr_20041101_partnership.htm"
+  "original_page": "https://www.belgraveharriers.com/general/pr_20041101_partnership.htm",
+  "original_headline_used": "Press Release"
  },
  {
   "slug": "ecca-national-cross-country-relays-mansfield-2004",
@@ -5589,7 +5594,7 @@
  },
  {
   "slug": "press-release-2005",
-  "title": "Press Release",
+  "title": "Sutton and District AC and Belgrave Harriers Indoor Open Meeting, Sutton Arena",
   "date": "2005-01-30",
   "kind": "feature",
   "categories": [
@@ -5600,7 +5605,8 @@
   ],
   "writer": null,
   "file": "stories/2005/press-release-2005.html",
-  "original_page": "https://www.belgraveharriers.com/sutton/sutton_open.htm"
+  "original_page": "https://www.belgraveharriers.com/sutton/sutton_open.htm",
+  "original_headline_used": "Press Release"
  },
  {
   "slug": "southern-tales-2005",
@@ -6962,6 +6968,24 @@
   "first_published_on_old_site": "2007-10-10"
  },
  {
+  "slug": "jim-mote-1923-2007-2",
+  "title": "George Piddington 1937-2005",
+  "date": "2005-12-31",
+  "kind": "feature",
+  "categories": [
+   "Club"
+  ],
+  "tags": [
+   "Archive",
+   "George Piddington"
+  ],
+  "writer": null,
+  "file": "stories/2005/jim-mote-1923-2007-2.html",
+  "original_page": "https://www.belgraveharriers.com/obituary/ob_piddington_g.htm",
+  "original_headline_used": "Jim Mote 1923-2007",
+  "first_published_on_old_site": "2007-10-10"
+ },
+ {
   "slug": "surrey-county-cc-champs-lloyd-park-2006",
   "title": "Surrey County CC Champs., Lloyd Park",
   "date": "2006-01-07",
@@ -7537,7 +7561,7 @@
  },
  {
   "slug": "loughborough-university-survey-2006-2",
-  "title": "Loughborough University Survey",
+  "title": "The Poppy Marathon, Somme Valley, France",
   "date": "2006-05-30",
   "kind": "feature",
   "categories": [
@@ -7548,7 +7572,8 @@
   ],
   "writer": null,
   "file": "stories/2006/loughborough-university-survey-2006-2.html",
-  "original_page": "https://www.belgraveharriers.com/general/somme_marathon.htm"
+  "original_page": "https://www.belgraveharriers.com/general/somme_marathon.htm",
+  "original_headline_used": "Loughborough University Survey"
  },
  {
   "slug": "british-athletics-league-results-reports-2006-match-two-sport-city-man",
@@ -7843,7 +7868,7 @@
  },
  {
   "slug": "the-olympics-in-london-exhibition-2006",
-  "title": "The Olympics in London - Exhibition",
+  "title": "APEX new shop, Farnham Common",
   "date": "2006-08-05",
   "kind": "feature",
   "categories": [
@@ -7854,7 +7879,8 @@
   ],
   "writer": null,
   "file": "stories/2006/the-olympics-in-london-exhibition-2006.html",
-  "original_page": "https://www.belgraveharriers.com/general/apex.htm"
+  "original_page": "https://www.belgraveharriers.com/general/apex.htm",
+  "original_headline_used": "The Olympics in London - Exhibition"
  },
  {
   "slug": "ukwal-belgrave-harriers-uk-womens-athletics-league-results-reports-200-2006-3",
@@ -8126,7 +8152,7 @@
  },
  {
   "slug": "comes-to-you-from-vietnam-2006",
-  "title": "comes to you from Vietnam",
+  "title": "Skipper's Corner comes to you from Vietnam",
   "date": "2006-10-27",
   "kind": "feature",
   "categories": [
@@ -8138,7 +8164,8 @@
   ],
   "writer": null,
   "file": "stories/2006/comes-to-you-from-vietnam-2006.html",
-  "original_page": "https://www.belgraveharriers.com/skippers_corner/skippers_corner_32.htm"
+  "original_page": "https://www.belgraveharriers.com/skippers_corner/skippers_corner_32.htm",
+  "original_headline_used": "comes to you from Vietnam"
  },
  {
   "slug": "ecca-national-cross-country-relays-berry-hill-park-mansfield-2006",
@@ -9297,22 +9324,6 @@
   "writer": null,
   "file": "stories/2007/uk-aaa-seaa-cau-intercounties-10km-championships-chichester-2007.html",
   "original_page": "https://www.belgraveharriers.com/2007/rc_2007.htm"
- },
- {
-  "slug": "jim-mote-1923-2007-2",
-  "title": "Jim Mote 1923-2007",
-  "date": "2007-10-10",
-  "kind": "feature",
-  "categories": [
-   "Club"
-  ],
-  "tags": [
-   "Archive",
-   "Jim Mote"
-  ],
-  "writer": null,
-  "file": "stories/2007/jim-mote-1923-2007-2.html",
-  "original_page": "https://www.belgraveharriers.com/obituary/ob_piddington_g.htm"
  },
  {
   "slug": "william-e-bill-weller-1946-2007",
@@ -14291,7 +14302,7 @@
  },
  {
   "slug": "club-clothing-2013",
-  "title": "Club Clothing",
+  "title": "Greg's Blog",
   "date": "2013-07-23",
   "kind": "feature",
   "categories": [
@@ -14303,11 +14314,12 @@
   ],
   "writer": null,
   "file": "stories/2013/club-clothing-2013.html",
-  "original_page": "https://www.belgraveharriers.com/general/Greg.htm"
+  "original_page": "https://www.belgraveharriers.com/general/Greg.htm",
+  "original_headline_used": "Club Clothing"
  },
  {
   "slug": "young-belgravians-results-2013-2",
-  "title": "Young Belgravians' Results 2013",
+  "title": "Belgrave Women's Road and Country review of the season, 2012-2013",
   "date": "2013-07-23",
   "kind": "feature",
   "categories": [
@@ -14333,7 +14345,8 @@
   ],
   "writer": null,
   "file": "stories/2013/young-belgravians-results-2013-2.html",
-  "original_page": "https://www.belgraveharriers.com/2013/wc_review.htm"
+  "original_page": "https://www.belgraveharriers.com/2013/wc_review.htm",
+  "original_headline_used": "Young Belgravians' Results 2013"
  },
  {
   "slug": "surrey-county-aa-road-relays-wimbledon-park-2013",
