@@ -22,14 +22,14 @@
 .bna-search button{position:absolute;right:6px;top:50%;transform:translateY(-50%);border:0;background:none;color:var(--slate);font-size:20px;line-height:1;padding:6px;display:none}
 .bna-search.has-q button{display:block}
 .bna-filters{display:grid;gap:12px;padding:16px 0 18px;border-bottom:1px solid var(--rule)}
-.bna-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 8px}
-.bna-row .bna-label{min-width:64px;margin-right:4px}
+.bna-row{min-width:0;display:flex;flex-wrap:wrap;align-items:flex-start;gap:8px 8px}
+.bna-row .bna-label{min-width:64px;margin-right:4px;padding-top:7px}
 .bna-chip{font:500 14px/20px var(--text);color:var(--body);background:var(--paper);border:1px solid var(--rule);border-radius:999px;padding:5px 12px;white-space:nowrap}
 .bna-chip:hover{border-color:var(--gold);color:var(--ink)}
 .bna-chip[aria-pressed="true"]{background:var(--claret);border-color:var(--claret);color:#fff}
 .bna-chip small{font:inherit;font-size:12px;opacity:.7;margin-left:4px;font-variant-numeric:tabular-nums}
 .bna-chip[disabled]{opacity:.35;cursor:default}
-.bna-years{gap:6px}
+.bna-years{display:flex;flex-wrap:wrap;gap:6px;flex:1;min-width:0}
 .bna-years .bna-chip{padding:5px 10px}
 .bna-status{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px;font:400 14px/20px var(--text);color:var(--slate);padding:16px 0 4px}
 .bna-status button{border:0;background:none;color:var(--claret);font:500 14px/20px var(--text);padding:0;text-decoration:underline;text-underline-offset:3px}
@@ -54,8 +54,8 @@
 .bna-note{font:400 14px/21px var(--text);color:var(--slate);margin:36px 0 0;padding-top:16px;border-top:1px solid var(--rule);max-width:70ch}
 @media (max-width:640px){
   .bna-head h1{font-size:40px}
-  .bna-row .bna-label{width:100%;min-width:0}
-  .bna-years{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;margin-right:-16px;scrollbar-width:none}
+  .bna-row .bna-label{width:100%;min-width:0;padding-top:0}
+  .bna-years{flex:0 0 100%;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
   .bna-years::-webkit-scrollbar{display:none}
   .bna-th{width:88px;height:64px}
   .bna-item a.bna-link{gap:12px}
@@ -72,7 +72,7 @@
   <div class="bna-filters">
     <div class="bna-row" role="group" aria-label="Section"><span class="bna-label">Section</span><span id="bna-sec" style="display:contents"></span></div>
     <div class="bna-row" role="group" aria-label="Photos"><span class="bna-label">Photos</span><span id="bna-pho" style="display:contents"></span></div>
-    <div class="bna-row bna-years" role="group" aria-label="Year"><span class="bna-label">Year</span><span id="bna-yr" style="display:contents"></span></div>
+    <div class="bna-row" role="group" aria-label="Year"><span class="bna-label">Year</span><div class="bna-years" id="bna-yr"></div></div>
   </div>
   <div class="bna-status"><span id="bna-count" aria-live="polite">Loading the archive…</span><button type="button" id="bna-reset" hidden>Clear filters</button></div>
   <div id="bna-out"></div>
@@ -93,7 +93,7 @@
   function fmtDate(d){var p=d.split('-');return (+p[2])+' '+MONTHS[+p[1]-1]+' '+p[0]}
   function words(){return norm(state.q).split(/\s+/).filter(function(w){return w.length>0})}
   function readHash(){var h=location.hash.replace(/^#/,'');h.split('&').forEach(function(kv){var a=kv.split('=');if(a[0] in state)state[a[0]]=decodeURIComponent(a[1]||'')})}
-  function writeHash(){var parts=[];for(var k in state)if(state[k])parts.push(k+'='+encodeURIComponent(state[k]));var h=parts.length?'#'+parts.join('&'):'';if(location.hash!==h)history.replaceState(null,'',location.pathname+location.search+h)}
+  function writeHash(){var parts=[];for(var k in state)if(state[k])parts.push(k+'='+encodeURIComponent(state[k]));var h=parts.length?'#'+parts.join('&'):'';if(location.hash!==h)try{history.replaceState(null,'',location.pathname+location.search+h)}catch(e){}}
   function hay(r){return r._h||(r._h=norm(r.t+' '+r.g.join(' ')+' '+r.w+' '+r.x))}
   function matches(r,ws,ignore){
     if(ignore!=='s'&&state.s&&r.c!==state.s)return false;
