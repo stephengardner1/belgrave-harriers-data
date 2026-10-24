@@ -1,0 +1,140 @@
+{
+ "bill-couzens-1936-2002": {
+  "title": "Bill Couzens 1936-2002",
+  "old": "2003-10-18",
+  "new": "2002-12-31",
+  "how": "end of year in headline"
+ },
+ "don-e-brown-1911-2000": {
+  "title": "Don E. Brown 1911-2000",
+  "old": "2003-10-18",
+  "new": "2000-02-29",
+  "how": "latest month named in the story"
+ },
+ "gordon-s-doubleday-1912-2001": {
+  "title": "Gordon S. Doubleday 1912-2001",
+  "old": "2003-10-18",
+  "new": "2001-12-31",
+  "how": "end of year in headline"
+ },
+ "cross-country-plate-result-2001-2002": {
+  "title": "Cross Country Plate Result 2001-2002",
+  "old": "2003-10-20",
+  "new": "2002-12-31",
+  "how": "end of year in headline"
+ },
+ "road-running-cross-country-individual-results-2000": {
+  "title": "Road Running & Cross Country Individual Results 2000",
+  "old": "2003-10-20",
+  "new": "2000-12-31",
+  "how": "latest month named in the story"
+ },
+ "the-iaaf-world-championships-2001": {
+  "title": "The IAAF World Championships 2001",
+  "old": "2003-10-24",
+  "new": "2001-12-31",
+  "how": "end of year in headline"
+ },
+ "the-olympic-games-2000": {
+  "title": "The Olympic Games 2000",
+  "old": "2003-10-24",
+  "new": "2000-12-31",
+  "how": "end of year in headline"
+ },
+ "track-field-indoor-results-2000-2001": {
+  "title": "Track & Field Indoor Results 2000-2001",
+  "old": "2003-10-24",
+  "new": "2001-03-31",
+  "how": "latest month named in the story"
+ },
+ "track-field-schools-results-2001": {
+  "title": "Track & Field Schools Results 2001",
+  "old": "2003-10-24",
+  "new": "2001-06-30",
+  "how": "latest month named in the story"
+ },
+ "track-field-veterans-results-2001": {
+  "title": "Track & Field Veterans Results 2001",
+  "old": "2003-10-24",
+  "new": "2001-12-31",
+  "how": "latest month named in the story"
+ },
+ "track-field-world-results-2001": {
+  "title": "Track & Field World Results 2001",
+  "old": "2003-10-24",
+  "new": "2001-08-31",
+  "how": "latest month named in the story"
+ },
+ "track-field-european-clubs-cup-results-2001": {
+  "title": "Track & Field European Clubs Cup Results 2001",
+  "old": "2003-11-02",
+  "new": "2001-12-31",
+  "how": "end of year in headline"
+ },
+ "aaa-championships-2001-belgrave-h-results": {
+  "title": "AAA Championships 2001 - Belgrave H Results",
+  "old": "2003-12-31",
+  "new": "2001-12-31",
+  "how": "end of year in headline"
+ },
+ "ladies-cross-country-plate-results-2001-2002": {
+  "title": "Ladies Cross Country Plate Results 2001-2002",
+  "old": "2003-12-31",
+  "new": "2002-12-31",
+  "how": "end of year in headline"
+ },
+ "secretarys-report-to-agm-2002": {
+  "title": "Secretary's Report to AGM 2002",
+  "old": "2004-02-28",
+  "new": "2002-09-18",
+  "how": "from the story"
+ },
+ "200-club-winners-2004": {
+  "title": "200 club winners 2004",
+  "old": "2005-03-06",
+  "new": "2004-12-31",
+  "how": "end of year in headline"
+ },
+ "geoff-davis-1932-2005": {
+  "title": "Geoff Davis 1932-2005",
+  "old": "2007-10-10",
+  "new": "2005-12-31",
+  "how": "end of year in headline"
+ },
+ "fred-paget-1930-2007": {
+  "title": "Fred Paget 1930-2007",
+  "old": "2008-08-07",
+  "new": "2007-09-30",
+  "how": "latest month named in the story"
+ },
+ "r-d-dave-mcmullen-1920-2007": {
+  "title": "R.D. \"Dave\" McMullen 1920-2007",
+  "old": "2008-08-07",
+  "new": "2007-09-30",
+  "how": "latest month named in the story"
+ },
+ "secretarys-report-to-agm-2009": {
+  "title": "Secretary's Report to AGM 2009",
+  "old": "2010-05-22",
+  "new": "2009-09-23",
+  "how": "from the story"
+ },
+ "secretarys-report-to-agm-2008": {
+  "title": "Secretary's Report to AGM 2008",
+  "old": "2011-04-05",
+  "new": "2008-09-17",
+  "how": "from the story"
+ },
+ "secretarys-report-to-agm-2010": {
+  "title": "Secretary's Report to AGM 2010",
+  "old": "2011-07-07",
+  "new": "2010-09-29",
+  "how": "from the story"
+ },
+ "p-a-mead-1945-2010": {
+  "title": "P.A. Mead 1945-2010",
+  "old": "2012-09-08",
+  "new": "2010-12-31",
+  "how": "end of year in headline"
+ }
+}
