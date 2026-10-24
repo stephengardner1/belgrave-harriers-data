@@ -1,0 +1,111 @@
+<!-- Belgravians at the Olympic Games, live from the club records Google Sheet ("Olympians" tab) (24 Oct 2026).
+     Edit the sheet as normal; this page reads its published copy. Values are shown exactly as in the sheet. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap">
+<div id="bh-olympians" class="bh-ol" data-pub="2PACX-1vS3x7xBhqO3YiS7U5zRcYWcwK80JgKUkeE1RhTJ5HqDiEOtXy4ZDdqsh8G-D9QJxPYcBJ_VaHWGYnt5" data-gid="1514521660">
+  <h1 class="bh-ol-title">Belgravians at the Olympic Games</h1>
+  <p class="bh-ol-stand">Belgrave athletes who have competed in athletics at the Olympic Games. Appearances in other sports aren’t included.</p>
+  <div class="bh-ol-controls">
+    <div class="bh-seg" role="tablist" aria-label="Show">
+      <button role="tab" data-show="all" aria-selected="true">All appearances</button>
+      <button role="tab" data-show="medals" aria-selected="false">Medallists</button>
+    </div>
+  </div>
+  <div class="bh-ol-body" aria-live="polite"><p class="bh-ol-msg">Loading Olympians…</p></div>
+</div>
+<style>
+.bh-ol{--ink:#1e1a1a;--body:#4a4343;--slate:#5c5555;--claret:#7a001d;--gold:#d6b97a;--gold-ink:#7a5e1c;--rule:#e6dfd3;--cream:#f5efe4;--sand:#eadfc8;--hover:#f3ede2;
+  font-family:"Public Sans",system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;max-width:816px;margin:0}
+.bh-ol .bh-ol-title{font-family:"Castoro Belgrave Titling",Georgia,serif;font-weight:300;font-size:76px;line-height:1;letter-spacing:-.01em;text-transform:uppercase;color:var(--ink);margin:0 0 20px;padding:0}
+.bh-ol .bh-ol-stand{font:400 18px/28px "Public Sans",sans-serif;color:var(--body);margin:0 0 28px}
+.bh-ol-controls{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 20px}
+.bh-ol .bh-seg{display:inline-flex;background:var(--cream);border-radius:8px;padding:3px}
+.bh-ol .bh-seg button{font:500 14px/20px "Public Sans",sans-serif;color:var(--slate);background:transparent;border:0;border-radius:6px;padding:6px 14px;cursor:pointer;letter-spacing:0;text-transform:none}
+.bh-ol .bh-seg button[aria-selected="true"]{background:#fff;color:var(--ink);box-shadow:0 0 0 1px var(--rule)}
+.bh-ol .bh-seg button:hover{color:var(--ink)}
+.bh-ol button:focus-visible,.bh-ol a:focus-visible{outline:2px solid var(--claret);outline-offset:2px}
+.bh-ol table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.bh-ol thead th{font:600 12px/16px "Public Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);text-align:left;padding:0 10px 8px;
+  border-bottom:3px solid var(--gold);border-image:linear-gradient(135deg,#e7d8b0 0%,#d6b97a 28%,#d5b271 54%,#d09d55 93%,#ce954a 100%) 1;white-space:nowrap}
+.bh-ol thead th.c1{width:42%}.bh-ol thead th.c2{width:24%}
+.bh-ol tbody td{padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+.bh-ol tr>:first-child{padding-left:0}
+.bh-ol tr>:last-child{padding-right:0}
+.bh-ol tbody tr.a:hover td{background:var(--hover)}
+.bh-ol tr.g td{padding-top:28px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.bh-ol tbody tr.g:first-child td{padding-top:14px}
+.bh-ol .gy{font:600 20px/24px franklin-gothic-atf,"Franklin Gothic Medium",sans-serif;color:var(--ink);margin-right:8px}
+.bh-ol .gc{font:500 15px/24px "Public Sans",sans-serif;color:var(--slate)}
+.bh-ol .who{font:500 15px/20px "Public Sans",sans-serif;color:var(--ink)}
+.bh-ol .nat{display:inline-block;font:600 10px/14px "Public Sans",sans-serif;letter-spacing:.06em;color:var(--gold-ink);background:var(--cream);border-radius:9999px;padding:1px 6px;margin-left:6px;vertical-align:1px}
+.bh-ol .ev{font:400 15px/20px "Public Sans",sans-serif;color:var(--ink)}
+.bh-ol .res{font:400 14px/20px "IBM Plex Mono",ui-monospace,monospace;color:var(--body)}
+.bh-ol .sub{display:none}
+.bh-ol .none td{font:400 15px/20px "Public Sans",sans-serif;color:var(--slate)}
+.bh-ol .medal{display:inline-flex;align-items:center;gap:5px;font:600 11px/16px "Public Sans",sans-serif;letter-spacing:.04em;color:var(--ink);margin-left:8px;vertical-align:1px;white-space:nowrap}
+.bh-ol .medal i{display:inline-block;width:10px;height:10px;border-radius:50%}
+.bh-ol .medal.m1 i{background:linear-gradient(135deg,#efe0b5 0%,#d6b97a 40%,#c9963f 100%)}
+.bh-ol .medal.m2 i{background:linear-gradient(135deg,#f1f1ef 0%,#c4c4c0 45%,#9a9a96 100%)}
+.bh-ol .medal.m3 i{background:linear-gradient(135deg,#ecc9a5 0%,#c08856 45%,#93603a 100%)}
+.bh-ol-msg{font-size:15px;color:var(--slate)}
+.bh-ol-note{font-size:13px;line-height:18px;color:var(--slate);margin:16px 0 0}
+.bh-ol-note a{color:var(--slate);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:2px}
+.bh-ol-note a:hover{color:var(--claret)}
+@media (max-width:640px){
+  .bh-ol .bh-ol-title{font-size:42px}
+  .bh-ol .bh-ol-stand{font-size:16px;line-height:24px}
+  .bh-ol .bh-seg button{padding:6px 10px}
+  .bh-ol tbody td,.bh-ol thead th{padding-left:6px;padding-right:6px}
+  .bh-ol .wide{display:none}
+  .bh-ol .sub{display:block;margin-top:3px}
+  .bh-ol .sub .ev{font-size:14px;color:var(--body)}
+  .bh-ol .sub .res{display:block;font-size:13px;margin-top:1px}
+}
+</style>
+<script>
+(function(){
+  var root=document.getElementById('bh-olympians');if(!root||root.dataset.ready)return;root.dataset.ready='1';
+  var URL='https://docs.google.com/spreadsheets/d/e/'+root.getAttribute('data-pub')+'/pub?gid='+root.getAttribute('data-gid')+'&single=true&output=csv';
+  var SOURCE='https://www.belgraveharriers.info/_files/ugd/234280_8037be860dd04333a6420080120ecb93.pdf?index=true';
+  var body=root.querySelector('.bh-ol-body'),games=null,mode='all';
+  function parseCSV(t){var rows=[],row=[],f='',q=false;for(var i=0;i<t.length;i++){var c=t[i];
+    if(q){if(c=='"'){if(t[i+1]=='"'){f+='"';i++}else q=false}else f+=c}
+    else if(c=='"')q=true;else if(c==','){row.push(f);f=''}else if(c=='\n'){row.push(f);rows.push(row);row=[];f=''}else if(c!='\r')f+=c}
+    if(f||row.length){row.push(f);rows.push(row)}return rows}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  // a medal only where the result starts with a final placing of 1st, 2nd or 3rd
+  function medal(res){var m=res.match(/^(1st|2nd|3rd)\b/);return m?{'1st':1,'2nd':2,'3rd':3}[m[1]]:0}
+  var MED=['','Gold','Silver','Bronze'];
+  function toGames(rows){
+    var out=[],cur=null;
+    rows.forEach(function(r){
+      var a=(r[0]||'').trim(),name=(r[1]||'').trim();
+      if(/^source$/i.test(a))return;
+      if(a){var m=a.match(/^(\d{4})\s+(.*)$/);cur={year:m?m[1]:a,city:m?m[2]:'',list:[]};out.push(cur)}
+      if(!cur||!name||name=='-')return;
+      var res=(r[4]||'').trim();
+      cur.list.push({name:name,nat:(r[2]||'').trim(),event:(r[3]||'').trim(),res:res,medal:medal(res)});
+    });
+    return out}
+  function render(){
+    if(!games){body.innerHTML='<p class="bh-ol-msg">Loading Olympians…</p>';return}
+    var h='<table><thead><tr><th class="c1">Athlete</th><th class="wide c2">Event</th><th class="wide">Result</th></tr></thead><tbody>',shown=0;
+    games.forEach(function(g){
+      var list=mode=='medals'?g.list.filter(function(x){return x.medal}):g.list;
+      if(mode=='medals'&&!list.length)return;
+      h+='<tr class="g"><td colspan="3"><span class="gy">'+esc(g.year)+'</span><span class="gc">'+esc(g.city)+'</span></td></tr>';
+      if(!list.length){h+='<tr class="none"><td colspan="3">No Belgravians competed</td></tr>';return}
+      list.forEach(function(x){shown++;
+        var med=x.medal?'<span class="medal m'+x.medal+'"><i aria-hidden="true"></i>'+MED[x.medal]+'</span>':'';
+        h+='<tr class="a"><td class="who">'+esc(x.name)+(x.nat?'<span class="nat">'+esc(x.nat)+'</span>':'')+med+
+          '<span class="sub"><span class="ev">'+esc(x.event)+'</span><span class="res">'+esc(x.res)+'</span></span></td>'+
+          '<td class="ev wide">'+esc(x.event)+'</td><td class="res wide">'+esc(x.res)+'</td></tr>'});
+    });
+    body.innerHTML=h+'</tbody></table><p class="bh-ol-note">Results run from the furthest round reached, for example 4s2 is 4th in semi-final 2; q is a quarter-final, h a heat and Q the qualifying round. A placing in brackets, such as (2nd 2:56.60), is a relay final the athlete’s team ran without them. <a href="'+SOURCE+'" target="_blank" rel="noopener">Source</a>.</p>'}
+  root.querySelector('.bh-seg').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+    root.querySelectorAll('.bh-seg button').forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});
+    mode=b.dataset.show;render()});
+  fetch(URL,{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.text()})
+    .then(function(t){games=toGames(parseCSV(t));render()})
+    .catch(function(){body.innerHTML='<p class="bh-ol-msg">The list couldn’t be loaded just now. Please try again shortly.</p>'});
+})();
+</script>
