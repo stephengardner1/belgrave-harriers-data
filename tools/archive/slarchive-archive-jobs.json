@@ -454,5 +454,11 @@
    "sex": "Women",
    "url": "https://slarchive.org/women/race/1314-2"
   }
+ ],
+ "skips-surrey-league-stat-attack-2008": [
+  {
+   "sex": "Men",
+   "url": "https://slarchive.org/race/0708-4"
+  }
  ]
 }
