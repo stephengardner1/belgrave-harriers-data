@@ -178,7 +178,7 @@ def split_season_page(page_html):
         else:
             continue
         heading = ptxt
-        rest = paras[i + 1:]
+        rest = [q for q in paras[:i] if "<img" in q] + paras[i + 1:]   # photos that sat in or above the heading line
         body = "".join(f"<p>{p}</p>\n" for p in rest)
         # tables after paragraphs
         tables = re.findall(r"<table>.*?</table>", html, re.S)
