@@ -1,0 +1,922 @@
+{
+ "source": "Surrey League compendium, slarchive.org",
+ "url": "https://slarchive.org/women/race/0203-3",
+ "copied": "2026-10-25",
+ "meta": "11 Jan 2003 · Match 3 · 2002/03",
+ "venue": "Richmond Park",
+ "lines": [
+  {
+   "club": "THH",
+   "strong": "Louise Watson's",
+   "rest": "only win in Div 1"
+  },
+  {
+   "club": "RAN",
+   "strong": "Ranelagh Harriers",
+   "rest": "won the match"
+  }
+ ],
+ "clubs": {
+  "THH": "Thames Hare & Hounds",
+  "HHH": "Herne Hill Harriers",
+  "W4H": "West 4 Harriers",
+  "BEL": "Belgrave Harriers",
+  "RAN": "Ranelagh Harriers",
+  "DUL": "Dulwich Runners",
+  "STR": "Stragglers Running Club",
+  "SLH": "South London Harriers",
+  "DMV": "Dorking & Mole Valley",
+  "WOK": "Woking AC"
+ },
+ "vests": {
+  "THH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><line x1=\"6\" y1=\"5\" x2=\"14\" y2=\"15\" stroke=\"#1a1a1a\" stroke-width=\"2\"></line><line x1=\"14\" y1=\"5\" x2=\"6\" y2=\"15\" stroke=\"#1a1a1a\" stroke-width=\"2\"></line><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "HHH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"0\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"6\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"12\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"18\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "W4H": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#f4c430\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"4\" fill=\"#00CED1\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "BEL": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#7A001D\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"7\" width=\"20\" height=\"4\" fill=\"#CCAD6A\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "RAN": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#1e3a8a\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#f4c430\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "DUL": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"7\" width=\"20\" height=\"1.9\" fill=\"#2563eb\"></rect><rect x=\"0\" y=\"10.1\" width=\"20\" height=\"1.9\" fill=\"#2563eb\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "STR": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#f4c430\"></path><text x=\"10\" y=\"13\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#1a1a1a\">S</text><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "SLH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"13\" y=\"0\" width=\"4\" height=\"20\" fill=\"#800020\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "DMV": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#C42F6A\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"3\" y=\"8\" width=\"1\" height=\"12\" fill=\"#BCD3EC\"></rect><rect x=\"4\" y=\"8\" width=\"1\" height=\"12\" fill=\"#fff\"></rect><rect x=\"16\" y=\"8\" width=\"1\" height=\"12\" fill=\"#BCD3EC\"></rect><rect x=\"15\" y=\"8\" width=\"1\" height=\"12\" fill=\"#fff\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "WOK": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#ff6600\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#32CD32\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "GUEST": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#9ba099\"></path><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>"
+ },
+ "individual": [
+  {
+   "pos": "1",
+   "pts": "1",
+   "club": "THH",
+   "name": "Louise Watson",
+   "marks": [],
+   "time": "21:21"
+  },
+  {
+   "pos": "2",
+   "pts": "2",
+   "club": "THH",
+   "name": "Lucy Macalister",
+   "marks": [
+    {
+     "t": "⭐",
+     "title": "Has won individual Surrey League title(s)"
+    }
+   ],
+   "time": "21:34"
+  },
+  {
+   "pos": "3",
+   "pts": "3",
+   "club": "HHH",
+   "name": "Ceri Diss",
+   "marks": [
+    {
+     "t": "⭐",
+     "title": "Has won individual Surrey League title(s)"
+    }
+   ],
+   "time": "21:37"
+  },
+  {
+   "pos": "4",
+   "pts": "4",
+   "club": "W4H",
+   "name": "Anna Critchlow",
+   "marks": [
+    {
+     "t": "🐐",
+     "title": "Is West 4 Harriers's greatest A-team scorer of all time"
+    }
+   ],
+   "time": "21:48"
+  },
+  {
+   "pos": "5",
+   "pts": "5",
+   "club": "BEL",
+   "name": "Maria Sharp",
+   "marks": [],
+   "time": "21:53"
+  },
+  {
+   "pos": "6",
+   "pts": "6",
+   "club": "RAN",
+   "name": "Allison O'Neill",
+   "marks": [],
+   "time": "22:03"
+  },
+  {
+   "pos": "7",
+   "pts": "7",
+   "club": "DUL",
+   "name": "Gill Johnson",
+   "marks": [],
+   "time": "22:24"
+  },
+  {
+   "pos": "8",
+   "pts": "8",
+   "club": "RAN",
+   "name": "Sarah Seal",
+   "marks": [],
+   "time": "22:32"
+  },
+  {
+   "pos": "9",
+   "pts": "9",
+   "club": "BEL",
+   "name": "Mathilde Heaton",
+   "marks": [],
+   "time": "22:39"
+  },
+  {
+   "pos": "10",
+   "pts": "10",
+   "club": "THH",
+   "name": "Megan Clark",
+   "marks": [],
+   "time": "22:45"
+  },
+  {
+   "pos": "11",
+   "pts": "11",
+   "club": "RAN",
+   "name": "Liz Kipling",
+   "marks": [],
+   "time": "22:52"
+  },
+  {
+   "pos": "12",
+   "pts": "12",
+   "club": "STR",
+   "name": "Dee Smale",
+   "marks": [
+    {
+     "t": "🐐",
+     "title": "Is Stragglers Running Club's greatest A-team scorer of all time"
+    }
+   ],
+   "time": "23:16"
+  },
+  {
+   "pos": "13",
+   "pts": "13",
+   "club": "SLH",
+   "name": "Ruth Hutton",
+   "marks": [
+    {
+     "t": "🐐",
+     "title": "Is South London Harriers's greatest A-team scorer of all time"
+    }
+   ],
+   "time": "23:22"
+  },
+  {
+   "pos": "14",
+   "pts": "14",
+   "club": "BEL",
+   "name": "Juliette Clark",
+   "marks": [],
+   "time": "23:23"
+  },
+  {
+   "pos": "15",
+   "pts": "15",
+   "club": "RAN",
+   "name": "Alice Beverly",
+   "marks": [],
+   "time": "23:27"
+  },
+  {
+   "pos": "16",
+   "pts": "16",
+   "club": "RAN",
+   "name": "Sara Grosvenor",
+   "marks": [],
+   "time": "23:27"
+  },
+  {
+   "pos": "17",
+   "pts": "17",
+   "club": "SLH",
+   "name": "Pippa Major",
+   "marks": [],
+   "time": "23:48"
+  },
+  {
+   "pos": "18",
+   "pts": "18",
+   "club": "BEL",
+   "name": "Louise Cooper",
+   "marks": [],
+   "time": "23:56"
+  },
+  {
+   "pos": "19",
+   "pts": "19",
+   "club": "DMV",
+   "name": "Harriet Bush",
+   "marks": [],
+   "time": "23:59"
+  },
+  {
+   "pos": "20",
+   "pts": "20",
+   "club": "SLH",
+   "name": "Viv Mitchell",
+   "marks": [],
+   "time": "24:06"
+  },
+  {
+   "pos": "21",
+   "pts": "21",
+   "club": "SLH",
+   "name": "Yvonne Hill",
+   "marks": [],
+   "time": "24:09"
+  },
+  {
+   "pos": "22",
+   "pts": "22",
+   "club": "W4H",
+   "name": "Sarah Clark",
+   "marks": [],
+   "time": "24:12"
+  },
+  {
+   "pos": "23",
+   "pts": "23",
+   "club": "THH",
+   "name": "Vicki Webb",
+   "marks": [],
+   "time": "24:14"
+  },
+  {
+   "pos": "24",
+   "pts": "24",
+   "club": "BEL",
+   "name": "Helen Alsop",
+   "marks": [],
+   "time": "24:22"
+  },
+  {
+   "pos": "25",
+   "pts": "25",
+   "club": "DUL",
+   "name": "Rachel Best",
+   "marks": [],
+   "time": "24:23"
+  },
+  {
+   "pos": "26",
+   "pts": "26",
+   "club": "SLH",
+   "name": "Marzena Bogdanowicz",
+   "marks": [],
+   "time": "24:24"
+  },
+  {
+   "pos": "27",
+   "pts": "27",
+   "club": "RAN",
+   "name": "Marlene Pautard",
+   "marks": [],
+   "time": "24:25"
+  },
+  {
+   "pos": "28",
+   "pts": "28",
+   "club": "SLH",
+   "name": "Gill O'Connor",
+   "marks": [],
+   "time": "24:29"
+  },
+  {
+   "pos": "29",
+   "pts": "29",
+   "club": "DMV",
+   "name": "Maddy Dykes",
+   "marks": [],
+   "time": "24:31"
+  },
+  {
+   "pos": "30",
+   "pts": "30",
+   "club": "RAN",
+   "name": "Kathy Mallett",
+   "marks": [],
+   "time": "24:32"
+  },
+  {
+   "pos": "31",
+   "pts": "31",
+   "club": "WOK",
+   "name": "Allison Crossman",
+   "marks": [],
+   "time": "24:32"
+  },
+  {
+   "pos": "32",
+   "pts": "32",
+   "club": "DMV",
+   "name": "Pippa Whitehouse",
+   "marks": [],
+   "time": "24:33"
+  },
+  {
+   "pos": "33",
+   "pts": "33",
+   "club": "DMV",
+   "name": "Helen Pickett",
+   "marks": [],
+   "time": "24:34"
+  },
+  {
+   "pos": "34",
+   "pts": "34",
+   "club": "DUL",
+   "name": "Pauline Virgo",
+   "marks": [],
+   "time": "24:36"
+  },
+  {
+   "pos": "35",
+   "pts": "35",
+   "club": "DUL",
+   "name": "Ros Tabor",
+   "marks": [],
+   "time": "24:37"
+  },
+  {
+   "pos": "36",
+   "pts": "36",
+   "club": "THH",
+   "name": "Alison Carpenter",
+   "marks": [],
+   "time": "24:38"
+  },
+  {
+   "pos": "37",
+   "pts": "37",
+   "club": "WOK",
+   "name": "Ruth Vlassak",
+   "marks": [],
+   "time": "24:52"
+  },
+  {
+   "pos": "38",
+   "pts": "38",
+   "club": "THH",
+   "name": "Kate McDonald",
+   "marks": [],
+   "time": "25:02"
+  },
+  {
+   "pos": "39",
+   "pts": "39",
+   "club": "RAN",
+   "name": "Clare Nicholson",
+   "marks": [],
+   "time": "25:06"
+  },
+  {
+   "pos": "40",
+   "pts": "40",
+   "club": "SLH",
+   "name": "Jo Quantrill",
+   "marks": [],
+   "time": "25:12"
+  },
+  {
+   "pos": "41",
+   "pts": "41",
+   "club": "HHH",
+   "name": "Caroline Warrington",
+   "marks": [],
+   "time": "25:19"
+  },
+  {
+   "pos": "42",
+   "pts": "42",
+   "club": "HHH",
+   "name": "Debbie Robinson",
+   "marks": [],
+   "time": "25:30"
+  },
+  {
+   "pos": "43",
+   "pts": "43",
+   "club": "RAN",
+   "name": "Eliete Nascimento",
+   "marks": [],
+   "time": "25:37"
+  },
+  {
+   "pos": "44",
+   "pts": "44",
+   "club": "DUL",
+   "name": "Andrea Pickup",
+   "marks": [],
+   "time": "25:38"
+  },
+  {
+   "pos": "45",
+   "pts": "45",
+   "club": "RAN",
+   "name": "Anna McLaughlin",
+   "marks": [],
+   "time": "25:40"
+  },
+  {
+   "pos": "46",
+   "pts": "46",
+   "club": "HHH",
+   "name": "Alexandra Rusman",
+   "marks": [],
+   "time": "25:42"
+  },
+  {
+   "pos": "47",
+   "pts": "47",
+   "club": "SLH",
+   "name": "Alison Mackenzie",
+   "marks": [],
+   "time": "25:47"
+  },
+  {
+   "pos": "48",
+   "pts": "48",
+   "club": "SLH",
+   "name": "Sue Ashley",
+   "marks": [],
+   "time": "25:47"
+  },
+  {
+   "pos": "49",
+   "pts": "49",
+   "club": "THH",
+   "name": "Karen Jones",
+   "marks": [],
+   "time": "26:04"
+  },
+  {
+   "pos": "50",
+   "pts": "50",
+   "club": "WOK",
+   "name": "Jenna Tarrent",
+   "marks": [],
+   "time": "26:06"
+  },
+  {
+   "pos": "51",
+   "pts": "51",
+   "club": "DUL",
+   "name": "Clare Wyngard",
+   "marks": [],
+   "time": "26:07"
+  },
+  {
+   "pos": "52",
+   "pts": "52",
+   "club": "STR",
+   "name": "Julie Haworth",
+   "marks": [],
+   "time": "26:08"
+  },
+  {
+   "pos": "53",
+   "pts": "-",
+   "club": "GUEST",
+   "name": "Beatrice Ballom",
+   "marks": [
+    {
+     "t": "(N/S)",
+     "title": ""
+    }
+   ],
+   "time": "26:10"
+  },
+  {
+   "pos": "54",
+   "pts": "53",
+   "club": "HHH",
+   "name": "Liz Souness",
+   "marks": [],
+   "time": "26:13"
+  },
+  {
+   "pos": "55",
+   "pts": "54",
+   "club": "DUL",
+   "name": "Suzanne McGladdery",
+   "marks": [],
+   "time": "26:15"
+  },
+  {
+   "pos": "56",
+   "pts": "55",
+   "club": "WOK",
+   "name": "Oli Inak-Price",
+   "marks": [],
+   "time": "26:17"
+  },
+  {
+   "pos": "57",
+   "pts": "56",
+   "club": "RAN",
+   "name": "Sonia Rowland",
+   "marks": [],
+   "time": "26:26"
+  },
+  {
+   "pos": "58",
+   "pts": "57",
+   "club": "SLH",
+   "name": "Kathy Southall",
+   "marks": [],
+   "time": "26:31"
+  },
+  {
+   "pos": "59",
+   "pts": "58",
+   "club": "DUL",
+   "name": "Rachel Cooley",
+   "marks": [],
+   "time": "26:33"
+  },
+  {
+   "pos": "60",
+   "pts": "59",
+   "club": "DUL",
+   "name": "Claire Steward",
+   "marks": [],
+   "time": "26:36"
+  },
+  {
+   "pos": "61",
+   "pts": "60",
+   "club": "HHH",
+   "name": "Sarah Allen",
+   "marks": [],
+   "time": "26:37"
+  },
+  {
+   "pos": "62",
+   "pts": "61",
+   "club": "DMV",
+   "name": "Charlotte Craig",
+   "marks": [],
+   "time": "26:50"
+  },
+  {
+   "pos": "63",
+   "pts": "62",
+   "club": "HHH",
+   "name": "Claire Tinker-Dunton",
+   "marks": [],
+   "time": "27:10"
+  },
+  {
+   "pos": "64",
+   "pts": "63",
+   "club": "STR",
+   "name": "Emma Dadlani",
+   "marks": [],
+   "time": "27:13"
+  },
+  {
+   "pos": "65",
+   "pts": "64",
+   "club": "BEL",
+   "name": "Catherine Eastham",
+   "marks": [],
+   "time": "27:15"
+  },
+  {
+   "pos": "66",
+   "pts": "65",
+   "club": "RAN",
+   "name": "Sophie Timms",
+   "marks": [],
+   "time": "27:21"
+  },
+  {
+   "pos": "67",
+   "pts": "66",
+   "club": "W4H",
+   "name": "Yvonne Rice-Oxley",
+   "marks": [],
+   "time": "27:23"
+  },
+  {
+   "pos": "68",
+   "pts": "67",
+   "club": "STR",
+   "name": "Sue Jay",
+   "marks": [],
+   "time": "27:27"
+  },
+  {
+   "pos": "69",
+   "pts": "68",
+   "club": "DUL",
+   "name": "Kirstin Baker",
+   "marks": [],
+   "time": "27:58"
+  },
+  {
+   "pos": "70",
+   "pts": "69",
+   "club": "RAN",
+   "name": "Louise Piears",
+   "marks": [],
+   "time": "28:05"
+  },
+  {
+   "pos": "71",
+   "pts": "70",
+   "club": "DUL",
+   "name": "Mary Loftus",
+   "marks": [],
+   "time": "28:10"
+  },
+  {
+   "pos": "72",
+   "pts": "71",
+   "club": "DUL",
+   "name": "Diane Ward",
+   "marks": [],
+   "time": "28:22"
+  },
+  {
+   "pos": "73",
+   "pts": "72",
+   "club": "WOK",
+   "name": "Sophie Rodenburg",
+   "marks": [],
+   "time": "28:27"
+  },
+  {
+   "pos": "74",
+   "pts": "73",
+   "club": "SLH",
+   "name": "Nicola Chalke",
+   "marks": [],
+   "time": "28:52"
+  },
+  {
+   "pos": "75",
+   "pts": "74",
+   "club": "STR",
+   "name": "Cathy Davis",
+   "marks": [],
+   "time": "28:59"
+  },
+  {
+   "pos": "76",
+   "pts": "75",
+   "club": "SLH",
+   "name": "Marketa Martins",
+   "marks": [],
+   "time": "29:02"
+  },
+  {
+   "pos": "77",
+   "pts": "76",
+   "club": "BEL",
+   "name": "Nina Mills",
+   "marks": [],
+   "time": "29:23"
+  },
+  {
+   "pos": "78",
+   "pts": "77",
+   "club": "THH",
+   "name": "Jenny Thomas",
+   "marks": [],
+   "time": "29:40"
+  },
+  {
+   "pos": "79",
+   "pts": "78",
+   "club": "STR",
+   "name": "Alison Reddington",
+   "marks": [],
+   "time": "30:01"
+  },
+  {
+   "pos": "80",
+   "pts": "79",
+   "club": "WOK",
+   "name": "Vicky Baldwin",
+   "marks": [],
+   "time": "30:07"
+  },
+  {
+   "pos": "81",
+   "pts": "80",
+   "club": "STR",
+   "name": "Gail Caruana",
+   "marks": [],
+   "time": "30:08"
+  },
+  {
+   "pos": "82",
+   "pts": "81",
+   "club": "SLH",
+   "name": "Jane Luxton",
+   "marks": [],
+   "time": "30:22"
+  },
+  {
+   "pos": "83",
+   "pts": "82",
+   "club": "STR",
+   "name": "Linda Clemens",
+   "marks": [],
+   "time": "30:27"
+  },
+  {
+   "pos": "84",
+   "pts": "83",
+   "club": "RAN",
+   "name": "Michele Gibson",
+   "marks": [],
+   "time": "30:39"
+  },
+  {
+   "pos": "85",
+   "pts": "84",
+   "club": "DUL",
+   "name": "Clare Osborne",
+   "marks": [],
+   "time": "30:41"
+  },
+  {
+   "pos": "86",
+   "pts": "85",
+   "club": "W4H",
+   "name": "Lesley Foote",
+   "marks": [],
+   "time": "30:43"
+  },
+  {
+   "pos": "87",
+   "pts": "86",
+   "club": "SLH",
+   "name": "Nina Pinkerton",
+   "marks": [],
+   "time": "31:05"
+  },
+  {
+   "pos": "88",
+   "pts": "87",
+   "club": "DUL",
+   "name": "Stephanie Burchill",
+   "marks": [],
+   "time": "31:14"
+  },
+  {
+   "pos": "89",
+   "pts": "88",
+   "club": "WOK",
+   "name": "Becky Baldwin",
+   "marks": [],
+   "time": "31:27"
+  },
+  {
+   "pos": "90",
+   "pts": "89",
+   "club": "RAN",
+   "name": "Catherine Carthy",
+   "marks": [],
+   "time": "31:44"
+  },
+  {
+   "pos": "91",
+   "pts": "90",
+   "club": "RAN",
+   "name": "Amelia King",
+   "marks": [],
+   "time": "32:49"
+  },
+  {
+   "pos": "92",
+   "pts": "91",
+   "club": "WOK",
+   "name": "Lisa Lightman",
+   "marks": [],
+   "time": "33:22"
+  },
+  {
+   "pos": "93",
+   "pts": "92",
+   "club": "SLH",
+   "name": "Jenny Grant",
+   "marks": [],
+   "time": "33:24"
+  },
+  {
+   "pos": "94",
+   "pts": "93",
+   "club": "RAN",
+   "name": "Lynn Buist",
+   "marks": [],
+   "time": "34:31"
+  },
+  {
+   "pos": "95",
+   "pts": "94",
+   "club": "THH",
+   "name": "Wendy Petty",
+   "marks": [],
+   "time": "38:23"
+  },
+  {
+   "pos": "96",
+   "pts": "95",
+   "club": "RAN",
+   "name": "Beverley Ali",
+   "marks": [],
+   "time": "38:23"
+  },
+  {
+   "pos": "97",
+   "pts": "96",
+   "club": "THH",
+   "name": "Karen Farmery",
+   "marks": [],
+   "time": "38:23"
+  }
+ ],
+ "aTeams": [
+  {
+   "pos": "1",
+   "club": "RAN",
+   "pts": "56",
+   "scores": []
+  },
+  {
+   "pos": "2",
+   "club": "BEL",
+   "pts": "70",
+   "scores": []
+  },
+  {
+   "pos": "3",
+   "club": "THH",
+   "pts": "72",
+   "scores": []
+  },
+  {
+   "pos": "4",
+   "club": "SLH",
+   "pts": "97",
+   "scores": []
+  },
+  {
+   "pos": "5",
+   "club": "DUL",
+   "pts": "145",
+   "scores": []
+  },
+  {
+   "pos": "6",
+   "club": "DMV",
+   "pts": "174",
+   "scores": [
+    "19",
+    "29",
+    "32",
+    "33",
+    "61"
+   ]
+  },
+  {
+   "pos": "7",
+   "club": "HHH",
+   "pts": "185",
+   "scores": []
+  },
+  {
+   "pos": "8",
+   "club": "WOK",
+   "pts": "245",
+   "scores": []
+  },
+  {
+   "pos": "9",
+   "club": "STR",
+   "pts": "268",
+   "scores": []
+  },
+  {
+   "pos": "10",
+   "club": "W4H",
+   "pts": "283",
+   "scores": []
+  }
+ ],
+ "bTeams": [],
+ "sex": "Women"
+}

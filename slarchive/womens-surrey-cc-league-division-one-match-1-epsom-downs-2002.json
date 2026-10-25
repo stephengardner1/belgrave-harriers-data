@@ -1,0 +1,400 @@
+{
+ "source": "Surrey League compendium, slarchive.org",
+ "url": "https://slarchive.org/women/race/0203-1",
+ "copied": "2026-10-25",
+ "meta": "12 Oct 2002 · Match 1 · 2002/03",
+ "venue": "Epsom Downs",
+ "lines": [
+  {
+   "club": "THH",
+   "strong": "Dorchie Cockerell's",
+   "rest": "2nd of 8 wins in Div 1"
+  },
+  {
+   "club": "SLH",
+   "strong": "South London Harriers",
+   "rest": "won the match"
+  }
+ ],
+ "clubs": {
+  "THH": "Thames Hare & Hounds",
+  "BEL": "Belgrave Harriers",
+  "HHH": "Herne Hill Harriers",
+  "DUL": "Dulwich Runners",
+  "WOK": "Woking AC",
+  "SLH": "South London Harriers",
+  "RAN": "Ranelagh Harriers",
+  "DMV": "Dorking & Mole Valley",
+  "W4H": "West 4 Harriers"
+ },
+ "vests": {
+  "THH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><line x1=\"6\" y1=\"5\" x2=\"14\" y2=\"15\" stroke=\"#1a1a1a\" stroke-width=\"2\"></line><line x1=\"14\" y1=\"5\" x2=\"6\" y2=\"15\" stroke=\"#1a1a1a\" stroke-width=\"2\"></line><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "BEL": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#7A001D\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"7\" width=\"20\" height=\"4\" fill=\"#CCAD6A\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "HHH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"0\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"6\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"12\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"18\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "DUL": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"7\" width=\"20\" height=\"1.9\" fill=\"#2563eb\"></rect><rect x=\"0\" y=\"10.1\" width=\"20\" height=\"1.9\" fill=\"#2563eb\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "WOK": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#ff6600\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#32CD32\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "SLH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"13\" y=\"0\" width=\"4\" height=\"20\" fill=\"#800020\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "RAN": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#1e3a8a\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#f4c430\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "DMV": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#C42F6A\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"3\" y=\"8\" width=\"1\" height=\"12\" fill=\"#BCD3EC\"></rect><rect x=\"4\" y=\"8\" width=\"1\" height=\"12\" fill=\"#fff\"></rect><rect x=\"16\" y=\"8\" width=\"1\" height=\"12\" fill=\"#BCD3EC\"></rect><rect x=\"15\" y=\"8\" width=\"1\" height=\"12\" fill=\"#fff\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "W4H": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#f4c430\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"4\" fill=\"#00CED1\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>"
+ },
+ "individual": [
+  {
+   "pos": "1",
+   "pts": "",
+   "club": "THH",
+   "name": "Dorchie Cockerell",
+   "marks": [],
+   "time": "26:03"
+  },
+  {
+   "pos": "2",
+   "pts": "2",
+   "club": "BEL",
+   "name": "Getenesh Tamirat",
+   "marks": [],
+   "time": "26:20"
+  },
+  {
+   "pos": "3",
+   "pts": "",
+   "club": "THH",
+   "name": "Lucy Macalister",
+   "marks": [
+    {
+     "t": "⭐",
+     "title": "Has won individual Surrey League title(s)"
+    }
+   ],
+   "time": "27:24"
+  },
+  {
+   "pos": "4",
+   "pts": "",
+   "club": "THH",
+   "name": "Megan Clark",
+   "marks": [],
+   "time": "27:52"
+  },
+  {
+   "pos": "5",
+   "pts": "",
+   "club": "HHH",
+   "name": "Silla Duhrkop",
+   "marks": [],
+   "time": "28:02"
+  },
+  {
+   "pos": "6",
+   "pts": "6",
+   "club": "BEL",
+   "name": "Maria Sharp",
+   "marks": [],
+   "time": "28:04"
+  },
+  {
+   "pos": "7",
+   "pts": "",
+   "club": "DUL",
+   "name": "Gill Johnson",
+   "marks": [],
+   "time": "28:07"
+  },
+  {
+   "pos": "8",
+   "pts": "",
+   "club": "WOK",
+   "name": "Lorna Vyse",
+   "marks": [],
+   "time": "28:20"
+  },
+  {
+   "pos": "9",
+   "pts": "",
+   "club": "DUL",
+   "name": "A Hurford",
+   "marks": [],
+   "time": "28:38"
+  },
+  {
+   "pos": "10",
+   "pts": "10",
+   "club": "BEL",
+   "name": "Tania Sturton",
+   "marks": [],
+   "time": "29:10"
+  },
+  {
+   "pos": "11",
+   "pts": "11",
+   "club": "SLH",
+   "name": "Ruth Hutton",
+   "marks": [
+    {
+     "t": "🐐",
+     "title": "Is South London Harriers's greatest A-team scorer of all time"
+    }
+   ],
+   "time": "29:16"
+  },
+  {
+   "pos": "12",
+   "pts": "12",
+   "club": "BEL",
+   "name": "Angela Walker",
+   "marks": [],
+   "time": "29:17"
+  },
+  {
+   "pos": "13",
+   "pts": "",
+   "club": "RAN",
+   "name": "Sarah Seal",
+   "marks": [],
+   "time": ""
+  },
+  {
+   "pos": "14",
+   "pts": "14",
+   "club": "SLH",
+   "name": "Pippa Major",
+   "marks": [],
+   "time": "29:30"
+  },
+  {
+   "pos": "15",
+   "pts": "",
+   "club": "WOK",
+   "name": "Susanna Harrison",
+   "marks": [],
+   "time": "29:35"
+  },
+  {
+   "pos": "16",
+   "pts": "16",
+   "club": "SLH",
+   "name": "Jessica Trowbridge",
+   "marks": [],
+   "time": "29:36"
+  },
+  {
+   "pos": "17",
+   "pts": "",
+   "club": "DMV",
+   "name": "Pippa Whitehouse",
+   "marks": [],
+   "time": "29:48"
+  },
+  {
+   "pos": "18",
+   "pts": "18",
+   "club": "SLH",
+   "name": "A McKenzie",
+   "marks": [],
+   "time": "30:36"
+  },
+  {
+   "pos": "19",
+   "pts": "",
+   "club": "RAN",
+   "name": "Bridget Cuthbert",
+   "marks": [],
+   "time": "30:40"
+  },
+  {
+   "pos": "20",
+   "pts": "",
+   "club": "RAN",
+   "name": "Kristina Semple",
+   "marks": [],
+   "time": "30:41"
+  },
+  {
+   "pos": "21",
+   "pts": "",
+   "club": "WOK",
+   "name": "Ruth Vlassak",
+   "marks": [],
+   "time": "30:44"
+  },
+  {
+   "pos": "22",
+   "pts": "",
+   "club": "W4H",
+   "name": "Emmie Gribble",
+   "marks": [],
+   "time": "30:46"
+  },
+  {
+   "pos": "23",
+   "pts": "23",
+   "club": "SLH",
+   "name": "Viv Mitchell",
+   "marks": [],
+   "time": "30:51"
+  },
+  {
+   "pos": "24",
+   "pts": "",
+   "club": "SLH",
+   "name": "Christine Farmer",
+   "marks": [],
+   "time": "30:53"
+  },
+  {
+   "pos": "25",
+   "pts": "",
+   "club": "DMV",
+   "name": "Sally Young",
+   "marks": [
+    {
+     "t": "🐐",
+     "title": "Is Dorking & Mole Valley's greatest A-team scorer of all time"
+    }
+   ],
+   "time": "30:55"
+  },
+  {
+   "pos": "26",
+   "pts": "",
+   "club": "W4H",
+   "name": "Julia Tregaskis",
+   "marks": [],
+   "time": "31:25"
+  },
+  {
+   "pos": "27",
+   "pts": "",
+   "club": "HHH",
+   "name": "Nici Cahusac",
+   "marks": [],
+   "time": "31:28"
+  },
+  {
+   "pos": "28",
+   "pts": "",
+   "club": "DMV",
+   "name": "Jenny Dexter",
+   "marks": [],
+   "time": "31:31"
+  },
+  {
+   "pos": "29",
+   "pts": "",
+   "club": "SLH",
+   "name": "Jo Quantrill",
+   "marks": [],
+   "time": "31:31"
+  },
+  {
+   "pos": "30",
+   "pts": "",
+   "club": "RAN",
+   "name": "K Magett",
+   "marks": [],
+   "time": "31:32"
+  },
+  {
+   "pos": "53",
+   "pts": "53",
+   "club": "BEL",
+   "name": "Jan Whittington",
+   "marks": [],
+   "time": "33:37"
+  },
+  {
+   "pos": "66",
+   "pts": "",
+   "club": "BEL",
+   "name": "Deborah Hearn",
+   "marks": [],
+   "time": "35:18"
+  },
+  {
+   "pos": "82",
+   "pts": "",
+   "club": "BEL",
+   "name": "Jo Poloni",
+   "marks": [],
+   "time": "38:00"
+  },
+  {
+   "pos": "83",
+   "pts": "",
+   "club": "BEL",
+   "name": "Nina Mills",
+   "marks": [],
+   "time": "38:13"
+  }
+ ],
+ "aTeams": [
+  {
+   "pos": "1",
+   "club": "THH",
+   "pts": "80",
+   "scores": []
+  },
+  {
+   "pos": "2",
+   "club": "SLH",
+   "pts": "82",
+   "scores": [
+    "11",
+    "14",
+    "16",
+    "18",
+    "23"
+   ]
+  },
+  {
+   "pos": "3",
+   "club": "BEL",
+   "pts": "83",
+   "scores": [
+    "2",
+    "6",
+    "10",
+    "12",
+    "53"
+   ]
+  },
+  {
+   "pos": "4",
+   "club": "RAN",
+   "pts": "114",
+   "scores": []
+  },
+  {
+   "pos": "5",
+   "club": "DUL",
+   "pts": "120",
+   "scores": []
+  },
+  {
+   "pos": "6",
+   "club": "WOK",
+   "pts": "143",
+   "scores": []
+  },
+  {
+   "pos": "7",
+   "club": "DMV",
+   "pts": "152",
+   "scores": []
+  },
+  {
+   "pos": "8",
+   "club": "HHH",
+   "pts": "154",
+   "scores": []
+  },
+  {
+   "pos": "9",
+   "club": "W4H",
+   "pts": "220",
+   "scores": []
+  }
+ ],
+ "bTeams": [],
+ "sex": "Women"
+}

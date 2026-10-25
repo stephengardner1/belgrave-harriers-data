@@ -1,0 +1,376 @@
+{
+ "source": "Surrey League compendium, slarchive.org",
+ "url": "https://slarchive.org/women/race/0708-2",
+ "copied": "2026-10-25",
+ "meta": "10 Nov 2007 · Match 2 · 2007/08",
+ "venue": "Cranford",
+ "lines": [
+  {
+   "club": "THH",
+   "strong": "Alice Braham's",
+   "rest": "only win in Div 1"
+  },
+  {
+   "club": "THH",
+   "strong": "Thames Hare & Hounds",
+   "rest": "won the match"
+  }
+ ],
+ "clubs": {
+  "THH": "Thames Hare & Hounds",
+  "E&E": "Epsom & Ewell",
+  "REI": "Reigate Priory AC",
+  "BEL": "Belgrave Harriers",
+  "RAN": "Ranelagh Harriers",
+  "DUL": "Dulwich Runners",
+  "HHH": "Herne Hill Harriers",
+  "SLH": "South London Harriers",
+  "W4H": "West 4 Harriers",
+  "STR": "Stragglers Running Club"
+ },
+ "vests": {
+  "THH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><line x1=\"6\" y1=\"5\" x2=\"14\" y2=\"15\" stroke=\"#1a1a1a\" stroke-width=\"2\"></line><line x1=\"14\" y1=\"5\" x2=\"6\" y2=\"15\" stroke=\"#1a1a1a\" stroke-width=\"2\"></line><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "E&E": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#f4c430\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "REI": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><polygon points=\"0,0 6,0 20,14 20,20 14,20 0,6\" fill=\"#87CEEB\"></polygon></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "BEL": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#7A001D\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"7\" width=\"20\" height=\"4\" fill=\"#CCAD6A\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "RAN": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#1e3a8a\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#f4c430\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "DUL": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"7\" width=\"20\" height=\"1.9\" fill=\"#2563eb\"></rect><rect x=\"0\" y=\"10.1\" width=\"20\" height=\"1.9\" fill=\"#2563eb\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "HHH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"0\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"6\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"12\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"18\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "SLH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"13\" y=\"0\" width=\"4\" height=\"20\" fill=\"#800020\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "W4H": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#f4c430\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"4\" fill=\"#00CED1\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "STR": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#f4c430\"></path><text x=\"10\" y=\"13\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#1a1a1a\">S</text><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>"
+ },
+ "individual": [
+  {
+   "pos": "1",
+   "pts": "1",
+   "club": "THH",
+   "name": "Alice Braham",
+   "marks": [],
+   "time": "19:57"
+  },
+  {
+   "pos": "2",
+   "pts": "2",
+   "club": "THH",
+   "name": "Lucy Macalister",
+   "marks": [
+    {
+     "t": "⭐",
+     "title": "Has won individual Surrey League title(s)"
+    }
+   ],
+   "time": "20:08"
+  },
+  {
+   "pos": "3",
+   "pts": "3",
+   "club": "E&E",
+   "name": "Emily Alden",
+   "marks": [],
+   "time": "20:29"
+  },
+  {
+   "pos": "4",
+   "pts": "4",
+   "club": "REI",
+   "name": "Fiona Clark",
+   "marks": [
+    {
+     "t": "⭐",
+     "title": "Has won individual Surrey League title(s)"
+    },
+    {
+     "t": "🐐",
+     "title": "Is Reigate Priory AC's greatest A-team scorer of all time"
+    }
+   ],
+   "time": "21:08"
+  },
+  {
+   "pos": "5",
+   "pts": "5",
+   "club": "BEL",
+   "name": "Sarah Murphy",
+   "marks": [
+    {
+     "t": "🐐",
+     "title": "Is Belgrave Harriers's greatest A-team scorer of all time"
+    }
+   ],
+   "time": "21:11"
+  },
+  {
+   "pos": "6",
+   "pts": "6",
+   "club": "RAN",
+   "name": "Anna Scully",
+   "marks": [],
+   "time": "21:18"
+  },
+  {
+   "pos": "7",
+   "pts": "7",
+   "club": "THH",
+   "name": "Bethan Hopewell",
+   "marks": [],
+   "time": "21:23"
+  },
+  {
+   "pos": "8",
+   "pts": "8",
+   "club": "DUL",
+   "name": "Clare Elms",
+   "marks": [],
+   "time": "21:27"
+  },
+  {
+   "pos": "9",
+   "pts": "9",
+   "club": "HHH",
+   "name": "Karen Ellison",
+   "marks": [
+    {
+     "t": "🐐",
+     "title": "Is Herne Hill Harriers's greatest A-team scorer of all time"
+    }
+   ],
+   "time": "21:46"
+  },
+  {
+   "pos": "10",
+   "pts": "10",
+   "club": "RAN",
+   "name": "Estelle Damant",
+   "marks": [],
+   "time": "21:46"
+  },
+  {
+   "pos": "14",
+   "pts": "14",
+   "club": "SLH",
+   "name": "Pippa Major",
+   "marks": [],
+   "time": "22:13"
+  },
+  {
+   "pos": "17",
+   "pts": "17",
+   "club": "BEL",
+   "name": "Erica Fogg",
+   "marks": [],
+   "time": "22:26"
+  },
+  {
+   "pos": "18",
+   "pts": "18",
+   "club": "SLH",
+   "name": "Ruth Hutton",
+   "marks": [
+    {
+     "t": "🐐",
+     "title": "Is South London Harriers's greatest A-team scorer of all time"
+    }
+   ],
+   "time": "22:30"
+  },
+  {
+   "pos": "25",
+   "pts": "25",
+   "club": "THH",
+   "name": "Elizabeth Stavreski",
+   "marks": [],
+   "time": ""
+  },
+  {
+   "pos": "31",
+   "pts": "31",
+   "club": "SLH",
+   "name": "Vivienne Mitchell",
+   "marks": [],
+   "time": "23:43"
+  },
+  {
+   "pos": "32",
+   "pts": "32",
+   "club": "SLH",
+   "name": "Beckie Chapman",
+   "marks": [],
+   "time": "23:46"
+  },
+  {
+   "pos": "37",
+   "pts": "37",
+   "club": "THH",
+   "name": "Alison Carpenter",
+   "marks": [],
+   "time": ""
+  },
+  {
+   "pos": "38",
+   "pts": "38",
+   "club": "SLH",
+   "name": "Caroline Walker",
+   "marks": [],
+   "time": "23:56"
+  },
+  {
+   "pos": "39",
+   "pts": "39",
+   "club": "THH",
+   "name": "Vicki Webb",
+   "marks": [],
+   "time": ""
+  },
+  {
+   "pos": "43",
+   "pts": "43",
+   "club": "THH",
+   "name": "Vikki Filsell",
+   "marks": [],
+   "time": ""
+  },
+  {
+   "pos": "47",
+   "pts": "47",
+   "club": "BEL",
+   "name": "Catherine Eastham",
+   "marks": [],
+   "time": "24:32"
+  },
+  {
+   "pos": "52",
+   "pts": "52",
+   "club": "THH",
+   "name": "Clare Sylvester",
+   "marks": [],
+   "time": ""
+  },
+  {
+   "pos": "53",
+   "pts": "53",
+   "club": "THH",
+   "name": "Rachel Haining",
+   "marks": [],
+   "time": ""
+  },
+  {
+   "pos": "56",
+   "pts": "56",
+   "club": "SLH",
+   "name": "Jo Quantrill",
+   "marks": [],
+   "time": "25:03"
+  },
+  {
+   "pos": "79",
+   "pts": "79",
+   "club": "SLH",
+   "name": "Sylvie Kah",
+   "marks": [],
+   "time": "26:15"
+  },
+  {
+   "pos": "92",
+   "pts": "92",
+   "club": "SLH",
+   "name": "Pam Iannella",
+   "marks": [],
+   "time": "26:48"
+  },
+  {
+   "pos": "109",
+   "pts": "109",
+   "club": "BEL",
+   "name": "Jennifer Beecroft",
+   "marks": [],
+   "time": "28:26"
+  },
+  {
+   "pos": "111",
+   "pts": "111",
+   "club": "SLH",
+   "name": "Jo Lingwood",
+   "marks": [],
+   "time": "28:37"
+  },
+  {
+   "pos": "113",
+   "pts": "113",
+   "club": "SLH",
+   "name": "Jane Luxton",
+   "marks": [],
+   "time": "28:44"
+  },
+  {
+   "pos": "117",
+   "pts": "117",
+   "club": "SLH",
+   "name": "Lorraine Hewett",
+   "marks": [],
+   "time": "28:54"
+  },
+  {
+   "pos": "119",
+   "pts": "119",
+   "club": "SLH",
+   "name": "Jennie Burdett",
+   "marks": [],
+   "time": "29:13"
+  },
+  {
+   "pos": "121",
+   "pts": "121",
+   "club": "SLH",
+   "name": "Su Taylor",
+   "marks": [],
+   "time": "29:22"
+  }
+ ],
+ "aTeams": [
+  {
+   "pos": "1",
+   "club": "THH",
+   "pts": "72",
+   "scores": []
+  },
+  {
+   "pos": "2",
+   "club": "HHH",
+   "pts": "79",
+   "scores": []
+  },
+  {
+   "pos": "3",
+   "club": "RAN",
+   "pts": "84",
+   "scores": []
+  },
+  {
+   "pos": "4",
+   "club": "SLH",
+   "pts": "133",
+   "scores": []
+  },
+  {
+   "pos": "5",
+   "club": "W4H",
+   "pts": "161",
+   "scores": []
+  },
+  {
+   "pos": "6",
+   "club": "STR",
+   "pts": "214",
+   "scores": []
+  },
+  {
+   "pos": "7",
+   "club": "BEL",
+   "pts": "332",
+   "scores": []
+  }
+ ],
+ "bTeams": [],
+ "sex": "Women"
+}

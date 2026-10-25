@@ -1,0 +1,1484 @@
+{
+ "source": "Surrey League compendium, slarchive.org",
+ "url": "https://slarchive.org/race/0203-1",
+ "copied": "2026-10-25",
+ "meta": "12 Oct 2002 · Match 1 · 2002/03",
+ "venue": "Brockwell Park",
+ "lines": [
+  {
+   "club": "BEL",
+   "strong": "Steve Sharp's",
+   "rest": "2nd of 4 wins in Div 1"
+  },
+  {
+   "club": "THH",
+   "strong": "Thames Hare & Hounds",
+   "rest": "won the match"
+  }
+ ],
+ "clubs": {
+  "BEL": "Belgrave Harriers",
+  "REI": "Reigate Priory AC",
+  "SLH": "South London Harriers",
+  "THH": "Thames Hare & Hounds",
+  "HHH": "Herne Hill Harriers",
+  "RAN": "Ranelagh Harriers",
+  "AFD": "Aldershot Farnham & District",
+  "DUL": "Dulwich Runners",
+  "G&G": "Guildford & Godalming"
+ },
+ "vests": {
+  "BEL": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#7A001D\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"7\" width=\"20\" height=\"4\" fill=\"#CCAD6A\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "REI": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><polygon points=\"0,0 6,0 20,14 20,20 14,20 0,6\" fill=\"#87CEEB\"></polygon></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "SLH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"13\" y=\"0\" width=\"4\" height=\"20\" fill=\"#800020\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "THH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><line x1=\"6\" y1=\"5\" x2=\"14\" y2=\"15\" stroke=\"#1a1a1a\" stroke-width=\"2\"></line><line x1=\"14\" y1=\"5\" x2=\"6\" y2=\"15\" stroke=\"#1a1a1a\" stroke-width=\"2\"></line><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "HHH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"0\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"6\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"12\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"18\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "RAN": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#1e3a8a\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#f4c430\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "AFD": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"14\" y=\"0\" width=\"3\" height=\"20\" fill=\"#fff\"></rect><rect x=\"0\" y=\"6\" width=\"20\" height=\"3\" fill=\"#228b22\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "DUL": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"7\" width=\"20\" height=\"1.9\" fill=\"#2563eb\"></rect><rect x=\"0\" y=\"10.1\" width=\"20\" height=\"1.9\" fill=\"#2563eb\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "G&G": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#228b22\"></path><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>"
+ },
+ "individual": [
+  {
+   "pos": "1",
+   "pts": "1",
+   "club": "BEL",
+   "name": "Steve Sharp",
+   "marks": [],
+   "time": "23:07"
+  },
+  {
+   "pos": "2",
+   "pts": "2",
+   "club": "REI",
+   "name": "Ed Prickett",
+   "marks": [],
+   "time": "23:18"
+  },
+  {
+   "pos": "3",
+   "pts": "3",
+   "club": "SLH",
+   "name": "Stuart Major",
+   "marks": [
+    {
+     "t": "⭐⭐",
+     "title": "Has won individual Surrey League title(s)"
+    },
+    {
+     "t": "🐐",
+     "title": "Is South London Harriers's greatest A-team scorer of all time"
+    }
+   ],
+   "time": "23:21"
+  },
+  {
+   "pos": "4",
+   "pts": "4",
+   "club": "BEL",
+   "name": "Will Cockerell",
+   "marks": [
+    {
+     "t": "🐐",
+     "title": "Is Belgrave Harriers's greatest A-team scorer of all time"
+    }
+   ],
+   "time": "23:45"
+  },
+  {
+   "pos": "5",
+   "pts": "5",
+   "club": "THH",
+   "name": "Nick Altmann",
+   "marks": [
+    {
+     "t": "⭐",
+     "title": "Has won individual Surrey League title(s)"
+    }
+   ],
+   "time": "23:51"
+  },
+  {
+   "pos": "6",
+   "pts": "6",
+   "club": "HHH",
+   "name": "M Norminton",
+   "marks": [],
+   "time": "23:58"
+  },
+  {
+   "pos": "7",
+   "pts": "7",
+   "club": "THH",
+   "name": "Ben Reynolds",
+   "marks": [
+    {
+     "t": "⭐",
+     "title": "Has won individual Surrey League title(s)"
+    },
+    {
+     "t": "🐐",
+     "title": "Is Thames Hare & Hounds's greatest A-team scorer of all time"
+    }
+   ],
+   "time": "24:00"
+  },
+  {
+   "pos": "8",
+   "pts": "8",
+   "club": "SLH",
+   "name": "C Sykes",
+   "marks": [],
+   "time": "24:03"
+  },
+  {
+   "pos": "9",
+   "pts": "9",
+   "club": "HHH",
+   "name": "Dave Robinson",
+   "marks": [],
+   "time": "24:07"
+  },
+  {
+   "pos": "10",
+   "pts": "10",
+   "club": "BEL",
+   "name": "Padraic Buckley",
+   "marks": [],
+   "time": "24:12"
+  },
+  {
+   "pos": "11",
+   "pts": "11",
+   "club": "HHH",
+   "name": "Keith Newton",
+   "marks": [
+    {
+     "t": "⭐",
+     "title": "Has won individual Surrey League title(s)"
+    }
+   ],
+   "time": "24:16"
+  },
+  {
+   "pos": "12",
+   "pts": "12",
+   "club": "BEL",
+   "name": "Kevin Nash",
+   "marks": [],
+   "time": "24:18"
+  },
+  {
+   "pos": "13",
+   "pts": "13",
+   "club": "RAN",
+   "name": "Hugh Jones",
+   "marks": [],
+   "time": "24:21"
+  },
+  {
+   "pos": "14",
+   "pts": "14",
+   "club": "THH",
+   "name": "Andy Weir",
+   "marks": [],
+   "time": "24:23"
+  },
+  {
+   "pos": "15",
+   "pts": "15",
+   "club": "THH",
+   "name": "Andrew Beevers",
+   "marks": [],
+   "time": "24:25"
+  },
+  {
+   "pos": "16",
+   "pts": "16",
+   "club": "BEL",
+   "name": "Jonathan Blackledge",
+   "marks": [],
+   "time": "24:28"
+  },
+  {
+   "pos": "17",
+   "pts": "17",
+   "club": "HHH",
+   "name": "Mike Boyle",
+   "marks": [
+    {
+     "t": "⭐",
+     "title": "Has won individual Surrey League title(s)"
+    }
+   ],
+   "time": "24:32"
+  },
+  {
+   "pos": "18",
+   "pts": "18",
+   "club": "THH",
+   "name": "Larry Mathews",
+   "marks": [],
+   "time": "24:34"
+  },
+  {
+   "pos": "19",
+   "pts": "19",
+   "club": "SLH",
+   "name": "Robbie James",
+   "marks": [],
+   "time": "24:38"
+  },
+  {
+   "pos": "20",
+   "pts": "20",
+   "club": "BEL",
+   "name": "Knut Hegvold",
+   "marks": [],
+   "time": "24:40"
+  },
+  {
+   "pos": "21",
+   "pts": "21",
+   "club": "THH",
+   "name": "Mark Wakefield",
+   "marks": [],
+   "time": "24:43"
+  },
+  {
+   "pos": "22",
+   "pts": "22",
+   "club": "AFD",
+   "name": "Karl Corpes",
+   "marks": [],
+   "time": "24:44"
+  },
+  {
+   "pos": "23",
+   "pts": "23",
+   "club": "THH",
+   "name": "Tim Beer",
+   "marks": [],
+   "time": "24:47"
+  },
+  {
+   "pos": "24",
+   "pts": "24",
+   "club": "REI",
+   "name": "P Rogers",
+   "marks": [],
+   "time": "24:48"
+  },
+  {
+   "pos": "25",
+   "pts": "25",
+   "club": "HHH",
+   "name": "Tony Harran",
+   "marks": [],
+   "time": "24:50"
+  },
+  {
+   "pos": "26",
+   "pts": "26",
+   "club": "THH",
+   "name": "Simon Wurr",
+   "marks": [],
+   "time": "24:53"
+  },
+  {
+   "pos": "27",
+   "pts": "27",
+   "club": "SLH",
+   "name": "Jason Simpson",
+   "marks": [],
+   "time": "24:55"
+  },
+  {
+   "pos": "28",
+   "pts": "28",
+   "club": "THH",
+   "name": "Alan Lynch",
+   "marks": [],
+   "time": "24:59"
+  },
+  {
+   "pos": "29",
+   "pts": "29",
+   "club": "THH",
+   "name": "David Symons",
+   "marks": [],
+   "time": "25:05"
+  },
+  {
+   "pos": "30",
+   "pts": "30",
+   "club": "HHH",
+   "name": "Iain Lockett",
+   "marks": [],
+   "time": "25:09"
+  },
+  {
+   "pos": "31",
+   "pts": "31",
+   "club": "HHH",
+   "name": "Simon Stevens",
+   "marks": [],
+   "time": "25:13"
+  },
+  {
+   "pos": "32",
+   "pts": "32",
+   "club": "RAN",
+   "name": "Peter Haarer",
+   "marks": [
+    {
+     "t": "🐐",
+     "title": "Is Ranelagh Harriers's greatest A-team scorer of all time"
+    }
+   ],
+   "time": "25:15"
+  },
+  {
+   "pos": "33",
+   "pts": "33",
+   "club": "AFD",
+   "name": "Mike Boucher",
+   "marks": [],
+   "time": "25:19"
+  },
+  {
+   "pos": "34",
+   "pts": "34",
+   "club": "BEL",
+   "name": "James Estall",
+   "marks": [
+    {
+     "t": "⭐",
+     "title": "Has won individual Surrey League title(s)"
+    }
+   ],
+   "time": "25:21"
+  },
+  {
+   "pos": "35",
+   "pts": "35",
+   "club": "HHH",
+   "name": "Ben Woodd",
+   "marks": [],
+   "time": "25:23"
+  },
+  {
+   "pos": "36",
+   "pts": "-",
+   "club": "THH",
+   "name": "Richard Howell",
+   "marks": [],
+   "time": "25:24"
+  },
+  {
+   "pos": "37",
+   "pts": "36",
+   "club": "SLH",
+   "name": "B Atwell",
+   "marks": [],
+   "time": "25:30"
+  },
+  {
+   "pos": "38",
+   "pts": "37",
+   "club": "REI",
+   "name": "Dave Rayner",
+   "marks": [],
+   "time": "25:32"
+  },
+  {
+   "pos": "39",
+   "pts": "38",
+   "club": "RAN",
+   "name": "Marcus Gohar",
+   "marks": [],
+   "time": "25:40"
+  },
+  {
+   "pos": "40",
+   "pts": "39",
+   "club": "HHH",
+   "name": "S Illegible",
+   "marks": [],
+   "time": "25:45"
+  },
+  {
+   "pos": "41",
+   "pts": "-",
+   "club": "THH",
+   "name": "Mark Gilbertson",
+   "marks": [],
+   "time": "25:48"
+  },
+  {
+   "pos": "42",
+   "pts": "40",
+   "club": "DUL",
+   "name": "Steve Smythe",
+   "marks": [],
+   "time": "25:51"
+  },
+  {
+   "pos": "43",
+   "pts": "41",
+   "club": "AFD",
+   "name": "Keith Donkin",
+   "marks": [],
+   "time": "25:52"
+  },
+  {
+   "pos": "44",
+   "pts": "42",
+   "club": "HHH",
+   "name": "Vic Maughan",
+   "marks": [],
+   "time": "25:53"
+  },
+  {
+   "pos": "45",
+   "pts": "43",
+   "club": "G&G",
+   "name": "B Brennan",
+   "marks": [],
+   "time": "25:55"
+  },
+  {
+   "pos": "46",
+   "pts": "-",
+   "club": "THH",
+   "name": "Andy Thomas",
+   "marks": [],
+   "time": "26:00"
+  },
+  {
+   "pos": "47",
+   "pts": "44",
+   "club": "G&G",
+   "name": "Mark Tennyson",
+   "marks": [],
+   "time": "26:02"
+  },
+  {
+   "pos": "48",
+   "pts": "45",
+   "club": "DUL",
+   "name": "D Atkins",
+   "marks": [],
+   "time": "26:09"
+  },
+  {
+   "pos": "49",
+   "pts": "46",
+   "club": "G&G",
+   "name": "Neil Covington",
+   "marks": [],
+   "time": "26:11"
+  },
+  {
+   "pos": "50",
+   "pts": "47",
+   "club": "BEL",
+   "name": "Bruce Barton",
+   "marks": [],
+   "time": "26:12"
+  },
+  {
+   "pos": "51",
+   "pts": "48",
+   "club": "RAN",
+   "name": "J Smith",
+   "marks": [],
+   "time": "26:17"
+  },
+  {
+   "pos": "52",
+   "pts": "49",
+   "club": "SLH",
+   "name": "Mark Farmer",
+   "marks": [],
+   "time": "26:18"
+  },
+  {
+   "pos": "53",
+   "pts": "50",
+   "club": "DUL",
+   "name": "Chris Loizou",
+   "marks": [],
+   "time": "26:19"
+  },
+  {
+   "pos": "54",
+   "pts": "51",
+   "club": "REI",
+   "name": "Tom Dew",
+   "marks": [],
+   "time": "26:23"
+  },
+  {
+   "pos": "55",
+   "pts": "52",
+   "club": "RAN",
+   "name": "Mick Lane",
+   "marks": [],
+   "time": "26:31"
+  },
+  {
+   "pos": "56",
+   "pts": "53",
+   "club": "RAN",
+   "name": "Andy Bickerstaff",
+   "marks": [],
+   "time": "26:33"
+  },
+  {
+   "pos": "57",
+   "pts": "54",
+   "club": "BEL",
+   "name": "Richard Tubbs",
+   "marks": [],
+   "time": "26:34"
+  },
+  {
+   "pos": "58",
+   "pts": "-",
+   "club": "HHH",
+   "name": "I Nicholas",
+   "marks": [],
+   "time": "26:35"
+  },
+  {
+   "pos": "59",
+   "pts": "55",
+   "club": "REI",
+   "name": "T Kimber",
+   "marks": [],
+   "time": "26:38"
+  },
+  {
+   "pos": "60",
+   "pts": "56",
+   "club": "AFD",
+   "name": "Dave Kennedy",
+   "marks": [],
+   "time": "26:39"
+  },
+  {
+   "pos": "61",
+   "pts": "57",
+   "club": "REI",
+   "name": "J Baker",
+   "marks": [],
+   "time": "26:44"
+  },
+  {
+   "pos": "62",
+   "pts": "-",
+   "club": "THH",
+   "name": "Hugh Arnold",
+   "marks": [],
+   "time": "26:49"
+  },
+  {
+   "pos": "63",
+   "pts": "58",
+   "club": "RAN",
+   "name": "Paul Doyle",
+   "marks": [],
+   "time": "26:50"
+  },
+  {
+   "pos": "64",
+   "pts": "59",
+   "club": "RAN",
+   "name": "Chris Owens",
+   "marks": [],
+   "time": "26:52"
+  },
+  {
+   "pos": "65",
+   "pts": "60",
+   "club": "SLH",
+   "name": "Neil Bardsley",
+   "marks": [],
+   "time": "26:53"
+  },
+  {
+   "pos": "66",
+   "pts": "61",
+   "club": "RAN",
+   "name": "Ken Jacques",
+   "marks": [],
+   "time": "26:54"
+  },
+  {
+   "pos": "67",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Rob Jacobs",
+   "marks": [],
+   "time": "26:55"
+  },
+  {
+   "pos": "68",
+   "pts": "62",
+   "club": "BEL",
+   "name": "Charlie Dickinson",
+   "marks": [],
+   "time": "26:55"
+  },
+  {
+   "pos": "69",
+   "pts": "63",
+   "club": "G&G",
+   "name": "Gavin Waterson",
+   "marks": [],
+   "time": "26:57"
+  },
+  {
+   "pos": "70",
+   "pts": "64",
+   "club": "REI",
+   "name": "Alister Moses",
+   "marks": [
+    {
+     "t": "🐐",
+     "title": "Is Reigate Priory AC's greatest A-team scorer of all time"
+    }
+   ],
+   "time": "26:58"
+  },
+  {
+   "pos": "71",
+   "pts": "65",
+   "club": "G&G",
+   "name": "Michael Goatley",
+   "marks": [],
+   "time": "27:01"
+  },
+  {
+   "pos": "72",
+   "pts": "66",
+   "club": "DUL",
+   "name": "S Loach",
+   "marks": [],
+   "time": "27:02"
+  },
+  {
+   "pos": "73",
+   "pts": "-",
+   "club": "THH",
+   "name": "Al Kennis",
+   "marks": [],
+   "time": "27:04"
+  },
+  {
+   "pos": "74",
+   "pts": "67",
+   "club": "G&G",
+   "name": "John Earnshaw",
+   "marks": [],
+   "time": "27:08"
+  },
+  {
+   "pos": "75",
+   "pts": "68",
+   "club": "G&G",
+   "name": "Paul Sanderson",
+   "marks": [],
+   "time": "27:15"
+  },
+  {
+   "pos": "76",
+   "pts": "69",
+   "club": "SLH",
+   "name": "C Edgington",
+   "marks": [],
+   "time": "27:17"
+  },
+  {
+   "pos": "77",
+   "pts": "70",
+   "club": "BEL",
+   "name": "Steve Zealey",
+   "marks": [],
+   "time": "27:18"
+  },
+  {
+   "pos": "78",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Jim Zaple",
+   "marks": [],
+   "time": "27:23"
+  },
+  {
+   "pos": "79",
+   "pts": "71",
+   "club": "REI",
+   "name": "J Clewett",
+   "marks": [],
+   "time": "27:27"
+  },
+  {
+   "pos": "80",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Steve Kennefick",
+   "marks": [],
+   "time": "27:28"
+  },
+  {
+   "pos": "81",
+   "pts": "72",
+   "club": "DUL",
+   "name": "Mike Mann",
+   "marks": [],
+   "time": "27:30"
+  },
+  {
+   "pos": "82",
+   "pts": "73",
+   "club": "SLH",
+   "name": "P Timblick",
+   "marks": [],
+   "time": "27:31"
+  },
+  {
+   "pos": "83",
+   "pts": "74",
+   "club": "AFD",
+   "name": "Nick Haynes",
+   "marks": [],
+   "time": "27:33"
+  },
+  {
+   "pos": "84",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Rob Poulter",
+   "marks": [],
+   "time": "27:34"
+  },
+  {
+   "pos": "85",
+   "pts": "75",
+   "club": "SLH",
+   "name": "N Belcher",
+   "marks": [],
+   "time": "27:35"
+  },
+  {
+   "pos": "86",
+   "pts": "-",
+   "club": "HHH",
+   "name": "D Currie",
+   "marks": [],
+   "time": "27:36"
+  },
+  {
+   "pos": "87",
+   "pts": "76",
+   "club": "DUL",
+   "name": "J Neighbour",
+   "marks": [],
+   "time": "27:37"
+  },
+  {
+   "pos": "88",
+   "pts": "-",
+   "club": "SLH",
+   "name": "Kevin Tilley",
+   "marks": [],
+   "time": "27:38"
+  },
+  {
+   "pos": "89",
+   "pts": "77",
+   "club": "G&G",
+   "name": "Josh Smalley",
+   "marks": [],
+   "time": "27:40"
+  },
+  {
+   "pos": "90",
+   "pts": "-",
+   "club": "SLH",
+   "name": "Andy Collins",
+   "marks": [],
+   "time": "27:41"
+  },
+  {
+   "pos": "91",
+   "pts": "78",
+   "club": "AFD",
+   "name": "Robin Hudson",
+   "marks": [],
+   "time": "27:54"
+  },
+  {
+   "pos": "92",
+   "pts": "79",
+   "club": "REI",
+   "name": "Andy Walker",
+   "marks": [],
+   "time": "28:04"
+  },
+  {
+   "pos": "93",
+   "pts": "80",
+   "club": "DUL",
+   "name": "A Sarkar",
+   "marks": [],
+   "time": "28:08"
+  },
+  {
+   "pos": "94",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Tom Flynn",
+   "marks": [],
+   "time": "28:09"
+  },
+  {
+   "pos": "95",
+   "pts": "-",
+   "club": "THH",
+   "name": "Mike Farmery",
+   "marks": [],
+   "time": "28:10"
+  },
+  {
+   "pos": "96",
+   "pts": "81",
+   "club": "REI",
+   "name": "Jerry Carnell",
+   "marks": [],
+   "time": "28:13"
+  },
+  {
+   "pos": "97",
+   "pts": "82",
+   "club": "G&G",
+   "name": "Andy Burles",
+   "marks": [],
+   "time": "28:14"
+  },
+  {
+   "pos": "98",
+   "pts": "83",
+   "club": "G&G",
+   "name": "Paul Mainwaring",
+   "marks": [],
+   "time": "28:15"
+  },
+  {
+   "pos": "99",
+   "pts": "-",
+   "club": "SLH",
+   "name": "Paul Williams",
+   "marks": [],
+   "time": "28:19"
+  },
+  {
+   "pos": "100",
+   "pts": "84",
+   "club": "DUL",
+   "name": "C Wood",
+   "marks": [],
+   "time": "28:20"
+  },
+  {
+   "pos": "101",
+   "pts": "-",
+   "club": "BEL",
+   "name": "R Marcus",
+   "marks": [],
+   "time": "28:21"
+  },
+  {
+   "pos": "102",
+   "pts": "-",
+   "club": "BEL",
+   "name": "P Tarpey",
+   "marks": [],
+   "time": "28:22"
+  },
+  {
+   "pos": "103",
+   "pts": "-",
+   "club": "SLH",
+   "name": "Steve Triner",
+   "marks": [],
+   "time": "28:25"
+  },
+  {
+   "pos": "104",
+   "pts": "85",
+   "club": "DUL",
+   "name": "Gordon Newlands",
+   "marks": [],
+   "time": "28:29"
+  },
+  {
+   "pos": "105",
+   "pts": "86",
+   "club": "RAN",
+   "name": "P Graham",
+   "marks": [],
+   "time": "28:36"
+  },
+  {
+   "pos": "106",
+   "pts": "-",
+   "club": "DUL",
+   "name": "Mike Chapman",
+   "marks": [],
+   "time": "28:37"
+  },
+  {
+   "pos": "107",
+   "pts": "-",
+   "club": "REI",
+   "name": "I Coetzee",
+   "marks": [],
+   "time": "28:46"
+  },
+  {
+   "pos": "108",
+   "pts": "-",
+   "club": "REI",
+   "name": "Stewart McIntyre",
+   "marks": [],
+   "time": "28:49"
+  },
+  {
+   "pos": "109",
+   "pts": "-",
+   "club": "G&G",
+   "name": "M Midmer",
+   "marks": [],
+   "time": "28:50"
+  },
+  {
+   "pos": "110",
+   "pts": "-",
+   "club": "G&G",
+   "name": "A Atkinson-Flint",
+   "marks": [],
+   "time": "28:52"
+  },
+  {
+   "pos": "111",
+   "pts": "-",
+   "club": "DUL",
+   "name": "Andy Murray",
+   "marks": [],
+   "time": "28:57"
+  },
+  {
+   "pos": "112",
+   "pts": "-",
+   "club": "HHH",
+   "name": "S Knight",
+   "marks": [],
+   "time": "29:01"
+  },
+  {
+   "pos": "113",
+   "pts": "-",
+   "club": "DUL",
+   "name": "Dave West",
+   "marks": [],
+   "time": "29:02"
+  },
+  {
+   "pos": "114",
+   "pts": "-",
+   "club": "SLH",
+   "name": "L Chamberlain",
+   "marks": [],
+   "time": "29:08"
+  },
+  {
+   "pos": "115",
+   "pts": "-",
+   "club": "DUL",
+   "name": "Dylan Owen",
+   "marks": [],
+   "time": "29:10"
+  },
+  {
+   "pos": "116",
+   "pts": "87",
+   "club": "AFD",
+   "name": "R Wiseman",
+   "marks": [],
+   "time": "29:12"
+  },
+  {
+   "pos": "117",
+   "pts": "-",
+   "club": "THH",
+   "name": "Nick Smith",
+   "marks": [],
+   "time": "29:14"
+  },
+  {
+   "pos": "118",
+   "pts": "-",
+   "club": "THH",
+   "name": "Alistair Irvine",
+   "marks": [],
+   "time": "29:16"
+  },
+  {
+   "pos": "119",
+   "pts": "-",
+   "club": "SLH",
+   "name": "P Monaghan",
+   "marks": [],
+   "time": "29:21"
+  },
+  {
+   "pos": "120",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Phil Carstairs",
+   "marks": [],
+   "time": "29:22"
+  },
+  {
+   "pos": "121",
+   "pts": "-",
+   "club": "DUL",
+   "name": "T Stremlaw",
+   "marks": [],
+   "time": "29:26"
+  },
+  {
+   "pos": "122",
+   "pts": "-",
+   "club": "RAN",
+   "name": "S Instone",
+   "marks": [],
+   "time": "29:29"
+  },
+  {
+   "pos": "123",
+   "pts": "-",
+   "club": "SLH",
+   "name": "Antonio Martins",
+   "marks": [],
+   "time": "29:30"
+  },
+  {
+   "pos": "124",
+   "pts": "-",
+   "club": "REI",
+   "name": "T Barnes",
+   "marks": [],
+   "time": "29:32"
+  },
+  {
+   "pos": "125",
+   "pts": "-",
+   "club": "DUL",
+   "name": "Andy Young",
+   "marks": [],
+   "time": "29:38"
+  },
+  {
+   "pos": "126",
+   "pts": "-",
+   "club": "REI",
+   "name": "Chris Stone",
+   "marks": [],
+   "time": "29:45"
+  },
+  {
+   "pos": "127",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Neil Chapman",
+   "marks": [],
+   "time": "29:47"
+  },
+  {
+   "pos": "128",
+   "pts": "-",
+   "club": "REI",
+   "name": "Ian Thomas",
+   "marks": [],
+   "time": "29:57"
+  },
+  {
+   "pos": "129",
+   "pts": "-",
+   "club": "SLH",
+   "name": "A Morton",
+   "marks": [],
+   "time": "30:03"
+  },
+  {
+   "pos": "130",
+   "pts": "-",
+   "club": "SLH",
+   "name": "Ken Lee",
+   "marks": [],
+   "time": "30:05"
+  },
+  {
+   "pos": "131",
+   "pts": "-",
+   "club": "DUL",
+   "name": "C Chown",
+   "marks": [],
+   "time": "30:09"
+  },
+  {
+   "pos": "132",
+   "pts": "-",
+   "club": "REI",
+   "name": "A Patrick",
+   "marks": [],
+   "time": "30:48"
+  },
+  {
+   "pos": "133",
+   "pts": "-",
+   "club": "RAN",
+   "name": "A Sinclair",
+   "marks": [],
+   "time": "30:51"
+  },
+  {
+   "pos": "134",
+   "pts": "-",
+   "club": "RAN",
+   "name": "C Nash",
+   "marks": [],
+   "time": "30:52"
+  },
+  {
+   "pos": "135",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Dave Hayes",
+   "marks": [],
+   "time": "31:11"
+  },
+  {
+   "pos": "136",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Peter Dipple",
+   "marks": [],
+   "time": "31:13"
+  },
+  {
+   "pos": "137",
+   "pts": "-",
+   "club": "DUL",
+   "name": "Tiarnan O'Cleirigh",
+   "marks": [],
+   "time": "31:24"
+  },
+  {
+   "pos": "138",
+   "pts": "-",
+   "club": "DUL",
+   "name": "Ian Sesnan",
+   "marks": [],
+   "time": "31:26"
+  },
+  {
+   "pos": "139",
+   "pts": "-",
+   "club": "REI",
+   "name": "P Byrne",
+   "marks": [],
+   "time": "31:28"
+  },
+  {
+   "pos": "140",
+   "pts": "-",
+   "club": "SLH",
+   "name": "Keith Hutchings",
+   "marks": [],
+   "time": "31:31"
+  },
+  {
+   "pos": "141",
+   "pts": "-",
+   "club": "RAN",
+   "name": "J Keep",
+   "marks": [],
+   "time": "31:35"
+  },
+  {
+   "pos": "142",
+   "pts": "-",
+   "club": "SLH",
+   "name": "T Austin",
+   "marks": [],
+   "time": "31:38"
+  },
+  {
+   "pos": "143",
+   "pts": "-",
+   "club": "SLH",
+   "name": "P Emery",
+   "marks": [],
+   "time": "31:51"
+  },
+  {
+   "pos": "144",
+   "pts": "-",
+   "club": "RAN",
+   "name": "J Doyle",
+   "marks": [],
+   "time": "32:13"
+  },
+  {
+   "pos": "145",
+   "pts": "-",
+   "club": "DUL",
+   "name": "K Wood",
+   "marks": [],
+   "time": "32:17"
+  },
+  {
+   "pos": "146",
+   "pts": "-",
+   "club": "DUL",
+   "name": "P Gibbons",
+   "marks": [],
+   "time": "33:02"
+  },
+  {
+   "pos": "147",
+   "pts": "-",
+   "club": "BEL",
+   "name": "J Singh",
+   "marks": [],
+   "time": "33:06"
+  },
+  {
+   "pos": "148",
+   "pts": "-",
+   "club": "G&G",
+   "name": "M Lawson",
+   "marks": [],
+   "time": "33:10"
+  },
+  {
+   "pos": "149",
+   "pts": "-",
+   "club": "HHH",
+   "name": "P Normington",
+   "marks": [],
+   "time": "34:07"
+  },
+  {
+   "pos": "150",
+   "pts": "-",
+   "club": "DUL",
+   "name": "Graham Laylee",
+   "marks": [],
+   "time": "34:20"
+  },
+  {
+   "pos": "151",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Rex Bale",
+   "marks": [],
+   "time": "34:43"
+  },
+  {
+   "pos": "152",
+   "pts": "-",
+   "club": "DUL",
+   "name": "B Bell",
+   "marks": [],
+   "time": "35:12"
+  },
+  {
+   "pos": "153",
+   "pts": "-",
+   "club": "REI",
+   "name": "Nick Feakins",
+   "marks": [],
+   "time": "35:47"
+  },
+  {
+   "pos": "154",
+   "pts": "-",
+   "club": "REI",
+   "name": "A Read",
+   "marks": [],
+   "time": "36:20"
+  },
+  {
+   "pos": "155",
+   "pts": "-",
+   "club": "HHH",
+   "name": "N Stone",
+   "marks": [],
+   "time": "36:35"
+  },
+  {
+   "pos": "156",
+   "pts": "-",
+   "club": "DUL",
+   "name": "Bernard Imber",
+   "marks": [],
+   "time": "37:02"
+  },
+  {
+   "pos": "157",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Mick Graham",
+   "marks": [],
+   "time": "37:09"
+  },
+  {
+   "pos": "158",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Andy Lea-Gerrard",
+   "marks": [],
+   "time": "40:30"
+  }
+ ],
+ "aTeams": [
+  {
+   "pos": "1",
+   "club": "THH",
+   "pts": "186",
+   "scores": [
+    "5",
+    "7",
+    "14",
+    "15",
+    "18",
+    "21",
+    "23",
+    "26",
+    "28",
+    "29"
+   ]
+  },
+  {
+   "pos": "2",
+   "club": "HHH",
+   "pts": "245",
+   "scores": [
+    "6",
+    "9",
+    "11",
+    "17",
+    "25",
+    "30",
+    "31",
+    "35",
+    "39",
+    "42"
+   ]
+  },
+  {
+   "pos": "3",
+   "club": "BEL",
+   "pts": "296",
+   "scores": []
+  },
+  {
+   "pos": "4",
+   "club": "SLH",
+   "pts": "419",
+   "scores": [
+    "3",
+    "8",
+    "19",
+    "27",
+    "36",
+    "49",
+    "60",
+    "69",
+    "73",
+    "75"
+   ]
+  },
+  {
+   "pos": "5",
+   "club": "RAN",
+   "pts": "500",
+   "scores": [
+    "13",
+    "32",
+    "38",
+    "48",
+    "52",
+    "53",
+    "58",
+    "59",
+    "61",
+    "86"
+   ]
+  },
+  {
+   "pos": "6",
+   "club": "REI",
+   "pts": "521",
+   "scores": [
+    "2",
+    "24",
+    "37",
+    "51",
+    "55",
+    "57",
+    "64",
+    "71",
+    "79",
+    "81"
+   ]
+  },
+  {
+   "pos": "7",
+   "club": "DUL",
+   "pts": "632",
+   "scores": []
+  },
+  {
+   "pos": "8",
+   "club": "G&G",
+   "pts": "638",
+   "scores": [
+    "43",
+    "44",
+    "46",
+    "63",
+    "65",
+    "67",
+    "68",
+    "77",
+    "82",
+    "83"
+   ]
+  },
+  {
+   "pos": "9",
+   "club": "AFD",
+   "pts": "658",
+   "scores": []
+  }
+ ],
+ "bTeams": [],
+ "sex": "Men"
+}
