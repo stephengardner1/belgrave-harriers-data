@@ -1,0 +1,39 @@
+/* ---------- Restored archive stories: data tables (25 Oct 2026) ----------
+   Display only. Tables rebuilt from the old site's data (they have a header row) get the same quiet
+   results styling as the rest of the site: small header labels, light row lines, a hover tint to
+   trace a row, figures in tabular numbers. On phones a wide table scrolls sideways. */
+.tag-archive .sqs-html-content table:has(thead) {
+  border-collapse: collapse !important;
+  width: auto !important;
+  margin: 20px 0 28px !important;
+  font: 400 14px/20px "Public Sans", system-ui, sans-serif !important;
+  font-variant-numeric: tabular-nums;
+  color: #1e1a1a;
+}
+.tag-archive .sqs-html-content table:has(thead) th {
+  font: 400 12px/16px "Public Sans", system-ui, sans-serif !important;
+  text-transform: uppercase;
+  color: #6b6565;
+  text-align: right;
+  padding: 6px 0 6px 14px !important;
+  border-bottom: 1px solid #e7e3dc;
+  white-space: nowrap;
+}
+.tag-archive .sqs-html-content table:has(thead) td {
+  text-align: right;
+  padding: 7px 0 7px 14px !important;
+  border-top: 1px solid #f3f1ec;
+  white-space: nowrap;
+}
+.tag-archive .sqs-html-content table:has(thead) th:first-child,
+.tag-archive .sqs-html-content table:has(thead) td:first-child,
+.tag-archive .sqs-html-content table:has(thead) th:nth-child(2),
+.tag-archive .sqs-html-content table:has(thead) td:nth-child(2) { text-align: left; }
+.tag-archive .sqs-html-content table:has(thead) th:first-child,
+.tag-archive .sqs-html-content table:has(thead) td:first-child { padding-left: 0 !important; padding-right: 10px !important; }
+.tag-archive .sqs-html-content table:has(thead) tbody tr:hover td { background: #f3f1ec; }
+.tag-archive .sqs-html-content table:has(thead) td[colspan] { border-top: 0; padding: 6px 0 !important; }
+.tag-archive .sqs-html-content table:has(thead) tbody tr:has(td[colspan]):hover td { background: none; }
+@media (max-width: 640px) {
+  .tag-archive .sqs-html-content table:has(thead) { display: block; overflow-x: auto; max-width: 100%; font-size: 13px !important; }
+}
