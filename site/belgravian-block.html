@@ -328,15 +328,19 @@
   }
 
   /* ---------- people ---------- */
+  var SHARDS={};
   function loadPeople(){return PEOPLE?Promise.resolve(PEOPLE):get('people.json').then(function(d){d.byId={};d.people.forEach(function(p){d.byId[p.id]=p});PEOPLE=d;return d})}
+  function loadPerson(id){var row=PEOPLE.byId[id];if(!row)return Promise.resolve(null);
+    return (SHARDS[row.s]?Promise.resolve(SHARDS[row.s]):get('people/'+row.s+'.json').then(function(d){SHARDS[row.s]=d;return d})).then(function(d){return d[id]||null})}
   function peopleList(){
     crumbsSet([['All issues','shelf'],['People','']]);
-    var ps=PEOPLE.people.slice().sort(function(a,b){return b.mentions.length-a.mentions.length||a.sort.localeCompare(b.sort)});
-    main.innerHTML='<h2 style="margin:0 0 6px">People</h2><p class="bv-msg" style="margin:0 0 18px">'+ps.length+' people named in the digitised issues, most mentioned first.</p><div class="bv-people">'+
-      ps.map(function(p){return '<a href="#'+p.id+'">'+esc(p.name)+'<span>'+p.mentions.length+'</span></a>'}).join('')+'</div>';
+    var ps=PEOPLE.people.filter(function(p){return p.n>1}).sort(function(a,b){return b.n-a.n||a.name.localeCompare(b.name)});
+    main.innerHTML='<h2 style="margin:0 0 6px">People</h2><p class="bv-msg" style="margin:0 0 18px">'+ps.length+' people named more than once in the digitised issues, most mentioned first. Search finds everyone else.</p><div class="bv-people">'+
+      ps.slice(0,600).map(function(p){return '<a href="#'+p.id+'">'+esc(p.name)+'<span>'+p.n+'</span></a>'}).join('')+'</div>';
   }
-  function person(id){
-    var p=PEOPLE.byId[id];if(!p){main.innerHTML='<p class="bv-msg">No one by that name in the digitised issues yet.</p>';return}
+  function person(id){loadPerson(id).then(function(p){personShow(id,p)})}
+  function personShow(id,p){
+    if(!p){main.innerHTML='<p class="bv-msg">No one by that name in the digitised issues yet.</p>';return}
     var leg=p.legend?(LEGENDS[id]?Promise.resolve(LEGENDS[id]):get('legends/'+id.slice(2)+'.json').then(function(d){LEGENDS[id]=d;return d})):Promise.resolve(null);
     leg.then(function(L){
       crumbsSet([['All issues','shelf'],['People','people'],[p.name,'']]);
@@ -347,7 +351,9 @@
         (p.slarchive?'<p class="bv-src" style="margin:12px 0 0">Surrey League record: <a href="'+esc(p.slarchive)+'" target="_blank" rel="noopener">slarchive.org</a></p>':'')+'</div></header>';
       if(L&&L.sections){
         h+='<div class="bv-story">'+L.sections.map(function(s){return (s.heading?'<h3>'+esc(s.heading)+'</h3>':'')+s.paras.map(function(t){
-          return '<p>'+esc(t).replace(/\[\[([A-Z0-9-]+)\]\]/g,function(_,ref){var n=(L.refs||[]).indexOf(ref)+1;return '<sup><a href="#'+ref+'" title="Source: '+ref+'">'+(n||'›')+'</a></sup>'})+'</p>'}).join('')}).join('')+'</div>';
+          return '<p>'+esc(t).replace(/\s*\[\[([A-Za-z0-9-]+)\]\]/g,function(_,ref){
+            if(ref==='slarchive')return p.slarchive?'<sup><a href="'+esc(p.slarchive)+'" target="_blank" rel="noopener" title="Source: slarchive.org">SL</a></sup>':'';
+            var n=(L.refs||[]).indexOf(ref)+1;return '<sup><a href="#'+ref+'" title="Source: The Belgravian, item '+ref+'">'+(n||'›')+'</a></sup>'})+'</p>'}).join('')}).join('')+'</div>';
         if(L.photos&&L.photos.length)h+='<section style="display:grid;gap:12px"><h2>Photographs</h2>'+'<div class="bv-figs">'+L.photos.map(function(f){return '<figure class="bv-fig"><img src="'+BASE+esc(f.file)+'" alt="'+esc(f.caption||p.name)+'" loading="lazy" data-lb="'+BASE+esc(f.file)+'" data-cap="'+esc(f.caption||'')+'"><figcaption>'+esc(f.caption||'')+(f.source?' <a href="#'+esc(f.source)+'">'+esc(f.when||'Source')+'</a>':'')+'</figcaption></figure>'}).join('')+'</div></section>';
         if(L.sources)h+='<p class="bv-src">'+esc(L.sources)+'</p>';
       }
