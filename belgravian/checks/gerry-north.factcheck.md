@@ -1,0 +1,44 @@
+# Gerry North profile: fact-check log
+
+Checked 2026-10-28 against the cited Belgravian items (bv/out/B1xx.json) and gerry-slarchive.md.
+65 statements checked: standfirst, 5 fact pairs, 49 body sentences, 10 photo captions and sources. 11 corrected, 0 deleted outright (two clauses removed). Markers and refs: no changes needed. Refs are still in first-use order and match the markers.
+
+## Corrections
+
+| # | Statement (original) | Verdict | Fix |
+|---|---|---|---|
+| 1 | Standfirst: "captained its cross-country section through the 1960s" [[B157-51]] [[B148-53]] | Overstated. The cited items support only his election as captain in Sept 1962 (B157-51 says he "was to become our cross-country captain") | Changed to "from 1962" (matches the fact pair) |
+| 2 | "letters from Clive Shippen confirmed that he was planning a move south" [[B157-51]] | Wrong. Steer writes "Correspondence between Clive Shippen and Gerry confirmed..." | Changed to "correspondence between Clive Shippen and Gerry confirmed" |
+| 3 | "The cross-country section called him 'the first ready-made runner…'" [[B147-07]] | Misattributed. The quote comes from C.S.'s magazine review of the 1961/62 cross-country season, not from the section | Changed to "The magazine's review of the cross-country season called him" |
+| 4 | "In May 1962 he was still a second-claim member when he ran an unofficial 27:15" [[B147-46]] [[B158-44]] | Wrong date. May 1962 is the issue date. B158-44 dates the run 3.62, and B159-12 says it came "a few weeks after" the National (10 March 1962) | Changed to "In the spring of 1962" |
+| 5 | "…club 3 miles in a championship best of 14:13.2, his first club title" [[B148-25]] | "First club title" is not in the source | Removed the clause |
+| 6 | "…first winner to go into its record books, which was also his first cross-country win in Belgrave colours" [[B149-52]] | B149-52 does say this, but B146-53 says his first run in Belgrave colours (13 Jan 1962, a cross-country match) was a 2½-minute win, and the profile states that too. The two contradict each other | Removed the clause, kept the first-winner claim |
+| 7 | "Now club captain, he ran the fastest time of the day at the Walton relay in 1963" [[B152-18]] | B152-18 says only "our captain", and B148-53 says he was elected captain of the Country Section, not club captain | Changed to "As captain," |
+| 8 | "…and that December their father, Arthur North, was made an honorary member" [[B152-09]] | Imprecise. B152-09 (Dec 1963 issue) lists members elected "in the last three months" | Changed to "later that year" |
+| 9 | "A later article dates the trip to 1966, but the brothers' own account gives their arrival as 7 November 1965" [[B164-64]] [[B158-25]] | Half-true. Only B164-64's introduction says 1966. Its body text says "pioneer research done in 1965 in Mexico City" | Changed to "A later article's introduction dates the trip to 1966, though its own text places it in 1965 and the brothers' account gives their arrival as 7 November 1965" |
+| 10 | "won his first Southern championship at Parliament Hill in 47:35" [[B161-37]] | Misleading. He had already won the Southern Counties 6 miles in 1964 (B154-27, stated earlier in the profile). B161-37 means his first Southern Counties cross-country title | Changed to "his first Southern cross-country title" |
+| 11 | "Its early seasons match the North Surrey League results printed in The Belgravian" [[slarchive]] [[B149-52]] | Overstated. Only 1962/63 (B149-52) was checked against the cited source. Later seasons differ: 1966/67 race 4 (B161-56), and the 1967/68 "match 2, Nov, Morden Park =1 27:26" is race 3 on 30 Dec in B165-42, where race 2 was abandoned | Changed to "Its first season matches" |
+
+## Statements verified as correct (no change)
+
+Standfirst: 1962 National champion, joined that year, called the main instigator of the 'Belgrave Renaissance' (B157-51; B148-53).
+
+Fact pairs: first Belgrave race 13 Jan 1962, won by 2½ min (B146-53). National champion 1962 (B157-51). Surrey XC titles 1966, 1967, 1968, 1969 (B158-50, B161-26, B165-33, B169-66; B156-87 confirms no Surrey title before May 1965). League wins 11 outright and 2 shared (slarchive: 11 at "1", 2 at "=1"). Cross-country captain from 1962 (B148-53).
+
+**From Blackpool to the National title.** All of these check out against B157-51: born in Chester in 1936, joined Blackpool & Fylde AC in 1953, won the Army 3000m steeplechase in 9:44.2 in 1956, and won the National Junior at Parliament Hill by over a minute. The note that the article says 1957/58 while its caption says 1957 is accurate. In 1960 he won the Inter-Counties and was 4th in the National (B157-51), and ran his first International, 15th as 6th scorer (B155-33). In 1962 he won the Inter-Counties and then the National, outsprinting Tulloh, and was the third man to win both titles in one season (B157-51; B147-25; B146-03 dates the Inter-Counties win before the March National). Sheffield 1962: fell, recovered to 3rd at half-way, finished 8th, team medal (B155-33).
+
+**1962.** B146-03 welcome and congratulations; B146-53 first run and its 2½-minute win; Steer's account of the London cafe (B157-51); 27:15 unofficial and second claim (B147-46), heading the all-time list (B158-44); AGM on 20 Sept: captain and honours badge (B148-53); 3 miles 14:13.2 on 25 July (B148-25); Poly relay course record 12:38 (B148-55); Brighton stage 9 in 27:27, day's fastest (B148-56).
+
+**1963–64.** First North Surrey League winner, 27:57, 27 Oct 1962 (B149-52). Mitcham 15 in 79:53, beating Shelley by 10 yards (B149-46). Bergen 10,000 m 29:29.4, first vest since joining Belgrave; GB v West Germany 3rd in 29:55.2 (B151-51). Club records 13:43.0 and 28:11.4 (B151-42). Walton relay fastest of the day, 14:53 (B152-18). Brighton stage 8 in 29:59, only man under 30 min, first win since 1952, "Gerry and the Pacemakers" (B152-20). National 1964 at Leicester 6th and International team (B153-19). Southern 6 miles at Motspur Park, 28:40.4, 25 Apr 1964 (B154-27). 4th at Dublin against the Belgravian best of 3rd (B155-33; Dublin was the 1964 race).
+
+**1965–66.** Geoff followed him from Blackpool in 1963 (B150-07). Arthur North made an honorary member (B152-09). Surrey 6 miles, his first Surrey title, championship best by half a minute (28:48.2, 15/16 May 1965), then the 3 miles in 13:47.0 with a sprint finish on 29 May (B156-87). BOA altitude party in Mexico City (B157-06; B158-25). Placings 4, 3, 3, 2 and the "distinctly unfair" quote (B158-25). Surrey XC on 1 Jan 1966, 41:47, by 62 sec (B158-50). National at Sheffield 4th in 47:01 (B158-65). International 19th, 6th scorer, England won (B159-88). Surrey 6 miles in 28:34.2, county record cut by 14 sec (B159-24). Geoff's 27:14 on 2 Apr 1966, one second inside Gerry's mark, "the elder North" (B159-12; it is Geoff's record, correctly credited to Geoff).
+
+**1966–69.** G.L.C. titles in 1966, 1967 and 1968 (B160-76, B164-87, B168-62). Eight consecutive Nationals in the top twelve (B160-68). Surrey 38:04 (B161-26). Inter-Counties bronze in 33:00, Surrey team title (B161-28). Southern 47:35, 68 sec clear (B161-37). Hannut 3rd and King Baudouin, 5 Feb 1967 (B161-61). 6 miles 28:08.4, personal and club record, 21 Mar 1967 (B162-51). Surrey hat-trick in Jan 1968 (B165-33) and fourth title in Jan 1969 (B169-66). North Surrey League individual 1967/68 with 9½ pts (B165-42). Hampstead 10 retained in record 48:46 (B166-18). Johnstone relay on 28 Sept 1969: first win, course record, Gerry captain (B172-30). G.L.C. 1969 2nd to Richardson, team title for the 4th year (B172-86). "Ran his heart out every time" at the 80th-year dinner (B164-12). Thresher "admires Gerry North immensely for his wholehearted approach" (B166-12). Kit and gear supplied from his address (B158-51). W. & G. Hales of Wimbledon advertising "the new GERRY NORTH shoe" (B172-78). "That ever-present spearhead" (B172-84).
+
+**League records (slarchive).** 23 Division 1 rows from 1962/63 to 1972/73, 11 outright wins and 2 shared, Mitchell Cup 1967/68. 1966/67 final race: the magazine prints Holt 1st and North 2nd, both 25:31, against slarchive's "=1" (B161-56). Last listed race 8th, Wimbledon Common, 21 Oct 1972. slarchive's unassigned "G North" results (1974/75 to 1980/81) are correctly not credited to Gerry.
+
+**Photos.** All 10 captions match the printed captions verbatim: B155-01 cover, B147-25, B148-57, B152-25, B154-02, B158-25, B161-37, B165-33, B169-01, B172-27. The "when" fields match the issue dates. The B152-25 and B172-27 captions name Geoff and Gerry separately and correctly.
+
+## Notes (not changed)
+- slarchive's athlete summary line ("races 12, wins 12") disagrees with its own 23-row table. The profile uses the table, which is correct.
+- B149-52's 1962/63 race 3 table caption reads "Kingston, Dec 29th" but its text says Richmond Park. slarchive has "Jan, Richmond Park". The profile makes no venue claim, so this is not an issue.

@@ -136,14 +136,14 @@
 .bv-person-head .stand{font:400 18px/28px var(--text);color:var(--body);margin:10px 0 0;max-width:60ch}
 .bv-facts{display:flex;flex-wrap:wrap;gap:8px 28px;margin:16px 0 0;padding:14px 16px;background:var(--cream);border-radius:8px}
 .bv-facts div{font:400 13px/18px var(--text);color:var(--slate)}
-.bv-facts b{display:block;font:600 18px/24px var(--mono);color:var(--ink)}
+.bv-facts b{display:block;font:600 16px/22px var(--text);color:var(--ink);max-width:24ch}
 .bv-story{display:grid;gap:16px;max-width:66ch}
 .bv-story h3{font:600 20px/25px var(--franklin);margin:12px 0 0}
 .bv-story p{font:400 17px/28px var(--text);color:var(--body);margin:0}
 .bv-story sup a{font:600 11px/1 var(--mono);text-decoration:none;padding:0 1px}
 .bv-timeline{display:grid;gap:0;border-top:3px solid var(--gold)}
-.bv-tl{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:12px 0;border-bottom:1px solid var(--rule)}
-.bv-tl .when{font:600 14px/20px var(--mono);color:var(--claret)}
+.bv-tl{display:grid;grid-template-columns:132px minmax(0,1fr);gap:16px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.bv-tl .when{font:600 14px/22px var(--text);color:var(--claret);white-space:nowrap}
 .bv .bv-tl a{color:var(--ink);text-decoration:none;font:600 16px/22px var(--text)}
 .bv-tl a:hover{color:var(--claret)}
 .bv-tl p{margin:2px 0 0;font:400 14px/20px var(--text);color:var(--slate)}
@@ -172,7 +172,7 @@
   .bv-person-head.has-photo{grid-template-columns:minmax(0,1fr)}
   .bv-person-head.has-photo img{max-width:260px}
   .bv-person-head h2{font-size:40px}
-  .bv-tl{grid-template-columns:72px minmax(0,1fr);gap:12px}
+  .bv-tl{grid-template-columns:minmax(0,1fr);gap:2px}
 }
 @media (prefers-reduced-motion:reduce){.bv *{transition:none!important}}
 </style>
@@ -312,14 +312,14 @@
     main.innerHTML='<p class="bv-msg">Searching…</p>';
     loadSearch().then(function(S){
       var words=term.toLowerCase().split(/\s+/).filter(Boolean);
-      var hits=S.items.filter(function(x){var hay=x.s;return words.every(function(w){return hay.indexOf(w)>=0})});
+      S.items.forEach(function(x){if(!x.l)x.l=x.s.toLowerCase()});
+      var hits=S.items.filter(function(x){return words.every(function(w){return x.l.indexOf(w)>=0})});
       var types={};hits.forEach(function(x){types[x.type]=(types[x.type]||0)+1});
       var shown=filter==='all'?hits:hits.filter(function(x){return x.type===filter});
       var h='<h2 style="margin:0 0 6px">'+hits.length+' result'+(hits.length===1?'':'s')+' for “'+esc(term)+'”</h2><p class="bv-msg" style="margin:0 0 14px">In the issues digitised so far.</p>';
       if(hits.length){h+='<div class="bv-filters"><button type="button" data-filter="all" aria-pressed="'+(filter==='all')+'">All</button>'+Object.keys(types).sort().map(function(t){return '<button type="button" data-filter="'+t+'" aria-pressed="'+(filter===t)+'">'+esc(TYPE[t]||t)+' · '+types[t]+'</button>'}).join('')+'</div>'}
       h+='<div class="bv-results">'+shown.slice(0,200).map(function(x){
-        var snip=x.t||x.sum||'',i=snip.toLowerCase().indexOf(words[0]);
-        if(i>80)snip='…'+snip.slice(i-60);snip=snip.slice(0,240);
+        var src=x.s,i=x.l.indexOf(words[0]),snip=i>80?'…'+src.slice(i-70,i+170)+'…':src.slice(0,240)+(src.length>240?'…':'');
         var e=esc(snip);words.forEach(function(w){e=e.replace(new RegExp('('+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'),'<mark>$1</mark>')});
         return '<a class="bv-hit" href="#'+x.id+'" data-hl="'+esc(words[0])+'"><span class="label">'+esc(TYPE[x.type]||'Item')+' · '+esc(x.label)+' · page '+x.p+'</span><h3>'+esc(x.h||x.sum||'Untitled item')+'</h3><p>'+e+'</p></a>'}).join('')+'</div>';
       if(shown.length>200)h+='<p class="bv-msg">Showing the first 200. Add another word to narrow the search.</p>';
@@ -346,7 +346,7 @@
       crumbsSet([['All issues','shelf'],['People','people'],[p.name,'']]);
       var photo=(L&&L.photo)||p.photo;
       var h='<div class="bv-person"><header class="bv-person-head'+(photo?' has-photo':'')+'">'+(photo?'<img src="'+BASE+esc(photo.file)+'" alt="'+esc(p.name)+'" data-lb="'+BASE+esc(photo.file)+'" data-cap="'+esc(photo.caption||'')+'">':'')+
-        '<div><span class="label">'+(L?'Belgrave legend':'In The Belgravian')+'</span><h2>'+esc(p.name)+'</h2>'+(L&&L.standfirst?'<p class="stand">'+esc(L.standfirst)+'</p>':'')+
+        '<div><span class="label">'+(L?'Belgrave legend':'In The Belgravian')+'</span><h2>'+esc(p.name)+'</h2>'+(L&&L.standfirst?'<p class="stand">'+esc(L.standfirst.replace(/\s*\[\[[A-Za-z0-9-]+\]\]/g,''))+'</p>':'')+
         (L&&L.facts?'<div class="bv-facts">'+L.facts.map(function(f){return '<div>'+esc(f[0])+'<b>'+esc(f[1])+'</b></div>'}).join('')+'</div>':'')+
         (p.slarchive?'<p class="bv-src" style="margin:12px 0 0">Surrey League record: <a href="'+esc(p.slarchive)+'" target="_blank" rel="noopener">slarchive.org</a></p>':'')+'</div></header>';
       if(L&&L.sections){
@@ -358,7 +358,7 @@
         if(L.sources)h+='<p class="bv-src">'+esc(L.sources)+'</p>';
       }
       h+='<section style="display:grid;gap:12px"><h2>Every mention</h2><div class="bv-timeline">'+p.mentions.map(function(m){
-        return '<div class="bv-tl"><div class="when">'+esc(m.when)+'</div><div><a href="#'+esc(m.id)+'">'+esc(m.h||m.sum||'Item')+'</a><p>'+esc(m.label)+' · page '+m.p+(m.note?' · <q>'+esc(m.note)+'</q>':'')+'</p></div></div>'}).join('')+'</div></section>';
+        return '<div class="bv-tl"><div class="when">'+esc(m.when)+'</div><div><a href="#'+esc(m.id)+'">'+esc(m.h||m.sum||'Item')+'</a><p>Page '+m.p+(m.note?' · <q>'+esc(m.note)+'</q>':'')+'</p></div></div>'}).join('')+'</div></section>';
       if(p.aka&&p.aka.length>1)h+='<p class="bv-note">Printed as: '+p.aka.map(esc).join(', ')+'.</p>';
       main.innerHTML=h+'</div>';root.scrollIntoView({block:'start'});
     }).catch(function(){main.innerHTML='<p class="bv-msg">That profile couldn’t be loaded just now.</p>'});
