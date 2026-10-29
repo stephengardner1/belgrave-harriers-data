@@ -1,0 +1,16 @@
+- B175: "Gorry North" is Gerry North (Steve, 29 Oct). Done: people.py ALIASES + note on the people entry (B175-28 area).
+- B175: P. Newall vs Pat Newell; Don Bonser vs D. Bonsor; Pfenninger/Pfeninger — kept apart, notes only.
+- B173: J. Stow/Stowe; Osborne/Osbourne; McCaffey/McCaffee; Yianni/Yianna — kept as printed.
+- B174: P. O'Conner vs O'Connor kept apart.
+- B173 p23: nude photomontage ("oh! Dear!") on humour page — hold back with review:true like the 1969 Tarzan photo, pending Steve.
+- B176 p34: "surrounded" printed "s rrounded" (u not struck) — left as reader had; decide policy for unstruck letters.
+- Names with [illegible] letters (e.g. B178 p9 "Fred [illegible]c[illegible]ay", note says likely Fred McKay): people.py should not index them as people; build.py should add people notes to the search text so the likely reading is still findable.
+- B178 digit stand-ins: done.
+- B180-46: "Bert Stroud" = "A. Stroud" — confirmed by Steve 29 Oct (kept as one person). E. Stroud stays separate.
+- B182 p2-3: verified against B182 image, no differences.
+- B179 formidable: done.
+- B190: back-cover caption is item B190-tmp-3-4 on p3 — the p37-44 reader must attach the p44 photo to it (tell that job).
+- B193: back-page caption (Ernest Obeng) is a caption-only item on p3; p37-44 reader must attach the p44 photo to it.
+- B194 club records: Reg Hopkins / Jnr un-merged; "Seatts" kept as printed — done by checker.
+- B198-20: 'F[illegible]EET' (broken letter), checker says almost certainly Fleet — ask Steve or leave.
+- B201: back-page caption on p2 box [0.06,0.89,0.9,0.94] (Richard Dorman, photo Larry Bray) not in any item — last read range must create the back-page photo item with p2 caption region.
