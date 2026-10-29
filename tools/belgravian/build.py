@@ -14,16 +14,28 @@ def slug(s):
     s = unicodedata.normalize('NFD', s).encode('ascii', 'ignore').decode().lower()
     return re.sub(r'[^a-z0-9]+', '-', s).strip('-')
 
+# Event tags group the same race across years (Steve, 29 Oct 2026): drop the year/season from each tag.
+YEAR = r'(?:18|19|20)\d\d(?:\s*[-/\u2013]\s*\d{2,4})?'
+EV = re.compile(r'^\s*(?:' + YEAR + r'\s+)?(.*?)(?:,?\s*\(?' + YEAR + r'\)?)?\s*$')
+def event_tag(e):
+    return EV.match(e).group(1).strip() or e
+# Publish only finished issues: the 1960s pilot, plus later issues listed in WORKDIR/published.txt once read AND checked.
+PUB = set(int(x) for x in open(f'{W}/published.txt').read().split()) if os.path.exists(f'{W}/published.txt') else set()
+def published(no):
+    return no <= 172 or no in PUB
+
 issues, search = [], []
 for f in sorted(glob.glob(f'{W}/out/B*.json')):
     if re.search(r'\.(orig|firstpass)\.json$', f): continue
     d = json.load(open(f))
     no = d['issue']
+    if not published(no): continue
     d['pdfUrl'] = urls.get(no)
     for it in d['items']:
         it.setdefault('regions', [])
         for k in ('tables', 'scans', 'photos', 'people', 'events', 'clubs', 'places', 'sport'):
             it[k] = it.get(k) or []
+        it['events'] = list(dict.fromkeys(event_tag(e) for e in it['events']))
     json.dump(d, open(f'{OUT}/issues/B{no}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     y = int(str(d['date'])[:4])
     issues.append({'issue': no, 'label': d['label'], 'date': d['date'], 'year': y,
