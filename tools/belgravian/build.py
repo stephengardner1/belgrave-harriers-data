@@ -1,7 +1,8 @@
 """Assemble the Belgravian archive data for the website.
 python3 -I build.py WORKDIR REPO_BELGRAVIAN_DIR
 Reads WORKDIR/out/B*.json, WORKDIR/crops, WORKDIR/pages, WORKDIR/people-index.json (optional, built by people.py)
-and writes: issues/B*.json, index.json, search.json, people.json, pages/, crops/ under the repo folder."""
+and writes: issues/B*.json, index.json, search.json, people.json under the repo folder.
+Images (WORKDIR/pages, WORKDIR/crops) go to the R2 bucket belgravian-archive under belgravian/: python3 -I r2up.py r2.env WORKDIR belgravian/ pages crops"""
 import json, os, sys, glob, shutil, re, unicodedata
 
 W, OUT = sys.argv[1], sys.argv[2]
@@ -39,11 +40,7 @@ for f in sorted(glob.glob(f'{W}/out/B*.json')):
         search.append({'id': it['id'], 'type': it['type'], 'label': d['label'], 'p': p0,
                        'h': it.get('heading'), 'sum': it.get('summary'),
                        's': re.sub(r'\s+', ' ', hay).strip()})
-    # copy media
-    for sub in ('pages', 'crops'):
-        src = f'{W}/{sub}/B{no}'
-        if os.path.isdir(src):
-            shutil.copytree(src, f'{OUT}/{sub}/B{no}', dirs_exist_ok=True)
+    # page images and crops are not copied: they live on Cloudflare R2 (upload with r2up.py from WORKDIR)
 
 issues.sort(key=lambda x: x['date'])
 idx = {'title': 'The Belgravian', 'issues': issues,

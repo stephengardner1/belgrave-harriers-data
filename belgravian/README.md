@@ -5,13 +5,16 @@ Scans of every issue are by Alan Mead, the club historian (belgraveharriers.info
 
 **Preview:** https://stephengardner1.github.io/belgrave-harriers-data/belgravian/ (not indexed by search engines).
 The same reader goes on the club site as a code block: `site/belgravian-block.html`.
+It reads the text data from here (`BV_BASE`) and the images from Cloudflare R2 (`BV_MEDIA`).
 
 ## What's here (32 issues, March 1960 to December 1969)
 
 - `issues/B<no>.json` — every item in an issue: clean text transcribed from the scans, results tables, photo and scan
   crops, the people, events and places named, and where the item sits on each page (for the highlight on the scan).
-- `pages/B<no>/` — every page as an image (1,112 pages).
-- `crops/B<no>/` — 514 photographs and 146 scans of results that were hard to read.
+- Images are not stored here (the full archive would pass GitHub Pages' 1 GB limit). They live in Cloudflare R2,
+  bucket `belgravian-archive`, public at https://pub-16e146f74e014d32bd956564b0563306.r2.dev/belgravian/ :
+  `pages/B<no>/` — every page as an image (1,112 pages); `crops/B<no>/` — 514 photographs and 146 scans of results
+  that were hard to read. Upload with `tools/belgravian/r2up.py` (needs a short-lived R2 token; never commit it).
 - `search.json` — the search index. `people.json` + `people/<letter>.json` — everyone named (about 4,500 people).
 - `legends/` — legend profiles (so far: Gerry North), every fact linked to the item it comes from.
 - `checks/` — the reading brief, the checking rules and a log of every correction made to each issue.

@@ -199,6 +199,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
 (function(){
   var root=document.getElementById('bh-belgravian');if(!root||root.dataset.ready)return;root.dataset.ready='1';
   var BASE=(window.BV_BASE!==undefined)?window.BV_BASE:'https://stephengardner1.github.io/belgrave-harriers-data/belgravian/';
+  var MEDIA=(window.BV_MEDIA!==undefined)?window.BV_MEDIA:'https://pub-16e146f74e014d32bd956564b0563306.r2.dev/belgravian/';
   var main=root.querySelector('.bv-main'),crumbs=root.querySelector('.bv-crumbs'),q=root.querySelector('#bv-q');
   var IDX=null,ISSUES={},SEARCH=null,PEOPLE=null,LEGENDS={},pane='text';
   var TYPE={cover:'Cover',masthead:'Masthead',editorial:'Editorial',report:'Report',results:'Results',notice:'Notice',letter:'Letter',obituary:'Obituary',members:'New members',feature:'Feature',column:'Column',records:'Records',photo:'Photograph',advert:'Advertisement',poem:'Poem',cartoon:'Cartoon',other:'Item'};
@@ -207,7 +208,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   function get(path){return fetch(BASE+path).then(function(r){if(!r.ok)throw new Error(path);return r.json()})}
   function slug(s){return String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
   function pad(n){return n<10?'0'+n:''+n}
-  function pageImg(no,p){return BASE+'pages/B'+no+'/B'+no+'-p'+pad(p)+'.webp'}
+  function pageImg(no,p){return MEDIA+'pages/B'+no+'/B'+no+'-p'+pad(p)+'.webp'}
   function issueKey(no){return 'B'+no}
   function go(h){if(location.hash==='#'+h)route();else location.hash=h}
   function crumbsSet(list){crumbs.innerHTML=list.map(function(c,i){return (i?'<span aria-hidden="true">/</span>':'')+(c[1]?'<a href="#'+c[1]+'">'+esc(c[0])+'</a>':'<span>'+esc(c[0])+'</span>')}).join('')}
@@ -220,7 +221,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     var h='<div class="bv-shelf">';
     if(IDX.legends&&IDX.legends.length){
       h+='<section class="bv-decade"><header><h2>Legends</h2><p>Great Belgravians, told through the pages of their club gazette.</p></header><div class="bv-legends">'+
-        IDX.legends.map(function(l){return '<a class="bv-legend-card" href="#'+l.id+'">'+(l.photo?'<img src="'+BASE+esc(l.photo)+'" alt="'+esc(l.name)+'" loading="lazy">':'')+'<b>'+esc(l.name)+'</b><span>'+esc(l.line)+'</span></a>'}).join('')+'</div></section>';
+        IDX.legends.map(function(l){return '<a class="bv-legend-card" href="#'+l.id+'">'+(l.photo?'<img src="'+MEDIA+esc(l.photo)+'" alt="'+esc(l.name)+'" loading="lazy">':'')+'<b>'+esc(l.name)+'</b><span>'+esc(l.line)+'</span></a>'}).join('')+'</div></section>';
     }
     Object.keys(by).sort().forEach(function(d){
       var list=by[d].sort(function(a,b){return a.date<b.date?-1:1});
@@ -247,7 +248,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   function figs(list,no,kind){
     if(!list||!list.length)return '';
     return '<div class="bv-figs">'+list.map(function(f){
-      var src=BASE+'crops/B'+no+'/'+f.file;
+      var src=MEDIA+'crops/B'+no+'/'+f.file;
       var cap=(kind==='scan'?'<b>Original printed results</b>'+(f.caption?' · '+esc(f.caption):''):esc(f.caption||''))+(f.credit?' <span>('+esc(f.credit)+')</span>':'');
       return '<figure class="bv-fig"><img src="'+src+'" alt="'+esc(f.caption||(kind==='scan'?'Scan of printed results':'Photograph'))+'" loading="lazy" data-lb="'+esc(src)+'" data-cap="'+esc(f.caption||'')+'">'+(cap?'<figcaption>'+cap+'</figcaption>':'')+'</figure>'}).join('')+'</div>';
   }
@@ -348,7 +349,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     leg.then(function(L){
       crumbsSet([['All issues','shelf'],['People','people'],[p.name,'']]);
       var photo=(L&&L.photo)||p.photo;
-      var h='<div class="bv-person"><header class="bv-person-head'+(photo?' has-photo':'')+'">'+(photo?'<img src="'+BASE+esc(photo.file)+'" alt="'+esc(p.name)+'" data-lb="'+BASE+esc(photo.file)+'" data-cap="'+esc(photo.caption||'')+'">':'')+
+      var h='<div class="bv-person"><header class="bv-person-head'+(photo?' has-photo':'')+'">'+(photo?'<img src="'+MEDIA+esc(photo.file)+'" alt="'+esc(p.name)+'" data-lb="'+MEDIA+esc(photo.file)+'" data-cap="'+esc(photo.caption||'')+'">':'')+
         '<div><span class="label">'+(L?'Belgrave legend':'In The Belgravian')+'</span><h2>'+esc(p.name)+'</h2>'+(L&&L.standfirst?'<p class="stand">'+esc(L.standfirst.replace(/\s*\[\[[A-Za-z0-9-]+\]\]/g,''))+'</p>':'')+
         (L&&L.facts?'<div class="bv-facts">'+L.facts.map(function(f){return '<div>'+esc(f[0])+'<b>'+esc(f[1])+'</b></div>'}).join('')+'</div>':'')+
         (p.slarchive?'<p class="bv-src" style="margin:12px 0 0">Surrey League record: <a href="'+esc(p.slarchive)+'" target="_blank" rel="noopener">slarchive.org</a></p>':'')+'</div></header>';
@@ -357,7 +358,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
           return '<p>'+esc(t).replace(/\s*\[\[([A-Za-z0-9-]+)\]\]/g,function(_,ref){
             if(ref==='slarchive')return p.slarchive?'<sup><a href="'+esc(p.slarchive)+'" target="_blank" rel="noopener" title="Source: slarchive.org">SL</a></sup>':'';
             var n=(L.refs||[]).indexOf(ref)+1;return '<sup><a href="#'+ref+'" title="Source: The Belgravian, item '+ref+'">'+(n||'›')+'</a></sup>'})+'</p>'}).join('')}).join('')+'</div>';
-        if(L.photos&&L.photos.length)h+='<section style="display:grid;gap:12px"><h2>Photographs</h2>'+'<div class="bv-figs">'+L.photos.map(function(f){return '<figure class="bv-fig"><img src="'+BASE+esc(f.file)+'" alt="'+esc(f.caption||p.name)+'" loading="lazy" data-lb="'+BASE+esc(f.file)+'" data-cap="'+esc(f.caption||'')+'"><figcaption>'+esc(f.caption||'')+(f.source?' <a href="#'+esc(f.source)+'">'+esc(f.when||'Source')+'</a>':'')+'</figcaption></figure>'}).join('')+'</div></section>';
+        if(L.photos&&L.photos.length)h+='<section style="display:grid;gap:12px"><h2>Photographs</h2>'+'<div class="bv-figs">'+L.photos.map(function(f){return '<figure class="bv-fig"><img src="'+MEDIA+esc(f.file)+'" alt="'+esc(f.caption||p.name)+'" loading="lazy" data-lb="'+MEDIA+esc(f.file)+'" data-cap="'+esc(f.caption||'')+'"><figcaption>'+esc(f.caption||'')+(f.source?' <a href="#'+esc(f.source)+'">'+esc(f.when||'Source')+'</a>':'')+'</figcaption></figure>'}).join('')+'</div></section>';
         if(L.sources)h+='<p class="bv-src">'+esc(L.sources)+'</p>';
       }
       h+='<section style="display:grid;gap:12px"><h2>Every mention</h2><div class="bv-timeline">'+p.mentions.map(function(m){
