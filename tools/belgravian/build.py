@@ -15,10 +15,13 @@ def slug(s):
     return re.sub(r'[^a-z0-9]+', '-', s).strip('-')
 
 # Event tags group the same race across years (Steve, 29 Oct 2026): drop the year/season from each tag.
-YEAR = r'(?:18|19|20)\d\d(?:\s*[-/\u2013]\s*\d{2,4})?'
-EV = re.compile(r'^\s*(?:' + YEAR + r'\s+)?(.*?)(?:,?\s*\(?' + YEAR + r'\)?)?\s*$')
+YEAR = re.compile(r'(?<![\w.])(?:18[5-9]\d|19\d\d|20[0-2]\d)(?:\s*[-/\u2013]\s*\d{2,4})?(?![\w.])(?!\s*(?:m|metres?|meters?|yards?|yds|miles?|km|kilo\w*)\b)')
 def event_tag(e):
-    return EV.match(e).group(1).strip() or e
+    t = YEAR.sub('', e)
+    t = re.sub(r'\(\s*\)', '', t)                      # empty brackets left behind
+    t = re.sub(r'\s+([,)])', r'\1', t); t = re.sub(r'\(\s+', '(', t)
+    t = re.sub(r'\s{2,}', ' ', t).strip(' ,-\u2013')
+    return t or e
 # Publish only finished issues: the 1960s pilot, plus later issues listed in WORKDIR/published.txt once read AND checked.
 PUB = set(int(x) for x in open(f'{W}/published.txt').read().split()) if os.path.exists(f'{W}/published.txt') else set()
 def published(no):
