@@ -308,7 +308,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   function setPane(v){pane=v;var rd=main.querySelector('.bv-reader');if(rd)rd.dataset.pane=v;main.querySelectorAll('.bv-seg [data-pane]').forEach(function(b){b.setAttribute('aria-selected',b.dataset.pane===v?'true':'false')})}
 
   /* ---------- search ---------- */
-  function loadSearch(){return SEARCH?Promise.resolve(SEARCH):get('search.json').then(function(d){SEARCH=d;return d})}
+  function loadSearch(){if(SEARCH)return Promise.resolve(SEARCH);var files=(IDX&&IDX.searchFiles&&IDX.searchFiles.length)?IDX.searchFiles:['search.json'];return Promise.all(files.map(function(f){return get(f)})).then(function(ds){SEARCH={items:[].concat.apply([],ds.map(function(d){return d.items}))};return SEARCH})}
   var filter='all';
   function search(term){
     term=(term||'').trim();crumbsSet([['All issues','shelf'],['Search','']]);

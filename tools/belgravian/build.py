@@ -46,13 +46,13 @@ for f in sorted(glob.glob(f'{W}/out/B*.json')):
     for it in d['items']:
         ppl = []
         for p in it['people']:
-            ppl += [p.get('name') or '', p.get('printed') or ''] + (p.get('printedAs') or [])
+            ppl += [p.get('name') or '', p.get('printed') or '', p.get('note') or ''] + (p.get('printedAs') or [])
         cells = ' '.join(' '.join(map(str, r)) for t in it['tables'] for r in t.get('rows', []))
         caps = ' '.join((ph.get('caption') or '') for ph in it['photos'] + it['scans'])
         hay = ' '.join([it.get('heading') or '', it.get('summary') or '', it.get('text') or '', cells, caps,
                         ' '.join(ppl), ' '.join(it['events'] + it['places'] + it['clubs'])])
         p0 = min(it['pages']) if it.get('pages') else 1
-        search.append({'id': it['id'], 'type': it['type'], 'label': d['label'], 'p': p0,
+        search.append({'decade': str(y)[:3] + '0s', 'id': it['id'], 'type': it['type'], 'label': d['label'], 'p': p0,
                        'h': it.get('heading'), 'sum': it.get('summary'),
                        's': re.sub(r'\s+', ' ', hay).strip()})
     # page images and crops are not copied: they live on Cloudflare R2 (upload with r2up.py from WORKDIR)
@@ -63,7 +63,13 @@ idx = {'title': 'The Belgravian', 'issues': issues,
        'legends': json.load(open(f'{W}/legends-index.json')) if os.path.exists(f'{W}/legends-index.json') else []}
 
 json.dump(idx, open(f'{OUT}/index.json', 'w'), ensure_ascii=False, indent=1)
-json.dump({'items': search}, open(f'{OUT}/search.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+# one search file per decade, so a reader only downloads what exists (index.json lists them)
+by_dec = {}
+for x in search: by_dec.setdefault(x.pop('decade'), []).append(x)
+idx['searchFiles'] = [f'search-{d}.json' for d in sorted(by_dec)]
+json.dump(idx, open(f'{OUT}/index.json', 'w'), ensure_ascii=False, indent=1)
+for d, xs in by_dec.items():
+    json.dump({'items': xs}, open(f'{OUT}/search-{d}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
 
 # people: light list (people.json) + per-surname-letter shards (people/<letter>.json) + legend profiles
 import string
@@ -90,4 +96,4 @@ json.dump({'people': light}, open(f'{OUT}/people.json', 'w'), ensure_ascii=False
 for l in legends:
     src = f"{W}/../legend/{l['id'][2:]}.json"
     if os.path.exists(src): shutil.copy(src, f"{OUT}/legends/{l['id'][2:]}.json")
-print(len(issues), 'issues;', len(search), 'items;', 'search.json', os.path.getsize(f'{OUT}/search.json') // 1024, 'KB')
+print(len(issues), 'issues;', len(search), 'items;', {d: os.path.getsize(f'{OUT}/search-{d}.json') // 1024 for d in by_dec}, 'KB')

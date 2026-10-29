@@ -79,8 +79,8 @@ for f in sorted(glob.glob(f'{W}/out/B*.json')):
     for it in d['items']:
         for p in it.get('people') or []:
             raw = p.get('name') or p.get('printed')
-            if not raw:
-                continue
+            if not raw or '[illegible]' in raw or '[?]' in raw:
+                continue   # unreadable letters: kept in the item, not indexed as a person (the note stays searchable)
             n = clean(raw)
             sp = split(n)
             if not sp or len(sp[2]) < 2:
