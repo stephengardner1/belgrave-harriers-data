@@ -243,7 +243,8 @@
       body.map(function(r){var us=r.some(function(c){return /belgrave/i.test(c)});return '<tr'+(us?' class="us"':'')+'>'+r.map(function(c){return '<td'+(isNum(c)?' class="num"':'')+'>'+esc(c)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table></div>';
   }
   function figs(list,no,kind){
-    if(!list||!list.length)return '';
+    list=(list||[]).filter(function(f){return !f.review});
+    if(!list.length)return '';
     return '<div class="bv-figs">'+list.map(function(f){
       var src=MEDIA+'crops/B'+no+'/'+f.file;
       var cap=(kind==='scan'?'<b>Original printed results</b>'+(f.caption?' · '+esc(f.caption):''):esc(f.caption||''))+(f.credit?' <span>('+esc(f.credit)+')</span>':'');
