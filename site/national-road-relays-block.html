@@ -1,7 +1,9 @@
 <!-- Belgrave Harriers at the national road relays (23 Oct 2026).
      Display only. A frozen copy of Steve Gardner's "Bels at Sutton Park" sheet, kept at
      github.com/stephengardner1/belgrave-harriers-data (road-relays.json). Values are shown exactly
-     as in the sheet; only times are tidied (00:27:51 shows as 27:51). -->
+     as in the sheet; only times are tidied (00:27:51 shows as 27:51), and "AC" is dropped from club names
+     that don't need it (Leeds City AC shows as Leeds City, Morpeth Harriers & AC as Morpeth Harriers). Kept
+     for Central, Kent, Notts, Bristol, Derby, Invicta, Copeland and London Irish AC, and Cardiff AAC. -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap">
 <div id="bh-relays" class="bh-rr">
   <h1 class="bh-rr-title">National road relays</h1>
@@ -93,6 +95,10 @@
   function posCell(p){if(p==='')return '';return /^[A-Za-z]+$/.test(p)&&p!=='-'?'<span class="tag" style="margin:0">'+esc(p)+'</span>':dash(p)}
   function medal(p){var m={'1':['🥇','1st'],'2':['🥈','2nd'],'3':['🥉','3rd']}[String(p).trim()];
     return m?'<span class="medal" role="img" aria-label="'+m[1]+'" title="'+m[1]+'">'+m[0]+'</span>':posCell(p)}
+  // Drop "AC" where the club is known without it; keep it where the name alone would read as a place or region.
+  var KEEP_AC=/^(Central|Kent|Notts|Bristol|Derby|Invicta|Copeland|London Irish) AC$/;
+  function club(t){t=String(t);if(KEEP_AC.test(t))return t;
+    return t.replace(/ Harriers (?:&|and) AC$/,' Harriers').replace(/ AC$/,'').replace(/^Bristol and West$/,'Bristol & West')}
   function isUs(s){return /^belgrave/i.test(s)}
   function th(label,key,num,wide){var c=(num?'num ':'')+(wide?'wide':'');
     var s=state.sort===key?' aria-sort="ascending"':'';
@@ -105,7 +111,7 @@
     r.slice().reverse().forEach(function(x){var pod=[x[1],x[2],x[3]].some(isUs);
       var rep=R[x[0]];
       h+='<tr'+(pod?' class="us"':'')+'><td class="yr">'+(rep?'<a href="'+esc(rep)+'" title="Read the report">'+esc(x[0])+'</a>':esc(x[0]))+'</td>'+
-        [x[1],x[2],x[3]].map(function(t){return '<td'+(isUs(t)?' class="bel"':'')+'>'+dash(t)+'</td>'}).join('')+
+        [x[1],x[2],x[3]].map(function(t){return '<td'+(isUs(t)?' class="bel"':'')+'>'+dash(club(t))+'</td>'}).join('')+
         '<td class="num mk">'+(rep&&x[4]&&x[4]!=='-'?'<a class="pos" href="'+esc(rep)+'" title="Read the report">'+medal(x[4])+'</a>':medal(x[4]))+'</td></tr>'});
     return h+'</tbody></table></div><p class="bh-rr-note">The first three teams each year, and where Belgrave finished. Years when Belgrave made the podium are highlighted. Underlined years and Belgrave positions link to the club’s report of the race.'+
       (six?' A dash means Belgrave didn’t run. The race moved around the country until it settled at Sutton Park in 1995; 2012 was run at Clumber Park and 2020 wasn’t held. Sources: ERRA’s official list of winners, the 2026 results, and Alan Mead’s history of the race (belgraveharriers.info).':'')+'</p>'}
@@ -115,7 +121,7 @@
     if(y!=='all'){
       r=r.filter(function(x){return x[0]===y});var f=r[0]||[];
       h+='<div class="bh-rr-sum"><div>Final position<b>'+dash(f[5])+'</b></div><div>Team time<b>'+dash(tidy(f[6]))+'</b></div>'+
-        (f[9]?'<div>Winning team<b>'+esc(tidy(f[9]))+'</b></div>':'')+'</div>';
+        (f[9]?'<div>Winning team<b>'+esc(club(tidy(f[9])))+'</b></div>':'')+'</div>';
     }
     var rows=r.slice();
     if(state.sort==='time')rows.sort(function(a,b){return secs(a[4])-secs(b[4])});
