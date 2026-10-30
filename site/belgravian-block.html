@@ -62,18 +62,25 @@
 .bv-seg{display:none;background:var(--cream);border-radius:8px;padding:3px;margin:0 0 14px}
 .bv-seg button{flex:1;font:500 14px/20px var(--text);color:var(--slate);background:transparent;border:0;border-radius:6px;padding:7px 12px}
 .bv-seg button[aria-selected="true"]{background:var(--paper);color:var(--ink);box-shadow:0 0 0 1px var(--rule)}
+.bv-flow{--ar:.707;--top:var(--bv-top,12px)}
+.bv-page{scroll-margin-top:var(--top);padding:0 0 36px;margin:0 0 36px;border-bottom:1px solid var(--rule)}
+.bv-page:last-child{border-bottom:0;margin-bottom:0}
 .bv-reader{display:grid;grid-template-columns:minmax(0,46fr) minmax(0,54fr);gap:36px;align-items:start}
-.bv-scanpane{position:sticky;top:12px;display:grid;gap:8px}
-.bv-scanbox{position:relative;background:var(--scan-bg);border:1px solid var(--rule);overflow:auto;max-height:calc(100vh - 80px)}
+.bv-scanpane{position:sticky;top:var(--top);display:grid;gap:8px}
+.bv-scanbox{position:relative;background:var(--scan-bg);border:1px solid var(--rule);overflow:hidden;justify-self:center;width:min(100%,calc((100vh - var(--top) - 64px) * var(--ar)))}
+.bv-scanbox.zoom{overflow:auto;width:100%;max-height:calc(100vh - var(--top) - 64px);justify-self:stretch}
 .bv-scan{position:relative;width:100%;line-height:0}
 .bv-scanbox.zoom .bv-scan{width:200%}
-.bv-scan img{width:100%;display:block}
+.bv-scan img{width:100%;height:auto;aspect-ratio:auto var(--ar);display:block}
 .bv-region{position:absolute;border:2px solid transparent;border-radius:3px;cursor:pointer;transition:background .15s,border-color .15s;padding:0;background:transparent}
 .bv-region:hover{background:rgba(214,185,122,.14);border-color:rgba(199,154,69,.55)}
 .bv-region.on{background:var(--hl);border-color:var(--hl-line)}
-.bv-scantools{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font:400 13px/18px var(--text);color:var(--slate)}
+.bv-scantools{display:flex;justify-content:space-between;align-items:baseline;gap:8px 16px;flex-wrap:wrap;font:400 13px/18px var(--text);color:var(--slate)}
+.bv-scantools b{font:600 13px/18px var(--text);color:var(--ink)}
+.bv-scantools span{display:flex;gap:16px}
 .bv-scantools button{font:500 13px/18px var(--text);color:var(--claret);background:none;border:0;padding:0}
 .bv-scantools a{color:var(--slate)}
+.bv-pagelabel{display:none;font:600 12px/16px var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin:0 0 4px}
 .bv-textpane{display:grid;gap:8px;min-width:0}
 .bv-item{display:grid;gap:10px;padding:18px 18px 20px;margin:0 -18px;border-radius:6px;border-left:3px solid transparent;transition:background .15s,border-color .15s;scroll-margin-top:16px}
 .bv-item.on{background:var(--hover);border-left-color:var(--gold)}
@@ -161,11 +168,15 @@
 @media (max-width:860px){
   .bv-mast h1{font-size:40px}
   .bv-seg{display:flex}
+  .bv-seg{position:sticky;top:var(--bv-top,0px);z-index:2;box-shadow:0 0 0 6px var(--paper)}
+  .bv-flow{--top:calc(var(--bv-top,0px) + 58px)}
   .bv-reader{grid-template-columns:minmax(0,1fr);gap:0}
-  .bv-reader[data-pane="text"] .bv-scanpane{display:none}
-  .bv-reader[data-pane="scan"] .bv-textpane{display:none}
+  .bv-flow[data-pane="text"] .bv-scanpane{display:none}
+  .bv-flow[data-pane="scan"] .bv-textpane{display:none}
+  .bv-flow[data-pane="text"] .bv-pagelabel{display:block}
   .bv-scanpane{position:static}
-  .bv-scanbox{max-height:none}
+  .bv-scanbox{width:100%}
+  .bv-scanbox.zoom{max-height:none}
   .bv-issuehead h2{font-size:28px;line-height:32px}
   .bv-item{margin:0 -12px;padding:16px 12px 18px}
   .bv-item h3{font-size:23px;line-height:28px}
@@ -279,29 +290,70 @@
     h+='<button type="button" class="orig" data-orig="'+esc(it.id)+'">Show on the original page</button>';
     return h+'</article>';
   }
+  /* The whole issue is one continuous scroll: a section per page, the page scan held beside its own text
+     (sticky) until the next page's section pushes it up. The page picker follows the reader. */
+  var cur={no:null,page:1,lock:0,obs:null};
+  function sectionEl(p){return main.querySelector('.bv-page[data-p="'+p+'"]')}
+  function toPage(p,smooth){var el=sectionEl(p);if(!el)return;
+    if(Math.abs(p-cur.page)>2)smooth=false;
+    cur.lock=Date.now()+(smooth?1400:400);setCurrent(p);el.scrollIntoView({block:'start',behavior:smooth?'smooth':'auto'});
+    /* images above may still be loading and shift the page: settle on the right spot */
+    setTimeout(function(){var t=el.getBoundingClientRect().top,want=parseFloat(getComputedStyle(el).scrollMarginTop)||0;if(Math.abs(t-want)>4)el.scrollIntoView({block:'start'});cur.lock=Date.now()+300},smooth?900:250)}
+  function setCurrent(p){
+    if(cur.page===p&&main.dataset.shown==='1')return;cur.page=p;main.dataset.shown='1';
+    var d=ISSUES[cur.no];if(!d)return;
+    var sel=main.querySelector('#bv-page');if(sel)sel.value=p;
+    main.querySelectorAll('.bv-pager [data-step]').forEach(function(btn){var n=p+(+btn.dataset.step);btn.disabled=n<1||n>d.pageCount});
+    crumbsSet([['All issues','shelf'],[d.label+' · No. '+d.issue,issueKey(cur.no)],['Page '+p,'']]);
+    var h='#'+issueKey(cur.no)+'-p'+pad(p);if(location.hash!==h&&history.replaceState)history.replaceState(null,'',h);
+  }
+  function pageSection(d,p,hl){
+    var no=d.issue,items=itemsOnPage(d,p);
+    var h='<section class="bv-page" data-p="'+p+'" aria-label="Page '+p+'"><div class="bv-reader"><div class="bv-scanpane"><div class="bv-scanbox"><div class="bv-scan"><img src="'+pageImg(no,p)+'" alt="Page '+p+' of The Belgravian, '+esc(d.label)+', as printed"'+(p>2?' loading="lazy"':'')+'>';
+    items.forEach(function(it){(it.regions||[]).forEach(function(r){if(r.page!==p||!r.box)return;var b=r.box;
+      h+='<button type="button" class="bv-region" data-id="'+esc(it.id)+'" aria-label="'+esc((TYPE[it.type]||'Item')+(it.heading?': '+it.heading:''))+'" style="left:'+(b[0]*100)+'%;top:'+(b[1]*100)+'%;width:'+((b[2]-b[0])*100)+'%;height:'+((b[3]-b[1])*100)+'%"></button>'})});
+    h+='</div></div><div class="bv-scantools"><b>Page '+p+' of '+d.pageCount+'</b><span><button type="button" data-zoom>Zoom in</button><a href="'+esc(d.pdfUrl||'#')+'#page='+p+'" target="_blank" rel="noopener">Open the full PDF</a></span></div></div>';
+    h+='<div class="bv-textpane"><p class="bv-pagelabel">Page '+p+'</p>'+(items.length?items.map(function(it){return itemHtml(it,d,p,hl)}).join(''):'<p class="bv-msg">Nothing has been transcribed from this page.</p>')+'</div></div></section>';
+    return h;
+  }
+  function watchPages(){
+    if(cur.obs)cur.obs.disconnect();
+    if(!('IntersectionObserver' in window))return;
+    var vis={};
+    cur.obs=new IntersectionObserver(function(es){
+      es.forEach(function(e){vis[e.target.dataset.p]=e.isIntersecting});
+      if(Date.now()<cur.lock)return;
+      var ps=Object.keys(vis).filter(function(k){return vis[k]}).map(Number).sort(function(a,b){return a-b});
+      if(ps.length)setCurrent(ps[0]);
+    },{rootMargin:'-35% 0px -60% 0px'});
+    main.querySelectorAll('.bv-page').forEach(function(el){cur.obs.observe(el)});
+  }
   function reader(no,p,focus,hl){
     loadIssue(no).then(function(d){
       p=Math.max(1,Math.min(d.pageCount,p||1));
-      crumbsSet([['All issues','shelf'],[d.label+' · No. '+d.issue,issueKey(no)],['Page '+p,'']]);
-      var items=itemsOnPage(d,p);
-      var opts='';for(var i=1;i<=d.pageCount;i++)opts+='<option value="'+i+'"'+(i===p?' selected':'')+'>Page '+i+' of '+d.pageCount+'</option>';
-      var h='<div class="bv-issuehead"><div><span class="label">No. '+d.issue+'</span><h2>'+esc(d.label)+'</h2><p class="meta">'+d.items.length+' items · '+d.pageCount+' pages'+(d.officers&&d.officers.President?' · President '+esc(d.officers.President):'')+'</p></div>'+
-        '<div class="bv-pager"><button type="button" data-page="'+(p-1)+'"'+(p<=1?' disabled':'')+' aria-label="Previous page">←</button><select id="bv-page" aria-label="Page">'+opts+'</select><button type="button" data-page="'+(p+1)+'"'+(p>=d.pageCount?' disabled':'')+' aria-label="Next page">→</button></div></div>';
-      h+='<div class="bv-seg" role="tablist" aria-label="View"><button role="tab" data-pane="text" aria-selected="'+(pane==='text')+'">Readable</button><button role="tab" data-pane="scan" aria-selected="'+(pane==='scan')+'">Original</button></div>';
-      h+='<div class="bv-reader" data-pane="'+pane+'"><div class="bv-scanpane"><div class="bv-scanbox"><div class="bv-scan"><img src="'+pageImg(no,p)+'" alt="Page '+p+' of The Belgravian, '+esc(d.label)+', as printed">';
-      items.forEach(function(it){(it.regions||[]).forEach(function(r){if(r.page!==p||!r.box)return;var b=r.box;
-        h+='<button type="button" class="bv-region" data-id="'+esc(it.id)+'" aria-label="'+esc((TYPE[it.type]||'Item')+(it.heading?': '+it.heading:''))+'" style="left:'+(b[0]*100)+'%;top:'+(b[1]*100)+'%;width:'+((b[2]-b[0])*100)+'%;height:'+((b[3]-b[1])*100)+'%"></button>'})});
-      h+='</div></div><div class="bv-scantools"><button type="button" data-zoom>Zoom in</button><a href="'+esc(d.pdfUrl||'#')+'#page='+p+'" target="_blank" rel="noopener">Open the full PDF</a></div></div>';
-      h+='<div class="bv-textpane">'+(items.length?items.map(function(it){return itemHtml(it,d,p,hl)}).join(''):'<p class="bv-msg">Nothing has been transcribed from this page.</p>')+'</div></div>';
-      main.innerHTML=h;
-      var sel=main.querySelector('#bv-page');sel.addEventListener('change',function(){go(issueKey(no)+'-p'+pad(+sel.value))});
-      if(focus)setTimeout(function(){on(focus,true)},30);else window.scrollTo&&root.scrollIntoView({block:'start'});
+      var fresh=cur.no!==no||!main.querySelector('.bv-flow')||hl;
+      if(fresh){
+        cur.no=no;cur.page=0;main.dataset.shown='';
+        var opts='';for(var i=1;i<=d.pageCount;i++)opts+='<option value="'+i+'">Page '+i+' of '+d.pageCount+'</option>';
+        var h='<div class="bv-issuehead"><div><span class="label">No. '+d.issue+'</span><h2>'+esc(d.label)+'</h2><p class="meta">'+d.items.length+' items · '+d.pageCount+' pages · scroll to read on'+(d.officers&&d.officers.President?' · President '+esc(d.officers.President):'')+'</p></div>'+
+          '<div class="bv-pager"><button type="button" data-step="-1" aria-label="Previous page">←</button><select id="bv-page" aria-label="Jump to page">'+opts+'</select><button type="button" data-step="1" aria-label="Next page">→</button></div></div>';
+        h+='<div class="bv-seg" role="tablist" aria-label="View"><button role="tab" data-pane="text" aria-selected="'+(pane==='text')+'">Readable</button><button role="tab" data-pane="scan" aria-selected="'+(pane==='scan')+'">Original</button></div>';
+        h+='<div class="bv-flow" data-pane="'+pane+'">';
+        for(var q2=1;q2<=d.pageCount;q2++)h+=pageSection(d,q2,hl);
+        main.innerHTML=h+'</div>';
+        var first=main.querySelector('.bv-scan img');
+        if(first){var setAr=function(){if(first.naturalWidth)main.querySelector('.bv-flow').style.setProperty('--ar',(first.naturalWidth/first.naturalHeight).toFixed(4))};if(first.complete)setAr();else first.addEventListener('load',setAr)}
+        var sel=main.querySelector('#bv-page');sel.addEventListener('change',function(){toPage(+sel.value,true)});
+        watchPages();
+      }
+      if(focus){setCurrent(firstPage(d.items.filter(function(x){return x.id===focus})[0]||{pages:[p]}));setTimeout(function(){cur.lock=Date.now()+900;on(focus,true)},fresh?60:0)}
+      else if(p>1||!fresh)toPage(p,!fresh);
+      else{setCurrent(1);root.scrollIntoView({block:'start'})}
     }).catch(function(){main.innerHTML='<p class="bv-msg">That issue couldn’t be loaded just now. Please try again shortly.</p>'});
   }
-  function on(id,scroll){
+  function on(id,scroll,within){
     main.querySelectorAll('.bv-region,.bv-item').forEach(function(e){e.classList.toggle('on',e.dataset.id===id)});
-    if(scroll){var el=main.querySelector('.bv-item[data-id="'+id+'"]');if(el&&pane==='text')el.scrollIntoView({block:'start',behavior:'smooth'});
-      var r=main.querySelector('.bv-region[data-id="'+id+'"]');var box=main.querySelector('.bv-scanbox');if(r&&box&&box.classList.contains('zoom'))r.scrollIntoView({block:'center',inline:'center'})}
+    if(scroll){var scope=within||main;var el=scope.querySelector('.bv-item[data-id="'+id+'"]')||main.querySelector('.bv-item[data-id="'+id+'"]');if(el&&pane==='text')el.scrollIntoView({block:'start',behavior:'smooth'})}
   }
   function setPane(v){pane=v;var rd=main.querySelector('.bv-reader');if(rd)rd.dataset.pane=v;main.querySelectorAll('.bv-seg [data-pane]').forEach(function(b){b.setAttribute('aria-selected',b.dataset.pane===v?'true':'false')})}
 
@@ -377,17 +429,17 @@
     if(h==='people')return loadPeople().then(peopleList);
     if(/^p-/.test(h))return loadPeople().then(function(){person(h)});
     if(h==='search')return search(q.value);
-    shelf();
+    cur.no=null;shelf();
   }
 
   root.addEventListener('click',function(e){
     var t;
-    if((t=e.target.closest('.bv-region'))){setPane('text');on(t.dataset.id,true);return}
-    if((t=e.target.closest('[data-orig]'))){setPane('scan');on(t.dataset.orig,false);var r=main.querySelector('.bv-region[data-id="'+t.dataset.orig+'"]');(r||main.querySelector('.bv-scanpane')).scrollIntoView({block:'center',behavior:'smooth'});return}
+    if((t=e.target.closest('.bv-region'))){setPane('text');cur.lock=Date.now()+900;on(t.dataset.id,true,t.closest('.bv-page'));return}
+    if((t=e.target.closest('[data-orig]'))){var sec=t.closest('.bv-page');on(t.dataset.orig,false);if(window.matchMedia('(max-width:860px)').matches){setPane('scan');var r=sec&&sec.querySelector('.bv-region[data-id="'+t.dataset.orig+'"]');(r||sec||main).scrollIntoView({block:'center',behavior:'smooth'})}return}
     if((t=e.target.closest('.bv-item'))&&!e.target.closest('a,button,img')){on(t.dataset.id,false);return}
-    if((t=e.target.closest('[data-page]'))){var cur=(location.hash.match(/^#B(\d+)/)||[])[1];if(cur)go('B'+cur+'-p'+pad(+t.dataset.page));return}
+    if((t=e.target.closest('.bv-pager [data-step]'))){toPage(cur.page+(+t.dataset.step),true);return}
     if((t=e.target.closest('.bv-seg [data-pane]'))){setPane(t.dataset.pane);return}
-    if((t=e.target.closest('[data-zoom]'))){var b=main.querySelector('.bv-scanbox');b.classList.toggle('zoom');t.textContent=b.classList.contains('zoom')?'Zoom out':'Zoom in';return}
+    if((t=e.target.closest('[data-zoom]'))){var b=t.closest('.bv-scanpane').querySelector('.bv-scanbox');b.classList.toggle('zoom');t.textContent=b.classList.contains('zoom')?'Zoom out':'Zoom in';return}
     if((t=e.target.closest('[data-goitem]'))){go(t.dataset.goitem);return}
     if((t=e.target.closest('[data-search]'))){q.value=t.dataset.search;filter='all';if(location.hash==='#search')search(q.value);else go('search');return}
     if((t=e.target.closest('[data-filter]'))){filter=t.dataset.filter;search(q.value);return}
