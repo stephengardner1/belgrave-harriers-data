@@ -58,6 +58,8 @@
 .bh-rr td.yr a:hover{color:var(--claret);text-decoration-color:var(--claret)}
 .bh-rr td a.pos{color:inherit;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:3px}
 .bh-rr td a.pos:hover{text-decoration-color:var(--claret)}
+.bh-rr .medal{font-size:18px;line-height:1;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
+.bh-rr td a.pos:has(.medal){text-underline-offset:5px}
 .bh-rr td.who{font-weight:500}
 .bh-rr td.dim{color:var(--slate)}
 .bh-rr .bel{font-weight:600;color:var(--claret)}
@@ -89,6 +91,8 @@
   function nameCell(n){var tag='';var m=n.match(/\s*\[([^\]]+)\]\s*$/);if(m){tag=m[1];n=n.slice(0,m.index)}
     return esc(n)+(tag?'<span class="tag">'+esc(tag)+'</span>':'')}
   function posCell(p){if(p==='')return '';return /^[A-Za-z]+$/.test(p)&&p!=='-'?'<span class="tag" style="margin:0">'+esc(p)+'</span>':dash(p)}
+  function medal(p){var m={'1':['🥇','1st'],'2':['🥈','2nd'],'3':['🥉','3rd']}[String(p).trim()];
+    return m?'<span class="medal" role="img" aria-label="'+m[1]+'" title="'+m[1]+'">'+m[0]+'</span>':posCell(p)}
   function isUs(s){return /^belgrave/i.test(s)}
   function th(label,key,num,wide){var c=(num?'num ':'')+(wide?'wide':'');
     var s=state.sort===key?' aria-sort="ascending"':'';
@@ -102,7 +106,7 @@
       var rep=R[x[0]];
       h+='<tr'+(pod?' class="us"':'')+'><td class="yr">'+(rep?'<a href="'+esc(rep)+'" title="Read the report">'+esc(x[0])+'</a>':esc(x[0]))+'</td>'+
         [x[1],x[2],x[3]].map(function(t){return '<td'+(isUs(t)?' class="bel"':'')+'>'+dash(t)+'</td>'}).join('')+
-        '<td class="num mk">'+(rep&&x[4]&&x[4]!=='-'?'<a class="pos" href="'+esc(rep)+'" title="Read the report">'+posCell(x[4])+'</a>':posCell(x[4]))+'</td></tr>'});
+        '<td class="num mk">'+(rep&&x[4]&&x[4]!=='-'?'<a class="pos" href="'+esc(rep)+'" title="Read the report">'+medal(x[4])+'</a>':medal(x[4]))+'</td></tr>'});
     return h+'</tbody></table></div><p class="bh-rr-note">The first three teams each year, and where Belgrave finished. Years when Belgrave made the podium are highlighted. Underlined years and Belgrave positions link to the club’s report of the race.'+
       (six?' A dash means Belgrave didn’t run. The race moved around the country until it settled at Sutton Park in 1995; 2012 was run at Clumber Park and 2020 wasn’t held. Sources: ERRA’s official list of winners, the 2026 results, and Alan Mead’s history of the race (belgraveharriers.info).':'')+'</p>'}
 
