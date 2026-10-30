@@ -5374,6 +5374,48 @@
      "-"
     ]
    ]
+  },
+  "reports": {
+   "12": {
+    "2001": "/news/road-running-cross-country-team-results-january-june-2001",
+    "2002": "/news/road-running-cross-country-team-events-january-june-2002",
+    "2003": "/news/aaa-mens-12-stage-road-relay-sutton-park-sutton-coldfield-2003",
+    "2004": "/news/aaa-12-stage-road-relay-sutton-park-sutton-coldfield-2004",
+    "2005": "/news/aaa-mens-12-stage-road-relay-championship-sutton-coldfield-2005",
+    "2006": "/news/erra-mens-12-stage-road-relay-sutton-park-sutton-coldfield-2006",
+    "2007": "/news/erra-mens-national-12-stage-road-relay-sutton-park-2007",
+    "2008": "/news/erra-national-12-stage-road-relay-sutton-park-sutton-coldfield-2008",
+    "2009": "/news/road-running-cross-country-results-2009",
+    "2010": "/news/erra-national-12-stage-road-relay-sutton-coldfield-2010",
+    "2011": "/news/erra-national-mens-12-stage-road-relay-sutton-coldfield-2011",
+    "2012": "/news/erra-national-mens-12-stage-road-relay-sutton-park-sutton-coldfield-2012",
+    "2014": "/news/earning-the-right-to-win",
+    "2015": "/news/erra-12-and-6-stage-road-relays-sutton-park-11-apr-2015",
+    "2017": "/news/erra-mens-12-stage-road-relay-sutton-park-8-april-2017",
+    "2018": "/news/mens-erra-national-championships-sutton-coldfield-saturday-april-14th-2018",
+    "2022": "/news/goolab-wins-long-leg-gold-as-depleted-bels-enjoy-national-12-stage-return",
+    "2023": "/news/belgrave-make-strides-in-national-road-relays",
+    "2024": "/news/bels-8th-is-best-national-12-stage-in-a-decade-as-women-just-miss-out-on-bronze-l9xfg"
+   },
+   "6": {
+    "2000": "/news/road-running-cross-country-team-results-july-december-2000",
+    "2001": "/news/road-running-cross-country-team-results-july-december-2001",
+    "2002": "/news/aaa-mens-6-stage-road-relay-sutton-park-sutton-coldfield-2002",
+    "2003": "/news/aaa-mens-6-stage-road-relay-sutton-park-sutton-coldfield-2003",
+    "2004": "/news/aaa-mens-6-stage-road-relay-champs-sutton-park-2004",
+    "2005": "/news/aaa-mens-6-stage-road-relay-sutton-park-full-result-2005",
+    "2006": "/news/erra-mens-6-stage-road-relay-sutton-park-full-result-2006",
+    "2007": "/news/erra-mens-national-6-stage-road-relay-sutton-park-2007",
+    "2008": "/news/erra-national-6-stage-road-relay-sutton-coldfield-2008",
+    "2009": "/news/erra-mens-national-6-stage-road-relay-sutton-coldfield-2009",
+    "2010": "/news/erra-national-mens-6-stage-road-relay-sutton-park-sutton-coldfield-2010",
+    "2011": "/news/erra-national-mens-6-stage-road-relay-sutton-park-sutton-coldfield-2011",
+    "2013": "/news/erra-national-mens-6-stage-road-relay-sutton-coldfield-2013",
+    "2014": "/news/erra-national-mens-6-stage-road-relay-sutton-coldfield-4-october-2014",
+    "2021": "/news/belles-9th-bels-29th-at-record-breaking-national-64-stage-relays",
+    "2022": "/news/solid-showing-at-national-64-stage",
+    "2023": "/news/belles-storm-to-national-road-relay-bronze"
+   }
   }
  },
  "additions": [
@@ -5421,6 +5463,10 @@
    "added": "2026-10-23",
    "what": "6-stage winners 1969–1994 (first three teams and Belgrave position), and a dash for Belgrave in years Belgrave did not take part (1995–1998, 2015–2019). Club names written out in full.",
    "source": "Alan Mead, 'English National 6-Stage Road Relay Championship – Senior Men', version 10.1, 22 October 2024 (belgraveharriers.info). Where it overlaps the ERRA list (1995–2024) the first three teams agree."
+  },
+  {
+   "added": "2026-10-30",
+   "what": "tables.reports: links from years in the 12-stage and 6-stage winners tables to the club's own report of that race on belgraveharriers.com (the men's race; season round-ups where that is the only report)."
   }
  ],
  "notes6": "Lap lengths: 3.7 miles in 1996–2000, 5.847 km from 2001 to 2024, 5.47 km from 2025 after part of the road was closed (ERRA)."

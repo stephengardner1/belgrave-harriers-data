@@ -54,6 +54,8 @@
 .bh-rr td.num{font:400 14px/20px "IBM Plex Mono",ui-monospace,monospace;text-align:right;white-space:nowrap;width:1%}
 .bh-rr td.mk{font-weight:600;color:var(--claret)}
 .bh-rr td.yr{font:600 15px/20px franklin-gothic-atf,"Franklin Gothic Medium",sans-serif;white-space:nowrap;width:1%}
+.bh-rr td.yr a{color:inherit;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:3px}
+.bh-rr td.yr a:hover{color:var(--claret);text-decoration-color:var(--claret)}
 .bh-rr td.who{font-weight:500}
 .bh-rr td.dim{color:var(--slate)}
 .bh-rr .bel{font-weight:600;color:var(--claret)}
@@ -92,13 +94,14 @@
   function more(n){return n>SHOW&&!state.all?'<button type="button" class="bh-rr-more">Show all '+n+' rows</button>':''}
 
   function w12(six){
-    var r=(six?T.winners6:T.winners12).rows.slice(1);
+    var r=(six?T.winners6:T.winners12).rows.slice(1),R=((T.reports||{})[six?'6':'12'])||{};
     var h='<div class="bh-rr-scroll"><table><thead><tr><th>Year</th><th>Winners</th><th>Second</th><th>Third</th><th class="num">Belgrave</th></tr></thead><tbody>';
     r.slice().reverse().forEach(function(x){var pod=[x[1],x[2],x[3]].some(isUs);
-      h+='<tr'+(pod?' class="us"':'')+'><td class="yr">'+esc(x[0])+'</td>'+
+      var rep=R[x[0]];
+      h+='<tr'+(pod?' class="us"':'')+'><td class="yr">'+(rep?'<a href="'+esc(rep)+'" title="Read the report">'+esc(x[0])+'</a>':esc(x[0]))+'</td>'+
         [x[1],x[2],x[3]].map(function(t){return '<td'+(isUs(t)?' class="bel"':'')+'>'+dash(t)+'</td>'}).join('')+
         '<td class="num mk">'+posCell(x[4])+'</td></tr>'});
-    return h+'</tbody></table></div><p class="bh-rr-note">The first three teams each year, and where Belgrave finished. Years when Belgrave made the podium are highlighted.'+
+    return h+'</tbody></table></div><p class="bh-rr-note">The first three teams each year, and where Belgrave finished. Years when Belgrave made the podium are highlighted. Underlined years link to the club’s report of the race.'+
       (six?' A dash means Belgrave didn’t run. The race moved around the country until it settled at Sutton Park in 1995; 2012 was run at Clumber Park and 2020 wasn’t held. Sources: ERRA’s official list of winners, the 2026 results, and Alan Mead’s history of the race (belgraveharriers.info).':'')+'</p>'}
 
   function l12(){
