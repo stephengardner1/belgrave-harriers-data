@@ -44,8 +44,9 @@ and read by code on the club website.
 `fonts/` holds Castoro Belgrave, the club's headline typeface, used by the club
 website's custom CSS:
 
-- `CastoroBelgrave-Semibold` (weight 600) and `CastoroBelgrave-Bold` (700) for
-  headlines, subheads, news cards and navigation.
+- `CastoroBelgrave-Semibold` (weight 600) for headlines, subheads, news cards
+  and navigation. 600 is the heaviest weight: `CastoroBelgrave-Bold` holds the
+  same Semibold design, so anything styled at 700 gets 600 without a faux bold.
 - `CastoroBelgraveTitlingLight-Regular` for large heritage capitals, such as the
   history page title.
 
