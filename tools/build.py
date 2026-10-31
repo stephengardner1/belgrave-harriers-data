@@ -1,0 +1,99 @@
+"""Assemble the Belgravian archive data for the website.
+python3 -I build.py WORKDIR REPO_BELGRAVIAN_DIR
+Reads WORKDIR/out/B*.json, WORKDIR/crops, WORKDIR/pages, WORKDIR/people-index.json (optional, built by people.py)
+and writes: issues/B*.json, index.json, search.json, people.json under the repo folder.
+Images (WORKDIR/pages, WORKDIR/crops) go to the R2 bucket belgravian-archive under belgravian/: python3 -I r2up.py r2.env WORKDIR belgravian/ pages crops"""
+import json, os, sys, glob, shutil, re, unicodedata
+
+W, OUT = sys.argv[1], sys.argv[2]
+man = json.load(open('/home/claude/stephengardner1/surrey-league/research/belgravian/manifest_raw.json'))
+urls = {x['no']: x['url'].split('?')[0] for x in man if not x['eharrier']}
+os.makedirs(f'{OUT}/issues', exist_ok=True)
+
+def slug(s):
+    s = unicodedata.normalize('NFD', s).encode('ascii', 'ignore').decode().lower()
+    return re.sub(r'[^a-z0-9]+', '-', s).strip('-')
+
+# Event tags group the same race across years (Steve, 29 Oct 2026): drop the year/season from each tag.
+YEAR = re.compile(r'(?<![\w.])(?:18[5-9]\d|19\d\d|20[0-2]\d)(?:\s*[-/\u2013]\s*\d{2,4})?(?![\w.])(?!\s*(?:m|metres?|meters?|yards?|yds|miles?|km|kilo\w*)\b)')
+def event_tag(e):
+    t = YEAR.sub('', e)
+    t = re.sub(r'\(\s*\)', '', t)                      # empty brackets left behind
+    t = re.sub(r'\s+([,)])', r'\1', t); t = re.sub(r'\(\s+', '(', t)
+    t = re.sub(r'\s{2,}', ' ', t).strip(' ,-\u2013')
+    return t or e
+# Publish only finished issues: the 1960s pilot, plus later issues listed in WORKDIR/published.txt once read AND checked.
+PUB = set(int(x) for x in open(f'{W}/published.txt').read().split()) if os.path.exists(f'{W}/published.txt') else set()
+def published(no):
+    return no <= 172 or no in PUB
+
+issues, search = [], []
+for f in sorted(glob.glob(f'{W}/out/B*.json')):
+    if re.search(r'\.(orig|firstpass)\.json$', f): continue
+    d = json.load(open(f))
+    no = d['issue']
+    if not published(no): continue
+    d['pdfUrl'] = urls.get(no)
+    for it in d['items']:
+        it.setdefault('regions', [])
+        for k in ('tables', 'scans', 'photos', 'people', 'events', 'clubs', 'places', 'sport'):
+            it[k] = it.get(k) or []
+        it['events'] = list(dict.fromkeys(event_tag(e) for e in it['events']))
+    json.dump(d, open(f'{OUT}/issues/B{no}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+    y = int(str(d['date'])[:4])
+    issues.append({'issue': no, 'label': d['label'], 'date': d['date'], 'year': y,
+                   'pageCount': d['pageCount'], 'items': len(d['items'])})
+    for it in d['items']:
+        ppl = []
+        for p in it['people']:
+            ppl += [p.get('name') or '', p.get('printed') or '', p.get('note') or ''] + (p.get('printedAs') or [])
+        cells = ' '.join(' '.join(map(str, r)) for t in it['tables'] for r in t.get('rows', []))
+        caps = ' '.join((ph.get('caption') or '') for ph in it['photos'] + it['scans'])
+        hay = ' '.join([it.get('heading') or '', it.get('summary') or '', it.get('text') or '', cells, caps,
+                        ' '.join(ppl), ' '.join(it['events'] + it['places'] + it['clubs'])])
+        p0 = min(it['pages']) if it.get('pages') else 1
+        search.append({'decade': str(y)[:3] + '0s', 'id': it['id'], 'type': it['type'], 'label': d['label'], 'p': p0,
+                       'h': it.get('heading'), 'sum': it.get('summary'),
+                       's': re.sub(r'\s+', ' ', hay).strip()})
+    # page images and crops are not copied: they live on Cloudflare R2 (upload with r2up.py from WORKDIR)
+
+issues.sort(key=lambda x: x['date'])
+idx = {'title': 'The Belgravian', 'issues': issues,
+       'coming': ['1920s', '1930s', '1940s', '1950s', '1970s', '1980s', '1990s', '2000s'],
+       'legends': json.load(open(f'{W}/legends-index.json')) if os.path.exists(f'{W}/legends-index.json') else []}
+
+json.dump(idx, open(f'{OUT}/index.json', 'w'), ensure_ascii=False, indent=1)
+# one search file per decade, so a reader only downloads what exists (index.json lists them)
+by_dec = {}
+for x in search: by_dec.setdefault(x.pop('decade'), []).append(x)
+idx['searchFiles'] = [f'search-{d}.json' for d in sorted(by_dec)]
+json.dump(idx, open(f'{OUT}/index.json', 'w'), ensure_ascii=False, indent=1)
+for d, xs in by_dec.items():
+    json.dump({'items': xs}, open(f'{OUT}/search-{d}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+
+# people: light list (people.json) + per-surname-letter shards (people/<letter>.json) + legend profiles
+import string
+pi = json.load(open(f'{W}/people-index.json'))['people']
+legends = idx['legends']
+leg_ids = {l['id'] for l in legends}
+os.makedirs(f'{OUT}/people', exist_ok=True); os.makedirs(f'{OUT}/legends', exist_ok=True)
+shards = {}
+light = []
+for p in pi:
+    letter = (p['sort'][:1] if p['sort'][:1] in string.ascii_lowercase else '_')
+    for m in p['mentions']:
+        for k in ('sum', 'label'): m.pop(k, None)
+        if not m.get('note'): m.pop('note', None)
+        if not m.get('h'): m.pop('h', None)
+    p['legend'] = p['id'] in leg_ids
+    shards.setdefault(letter, []).append(p)
+    row = {'id': p['id'], 'name': p['name'], 'n': len(p['mentions']), 's': letter}
+    if p['legend']: row['legend'] = True
+    light.append(row)
+for letter, ps in shards.items():
+    json.dump({p['id']: p for p in ps}, open(f'{OUT}/people/{letter}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+json.dump({'people': light}, open(f'{OUT}/people.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+for l in legends:
+    src = f"{W}/../legend/{l['id'][2:]}.json"
+    if os.path.exists(src): shutil.copy(src, f"{OUT}/legends/{l['id'][2:]}.json")
+print(len(issues), 'issues;', len(search), 'items;', {d: os.path.getsize(f'{OUT}/search-{d}.json') // 1024 for d in by_dec}, 'KB')
