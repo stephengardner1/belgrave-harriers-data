@@ -2168,6 +2168,27 @@
   "original_page": "https://www.belgraveharriers.com/road_country/rc_team_2002_2003_b.htm"
  },
  {
+  "slug": "national-cross-country-champs-parliament-hill-2003",
+  "title": "National Cross Country Champs., Parliament Hill",
+  "date": "2003-02-22",
+  "kind": "report",
+  "categories": [
+   "Road and Cross Country"
+  ],
+  "tags": [
+   "Archive",
+   "Parliament Hill",
+   "National Cross Country",
+   "Tilly Heaton",
+   "Steve Zealey",
+   "Will Cockerell"
+  ],
+  "writer": "",
+  "file": "stories/2003/national-cross-country-champs-parliament-hill-2003.html",
+  "original_page": "https://www.belgraveharriers.com/road_country/rc_team_2002_2003_b.htm",
+  "editor_note": "Added 31 Oct 2026: missed by the original build because its heading line sat below the photos."
+ },
+ {
   "slug": "track-field-results-indoor-season-2002-2003",
   "title": "Track & Field Results - Indoor Season 2002-2003",
   "date": "2003-03-03",
@@ -8642,6 +8663,32 @@
   "original_page": "https://www.belgraveharriers.com/skippers_corner/skippers_corner_37.htm"
  },
  {
+  "slug": "seaa-mens-12-stage-road-relay-milton-keynes-2007",
+  "title": "SEAA Men's 12-Stage Road Relay, Milton Keynes",
+  "date": "2007-04-01",
+  "kind": "report",
+  "categories": [
+   "Road and Cross Country",
+   "Mens Road&XC"
+  ],
+  "tags": [
+   "Archive",
+   "Road relays",
+   "12-Stage Road Relay",
+   "James Fairbourn",
+   "Padraic Buckley",
+   "Shugri Omar",
+   "Charles Herrington",
+   "Will Cockerell",
+   "Richard Ward",
+   "Southern road relays"
+  ],
+  "writer": "",
+  "file": "stories/2007/seaa-mens-12-stage-road-relay-milton-keynes-2007.html",
+  "original_page": "https://www.belgraveharriers.com/2007/rc_2007.htm",
+  "editor_note": "Added 31 Oct 2026: missed by the original build because its heading line sat below the photos."
+ },
+ {
   "slug": "seaa-womens-6-stage-road-relay-milton-keynes-2007",
   "title": "SEAA Women's 6-Stage Road Relay, Milton Keynes",
   "date": "2007-04-01",
@@ -10512,6 +10559,26 @@
   "original_page": "https://www.belgraveharriers.com/2009/rc_2009.htm"
  },
  {
+  "slug": "seaa-cross-country-champs-hillingdon-house-farm-uxbridge-2009",
+  "title": "SEAA Cross Country Champs., Hillingdon House Farm, Uxbridge",
+  "date": "2009-01-24",
+  "kind": "report",
+  "categories": [
+   "Road and Cross Country"
+  ],
+  "tags": [
+   "Archive",
+   "Southern Cross Country",
+   "Alan Mead",
+   "Gerry North",
+   "Will Cockerell"
+  ],
+  "writer": "",
+  "file": "stories/2009/seaa-cross-country-champs-hillingdon-house-farm-uxbridge-2009.html",
+  "original_page": "https://www.belgraveharriers.com/2009/rc_2009.htm",
+  "editor_note": "Added 31 Oct 2026: missed by the original build because its heading line sat below the photos."
+ },
+ {
   "slug": "sweatshop-mens-surrey-cross-country-league-race-4-hamlands-nr-kingston-2009",
   "title": "\"Sweatshop\" Men's Surrey Cross Country League Race 4, Hamlands nr Kingston",
   "date": "2009-02-07",
@@ -11111,6 +11178,24 @@
   "writer": null,
   "file": "stories/2009/erra-womens-national-4-stage-road-relay-sutton-coldfield-2009.html",
   "original_page": "https://www.belgraveharriers.com/2009/rc_2009.htm"
+ },
+ {
+  "slug": "ecca-national-cross-country-relay-berry-hill-park-mansfield-2009",
+  "title": "ECCA National Cross Country Relay, Berry Hill Park, Mansfield",
+  "date": "2009-10-31",
+  "kind": "report",
+  "categories": [
+   "Road and Cross Country"
+  ],
+  "tags": [
+   "Archive",
+   "National Cross Country",
+   "Alan Mead"
+  ],
+  "writer": "",
+  "file": "stories/2009/ecca-national-cross-country-relay-berry-hill-park-mansfield-2009.html",
+  "original_page": "https://www.belgraveharriers.com/2009/rc_2009.htm",
+  "editor_note": "Added 31 Oct 2026: missed by the original build because its heading line sat below the photos."
  },
  {
   "slug": "sweatshop-surrey-cc-league-race-2-coulsdon-2009",
@@ -13304,6 +13389,28 @@
   "writer": "Alan Mead",
   "file": "stories/2012/seaa-cross-country-champs-stanmer-park-brighton-2012.html",
   "original_page": "https://www.belgraveharriers.com/2012/rc_2012.htm"
+ },
+ {
+  "slug": "womens-seaa-cross-country-champs-stanmer-park-brighton-2012",
+  "title": "Women's SEAA Cross Country Champs., Stanmer Park, Brighton",
+  "date": "2012-01-28",
+  "kind": "report",
+  "categories": [
+   "Road and Cross Country",
+   "Womens Road&XC"
+  ],
+  "tags": [
+   "Archive",
+   "Southern Cross Country",
+   "Tilly Heaton",
+   "Fee Maycock",
+   "Zoe Smith",
+   "Will Cockerell"
+  ],
+  "writer": "Will Cockerell",
+  "file": "stories/2012/womens-seaa-cross-country-champs-stanmer-park-brighton-2012.html",
+  "original_page": "https://www.belgraveharriers.com/2012/rc_2012.htm",
+  "editor_note": "Added 31 Oct 2026: missed by the original build because its heading line sat below the photos."
  },
  {
   "slug": "womens-surrey-cross-country-league-division-2-match-4-esher-2012",
