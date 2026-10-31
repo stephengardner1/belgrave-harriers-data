@@ -8,7 +8,7 @@ Then read ONLY your assigned page range of one issue. Other jobs read the other 
 another, so you add to a shared file.
 
 Differences from BRIEF.md for these jobs:
-- Spelling aid for names: W/slarchive-belgrave-names-1969-80.txt (Belgrave Surrey League runners 1969–80). Use it to
+- Spelling aid for names: W/slarchive-belgrave-names-1969-80.txt (Belgrave Surrey League runners 1969–80; for 1980s issues use W/slarchive-belgrave-names-1979-90.txt). Use it to
   confirm a reading, never to change what is printed.
 - Output: W/out/B<no>.json. If it doesn't exist (you have the first range), create it with the issue header
   (issue, label, date "YYYY-MM", pdf, pageCount, officers if printed on your pages) and "items": [].

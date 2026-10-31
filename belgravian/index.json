@@ -256,6 +256,254 @@
    "year": 1969,
    "pageCount": 48,
    "items": 91
+  },
+  {
+   "issue": 173,
+   "label": "March 1970",
+   "date": "1970-03",
+   "year": 1970,
+   "pageCount": 44,
+   "items": 91
+  },
+  {
+   "issue": 174,
+   "label": "June 1970",
+   "date": "1970-06",
+   "year": 1970,
+   "pageCount": 40,
+   "items": 68
+  },
+  {
+   "issue": 175,
+   "label": "September 1970",
+   "date": "1970-09",
+   "year": 1970,
+   "pageCount": 40,
+   "items": 56
+  },
+  {
+   "issue": 176,
+   "label": "December 1970",
+   "date": "1970-12",
+   "year": 1970,
+   "pageCount": 44,
+   "items": 79
+  },
+  {
+   "issue": 177,
+   "label": "June 1971",
+   "date": "1971-06",
+   "year": 1971,
+   "pageCount": 48,
+   "items": 115
+  },
+  {
+   "issue": 178,
+   "label": "September 1972",
+   "date": "1972-09",
+   "year": 1972,
+   "pageCount": 64,
+   "items": 151
+  },
+  {
+   "issue": 179,
+   "label": "December 1972",
+   "date": "1972-12",
+   "year": 1972,
+   "pageCount": 52,
+   "items": 104
+  },
+  {
+   "issue": 180,
+   "label": "March 1973",
+   "date": "1973-03",
+   "year": 1973,
+   "pageCount": 56,
+   "items": 97
+  },
+  {
+   "issue": 181,
+   "label": "June 1973",
+   "date": "1973-06",
+   "year": 1973,
+   "pageCount": 48,
+   "items": 89
+  },
+  {
+   "issue": 182,
+   "label": "September 1973",
+   "date": "1973-09",
+   "year": 1973,
+   "pageCount": 44,
+   "items": 76
+  },
+  {
+   "issue": 183,
+   "label": "December 1973",
+   "date": "1973-12",
+   "year": 1973,
+   "pageCount": 32,
+   "items": 69
+  },
+  {
+   "issue": 184,
+   "label": "March 1974",
+   "date": "1974-03",
+   "year": 1974,
+   "pageCount": 36,
+   "items": 86
+  },
+  {
+   "issue": 185,
+   "label": "June 1974",
+   "date": "1974-06",
+   "year": 1974,
+   "pageCount": 36,
+   "items": 72
+  },
+  {
+   "issue": 186,
+   "label": "September 1974",
+   "date": "1974-09",
+   "year": 1974,
+   "pageCount": 44,
+   "items": 88
+  },
+  {
+   "issue": 187,
+   "label": "December 1974",
+   "date": "1974-12",
+   "year": 1974,
+   "pageCount": 32,
+   "items": 67
+  },
+  {
+   "issue": 188,
+   "label": "March 1975",
+   "date": "1975-03",
+   "year": 1975,
+   "pageCount": 32,
+   "items": 83
+  },
+  {
+   "issue": 189,
+   "label": "July 1975",
+   "date": "1975-07",
+   "year": 1975,
+   "pageCount": 36,
+   "items": 90
+  },
+  {
+   "issue": 190,
+   "label": "November 1975",
+   "date": "1975-11",
+   "year": 1975,
+   "pageCount": 44,
+   "items": 97
+  },
+  {
+   "issue": 191,
+   "label": "March 1976",
+   "date": "1976-03",
+   "year": 1976,
+   "pageCount": 44,
+   "items": 97
+  },
+  {
+   "issue": 192,
+   "label": "August 1976",
+   "date": "1976-08",
+   "year": 1976,
+   "pageCount": 44,
+   "items": 100
+  },
+  {
+   "issue": 193,
+   "label": "December 1976",
+   "date": "1976-12",
+   "year": 1976,
+   "pageCount": 44,
+   "items": 93
+  },
+  {
+   "issue": 194,
+   "label": "April 1977",
+   "date": "1977-04",
+   "year": 1977,
+   "pageCount": 60,
+   "items": 112
+  },
+  {
+   "issue": 195,
+   "label": "October 1977",
+   "date": "1977-10",
+   "year": 1977,
+   "pageCount": 60,
+   "items": 102
+  },
+  {
+   "issue": 196,
+   "label": "April 1978",
+   "date": "1978-04",
+   "year": 1978,
+   "pageCount": 44,
+   "items": 104
+  },
+  {
+   "issue": 197,
+   "label": "October 1978",
+   "date": "1978-10",
+   "year": 1978,
+   "pageCount": 52,
+   "items": 103
+  },
+  {
+   "issue": 198,
+   "label": "April 1979",
+   "date": "1979-04",
+   "year": 1979,
+   "pageCount": 56,
+   "items": 112
+  },
+  {
+   "issue": 199,
+   "label": "October 1979",
+   "date": "1979-10",
+   "year": 1979,
+   "pageCount": 52,
+   "items": 130
+  },
+  {
+   "issue": 200,
+   "label": "April 1980",
+   "date": "1980-04",
+   "year": 1980,
+   "pageCount": 48,
+   "items": 119
+  },
+  {
+   "issue": 201,
+   "label": "October 1980",
+   "date": "1980-10",
+   "year": 1980,
+   "pageCount": 52,
+   "items": 96
+  },
+  {
+   "issue": 202,
+   "label": "April 1981",
+   "date": "1981-04",
+   "year": 1981,
+   "pageCount": 36,
+   "items": 101
+  },
+  {
+   "issue": 203,
+   "label": "October 1981",
+   "date": "1981-10",
+   "year": 1981,
+   "pageCount": 48,
+   "items": 99
   }
  ],
  "coming": [
@@ -263,8 +511,7 @@
   "1930s",
   "1940s",
   "1950s",
-  "1970s",
-  "1980s",
+  "1980s (more to come)",
   "1990s",
   "2000s"
  ],
@@ -275,5 +522,10 @@
    "line": "1962 National champion · cross-country captain",
    "photo": "crops/B155/B155-p01-gerry-north-cover.jpg"
   }
+ ],
+ "searchFiles": [
+  "search-1960s.json",
+  "search-1970s.json",
+  "search-1980s.json"
  ]
 }

@@ -13,7 +13,7 @@ import json, glob, re, sys, os, unicodedata, collections
 W = sys.argv[1]
 KEEP_APART = {'g north'}
 # printed abbreviations that point to one person (the magazine's own convention)
-ALIASES = {'gy north': 'gerald north', 'gf north': 'geoffrey north', 'gorry north': 'gerald north'}  # 'Gorry North' (B175, 1970) is Gerry: Steve, 29 Oct 2026        # Gerry North and Geoff North are different people (Steve, Oct 2026)
+ALIASES = {'gy north': 'gerald north', 'gf north': 'geoffrey north', 'gorry north': 'gerald north', 'a stroud': 'albert stroud'}  # 'Gorry North' (B175, 1970) is Gerry; 'A. Stroud' is Bert Stroud: Steve, 29 Oct 2026        # Gerry North and Geoff North are different people (Steve, Oct 2026)
 
 sl = json.load(open('/home/claude/stephengardner1/surrey-league/data.json'))
 sl_names = set()

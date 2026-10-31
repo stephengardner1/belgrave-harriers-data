@@ -39,4 +39,4 @@ elif a[0] == 'next':
 json.dump(q, open(F, 'w'), indent=0)
 done = [j for j in q['jobs'] if j['status'] == 'done']
 t = sum(j.get('tokens', 0) for j in done)
-print(f"done {len(done)}/{len(q['jobs'])} jobs, {t/1e6:.2f}M tokens ≈ {t/1.33e6:.1f} weekly points (calibrated: 27%→43% = 21.3M tokens, 29 Oct 10:15); stop starting issues at 36M", file=sys.stderr)
+print(f"done {len(done)}/{len(q['jobs'])} jobs, {t/1e6:.2f}M tokens ≈ {t/1.33e6:.1f} weekly points (calibrated: 27%→43% = 21.3M tokens, 29 Oct 10:15); cap 70%: stop starting issues at 53M", file=sys.stderr)
