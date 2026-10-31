@@ -14046,6 +14046,33 @@
   "original_page": "https://www.belgraveharriers.com/2013/tf_2013.htm"
  },
  {
+  "slug": "erra-mens-national-12-stage-road-relay-sutton-coldfield-2013",
+  "title": "ERRA Men's National 12-Stage Road Relay, Sutton Coldfield",
+  "date": "2013-04-13",
+  "kind": "report",
+  "categories": [
+   "Road and Cross Country",
+   "Mens Road&XC"
+  ],
+  "tags": [
+   "Archive",
+   "Road relays",
+   "National road relays",
+   "Sutton Park",
+   "12-Stage Road Relay",
+   "Alan Mead",
+   "Andrew Connick",
+   "Matthew Graham",
+   "Matt Taylor",
+   "Will Cockerell",
+   "Richard Ward"
+  ],
+  "writer": "Alan Mead",
+  "file": "stories/2013/erra-mens-national-12-stage-road-relay-sutton-coldfield-2013.html",
+  "original_page": "https://www.belgraveharriers.com/2013/rc_2013.htm",
+  "editor_note": "Added 31 Oct 2026 with an editor's note on the title given up after Alberto Lozano de Pedro's positive test (July 2013). Missed by the original build because its heading line sat below the photos."
+ },
+ {
   "slug": "erra-womens-national-6-stage-road-relay-sutton-coldfield-2013",
   "title": "ERRA Women's National 6-Stage Road Relay, Sutton Coldfield",
   "date": "2013-04-13",
