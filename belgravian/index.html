@@ -171,8 +171,8 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
 @media (max-width:860px){
   .bv-mast h1{font-size:40px}
   .bv-seg{display:flex}
-  .bv-seg{position:sticky;top:var(--bv-top,0px);z-index:2;box-shadow:0 0 0 6px var(--paper)}
-  .bv-flow{--top:calc(var(--bv-top,0px) + 58px)}
+  .bv-seg{position:sticky;top:var(--bv-top,12px);z-index:2;box-shadow:0 0 0 6px var(--paper)}
+  .bv-flow{--top:calc(var(--bv-top,12px) + 52px)}
   .bv-reader{grid-template-columns:minmax(0,1fr);gap:0}
   .bv-flow[data-pane="text"] .bv-scanpane{display:none}
   .bv-flow[data-pane="scan"] .bv-textpane{display:none}
@@ -457,6 +457,15 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     function close(){d.remove();document.removeEventListener('keydown',k)}function k(e){if(e.key==='Escape')close()}
     d.addEventListener('click',function(e){if(e.target===d||e.target.tagName==='BUTTON')close()});document.addEventListener('keydown',k);document.body.appendChild(d);d.querySelector('button').focus();
   }
+  /* The club site has a sticky claret header (and a fixed bar on phones): measure it so scans and tabs stick below it. */
+  var bars=[];
+  function findBars(){bars=[].filter.call(document.querySelectorAll('body *'),function(el){if(root.contains(el))return false;var p=getComputedStyle(el).position;if(p!=='fixed'&&p!=='sticky')return false;var r=el.getBoundingClientRect();return r.width>window.innerWidth*0.5&&r.top<160})}
+  function setTop(){var b=0;bars.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<=2&&r.bottom>0&&r.bottom<320&&getComputedStyle(el).visibility!=='hidden')b=Math.max(b,r.bottom)});root.style.setProperty('--bv-top',Math.round(b+12)+'px')}
+  var ticking=false;
+  findBars();setTop();
+  window.addEventListener('resize',function(){findBars();setTop()});
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(function(){setTop();ticking=false})}},{passive:true});
+  window.addEventListener('load',function(){findBars();setTop()});
   window.addEventListener('hashchange',route);
   Promise.all([get('index.json'),get('people.json').then(function(d){d.byId={};d.people.forEach(function(p){d.byId[p.id]=p});PEOPLE=d}).catch(function(){})])
     .then(function(r){IDX=r[0];route()})
