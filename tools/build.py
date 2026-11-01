@@ -59,7 +59,10 @@ for f in sorted(glob.glob(f'{W}/out/B*.json')):
 
 issues.sort(key=lambda x: x['date'])
 idx = {'title': 'The Belgravian', 'issues': issues,
-       'coming': ['1920s', '1930s', '1940s', '1950s', '1970s', '1980s', '1990s', '2000s'],
+       # decades with nothing published yet; a decade only partly done (e.g. the 1980s) shows "(more to come)"
+       'coming': [d + (' (more to come)' if d in {str(x['year'])[:3] + '0s' for x in issues} else '')
+                  for d in ['1920s', '1930s', '1940s', '1950s', '1960s', '1970s', '1980s', '1990s', '2000s']
+                  if d not in {str(x['year'])[:3] + '0s' for x in issues} or d in ('1980s',)],
        'legends': json.load(open(f'{W}/legends-index.json')) if os.path.exists(f'{W}/legends-index.json') else []}
 
 json.dump(idx, open(f'{OUT}/index.json', 'w'), ensure_ascii=False, indent=1)
