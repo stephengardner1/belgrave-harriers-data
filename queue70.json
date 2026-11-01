@@ -193,11 +193,21 @@
 "212": {
 "pdf": "B212_1988.pdf",
 "pages": 68,
-"state": "reading"
+"state": "ready"
 },
 "213": {
 "pdf": "B213_1989.pdf",
 "pages": 60,
+"state": "ready"
+},
+"207": {
+"pdf": "B207_1983.pdf",
+"pages": 52,
+"state": "ready"
+},
+"207b": {
+"pdf": "B207b_1984.pdf",
+"pages": 48,
 "state": "reading"
 }
 },
@@ -4169,7 +4179,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 142756
 },
 {
 "kind": "read",
@@ -4178,7 +4189,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 149990
 },
 {
 "kind": "read",
@@ -4187,7 +4199,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 184912
 },
 {
 "kind": "read",
@@ -4196,7 +4209,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 159444
 },
 {
 "kind": "read",
@@ -4205,7 +4219,8 @@
 41,
 50
 ],
-"status": "todo"
+"status": "done",
+"tokens": 179290
 },
 {
 "kind": "read",
@@ -4214,7 +4229,8 @@
 51,
 60
 ],
-"status": "todo"
+"status": "done",
+"tokens": 185585
 },
 {
 "kind": "read",
@@ -4223,7 +4239,8 @@
 61,
 68
 ],
-"status": "todo"
+"status": "done",
+"tokens": 174827
 },
 {
 "kind": "check",
@@ -4232,7 +4249,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 142467
 },
 {
 "kind": "check",
@@ -4241,7 +4259,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 133413
 },
 {
 "kind": "check",
@@ -4250,7 +4269,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 195105
 },
 {
 "kind": "check",
@@ -4259,7 +4279,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 168803
 },
 {
 "kind": "check",
@@ -4268,7 +4289,8 @@
 41,
 50
 ],
-"status": "todo"
+"status": "done",
+"tokens": 214483
 },
 {
 "kind": "check",
@@ -4277,7 +4299,8 @@
 51,
 60
 ],
-"status": "todo"
+"status": "done",
+"tokens": 184297
 },
 {
 "kind": "check",
@@ -4286,7 +4309,8 @@
 61,
 68
 ],
-"status": "todo"
+"status": "done",
+"tokens": 140639
 },
 {
 "kind": "read",
@@ -4295,7 +4319,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 156137
 },
 {
 "kind": "read",
@@ -4304,7 +4329,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 165759
 },
 {
 "kind": "read",
@@ -4313,7 +4339,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 170548
 },
 {
 "kind": "read",
@@ -4322,7 +4349,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 176468
 },
 {
 "kind": "read",
@@ -4331,7 +4359,8 @@
 41,
 50
 ],
-"status": "todo"
+"status": "done",
+"tokens": 185314
 },
 {
 "kind": "read",
@@ -4340,7 +4369,8 @@
 51,
 60
 ],
-"status": "todo"
+"status": "done",
+"tokens": 198457
 },
 {
 "kind": "check",
@@ -4349,7 +4379,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 154130
 },
 {
 "kind": "check",
@@ -4358,7 +4389,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 153120
 },
 {
 "kind": "check",
@@ -4367,7 +4399,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 191740
 },
 {
 "kind": "check",
@@ -4376,7 +4409,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 174809
 },
 {
 "kind": "check",
@@ -4385,7 +4419,8 @@
 41,
 50
 ],
-"status": "todo"
+"status": "done",
+"tokens": 184951
 },
 {
 "kind": "check",
@@ -4394,7 +4429,128 @@
 51,
 60
 ],
-"status": "todo"
+"status": "done",
+"tokens": 181174
+},
+{
+"kind": "read",
+"issue": 207,
+"pages": [
+1,
+9
+],
+"status": "done",
+"tokens": 162939
+},
+{
+"kind": "read",
+"issue": 207,
+"pages": [
+10,
+18
+],
+"status": "done",
+"tokens": 184083
+},
+{
+"kind": "read",
+"issue": 207,
+"pages": [
+19,
+27
+],
+"status": "done",
+"tokens": 163076
+},
+{
+"kind": "read",
+"issue": 207,
+"pages": [
+28,
+36
+],
+"status": "done",
+"tokens": 175488
+},
+{
+"kind": "read",
+"issue": 207,
+"pages": [
+37,
+45
+],
+"status": "done",
+"tokens": 190814
+},
+{
+"kind": "read",
+"issue": 207,
+"pages": [
+46,
+52
+],
+"status": "done",
+"tokens": 154834
+},
+{
+"kind": "check",
+"issue": 207,
+"pages": [
+1,
+9
+],
+"status": "done",
+"tokens": 148206
+},
+{
+"kind": "check",
+"issue": 207,
+"pages": [
+10,
+18
+],
+"status": "done",
+"tokens": 169293
+},
+{
+"kind": "check",
+"issue": 207,
+"pages": [
+19,
+27
+],
+"status": "done",
+"tokens": 179034
+},
+{
+"kind": "check",
+"issue": 207,
+"pages": [
+28,
+36
+],
+"status": "done",
+"tokens": 163773
+},
+{
+"kind": "check",
+"issue": 207,
+"pages": [
+37,
+45
+],
+"status": "done",
+"tokens": 173167
+},
+{
+"kind": "check",
+"issue": 207,
+"pages": [
+46,
+52
+],
+"status": "done",
+"tokens": 144162
 }
 ]
 }

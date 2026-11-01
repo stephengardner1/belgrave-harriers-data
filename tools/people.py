@@ -71,11 +71,11 @@ def slug(s):
     return re.sub(r'[^a-z0-9]+', '-', key(s)).strip('-')
 
 mentions = []
-PUB = set(int(x) for x in open(f'{W}/published.txt').read().split()) if os.path.exists(f'{W}/published.txt') else set()
+PUB = set((int(x) if x.isdigit() else x) for x in open(f'{W}/published.txt').read().split()) if os.path.exists(f'{W}/published.txt') else set()
 for f in sorted(glob.glob(f'{W}/out/B*.json')):
     if re.search(r'\.(orig|firstpass)\.json$', f): continue
     d = json.load(open(f))
-    if not (d['issue'] <= 172 or d['issue'] in PUB): continue
+    if not ((isinstance(d['issue'], int) and d['issue'] <= 172) or d['issue'] in PUB): continue
     for it in d['items']:
         for p in it.get('people') or []:
             raw = p.get('name') or p.get('printed')

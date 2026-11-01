@@ -23,9 +23,9 @@ def event_tag(e):
     t = re.sub(r'\s{2,}', ' ', t).strip(' ,-\u2013')
     return t or e
 # Publish only finished issues: the 1960s pilot, plus later issues listed in WORKDIR/published.txt once read AND checked.
-PUB = set(int(x) for x in open(f'{W}/published.txt').read().split()) if os.path.exists(f'{W}/published.txt') else set()
+PUB = set((int(x) if x.isdigit() else x) for x in open(f'{W}/published.txt').read().split()) if os.path.exists(f'{W}/published.txt') else set()
 def published(no):
-    return no <= 172 or no in PUB
+    return (isinstance(no, int) and no <= 172) or no in PUB
 
 issues, search = [], []
 for f in sorted(glob.glob(f'{W}/out/B*.json')):
@@ -33,7 +33,7 @@ for f in sorted(glob.glob(f'{W}/out/B*.json')):
     d = json.load(open(f))
     no = d['issue']
     if not published(no): continue
-    d['pdfUrl'] = urls.get(no)
+    d['pdfUrl'] = d.get('pdfUrl') or urls.get(no)
     for it in d['items']:
         it.setdefault('regions', [])
         for k in ('tables', 'scans', 'photos', 'people', 'events', 'clubs', 'places', 'sport'):
