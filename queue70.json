@@ -4814,7 +4814,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 273807
 },
 {
 "kind": "check",
@@ -4823,7 +4824,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 245105
 },
 {
 "kind": "check",
@@ -4832,7 +4834,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 244895
 },
 {
 "kind": "check",
@@ -4841,7 +4844,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 236552
 }
 ]
 }
