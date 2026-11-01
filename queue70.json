@@ -188,7 +188,7 @@
 "211": {
 "pdf": "B211_1987.pdf",
 "pages": 44,
-"state": "reading"
+"state": "ready"
 },
 "212": {
 "pdf": "B212_1988.pdf",
@@ -3829,7 +3829,8 @@
 1,
 10
 ],
-"status": "running"
+"status": "done",
+"tokens": 156070
 },
 {
 "kind": "check",
@@ -3838,7 +3839,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 207656
 },
 {
 "kind": "check",
@@ -3847,7 +3849,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 172333
 },
 {
 "kind": "check",
@@ -3856,7 +3859,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 191760
 },
 {
 "kind": "check",
@@ -3865,7 +3869,8 @@
 41,
 50
 ],
-"status": "todo"
+"status": "done",
+"tokens": 184898
 },
 {
 "kind": "check",
@@ -3874,7 +3879,8 @@
 51,
 60
 ],
-"status": "todo"
+"status": "done",
+"tokens": 187158
 },
 {
 "kind": "check",
@@ -3883,7 +3889,8 @@
 61,
 70
 ],
-"status": "todo"
+"status": "done",
+"tokens": 190298
 },
 {
 "kind": "check",
@@ -3892,7 +3899,8 @@
 71,
 80
 ],
-"status": "todo"
+"status": "done",
+"tokens": 205816
 },
 {
 "kind": "read",
@@ -3991,7 +3999,8 @@
 11,
 20
 ],
-"status": "running"
+"status": "done",
+"tokens": 151287
 },
 {
 "kind": "check",
@@ -4000,7 +4009,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 173011
 },
 {
 "kind": "check",
@@ -4009,7 +4019,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 172024
 },
 {
 "kind": "check",
@@ -4018,7 +4029,8 @@
 41,
 50
 ],
-"status": "todo"
+"status": "done",
+"tokens": 177900
 },
 {
 "kind": "check",
@@ -4027,7 +4039,8 @@
 51,
 60
 ],
-"status": "todo"
+"status": "done",
+"tokens": 203807
 },
 {
 "kind": "check",
@@ -4036,7 +4049,8 @@
 61,
 70
 ],
-"status": "todo"
+"status": "done",
+"tokens": 220693
 },
 {
 "kind": "check",
@@ -4045,7 +4059,8 @@
 71,
 76
 ],
-"status": "todo"
+"status": "done",
+"tokens": 164623
 },
 {
 "kind": "read",
@@ -4074,7 +4089,8 @@
 19,
 27
 ],
-"status": "running"
+"status": "done",
+"tokens": 179091
 },
 {
 "kind": "read",
@@ -4083,7 +4099,8 @@
 28,
 36
 ],
-"status": "todo"
+"status": "done",
+"tokens": 149927
 },
 {
 "kind": "read",
@@ -4092,7 +4109,8 @@
 37,
 44
 ],
-"status": "todo"
+"status": "done",
+"tokens": 159295
 },
 {
 "kind": "check",
@@ -4101,7 +4119,8 @@
 1,
 9
 ],
-"status": "todo"
+"status": "done",
+"tokens": 143131
 },
 {
 "kind": "check",
@@ -4110,7 +4129,8 @@
 10,
 18
 ],
-"status": "todo"
+"status": "done",
+"tokens": 147939
 },
 {
 "kind": "check",
@@ -4119,7 +4139,8 @@
 19,
 27
 ],
-"status": "todo"
+"status": "done",
+"tokens": 150654
 },
 {
 "kind": "check",
@@ -4128,7 +4149,8 @@
 28,
 36
 ],
-"status": "todo"
+"status": "done",
+"tokens": 169963
 },
 {
 "kind": "check",
@@ -4137,7 +4159,8 @@
 37,
 44
 ],
-"status": "todo"
+"status": "done",
+"tokens": 171898
 },
 {
 "kind": "read",
