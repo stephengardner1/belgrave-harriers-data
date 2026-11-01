@@ -191,6 +191,19 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   .bv-tl{grid-template-columns:minmax(0,1fr);gap:2px}
 }
 @media (prefers-reduced-motion:reduce){.bv *{transition:none!important}}
+/* loading feedback: a bar along the top, the clicked thing dimmed, and an "Opening..." panel */
+.bv-busybar{position:fixed;left:0;right:0;top:var(--bv-top,0px);height:3px;z-index:2147482000;pointer-events:none;overflow:hidden;opacity:0;transition:opacity .15s}
+.bv-busybar.on{opacity:1}
+.bv-busybar::before{content:"";position:absolute;top:0;bottom:0;width:40%;background:var(--red,#b4121b);animation:bvbar 1s ease-in-out infinite}
+@keyframes bvbar{0%{left:-40%}100%{left:100%}}
+.bv .bv-busy{opacity:.55;cursor:progress;transition:opacity .1s}
+.bv-loading{display:flex;gap:18px;align-items:center;padding:24px 0;min-height:240px}
+.bv-loading img{width:120px;height:auto;box-shadow:0 2px 10px rgba(0,0,0,.18);background:#eee;aspect-ratio:.707}
+.bv-loading p{margin:0;font-size:17px}
+.bv-loading .bv-msg{margin-top:6px;font-size:14px}
+.bv-totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:50;font:500 14px/20px var(--text);color:#fff;background:var(--red,#7a1020);border:0;border-radius:999px;padding:10px 16px;box-shadow:0 2px 10px rgba(0,0,0,.25);cursor:pointer;opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .2s,transform .2s}
+.bv-totop.on{opacity:1;transform:none;pointer-events:auto}
+@media (prefers-reduced-motion:reduce){.bv-busybar::before{animation:none;left:0;width:100%;opacity:.6}}
 </style>
 
 <div id="bh-belgravian" class="bv bv-wide">
@@ -247,7 +260,24 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   }
 
   /* ---------- reader ---------- */
-  function loadIssue(no){return ISSUES[no]?Promise.resolve(ISSUES[no]):get('issues/B'+no+'.json').then(function(d){ISSUES[no]=d;return d})}
+  var PEND={};
+  function loadIssue(no){if(ISSUES[no])return Promise.resolve(ISSUES[no]);if(PEND[no])return PEND[no];
+    PEND[no]=get('issues/B'+no+'.json').then(function(d){ISSUES[no]=d;delete PEND[no];return d},function(e){delete PEND[no];throw e});return PEND[no]}
+  /* immediate feedback: the moment something is clicked, before the issue has arrived */
+  var bar=document.createElement('div');bar.className='bv-busybar bv';bar.setAttribute('aria-hidden','true');document.body.appendChild(bar);
+  var busyEl=null,busyT=0;
+  function busy(el){if(busyEl)busyEl.classList.remove('bv-busy');busyEl=el||null;if(busyEl)busyEl.classList.add('bv-busy');bar.classList.add('on');clearTimeout(busyT);busyT=setTimeout(idle,15000)}
+  function idle(){clearTimeout(busyT);bar.classList.remove('on');if(busyEl){busyEl.classList.remove('bv-busy');busyEl=null}}
+  function issueInfo(no){return (IDX&&IDX.issues||[]).filter(function(x){return x.issue===no})[0]}
+  function showOpening(no){
+    if(ISSUES[no])return;var x=issueInfo(no);
+    main.innerHTML='<div class="bv-loading" role="status"><img src="'+pageImg(no,1)+'" alt=""><div><p>Opening '+(x?esc(x.label)+' · ':'')+'No. '+no+'…</p><p class="bv-msg">Fetching the pages and the readable text.</p></div></div>';
+    root.scrollIntoView({block:'start'});
+  }
+  /* start fetching an issue as soon as the pointer or finger lands on a link to it */
+  function prefetch(e){var a=e.target.closest&&e.target.closest('a[href^="#B"]');if(!a)return;var m=a.getAttribute('href').match(/^#B(\d+)(?:-p?(\d+))?/);if(!m)return;
+    var no=+m[1];loadIssue(no).catch(function(){});
+    if(m[2]&&/-p/.test(a.getAttribute('href'))){var im=new Image();im.src=pageImg(no,+m[2])}}
   function itemsOnPage(d,p){return d.items.filter(function(it){return (it.pages||[]).indexOf(p)>=0})}
   function firstPage(it){return Math.min.apply(null,it.pages&&it.pages.length?it.pages:[1])}
 
@@ -299,11 +329,16 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
      (sticky) until the next page's section pushes it up. The page picker follows the reader. */
   var cur={no:null,page:1,lock:0,obs:null};
   function sectionEl(p){return main.querySelector('.bv-page[data-p="'+p+'"]')}
-  function toPage(p,smooth){var el=sectionEl(p);if(!el)return;
+  function toPage(p,smooth){var el=sectionEl(p);if(!el){var d0=ISSUES[cur.no];if(d0&&p>=1&&p<=d0.pageCount&&!toPage.w){toPage.w=1;setTimeout(function(){toPage.w=0;toPage(p,false)},60)}return}
     if(Math.abs(p-cur.page)>2)smooth=false;
-    cur.lock=Date.now()+(smooth?1400:400);setCurrent(p);el.scrollIntoView({block:'start',behavior:smooth?'smooth':'auto'});
+    cur.lock=Date.now()+(smooth?1400:400);setCurrent(p);goEl(el,smooth);
     /* images above may still be loading and shift the page: settle on the right spot */
-    setTimeout(function(){var t=el.getBoundingClientRect().top,want=parseFloat(getComputedStyle(el).scrollMarginTop)||0;if(Math.abs(t-want)>4)el.scrollIntoView({block:'start'});cur.lock=Date.now()+300},smooth?900:250)}
+    var moved=false,stop=function(){moved=true};['wheel','touchstart','keydown'].forEach(function(ev){window.addEventListener(ev,stop,{once:true,passive:true})});
+    [smooth?900:250,700+(smooth?650:0),1500+(smooth?650:0)].forEach(function(ms,i,all){setTimeout(function(){
+      if(!moved){var t=el.getBoundingClientRect().top,want=parseFloat(getComputedStyle(el).scrollMarginTop)||0;if(Math.abs(t-want)>4)goEl(el,false);cur.lock=Date.now()+300;setCurrent(p)}
+      if(i===all.length-1)['wheel','touchstart','keydown'].forEach(function(ev){window.removeEventListener(ev,stop)})},ms)})}
+  /* scroll a page's top to just under the site header (the club site's own scroll-padding would otherwise add a gap) */
+  function goEl(el,smooth){var want=parseFloat(getComputedStyle(el).scrollMarginTop)||0;window.scrollTo({top:Math.max(0,window.pageYOffset+el.getBoundingClientRect().top-want),behavior:smooth?'smooth':'auto'})}
   function setCurrent(p){
     if(cur.page===p&&main.dataset.shown==='1')return;cur.page=p;main.dataset.shown='1';
     var d=ISSUES[cur.no];if(!d)return;
@@ -331,9 +366,10 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
       var ps=Object.keys(vis).filter(function(k){return vis[k]}).map(Number).sort(function(a,b){return a-b});
       if(ps.length)setCurrent(ps[0]);
     },{rootMargin:'-35% 0px -60% 0px'});
-    main.querySelectorAll('.bv-page').forEach(function(el){cur.obs.observe(el)});
+    main.querySelectorAll('.bv-page').forEach(function(el){el.dataset.w='1';cur.obs.observe(el)});
   }
   function reader(no,p,focus,hl){
+    if(cur.no!==no||hl)showOpening(no);
     loadIssue(no).then(function(d){
       p=Math.max(1,Math.min(d.pageCount,p||1));
       var fresh=cur.no!==no||!main.querySelector('.bv-flow')||hl;
@@ -344,8 +380,15 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
           '<div class="bv-pager"><button type="button" data-step="-1" aria-label="Previous page">←</button><select id="bv-page" aria-label="Jump to page">'+opts+'</select><button type="button" data-step="1" aria-label="Next page">→</button></div></div>';
         h+='<div class="bv-seg" role="tablist" aria-label="View"><button role="tab" data-pane="text" aria-selected="'+(pane==='text')+'">Readable</button><button role="tab" data-pane="scan" aria-selected="'+(pane==='scan')+'">Original</button></div>';
         h+='<div class="bv-flow" data-pane="'+pane+'">';
-        for(var q2=1;q2<=d.pageCount;q2++)h+=pageSection(d,q2,hl);
+        /* draw the pages up to (and just past) the one wanted straight away, the rest a few at a time after */
+        var want=focus?firstPage(d.items.filter(function(x){return x.id===focus})[0]||{pages:[p]}):p;
+        var firstN=Math.min(d.pageCount,Math.max(want+1,3));
+        for(var q2=1;q2<=firstN;q2++)h+=pageSection(d,q2,hl);
         main.innerHTML=h+'</div>';
+        var gen=(cur.gen=(cur.gen||0)+1),next=firstN+1,flow=main.querySelector('.bv-flow');
+        (function more(){if(cur.gen!==gen||next>d.pageCount)return;var chunk='';for(var k=0;k<4&&next<=d.pageCount;k++,next++)chunk+=pageSection(d,next,hl);
+          flow.insertAdjacentHTML('beforeend',chunk);if(cur.obs)flow.querySelectorAll('.bv-page:not([data-w])').forEach(function(el){el.dataset.w='1';cur.obs.observe(el)});
+          setTimeout(more,30)})();
         var first=main.querySelector('.bv-scan img');
         if(first){var setAr=function(){if(first.naturalWidth)main.querySelector('.bv-flow').style.setProperty('--ar',(first.naturalWidth/first.naturalHeight).toFixed(4))};if(first.complete)setAr();else first.addEventListener('load',setAr)}
         var sel=main.querySelector('#bv-page');sel.addEventListener('change',function(){toPage(+sel.value,true)});
@@ -354,7 +397,8 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
       if(focus){setCurrent(firstPage(d.items.filter(function(x){return x.id===focus})[0]||{pages:[p]}));setTimeout(function(){cur.lock=Date.now()+900;on(focus,true)},fresh?60:0)}
       else if(p>1||!fresh)toPage(p,!fresh);
       else{setCurrent(1);root.scrollIntoView({block:'start'})}
-    }).catch(function(){main.innerHTML='<p class="bv-msg">That issue couldn’t be loaded just now. Please try again shortly.</p>'});
+      idle();
+    }).catch(function(){idle();main.innerHTML='<p class="bv-msg">That issue couldn’t be loaded just now. Please try again shortly.</p>'});
   }
   function on(id,scroll,within){
     main.querySelectorAll('.bv-region,.bv-item').forEach(function(e){e.classList.toggle('on',e.dataset.id===id)});
@@ -382,8 +426,8 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
         var e=esc(snip);words.forEach(function(w){e=e.replace(new RegExp('('+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'),'<mark>$1</mark>')});
         return '<a class="bv-hit" href="#'+x.id+'" data-hl="'+esc(words[0])+'"><span class="label">'+esc(TYPE[x.type]||'Item')+' · '+esc(x.label)+' · page '+x.p+'</span><h3>'+esc(x.h||x.sum||'Untitled item')+'</h3><p>'+e+'</p></a>'}).join('')+'</div>';
       if(shown.length>200)h+='<p class="bv-msg">Showing the first 200. Add another word to narrow the search.</p>';
-      main.innerHTML=h;
-    }).catch(function(){main.innerHTML='<p class="bv-msg">Search couldn’t be loaded just now. Please try again shortly.</p>'});
+      main.innerHTML=h;idle();
+    }).catch(function(){idle();main.innerHTML='<p class="bv-msg">Search couldn’t be loaded just now. Please try again shortly.</p>'});
   }
 
   /* ---------- people ---------- */
@@ -395,11 +439,11 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     crumbsSet([['All issues','shelf'],['People','']]);
     var ps=PEOPLE.people.filter(function(p){return p.n>1}).sort(function(a,b){return b.n-a.n||a.name.localeCompare(b.name)});
     main.innerHTML='<h2 style="margin:0 0 6px">People</h2><p class="bv-msg" style="margin:0 0 18px">'+ps.length+' people named more than once in the digitised issues, most mentioned first. Search finds everyone else.</p><div class="bv-people">'+
-      ps.slice(0,600).map(function(p){return '<a href="#'+p.id+'">'+esc(p.name)+'<span>'+p.n+'</span></a>'}).join('')+'</div>';
+      ps.slice(0,600).map(function(p){return '<a href="#'+p.id+'">'+esc(p.name)+'<span>'+p.n+'</span></a>'}).join('')+'</div>';idle();
   }
   function person(id){loadPerson(id).then(function(p){personShow(id,p)})}
   function personShow(id,p){
-    if(!p){main.innerHTML='<p class="bv-msg">No one by that name in the digitised issues yet.</p>';return}
+    if(!p){idle();main.innerHTML='<p class="bv-msg">No one by that name in the digitised issues yet.</p>';return}
     var leg=p.legend?(LEGENDS[id]?Promise.resolve(LEGENDS[id]):get('legends/'+id.slice(2)+'.json').then(function(d){LEGENDS[id]=d;return d})):Promise.resolve(null);
     leg.then(function(L){
       crumbsSet([['All issues','shelf'],['People','people'],[p.name,'']]);
@@ -419,8 +463,8 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
       h+='<section style="display:grid;gap:12px"><h2>Every mention</h2><div class="bv-timeline">'+p.mentions.map(function(m){
         return '<div class="bv-tl"><div class="when">'+esc(m.when)+'</div><div><a href="#'+esc(m.id)+'">'+esc(m.h||m.sum||'Item')+'</a><p>Page '+m.p+(m.note?' · <q>'+esc(m.note)+'</q>':'')+'</p></div></div>'}).join('')+'</div></section>';
       if(p.aka&&p.aka.length>1)h+='<p class="bv-note">Printed as: '+p.aka.map(esc).join(', ')+'.</p>';
-      main.innerHTML=h+'</div>';root.scrollIntoView({block:'start'});
-    }).catch(function(){main.innerHTML='<p class="bv-msg">That profile couldn’t be loaded just now.</p>'});
+      main.innerHTML=h+'</div>';root.scrollIntoView({block:'start'});idle();
+    }).catch(function(){idle();main.innerHTML='<p class="bv-msg">That profile couldn’t be loaded just now.</p>'});
   }
 
   /* ---------- router ---------- */
@@ -429,16 +473,17 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     var m;
     if(!IDX)return;
     if((m=h.match(/^B(\d+)-p(\d+)$/)))return reader(+m[1],+m[2]);
-    if((m=h.match(/^B(\d+)-(\d+)$/))){var no=+m[1];return loadIssue(no).then(function(d){var it=d.items.filter(function(x){return x.id===h})[0];reader(no,it?firstPage(it):1,h,hl)})}
+    if((m=h.match(/^B(\d+)-(\d+)$/))){var no=+m[1];if(cur.no!==no||hl)showOpening(no);return loadIssue(no).then(function(d){var it=d.items.filter(function(x){return x.id===h})[0];reader(no,it?firstPage(it):1,h,hl)})}
     if((m=h.match(/^B(\d+)$/)))return reader(+m[1],1);
     if(h==='people')return loadPeople().then(peopleList);
     if(/^p-/.test(h))return loadPeople().then(function(){person(h)});
     if(h==='search')return search(q.value);
-    cur.no=null;shelf();
+    cur.no=null;shelf();idle();
   }
 
   root.addEventListener('click',function(e){
     var t;
+    if((t=e.target.closest('a[href^="#"]'))&&t.getAttribute('href')!==location.hash&&t.getAttribute('href').length>1&&!e.metaKey&&!e.ctrlKey){var bx=t.closest('.bv-cover,.bv-hit,.bv-legend-card,.bv-tl,.bv-chip')||t;busy(bx)}
     if((t=e.target.closest('.bv-region'))){setPane('text');cur.lock=Date.now()+900;on(t.dataset.id,true,t.closest('.bv-page'));return}
     if((t=e.target.closest('[data-orig]'))){var sec=t.closest('.bv-page');on(t.dataset.orig,false);if(window.matchMedia('(max-width:860px)').matches){setPane('scan');var r=sec&&sec.querySelector('.bv-region[data-id="'+t.dataset.orig+'"]');(r||sec||main).scrollIntoView({block:'center',behavior:'smooth'})}return}
     if((t=e.target.closest('.bv-item'))&&!e.target.closest('a,button,img')){on(t.dataset.id,false);return}
@@ -466,6 +511,21 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     try{history.pushState({bvlb:1},'');pushed=true;window.addEventListener('popstate',done)}catch(e){}
     document.documentElement.style.overflow='hidden';document.body.appendChild(d);d.querySelector('button').focus();
   }
+  /* The club site has a sticky claret header (and a fixed bar on phones): measure it so scans and tabs stick below it. */
+  var bars=[];
+  function findBars(){bars=[].filter.call(document.querySelectorAll('body *'),function(el){if(root.contains(el)||el.closest('.bv'))return false;var p=getComputedStyle(el).position;if(p!=='fixed'&&p!=='sticky')return false;var r=el.getBoundingClientRect();return r.width>window.innerWidth*0.5&&r.top<160})}
+  function setTop(){var b=0;bars.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<=2&&r.bottom>0&&r.bottom<320&&getComputedStyle(el).visibility!=='hidden')b=Math.max(b,r.bottom)});root.style.setProperty('--bv-top',Math.round(b+12)+'px');bar.style.top=Math.round(b)+'px'}
+  var ticking=false;
+  findBars();setTop();
+  window.addEventListener('resize',function(){findBars();setTop()});
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(function(){setTop();ticking=false})}},{passive:true});
+  window.addEventListener('load',function(){findBars();setTop()});
+  /* "Back to top" once the reader is a couple of screens into an issue */
+  var totop=document.createElement('button');totop.type='button';totop.className='bv-totop';totop.textContent='\u2191 Top of issue';totop.setAttribute('aria-label','Back to the top of this issue');root.appendChild(totop);
+  totop.addEventListener('click',function(){var hd=main.querySelector('.bv-issuehead')||root;cur.lock=Date.now()+1200;window.scrollTo({top:Math.max(0,window.pageYOffset+hd.getBoundingClientRect().top-(parseFloat(getComputedStyle(root).getPropertyValue('--bv-top'))||12)),behavior:'smooth'});setTimeout(function(){setCurrent(1)},900)});
+  function showTop(){var f=main.querySelector('.bv-flow');totop.classList.toggle('on',!!f&&f.getBoundingClientRect().top<-window.innerHeight*1.5)}
+  window.addEventListener('scroll',function(){requestAnimationFrame(showTop)},{passive:true});
+  ['pointerover','touchstart','focusin'].forEach(function(ev){root.addEventListener(ev,prefetch,{passive:true})});
   window.addEventListener('hashchange',route);
   Promise.all([get('index.json'),get('people.json').then(function(d){d.byId={};d.people.forEach(function(p){d.byId[p.id]=p});PEOPLE=d}).catch(function(){})])
     .then(function(r){IDX=r[0];route()})
