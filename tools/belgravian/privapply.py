@@ -8,7 +8,9 @@ LABEL={'address':'[address withheld]','phone':'[phone number withheld]'}
 by=collections.defaultdict(list)
 for r in R: by[r['id']].append(r)
 done=missed=0
+ONLY=set(sys.argv[2:])  # optional: only these issue numbers
 for no in sorted({i.split('-')[0][1:] for i in by}):
+    if ONLY and no not in ONLY: continue
     f=f'{W}/out/B{no}.json'
     if not os.path.exists(f+'.prered'): shutil.copy(f,f+'.prered')
     d=json.load(open(f))
@@ -24,5 +26,5 @@ for no in sorted({i.split('-')[0][1:] for i in by}):
                 done+=1; red=it.setdefault('redacted',{}); red[r['kind']]=red.get(r['kind'],0)+1
             elif any(lab in (it.get(k) or '') for k in ('text','summary')): done+=1  # already applied
             else: missed+=1; print('NOT FOUND',it['id'],repr(s[:50]))
-    json.dump(d,open(f,'w'),ensure_ascii=False,indent=1)
+    tmp=f+'.tmp'; json.dump(d,open(tmp,'w'),ensure_ascii=False,indent=1); os.replace(tmp,f)
 print('applied',done,'missed',missed)

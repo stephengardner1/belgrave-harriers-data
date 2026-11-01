@@ -21,12 +21,17 @@ def fix(o):
     if isinstance(o,list): return [fix(x) for x in o]
     if isinstance(o,dict): return {k:fix(v) for k,v in o.items()}
     return o
+ONLY=set(sys.argv[1:])  # optional issue numbers: only sweep these (other issues may be mid-edit by check jobs)
 left=[]
 for f in sorted(glob.glob(f'{W}/out/B*.json')):
     if f.split('/')[-1].count('.')>1: continue
+    if ONLY and f.split('/B')[-1].split('.')[0] not in ONLY: continue
     d=json.load(open(f))
     if d.get('date','')<'1976': continue
-    d=fix(d); json.dump(d,open(f,'w'),ensure_ascii=False,indent=1)
+    d2=fix(d)
+    if d2!=d:  # write only when something changed, atomically
+        tmp=f+'.tmp'; json.dump(d2,open(tmp,'w'),ensure_ascii=False,indent=1); import os; os.replace(tmp,f)
+    d=d2
     def walk(o,path):
         if isinstance(o,str):
             for m in look.finditer(o):
