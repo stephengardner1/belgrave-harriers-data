@@ -504,6 +504,62 @@
    "year": 1981,
    "pageCount": 48,
    "items": 99
+  },
+  {
+   "issue": 204,
+   "label": "April 1982",
+   "date": "1982-04",
+   "year": 1982,
+   "pageCount": 44,
+   "items": 124
+  },
+  {
+   "issue": 205,
+   "label": "October 1982",
+   "date": "1982-10",
+   "year": 1982,
+   "pageCount": 48,
+   "items": 114
+  },
+  {
+   "issue": 206,
+   "label": "April 1983",
+   "date": "1983-04",
+   "year": 1983,
+   "pageCount": 44,
+   "items": 73
+  },
+  {
+   "issue": 208,
+   "label": "October 1984",
+   "date": "1984-10",
+   "year": 1984,
+   "pageCount": 56,
+   "items": 129
+  },
+  {
+   "issue": 209,
+   "label": "October 1985",
+   "date": "1985-10",
+   "year": 1985,
+   "pageCount": 80,
+   "items": 160
+  },
+  {
+   "issue": 210,
+   "label": "October 1986",
+   "date": "1986-10",
+   "year": 1986,
+   "pageCount": 76,
+   "items": 110
+  },
+  {
+   "issue": 211,
+   "label": "June 1987",
+   "date": "1987-06",
+   "year": 1987,
+   "pageCount": 44,
+   "items": 79
   }
  ],
  "coming": [
