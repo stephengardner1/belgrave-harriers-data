@@ -12,13 +12,13 @@ out=[]
 for no in sys.argv[1:]:
     d=json.load(open(f'{W}/out/B{no}.json'))
     hdr=json.dumps({k:v for k,v in d.items() if k!='items'},ensure_ascii=False)
-    if pat.search(hdr): out.append({'id':f'B{no}-header','issue':int(no),'date':d.get('date'),'type':'issue header (officers etc.)','text':hdr,'cues':[m.group(0) for m in pat.finditer(hdr)][:8]})
+    if pat.search(hdr): out.append({'id':f'B{no}-header','issue':(int(no) if no.isdigit() else no),'date':d.get('date'),'type':'issue header (officers etc.)','text':hdr,'cues':[m.group(0) for m in pat.finditer(hdr)][:8]})
     for it in d['items']:
         txt=it.get('text') or ''
         blob=txt+'\n'+'\n'.join(' | '.join(map(str,r)) for t in it.get('tables') or [] for r in t.get('rows',[]))+'\n'+json.dumps([it.get('summary'),it.get('photos'),it.get('scans'),it.get('people')],ensure_ascii=False)
         hits=[m.group(0) for m in pat.finditer(blob)]
         # time-like results (e.g. "336 1234"?) are rare; keep all hits, agent decides
-        if hits: out.append({'id':it['id'],'issue':int(no),'date':d.get('date'),'type':it.get('type'),'heading':it.get('heading'),'text':txt,'tables':it.get('tables'),'summary':it.get('summary'),'captions':[p.get('caption') for p in (it.get('photos') or [])+(it.get('scans') or [])],'people_notes':[p.get('note') for p in it.get('people') or [] if p.get('note')],'cues':hits[:8]})
+        if hits: out.append({'id':it['id'],'issue':(int(no) if no.isdigit() else no),'date':d.get('date'),'type':it.get('type'),'heading':it.get('heading'),'text':txt,'tables':it.get('tables'),'summary':it.get('summary'),'captions':[p.get('caption') for p in (it.get('photos') or [])+(it.get('scans') or [])],'people_notes':[p.get('note') for p in it.get('people') or [] if p.get('note')],'cues':hits[:8]})
 tag='-'.join(sys.argv[1:])
 json.dump(out,open(f'{W}/priv/cand-{tag}.json','w'),ensure_ascii=False,indent=1)
 print(tag,len(out),'candidate items')
