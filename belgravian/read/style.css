@@ -1,0 +1,20 @@
+@font-face{font-family:"Castoro Belgrave";src:url(../../fonts/CastoroBelgrave-Semibold.woff2) format("woff2");font-weight:600;font-display:swap}
+:root{--ink:#1e1a1a;--body:#4a4343;--slate:#5c5555;--claret:#7a001d;--gold:#d6b97a;--gold-ink:#7a5e1c;--rule:#e6dfd3;--cream:#f5efe4}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font:400 17px/28px "Public Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:24px 16px 64px}a{color:var(--claret)}
+.top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:500 14px/20px "Public Sans",sans-serif;border-bottom:3px double var(--gold);padding-bottom:12px;margin-bottom:24px}
+.top a{color:var(--slate);text-decoration:none}.top a:hover{color:var(--claret)}
+.label{font:600 12px/16px "Public Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+h1{font:600 36px/42px "Castoro Belgrave",Castoro,Georgia,serif;margin:6px 0 8px}h2{font:600 24px/30px "Castoro Belgrave",Castoro,Georgia,serif;margin:6px 0}
+h3{font:600 20px/26px "Libre Franklin",sans-serif;margin:28px 0 8px}
+.meta,.by,.sum{color:var(--slate);font-size:15px;line-height:22px;margin:0 0 8px}
+article{border-top:1px solid var(--rule);padding:22px 0}article p{margin:0 0 12px;white-space:pre-line;color:var(--body)}
+.read{display:inline-block;margin-top:6px;font:500 15px/20px "Public Sans",sans-serif}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.chips a,.chips span{font-size:13px;line-height:18px;background:var(--cream);border-radius:99px;padding:3px 10px;color:var(--ink);text-decoration:none}
+table{border-collapse:collapse;width:100%;font-size:15px;line-height:20px;margin:8px 0 14px;font-variant-numeric:tabular-nums}
+th{text-align:left;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);border-bottom:3px solid var(--gold);padding:0 8px 6px 0}
+td{border-bottom:1px solid var(--rule);padding:6px 8px 6px 0;vertical-align:top}.tw{overflow-x:auto}
+figure{margin:10px 0}figure img{max-width:100%;height:auto;border:1px solid var(--rule)}figcaption{font-size:14px;color:var(--slate)}
+ul.list{list-style:none;padding:0;margin:0}ul.list li{border-bottom:1px solid var(--rule);padding:10px 0}
+.note{margin-top:40px;padding:14px 16px;background:var(--cream);border-radius:8px;font-size:15px;line-height:22px;color:var(--body)}
+.az{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 18px}.az a{font-weight:600;text-decoration:none;padding:2px 8px;border:1px solid var(--rule);border-radius:6px}

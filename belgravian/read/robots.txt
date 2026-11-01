@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+Sitemap: https://archive.belgraveharriers.com/sitemap.xml
