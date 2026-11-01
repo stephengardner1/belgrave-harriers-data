@@ -5654,7 +5654,8 @@
 41,
 50
 ],
-"status": "running"
+"status": "done",
+"tokens": 205876
 },
 {
 "kind": "check",
@@ -5663,7 +5664,7 @@
 51,
 60
 ],
-"status": "todo"
+"status": "running"
 },
 {
 "kind": "check",
@@ -6030,7 +6031,8 @@
 51,
 60
 ],
-"status": "running"
+"status": "done",
+"tokens": 235939
 },
 {
 "kind": "check",
@@ -6039,7 +6041,8 @@
 61,
 64
 ],
-"status": "todo"
+"status": "done",
+"tokens": 196573
 },
 {
 "kind": "read",
@@ -6088,7 +6091,8 @@
 41,
 50
 ],
-"status": "running"
+"status": "done",
+"tokens": 276097
 },
 {
 "kind": "read",
@@ -6097,7 +6101,7 @@
 51,
 60
 ],
-"status": "todo"
+"status": "running"
 },
 {
 "kind": "read",
