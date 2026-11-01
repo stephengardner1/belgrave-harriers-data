@@ -209,7 +209,8 @@
 .bv-gallery-n{margin:0;font:400 12px/16px var(--text);color:var(--slate)}
 /* person page, Direction A (Nov 2026): phone first, desktop below */
 .bv.bv-person-mode .bv-mast,.bv.bv-person-mode .bv-crumbs{display:none}
-.bv .bv-pa-back{justify-self:start;display:inline-flex;align-items:center;gap:8px;min-height:44px;margin:4px 0 8px;font:600 15px/20px var(--franklin);color:var(--claret);text-decoration:none}
+.bv.bv-person-mode .bv-main{padding-top:0}
+.bv .bv-pa-back{justify-self:start;display:inline-flex;align-items:center;gap:8px;min-height:44px;margin:-10px 0 0;font:600 15px/20px var(--franklin);color:var(--claret);text-decoration:none}
 .bv .bv-pa-back:hover{text-decoration:underline;text-underline-offset:3px}
 .bv-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .bv-pa{--bar:#d9c7a6;gap:0}
@@ -372,6 +373,8 @@
 <script>
 (function(){
   var root=document.getElementById('bh-belgravian');if(!root||root.dataset.ready)return;root.dataset.ready='1';
+  /* On the club site an empty text block (just a blank line) sits above the reader and adds a gap: hide any such empty blocks */
+  (function(){var blk=root.closest('.sqs-block'),pv=blk&&blk.previousElementSibling;while(pv&&/sqs-block-html/.test(pv.className)&&!pv.querySelector('img,iframe,video')&&!pv.textContent.replace(/[\s\u00a0]/g,'')){pv.style.display='none';pv=pv.previousElementSibling}})();
   var BASE=(window.BV_BASE!==undefined)?window.BV_BASE:'https://stephengardner1.github.io/belgrave-harriers-data/belgravian/';
   var MEDIA=(window.BV_MEDIA!==undefined)?window.BV_MEDIA:'https://belgravian-images.stephendgardner.workers.dev/belgravian/';
   var main=root.querySelector('.bv-main'),crumbs=root.querySelector('.bv-crumbs'),q=root.querySelector('#bv-q');
