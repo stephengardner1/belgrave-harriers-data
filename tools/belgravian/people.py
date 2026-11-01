@@ -13,7 +13,7 @@ import json, glob, re, sys, os, unicodedata, collections
 W = sys.argv[1]
 KEEP_APART = {'g north'}
 # printed abbreviations that point to one person (the magazine's own convention)
-ALIASES = {'gy north': 'gerald north', 'gf north': 'geoffrey north', 'gorry north': 'gerald north', 'a stroud': 'albert stroud'}  # 'Gorry North' (B175, 1970) is Gerry; 'A. Stroud' is Bert Stroud: Steve, 29 Oct 2026        # Gerry North and Geoff North are different people (Steve, Oct 2026)
+ALIASES = {'gy north': 'gerald north', 'gf north': 'geoffrey north', 'gorry north': 'gerald north', 'a stroud': 'albert stroud', 'a ekoku': 'abi ekoku'}  # 'Gorry North' (B175, 1970) is Gerry; 'A. Stroud' is Bert Stroud: Steve, 29 Oct 2026; 'A. Ekoku' is Abi Ekoku: Steve, 1 Nov 2026        # Gerry North and Geoff North are different people (Steve, Oct 2026)
 
 sl = json.load(open('/home/claude/stephengardner1/surrey-league/data.json'))
 sl_names = set()
@@ -71,11 +71,11 @@ def slug(s):
     return re.sub(r'[^a-z0-9]+', '-', key(s)).strip('-')
 
 mentions = []
-PUB = set(int(x) for x in open(f'{W}/published.txt').read().split()) if os.path.exists(f'{W}/published.txt') else set()
+PUB = set((int(x) if x.isdigit() else x) for x in open(f'{W}/published.txt').read().split()) if os.path.exists(f'{W}/published.txt') else set()
 for f in sorted(glob.glob(f'{W}/out/B*.json')):
     if re.search(r'\.(orig|firstpass)\.json$', f): continue
     d = json.load(open(f))
-    if not (d['issue'] <= 172 or d['issue'] in PUB): continue
+    if not ((isinstance(d['issue'], int) and d['issue'] <= 172) or d['issue'] in PUB): continue
     for it in d['items']:
         for p in it.get('people') or []:
             raw = p.get('name') or p.get('printed')
