@@ -161,11 +161,11 @@
 .bv-note{font:400 13px/18px var(--text);color:var(--slate);margin:24px 0 0;max-width:70ch}
 
 /* lightbox */
-.bv-lb{position:fixed;inset:0;z-index:1000;background:rgba(20,16,15,.92);display:grid;place-items:center;padding:max(24px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.bv-lb{position:fixed;inset:0;z-index:2147483000;cursor:zoom-out;background:rgba(20,16,15,.92);display:grid;place-items:center;padding:max(24px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
 .bv-lb figure{margin:0;display:grid;gap:10px;max-width:min(1100px,100%);max-height:100%}
 .bv-lb img{max-width:100%;max-height:82vh;object-fit:contain;margin:0 auto;display:block}
 .bv-lb figcaption{font:400 14px/20px var(--text);color:#e9e2d8;text-align:left}
-.bv-lb button{position:absolute;top:max(12px,env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));font:500 14px/20px var(--text);color:#fff;background:rgba(255,255,255,.12);border:0;border-radius:8px;padding:8px 14px}
+.bv-lb button{position:absolute;top:max(12px,env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));font:500 14px/20px var(--text);color:#fff;background:rgba(255,255,255,.12);border:0;border-radius:8px;padding:10px 16px}
 
 @media (max-width:860px){
   .bv-mast h1{font-size:40px}
@@ -451,20 +451,18 @@
   main.addEventListener('mouseover',function(e){var t=e.target.closest('.bv-item');if(t&&window.matchMedia('(min-width:861px)').matches){main.querySelectorAll('.bv-region').forEach(function(r){r.classList.toggle('on',r.dataset.id===t.dataset.id)})}});
   root.querySelector('.bv-search').addEventListener('submit',function(e){e.preventDefault();filter='all';if(location.hash==='#search')search(q.value);else go('search')});
   function lightbox(src,cap){
+    /* Full-screen photo: sits above the club site's fixed header; closes on any tap, the Close button, Esc,
+       or the phone's Back gesture (it adds one history step, so Back closes it rather than leaving the page). */
     var d=document.createElement('div');d.className='bv-lb bv';d.setAttribute('role','dialog');d.setAttribute('aria-label','Photograph');
-    d.innerHTML='<figure><img src="'+esc(src)+'" alt="'+esc(cap||'')+'">'+(cap?'<figcaption>'+esc(cap)+'</figcaption>':'')+'</figure><button type="button">Close</button>';
-    function close(){d.remove();document.removeEventListener('keydown',k)}function k(e){if(e.key==='Escape')close()}
-    d.addEventListener('click',function(e){if(e.target===d||e.target.tagName==='BUTTON')close()});document.addEventListener('keydown',k);document.body.appendChild(d);d.querySelector('button').focus();
+    d.innerHTML='<figure><img src="'+esc(src)+'" alt="'+esc(cap||'')+'">'+(cap?'<figcaption>'+esc(cap)+'</figcaption>':'')+'</figure><button type="button" aria-label="Close photograph">Close ✕</button>';
+    var prevOverflow=document.documentElement.style.overflow,closed=false,pushed=false;
+    function done(){if(closed)return;closed=true;d.remove();document.removeEventListener('keydown',k);window.removeEventListener('popstate',done);document.documentElement.style.overflow=prevOverflow}
+    function close(){if(pushed){pushed=false;history.back()}else done()}
+    function k(e){if(e.key==='Escape')close()}
+    d.addEventListener('click',close);document.addEventListener('keydown',k);
+    try{history.pushState({bvlb:1},'');pushed=true;window.addEventListener('popstate',done)}catch(e){}
+    document.documentElement.style.overflow='hidden';document.body.appendChild(d);d.querySelector('button').focus();
   }
-  /* The club site has a sticky claret header (and a fixed bar on phones): measure it so scans and tabs stick below it. */
-  var bars=[];
-  function findBars(){bars=[].filter.call(document.querySelectorAll('body *'),function(el){if(root.contains(el))return false;var p=getComputedStyle(el).position;if(p!=='fixed'&&p!=='sticky')return false;var r=el.getBoundingClientRect();return r.width>window.innerWidth*0.5&&r.top<160})}
-  function setTop(){var b=0;bars.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<=2&&r.bottom>0&&r.bottom<320&&getComputedStyle(el).visibility!=='hidden')b=Math.max(b,r.bottom)});root.style.setProperty('--bv-top',Math.round(b+12)+'px')}
-  var ticking=false;
-  findBars();setTop();
-  window.addEventListener('resize',function(){findBars();setTop()});
-  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(function(){setTop();ticking=false})}},{passive:true});
-  window.addEventListener('load',function(){findBars();setTop()});
   window.addEventListener('hashchange',route);
   Promise.all([get('index.json'),get('people.json').then(function(d){d.byId={};d.people.forEach(function(p){d.byId[p.id]=p});PEOPLE=d}).catch(function(){})])
     .then(function(r){IDX=r[0];route()})
