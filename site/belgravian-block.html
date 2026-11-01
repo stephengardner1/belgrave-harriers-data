@@ -266,7 +266,13 @@
 .bv-pa-spot .label{color:var(--gold-ink)}
 .bv-pa-spot b{font:600 19px/23px var(--display)}
 .bv-pa-spot .go{font:500 14px/20px var(--text);color:var(--claret)}
-.bv-pa .bv-story{margin-top:40px}
+.bv-pa-bio{margin-top:40px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.bv-pa-bio summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;min-height:52px;font:600 20px/25px var(--franklin);color:var(--claret)}
+.bv-pa-bio summary::-webkit-details-marker{display:none}
+.bv-pa-bio summary::after{content:"▾";font:400 14px/1 var(--text);color:var(--slate);transition:transform .15s}
+.bv-pa-bio[open] summary::after{transform:rotate(180deg)}
+.bv-pa-bio .bv-story{padding:8px 0 24px}
+.bv-pa-bio .bv-src{margin:0 0 24px}
 .bv-pa-years{margin-top:40px;display:grid}
 .bv-yr-row{display:grid;grid-template-columns:48px minmax(0,1fr) auto 44px 14px;gap:10px;align-items:center;width:100%;min-height:52px;border:0;border-bottom:1px solid var(--rule);background:none;text-align:left;padding:6px 0;color:var(--ink)}
 .bv-yr-row .y{font:600 19px/1 var(--display)}
@@ -684,11 +690,12 @@
       h+='</div>';
 
       if(L&&L.sections){
-        h+='<div class="bv-story">'+L.sections.map(function(s){return (s.heading?'<h3>'+esc(s.heading)+'</h3>':'')+s.paras.map(function(t){
+        h+='<details class="bv-pa-bio"><summary>Biography</summary><div class="bv-story">'+L.sections.map(function(s){return (s.heading?'<h3>'+esc(s.heading)+'</h3>':'')+s.paras.map(function(t){
           return '<p>'+esc(t).replace(/\s*\[\[([A-Za-z0-9-]+)\]\]/g,function(_,ref){
             if(ref==='slarchive')return p.slarchive?'<sup><a href="'+esc(p.slarchive)+'" target="_blank" rel="noopener" title="Source: slarchive.org">SL</a></sup>':'';
             var n=(L.refs||[]).indexOf(ref)+1;return '<sup><a href="#'+ref+'" title="Source: The Belgravian, item '+ref+'">'+(n||'›')+'</a></sup>'})+'</p>'}).join('')}).join('')+'</div>';
         if(L.sources)h+='<p class="bv-src">'+esc(L.sources)+'</p>';
+        h+='</details>';
       }
 
       var openN=PH?1:3,lim=PH?1e9:6;
