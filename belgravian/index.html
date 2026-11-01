@@ -16,6 +16,8 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   font-family:var(--text);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;max-width:1240px;margin:0 auto}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bv.bv-themed{--ink:#f2ece4;--body:#d6cec4;--slate:#b0a79c;--claret:#e07a8f;--gold:#d6b97a;--gold-ink:#d6b97a;--rule:#3b3433;--cream:#2a2423;--sand:#3a312c;--hover:#2f2827;--paper:#1b1716;--scan-bg:#262120;--hl:rgba(214,185,122,.22);--hl-line:#d6b97a}}
 :root[data-theme="dark"] .bv.bv-themed{--ink:#f2ece4;--body:#d6cec4;--slate:#b0a79c;--claret:#e07a8f;--gold:#d6b97a;--gold-ink:#d6b97a;--rule:#3b3433;--cream:#2a2423;--sand:#3a312c;--hover:#2f2827;--paper:#1b1716;--scan-bg:#262120;--hl:rgba(214,185,122,.22);--hl-line:#d6b97a}
+/* On the club site the page column is narrow: let the archive break out to a wider column on desktop */
+@media (min-width:1000px){.bv.bv-wide{width:min(1240px,calc(100vw - 72px));max-width:none;position:relative;left:50%;transform:translateX(-50%)}}
 .bv *{box-sizing:border-box}
 .bv button{font-family:inherit;cursor:pointer}
 .bv button:focus-visible,.bv a:focus-visible,.bv input:focus-visible,.bv select:focus-visible{outline:2px solid var(--claret);outline-offset:2px}
@@ -191,7 +193,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
 @media (prefers-reduced-motion:reduce){.bv *{transition:none!important}}
 </style>
 
-<div id="bh-belgravian" class="bv">
+<div id="bh-belgravian" class="bv bv-wide">
   <header class="bv-mast">
     <div class="rule2" aria-hidden="true"></div>
     <span class="label">Belgrave Harriers · Founded 1887</span>
