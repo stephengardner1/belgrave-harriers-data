@@ -240,13 +240,14 @@
     var leg=p.legend?(LEGENDS[id]?Promise.resolve(LEGENDS[id]):get('legends/'+id.slice(2)+'.json').then(function(d){LEGENDS[id]=d;return d})):Promise.resolve(null);
     leg.then(function(L){
       crumbsSet([['All issues','shelf'],['People','people'],[p.name,'']]);
-      var photo=(L&&L.photo)||p.photo;
-      var h='<div class="bv-person"><header class="bv-person-head'+(photo?' has-photo':'')+'">'+(photo?'<img src="'+MEDIA+esc(photo.file)+'" alt="'+esc(p.name)+'" data-lb="'+MEDIA+esc(photo.file)+'" data-cap="'+esc(photo.caption||'')+'">':'')+
+      var gal=p.photos&&p.photos.length?p.photos:null,photo=gal?null:((L&&L.photo)||p.photo);
+      /* a swipeable strip of every printed photo whose caption names them */
+      var GAL=!gal?'':'<section class="bv-gallery-wrap" aria-label="Photographs of '+esc(p.name)+'"><div class="bv-gallery">'+gal.map(function(f){return '<figure><img src="'+MEDIA+esc(f.f)+'" alt="'+esc(f.c||p.name)+'" loading="lazy" data-lb="'+MEDIA+esc(f.f)+'" data-cap="'+esc(f.c||'')+'"><figcaption>'+esc(f.c||'')+' <a href="#'+esc(f.id)+'">'+esc(f.w)+'</a></figcaption></figure>'}).join('')+'</div>'+(gal.length>1?'<p class="bv-gallery-n">'+gal.length+' photographs \u00b7 swipe or scroll</p>':'')+'</section>';
+      var h='<div class="bv-person">'+GAL+'<header class="bv-person-head'+(photo?' has-photo':'')+'">'+(photo?'<img src="'+MEDIA+esc(photo.file)+'" alt="'+esc(p.name)+'" data-lb="'+MEDIA+esc(photo.file)+'" data-cap="'+esc(photo.caption||'')+'">':'')+
         '<div><span class="label">'+(L?'Belgrave legend':'In The Belgravian')+'</span><h2>'+esc(p.name)+'</h2>'+(L&&L.standfirst?'<p class="stand">'+esc(L.standfirst.replace(/\s*\[\[[A-Za-z0-9-]+\]\]/g,''))+'</p>':'')+
         (L&&L.facts?'<div class="bv-facts">'+L.facts.map(function(f){return '<div>'+esc(f[0])+'<b>'+esc(f[1])+'</b></div>'}).join('')+'</div>':'')+
         (p.slarchive?'<p class="bv-src" style="margin:12px 0 0">Surrey League record: <a href="'+esc(p.slarchive)+'" target="_blank" rel="noopener">slarchive.org</a></p>':'')+'</div></header>';
-      /* a swipeable strip of every printed photo whose caption names them */
-      if(p.photos&&p.photos.length)h+='<section class="bv-gallery-wrap" aria-label="Photographs of '+esc(p.name)+'"><div class="bv-gallery">'+p.photos.map(function(f){return '<figure><img src="'+MEDIA+esc(f.f)+'" alt="'+esc(f.c||p.name)+'" loading="lazy" data-lb="'+MEDIA+esc(f.f)+'" data-cap="'+esc(f.c||'')+'"><figcaption>'+esc(f.c||'')+' <a href="#'+esc(f.id)+'">'+esc(f.w)+'</a></figcaption></figure>'}).join('')+'</div>'+(p.photos.length>1?'<p class="bv-gallery-n">'+p.photos.length+' photographs \u00b7 swipe or scroll</p>':'')+'</section>';
+
       if(L&&L.sections){
         h+='<div class="bv-story">'+L.sections.map(function(s){return (s.heading?'<h3>'+esc(s.heading)+'</h3>':'')+s.paras.map(function(t){
           return '<p>'+esc(t).replace(/\s*\[\[([A-Za-z0-9-]+)\]\]/g,function(_,ref){
