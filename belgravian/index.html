@@ -197,6 +197,12 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
 .bv-gallery img{width:150px;height:190px;object-fit:cover;background:#eee;border-radius:3px;cursor:zoom-in}
 .bv-gallery figcaption{font:600 13px/18px var(--text);color:var(--claret);text-align:center}
 .bv-lb figcaption a{color:#f3d48a;white-space:nowrap}
+.bv-lb .bv-lb-n{float:right;margin-left:16px;font:400 13px/20px var(--mono);color:#cfc6ba}
+.bv-lb .bv-lb-nav{top:50%;bottom:auto;transform:translateY(-50%);width:48px;height:64px;padding:0;font:300 40px/1 var(--text);border-radius:8px;background:rgba(255,255,255,.10);color:#fff}
+.bv-lb .bv-lb-nav.prev{left:max(8px,env(safe-area-inset-left,0px));right:auto}
+.bv-lb .bv-lb-nav.next{right:max(8px,env(safe-area-inset-right,0px))}
+.bv-lb .bv-lb-nav:hover{background:rgba(255,255,255,.2)}
+@media (max-width:860px){.bv-lb .bv-lb-nav{top:auto;bottom:max(12px,env(safe-area-inset-bottom,0px));transform:none;height:48px;font-size:32px}}
 .bv-arts{display:grid;gap:8px}
 .bv-arts-year{font:300 34px/1 var(--titling);color:var(--claret);margin:22px 0 4px;padding-top:12px;border-top:3px solid var(--gold)}
 .bv-arts-yr{display:grid;gap:0}
@@ -658,10 +664,9 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
       var lbAttr=function(f){return 'data-lb="'+MEDIA+esc(f.f)+'" data-cap="'+esc(f.c||'')+'"'+(f.id?' data-href="#'+esc(f.id)+'" data-w="'+esc(f.w||'')+'"':'')};
 
       var h='<div class="bv-person bv-pa"><a class="bv-pa-back" href="#shelf"><span aria-hidden="true">←</span> The Belgravian</a><div class="bv-pa-top">';
-      h+='<div class="bv-pa-id"><span class="label">'+(L?'Belgrave legend':'In the Belgravian')+(span?' · '+esc(span):'')+'</span><h2>'+esc(p.name)+'</h2>'+
+      h+='<div class="bv-pa-id"><span class="label">In the Belgravian'+(span?' · '+esc(span):'')+'</span><h2>'+esc(p.name)+'</h2>'+
         '<p class="bv-pa-sum">Named <b>'+ms.length+' time'+(ms.length===1?'':'s')+'</b> in '+ni+' issue'+(ni===1?'':'s')+(photos.length?', and in '+photos.length+' photograph'+(photos.length===1?'':'s'):'')+'.</p>'+
-        (L&&L.standfirst?'<p class="stand">'+esc(L.standfirst.replace(/\s*\[\[[A-Za-z0-9-]+\]\]/g,''))+'</p>':'')+
-        (L&&L.facts?'<div class="bv-facts">'+L.facts.map(function(f){return '<div>'+esc(f[0])+'<b>'+esc(f[1])+'</b></div>'}).join('')+'</div>':'')+'</div>';
+        '</div>';
       if(gal.length)h+='<div class="bv-pa-gal"><div class="bv-gallery" aria-label="Photographs of '+esc(p.name)+'">'+gal.map(function(f){return '<figure><img src="'+MEDIA+esc(f.f)+'" alt="'+esc(f.c||p.name)+'" loading="lazy" '+lbAttr(f)+'><figcaption>'+esc(yearOf(f.w))+'</figcaption></figure>'}).join('')+'</div>'+
         (gal.length>6?'<button type="button" class="bv-pa-allph">All '+gal.length+' photos →</button>':'')+'</div>';
       if(years.length>2&&ms.length>=10&&+y0&&+y1){
@@ -742,25 +747,49 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     if((t=e.target.closest('.bv-pa-allph'))){var g=t.closest('.bv-pa-gal');g.classList.toggle('all');t.textContent=g.classList.contains('all')?'Fewer photos':'All '+g.querySelectorAll('figure').length+' photos →';return}
     if((t=e.target.closest('[data-full]'))){fullArt(t);return}
     if((t=e.target.closest('.bv-m-hd'))){if(!phone())return;var mm=t.closest('.bv-m');mm.classList.toggle('open');t.setAttribute('aria-expanded',String(mm.classList.contains('open')));return}
-    if((t=e.target.closest('img[data-lb]'))){lightbox(t.dataset.lb,t.dataset.cap,t.dataset.href,t.dataset.w);return}
+    if((t=e.target.closest('img[data-lb]'))){var g=lbGroup(t);lightbox(t.dataset.lb,t.dataset.cap,t.dataset.href,t.dataset.w,g.items,g.i);return}
   });
   main.addEventListener('mouseover',function(e){var t=e.target.closest('.bv-item');if(t&&window.matchMedia('(min-width:861px)').matches){main.querySelectorAll('.bv-region').forEach(function(r){r.classList.toggle('on',r.dataset.id===t.dataset.id)})}});
   root.querySelector('.bv-search').addEventListener('submit',function(e){e.preventDefault();filter='all';if(location.hash==='#search')search(q.value);else go('search')});
-  function lightbox(src,cap,href,w){
+  function lbItem(el){return {src:el.dataset.lb,cap:el.dataset.cap||'',href:el.dataset.href||'',w:el.dataset.w||''}}
+  /* the photos to step through from a clicked one: the athlete's whole photo row, or the other photos in the same article */
+  function lbGroup(t){
+    var box=t.closest('.bv-pa')?main.querySelector('.bv-pa-gal'):null,list=[];
+    if(!box)box=t.closest('.bv-item,.bv-figs,.full,.bv-story');
+    if(box)list=[].slice.call(box.querySelectorAll('img[data-lb]'));
+    var i=-1;list.forEach(function(el,j){if(i<0&&el.dataset.lb===t.dataset.lb)i=j});
+    if(i<0){list=[t];i=0}
+    return {items:list.map(lbItem),i:i};
+  }
+  function lightbox(src,cap,href,w,items,start){
     /* Full-screen photo: sits above the club site's fixed header; closes on any tap, the Close button, Esc,
-       or the phone's Back gesture (it adds one history step, so Back closes it rather than leaving the page). */
+       or the phone's Back gesture (it adds one history step, so Back closes it rather than leaving the page).
+       With several photos: left/right arrow keys, the ‹ › buttons, or a swipe move between them. */
+    items=items&&items.length?items:[{src:src,cap:cap,href:href,w:w}];var cur=start||0,many=items.length>1;
     var d=document.createElement('div');d.className='bv-lb bv';d.setAttribute('role','dialog');d.setAttribute('aria-label','Photograph');
-    d.innerHTML='<figure><img src="'+esc(src)+'" alt="'+esc(cap||'')+'">'+((cap||href)?'<figcaption>'+esc(cap||'')+(href?' <a href="'+esc(href)+'" class="bv-lb-link">Read the article'+(w?' ('+esc(w)+')':'')+' →</a>':'')+'</figcaption>':'')+'</figure><button type="button" aria-label="Close photograph">Close ✕</button>';
+    d.innerHTML='<figure><img alt=""><figcaption></figcaption></figure><button type="button" class="bv-lb-x" aria-label="Close photograph">Close ✕</button>'+
+      (many?'<button type="button" class="bv-lb-nav prev" aria-label="Previous photograph">‹</button><button type="button" class="bv-lb-nav next" aria-label="Next photograph">›</button>':'');
+    var img=d.querySelector('img'),fc=d.querySelector('figcaption');
+    function show(i){cur=(i+items.length)%items.length;var it=items[cur];img.src=it.src;img.alt=it.cap||'';
+      fc.innerHTML=esc(it.cap||'')+(it.href?' <a href="'+esc(it.href)+'" class="bv-lb-link">Read the article'+(it.w?' ('+esc(it.w)+')':'')+' →</a>':'')+(many?'<span class="bv-lb-n">'+(cur+1)+' of '+items.length+'</span>':'');
+      fc.hidden=!(it.cap||it.href||many);
+      if(many){var nx=new Image();nx.src=items[(cur+1)%items.length].src}}
     var prevOverflow=document.documentElement.style.overflow,closed=false,pushed=false;
     function done(){if(closed)return;closed=true;d.remove();document.removeEventListener('keydown',k);window.removeEventListener('popstate',done);document.documentElement.style.overflow=prevOverflow}
     function close(){if(pushed){pushed=false;history.back()}else done()}
-    function k(e){if(e.key==='Escape')close()}
+    function k(e){if(e.key==='Escape')close();else if(many&&e.key==='ArrowRight'){e.preventDefault();show(cur+1)}else if(many&&e.key==='ArrowLeft'){e.preventDefault();show(cur-1)}}
     d.addEventListener('click',function(e){var a=e.target.closest('.bv-lb-link');
+      if(e.target.closest('.bv-lb-nav')){e.stopPropagation();show(cur+(e.target.closest('.next')?1:-1));return}
       if(a){e.preventDefault();e.stopPropagation();var to=a.getAttribute('href');
         if(pushed){pushed=false;window.removeEventListener('popstate',done);window.addEventListener('popstate',function go1(){window.removeEventListener('popstate',go1);done();location.hash=to});history.back()}else{done();location.hash=to}return}
+      if(swiped){swiped=false;return}
       close()});document.addEventListener('keydown',k);
+    var x0=null,y0=0,swiped=false;
+    d.addEventListener('touchstart',function(e){if(e.touches.length===1){x0=e.touches[0].clientX;y0=e.touches[0].clientY}},{passive:true});
+    d.addEventListener('touchend',function(e){if(x0===null||!many)return;var t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;x0=null;if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)){swiped=true;show(cur+(dx<0?1:-1));setTimeout(function(){swiped=false},400)}});
+    show(cur);
     try{history.pushState({bvlb:1},'');pushed=true;window.addEventListener('popstate',done)}catch(e){}
-    document.documentElement.style.overflow='hidden';document.body.appendChild(d);d.querySelector('button').focus();
+    document.documentElement.style.overflow='hidden';document.body.appendChild(d);d.querySelector('.bv-lb-x').focus();
   }
   /* The club site has a sticky claret header (and a fixed bar on phones): measure it so scans and tabs stick below it. */
   var bars=[];
