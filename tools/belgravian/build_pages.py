@@ -69,6 +69,19 @@ def page(path, title, desc, body, canonical):
     os.makedirs(os.path.dirname(full), exist_ok=True)
     open(full, 'w').write(doc)
 
+def drop_head(text, head):
+    # the transcription keeps the printed heading at the top of the text; the page already shows it as a title
+    import re as _re
+    norm = lambda x: _re.sub(r'[^a-z0-9]', '', (x or '').lower())
+    want = norm(head)
+    if not want or not text: return text
+    lines, acc = text.split('\n'), ''
+    for i, ln in enumerate(lines[:6]):
+        acc += norm(ln)
+        if acc == want: return '\n'.join(lines[i + 1:]).lstrip()
+        if not want.startswith(acc): break
+    return text
+
 def paras(text):
     return ''.join(f'<p>{e(p.strip())}</p>' for p in re.split(r'\n\s*\n', text or '') if p.strip())
 
@@ -112,7 +125,7 @@ for f in sorted(glob.glob(os.path.join(ROOT, 'issues', 'B*.json'))):
         if it.get('heading'): body += f'<h2>{e(it["heading"])}</h2>'
         if it.get('byline'): body += f'<p class="by">{e(it["byline"])}</p>'
         if it.get('summary') and not it.get('text'): body += f'<p class="sum">{e(it["summary"])}</p>'
-        body += paras(it.get('text'))
+        body += paras(drop_head(it.get('text'), it.get('heading')))
         for t in it.get('tables') or []: body += table(t)
         for ph in [x for x in (it.get('photos') or []) if not x.get('review')]:
             if ph.get('caption'): body += f'<figure><figcaption>Photograph: {e(ph["caption"])}{(" (" + e(ph["credit"]) + ")") if ph.get("credit") else ""}</figcaption></figure>'

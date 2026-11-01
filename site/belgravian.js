@@ -83,6 +83,12 @@
       var cap=(kind==='scan'?'<b>Original printed results</b>'+(f.caption?' \u00b7 '+esc(f.caption):''):esc(f.caption||''))+(f.credit?' <span>('+esc(f.credit)+')</span>':'');
       return '<figure class="bv-fig"><img src="'+src+'" alt="'+esc(f.caption||(kind==='scan'?'Scan of printed results':'Photograph'))+'" loading="lazy" data-lb="'+esc(src)+'" data-cap="'+esc(f.caption||'')+'">'+(cap?'<figcaption>'+cap+'</figcaption>':'')+'</figure>'}).join('')+'</div>';
   }
+  /* the transcription keeps the printed heading at the top of the text; it is already shown as the item's title */
+  function dropHead(text,head){
+    var n=function(x){return String(x||'').toLowerCase().replace(/[^a-z0-9]/g,'')},want=n(head);if(!want||!text)return text;
+    var lines=String(text).split('\n'),acc='';
+    for(var i=0;i<lines.length&&i<6;i++){acc+=n(lines[i]);if(acc===want)return lines.slice(i+1).join('\n').replace(/^\s+/,'');if(want.indexOf(acc)!==0)break}
+    return text}
   function prose(text,hl){
     if(!text)return '';
     var re=hl?new RegExp('('+hl.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'):null;
@@ -104,7 +110,7 @@
     if(it.byline)h+='<p class="by">'+esc(it.byline)+'</p>';
     if(cont){return h+'<p class="cont">Continued from page '+fp+'. <button type="button" data-goitem="'+esc(it.id)+'">Read from the start</button></p></article>'}
     if(!it.heading&&it.summary)h+='<p class="sum">'+esc(it.summary)+'</p>';
-    h+=prose(it.text,hl);
+    h+=prose(it.heading?dropHead(it.text,it.heading):it.text,hl);
     (it.tables||[]).forEach(function(t){h+=tableHtml(t)});
     h+=figs(it.scans,d.issue,'scan')+figs(it.photos,d.issue,'photo');
     if((it.pages||[]).length>1)h+='<p class="cont">Runs over pages '+it.pages.join(', ')+'.</p>';
