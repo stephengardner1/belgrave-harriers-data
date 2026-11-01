@@ -139,13 +139,23 @@ def passage(it, forms, surname):
         for ph in (it.get('photos') or []) + (it.get('scans') or []):
             if ph.get('caption') and pat.search(ph['caption']): return ph['caption']
     return ''
+# a profile passage is a short excerpt: leave home addresses and phone numbers out of it, even from pre-1976 issues
+# printed with them (the issue itself still shows them as printed)
+_priv = f'{W}/priv/redactions.json'
+PRIV = sorted({r['find'] for r in json.load(open(_priv)) if len(r['find']) > 5} |
+              {r['find'].replace('\n', ' ') for r in json.load(open(_priv)) if len(r['find']) > 5}, key=len, reverse=True) if os.path.exists(_priv) else []
+PHONE = re.compile(r'\(?\b0\d{1,4}\)?[\s-]?\d{3,4}[\s-]?\d{3,4}\b|\b\d{3}[\s-]\d{4}\b')
+def scrub(s):
+    for a in PRIV:
+        if a in s: s = s.replace(a, '…')
+    return PHONE.sub('…', s) if re.search(r'(?i)\b(tel|telephone|phone|ring)\b', s) else s
 nprof = 0
 for p in pi:
     if len(p['mentions']) < 3: continue
     surname = re.sub(r'[^A-Za-z\'-]', '', p['name'].split()[-1]) or p['name']
     forms = sorted({a for a in (p.get('aka') or []) + [p['name']] if surname.lower() in a.lower() and len(a) > len(surname) + 1},
                    key=len, reverse=True)
-    x = [passage(item_src.get(m['id'], {}), forms, surname) for m in p['mentions']]
+    x = [scrub(passage(item_src.get(m['id'], {}), forms, surname)) for m in p['mentions']]
     if any(x):
         json.dump({'x': x}, open(f"{OUT}/people/x/{p['id']}.json", 'w'), ensure_ascii=False, separators=(',', ':'))
         p['x'] = 1; nprof += 1
