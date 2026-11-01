@@ -600,6 +600,22 @@
    "year": 1991,
    "pageCount": 68,
    "items": 125
+  },
+  {
+   "issue": 216,
+   "label": "July 1991",
+   "date": "1991-07",
+   "year": 1991,
+   "pageCount": 28,
+   "items": 56
+  },
+  {
+   "issue": 217,
+   "label": "December 1991",
+   "date": "1991-12",
+   "year": 1991,
+   "pageCount": 40,
+   "items": 142
   }
  ],
  "coming": [
