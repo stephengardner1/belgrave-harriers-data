@@ -178,12 +178,12 @@
 "209": {
 "pdf": "B209_1985.pdf",
 "pages": 80,
-"state": "reading"
+"state": "ready"
 },
 "210": {
 "pdf": "B210_1986.pdf",
 "pages": 76,
-"state": "reading"
+"state": "ready"
 },
 "211": {
 "pdf": "B211_1987.pdf",
@@ -3519,7 +3519,8 @@
 41,
 48
 ],
-"status": "running"
+"status": "done",
+"tokens": 166642
 },
 {
 "kind": "read",
@@ -3728,7 +3729,8 @@
 41,
 50
 ],
-"status": "running"
+"status": "done",
+"tokens": 176475
 },
 {
 "kind": "check",
@@ -3737,7 +3739,8 @@
 51,
 56
 ],
-"status": "todo"
+"status": "done",
+"tokens": 150503
 },
 {
 "kind": "read",
@@ -3816,7 +3819,8 @@
 71,
 80
 ],
-"status": "running"
+"status": "done",
+"tokens": 188656
 },
 {
 "kind": "check",
@@ -3825,7 +3829,7 @@
 1,
 10
 ],
-"status": "todo"
+"status": "running"
 },
 {
 "kind": "check",
@@ -3967,7 +3971,8 @@
 71,
 76
 ],
-"status": "running"
+"status": "done",
+"tokens": 145987
 },
 {
 "kind": "check",
@@ -3976,7 +3981,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 145535
 },
 {
 "kind": "check",
@@ -3985,7 +3991,7 @@
 11,
 20
 ],
-"status": "todo"
+"status": "running"
 },
 {
 "kind": "check",
@@ -4048,7 +4054,8 @@
 1,
 9
 ],
-"status": "running"
+"status": "done",
+"tokens": 148211
 },
 {
 "kind": "read",
@@ -4057,7 +4064,8 @@
 10,
 18
 ],
-"status": "todo"
+"status": "done",
+"tokens": 145287
 },
 {
 "kind": "read",
@@ -4066,7 +4074,7 @@
 19,
 27
 ],
-"status": "todo"
+"status": "running"
 },
 {
 "kind": "read",
