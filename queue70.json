@@ -218,12 +218,12 @@
 "216": {
 "pdf": "B216_1991.pdf",
 "pages": 28,
-"state": "reading"
+"state": "ready"
 },
 "217": {
 "pdf": "B217_1991.pdf",
 "pages": 40,
-"state": "reading"
+"state": "ready"
 }
 },
 "jobs": [
@@ -4734,7 +4734,8 @@
 21,
 28
 ],
-"status": "running"
+"status": "done",
+"tokens": 220722
 },
 {
 "kind": "check",
@@ -4743,7 +4744,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 223741
 },
 {
 "kind": "check",
@@ -4752,7 +4754,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 246277
 },
 {
 "kind": "check",
@@ -4761,7 +4764,8 @@
 21,
 28
 ],
-"status": "todo"
+"status": "done",
+"tokens": 244647
 },
 {
 "kind": "read",
@@ -4780,7 +4784,8 @@
 11,
 20
 ],
-"status": "running"
+"status": "done",
+"tokens": 272532
 },
 {
 "kind": "read",
@@ -4789,7 +4794,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 221089
 },
 {
 "kind": "read",
@@ -4798,7 +4804,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 226186
 },
 {
 "kind": "check",
