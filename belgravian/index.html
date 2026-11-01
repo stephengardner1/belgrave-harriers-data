@@ -35,6 +35,13 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
 .bv-search input{flex:1;min-width:0;font:400 16px/24px var(--text);color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:10px 14px}
 .bv-search input::placeholder{color:var(--slate)}
 .bv-search button{font:500 15px/20px var(--text);color:#fff;background:var(--claret);border:0;border-radius:8px;padding:10px 18px}
+.bv-search{position:relative}
+.bv-sug{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:30;margin:0;padding:6px 0;list-style:none;background:var(--paper);border:1px solid #cfc7bb;border-radius:8px;max-height:min(60vh,420px);overflow:auto}
+.bv-sug-g{padding:8px 14px 4px;font:600 12px/16px var(--text);letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.bv-sug [role=option]{display:flex;justify-content:space-between;align-items:baseline;gap:12px;min-height:44px;padding:10px 14px;cursor:pointer;font:500 15px/20px var(--text);color:var(--ink)}
+.bv-sug [role=option] small{font:400 12px/16px var(--mono);color:var(--slate);white-space:nowrap}
+.bv-sug [role=option]:hover,.bv-sug [role=option][aria-selected=true]{background:var(--hover)}
+.bv-sug [role=option][aria-selected=true] span{color:var(--claret)}
 .bv-crumbs{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font:500 14px/20px var(--text);color:var(--slate);padding-block:16px 0}
 .bv-crumbs a{color:var(--slate);text-decoration:none}.bv-crumbs a:hover{color:var(--claret)}
 .bv-crumbs span[aria-hidden]{color:var(--rule)}
@@ -757,7 +764,38 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     if((t=e.target.closest('img[data-lb]'))){var g=lbGroup(t);lightbox(t.dataset.lb,t.dataset.cap,t.dataset.href,t.dataset.w,g.items,g.i);return}
   });
   main.addEventListener('mouseover',function(e){var t=e.target.closest('.bv-item');if(t&&window.matchMedia('(min-width:861px)').matches){main.querySelectorAll('.bv-region').forEach(function(r){r.classList.toggle('on',r.dataset.id===t.dataset.id)})}});
-  root.querySelector('.bv-search').addEventListener('submit',function(e){e.preventDefault();filter='all';if(location.hash==='#search')search(q.value);else go('search')});
+  /* ---------- search suggestions: the most-mentioned people and the most-printed races, as you type ---------- */
+  var SUG=null,sugBox=null,sugI=-1,sugItems=[];
+  function loadSug(){return SUG?Promise.resolve(SUG):get('suggest.json').then(function(d){SUG=d.events||[];return SUG},function(){SUG=[];return SUG})}
+  function sugNorm(x){return String(x||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]+/g,' ')}
+  function sugMatch(name,t){var n=' '+sugNorm(name)+' ';return t.split(' ').filter(Boolean).every(function(w){return n.indexOf(' '+w)>=0})}
+  function sugHide(){if(sugBox){sugBox.hidden=true;sugBox.innerHTML=''}sugItems=[];sugI=-1;q.setAttribute('aria-expanded','false');q.removeAttribute('aria-activedescendant')}
+  function sugShow(){
+    var t=sugNorm(q.value).trim();if(t.length<2||!PEOPLE){sugHide();return}
+    var ppl=PEOPLE.people.filter(function(p){return p.n>=3&&sugMatch(p.name,t)}).sort(function(a,b){return b.n-a.n}).slice(0,5);
+    var evs=(SUG||[]).filter(function(e){return sugMatch(e[0],t)}).slice(0,ppl.length?3:6);
+    sugItems=ppl.map(function(p){return {kind:'p',id:p.id,label:p.name,meta:p.n+' mentions'}}).concat(evs.map(function(e){return {kind:'e',label:e[0],meta:e[1]+' articles'}}));
+    if(!sugItems.length){sugHide();return}
+    if(!sugBox){sugBox=document.createElement('ul');sugBox.className='bv-sug';sugBox.id='bv-sug';sugBox.setAttribute('role','listbox');sugBox.setAttribute('aria-label','Suggestions');root.querySelector('.bv-search').appendChild(sugBox)}
+    var h='',last='';sugItems.forEach(function(it,i){var g=it.kind==='p'?'People':'Races and competitions';if(g!==last){h+='<li class="bv-sug-g" role="presentation">'+g+'</li>';last=g}
+      h+='<li role="option" id="bv-sug-'+i+'" data-i="'+i+'" aria-selected="false"><span>'+esc(it.label)+'</span><small>'+esc(it.meta)+'</small></li>'});
+    sugBox.innerHTML=h;sugBox.hidden=false;sugI=-1;q.setAttribute('aria-expanded','true');
+  }
+  function sugMove(d){if(!sugItems.length)return;sugI=(sugI+d+sugItems.length)%sugItems.length;[].forEach.call(sugBox.querySelectorAll('[role=option]'),function(li){var on=+li.dataset.i===sugI;li.setAttribute('aria-selected',on);if(on)li.scrollIntoView({block:'nearest'})});q.setAttribute('aria-activedescendant','bv-sug-'+sugI)}
+  function sugPick(i){var it=sugItems[i];if(!it)return;sugHide();
+    if(it.kind==='p'){q.value='';go(it.id);return}
+    q.value=it.label;filter='all';if(location.hash==='#search')search(q.value);else go('search')}
+  q.setAttribute('role','combobox');q.setAttribute('aria-autocomplete','list');q.setAttribute('aria-controls','bv-sug');q.setAttribute('aria-expanded','false');
+  q.addEventListener('focus',function(){loadSug()});
+  q.addEventListener('input',function(){loadSug().then(sugShow)});
+  q.addEventListener('keydown',function(e){
+    if(e.key==='ArrowDown'&&sugItems.length){e.preventDefault();sugMove(1)}
+    else if(e.key==='ArrowUp'&&sugItems.length){e.preventDefault();sugMove(-1)}
+    else if(e.key==='Enter'&&sugI>=0){e.preventDefault();sugPick(sugI)}
+    else if(e.key==='Escape'){sugHide()}});
+  q.addEventListener('blur',function(){setTimeout(sugHide,150)});
+  root.addEventListener('mousedown',function(e){var li=e.target.closest('.bv-sug [role=option]');if(li){e.preventDefault();sugPick(+li.dataset.i)}});
+  root.querySelector('.bv-search').addEventListener('submit',function(e){e.preventDefault();sugHide();filter='all';if(location.hash==='#search')search(q.value);else go('search')});
   function lbItem(el){return {src:el.dataset.lb,cap:el.dataset.cap||'',href:el.dataset.href||'',w:el.dataset.w||''}}
   /* the photos to step through from a clicked one: the athlete's whole photo row, or the other photos in the same article */
   function lbGroup(t){
