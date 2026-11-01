@@ -253,7 +253,7 @@
 "223": {
 "pdf": "B223_1995.pdf",
 "pages": 80,
-"state": "reading"
+"state": "ready"
 },
 "224": {
 "pdf": "B224_1996.pdf",
@@ -268,7 +268,7 @@
 "226": {
 "pdf": "B226_1998.pdf",
 "pages": 64,
-"state": "reading"
+"state": "ready"
 },
 "227": {
 "pdf": "B227_1999.pdf",
@@ -5594,7 +5594,8 @@
 61,
 70
 ],
-"status": "running"
+"status": "done",
+"tokens": 227635
 },
 {
 "kind": "read",
@@ -5603,7 +5604,8 @@
 71,
 80
 ],
-"status": "todo"
+"status": "done",
+"tokens": 203866
 },
 {
 "kind": "check",
@@ -5612,7 +5614,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 223171
 },
 {
 "kind": "check",
@@ -5621,7 +5624,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 234348
 },
 {
 "kind": "check",
@@ -5630,7 +5634,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 291343
 },
 {
 "kind": "check",
@@ -5639,7 +5644,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 241002
 },
 {
 "kind": "check",
@@ -5648,7 +5654,7 @@
 41,
 50
 ],
-"status": "todo"
+"status": "running"
 },
 {
 "kind": "check",
@@ -5874,7 +5880,8 @@
 31,
 40
 ],
-"status": "running"
+"status": "done",
+"tokens": 252578
 },
 {
 "kind": "check",
@@ -5883,7 +5890,8 @@
 41,
 50
 ],
-"status": "todo"
+"status": "done",
+"tokens": 230819
 },
 {
 "kind": "check",
@@ -5892,7 +5900,8 @@
 51,
 60
 ],
-"status": "todo"
+"status": "done",
+"tokens": 248238
 },
 {
 "kind": "read",
@@ -5951,7 +5960,8 @@
 51,
 60
 ],
-"status": "running"
+"status": "done",
+"tokens": 257239
 },
 {
 "kind": "read",
@@ -5960,7 +5970,8 @@
 61,
 64
 ],
-"status": "todo"
+"status": "done",
+"tokens": 179064
 },
 {
 "kind": "check",
@@ -5969,7 +5980,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 212077
 },
 {
 "kind": "check",
@@ -5978,7 +5990,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 194639
 },
 {
 "kind": "check",
@@ -5987,7 +6000,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 233431
 },
 {
 "kind": "check",
@@ -5996,7 +6010,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 197930
 },
 {
 "kind": "check",
@@ -6005,7 +6020,8 @@
 41,
 50
 ],
-"status": "todo"
+"status": "done",
+"tokens": 237360
 },
 {
 "kind": "check",
@@ -6014,7 +6030,7 @@
 51,
 60
 ],
-"status": "todo"
+"status": "running"
 },
 {
 "kind": "check",
@@ -6052,7 +6068,8 @@
 21,
 30
 ],
-"status": "running"
+"status": "done",
+"tokens": 247753
 },
 {
 "kind": "read",
@@ -6061,7 +6078,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 307057
 },
 {
 "kind": "read",
@@ -6070,7 +6088,7 @@
 41,
 50
 ],
-"status": "todo"
+"status": "running"
 },
 {
 "kind": "read",
