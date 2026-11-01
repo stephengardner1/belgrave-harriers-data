@@ -23,9 +23,9 @@ def event_tag(e):
     t = re.sub(r'\s{2,}', ' ', t).strip(' ,-\u2013')
     return t or e
 # Publish only finished issues: the 1960s pilot, plus later issues listed in WORKDIR/published.txt once read AND checked.
-PUB = set(int(x) for x in open(f'{W}/published.txt').read().split()) if os.path.exists(f'{W}/published.txt') else set()
+PUB = set((int(x) if x.isdigit() else x) for x in open(f'{W}/published.txt').read().split()) if os.path.exists(f'{W}/published.txt') else set()
 def published(no):
-    return no <= 172 or no in PUB
+    return (isinstance(no, int) and no <= 172) or no in PUB
 
 issues, search = [], []
 for f in sorted(glob.glob(f'{W}/out/B*.json')):
@@ -33,7 +33,7 @@ for f in sorted(glob.glob(f'{W}/out/B*.json')):
     d = json.load(open(f))
     no = d['issue']
     if not published(no): continue
-    d['pdfUrl'] = urls.get(no)
+    d['pdfUrl'] = d.get('pdfUrl') or urls.get(no)
     for it in d['items']:
         it.setdefault('regions', [])
         for k in ('tables', 'scans', 'photos', 'people', 'events', 'clubs', 'places', 'sport'):
@@ -62,7 +62,7 @@ idx = {'title': 'The Belgravian', 'issues': issues,
        # decades with nothing published yet; a decade only partly done (e.g. the 1980s) shows "(more to come)"
        'coming': [d + (' (more to come)' if d in {str(x['year'])[:3] + '0s' for x in issues} else '')
                   for d in ['1920s', '1930s', '1940s', '1950s', '1960s', '1970s', '1980s', '1990s', '2000s']
-                  if d not in {str(x['year'])[:3] + '0s' for x in issues} or d in ('1980s',)],
+                  if d not in {str(x['year'])[:3] + '0s' for x in issues} or d in ('1990s',)],
        'legends': json.load(open(f'{W}/legends-index.json')) if os.path.exists(f'{W}/legends-index.json') else []}
 
 json.dump(idx, open(f'{OUT}/index.json', 'w'), ensure_ascii=False, indent=1)
@@ -82,6 +82,74 @@ leg_ids = {l['id'] for l in legends}
 os.makedirs(f'{OUT}/people', exist_ok=True); os.makedirs(f'{OUT}/legends', exist_ok=True)
 shards = {}
 light = []
+# photos per item, so each person's page can open with the photos they are named in (captions only, as printed)
+item_photos = {}
+for f in sorted(glob.glob(f'{OUT}/issues/B*.json')):
+    d = json.load(open(f))
+    for it in d['items']:
+        for ph in it.get('photos') or []:
+            if ph.get('review') or not ph.get('people'): continue
+            item_photos.setdefault(it['id'], []).append(
+                {'f': f"crops/B{d['issue']}/{ph['file']}", 'c': ph.get('caption') or '', 'id': it['id'],
+                 'w': d.get('label') or '', 'who': set(ph['people'])})
+for p in pi:
+    names = set(p.get('aka') or []) | {p['name']}
+    seen, gal = set(), []
+    for m in p['mentions']:
+        for ph in item_photos.get(m['id'], []):
+            if ph['f'] in seen or not (ph['who'] & names): continue
+            seen.add(ph['f']); gal.append({k: v for k, v in ph.items() if k != 'who'})
+    if gal: p['photos'] = gal
+# athlete profiles: for each mention, the passage that names the person, so their page reads as a run of articles
+# (people/x/<id>.json, only for people with 3+ mentions; loaded only on that person's page)
+item_src = {}
+for f in sorted(glob.glob(f'{OUT}/issues/B*.json')):
+    d = json.load(open(f))
+    for it in d['items']:
+        item_src[it['id']] = it
+os.makedirs(f'{OUT}/people/x', exist_ok=True)
+for old in glob.glob(f'{OUT}/people/x/*.json'): os.remove(old)
+SENT = re.compile(r'(?<=[.!?])\s+(?=[A-Z"\'(])|\n+')
+def passage(it, forms, surname):
+    """the sentence(s), table row or caption that names the person, trimmed to ~320 characters"""
+    pats = [re.compile(r'(?<![A-Za-z])' + re.escape(f) + r'(?![a-z])') for f in forms] + \
+           [re.compile(r'(?<![A-Za-z])' + re.escape(surname) + r'(?![a-z])', re.I)]
+    text = it.get('text') or ''
+    if it.get('heading'):  # skip the printed heading at the top of the text
+        text = re.sub(r'^\s*' + re.escape(it['heading'].strip()) + r'\s*\n?', '', text)
+    for pat in pats:
+        m = pat.search(text)
+        if m:
+            parts = [s for s in SENT.split(text) if s.strip()]
+            pos = 0
+            for i, s in enumerate(parts):
+                j = text.find(s, pos); pos = j + len(s)
+                if j <= m.start() < pos:
+                    out = s.strip()
+                    if len(out) < 140 and i + 1 < len(parts) and len(parts[i + 1].strip()) > 40: out += ' ' + parts[i + 1].strip()
+                    if len(out) < 140 and i > 0 and len(parts[i - 1].strip()) > 40: out = parts[i - 1].strip() + ' ' + out
+                    out = re.sub(r'\s+', ' ', out)
+                    if len(out) > 320:
+                        k = max(0, out.find(m.group(0)) - 120); out = ('…' if k else '') + out[k:k + 300].rstrip() + '…'
+                    return out
+        for t in it.get('tables') or []:
+            for r in (t.get('rows') or [])[1:]:
+                row = ' · '.join(str(c) for c in r if str(c).strip())
+                if pat.search(row): return row
+        for ph in (it.get('photos') or []) + (it.get('scans') or []):
+            if ph.get('caption') and pat.search(ph['caption']): return ph['caption']
+    return ''
+nprof = 0
+for p in pi:
+    if len(p['mentions']) < 3: continue
+    surname = re.sub(r'[^A-Za-z\'-]', '', p['name'].split()[-1]) or p['name']
+    forms = sorted({a for a in (p.get('aka') or []) + [p['name']] if surname.lower() in a.lower() and len(a) > len(surname) + 1},
+                   key=len, reverse=True)
+    x = [passage(item_src.get(m['id'], {}), forms, surname) for m in p['mentions']]
+    if any(x):
+        json.dump({'x': x}, open(f"{OUT}/people/x/{p['id']}.json", 'w'), ensure_ascii=False, separators=(',', ':'))
+        p['x'] = 1; nprof += 1
+print(nprof, 'profiles with passages')
 for p in pi:
     letter = (p['sort'][:1] if p['sort'][:1] in string.ascii_lowercase else '_')
     for m in p['mentions']:
