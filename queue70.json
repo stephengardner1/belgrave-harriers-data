@@ -258,12 +258,12 @@
 "224": {
 "pdf": "B224_1996.pdf",
 "pages": 48,
-"state": "reading"
+"state": "ready"
 },
 "225": {
 "pdf": "B225_1997.pdf",
 "pages": 60,
-"state": "reading"
+"state": "ready"
 },
 "226": {
 "pdf": "B226_1998.pdf",
@@ -5534,7 +5534,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 217157
 },
 {
 "kind": "read",
@@ -5543,7 +5544,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 299886
 },
 {
 "kind": "read",
@@ -5552,7 +5554,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 261974
 },
 {
 "kind": "read",
@@ -5561,7 +5564,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 278629
 },
 {
 "kind": "read",
@@ -5570,7 +5574,8 @@
 41,
 50
 ],
-"status": "todo"
+"status": "done",
+"tokens": 264249
 },
 {
 "kind": "read",
@@ -5579,7 +5584,8 @@
 51,
 60
 ],
-"status": "todo"
+"status": "done",
+"tokens": 296592
 },
 {
 "kind": "read",
@@ -5588,7 +5594,7 @@
 61,
 70
 ],
-"status": "todo"
+"status": "running"
 },
 {
 "kind": "read",
@@ -5678,7 +5684,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 260064
 },
 {
 "kind": "read",
@@ -5687,7 +5694,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 281057
 },
 {
 "kind": "read",
@@ -5696,7 +5704,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 243988
 },
 {
 "kind": "read",
@@ -5705,7 +5714,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 232114
 },
 {
 "kind": "read",
@@ -5714,7 +5724,8 @@
 41,
 48
 ],
-"status": "todo"
+"status": "done",
+"tokens": 207499
 },
 {
 "kind": "check",
@@ -5723,7 +5734,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 231975
 },
 {
 "kind": "check",
@@ -5732,7 +5744,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 255519
 },
 {
 "kind": "check",
@@ -5741,7 +5754,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 235380
 },
 {
 "kind": "check",
@@ -5750,7 +5764,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 279541
 },
 {
 "kind": "check",
@@ -5759,7 +5774,8 @@
 41,
 48
 ],
-"status": "todo"
+"status": "done",
+"tokens": 211337
 },
 {
 "kind": "read",
@@ -5768,7 +5784,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 233648
 },
 {
 "kind": "read",
@@ -5777,7 +5794,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 266715
 },
 {
 "kind": "read",
@@ -5786,7 +5804,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 271831
 },
 {
 "kind": "read",
@@ -5795,7 +5814,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 187868
 },
 {
 "kind": "read",
@@ -5804,7 +5824,8 @@
 41,
 50
 ],
-"status": "todo"
+"status": "done",
+"tokens": 262244
 },
 {
 "kind": "read",
@@ -5813,7 +5834,8 @@
 51,
 60
 ],
-"status": "todo"
+"status": "done",
+"tokens": 279224
 },
 {
 "kind": "check",
@@ -5822,7 +5844,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 214670
 },
 {
 "kind": "check",
@@ -5831,7 +5854,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 225358
 },
 {
 "kind": "check",
@@ -5840,7 +5864,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 284584
 },
 {
 "kind": "check",
@@ -5849,7 +5874,7 @@
 31,
 40
 ],
-"status": "todo"
+"status": "running"
 },
 {
 "kind": "check",
@@ -5876,7 +5901,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 220915
 },
 {
 "kind": "read",
@@ -5885,7 +5911,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 254268
 },
 {
 "kind": "read",
@@ -5894,7 +5921,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 276540
 },
 {
 "kind": "read",
@@ -5903,7 +5931,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 284972
 },
 {
 "kind": "read",
@@ -5912,7 +5941,8 @@
 41,
 50
 ],
-"status": "todo"
+"status": "done",
+"tokens": 278629
 },
 {
 "kind": "read",
@@ -5921,7 +5951,7 @@
 51,
 60
 ],
-"status": "todo"
+"status": "running"
 },
 {
 "kind": "read",
@@ -6002,7 +6032,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 210257
 },
 {
 "kind": "read",
@@ -6011,7 +6042,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 231653
 },
 {
 "kind": "read",
@@ -6020,7 +6052,7 @@
 21,
 30
 ],
-"status": "todo"
+"status": "running"
 },
 {
 "kind": "read",
