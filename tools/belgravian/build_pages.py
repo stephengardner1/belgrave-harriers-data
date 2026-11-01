@@ -136,7 +136,7 @@ for p in people:
     if aka: body += f'<p class="meta">Also printed as {e(", ".join(aka[:12]))}</p>'
     body += f'<p class="meta">{len(x["mentions"])} mention{"s" if len(x["mentions"]) != 1 else ""}</p><ul class="list">'
     for m in x['mentions']:
-        no = int(m['id'].split('-')[0][1:])
+        no = m['id'].split('-')[0][1:]; no = int(no) if no.isdigit() else no
         body += (f'<li><a href="../issues/B{no}.html#{e(m["id"])}">{e(m.get("when") or when.get(no, ""))}, page {e(m.get("p"))}</a>'
                  + (f' — {e(m["note"])}' if m.get('note') else '') + f' · <a href="{READER}{e(m["id"])}">printed page</a></li>')
     body += '</ul>'

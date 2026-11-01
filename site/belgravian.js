@@ -21,6 +21,8 @@
   function pad(n){return n<10?'0'+n:''+n}
   function pageImg(no,p){return MEDIA+'pages/B'+no+'/B'+no+'-p'+pad(p)+'.webp'}
   function issueKey(no){return 'B'+no}
+  /* issue ids are numbers, except where the club printed a number twice (e.g. "207b") */
+  function nid(s){return /\D/.test(s)?s:+s}
   function go(h){if(location.hash==='#'+h)route();else location.hash=h}
   function crumbsSet(list){crumbs.innerHTML=list.map(function(c,i){return (i?'<span aria-hidden="true">/</span>':'')+(c[1]?'<a href="#'+c[1]+'">'+esc(c[0])+'</a>':'<span>'+esc(c[0])+'</span>')}).join('')}
   function personHref(name){var id='p-'+slug(name);return PEOPLE&&PEOPLE.byId[id]?'#'+id:null}
@@ -60,8 +62,8 @@
     root.scrollIntoView({block:'start'});
   }
   /* start fetching an issue as soon as the pointer or finger lands on a link to it */
-  function prefetch(e){var a=e.target.closest&&e.target.closest('a[href^="#B"]');if(!a)return;var m=a.getAttribute('href').match(/^#B(\d+)(?:-p?(\d+))?/);if(!m)return;
-    var no=+m[1];loadIssue(no).catch(function(){});
+  function prefetch(e){var a=e.target.closest&&e.target.closest('a[href^="#B"]');if(!a)return;var m=a.getAttribute('href').match(/^#B(\d+b?)(?:-p?(\d+))?/);if(!m)return;
+    var no=nid(m[1]);loadIssue(no).catch(function(){});
     if(m[2]&&/-p/.test(a.getAttribute('href'))){var im=new Image();im.src=pageImg(no,+m[2])}}
   function itemsOnPage(d,p){return d.items.filter(function(it){return (it.pages||[]).indexOf(p)>=0})}
   function firstPage(it){return Math.min.apply(null,it.pages&&it.pages.length?it.pages:[1])}
@@ -257,9 +259,9 @@
     var h=(location.hash||'').slice(1),hl=root.dataset.hl||'';root.dataset.hl='';
     var m;
     if(!IDX)return;
-    if((m=h.match(/^B(\d+)-p(\d+)$/)))return reader(+m[1],+m[2]);
-    if((m=h.match(/^B(\d+)-(\d+)$/))){var no=+m[1];if(cur.no!==no||hl)showOpening(no);return loadIssue(no).then(function(d){var it=d.items.filter(function(x){return x.id===h})[0];reader(no,it?firstPage(it):1,h,hl)})}
-    if((m=h.match(/^B(\d+)$/)))return reader(+m[1],1);
+    if((m=h.match(/^B(\d+b?)-p(\d+)$/)))return reader(nid(m[1]),+m[2]);
+    if((m=h.match(/^B(\d+b?)-(\d+)$/))){var no=nid(m[1]);if(cur.no!==no||hl)showOpening(no);return loadIssue(no).then(function(d){var it=d.items.filter(function(x){return x.id===h})[0];reader(no,it?firstPage(it):1,h,hl)})}
+    if((m=h.match(/^B(\d+b?)$/)))return reader(nid(m[1]),1);
     if(h==='people')return loadPeople().then(peopleList);
     if(/^p-/.test(h))return loadPeople().then(function(){person(h)});
     if(h==='search')return search(q.value);
