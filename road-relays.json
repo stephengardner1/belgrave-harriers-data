@@ -13,6 +13,237 @@
      "Bel  pos"
     ],
     [
+     "1967",
+     "Coventry Godiva Harriers",
+     "Derby & County AC",
+     "Portsmouth AC",
+     ""
+    ],
+    [
+     "1968",
+     "Coventry Godiva Harriers",
+     "Derby & County AC",
+     "Belgrave Harriers",
+     "3"
+    ],
+    [
+     "1969",
+     "Coventry Godiva Harriers",
+     "Belgrave Harriers",
+     "Tipton Harriers",
+     "2"
+    ],
+    [
+     "1970",
+     "Coventry Godiva Harriers",
+     "City of Stoke AC",
+     "Manchester & District Lads Club",
+     ""
+    ],
+    [
+     "1971",
+     "Birchfield Harriers",
+     "Coventry Godiva Harriers",
+     "Tipton Harriers",
+     ""
+    ],
+    [
+     "1972",
+     "Tipton Harriers",
+     "Birchfield Harriers",
+     "Coventry Godiva Harriers",
+     ""
+    ],
+    [
+     "1973",
+     "Birchfield Harriers",
+     "Tipton Harriers",
+     "Coventry Godiva Harriers",
+     ""
+    ],
+    [
+     "1974",
+     "Tipton Harriers",
+     "Edinburgh Southern Harriers",
+     "Cardiff AAC",
+     ""
+    ],
+    [
+     "1975",
+     "Gateshead Harriers & AC",
+     "Edinburgh Southern Harriers",
+     "Coventry Godiva Harriers",
+     ""
+    ],
+    [
+     "1976",
+     "Gateshead Harriers & AC",
+     "Liverpool Harriers & AC",
+     "Tipton Harriers",
+     ""
+    ],
+    [
+     "1977",
+     "Gateshead Harriers & AC",
+     "Liverpool Harriers & AC",
+     "Tipton Harriers",
+     ""
+    ],
+    [
+     "1978",
+     "Tipton Harriers",
+     "Aldershot Farnham & District",
+     "Wolverhampton & Bilston AC",
+     ""
+    ],
+    [
+     "1979",
+     "Gateshead Harriers & AC",
+     "Birchfield Harriers",
+     "Tipton Harriers",
+     ""
+    ],
+    [
+     "1980",
+     "Bristol AC",
+     "Tipton Harriers",
+     "Gateshead Harriers & AC",
+     ""
+    ],
+    [
+     "1981",
+     "Tipton Harriers",
+     "Aldershot Farnham & District",
+     "Birchfield Harriers",
+     ""
+    ],
+    [
+     "1982",
+     "Aldershot Farnham & District",
+     "Tipton Harriers",
+     "Gateshead Harriers & AC",
+     ""
+    ],
+    [
+     "1983",
+     "Birchfield Harriers",
+     "Tipton Harriers",
+     "Staffordshire Moorlands AC",
+     ""
+    ],
+    [
+     "1984",
+     "Tipton Harriers",
+     "Gateshead Harriers & AC",
+     "Birchfield Harriers",
+     ""
+    ],
+    [
+     "1985",
+     "Tipton Harriers",
+     "Birchfield Harriers",
+     "Gateshead Harriers & AC",
+     ""
+    ],
+    [
+     "1986",
+     "Tipton Harriers",
+     "Birchfield Harriers",
+     "Gateshead Harriers & AC",
+     ""
+    ],
+    [
+     "1987",
+     "Gateshead Harriers & AC",
+     "Tipton Harriers",
+     "Birchfield Harriers",
+     ""
+    ],
+    [
+     "1988",
+     "Gateshead Harriers & AC",
+     "Birchfield Harriers",
+     "Coventry Godiva Harriers",
+     ""
+    ],
+    [
+     "1989",
+     "Tipton Harriers",
+     "Wolverhampton & Bilston AC",
+     "Birchfield Harriers",
+     ""
+    ],
+    [
+     "1990",
+     "Tipton Harriers",
+     "Wolverhampton & Bilston AC",
+     "Coventry Godiva Harriers",
+     ""
+    ],
+    [
+     "1991",
+     "Tipton Harriers",
+     "Shaftesbury Barnet Harriers",
+     "Swansea Harriers",
+     ""
+    ],
+    [
+     "1992",
+     "Tipton Harriers",
+     "Coventry Godiva Harriers",
+     "Swansea Harriers",
+     ""
+    ],
+    [
+     "1993",
+     "Shaftesbury Barnet Harriers",
+     "Boxhill Racers",
+     "Swansea Harriers",
+     ""
+    ],
+    [
+     "1994",
+     "Swansea Harriers",
+     "Boxhill Racers",
+     "Blackheath Harriers",
+     ""
+    ],
+    [
+     "1995",
+     "Blackheath Harriers",
+     "Bingley Harriers",
+     "Morpeth Harriers & AC",
+     ""
+    ],
+    [
+     "1996",
+     "Bingley Harriers",
+     "Tipton Harriers",
+     "Cardiff AAC",
+     ""
+    ],
+    [
+     "1997",
+     "Salford Harriers",
+     "Coventry Godiva Harriers",
+     "Birchfield Harriers",
+     ""
+    ],
+    [
+     "1998",
+     "Birchfield Harriers",
+     "Salford Harriers",
+     "Tipton Harriers",
+     ""
+    ],
+    [
+     "1999",
+     "Tipton Harriers",
+     "Salford Harriers",
+     "Morpeth Harriers & AC",
+     ""
+    ],
+    [
      "2000",
      "Salford Harriers",
      "Tipton Harriers",
@@ -5467,6 +5698,11 @@
   {
    "added": "2026-10-30",
    "what": "tables.reports: links from years in the 12-stage and 6-stage winners tables to the club's own report of that race on belgraveharriers.com (the men's race; season round-ups where that is the only report)."
+  },
+  {
+   "added": "2026-11-02",
+   "what": "12-stage winners 1967–1999: first three teams each year, and Belgrave's position in the two years they made the top three (3rd 1968, 2nd 1969). Club names written out in full (the list abbreviates them). Other Belgrave positions before 2000 left blank because the list only names the first three. Venues: Whetstone 1967, Leicester 1968–69, Derby 1973, otherwise Sutton Park. The race began in 1967 after the London to Brighton relay, which had national status, ended in 1965.",
+   "source": "ERRA 'National 12 stage history (updated April 2026)', compiled by Martin Duff (englishroadrunningassociation.co.uk, '12-6 Stage data (updated to 2026).pdf'). Its 2000–2026 first three teams agree with the existing table."
   }
  ],
  "notes6": "Lap lengths: 3.7 miles in 1996–2000, 5.847 km from 2001 to 2024, 5.47 km from 2025 after part of the road was closed (ERRA)."
