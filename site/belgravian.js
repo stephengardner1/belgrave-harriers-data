@@ -193,12 +193,20 @@
         var sel=main.querySelector('#bv-page');sel.addEventListener('change',function(){toPage(+sel.value,true)});
         watchPages();
       }
-      if(focus){setCurrent(firstPage(d.items.filter(function(x){return x.id===focus})[0]||{pages:[p]}));setTimeout(function(){cur.lock=Date.now()+900;on(focus,true)},fresh?60:0)}
+      if(focus){var fp=firstPage(d.items.filter(function(x){return x.id===focus})[0]||{pages:[p]});cur.lock=Date.now()+2600;setCurrent(fp);setTimeout(function(){on(focus,false);goItem(focus,fp)},fresh?60:0)}
       else if(p>1||!fresh)toPage(p,!fresh);
       else{setCurrent(1);root.scrollIntoView({block:'start'})}
       idle();
     }).catch(function(){idle();main.innerHTML='<p class="bv-msg">That issue couldn\u2019t be loaded just now. Please try again shortly.</p>'});
   }
+  /* open an article: jump straight to it (no long smooth scroll), then re-settle while page images above it load */
+  function goItem(id,fp){
+    var find=function(){return pane==='text'?main.querySelector('.bv-item[data-id="'+id+'"]'):sectionEl(fp)};
+    var moved=false,stop=function(){moved=true};['wheel','touchstart','keydown'].forEach(function(ev){window.addEventListener(ev,stop,{once:true,passive:true})});
+    [0,250,700,1500,2400].forEach(function(ms,i,all){setTimeout(function(){
+      var el=find();
+      if(!moved&&el){var want=parseFloat(getComputedStyle(el).scrollMarginTop)||0;if(Math.abs(el.getBoundingClientRect().top-want)>4)goEl(el,false);cur.lock=Date.now()+400;setCurrent(fp)}
+      if(i===all.length-1)['wheel','touchstart','keydown'].forEach(function(ev){window.removeEventListener(ev,stop)})},ms)})}
   function on(id,scroll,within){
     main.querySelectorAll('.bv-region,.bv-item').forEach(function(e){e.classList.toggle('on',e.dataset.id===id)});
     if(scroll){var scope=within||main;var el=scope.querySelector('.bv-item[data-id="'+id+'"]')||main.querySelector('.bv-item[data-id="'+id+'"]');if(el&&pane==='text')el.scrollIntoView({block:'start',behavior:'smooth'})}
