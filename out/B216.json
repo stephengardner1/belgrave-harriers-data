@@ -56,9 +56,13 @@
     {
      "file": "B216-p01-cover-relay.jpg",
      "page": 1,
-     "caption": "Front page: Mike Edwards, highest UK vaulter for years with 5.50 metres, now almost certainly Tokyo bound.",
+     "caption": "Front page: Regis to Ridgeon - the Belgrave baton passes from one 1987 World Championship medallist to another.",
      "credit": "Both photos by kind permission of Mark Shearman",
-     "people": []
+     "people": [
+      "John Regis",
+      "Jon Ridgeon"
+     ],
+     "captionNote": "The magazine printed the two cover captions the wrong way round (page 3: 'Front page: Mike Edwards…', 'Back page: Regis to Ridgeon…'). Each photo carries the caption that describes it (Steve, 2 Nov 2026)."
     }
    ],
    "people": [
@@ -73,6 +77,20 @@
      "printed": "Mark Shearman",
      "name": "Mark Shearman",
      "role": "photographer"
+    },
+    {
+     "printed": "Regis",
+     "name": "John Regis",
+     "club": "Belgrave Harriers",
+     "role": "athlete",
+     "note": "front cover photo, baton change (named by Steve; caption prints surname)"
+    },
+    {
+     "printed": "Ridgeon",
+     "name": "Jon Ridgeon",
+     "club": "Belgrave Harriers",
+     "role": "athlete",
+     "note": "front cover photo, baton change (named by Steve; caption prints surname)"
     }
    ],
    "events": [],
@@ -451,14 +469,14 @@
    "people": [
     {
      "printed": "Regis",
-     "name": "Regis",
+     "name": "John Regis",
      "club": "Belgrave Harriers",
      "role": "athlete",
      "note": "1987 World Championship medallist; baton pass to Ridgeon; this caption is printed for the back page, but the baton-pass photo is actually the front cover (captions swapped in print); not tagged on either photo"
     },
     {
      "printed": "Ridgeon",
-     "name": "Ridgeon",
+     "name": "Jon Ridgeon",
      "club": "Belgrave Harriers",
      "role": "athlete",
      "note": "1987 World Championship medallist; this caption is printed for the back page, but the baton-pass photo is actually the front cover (captions swapped in print); not tagged on either photo"
@@ -467,6 +485,13 @@
      "printed": "Mark Shearman",
      "name": "Mark Shearman",
      "role": "photographer"
+    },
+    {
+     "printed": "Mike Edwards",
+     "name": "Mike Edwards",
+     "club": "Belgrave Harriers",
+     "role": "athlete",
+     "note": "back cover photo, pole vault"
     }
    ],
    "events": [
@@ -483,9 +508,12 @@
     {
      "file": "B216-p28-back-cover-vaulter.jpg",
      "page": 28,
-     "caption": "Back page: Regis to Ridgeon - the Belgrave baton passes from one 1987 World Championship medallist to another.",
+     "caption": "Back page: Mike Edwards, highest UK vaulter for years with 5.50 metres, now almost certainly Tokyo bound.",
      "credit": "Both photos by kind permission of Mark Shearman",
-     "people": []
+     "people": [
+      "Mike Edwards"
+     ],
+     "captionNote": "The magazine printed the two cover captions the wrong way round (page 3: 'Front page: Mike Edwards…', 'Back page: Regis to Ridgeon…'). Each photo carries the caption that describes it (Steve, 2 Nov 2026)."
     }
    ]
   },
