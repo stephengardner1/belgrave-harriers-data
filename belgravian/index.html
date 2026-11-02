@@ -136,6 +136,9 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
 .bv .bv-chip{font:500 13px/18px var(--text);color:var(--ink);background:var(--cream);border:0;border-radius:9999px;padding:3px 10px;text-decoration:none}
 .bv a.bv-chip:hover{background:var(--sand)}
 .bv-chip.tag{color:var(--slate);background:transparent;box-shadow:inset 0 0 0 1px var(--rule)}
+.bv-chips-few .bv-chip-x{display:none}
+.bv .bv-chips-more{color:var(--claret);background:transparent;box-shadow:inset 0 0 0 1px var(--rule);cursor:pointer}
+.bv .bv-chips-more:hover{background:var(--hover)}
 .bv-item .sum{font:400 14px/20px var(--text);color:var(--slate);margin:0}
 
 /* search */
@@ -500,9 +503,10 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   function chips(it){
     var seen={},ppl=(it.people||[]).filter(function(p){var k=p.name||p.printed;if(seen[k])return false;seen[k]=1;return true});
     var h='';
-    if(ppl.length)h+='<div class="bv-chips" aria-label="People">'+ppl.map(function(p){var n=p.name||p.printed,href=personHref(n);return href?'<a class="bv-chip" href="'+href+'">'+esc(n)+'</a>':'<span class="bv-chip">'+esc(n)+'</span>'}).join('')+'</div>';
+    /* long lists of names: the first 5, then a "+ N more" button that shows the rest */
+    if(ppl.length)h+='<div class="bv-chips'+(ppl.length>6?' bv-chips-few':'')+'" aria-label="People">'+ppl.map(function(p,i){var n=p.name||p.printed,href=personHref(n),x=i>=5?' bv-chip-x':'';return href?'<a class="bv-chip'+x+'" href="'+href+'">'+esc(n)+'</a>':'<span class="bv-chip'+x+'">'+esc(n)+'</span>'}).join('')+(ppl.length>6?'<button type="button" class="bv-chip bv-chips-more" aria-expanded="false">+ '+(ppl.length-5)+' more</button>':'')+'</div>';
     var tags=[].concat(it.events||[],it.places||[]);
-    if(tags.length)h+='<div class="bv-chips" aria-label="Events and places">'+tags.map(function(t){return '<button type="button" class="bv-chip tag" data-search="'+esc(t)+'">'+esc(t)+'</button>'}).join('')+'</div>';
+    if(tags.length)h+='<div class="bv-chips'+(tags.length>6?' bv-chips-few':'')+'" aria-label="Events and places">'+tags.map(function(t,i){return '<button type="button" class="bv-chip tag'+(i>=5?' bv-chip-x':'')+'" data-search="'+esc(t)+'">'+esc(t)+'</button>'}).join('')+(tags.length>6?'<button type="button" class="bv-chip bv-chips-more" aria-expanded="false">+ '+(tags.length-5)+' more</button>':'')+'</div>';
     return h;
   }
   function itemHtml(it,d,p,hl){
@@ -774,6 +778,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     if((t=e.target.closest('.bv-yr-all'))){t.closest('.bv-yr').classList.add('all');t.remove();return}
     if((t=e.target.closest('.bv-pa-chart .bars button'))){goYear(t.dataset.year,true);return}
     if((t=e.target.closest('.bv-pa-allph'))){var g=t.closest('.bv-pa-gal');g.classList.toggle('all');t.textContent=g.classList.contains('all')?'Fewer photos':'All '+g.querySelectorAll('figure').length+' photos →';return}
+    if((t=e.target.closest('.bv-chips-more'))){var cw=t.closest('.bv-chips'),open=cw.classList.toggle('bv-chips-few')===false;t.setAttribute('aria-expanded',String(open));t.textContent=open?'Show fewer':'+ '+cw.querySelectorAll('.bv-chip-x').length+' more';return}
     if((t=e.target.closest('[data-full]'))){fullArt(t);return}
     if((t=e.target.closest('.bv-m-hd'))){if(!phone())return;var mm=t.closest('.bv-m');mm.classList.toggle('open');t.setAttribute('aria-expanded',String(mm.classList.contains('open')));return}
     if((t=e.target.closest('img[data-lb]'))){var g=lbGroup(t);lightbox(t.dataset.lb,t.dataset.cap,t.dataset.href,t.dataset.w,g.items,g.i);return}
