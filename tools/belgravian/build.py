@@ -16,7 +16,17 @@ def slug(s):
 
 # Event tags group the same race across years (Steve, 29 Oct 2026): drop the year/season from each tag.
 YEAR = re.compile(r'(?<![\w.])(?:18[5-9]\d|19\d\d|20[0-2]\d)(?:\s*[-/\u2013]\s*\d{2,4})?(?![\w.])(?!\s*(?:m|metres?|meters?|yards?|yds|miles?|km|kilo\w*)\b)')
+# Competitions that are one and the same, shown under one name (Steve's decisions). Keys are compared loosely:
+# lower case, hyphens as spaces, "Championship" = "Championships".
+EVENT_SAME = {'southern counties cross country championships': 'Southern Cross Country Championships',   # Steve, 2 Nov 2026
+              'southern cross country championships': 'Southern Cross Country Championships'}
+def ev_key(t):
+    t = re.sub(r'\s+', ' ', t.lower().replace('-', ' ')).strip()
+    return re.sub(r'\bchampionship\b', 'championships', t)
 def event_tag(e):
+    t = event_tag0(e)
+    return EVENT_SAME.get(ev_key(t), t)
+def event_tag0(e):
     t = YEAR.sub('', e)
     t = re.sub(r'\(\s*\)', '', t)                      # empty brackets left behind
     t = re.sub(r'\s+([,)])', r'\1', t); t = re.sub(r'\(\s+', '(', t)
