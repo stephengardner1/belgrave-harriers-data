@@ -8,7 +8,7 @@ Then read ONLY your assigned page range of one issue. Other jobs read the other 
 another, so you add to a shared file.
 
 Differences from BRIEF.md for these jobs:
-- Spelling aid for names: W/slarchive-belgrave-names-1969-80.txt (Belgrave Surrey League runners 1969–80; for 1980s issues use W/slarchive-belgrave-names-1979-90.txt). Use it to
+- Spelling aid for names: W/slarchive-belgrave-names-1969-80.txt (Belgrave Surrey League runners 1969–80; for 1980s issues use W/slarchive-belgrave-names-1979-90.txt; for 1990s and 2000s issues use W/slarchive-belgrave-names-1990-2009.txt). Use it to
   confirm a reading, never to change what is printed.
 - Output: W/out/B<no>.json. If it doesn't exist (you have the first range), create it with the issue header
   (issue, label, date "YYYY-MM", pdf, pageCount, officers if printed on your pages) and "items": [].
@@ -36,6 +36,13 @@ Lessons from the 1960s checks (follow them now, so checking finds less):
 - Ditto marks in tables stay as printed ("), never filled in.
 - Never merge differently printed surnames or initials into one person (Carton ≠ Carter, G. Dance ≠ W. Dance); a likely
   misprint goes in a note.
+- NAMES AS PRINTED (Steve, 2 Nov 2026), in every people entry, photo tag and note:
+  - `name` is the printed form; only capitals and hyphen/space may be tidied ("T benjamin" → "T Benjamin").
+  - Never expand an initial or nickname ("K Sempers" stays "K Sempers" even if "Kevin Sempers" is printed nearby).
+  - Never give a surname to a first-name-only mention, or a first name to a surname-only mention.
+  - Never use the spelling aid, other items or your own knowledge to complete or "correct" a name.
+  - No entry for a name that refers to no one (a wrong name someone was called) or a pen-name you can't place.
+  - Before saving, re-read your people entries: each `name` must appear on the page with the same letters.
 - Don't add header rows or bracketed labels of your own inside text or tables.
 - Be economical: one page image at a time at 110 dpi; zoom (160–200 dpi or a crop) only for small print, tables and names.
 - Read every page from its own image, even if it repeats a page from another issue (officers, winners lists); never
@@ -45,3 +52,10 @@ Lessons from the 1960s checks (follow them now, so checking finds less):
 - Never use the rough text layer as a source. If page images stop displaying, save, stop and list the pages not read.
 
 Reply in under 80 words: pages read, items, photos, scans, anything doubtful.
+- 1990s photo-set print, "rn" that looks like "m" (Steve's rule, 1 Nov 2026): write "rn" wherever the r+n reading is a
+  real word or name and the shapes fit touching letters (Herne Hill, Southern, turned, Turner, morning, Barnet,
+  Osbourne). Don't zoom past 300 dpi for this, and add no note. Keep "m" with a note only where the r+n reading would
+  not be a real word or name.
+- Disk: put scratch renders in W/work/<your-job>/ and delete that folder's large images when you finish.
+- Rankings or results kept as scans because the print is too small: still tag in "people" every Belgrave name you can
+  read clearly (their profile pages depend on it).

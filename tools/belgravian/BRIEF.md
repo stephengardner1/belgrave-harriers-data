@@ -49,8 +49,10 @@ An article that runs across pages is ONE item (list all its pages). Short paragr
    `B<no>-p<page>-<short-slug>.jpg`. Include the caption text in the crop only if it's part of the photo block — better
    to crop the photo alone and keep the caption as text.
 4. **People**: tag every named person in the item. `printed` = exactly as printed ("G. North", "Gerry North",
-   "R.Middleton"); `name` = the fullest name THIS item supports (expand "G. North" only if the same item gives the
-   first name; otherwise leave the initial). Don't merge across items — a later step builds the people index.
+   "R.Middleton"); `name` = the name exactly as printed (only capitals and hyphen/space may be tidied). Never expand an initial
+   or nickname to a full name, never add a surname to a first name, even if the same item prints the full name
+   elsewhere — "G. North" stays "G. North". (Steve, 2 Nov 2026: names printed with different letters are never
+   merged; he decides any merges himself.) Don't merge across items — a later step builds the people index.
    **Geoff North and Gerry North are two different Belgrave runners of the 1960s** — never assume one is the other;
    if only "G. North" is printed, keep "G. North". Add `club` if stated or clearly Belgrave, and `role`:
    athlete | official | author | photographer | other. Note notable facts in `note` (e.g. "won Inter-Counties 3 miles").
@@ -66,8 +68,10 @@ An article that runs across pages is ONE item (list all its pages). Short paragr
      cell as printed with ` [?]` after it, AND add a crop of the table to `scans`. Hard to read overall → `scans` only.
    - Short results written as a run-on line inside a report ("Result: 1/ A. Harris (Mitcham) 18:23 5/ M. Heck…") stay in
      `text`. Set results laid out in columns/rows become `tables`.
-   - Same person printed several ways in one item → ONE people entry (fullest form in `name`), every printed form in
-     `printedAs` (list), e.g. {"printed":"Charlie Dabbs","printedAs":["Charlie Dabbs","C. Dabbs"],"name":"Charlie Dabbs"}.
+   - Same name printed several ways in one item: one entry per distinct printed form ("Charlie Dabbs" and "C. Dabbs"
+     are two entries). Only forms that differ in capitals or hyphen/space share an entry, listed in `printedAs`.
+   - Never create an entry for a name that refers to no one (a wrong name someone was called, a pen-name you can't
+     place) and never tag a first-name-only mention with a surname from elsewhere.
    - Clubs: list them in `clubs` exactly as printed ("H.H.H.", "Herne Hill"); don't expand abbreviations — the index step does that.
    - Photos: attach a photo to the article it illustrates (caption or placement ties it); otherwise make it its own `photo` item.
      A credit or caption printed on another page goes with the photo's item, adding a region on that page.
