@@ -776,6 +776,70 @@
    "year": 2005,
    "pageCount": 6,
    "items": 12
+  },
+  {
+   "issue": 238,
+   "label": "No. 238",
+   "date": "2005-12",
+   "year": 2005,
+   "pageCount": 4,
+   "items": 14
+  },
+  {
+   "issue": 239,
+   "label": "No. 239",
+   "date": "2006-01",
+   "year": 2006,
+   "pageCount": 6,
+   "items": 19
+  },
+  {
+   "issue": 240,
+   "label": "No. 240",
+   "date": "2006-03",
+   "year": 2006,
+   "pageCount": 8,
+   "items": 21
+  },
+  {
+   "issue": 241,
+   "label": "No. 241",
+   "date": "2006-04",
+   "year": 2006,
+   "pageCount": 4,
+   "items": 7
+  },
+  {
+   "issue": 242,
+   "label": "No. 242",
+   "date": "2006-04",
+   "year": 2006,
+   "pageCount": 9,
+   "items": 17
+  },
+  {
+   "issue": 243,
+   "label": "No. 243",
+   "date": "2006-05",
+   "year": 2006,
+   "pageCount": 6,
+   "items": 11
+  },
+  {
+   "issue": 244,
+   "label": "No. 244",
+   "date": "2006-06",
+   "year": 2006,
+   "pageCount": 8,
+   "items": 20
+  },
+  {
+   "issue": 245,
+   "label": "No. 245",
+   "date": "2006-09",
+   "year": 2006,
+   "pageCount": 6,
+   "items": 9
   }
  ],
  "coming": [
