@@ -570,6 +570,8 @@
       idle();
     }).catch(function(){shelfAll()});
   }
+  /* years with no issue: the issue numbers run on without a break either side (checked 2 Nov 2026), so nothing is missing */
+  var NOISSUE={1990:1,1994:{no:221,see:'Winter 1993/94'},2002:1,2004:1};
   function decade(d){
     var D=HOME.decades[d],h='<div class="bv-dec-hd"><h2>THE '+d+'s</h2><span>'+num(D.issues)+' issues · '+num(D.articles)+' articles · '+num(D.nphotos)+' photos</span></div>';
     if(D.photos.length)h+='<section class="bv-sec bv-dec-ph"><div class="bv-sec-hd"><h3>PHOTOGRAPHS</h3><span>'+num(D.nphotos)+' in the '+d+'s</span></div><div class="bv-ph-row">'+
@@ -577,7 +579,8 @@
     var by={};D.covers.forEach(function(c){by[c.y]=c});var last=HOME.span[1],slots='';
     for(var y=+d;y<+d+10;y++){var c=by[y];
       slots+=c?'<a href="#'+issueKey(c.no)+'" class="bv-cover-y"><img src="'+pageImg(c.no,1)+'" alt="Cover of The Belgravian, '+esc(c.label)+'" loading="lazy"><b>'+y+'</b></a>':
-        '<span class="gap"><i>'+(y>last?'Not in the archive yet':'None in the archive')+'</i><b>'+y+'</b></span>'}
+        (NOISSUE[y]&&NOISSUE[y].no?'<a href="#'+issueKey(NOISSUE[y].no)+'" class="gap"><i>No issue that year<br>(see '+esc(NOISSUE[y].see)+')</i><b>'+y+'</b></a>':
+        '<span class="gap"><i>'+(y>last?'Not in the archive yet':NOISSUE[y]?'No issue that year':'None in the archive')+'</i><b>'+y+'</b></span>')}
     h+='<div class="bv-dec-cols"><section class="bv-sec"><div class="bv-sec-hd"><h3>ISSUES</h3><a href="#d'+d+'">All '+D.issues+'</a></div><div class="bv-yc">'+slots+'</div></section>';
     h+='<section class="bv-sec"><div class="bv-sec-hd"><h3>ATHLETES</h3></div><div>'+D.athletes.map(function(a){
       return '<a class="bv-row" href="#'+esc(a.id)+'"><span class="who">'+(a.face?'<img class="face" src="'+BASE+esc(a.face)+'" alt="" loading="lazy">':'<span class="ini" aria-hidden="true">'+esc(a.name.split(/\s+/).map(function(w){return w[0]}).join('').slice(0,2))+'</span>')+esc(a.name)+'</span><small>'+num(a.n)+'</small></a>'}).join('')+'</div></section>';
