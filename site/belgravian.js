@@ -308,7 +308,7 @@
         h+='<div class="bv-pa-chart"><div class="hd"><h3>Every mention</h3><span>'+ms.length+' in all</span></div><div class="box"><div class="bars">'+bars+'</div><div class="axis">'+ax.map(function(a){return '<span>'+a+'</span>'}).join('')+'</div>'+
           '<div class="ft"><span>Showing <b class="cur">'+esc(years[0])+'</b></span><span class="pick">Choose a year \u25be<select aria-label="Choose a year">'+years.map(function(y){return '<option value="'+esc(y)+'">'+esc(y)+' \u00b7 '+byY[y].length+'</option>'}).join('')+'</select></span></div></div></div>';
       }
-      if(p.slarchive)h+='<a class="bv-pa-sl" href="'+esc(p.slarchive)+'" target="_blank" rel="noopener"><span>'+SINGLET+'<u>Surrey League record</u></span><span aria-hidden="true">\u2192</span></a>';
+      if(p.slarchive&&(p.slRaces||0)>=4)h+='<a class="bv-pa-sl" href="'+esc(p.slarchive)+'" target="_blank" rel="noopener"><span>'+SINGLET+'<u>Surrey League record</u></span><span aria-hidden="true">\u2192</span></a>';
       if(recs.length||spot){
         h+='<div class="bv-pa-rec">';
         if(recs.length)h+='<section class="bv-pa-recs" aria-label="Club records"><span class="label">As printed in club record lists</span>'+recs.map(function(r){return '<div class="r"><span class="fig">'+esc(r.fig)+'</span><div><span class="t">'+esc(r.m.note)+'</span><a href="#'+esc(r.m.id)+'">'+esc(r.m.h)+' \u00b7 '+esc(r.m.when)+' \u00b7 p\u00a0'+r.m.p+'</a></div></div>'}).join('')+'</section>';
