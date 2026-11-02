@@ -173,11 +173,24 @@ for k, e in people.items():
         name = e['name']
     pid = 'p-' + slug(name)
     seen = set(); ms = []
+    # Steve, 2 Nov 2026: bylines, photo credits and officer listings are not athletic mentions. An item counts as a
+    # mention only if the person appears there as an athlete (or is otherwise written about); items where they appear
+    # only as author / photographer / official go to separate lists ('wrote', 'credits', 'official').
+    byitem = collections.defaultdict(list)
+    for m in e['ms']: byitem[m['item']].append(m)
+    side = {'wrote': [], 'credits': [], 'official': []}
+    ROLE_LIST = {'author': 'wrote', 'photographer': 'credits', 'official': 'official'}
     for m in sorted(e['ms'], key=lambda m: (m['date'], m['item'])):
         if m['item'] in seen:
             continue
         seen.add(m['item'])
-        ms.append({'id': m['item'], 'when': m['label'], 'label': f"No. {m['issue']}", 'p': m['p'], 'h': m['h'], 'sum': m['sum'], 'note': m['note']})
+        roles = {x.get('role') or 'athlete' for x in byitem[m['item']]}
+        if roles & set(ROLE_LIST) and not roles - set(ROLE_LIST):
+            for r in sorted(roles):
+                side[ROLE_LIST[r]].append({'id': m['item'], 'when': m['label'], 'p': m['p'], 'h': m['h']})
+            continue
+        ath = [x for x in byitem[m['item']] if (x.get('role') or 'athlete') not in ROLE_LIST]
+        ms.append({'id': m['item'], 'when': m['label'], 'label': f"No. {m['issue']}", 'p': m['p'], 'h': m['h'], 'sum': m['sum'], 'note': (ath or [m])[0]['note']})
     photos = []
     for m in e['ms']:
         for ph in m['photos']:
@@ -187,6 +200,8 @@ for k, e in people.items():
     clubs = collections.Counter(m['club'] for m in e['ms'] if m['club'])
     rec = {'id': pid, 'name': name, 'sort': split(name)[2].lower() + ' ' + name.lower(), 'aka': sorted(e['aka']),
            'club': clubs.most_common(1)[0][0] if clubs else None, 'matchedBy': e['matched'], 'mentions': ms}
+    for k2, v in side.items():
+        if v: rec[k2] = v
     if photos:
         rec['photos'] = photos
         rec['photo'] = photos[0]

@@ -95,7 +95,7 @@ for f in sorted(glob.glob(f'{OUT}/issues/B*.json')):
 for p in pi:
     names = set(p.get('aka') or []) | {p['name']}
     seen, gal = set(), []
-    for m in p['mentions']:
+    for m in p['mentions'] + p.get('official', []) + p.get('wrote', []):
         for ph in item_photos.get(m['id'], []):
             if ph['f'] in seen or not (ph['who'] & names): continue
             seen.add(ph['f']); gal.append({k: v for k, v in ph.items() if k != 'who'})
@@ -169,6 +169,9 @@ for p in pi:
     p['legend'] = p['id'] in leg_ids
     shards.setdefault(letter, []).append(p)
     row = {'id': p['id'], 'name': p['name'], 'n': len(p['mentions']), 's': letter}
+    # items where they appear only as author / photographer / official (not counted in n)
+    o = {k: len(p[k]) for k in ('wrote', 'credits', 'official') if p.get(k)}
+    if o: row['o'] = o
     if p['legend']: row['legend'] = True
     light.append(row)
 for letter, ps in shards.items():
