@@ -840,6 +840,94 @@
    "year": 2006,
    "pageCount": 6,
    "items": 9
+  },
+  {
+   "issue": 246,
+   "label": "No. 246",
+   "date": "2006-09",
+   "year": 2006,
+   "pageCount": 4,
+   "items": 15
+  },
+  {
+   "issue": 247,
+   "label": "No. 247",
+   "date": "2006-09",
+   "year": 2006,
+   "pageCount": 4,
+   "items": 6
+  },
+  {
+   "issue": 248,
+   "label": "No. 248",
+   "date": "2006-10",
+   "year": 2006,
+   "pageCount": 4,
+   "items": 8
+  },
+  {
+   "issue": 249,
+   "label": "No. 249",
+   "date": "2006-10",
+   "year": 2006,
+   "pageCount": 4,
+   "items": 10
+  },
+  {
+   "issue": 250,
+   "label": "No. 250",
+   "date": "2006-11",
+   "year": 2006,
+   "pageCount": 5,
+   "items": 8
+  },
+  {
+   "issue": 251,
+   "label": "No. 251",
+   "date": "2007-01",
+   "year": 2007,
+   "pageCount": 5,
+   "items": 15
+  },
+  {
+   "issue": 252,
+   "label": "No. 252",
+   "date": "2007-01",
+   "year": 2007,
+   "pageCount": 2,
+   "items": 6
+  },
+  {
+   "issue": 253,
+   "label": "No. 253",
+   "date": "2007-02",
+   "year": 2007,
+   "pageCount": 5,
+   "items": 14
+  },
+  {
+   "issue": 254,
+   "label": "No. 254",
+   "date": "2007-03",
+   "year": 2007,
+   "pageCount": 5,
+   "items": 12
+  },
+  {
+   "issue": 255,
+   "label": "No. 255",
+   "date": "2007-05",
+   "year": 2007,
+   "pageCount": 6,
+   "items": 8
+  },
+  {
+   "issue": 256,
+   "label": "No. 256",
+   "date": "2007-05",
+   "year": 2007,
+   "pageCount": 4,
+   "items": 9
   }
  ],
  "coming": [
