@@ -564,9 +564,9 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
       h+='<div class="bv-browse"><section class="bv-sec" aria-labelledby="bv-az"><div class="bv-sec-hd"><h2 id="bv-az">ATHLETES A–Z</h2></div>'+
         '<form class="bv-mini" data-mini="people" role="search"><label for="bv-aq" class="bv-sr">Find an athlete</label><input id="bv-aq" type="search" placeholder="Find an athlete" autocomplete="off"><button type="submit">Find</button></form>'+
         '<p>Or browse by surname</p><div class="bv-az">'+'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(function(l){return '<a href="#people-'+l.toLowerCase()+'">'+l+'</a>'}).join('')+'</div>'+
-        (IDX.legends||[]).map(function(l){return '<a class="bv-legend-mini" href="#'+l.id+'">'+(l.photo?'<img src="'+MEDIA+esc(l.photo)+'" alt="" loading="lazy">':'<span></span>')+'<span><span class="label">Legend</span><b>'+esc(l.name)+'</b><small>'+esc(l.line)+'</small></span></a>'}).join('')+'</section>';
+        (IDX.legends||[]).map(function(l){return '<a class="bv-legend-mini" href="#'+l.id+'">'+(l.photo?'<img '+thumbSrc(l.photo)+' alt="" loading="lazy">':'<span></span>')+'<span><span class="label">Legend</span><b>'+esc(l.name)+'</b><small>'+esc(l.line)+'</small></span></a>'}).join('')+'</section>';
       h+='<section class="bv-sec" aria-labelledby="bv-ds"><div class="bv-sec-hd"><h2 id="bv-ds">DISCIPLINES</h2></div><div class="bv-disc">'+
-        H.disc.map(function(x){return '<a href="#sport-'+slug(x[0])+'">'+(x[2]?'<img src="'+MEDIA+esc(x[2])+'" alt="" loading="lazy">':'')+'<span><em>'+esc(SPORTN[x[0]]||x[0])+'</em><small>'+num(x[1])+' articles</small></span></a>'}).join('')+'</div></section>';
+        H.disc.map(function(x){return '<a href="#sport-'+slug(x[0])+'">'+(x[2]?'<img '+thumbSrc(x[2])+' alt="" loading="lazy">':'')+'<span><em>'+esc(SPORTN[x[0]]||x[0])+'</em><small>'+num(x[1])+' articles</small></span></a>'}).join('')+'</div></section>';
       h+='<section class="bv-sec" aria-labelledby="bv-al"><div class="bv-sec-hd"><h2 id="bv-al">ALSO INSIDE</h2></div><div>'+
         H.kinds.map(function(k){return '<a class="bv-row" href="#type-'+k[0]+'"><span>'+esc(KIND[k[0]]||k[0])+'</span><small>'+num(k[1])+'</small></a>'}).join('')+'</div></section></div>';
       main.innerHTML=h+'</div><p class="bv-note">Scans of every Belgravian are by Alan Mead, the club historian, at belgraveharriers.info. The readable text was transcribed from those scans; where the print is hard to read, the original is always beside it. Spotted a mistake, or want an entry removed? <a href="mailto:belgravian@belgraveharriers.com">belgravian@belgraveharriers.com</a></p>';
@@ -578,7 +578,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   function decade(d){
     var D=HOME.decades[d],h='<div class="bv-dec-hd"><h2>THE '+d+'s</h2><span>'+num(D.issues)+' issues · '+num(D.articles)+' articles · '+num(D.nphotos)+' photos</span></div>';
     if(D.photos.length)h+='<section class="bv-sec bv-dec-ph"><div class="bv-sec-hd"><h3>PHOTOGRAPHS</h3><span>'+num(D.nphotos)+' in the '+d+'s</span></div><div class="bv-ph-row">'+
-      D.photos.map(function(p){return '<figure style="--r:'+(+p.r||.75)+'"><img src="'+MEDIA+esc(p.f)+'" alt="'+esc(p.c)+'" loading="lazy" data-lb="'+MEDIA+esc(p.f)+'" data-cap="'+esc(p.cap||p.c)+'"'+(p.id?' data-href="#'+esc(p.id)+'"':'')+' data-w="'+esc(p.w||'')+'"><figcaption>'+esc(p.c)+' <i>'+esc(shortWhen(p.w||''))+'</i></figcaption></figure>'}).join('')+'</div></section>';
+      D.photos.map(function(p){return '<figure style="--r:'+(+p.r||.75)+'"><img '+thumbSrc(p.f)+' alt="'+esc(p.c)+'" loading="lazy" data-lb="'+MEDIA+esc(p.f)+'" data-cap="'+esc(p.cap||p.c)+'"'+(p.id?' data-href="#'+esc(p.id)+'"':'')+' data-w="'+esc(p.w||'')+'"><figcaption>'+esc(p.c)+' <i>'+esc(shortWhen(p.w||''))+'</i></figcaption></figure>'}).join('')+'</div></section>';
     var by={};D.covers.forEach(function(c){by[c.y]=c});var last=HOME.span[1],slots='';
     for(var y=+d;y<+d+10;y++){var c=by[y];
       slots+=c?'<a href="#'+issueKey(c.no)+'" class="bv-cover-y"><img src="'+pageImg(c.no,1)+'" alt="Cover of The Belgravian, '+esc(c.label)+'" loading="lazy"><b>'+y+'</b></a>':
@@ -793,6 +793,11 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
       h+='<details class="bv-pa-role"><summary>'+r[1]+' in <b>'+L.length+'</b> '+r[2]+(L.length===1?'':'s')+'</summary><ul>'+
         L.map(function(m){return '<li><a href="#'+esc(m.id)+'">'+esc(m.when||'')+(m.h?' · '+esc(m.h):'')+'</a></li>'}).join('')+'</ul></details>'});
     return h}
+  /* small images use 360px WebP thumbnails (thumbs/…), falling back to the full crop if a thumbnail is missing;
+     the lightbox still opens the full crop (data-lb) */
+  function thumbSrc(f){f=String(f||'');var full=MEDIA+esc(f);
+    if(!/^crops\//.test(f))return 'src="'+full+'"';
+    return 'src="'+MEDIA+esc(f.replace(/^crops\//,'thumbs/').replace(/\.(jpe?g|png|webp)$/i,'.webp'))+'" onerror="this.onerror=null;this.src=\''+full+'\'"'}
   function on(id,scroll,within){
     main.querySelectorAll('.bv-region,.bv-item').forEach(function(e){e.classList.toggle('on',e.dataset.id===id)});
     if(scroll){var scope=within||main;var el=scope.querySelector('.bv-item[data-id="'+id+'"]')||main.querySelector('.bv-item[data-id="'+id+'"]');if(el&&pane==='text')el.scrollIntoView({block:'start',behavior:'smooth'})}
@@ -826,8 +831,13 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   /* ---------- people ---------- */
   var SHARDS={};
   function loadPeople(){return PEOPLE?Promise.resolve(PEOPLE):get('people.json').then(function(d){d.byId={};d.people.forEach(function(p){d.byId[p.id]=p});PEOPLE=d;return d})}
-  function loadPerson(id){var row=PEOPLE.byId[id];if(!row)return Promise.resolve(null);
-    return (SHARDS[row.s]?Promise.resolve(SHARDS[row.s]):get('people/'+row.s+'.json').then(function(d){SHARDS[row.s]=d;return d})).then(function(d){return d[id]||null})}
+  function loadPerson(id){var row=PEOPLE&&PEOPLE.byId[id];
+    /* one small file per person (people/p/<id>.json), so a profile needs neither the people list nor a letter file;
+       falls back to the letter file if the person file isn't there */
+    if(row&&SHARDS[row.s])return Promise.resolve(SHARDS[row.s][id]||null);
+    return get('people/p/'+id+'.json').catch(function(){
+      return (row?Promise.resolve(row):loadPeople().then(function(){return PEOPLE.byId[id]})).then(function(r){if(!r)return null;
+        return get('people/'+r.s+'.json').then(function(d){SHARDS[r.s]=d;return d[id]||null})})})}
   function peopleList(letter){
     var ps,head,sub;
     if(letter){ps=PEOPLE.people.filter(function(p){return p.s===letter}).sort(function(a,b){var sa=a.name.split(/\s+/).pop(),sb=b.name.split(/\s+/).pop();return sa.localeCompare(sb)||a.name.localeCompare(b.name)});
@@ -900,7 +910,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
         (ms.length?'<p class="bv-pa-sum">Named <b>'+ms.length+' time'+(ms.length===1?'':'s')+'</b> in '+ni+' issue'+(ni===1?'':'s')+(photos.length?', and in '+photos.length+' photograph'+(photos.length===1?'':'s'):'')+'.</p>':'')+
         roleLines(p)+
         '</div>';
-      if(gal.length)h+='<div class="bv-pa-gal"><div class="bv-gallery" aria-label="Photographs of '+esc(p.name)+'">'+gal.map(function(f){return '<figure><img src="'+MEDIA+esc(f.f)+'" alt="'+esc(f.c||p.name)+'" loading="lazy" '+lbAttr(f)+'><figcaption>'+esc(yearOf(f.w))+'</figcaption></figure>'}).join('')+'</div>'+
+      if(gal.length)h+='<div class="bv-pa-gal"><div class="bv-gallery" aria-label="Photographs of '+esc(p.name)+'">'+gal.map(function(f){return '<figure><img '+thumbSrc(f.f)+' alt="'+esc(f.c||p.name)+'" loading="lazy" '+lbAttr(f)+'><figcaption>'+esc(yearOf(f.w))+'</figcaption></figure>'}).join('')+'</div>'+
         (gal.length>6?'<button type="button" class="bv-pa-allph">All '+gal.length+' photos →</button>':'')+'</div>';
       if(years.length>2&&ms.length>=10&&+y0&&+y1){
         var bars='',ax=[y0];for(var y=+y0;y<=+y1;y++){var n=(byY[y]||[]).length;
@@ -932,13 +942,13 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
       h+='<section class="bv-pa-years" aria-label="Every mention, year by year"><h2 class="bv-sr">Every mention</h2>'+years.map(function(y,k){
         var idx=byY[y],n=idx.length,pc=phY[y]||0,pk=pickY[y]&&pickY[y].f,open=k<openN;
         var cnt=n+' mention'+(n===1?'':'s')+(pc?' · '+pc+' photo'+(pc===1?'':'s'):'');
-        var fig=pk?'<figure class="bv-yr-fig"><img src="'+MEDIA+esc(pk.f)+'" alt="'+esc(pk.c||p.name)+'" loading="lazy" '+lbAttr(pk)+'><figcaption>'+esc(pk.c||'')+(pk.id?' <a href="#'+esc(pk.id)+'">'+esc(pk.w||'')+'</a>':'')+'</figcaption></figure>':'';
+        var fig=pk?'<figure class="bv-yr-fig"><img '+thumbSrc(pk.f)+' alt="'+esc(pk.c||p.name)+'" loading="lazy" '+lbAttr(pk)+'><figcaption>'+esc(pk.c||'')+(pk.id?' <a href="#'+esc(pk.id)+'">'+esc(pk.w||'')+'</a>':'')+'</figcaption></figure>':'';
         var list=idx.map(function(i,j){var m=ms[i],x=X[i]||'';
           return '<article class="bv-m'+(j>=lim?' extra':'')+'"><button type="button" class="bv-m-hd" aria-expanded="false"><span class="when">'+esc(shortWhen(m.when))+' · p '+m.p+'</span><span class="h">'+esc(m.h||m.sum||'Untitled item')+'</span>'+(m.note?'<span class="note">'+esc(m.note)+'</span>':'')+'<span class="chev" aria-hidden="true">▾</span></button>'+
             '<div class="bv-m-bd">'+(x?'<p class="pass">'+hlName(x,sur)+'</p>':'')+'<div class="act"><button type="button" class="rd" data-full="'+esc(m.id)+'">Read the whole article</button><a href="#'+esc(m.id)+'">See the page</a></div><div class="full" hidden></div></div></article>'}).join('');
         if(n>lim)list+='<button type="button" class="bv-yr-all">Show all '+n+' from '+esc(y)+'</button>';
         return '<section class="bv-yr'+(open?' open':'')+'" data-y="'+esc(y)+'"><button type="button" class="bv-yr-row" aria-expanded="'+open+'"><span class="y">'+esc(y)+'</span><span class="bar"><i style="width:'+Math.round(n/max*100)+'%"></i></span><span class="n">'+cnt+'</span>'+
-          (pk?'<img class="th" src="'+MEDIA+esc(pk.f)+'" alt="" loading="lazy">':'<span class="th"></span>')+'<span class="chev" aria-hidden="true">▾</span></button>'+
+          (pk?'<img class="th" '+thumbSrc(pk.f)+' alt="" loading="lazy">':'<span class="th"></span>')+'<span class="chev" aria-hidden="true">▾</span></button>'+
           '<div class="bv-yr-side"><div class="hd"><h3>'+esc(y)+'</h3><span class="n">'+cnt+'</span></div>'+fig+'</div><div class="bv-yr-list">'+list+'</div></section>'}).join('')+'</section>';
       h+='<p class="bv-note">Names are shown as they were printed'+(p.aka&&p.aka.length>1?' — here as '+p.aka.map(esc).join(', '):'')+'. Spotted a mistake? <a href="mailto:belgravian@belgraveharriers.com">belgravian@belgraveharriers.com</a></p>';
       main.innerHTML=h+'</div>';root.scrollIntoView({block:'start'});idle();
@@ -962,7 +972,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     if((m=h.match(/^d(\d{4})$/)))return decadeAll(m[1]);
     if((m=h.match(/^sport-([a-z-]+)$/)))return listOf('sport',m[1]);
     if((m=h.match(/^type-([a-z]+)$/)))return listOf('type',m[1]);
-    if(/^p-/.test(h))return loadPeople().then(function(){person(h)});
+    if(/^p-/.test(h))return person(h);
     if(h==='search')return search(q.value);
     cur.no=null;shelf();idle();
   }
@@ -1098,8 +1108,11 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   window.addEventListener('scroll',function(){requestAnimationFrame(showTop)},{passive:true});
   ['pointerover','touchstart','focusin'].forEach(function(ev){root.addEventListener(ev,prefetch,{passive:true})});
   window.addEventListener('hashchange',function(){route();requestAnimationFrame(showTop)});
-  Promise.all([get('index.json'),get('people.json').then(function(d){d.byId={};d.people.forEach(function(p){d.byId[p.id]=p});PEOPLE=d}).catch(function(){})])
-    .then(function(r){IDX=r[0];loadHome().catch(function(){});route()})
+  /* the people list (~250 KB) is only needed for profiles, the people list, search suggestions and name links in
+     issues: the front page no longer waits for it */
+  var pplP=loadPeople().catch(function(){});
+  get('index.json').then(function(ix){IDX=ix;loadHome().catch(function(){});var h=(location.hash||'').slice(1);
+      return (/^B\d|^people|^search/.test(h)?pplP:Promise.resolve()).then(function(){route()})})
     .catch(function(){main.innerHTML='<p class="bv-msg">The archive couldn’t be loaded just now. Please try again shortly.</p>'});
 })();
 </script>

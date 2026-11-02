@@ -176,6 +176,16 @@ for p in pi:
     light.append(row)
 for letter, ps in shards.items():
     json.dump({p['id']: p for p in ps}, open(f'{OUT}/people/{letter}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+# one small file per person, so a profile page loads only that person (people/p/<id>.json)
+os.makedirs(f'{OUT}/people/p', exist_ok=True)
+keep = set()
+for ps in shards.values():
+    for p in ps:
+        fn = f"{OUT}/people/p/{p['id']}.json"; keep.add(fn)
+        s_ = json.dumps(p, ensure_ascii=False, separators=(',', ':'))
+        if not os.path.exists(fn) or open(fn).read() != s_: open(fn, 'w').write(s_)
+for old in glob.glob(f'{OUT}/people/p/*.json'):
+    if old not in keep: os.remove(old)
 json.dump({'people': light}, open(f'{OUT}/people.json', 'w'), ensure_ascii=False, separators=(',', ':'))
 for l in legends:
     src = f"{W}/../legend/{l['id'][2:]}.json"
