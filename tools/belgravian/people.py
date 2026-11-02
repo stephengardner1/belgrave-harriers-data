@@ -13,7 +13,7 @@ import json, glob, re, sys, os, unicodedata, collections
 W = sys.argv[1]
 KEEP_APART = {'g north'}
 # printed abbreviations that point to one person (the magazine's own convention)
-ALIASES = {'gy north': 'gerald north', 'gf north': 'geoffrey north', 'gorry north': 'gerald north', 'a stroud': 'albert stroud', 'a ekoku': 'abi ekoku', 'c lawton': 'carl lawton', 'lawton': 'carl lawton'}  # 'Gorry North' (B175, 1970) is Gerry; 'A. Stroud' is Bert Stroud: Steve, 29 Oct 2026; 'A. Ekoku' is Abi Ekoku, 'C. Lawton' and a bare male 'Lawton' are Carl Lawton: Steve, 1 Nov 2026        # Gerry North and Geoff North are different people (Steve, Oct 2026)
+ALIASES = {'gy north': 'gerald north', 'gf north': 'geoffrey north', 'gorry north': 'gerald north', 'a stroud': 'albert stroud', 'a ekoku': 'abi ekoku', 'c lawton': 'carl lawton', 'lawton': 'carl lawton', 'gerry adams': 'graham adams', "'gerry' adams": 'graham adams', 'g adams': 'graham adams'}  # 'Gorry North' (B175, 1970) is Gerry; 'A. Stroud' is Bert Stroud: Steve, 29 Oct 2026; 'A. Ekoku' is Abi Ekoku, 'C. Lawton' and a bare male 'Lawton' are Carl Lawton: Steve, 1 Nov 2026; Gerry/'Gerry'/G. Adams (all 1985+) are Graham Adams: Steve, 2 Nov 2026        # Gerry North and Geoff North are different people (Steve, Oct 2026)
 
 sl = json.load(open('/home/claude/stephengardner1/surrey-league/data.json'))
 sl_names = set()
@@ -65,7 +65,8 @@ def canon_first(f):
     return NICK.get(f, f)
 
 def key(n):
-    return unicodedata.normalize('NFD', n).encode('ascii', 'ignore').decode().lower().replace('.', '').strip()
+    # hyphen vs space is a spacing slip, not a different name (McLean-Foreman = McLean Foreman)
+    return re.sub(r'\s+', ' ', unicodedata.normalize('NFD', n).encode('ascii', 'ignore').decode().lower().replace('.', '').replace('-', ' ')).strip()
 
 def slug(s):
     return re.sub(r'[^a-z0-9]+', '-', key(s)).strip('-')

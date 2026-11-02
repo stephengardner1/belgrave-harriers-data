@@ -656,6 +656,46 @@
    "year": 1995,
    "pageCount": 76,
    "items": 189
+  },
+  {
+   "issue": 223,
+   "label": "November 1995",
+   "date": "1995-11",
+   "year": 1995,
+   "pageCount": 80,
+   "items": 153
+  },
+  {
+   "issue": 224,
+   "label": "June 1996",
+   "date": "1996-06",
+   "year": 1996,
+   "pageCount": 48,
+   "items": 124
+  },
+  {
+   "issue": 225,
+   "label": "February 1997",
+   "date": "1997-02",
+   "year": 1997,
+   "pageCount": 60,
+   "items": 131
+  },
+  {
+   "issue": 226,
+   "label": "March 1998",
+   "date": "1998-03",
+   "year": 1998,
+   "pageCount": 64,
+   "items": 133
+  },
+  {
+   "issue": 227,
+   "label": "March 1999",
+   "date": "1999-03",
+   "year": 1999,
+   "pageCount": 68,
+   "items": 124
   }
  ],
  "coming": [
