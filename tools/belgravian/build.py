@@ -31,6 +31,13 @@ def event_tag(e):
     t = event_tag0(e)
     k = ev_key(t)
     if SOUTHERN_XC.match(k): return 'Southern Cross Country Championships'
+    # Steve, 2 Nov 2026: "British League" and "BAL" are the British Athletics League (divisions and qualifying matches
+    # included); its cup competitions keep their own names, with BAL / British League spelled out
+    kb = re.sub(r'^(b\.?a\.?l\.?|british league)\b', 'british athletics league', k)
+    if re.match(r'^british athletics league( (div(ision)?\.? ?\w+|premiership|qualifying match|match \w+))?$', kb):
+        return 'British Athletics League'
+    if kb != k and re.match(r'^british athletics league (gold )?cup$', kb):
+        return 'British Athletics League ' + ('Gold Cup' if 'gold' in kb else 'Cup')
     return EVENT_SAME.get(k, t)
 def event_tag0(e):
     t = YEAR.sub('', e)
