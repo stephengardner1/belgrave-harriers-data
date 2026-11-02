@@ -23,9 +23,15 @@ EVENT_SAME = {'southern counties cross country championships': 'Southern Cross C
 def ev_key(t):
     t = re.sub(r'\s+', ' ', t.lower().replace('-', ' ')).strip()
     return re.sub(r'\bchampionship\b', 'championships', t)
+# Steve, 2 Nov 2026: the junior, youths, women's and veterans Southern championships (with or without "Counties")
+# all fold into the one Southern Cross Country Championships. Leagues, inter-counties and association races stay apart.
+SOUTHERN_XC = re.compile(r"^(veterans )?southern (counties )?((junior|juniors|youths?|women'?s|ladies|veterans|vets) )?"
+                         r"(cross country|c\.?c\.?) championships( \(.*\))?$")
 def event_tag(e):
     t = event_tag0(e)
-    return EVENT_SAME.get(ev_key(t), t)
+    k = ev_key(t)
+    if SOUTHERN_XC.match(k): return 'Southern Cross Country Championships'
+    return EVENT_SAME.get(k, t)
 def event_tag0(e):
     t = YEAR.sub('', e)
     t = re.sub(r'\(\s*\)', '', t)                      # empty brackets left behind
