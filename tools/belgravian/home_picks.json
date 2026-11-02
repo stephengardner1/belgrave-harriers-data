@@ -1,0 +1,200 @@
+{
+ "_note": "Hand-picked for the archive front page (Nov 2026). photos: six per decade (crop path, width/height ratio, short caption written from the printed one). disc: one photo per discipline. faces: square portraits cropped from the athlete's own photos in the gazette, stored in belgravian/home/faces/.",
+ "photos": {
+  "1960": [
+   {
+    "f": "crops/B161/B161-p27-arnold-bent-high-jump.jpg",
+    "r": 1.012,
+    "c": "Arnold Bent clears 5ft 9in, his best in competition"
+   },
+   {
+    "f": "crops/B163/B163-p32-dabbs-davies-fuller.jpg",
+    "r": 0.855,
+    "c": "Charlie Dabbs leads Dai Davies and Mike Fuller"
+   },
+   {
+    "f": "crops/B161/B161-p21-dear-satchell-south-of-thames.jpg",
+    "r": 1.25,
+    "c": "John Dear and Howard Satchell plough through the mud"
+   },
+   {
+    "f": "crops/B163/B163-p17-john-mitchell-100y.jpg",
+    "r": 1.162,
+    "c": "John Mitchell qualifies for the 100y final in 9.9"
+   },
+   {
+    "f": "crops/B160/B160-p15-thorpe-to-thresher.jpg",
+    "r": 0.688,
+    "c": "John Thresher takes over from Mel Thorpe"
+   },
+   {
+    "f": "crops/B170/B170-p08-fairclough-major-changeover.jpg",
+    "r": 0.714,
+    "c": "Tony Fairclough sends Adrian Major away"
+   }
+  ],
+  "1970": [
+   {
+    "f": "crops/B175/B175-p35-carl-lawton-walk.jpg",
+    "r": 0.76,
+    "c": "Carl Lawton, 7th in the Lambeth 5"
+   },
+   {
+    "f": "crops/B192/B192-p24-gillett-400m.jpg",
+    "r": 1.01,
+    "c": "Charlie Gillett clocks 50.7 for 400m"
+   },
+   {
+    "f": "crops/B191/B191-p17-mann-bicourt-gorman.jpg",
+    "r": 0.931,
+    "c": "Lionel Mann leads John Bicourt and Brian Gorman"
+   },
+   {
+    "f": "crops/B198/B198-p33-dawn-mcneil.jpg",
+    "r": 1.46,
+    "c": "Dawn McNeil, Ladies Section track captain"
+   },
+   {
+    "f": "crops/B184/B184-p11-harry-churcher-1948.jpg",
+    "r": 0.702,
+    "c": "Harry Churcher, 5th in the 1948 Olympic 10,000m walk"
+   },
+   {
+    "f": "crops/B194/B194-p23-mann-oconnor-haig-relay.jpg",
+    "r": 1.507,
+    "c": "Pat O’Connor sends Lionel Mann away in the Belgrave Relay"
+   }
+  ],
+  "1980": [
+   {
+    "f": "crops/B207b/B207b-p36-obeng-aaa-60m.jpg",
+    "r": 1.395,
+    "c": "Ernest Obeng wins the AAA indoor 60m"
+   },
+   {
+    "f": "crops/B206/B206-p44-phil-lovell-pole-vault.jpg",
+    "r": 0.71,
+    "c": "Phil Lovell sets a club pole vault record of 4.75m"
+   },
+   {
+    "f": "crops/B213/B213-p33-john-regis-relay.jpg",
+    "r": 0.683,
+    "c": "John Regis runs a 45.36 relay split"
+   },
+   {
+    "f": "crops/B212/B212-p68-caulker-george-200m.jpg",
+    "r": 1.49,
+    "c": "Alison Caulker dips to win the 200m"
+   },
+   {
+    "f": "crops/B203/B203-p13-carl-lawton-brighton.jpg",
+    "r": 0.626,
+    "c": "Carl Lawton on his way to winning the London to Brighton"
+   },
+   {
+    "f": "crops/B207b/B207b-p23-sturman-staines-coulsdon.jpg",
+    "r": 1.773,
+    "c": "Kevin Sturman and Gary Staines sprint for the line"
+   }
+  ],
+  "1990": [
+   {
+    "f": "crops/B222/B222-p26-korjie.jpg",
+    "r": 0.75,
+    "c": "Haroun Korjie, 10.53 on his debut"
+   },
+   {
+    "f": "crops/B226/B226-p36-justin-chaston-steeplechase.jpg",
+    "r": 0.543,
+    "c": "Justin Chaston, maximum points in the steeplechase"
+   },
+   {
+    "f": "crops/B223/B223-p24-league-trophy.jpg",
+    "r": 1.243,
+    "c": "The British Athletics League trophy"
+   },
+   {
+    "f": "crops/B221/B221-p42-pat-newell.jpg",
+    "r": 0.917,
+    "c": "Pat Newell, first M60 in the Belgrave 10k"
+   },
+   {
+    "f": "crops/B223/B223-p06-snowy-brooks-shot.jpg",
+    "r": 0.581,
+    "c": "Snowy Brooks, World Veterans’ decathlon silver medallist"
+   },
+   {
+    "f": "crops/B219/B219-p15-1500-anderson-ogle.jpg",
+    "r": 1.195,
+    "c": "Mark Anderson chases Chris Ogle in the 1500m"
+   }
+  ],
+  "2000": [
+   {
+    "f": "crops/B231/B231-p36-culley-stares-relay.jpg",
+    "r": 0.688,
+    "c": "Jennifer Culley takes the baton from Hannah Stares"
+   },
+   {
+    "f": "crops/B235/B235-p01-maureen-noel.jpg",
+    "r": 0.445,
+    "c": "Maureen Noel in the 10k track walk"
+   },
+   {
+    "f": "crops/B231/B231-p14-eva-massey.jpg",
+    "r": 0.538,
+    "c": "Eva Massey helps the Belles qualify"
+   },
+   {
+    "f": "crops/B236/B236-p05-wicks-sharp-brockwell.jpg",
+    "r": 0.664,
+    "c": "Phil Wicks and Stephen Sharp at Brockwell Park"
+   },
+   {
+    "f": "crops/B230/B230-p59-allen-andy-graffin.jpg",
+    "r": 1.9,
+    "c": "Allen and Andy Graffin, fastest long and short stages"
+   },
+   {
+    "f": "crops/B230/B230-p59-mark-miles.jpg",
+    "r": 0.41,
+    "c": "Mark Miles stretches the lead on stage 5"
+   }
+  ]
+ },
+ "disc": {
+  "track": "crops/B207b/B207b-p36-obeng-aaa-60m.jpg",
+  "field": "crops/B161/B161-p27-arnold-bent-high-jump.jpg",
+  "race walking": "crops/B175/B175-p35-carl-lawton-walk.jpg",
+  "cross country": "crops/B161/B161-p21-dear-satchell-south-of-thames.jpg",
+  "road": "crops/B163/B163-p32-dabbs-davies-fuller.jpg",
+  "club life": "crops/B198/B198-p33-dawn-mcneil.jpg"
+ },
+ "faces": {
+  "p-alan-mead": "home/faces/p-alan-mead.jpg",
+  "p-carl-lawton": "home/faces/p-carl-lawton.jpg",
+  "p-charlie-dickinson": "home/faces/p-charlie-dickinson.jpg",
+  "p-colin-pearson": "home/faces/p-colin-pearson.jpg",
+  "p-dave-north": "home/faces/p-dave-north.jpg",
+  "p-gary-staines": "home/faces/p-gary-staines.jpg",
+  "p-gerry-north": "home/faces/p-gerry-north.jpg",
+  "p-jim-estall": "home/faces/p-jim-estall.jpg",
+  "p-john-bicourt": "home/faces/p-john-bicourt.jpg",
+  "p-john-gladwin": "home/faces/p-john-gladwin.jpg",
+  "p-john-thresher": "home/faces/p-john-thresher.jpg",
+  "p-kevin-nash": "home/faces/p-kevin-nash.jpg",
+  "p-laurie-o-hara": "home/faces/p-laurie-o-hara.jpg",
+  "p-lee-hurst": "home/faces/p-lee-hurst.jpg",
+  "p-lionel-mann": "home/faces/p-lionel-mann.jpg",
+  "p-marcello-bizio": "home/faces/p-marcello-bizio.jpg",
+  "p-mark-sinclair": "home/faces/p-mark-sinclair.jpg",
+  "p-ray-hall": "home/faces/p-ray-hall.jpg",
+  "p-ray-middleton": "home/faces/p-ray-middleton.jpg",
+  "p-roger-alsop": "home/faces/p-roger-alsop.jpg",
+  "p-stephen-sharp": "home/faces/p-stephen-sharp.jpg",
+  "p-trevor-hart": "home/faces/p-trevor-hart.jpg",
+  "p-paul-freary": "home/faces/p-paul-freary.jpg",
+  "p-mark-miles": "home/faces/p-mark-miles.jpg",
+  "p-will-cockerell": "home/faces/p-will-cockerell.jpg"
+ }
+}

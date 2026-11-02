@@ -26,11 +26,18 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
 .bv .lit{background:linear-gradient(135deg,#e7d8b0 0%,#d6b97a 28%,#d5b271 54%,#d09d55 93%,#ce954a 100%)}
 
 /* masthead */
-.bv-mast{display:grid;gap:12px;padding-block:8px 24px;border-bottom:1px solid var(--rule)}
-.bv-mast .rule2{height:5px;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
-.bv-mast h1{font:300 56px/1 var(--titling);text-transform:uppercase;letter-spacing:-.01em;margin:0;color:var(--ink);text-wrap:balance}
-.bv-mast h1 a{color:inherit;text-decoration:none}
-.bv-mast p{font:400 17px/27px var(--text);color:var(--body);margin:0;max-width:62ch}
+.bv-mast{display:grid;gap:14px;padding-block:8px 20px}
+.bv-folio{margin:0;padding:7px 0;border-top:3px double var(--ink);border-bottom:1px solid var(--ink);display:flex;flex-direction:column;gap:2px;font:400 12px/16px var(--mono);color:var(--ink)}
+.bv .bv-folio a{color:inherit;text-decoration:none}
+.bv-folio .n{display:none}.bv-folio .on{color:var(--slate)}
+.bv-mast-row{display:grid;gap:12px}
+.bv-mast h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;margin:0}
+@media (min-width:861px){
+  .bv-folio{flex-direction:row;justify-content:space-between;gap:24px;font-size:13px;line-height:18px}
+  .bv-folio .n{display:inline}
+  .bv.bv-home-mode .bv-mast-row{grid-template-columns:minmax(0,1fr) 460px;align-items:end;gap:40px;padding-top:12px}
+  .bv.bv-home-mode .bv-mast h1{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;font:600 44px/50px var(--display);color:var(--ink)}
+}
 .bv-search{display:flex;gap:8px;max-width:620px}
 .bv-search input{flex:1;min-width:0;font:400 16px/24px var(--text);color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:10px 14px}
 .bv-search input::placeholder{color:var(--slate)}
@@ -185,6 +192,104 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
 .bv-src{font:400 13px/18px var(--text);color:var(--slate);max-width:70ch}
 .bv-note{font:400 13px/18px var(--text);color:var(--slate);margin:24px 0 0;max-width:70ch}
 
+/* front page (direction E, Nov 2026): folio, timeline picks a decade, then photos, issues, athletes,
+   competitions; then the whole archive by surname, discipline and kind. Section heads in titling capitals. */
+.bv-home{display:grid}
+.bv-era{background:var(--cream);padding:16px;display:grid;gap:12px}
+.bv-era-chart{display:grid}
+.bv-era-stub{display:none}
+.bv-era-bars{display:flex;align-items:flex-end;gap:1px;height:64px}
+.bv-era-bars button{flex:1 1 0;min-width:0;padding:0;border:0;border-radius:1px 1px 0 0;background:#d9c7a6}
+.bv-era-bars button.z{background:var(--rule);cursor:default}
+.bv-era-bars button.on{background:var(--claret)}
+.bv-era-axis{display:flex;margin-top:-6px}
+.bv-era-axis span{flex:1 1 0;min-width:0;overflow:visible;white-space:nowrap;font:400 11px/14px var(--mono);color:var(--slate)}
+.bv-era-axis span.m5{visibility:hidden}
+.bv-era-axis span:last-child{direction:rtl}
+.bv-era-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}
+.bv-era-tabs button{height:44px;border:1px solid var(--rule);border-radius:3px;background:var(--paper);color:var(--ink);font:600 15px/20px var(--text);padding:0 6px}
+.bv-era-tabs button[aria-selected=true]{background:var(--claret);border-color:var(--claret);color:#fff}
+.bv-era-note{margin:0;font-size:13px;line-height:18px;color:var(--slate)}
+.bv-sec{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;align-content:start;min-width:0}
+.bv-sec-hd{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:6px;border-bottom:1px solid var(--ink)}
+.bv .bv-sec-hd h2,.bv .bv-sec-hd h3{margin:0;font:300 22px/26px var(--titling);color:var(--ink);letter-spacing:0}
+.bv-sec-hd a,.bv-sec-hd span{font-size:14px;color:var(--slate)}
+.bv .bv-sec-hd a{color:var(--claret)}
+.bv-dec-hd{margin-top:24px;padding-bottom:8px;border-bottom:1px solid var(--ink);display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 20px}
+.bv .bv-dec-hd h2{margin:0;font:300 36px/40px var(--titling);color:var(--ink)}
+.bv-dec-hd span{font:400 13px/18px var(--mono);color:var(--slate)}
+.bv-dec-ph{margin-top:20px}
+.bv-ph-row{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;padding-bottom:4px}
+.bv-ph-row figure{margin:0;display:grid;gap:6px;align-content:start;scroll-snap-align:start;flex:0 0 calc(200px * var(--r,.75))}
+.bv-ph-row img{width:100%;height:200px;object-fit:cover;border-radius:2px;background:var(--scan-bg);display:block;cursor:zoom-in}
+.bv-ph-row figcaption{font:400 13px/18px var(--text);color:var(--body)}
+.bv-ph-row figcaption i{font:400 11px/16px var(--mono);font-style:normal;color:var(--slate);white-space:nowrap}
+.bv-dec-cols{display:grid;gap:28px;margin-top:28px}
+.bv-yc{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;padding-bottom:4px}
+.bv .bv-yc a,.bv-yc .gap{flex:0 0 84px;display:grid;gap:4px;align-content:start;text-decoration:none;color:var(--ink);scroll-snap-align:start}
+.bv-yc img{width:100%;height:116px;object-fit:cover;object-position:top;border-radius:2px;background:var(--scan-bg);display:block}
+.bv-yc .gap i{height:116px;border:1px dashed #cfc7bb;border-radius:2px;display:flex;align-items:center;justify-content:center;text-align:center;padding:6px;font:400 11px/14px var(--text);font-style:normal;color:var(--slate)}
+.bv-yc b{font:400 12px/16px var(--mono);color:var(--ink)}
+.bv .bv-row{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:48px;border:0;border-bottom:1px solid var(--rule);background:none;padding:4px 0;width:100%;text-align:left;text-decoration:none;color:var(--ink);font:400 16px/22px var(--text)}
+.bv .bv-row:hover{color:var(--claret)}
+.bv-row small{font:400 12px/16px var(--mono);color:var(--slate);white-space:nowrap}
+.bv-row .who{display:flex;align-items:center;gap:12px;font:600 17px/22px var(--display)}
+.bv-row .face{width:40px;height:40px;border-radius:50%;object-fit:cover;filter:grayscale(1);background:var(--scan-bg);flex:none}
+.bv-row .ini{width:40px;height:40px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;font:600 14px/1 var(--display);color:var(--gold-ink);flex:none}
+.bv-mini{display:flex;gap:8px;margin-top:4px}
+.bv-mini input{flex:1;min-width:0;height:44px;padding:0 14px;border:1px solid #cfc7bb;border-radius:3px;font:400 16px var(--text);color:var(--ink);background:var(--paper)}
+.bv-mini button{height:44px;padding:0 16px;border:1px solid var(--claret);border-radius:3px;background:var(--paper);color:var(--claret);font:500 15px var(--text)}
+.bv-browse{margin-top:44px;padding-top:12px;border-top:3px double var(--ink);display:grid;gap:36px}
+.bv-browse p{margin:0;font-size:14px;line-height:20px;color:var(--body)}
+.bv-az{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.bv .bv-az a{height:44px;display:flex;align-items:center;justify-content:center;border:1px solid var(--rule);border-radius:3px;text-decoration:none;font:600 18px/1 var(--display);color:var(--ink)}
+.bv .bv-az a:hover{border-color:var(--claret);color:var(--claret)}
+.bv .bv-legend-mini{display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px;align-items:center;text-decoration:none;color:var(--ink);margin-top:6px}
+.bv-legend-mini img{width:72px;height:92px;object-fit:cover;object-position:top;border-radius:2px;background:var(--scan-bg)}
+.bv-legend-mini b{display:block;font:600 20px/24px var(--display)}
+.bv-legend-mini small{display:block;font-size:13px;line-height:18px;color:var(--body)}
+.bv-disc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.bv .bv-disc a{display:grid;background:var(--cream);border-radius:4px;overflow:hidden;text-decoration:none;color:var(--ink)}
+.bv-disc img{width:100%;height:96px;object-fit:cover;object-position:center 30%;filter:grayscale(1);display:block}
+.bv-disc span{display:grid;gap:2px;padding:10px 12px 12px;font:600 16px/22px var(--text)}
+.bv-disc small{font:400 12px/16px var(--mono);color:var(--slate)}
+@media (min-width:861px){
+  .bv-era{padding:28px 32px 24px}
+  .bv-era-chart{grid-template-columns:150px minmax(0,1fr);gap:8px;align-items:end}
+  .bv-era-stub{display:grid;align-content:end;gap:6px;height:120px;padding-right:12px;border-right:1px dashed #a39b8f}
+  .bv-era-stub b{font:600 18px/22px var(--display);color:var(--slate)}
+  .bv-era-stub span{font-size:13px;line-height:18px;color:var(--slate)}
+  .bv-era-bars{height:120px;gap:3px}
+  .bv-era-bars button:not(.z){cursor:pointer}
+  .bv-era-bars button:not(.z):not(.on):hover{background:var(--gold-ink)}
+  .bv-era-axis{margin:0 0 0 158px}
+  .bv-era-axis span{font-size:12px}
+  .bv-era-axis span.m5{visibility:visible}
+  .bv-era-tabs{display:flex;gap:6px}
+  .bv-era-tabs button{padding:0 20px;font-size:16px}
+  .bv-era-note{display:none}
+  .bv .bv-dec-hd h2{font-size:48px;line-height:52px}
+  .bv-dec-hd{margin-top:36px;padding-bottom:10px}
+  .bv-dec-hd span{font-size:14px}
+  .bv .bv-sec-hd h2,.bv .bv-sec-hd h3{font-size:26px;line-height:30px}
+  .bv-ph-row{gap:12px;overflow:visible;align-items:flex-start}
+  .bv-ph-row figure{flex:var(--r,.75) 1 0;min-width:0}
+  .bv-ph-row img{height:250px}
+  .bv-dec-cols{grid-template-columns:560px minmax(0,1fr) minmax(0,1fr);gap:48px;margin-top:32px}
+  .bv-yc{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px 12px;overflow:visible}
+  .bv-yc img,.bv-yc .gap i{height:140px}
+  .bv-browse{margin-top:72px;padding-top:14px;grid-template-columns:420px minmax(0,1fr) minmax(0,1fr);gap:48px}
+  .bv-az{grid-template-columns:repeat(9,minmax(0,1fr))}
+  .bv .bv-az a{height:40px;font-size:17px}
+  .bv-disc{grid-template-columns:minmax(0,1fr);gap:6px}
+  .bv .bv-disc a{grid-template-columns:48px minmax(0,1fr) auto;align-items:center;gap:12px;padding:6px 12px 6px 6px}
+  .bv-disc img{width:48px;height:48px;border-radius:2px}
+  .bv-disc span{display:contents}
+  .bv-disc span>em{font:600 15px/20px var(--text);font-style:normal}
+}
+.bv-disc span>em{font-style:normal}
+.bv-list-more{margin-top:16px;font:500 15px/20px var(--text);color:var(--claret);background:none;border:1px solid var(--rule);border-radius:3px;padding:10px 16px;min-height:44px}
+
 /* lightbox */
 .bv-lb{position:fixed;inset:0;z-index:2147483000;cursor:zoom-out;background:rgba(20,16,15,.92);display:grid;place-items:center;padding:max(24px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
 .bv-lb figure{margin:0;display:grid;gap:10px;max-width:min(1100px,100%);max-height:100%}
@@ -193,7 +298,6 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
 .bv-lb button{position:absolute;top:max(12px,env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));font:500 14px/20px var(--text);color:#fff;background:rgba(255,255,255,.12);border:0;border-radius:8px;padding:10px 16px}
 
 @media (max-width:860px){
-  .bv-mast h1{font-size:40px}
   .bv-seg{display:flex}
   .bv-seg{position:sticky;top:var(--bv-top,12px);z-index:2;box-shadow:0 0 0 6px var(--paper)}
   .bv-flow{--top:calc(var(--bv-top,12px) + 52px)}
@@ -394,14 +498,14 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
 
 <div id="bh-belgravian" class="bv bv-wide">
   <header class="bv-mast">
-    <div class="rule2" aria-hidden="true"></div>
-    <span class="label">Belgrave Harriers · Founded 1887</span>
-    <h1><a href="#shelf">The Belgravian</a></h1>
-    <p>The club’s own gazette, from its first issue in April 1925 to its last in 2009. Read every page as it was printed, beside a clean, searchable version.</p>
-    <form class="bv-search" role="search">
-      <input id="bv-q" type="search" placeholder="Search names, races, places…" aria-label="Search The Belgravian" autocomplete="off">
-      <button type="submit">Search</button>
-    </form>
+    <p class="bv-folio"><span><a href="#shelf">The Belgravian</a> · official gazette of Belgrave Harriers, 1925–2009</span><span class="n"></span><span class="on"></span></p>
+    <div class="bv-mast-row">
+      <h1>Find any athlete, race or year</h1>
+      <form class="bv-search" role="search">
+        <input id="bv-q" type="search" placeholder="A name, race or place" aria-label="Search The Belgravian" autocomplete="off">
+        <button type="submit">Search</button>
+      </form>
+    </div>
   </header>
   <nav class="bv-crumbs" aria-label="Where you are"></nav>
   <main class="bv-main" aria-live="polite"><p class="bv-msg">Loading the archive…</p></main>
@@ -430,26 +534,96 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   function crumbsSet(list){crumbs.innerHTML=list.map(function(c,i){return (i?'<span aria-hidden="true">/</span>':'')+(c[1]?'<a href="#'+c[1]+'">'+esc(c[0])+'</a>':'<span>'+esc(c[0])+'</span>')}).join('')}
   function personHref(name){var id='p-'+slug(name);return PEOPLE&&PEOPLE.byId[id]?'#'+id:null}
 
-  /* ---------- shelf ---------- */
+  /* ---------- front page (direction E, Nov 2026) ----------
+     Folio line and search in the masthead; a bar chart of every year (articles printed) whose decade buttons
+     choose what follows: that decade's photographs, one cover per year, its most mentioned athletes and most
+     reported competitions. Then the whole archive by surname, discipline and kind. Data: home.json
+     (tools/belgravian/build_home.py). */
+  var HOME=null,HDEC=null,PQ='';
+  function loadHome(){return HOME?Promise.resolve(HOME):get('home.json').then(function(d){HOME=d;folio();return d})}
+  function num(n){return Number(n||0).toLocaleString('en-GB')}
+  function folio(){if(!HOME)return;var t=HOME.totals,f=root.querySelector('.bv-folio');
+    f.querySelector('.n').textContent=num(t.issues)+' issues · '+num(t.articles)+' articles · '+num(t.photos)+' photographs';
+    f.querySelector('.on').textContent='Online so far: '+HOME.span[0]+'–'+HOME.span[1]+(phone()?' · '+num(t.issues)+' issues':'')}
+  var KIND={results:'Results',photo:'Photographs',records:'Club records',obituary:'Obituaries',letter:'Letters',cartoon:'Cartoons',poem:'Poems'};
+  var SPORTN={'track':'Track','field':'Field','race walking':'Race walking','cross country':'Cross country','road':'Road','club life':'Club life'};
   function shelf(){
-    crumbsSet([['All issues','']]);
-    var by={};IDX.issues.forEach(function(x){var d=Math.floor(x.year/10)*10;(by[d]=by[d]||[]).push(x)});
-    var h='<div class="bv-shelf">';
-    if(IDX.legends&&IDX.legends.length){
-      h+='<section class="bv-decade"><header><h2>Legends</h2><p>Great Belgravians, told through the pages of their club gazette.</p></header><div class="bv-legends">'+
-        IDX.legends.map(function(l){return '<a class="bv-legend-card" href="#'+l.id+'">'+(l.photo?'<img src="'+MEDIA+esc(l.photo)+'" alt="'+esc(l.name)+'" loading="lazy">':'')+'<b>'+esc(l.name)+'</b><span>'+esc(l.line)+'</span></a>'}).join('')+'</div></section>';
-    }
-    Object.keys(by).sort().forEach(function(d){
-      var list=by[d].sort(function(a,b){return a.date<b.date?-1:1});
-      h+='<section class="bv-decade" id="d'+d+'"><header><h2>'+d+'s</h2><p>'+list.length+(list.length===1?' issue':' issues')+'</p></header><div class="bv-covers">'+
-        /* grouped by year: on desktop the groups melt into one grid; on a phone each year is a swipeable row */
-        (function(){var ys=[],byY={};list.forEach(function(x){if(!byY[x.year]){byY[x.year]=[];ys.push(x.year)}byY[x.year].push(x)});
-          return ys.map(function(y){return '<div class="bv-yrow"><h3>'+y+'</h3><div class="bv-yrow-list">'+byY[y].map(function(x){var short=String(x.label).replace(/\s*\d{4}(\/\d{2,4})?\s*$/,'')||x.label;
-            return '<a class="bv-cover" href="#'+issueKey(x.issue)+'"><img src="'+pageImg(x.issue,1)+'" alt="Cover of The Belgravian, '+esc(x.label)+'" loading="lazy"><b>'+esc(x.label)+'</b><i>'+esc(short)+'</i><span>No. '+x.issue+'</span></a>'}).join('')+'</div></div>'}).join('')})()+'</div></section>';
-    });
-    if(IDX.coming)h+='<section class="bv-decade"><header><h2>Still to come</h2><p>These decades are being digitised. Meanwhile every issue is on <a href="https://www.belgraveharriers.info/thebelgravian">Alan Mead’s Belgrave history site</a>.</p></header><div class="bv-later">'+IDX.coming.map(function(c){return '<span>'+esc(c)+'</span>'}).join('')+'</div></section>';
-    h+='<section class="bv-decade"><header><h2>People</h2><p>Everyone named in the digitised issues so far.</p></header><p><a href="#people">Browse all names</a></p></section>';
-    main.innerHTML=h+'</div><p class="bv-note">Scans of every Belgravian are by Alan Mead, the club historian, at belgraveharriers.info. The readable text was transcribed from those scans; where the print is hard to read, the original is always beside it.</p>';
+    crumbsSet([]);
+    loadHome().then(function(H){
+      var decs=Object.keys(H.decades).sort();if(!HDEC||!H.decades[HDEC])HDEC=decs[0];
+      var y0=+decs[0],y1=Math.max(2009,H.span[1]),max=1,y;for(y in H.years)max=Math.max(max,H.years[y]);
+      var bars='',axis='';for(y=y0;y<=y1;y++){var v=H.years[y]||0,d=String(Math.floor(y/10)*10);
+        bars+='<button type="button" data-dec="'+d+'" class="'+(v?'':'z ')+(d===HDEC&&v?'on':'')+'" style="height:'+(v?Math.max(3,Math.round(v/max*100)):3)+'%" '+(v?'aria-label="'+y+': '+v+' articles"':'tabindex="-1" aria-hidden="true" disabled')+'></button>';
+        axis+='<span class="'+(y%10===0||y===y1?'':(y%5===0?'m5':'m5" style="visibility:hidden'))+'">'+(y%5===0||y===y1?y:'')+'</span>'}
+      var h='<div class="bv-home"><section class="bv-era" aria-label="Choose an era"><div class="bv-era-chart"><div class="bv-era-stub"><b>1925–'+(y0-1)+'</b><span>Being scanned</span></div><div class="bv-era-bars">'+bars+'</div></div>'+
+        '<div class="bv-era-axis" aria-hidden="true">'+axis+'</div><div class="bv-era-tabs" role="tablist" aria-label="Decade">'+
+        decs.map(function(d){return '<button type="button" role="tab" data-dec="'+d+'" aria-selected="'+(d===HDEC)+'">'+d+'s</button>'}).join('')+
+        '</div><p class="bv-era-note">1925–'+(y0-1)+' are being scanned.</p></section><div class="bv-dec" aria-live="polite">'+decade(HDEC)+'</div>';
+      /* the whole archive */
+      h+='<div class="bv-browse"><section class="bv-sec" aria-labelledby="bv-az"><div class="bv-sec-hd"><h2 id="bv-az">ATHLETES A–Z</h2></div>'+
+        '<form class="bv-mini" data-mini="people" role="search"><label for="bv-aq" class="bv-sr">Find an athlete</label><input id="bv-aq" type="search" placeholder="Find an athlete" autocomplete="off"><button type="submit">Find</button></form>'+
+        '<p>Or browse by surname</p><div class="bv-az">'+'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(function(l){return '<a href="#people-'+l.toLowerCase()+'">'+l+'</a>'}).join('')+'</div>'+
+        (IDX.legends||[]).map(function(l){return '<a class="bv-legend-mini" href="#'+l.id+'">'+(l.photo?'<img src="'+MEDIA+esc(l.photo)+'" alt="" loading="lazy">':'<span></span>')+'<span><span class="label">Legend</span><b>'+esc(l.name)+'</b><small>'+esc(l.line)+'</small></span></a>'}).join('')+'</section>';
+      h+='<section class="bv-sec" aria-labelledby="bv-ds"><div class="bv-sec-hd"><h2 id="bv-ds">DISCIPLINES</h2></div><div class="bv-disc">'+
+        H.disc.map(function(x){return '<a href="#sport-'+slug(x[0])+'">'+(x[2]?'<img src="'+MEDIA+esc(x[2])+'" alt="" loading="lazy">':'')+'<span><em>'+esc(SPORTN[x[0]]||x[0])+'</em><small>'+num(x[1])+' articles</small></span></a>'}).join('')+'</div></section>';
+      h+='<section class="bv-sec" aria-labelledby="bv-al"><div class="bv-sec-hd"><h2 id="bv-al">ALSO INSIDE</h2></div><div>'+
+        H.kinds.map(function(k){return '<a class="bv-row" href="#type-'+k[0]+'"><span>'+esc(KIND[k[0]]||k[0])+'</span><small>'+num(k[1])+'</small></a>'}).join('')+'</div></section></div>';
+      main.innerHTML=h+'</div><p class="bv-note">Scans of every Belgravian are by Alan Mead, the club historian, at belgraveharriers.info. The readable text was transcribed from those scans; where the print is hard to read, the original is always beside it. Spotted a mistake, or want an entry removed? <a href="mailto:belgravian@belgraveharriers.com">belgravian@belgraveharriers.com</a></p>';
+      idle();
+    }).catch(function(){shelfAll()});
+  }
+  function decade(d){
+    var D=HOME.decades[d],h='<div class="bv-dec-hd"><h2>THE '+d+'s</h2><span>'+num(D.issues)+' issues · '+num(D.articles)+' articles · '+num(D.nphotos)+' photos</span></div>';
+    if(D.photos.length)h+='<section class="bv-sec bv-dec-ph"><div class="bv-sec-hd"><h3>PHOTOGRAPHS</h3><span>'+num(D.nphotos)+' in the '+d+'s</span></div><div class="bv-ph-row">'+
+      D.photos.map(function(p){return '<figure style="--r:'+(+p.r||.75)+'"><img src="'+MEDIA+esc(p.f)+'" alt="'+esc(p.c)+'" loading="lazy" data-lb="'+MEDIA+esc(p.f)+'" data-cap="'+esc(p.cap||p.c)+'"'+(p.id?' data-href="#'+esc(p.id)+'"':'')+' data-w="'+esc(p.w||'')+'"><figcaption>'+esc(p.c)+' <i>'+esc(shortWhen(p.w||''))+'</i></figcaption></figure>'}).join('')+'</div></section>';
+    var by={};D.covers.forEach(function(c){by[c.y]=c});var last=HOME.span[1],slots='';
+    for(var y=+d;y<+d+10;y++){var c=by[y];
+      slots+=c?'<a href="#'+issueKey(c.no)+'" class="bv-cover-y"><img src="'+pageImg(c.no,1)+'" alt="Cover of The Belgravian, '+esc(c.label)+'" loading="lazy"><b>'+y+'</b></a>':
+        '<span class="gap"><i>'+(y>last?'Not in the archive yet':'None in the archive')+'</i><b>'+y+'</b></span>'}
+    h+='<div class="bv-dec-cols"><section class="bv-sec"><div class="bv-sec-hd"><h3>ISSUES</h3><a href="#d'+d+'">All '+D.issues+'</a></div><div class="bv-yc">'+slots+'</div></section>';
+    h+='<section class="bv-sec"><div class="bv-sec-hd"><h3>ATHLETES</h3></div><div>'+D.athletes.map(function(a){
+      return '<a class="bv-row" href="#'+esc(a.id)+'"><span class="who">'+(a.face?'<img class="face" src="'+BASE+esc(a.face)+'" alt="" loading="lazy">':'<span class="ini" aria-hidden="true">'+esc(a.name.split(/\s+/).map(function(w){return w[0]}).join('').slice(0,2))+'</span>')+esc(a.name)+'</span><small>'+num(a.n)+'</small></a>'}).join('')+'</div></section>';
+    h+='<section class="bv-sec"><div class="bv-sec-hd"><h3>COMPETITIONS</h3></div><div>'+D.comps.map(function(c){
+      return '<button type="button" class="bv-row" data-search="'+esc(c[0])+'"><span>'+esc(c[0])+'</span><small>'+num(c[1])+'</small></button>'}).join('')+
+      '</div><form class="bv-mini" data-mini="comp" role="search"><label for="bv-cq" class="bv-sr">Find a competition</label><input id="bv-cq" type="search" placeholder="Find a competition" autocomplete="off"><button type="submit">Find</button></form></section></div>';
+    return h;
+  }
+  function pickDec(d){if(!HOME||!HOME.decades[d])return;HDEC=d;var box=main.querySelector('.bv-dec');if(!box)return;box.innerHTML=decade(d);
+    main.querySelectorAll('.bv-era-tabs button').forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.dec===d))});
+    main.querySelectorAll('.bv-era-bars button').forEach(function(b){b.classList.toggle('on',b.dataset.dec===d&&!b.classList.contains('z'))})}
+  /* every cover of one decade (the old shelf), from "All 32" */
+  function coversHtml(list){var ys=[],byY={};list.forEach(function(x){if(!byY[x.year]){byY[x.year]=[];ys.push(x.year)}byY[x.year].push(x)});
+    return '<div class="bv-covers">'+ys.map(function(y){return '<div class="bv-yrow"><h3>'+y+'</h3><div class="bv-yrow-list">'+byY[y].map(function(x){var short=String(x.label).replace(/\s*\d{4}(\/\d{2,4})?\s*$/,'')||x.label;
+      return '<a class="bv-cover" href="#'+issueKey(x.issue)+'"><img src="'+pageImg(x.issue,1)+'" alt="Cover of The Belgravian, '+esc(x.label)+'" loading="lazy"><b>'+esc(x.label)+'</b><i>'+esc(short)+'</i><span>No. '+x.issue+'</span></a>'}).join('')+'</div></div>'}).join('')+'</div>'}
+  function decadeAll(d){
+    var list=IDX.issues.filter(function(x){return Math.floor(x.year/10)*10===+d}).sort(function(a,b){return a.date<b.date?-1:1});
+    crumbsSet([['The Belgravian','shelf'],['The '+d+'s','']]);
+    main.innerHTML='<div class="bv-shelf"><section class="bv-decade"><header><h2>The '+d+'s</h2><p>'+list.length+(list.length===1?' issue':' issues')+'</p></header>'+coversHtml(list)+'</section></div>';idle();
+  }
+  function shelfAll(){crumbsSet([]);var by={};IDX.issues.forEach(function(x){var d=Math.floor(x.year/10)*10;(by[d]=by[d]||[]).push(x)});
+    main.innerHTML='<div class="bv-shelf">'+Object.keys(by).sort().map(function(d){return '<section class="bv-decade"><header><h2>'+d+'s</h2></header>'+coversHtml(by[d])+'</section>'}).join('')+'</div>';idle()}
+  /* lists from the front page: a discipline, or one kind of item (obituaries, letters …), newest decade filter on top */
+  var LIST={items:[],dec:'all',n:200,title:'',sub:''};
+  function yearOfItem(id){var no=String(id).split('-')[0].replace(/^B/,'');var x=IDX.issues.filter(function(i){return String(i.issue)===no})[0];return x?x.year:0}
+  function listShow(){
+    var decs={};LIST.items.forEach(function(x){var d=Math.floor(yearOfItem(x.id)/10)*10;x.dec=d;decs[d]=(decs[d]||0)+1});
+    var shown=LIST.dec==='all'?LIST.items:LIST.items.filter(function(x){return String(x.dec)===LIST.dec});
+    var h='<h2 style="margin:0 0 6px">'+esc(LIST.title)+'</h2><p class="bv-msg" style="margin:0 0 14px">'+esc(LIST.sub)+'</p><div class="bv-filters"><button type="button" data-ldec="all" aria-pressed="'+(LIST.dec==='all')+'">All · '+num(LIST.items.length)+'</button>'+
+      Object.keys(decs).sort().map(function(d){return '<button type="button" data-ldec="'+d+'" aria-pressed="'+(LIST.dec===d)+'">'+d+'s · '+num(decs[d])+'</button>'}).join('')+'</div>';
+    h+='<div class="bv-results">'+shown.slice(0,LIST.n).map(function(x){var src=x.sum||x.s||'';src=src.length>240?src.slice(0,240)+'…':src;
+      return '<a class="bv-hit" href="#'+x.id+'"><span class="label">'+esc(TYPE[x.type]||'Item')+' · '+esc(x.label)+' · page '+x.p+'</span><h3>'+esc(x.h||x.sum||'Untitled item')+'</h3><p>'+esc(src)+'</p></a>'}).join('')+'</div>';
+    if(shown.length>LIST.n)h+='<button type="button" class="bv-list-more">Show '+Math.min(200,shown.length-LIST.n)+' more of '+num(shown.length)+'</button>';
+    main.innerHTML=h;idle();
+  }
+  function listOf(kind,val){
+    main.innerHTML='<p class="bv-msg">Loading…</p>';
+    var need=[loadSearch()];if(kind==='sport')need.push(get('browse.json'));
+    Promise.all(need).then(function(r){var S=r[0],items;
+      if(kind==='sport'){var ids={},key=Object.keys(SPORTN).filter(function(k){return slug(k)===val})[0]||val;(r[1].sport[key]||[]).forEach(function(i){ids[i]=1});
+        items=S.items.filter(function(x){return ids[x.id]});LIST.title=SPORTN[key]||key;LIST.sub=num(items.length)+' articles about '+(SPORTN[key]||key).toLowerCase()+' in the digitised issues, oldest first.'}
+      else{items=S.items.filter(function(x){return x.type===val});LIST.title=KIND[val]||TYPE[val]||val;LIST.sub=num(items.length)+' in the digitised issues, oldest first.'}
+      LIST.items=items;LIST.dec='all';LIST.n=200;crumbsSet([['The Belgravian','shelf'],[LIST.title,'']]);listShow();
+    }).catch(function(){idle();main.innerHTML='<p class="bv-msg">That list couldn’t be loaded just now. Please try again shortly.</p>'});
   }
 
   /* ---------- reader ---------- */
@@ -544,7 +718,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     var d=ISSUES[cur.no];if(!d)return;
     var sel=main.querySelector('#bv-page');if(sel)sel.value=p;
     main.querySelectorAll('.bv-pager [data-step]').forEach(function(btn){var n=p+(+btn.dataset.step);btn.disabled=n<1||n>d.pageCount});
-    crumbsSet([['All issues','shelf'],[d.label+' · No. '+d.issue,issueKey(cur.no)],['Page '+p,'']]);
+    crumbsSet([['The Belgravian','shelf'],[d.label+' · No. '+d.issue,issueKey(cur.no)],['Page '+p,'']]);
     var h='#'+issueKey(cur.no)+'-p'+pad(p);if(location.hash!==h&&history.replaceState)history.replaceState(null,'',h);
   }
   function pageSection(d,p,hl){
@@ -618,7 +792,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   function loadSearch(){if(SEARCH)return Promise.resolve(SEARCH);var files=(IDX&&IDX.searchFiles&&IDX.searchFiles.length)?IDX.searchFiles:['search.json'];return Promise.all(files.map(function(f){return get(f)})).then(function(ds){SEARCH={items:[].concat.apply([],ds.map(function(d){return d.items}))};return SEARCH})}
   var filter='all';
   function search(term){
-    term=(term||'').trim();crumbsSet([['All issues','shelf'],['Search','']]);
+    term=(term||'').trim();crumbsSet([['The Belgravian','shelf'],['Search','']]);
     if(!term){main.innerHTML='<p class="bv-msg">Type a name, race or place to search the digitised issues.</p>';return}
     main.innerHTML='<p class="bv-msg">Searching…</p>';
     loadSearch().then(function(S){
@@ -643,11 +817,18 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   function loadPeople(){return PEOPLE?Promise.resolve(PEOPLE):get('people.json').then(function(d){d.byId={};d.people.forEach(function(p){d.byId[p.id]=p});PEOPLE=d;return d})}
   function loadPerson(id){var row=PEOPLE.byId[id];if(!row)return Promise.resolve(null);
     return (SHARDS[row.s]?Promise.resolve(SHARDS[row.s]):get('people/'+row.s+'.json').then(function(d){SHARDS[row.s]=d;return d})).then(function(d){return d[id]||null})}
-  function peopleList(){
-    crumbsSet([['All issues','shelf'],['People','']]);
-    var ps=PEOPLE.people.filter(function(p){return p.n>1}).sort(function(a,b){return b.n-a.n||a.name.localeCompare(b.name)});
-    main.innerHTML='<h2 style="margin:0 0 6px">People</h2><p class="bv-msg" style="margin:0 0 18px">'+ps.length+' people named more than once in the digitised issues, most mentioned first. Search finds everyone else.</p><div class="bv-people">'+
-      ps.slice(0,600).map(function(p){return '<a href="#'+p.id+'">'+esc(p.name)+'<span>'+p.n+'</span></a>'}).join('')+'</div>';idle();
+  function peopleList(letter){
+    var ps,head,sub;
+    if(letter){ps=PEOPLE.people.filter(function(p){return p.s===letter}).sort(function(a,b){var sa=a.name.split(/\s+/).pop(),sb=b.name.split(/\s+/).pop();return sa.localeCompare(sb)||a.name.localeCompare(b.name)});
+      head='Surnames beginning '+letter.toUpperCase();sub=num(ps.length)+' people, by surname. The number is how many times each is named.'}
+    else if(PQ){var t=sugNorm(PQ).trim();ps=PEOPLE.people.filter(function(p){return sugMatch(p.name,t)}).sort(function(a,b){return b.n-a.n||a.name.localeCompare(b.name)});
+      head='Athletes matching “'+PQ+'”';sub=ps.length?num(ps.length)+(ps.length===1?' person':' people')+', most mentioned first.':'No one by that name yet. Try just a surname, or the full search above.'}
+    else{ps=PEOPLE.people.filter(function(p){return p.n>1}).sort(function(a,b){return b.n-a.n||a.name.localeCompare(b.name)});
+      head='People';sub=num(ps.length)+' people named more than once in the digitised issues, most mentioned first. Search finds everyone else.'}
+    crumbsSet([['The Belgravian','shelf'],[letter?letter.toUpperCase():'People','']]);
+    var az='<div class="bv-az" style="margin:0 0 20px">'+'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(function(l){return '<a href="#people-'+l.toLowerCase()+'"'+(l.toLowerCase()===letter?' aria-current="page" style="border-color:var(--claret);color:var(--claret)"':'')+'>'+l+'</a>'}).join('')+'</div>';
+    main.innerHTML='<h2 style="margin:0 0 6px">'+esc(head)+'</h2><p class="bv-msg" style="margin:0 0 18px">'+esc(sub)+'</p>'+az+'<div class="bv-people">'+
+      ps.slice(0,1500).map(function(p){return '<a href="#'+p.id+'">'+esc(p.name)+'<span>'+p.n+'</span></a>'}).join('')+'</div>';idle();
   }
 
   /* ---------- a person's page (Direction A, Nov 2026) ----------
@@ -688,7 +869,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     var leg=p.legend?(LEGENDS[id]?Promise.resolve(LEGENDS[id]):get('legends/'+id.slice(2)+'.json').then(function(d){LEGENDS[id]=d;return d})):Promise.resolve(null);
     Promise.all([leg,getX(id,p)]).then(function(r){
       var L=r[0],X=r[1]||[];
-      crumbsSet([['All issues','shelf'],['People','people'],[p.name,'']]);
+      crumbsSet([['The Belgravian','shelf'],['People','people'],[p.name,'']]);
       var ms=p.mentions||[],photos=p.photos||[],sur=p.name.trim().split(/\s+/).pop(),PH=phone();
       var one=(L&&L.photo)||p.photo,gal=photos.length?photos:(one?[{f:one.file,c:one.caption,id:one.source,w:one.when}]:[]);
       var y0=ms.length?yearOf(ms[0].when):'',y1=ms.length?yearOf(ms[ms.length-1].when):'';
@@ -758,12 +939,17 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   function route(){
     var h=(location.hash||'').slice(1),hl=root.dataset.hl||'';root.dataset.hl='';
     root.classList.toggle('bv-person-mode',/^p-/.test(h));
+    root.classList.toggle('bv-home-mode',!h||h==='shelf');
     var m;
     if(!IDX)return;
     if((m=h.match(/^B(\d+b?)-p(\d+)$/)))return reader(nid(m[1]),+m[2]);
     if((m=h.match(/^B(\d+b?)-(\d+)$/))){var no=nid(m[1]);if(cur.no!==no||hl)showOpening(no);return loadIssue(no).then(function(d){var it=d.items.filter(function(x){return x.id===h})[0];reader(no,it?firstPage(it):1,h,hl)})}
     if((m=h.match(/^B(\d+b?)$/)))return reader(nid(m[1]),1);
-    if(h==='people')return loadPeople().then(peopleList);
+    if(h==='people')return loadPeople().then(function(){peopleList('')});
+    if((m=h.match(/^people-([a-z])$/))){PQ='';return loadPeople().then(function(){peopleList(m[1])})}
+    if((m=h.match(/^d(\d{4})$/)))return decadeAll(m[1]);
+    if((m=h.match(/^sport-([a-z-]+)$/)))return listOf('sport',m[1]);
+    if((m=h.match(/^type-([a-z]+)$/)))return listOf('type',m[1]);
     if(/^p-/.test(h))return loadPeople().then(function(){person(h)});
     if(h==='search')return search(q.value);
     cur.no=null;shelf();idle();
@@ -781,6 +967,9 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     if((t=e.target.closest('[data-goitem]'))){go(t.dataset.goitem);return}
     if((t=e.target.closest('[data-search]'))){q.value=t.dataset.search;filter='all';if(location.hash==='#search')search(q.value);else go('search');return}
     if((t=e.target.closest('[data-filter]'))){filter=t.dataset.filter;search(q.value);return}
+    if((t=e.target.closest('[data-dec]'))){pickDec(t.dataset.dec);return}
+    if((t=e.target.closest('[data-ldec]'))){LIST.dec=t.dataset.ldec;LIST.n=200;listShow();return}
+    if((t=e.target.closest('.bv-list-more'))){LIST.n+=200;listShow();return}
     if((t=e.target.closest('.bv-hit'))){root.dataset.hl=t.dataset.hl||'';return}
     if((t=e.target.closest('.bv-yr-row'))){goYear(t.closest('.bv-yr').dataset.y,false);return}
     if((t=e.target.closest('.bv-yr-all'))){t.closest('.bv-yr').classList.add('all');t.remove();return}
@@ -823,12 +1012,15 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     else if(e.key==='Escape'){sugHide()}});
   q.addEventListener('blur',function(){setTimeout(sugHide,150)});
   root.addEventListener('mousedown',function(e){var li=e.target.closest('.bv-sug [role=option]');if(li){e.preventDefault();sugPick(+li.dataset.i)}});
+  root.addEventListener('submit',function(e){var f=e.target.closest('.bv-mini');if(!f)return;e.preventDefault();var v=(f.querySelector('input').value||'').trim();if(!v)return;
+    if(f.dataset.mini==='people'){PQ=v;if(location.hash==='#people')loadPeople().then(function(){peopleList('')});else go('people')}
+    else{q.value=v;filter='all';if(location.hash==='#search')search(v);else go('search')}});
   root.querySelector('.bv-search').addEventListener('submit',function(e){e.preventDefault();sugHide();filter='all';if(location.hash==='#search')search(q.value);else go('search')});
   function lbItem(el){return {src:el.dataset.lb,cap:el.dataset.cap||'',href:el.dataset.href||'',w:el.dataset.w||''}}
   /* the photos to step through from a clicked one: the athlete's whole photo row, or the other photos in the same article */
   function lbGroup(t){
     var box=t.closest('.bv-pa')?main.querySelector('.bv-pa-gal'):null,list=[];
-    if(!box)box=t.closest('.bv-item,.bv-figs,.full,.bv-story');
+    if(!box)box=t.closest('.bv-item,.bv-figs,.full,.bv-story,.bv-ph-row');
     if(box)list=[].slice.call(box.querySelectorAll('img[data-lb]'));
     var i=-1;list.forEach(function(el,j){if(i<0&&el.dataset.lb===t.dataset.lb)i=j});
     if(i<0){list=[t];i=0}
@@ -890,7 +1082,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   ['pointerover','touchstart','focusin'].forEach(function(ev){root.addEventListener(ev,prefetch,{passive:true})});
   window.addEventListener('hashchange',function(){route();requestAnimationFrame(showTop)});
   Promise.all([get('index.json'),get('people.json').then(function(d){d.byId={};d.people.forEach(function(p){d.byId[p.id]=p});PEOPLE=d}).catch(function(){})])
-    .then(function(r){IDX=r[0];route()})
+    .then(function(r){IDX=r[0];loadHome().catch(function(){});route()})
     .catch(function(){main.innerHTML='<p class="bv-msg">The archive couldn’t be loaded just now. Please try again shortly.</p>'});
 })();
 </script>
