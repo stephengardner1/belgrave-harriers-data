@@ -4,7 +4,7 @@ or a house-number address, for a final look."""
 import json,re,glob,sys
 W='/tmp/claude-0/-home-claude/7418dbbe-23b1-5767-91a3-214502410ce0/scratchpad/bv'
 R=json.load(open(f'{W}/priv/redactions.json'))
-LABEL={'address':'[address withheld]','phone':'[phone number withheld]'}
+LABEL={'address':'[address withheld]','phone':'[phone number withheld]','email':'[e-mail withheld]'}
 subs=[]
 for r in R:
     for v in {r['find'],r['find'].replace('\n',' '),r['find'].replace('\n',', ')}:

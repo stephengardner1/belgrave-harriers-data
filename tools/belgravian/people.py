@@ -13,14 +13,13 @@ import json, glob, re, sys, os, unicodedata, collections
 W = sys.argv[1]
 KEEP_APART = {'g north'}
 # printed abbreviations that point to one person (the magazine's own convention)
-ALIASES = {'gy north': 'gerald north', 'gf north': 'geoffrey north', 'gorry north': 'gerald north', 'a stroud': 'albert stroud', 'a ekoku': 'abi ekoku', 'c lawton': 'carl lawton', 'lawton': 'carl lawton', 'gerry adams': 'graham adams', "'gerry' adams": 'graham adams', 'g adams': 'graham adams'}  # 'Gorry North' (B175, 1970) is Gerry; 'A. Stroud' is Bert Stroud: Steve, 29 Oct 2026; 'A. Ekoku' is Abi Ekoku, 'C. Lawton' and a bare male 'Lawton' are Carl Lawton: Steve, 1 Nov 2026; Gerry/'Gerry'/G. Adams (all 1985+) are Graham Adams: Steve, 2 Nov 2026        # Gerry North and Geoff North are different people (Steve, Oct 2026)
+ALIASES = {'gy north': 'gerald north', 'gf north': 'geoffrey north', 'gorry north': 'gerald north', 'a stroud': 'albert stroud', 'a ekoku': 'abi ekoku', 'c lawton': 'carl lawton', 'lawton': 'carl lawton', 'gerry adams': 'graham adams', "'gerry' adams": 'graham adams', 'g adams': 'graham adams', "'emu' lawton": 'carl lawton'}  # 'Gorry North' (B175, 1970) is Gerry; 'A. Stroud' is Bert Stroud: Steve, 29 Oct 2026; 'A. Ekoku' is Abi Ekoku, 'C. Lawton' and a bare male 'Lawton' are Carl Lawton: Steve, 1 Nov 2026; Gerry/'Gerry'/G. Adams (all 1985+) are Graham Adams: Steve, 2 Nov 2026        # Gerry North and Geoff North are different people (Steve, Oct 2026)
 
 sl = json.load(open('/home/claude/stephengardner1/surrey-league/data.json'))
-sl_names = set()
+sl_names = collections.Counter()  # Belgrave runner name -> number of Surrey League races run for Belgrave
 for r in sl['races']:
-    for x in r.get('results', []):
-        if x.get('c') == 'BEL' and x.get('n'):
-            sl_names.add(x['n'].lower())
+    for n in {x['n'].lower() for x in r.get('results', []) if x.get('c') == 'BEL' and x.get('n')}:
+        sl_names[n] += 1
 
 def clean(n):
     n = re.sub(r'\s+', ' ', (n or '').replace('’', "'")).strip(' .,;:')
@@ -193,6 +192,7 @@ for k, e in people.items():
         rec['photo'] = photos[0]
     if name.lower() in sl_names:
         rec['slarchive'] = 'https://slarchive.org/#athlete/' + re.sub(r'[^a-z0-9-]', '', name.lower().replace(' ', '-'))
+        rec['slRaces'] = sl_names[name.lower()]
     out.append(rec)
 
 # id clashes (two keys -> same slug) get suffixes

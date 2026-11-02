@@ -4,7 +4,7 @@ listed string in the item's text, summary and table cells; records what was hidd
 import json, sys, os, shutil, collections
 W='/tmp/claude-0/-home-claude/7418dbbe-23b1-5767-91a3-214502410ce0/scratchpad/bv'
 R=json.load(open(sys.argv[1]))
-LABEL={'address':'[address withheld]','phone':'[phone number withheld]'}
+LABEL={'address':'[address withheld]','phone':'[phone number withheld]','email':'[e-mail withheld]'}
 by=collections.defaultdict(list)
 for r in R: by[r['id']].append(r)
 done=missed=0
