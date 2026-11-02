@@ -273,7 +273,7 @@
 "227": {
 "pdf": "B227_1999.pdf",
 "pages": 68,
-"state": "reading"
+"state": "ready"
 },
 "228": {
 "pdf": "B228_2000.pdf",
@@ -6114,7 +6114,8 @@
 61,
 68
 ],
-"status": "running"
+"status": "done",
+"tokens": 233353
 },
 {
 "kind": "check",
@@ -6123,7 +6124,8 @@
 1,
 10
 ],
-"status": "todo"
+"status": "done",
+"tokens": 204482
 },
 {
 "kind": "check",
@@ -6132,7 +6134,8 @@
 11,
 20
 ],
-"status": "todo"
+"status": "done",
+"tokens": 197857
 },
 {
 "kind": "check",
@@ -6141,7 +6144,8 @@
 21,
 30
 ],
-"status": "todo"
+"status": "done",
+"tokens": 253006
 },
 {
 "kind": "check",
@@ -6150,7 +6154,8 @@
 31,
 40
 ],
-"status": "todo"
+"status": "done",
+"tokens": 288935
 },
 {
 "kind": "check",
@@ -6159,7 +6164,8 @@
 41,
 50
 ],
-"status": "todo"
+"status": "done",
+"tokens": 294219
 },
 {
 "kind": "check",
@@ -6168,7 +6174,8 @@
 51,
 60
 ],
-"status": "todo"
+"status": "done",
+"tokens": 296163
 },
 {
 "kind": "check",
@@ -6177,7 +6184,8 @@
 61,
 68
 ],
-"status": "todo"
+"status": "done",
+"tokens": 267848
 },
 {
 "kind": "read",
