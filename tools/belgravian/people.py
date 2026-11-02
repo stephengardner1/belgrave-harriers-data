@@ -8,7 +8,7 @@ Rules (conservative; a person page must never mix two people):
 - Names listed in KEEP_APART never merge with anything else.
 - Within one item, the reader already merged forms of one person (printedAs).
 """
-import json, glob, re, sys, os, unicodedata, collections
+import json, glob, re, sys, os, unicodedata, collections, zlib
 
 W = sys.argv[1]
 KEEP_APART = {'g north'}
@@ -199,7 +199,7 @@ for k, e in people.items():
 ids = collections.Counter(r['id'] for r in out)
 for r in out:
     if ids[r['id']] > 1:
-        r['id'] += '-' + str(abs(hash(r['aka'][0])) % 1000)
+        r['id'] += '-' + str(zlib.crc32((r['name'] + '|' + r['aka'][0]).encode()) % 1000)  # stable across rebuilds (hash() is not)
 legends = json.load(open(f'{W}/legends-index.json')) if os.path.exists(f'{W}/legends-index.json') else []
 for r in out:
     if any(l['id'] == r['id'] for l in legends):
