@@ -873,13 +873,22 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   window.addEventListener('resize',function(){findBars();setTop()});
   window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(function(){setTop();ticking=false})}},{passive:true});
   window.addEventListener('load',function(){findBars();setTop()});
-  /* "Back to top" once the reader is a couple of screens into an issue */
-  var totop=document.createElement('button');totop.type='button';totop.className='bv-totop';totop.textContent='\u2191 Top of issue';totop.setAttribute('aria-label','Back to the top of this issue');root.appendChild(totop);
-  totop.addEventListener('click',function(){var hd=main.querySelector('.bv-issuehead')||root;cur.lock=Date.now()+1200;window.scrollTo({top:Math.max(0,window.pageYOffset+hd.getBoundingClientRect().top-(parseFloat(getComputedStyle(root).getPropertyValue('--bv-top'))||12)),behavior:'smooth'});setTimeout(function(){setCurrent(1)},900)});
-  function showTop(){var f=main.querySelector('.bv-flow');totop.classList.toggle('on',!!f&&f.getBoundingClientRect().top<-window.innerHeight*1.5)}
+  /* "Back to top" once the reader is a couple of screens down (issues, profiles, search, the people list).
+     It lives on <body>, not inside the reader: on wide screens the reader is centred with a CSS transform, which
+     would pin a fixed button to the bottom of the reader instead of the window. */
+  var totop=document.createElement('button');totop.type='button';totop.className='bv-totop';
+  totop.style.font='500 14px/20px "Public Sans",system-ui,sans-serif';totop.style.background='#7a001d';
+  document.body.appendChild(totop);
+  function topTarget(){return main.querySelector('.bv-issuehead')||root}
+  totop.addEventListener('click',function(){var hd=topTarget(),inIssue=!!main.querySelector('.bv-flow');if(inIssue)cur.lock=Date.now()+1200;
+    window.scrollTo({top:Math.max(0,window.pageYOffset+hd.getBoundingClientRect().top-(parseFloat(getComputedStyle(root).getPropertyValue('--bv-top'))||12)),behavior:'smooth'});
+    if(inIssue)setTimeout(function(){setCurrent(1)},900)});
+  function showTop(){var inIssue=!!main.querySelector('.bv-flow'),t=topTarget().getBoundingClientRect().top,on=t<-window.innerHeight*1.5;
+    var lab=inIssue?'\u2191 Top of issue':'\u2191 Back to top';if(totop.textContent!==lab){totop.textContent=lab;totop.setAttribute('aria-label',inIssue?'Back to the top of this issue':'Back to the top')}
+    totop.classList.toggle('on',on)}
   window.addEventListener('scroll',function(){requestAnimationFrame(showTop)},{passive:true});
   ['pointerover','touchstart','focusin'].forEach(function(ev){root.addEventListener(ev,prefetch,{passive:true})});
-  window.addEventListener('hashchange',route);
+  window.addEventListener('hashchange',function(){route();requestAnimationFrame(showTop)});
   Promise.all([get('index.json'),get('people.json').then(function(d){d.byId={};d.people.forEach(function(p){d.byId[p.id]=p});PEOPLE=d}).catch(function(){})])
     .then(function(r){IDX=r[0];route()})
     .catch(function(){main.innerHTML='<p class="bv-msg">The archive couldn’t be loaded just now. Please try again shortly.</p>'});
