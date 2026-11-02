@@ -10,7 +10,7 @@
   "Hon. General Secretary": "Charles Henn, [address withheld]. ☎ [phone number withheld].",
   "Hon. Treasurer": "Derek Manning, [address withheld]. ☎ [phone number withheld].",
   "Hon. Membership Secretary": "Carl Lawton, [address withheld]. ☎ [phone number withheld].",
-  "Hon. Editors of The Belgravian": "Alan Mead, [address withheld]. ☎ [phone number withheld] e-mail AlanMead@compuserve.com and Charles Dickinson, [address withheld]. ☎ [phone number withheld]."
+  "Hon. Editors of The Belgravian": "Alan Mead, [address withheld]. ☎ [phone number withheld] e-mail [e-mail withheld] and Charles Dickinson, [address withheld]. ☎ [phone number withheld]."
  },
  "items": [
   {
@@ -132,7 +132,7 @@
    "heading": "Athletic Massage",
    "byline": null,
    "summary": "Advert for athletic massage by a qualified therapist in Kingston with a half-price introductory offer.",
-   "text": "ATHLETIC MASSAGE\n\nMassage by a qualified therapist can help you to:\n\n★ reach peak performance sooner and sustain it longer\n★ improve muscle flexibility\n★ reduce the chance of injury\n★ rejuvenate muscles after an intense workout / event\n★ relax and recuperate more quickly\n\nTreatment is tailored to meet your individual needs\n\nSpecial half price introductory offer with this advert\nOne hour massage £10\n6 treatments £50\n\nFor further details ring\nAndrew Hain on 0181 549 1784\n26 Orchard Road, Kingston, Surrey",
+   "text": "ATHLETIC MASSAGE\n\nMassage by a qualified therapist can help you to:\n\n★ reach peak performance sooner and sustain it longer\n★ improve muscle flexibility\n★ reduce the chance of injury\n★ rejuvenate muscles after an intense workout / event\n★ relax and recuperate more quickly\n\nTreatment is tailored to meet your individual needs\n\nSpecial half price introductory offer with this advert\nOne hour massage £10\n6 treatments £50\n\nFor further details ring\nAndrew Hain on [phone number withheld]\n[address withheld]",
    "tables": [],
    "scans": [],
    "photos": [],
@@ -151,7 +151,11 @@
    ],
    "sport": [
     "club life"
-   ]
+   ],
+   "redacted": {
+    "address": 1,
+    "phone": 1
+   }
   },
   {
    "id": "B226-03",
@@ -341,7 +345,7 @@
    "heading": "The Belgravian",
    "byline": null,
    "summary": "Masthead of Number 226, March 1998, with the club's patron, president and honorary officers and the editors' thanks to contributors of results.",
-   "text": "The Belgravian\n\nNumber 226  March 1998\n\nPatron: Sir Eddie Kulukundis, O.B.E.\nPresident: Lionel Mann R.V.M.\nHon. General Secretary: Charles Henn, [address withheld]. ☎ [phone number withheld].\nHon. Treasurer: Derek Manning, [address withheld]. ☎ [phone number withheld].\nHon. Membership Secretary: Carl Lawton, [address withheld]. ☎ [phone number withheld].\nHon. Editors of The Belgravian: Alan Mead, [address withheld]. ☎ [phone number withheld] e-mail AlanMead@compuserve.com and Charles Dickinson, [address withheld]. ☎ [phone number withheld].\n\nThanks to Charlie Manning and Lionel Mann who have provided some of the more obscure road running results and to Peter Mulholland for helping with the area Track & Field results.",
+   "text": "The Belgravian\n\nNumber 226  March 1998\n\nPatron: Sir Eddie Kulukundis, O.B.E.\nPresident: Lionel Mann R.V.M.\nHon. General Secretary: Charles Henn, [address withheld]. ☎ [phone number withheld].\nHon. Treasurer: Derek Manning, [address withheld]. ☎ [phone number withheld].\nHon. Membership Secretary: Carl Lawton, [address withheld]. ☎ [phone number withheld].\nHon. Editors of The Belgravian: Alan Mead, [address withheld]. ☎ [phone number withheld] e-mail [e-mail withheld] and Charles Dickinson, [address withheld]. ☎ [phone number withheld].\n\nThanks to Charlie Manning and Lionel Mann who have provided some of the more obscure road running results and to Peter Mulholland for helping with the area Track & Field results.",
    "tables": [],
    "scans": [],
    "photos": [],
@@ -421,7 +425,8 @@
    ],
    "redacted": {
     "address": 5,
-    "phone": 5
+    "phone": 5,
+    "email": 1
    }
   },
   {

@@ -10,7 +10,7 @@
   "Hon. General Secretary": "Charles Henn, [address withheld]. ☎ [phone number withheld].",
   "Hon. Treasurer": "Derek Manning, [address withheld]. ☎ [phone number withheld].",
   "Hon. Membership Secretary": "Carl Lawton, [address withheld]. ☎ [phone number withheld].",
-  "Hon. Editor of The Belgravian": "Alan Mead, [address withheld]. ☎ [phone number withheld], E-mail alanmead@compuserve.com"
+  "Hon. Editor of The Belgravian": "Alan Mead, [address withheld]. ☎ [phone number withheld], E-mail [e-mail withheld]"
  },
  "items": [
   {
@@ -447,7 +447,7 @@
    "heading": "The Belgravian",
    "byline": null,
    "summary": "Masthead of Number 227, March 1999, with the club's patron and honorary officers.",
-   "text": "The Belgravian\n\nNumber 227\nMarch 1999\n\nPatron: Sir Eddie Kulukundis, O.B.E.\nPresident: Patricia Mead\nHon. General Secretary: Charles Henn, [address withheld]. ☎ [phone number withheld].\nHon. Treasurer: Derek Manning, [address withheld]. ☎ [phone number withheld].\nHon. Membership Secretary: Carl Lawton, [address withheld]. ☎ [phone number withheld].\nHon. Editor of The Belgravian: Alan Mead, [address withheld]. ☎ [phone number withheld], E-mail alanmead@compuserve.com",
+   "text": "The Belgravian\n\nNumber 227\nMarch 1999\n\nPatron: Sir Eddie Kulukundis, O.B.E.\nPresident: Patricia Mead\nHon. General Secretary: Charles Henn, [address withheld]. ☎ [phone number withheld].\nHon. Treasurer: Derek Manning, [address withheld]. ☎ [phone number withheld].\nHon. Membership Secretary: Carl Lawton, [address withheld]. ☎ [phone number withheld].\nHon. Editor of The Belgravian: Alan Mead, [address withheld]. ☎ [phone number withheld], E-mail [e-mail withheld]",
    "tables": [],
    "scans": [],
    "photos": [],
@@ -509,7 +509,8 @@
    ],
    "redacted": {
     "address": 4,
-    "phone": 4
+    "phone": 4,
+    "email": 1
    }
   },
   {
@@ -28822,7 +28823,7 @@
    "heading": "Ranking Lists 1998 - Men's Track & Field",
    "byline": "Compiled by Alan Mead",
    "summary": "Belgrave's 1998 men's track and field ranking lists compiled by Alan Mead (pages 60-64), from 100 metres through hurdles, steeplechase, jumps, throws, decathlon and relays; some dates of birth, first names and age groups differ between events as printed (e.g. Jason Fergus 11-10-73 and 10-11-73, Ruben/Reuben Tabares, Dominic St. George 12-10-79 and 12-10-78).",
-   "text": "Ranking Lists 1998 - Men's Track & Field\n\nCompiled by Alan Mead, [address withheld]. Telephone: [phone number withheld] Email: AlanMead@compuserve.com\nErrors, omissions and updates welcomed.\nAcknowledgements to Bob Bridges, John Dawson, Cynthia James, John Jeffery, Derek Jones, Bill Laws, Terry Lawton, Lionel Mann, Charlie Manning, Peter Matthews (NUTS), Pete Mulholland, John Powell and Jacqui Smiter for providing some of the results and team compositions.\n\nA = Altitude.\nd = Recorded in decathlon.\ndq = Disqualified\nu = Unconfirmed\nw = Wind assisted, or obviously wind assisted and no wind reading taken. A blank in the wind reading column indicates that the wind reading is not known or was not taken but there is no particular reason to believe that the performance was wind assisted.\n§ = Whistle start.\n† = Rolling start. Dwain Chamber's reaction time of 0.063 at Johannesburg was faster than the permitted 0.10 and although not classed as a false start at the time, has been anotated as a rolling start by the National Union of Track Statisticians.\n\n· Where wind readings are not known or where there is not an obviously superior performance by an individual among an assortment of manual, electric or windy times or distances then each performance is shown.\n· Figures in brackets after the athlete's name indicate their World and National Ranking. E.g. (=17-1) indicates equal 17th in the World and 1st in the UK. Where two or more figures are shown separated by / then the last figure is for their age group and the preceding figures are for age groups above. E.g. (27/4) for a U20 indicates 27th best among Seniors and 4th best among U20.",
+   "text": "Ranking Lists 1998 - Men's Track & Field\n\nCompiled by Alan Mead, [address withheld]. Telephone: [phone number withheld] Email: [e-mail withheld]\nErrors, omissions and updates welcomed.\nAcknowledgements to Bob Bridges, John Dawson, Cynthia James, John Jeffery, Derek Jones, Bill Laws, Terry Lawton, Lionel Mann, Charlie Manning, Peter Matthews (NUTS), Pete Mulholland, John Powell and Jacqui Smiter for providing some of the results and team compositions.\n\nA = Altitude.\nd = Recorded in decathlon.\ndq = Disqualified\nu = Unconfirmed\nw = Wind assisted, or obviously wind assisted and no wind reading taken. A blank in the wind reading column indicates that the wind reading is not known or was not taken but there is no particular reason to believe that the performance was wind assisted.\n§ = Whistle start.\n† = Rolling start. Dwain Chamber's reaction time of 0.063 at Johannesburg was faster than the permitted 0.10 and although not classed as a false start at the time, has been anotated as a rolling start by the National Union of Track Statisticians.\n\n· Where wind readings are not known or where there is not an obviously superior performance by an individual among an assortment of manual, electric or windy times or distances then each performance is shown.\n· Figures in brackets after the athlete's name indicate their World and National Ranking. E.g. (=17-1) indicates equal 17th in the World and 1st in the UK. Where two or more figures are shown separated by / then the last figure is for their age group and the preceding figures are for age groups above. E.g. (27/4) for a U20 indicates 27th best among Seniors and 4th best among U20.",
    "tables": [
     {
      "caption": "100 metres",
@@ -37061,7 +37062,8 @@
    ],
    "redacted": {
     "address": 1,
-    "phone": 1
+    "phone": 1,
+    "email": 1
    }
   },
   {

@@ -369,10 +369,11 @@
    "type": "masthead",
    "heading": "The Belgravian",
    "summary": "Masthead for Number 224, June 1996, with the club patron, president, secretaries, treasurer and editors.",
-   "text": "The Belgravian\n\nNumber 224 June 1996\n\nPatron: Sir Eddie Kulukundis, O.B.E.\nPresident: Snowy Brooks\nHon. General Secretary: Charles Henn, [address withheld]. ☎ [phone number withheld].\nHon. Treasurer: Derek Manning, [address withheld]. ☎ [phone number withheld].\nHon. Membership Secretary: Carl Lawton, [address withheld]. ☎ [phone number withheld].\nHon. Editors of The Belgravian: Alan Mead, [address withheld]. ☎ [phone number withheld] e-mail 101647.2745@compuserve.com and Charles Dickinson, [address withheld]. ☎ [phone number withheld].",
+   "text": "The Belgravian\n\nNumber 224 June 1996\n\nPatron: Sir Eddie Kulukundis, O.B.E.\nPresident: Snowy Brooks\nHon. General Secretary: Charles Henn, [address withheld]. ☎ [phone number withheld].\nHon. Treasurer: Derek Manning, [address withheld]. ☎ [phone number withheld].\nHon. Membership Secretary: Carl Lawton, [address withheld]. ☎ [phone number withheld].\nHon. Editors of The Belgravian: Alan Mead, [address withheld]. ☎ [phone number withheld] e-mail [e-mail withheld] and Charles Dickinson, [address withheld]. ☎ [phone number withheld].",
    "redacted": {
     "address": 5,
-    "phone": 5
+    "phone": 5,
+    "email": 1
    }
   },
   {
@@ -6320,7 +6321,7 @@
    "type": "notice",
    "heading": "The Belgravian on the World Wide Web",
    "summary": "Notice giving the magazine's CompuServe e-mail address for sending results, articles and messages.",
-   "text": "The Belgravian on the World Wide Web\n\nNo need to lose contact. If you have access to a computer with a modem send your results, articles and messages to us from anywhere in the world\n\n101647.2745@compuserve.com"
+   "text": "The Belgravian on the World Wide Web\n\nNo need to lose contact. If you have access to a computer with a modem send your results, articles and messages to us from anywhere in the world\n\n[e-mail withheld]"
   },
   {
    "id": "B224-43",
@@ -25572,6 +25573,6 @@
   "Hon. General Secretary": "Charles Henn, [address withheld]. ☎ [phone number withheld].",
   "Hon. Treasurer": "Derek Manning, [address withheld]. ☎ [phone number withheld].",
   "Hon. Membership Secretary": "Carl Lawton, [address withheld]. ☎ [phone number withheld].",
-  "Hon. Editors of The Belgravian": "Alan Mead, [address withheld]. ☎ [phone number withheld] e-mail 101647.2745@compuserve.com and Charles Dickinson, [address withheld]. ☎ [phone number withheld]."
+  "Hon. Editors of The Belgravian": "Alan Mead, [address withheld]. ☎ [phone number withheld] e-mail [e-mail withheld] and Charles Dickinson, [address withheld]. ☎ [phone number withheld]."
  }
 }

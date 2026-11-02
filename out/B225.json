@@ -10,7 +10,7 @@
   "Hon. General Secretary": "Charles Henn, [address withheld]. ☎ [phone number withheld].",
   "Hon. Treasurer": "Derek Manning, [address withheld]. ☎ [phone number withheld].",
   "Hon. Membership Secretary": "Carl Lawton, [address withheld]. ☎ [phone number withheld].",
-  "Hon. Editors of The Belgravian": "Alan Mead, [address withheld]. ☎ [phone number withheld] e-mail 101647.2745@compuserve.com and Charles Dickinson, [address withheld]. ☎ [phone number withheld]."
+  "Hon. Editors of The Belgravian": "Alan Mead, [address withheld]. ☎ [phone number withheld] e-mail [e-mail withheld] and Charles Dickinson, [address withheld]. ☎ [phone number withheld]."
  },
  "items": [
   {
@@ -297,7 +297,7 @@
    "heading": "The Belgravian",
    "byline": null,
    "summary": "Masthead of Number 225, February 1997, with the club's patron, president and honorary officers.",
-   "text": "The Belgravian\nNumber 225\nFebruary 1997\n\nPatron: Sir Eddie Kulukundis, O.B.E.\nPresident: Ted Pallant\nHon. General Secretary: Charles Henn, [address withheld]. ☎ [phone number withheld].\nHon. Treasurer: Derek Manning, [address withheld]. ☎ [phone number withheld].\nHon. Membership Secretary: Carl Lawton, [address withheld]. ☎ [phone number withheld].\nHon. Editors of The Belgravian: Alan Mead, [address withheld]. ☎ [phone number withheld] e-mail 101647.2745@compuserve.com and Charles Dickinson, [address withheld]. ☎ [phone number withheld].",
+   "text": "The Belgravian\nNumber 225\nFebruary 1997\n\nPatron: Sir Eddie Kulukundis, O.B.E.\nPresident: Ted Pallant\nHon. General Secretary: Charles Henn, [address withheld]. ☎ [phone number withheld].\nHon. Treasurer: Derek Manning, [address withheld]. ☎ [phone number withheld].\nHon. Membership Secretary: Carl Lawton, [address withheld]. ☎ [phone number withheld].\nHon. Editors of The Belgravian: Alan Mead, [address withheld]. ☎ [phone number withheld] e-mail [e-mail withheld] and Charles Dickinson, [address withheld]. ☎ [phone number withheld].",
    "tables": [],
    "scans": [],
    "photos": [],
@@ -360,7 +360,8 @@
    ],
    "redacted": {
     "address": 5,
-    "phone": 5
+    "phone": 5,
+    "email": 1
    }
   },
   {
