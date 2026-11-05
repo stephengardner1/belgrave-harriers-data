@@ -183,6 +183,42 @@ for p in pi:
         json.dump({'x': x}, open(f"{OUT}/people/x/{p['id']}.json", 'w'), ensure_ascii=False, separators=(',', ':'))
         p['x'] = 1; nprof += 1
 print(nprof, 'profiles with passages')
+# share card text and picture for each person (Steve, 5 Nov 2026): used for link previews (read/share/<id>.html)
+# and the page title / description in the reader. Built only from what the archive holds.
+MEDIA = 'https://belgravian-images.stephendgardner.workers.dev/belgravian/'
+PAGES = 'https://stephengardner1.github.io/belgrave-harriers-data/belgravian/'
+RESULTISH = re.compile(r'\b\d{1,2}[:.]\d{2}\b|\b\d+(st|nd|rd|th)\b|^\s*=?\d+\b', re.I)
+def n_names(c):
+    return len(re.findall(r"\b[A-Z][a-z'’]+(?:[ -][A-Z][a-z'’]+)+", c or ''))
+def plural(n, w, ws=None): return f"{n:,} {w if n == 1 else (ws or w + 's')}"
+for p in pi:
+    ms = p['mentions']
+    yrs = sorted({int(y.group(0)) for m in ms for y in [re.search(r'(18|19|20)\d\d', m.get('when') or '')] if y})
+    span = (f"{yrs[0]}–{yrs[-1]}" if yrs and yrs[0] != yrs[-1] else str(yrs[0])) if yrs else ''
+    nis = len({m['id'].split('-')[0] for m in ms})
+    res = sum(1 for m in ms if (item_src.get(m['id'], {}).get('type') in ('results', 'records')) or RESULTISH.search(m.get('note') or ''))
+    ph = p.get('photos') or []
+    lead = f"{p['name']} in The Belgravian, the Belgrave Harriers club gazette"
+    if ms:
+        parts = [plural(len(ms), 'mention') + f" in {plural(nis, 'issue')}"]
+        if res: parts.append(plural(res, 'race result'))
+        if ph: parts.append(plural(len(ph), 'photograph'))
+        desc = lead + (f", {span}" if span else '') + ': ' + (', '.join(parts[:-1]) + ' and ' + parts[-1] if len(parts) > 1 else parts[0]) + '.'
+    else:
+        desc = lead + '.'
+        if ph: desc += f" In {plural(len(ph), 'photograph')}."
+    if p.get('wrote'): desc += f" Wrote or reported {plural(len(p['wrote']), 'item')}."
+    if p.get('official') and not ms: desc += f" Listed as a club official in {plural(len(p['official']), 'item')}."
+    # picture: a hand-picked portrait if there is one, else the photo naming the fewest people (a caption that starts
+    # with their name wins a tie), else none
+    img = ''
+    if os.path.exists(f"{OUT}/home/faces/{p['id']}.jpg"): img = f"{PAGES}home/faces/{p['id']}.jpg"
+    elif ph:
+        sur = p['name'].split()[-1]
+        best = min(ph, key=lambda f: (n_names(f.get('c') or f.get('caption')), 0 if (f.get('c') or f.get('caption') or '').lstrip().startswith(p['name'].split()[0]) else 1))
+        img = MEDIA + (best.get('f') or best.get('file'))
+    p['share'] = {'d': desc, 'img': img, 'u': f"{PAGES}read/share/{p['id']}.html"}
+
 for p in pi:
     letter = (p['sort'][:1] if p['sort'][:1] in string.ascii_lowercase else '_')
     for m in p['mentions']:

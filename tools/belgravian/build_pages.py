@@ -157,6 +157,30 @@ for p in people:
          f'Every mention of {x["name"]} in The Belgravian, the Belgrave Harriers club gazette.', body, PAGE[p['id']])
     urls.append(PAGE[p['id']])
 
+# ---- share pages: what a link preview (WhatsApp, Facebook, X, email) shows for a person, then on to the reader ----
+# Social sites ignore the "#p-…" part of the club-site address, so a profile link shared directly shows the archive's
+# general preview. These tiny pages carry the person's own title, description and picture, and send people straight on.
+os.makedirs(os.path.join(OUT, 'share'), exist_ok=True)
+nshare = 0
+for p in people:
+    x = detail.get(p['id']); sh = (x or {}).get('share')
+    if not sh: continue
+    title = f"{x['name']} · The Belgravian · Belgrave Harriers"
+    go = READER + p['id']
+    img = (f'<meta property="og:image" content="{e(sh["img"])}"><meta name="twitter:image" content="{e(sh["img"])}">' if sh.get('img') else '')
+    open(os.path.join(OUT, 'share', p['id'] + '.html'), 'w').write(
+        '<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+        f'<title>{e(title)}</title><meta name="description" content="{e(sh["d"])}"><meta name="robots" content="noindex">'
+        f'<meta property="og:type" content="profile"><meta property="og:site_name" content="Belgrave Harriers">'
+        f'<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(sh["d"])}">'
+        f'<meta property="og:url" content="{e(sh["u"])}">{img}'
+        f'<meta name="twitter:card" content="{"summary_large_image" if sh.get("img") else "summary"}">'
+        f'<meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(sh["d"])}">'
+        f'<link rel="canonical" href="{e(go)}"><script>location.replace({json.dumps(go)})</script></head>'
+        f'<body style="font-family:system-ui,sans-serif;padding:24px"><p><a href="{e(go)}">{e(x["name"])} in The Belgravian →</a></p></body></html>')
+    nshare += 1
+print(nshare, 'share pages')
+
 # ---- index ----
 by = {}
 for d in issues: by.setdefault(str(d['date'])[:3] + '0s', []).append(d)

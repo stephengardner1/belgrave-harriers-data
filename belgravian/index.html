@@ -507,6 +507,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
 .bv-loading .bv-msg{margin-top:6px;font-size:14px}
 .bv-totop{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:50;font:500 14px/20px var(--text);color:#fff;background:var(--red,#7a1020);border:0;border-radius:999px;padding:10px 16px;box-shadow:0 2px 10px rgba(0,0,0,.25);cursor:pointer;opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .2s,transform .2s}
 .bv-totop.on{opacity:1;transform:none;pointer-events:auto}
+.bv-pa-share{margin:10px 0 0;justify-self:start;font:600 14px/20px var(--franklin);color:var(--claret);background:none;border:1px solid var(--claret);border-radius:999px;padding:7px 14px;cursor:pointer}.bv-pa-share:hover{background:var(--claret);color:#fff}
 .bv-pa-role{margin:6px 0 0;font:400 15px/1.5 var(--text);color:var(--body)}.bv-pa-role summary{cursor:pointer;color:var(--slate)}.bv-pa-role ul{margin:6px 0 0;padding-left:18px;max-height:260px;overflow:auto}.bv-pa-role a{color:var(--claret)}
 @media (prefers-reduced-motion:reduce){.bv-busybar::before{animation:none;left:0;width:100%;opacity:.6}}
 </style>
@@ -899,7 +900,9 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     var sel=main.querySelector('.bv-pa-chart select');if(sel)sel.value=y;
     if(scroll){var top=parseFloat(getComputedStyle(root).getPropertyValue('--bv-top'))||12;window.scrollTo({top:Math.max(0,window.pageYOffset+sec.getBoundingClientRect().top-top-8),behavior:'smooth'})}
   }
+  function setMeta(title,desc){try{document.title=title;var m=document.querySelector('meta[name="description"]');if(!m){m=document.createElement('meta');m.name='description';document.head.appendChild(m)}if(desc)m.content=desc}catch(e){}}
   function personShow(id,p){
+    if(p&&p.share)setMeta(p.name+' · The Belgravian · Belgrave Harriers',p.share.d);
     if(!p){idle();main.innerHTML='<p class="bv-msg">No one by that name in the digitised issues yet.</p>';return}
     var leg=p.legend?(LEGENDS[id]?Promise.resolve(LEGENDS[id]):get('legends/'+id.slice(2)+'.json').then(function(d){LEGENDS[id]=d;return d})):Promise.resolve(null);
     Promise.all([leg,getX(id,p)]).then(function(r){
@@ -923,6 +926,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
       h+='<div class="bv-pa-id"><span class="label">In the Belgravian'+(span?' · '+esc(span):'')+'</span><h2>'+esc(p.name)+'</h2>'+
         (ms.length?'<p class="bv-pa-sum">Named <b>'+ms.length+' time'+(ms.length===1?'':'s')+'</b> in '+ni+' issue'+(ni===1?'':'s')+(photos.length?', and in '+photos.length+' photograph'+(photos.length===1?'':'s'):'')+'.</p>':'')+
         roleLines(p)+
+        (p.share?'<button type="button" class="bv-pa-share" data-share="'+esc(p.share.u)+'" data-title="'+esc(p.name+' · The Belgravian')+'">Share this profile</button>':'')+
         '</div>';
       if(gal.length)h+='<div class="bv-pa-gal"><div class="bv-gallery" aria-label="Photographs of '+esc(p.name)+'">'+gal.map(function(f){return '<figure><img '+thumbSrc(f.f)+' alt="'+esc(f.c||p.name)+'" loading="lazy" '+lbAttr(f)+'><figcaption>'+esc(yearOf(f.w))+'</figcaption></figure>'}).join('')+'</div>'+
         (gal.length>6?'<button type="button" class="bv-pa-allph">All '+gal.length+' photos →</button>':'')+'</div>';
@@ -972,8 +976,10 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   main.addEventListener('change',function(e){if(e.target.closest('.bv-pa-chart select'))goYear(e.target.value,true)});
 
   /* ---------- router ---------- */
+  var BASE_TITLE=document.title,BASE_DESC=(document.querySelector('meta[name="description"]')||{}).content||'';
   function route(){
     var h=(location.hash||'').slice(1),hl=root.dataset.hl||'';root.dataset.hl='';
+    if(!/^p-/.test(h))setMeta(BASE_TITLE,BASE_DESC);
     root.classList.toggle('bv-person-mode',/^p-/.test(h));
     root.classList.toggle('bv-home-mode',!h||h==='shelf');
     var m;
@@ -1012,6 +1018,9 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     if((t=e.target.closest('.bv-pa-chart .bars button'))){goYear(t.dataset.year,true);return}
     if((t=e.target.closest('.bv-pa-allph'))){var g=t.closest('.bv-pa-gal');g.classList.toggle('all');t.textContent=g.classList.contains('all')?'Fewer photos':'All '+g.querySelectorAll('figure').length+' photos →';return}
     if((t=e.target.closest('.bv-chips-more'))){var cw=t.closest('.bv-chips'),open=cw.classList.toggle('bv-chips-few')===false;t.setAttribute('aria-expanded',String(open));t.textContent=open?'Show fewer':'+ '+cw.querySelectorAll('.bv-chip-x').length+' more';return}
+    if((t=e.target.closest('[data-share]'))){var u=t.dataset.share,b=t;
+      if(navigator.share){navigator.share({title:t.dataset.title,url:u}).catch(function(){});return}
+      (navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(function(){b.textContent='Link copied'},function(){b.textContent=u}).then(function(){setTimeout(function(){b.textContent='Share this profile'},2500)});return}
     if((t=e.target.closest('[data-full]'))){fullArt(t);return}
     if((t=e.target.closest('.bv-m-hd'))){if(!phone())return;var mm=t.closest('.bv-m');mm.classList.toggle('open');t.setAttribute('aria-expanded',String(mm.classList.contains('open')));return}
     if((t=e.target.closest('img[data-lb]'))){var g=lbGroup(t);lightbox(t.dataset.lb,t.dataset.cap,t.dataset.href,t.dataset.w,g.items,g.i);return}
