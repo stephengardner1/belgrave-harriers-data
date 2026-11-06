@@ -167,14 +167,15 @@ for p in people:
     if not sh: continue
     title = f"{x['name']} · The Belgravian · Belgrave Harriers"
     go = READER + p['id']
-    img = (f'<meta property="og:image" content="{e(sh["img"])}"><meta name="twitter:image" content="{e(sh["img"])}">' if sh.get('img') else '')
+    pic = sh.get('img') or 'https://stephengardner1.github.io/belgrave-harriers-data/belgravian/share-card.jpg'  # archive card if no photo
+    img = f'<meta property="og:image" content="{e(pic)}"><meta name="twitter:image" content="{e(pic)}">'
     open(os.path.join(OUT, 'share', p['id'] + '.html'), 'w').write(
         '<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
         f'<title>{e(title)}</title><meta name="description" content="{e(sh["d"])}"><meta name="robots" content="noindex">'
         f'<meta property="og:type" content="profile"><meta property="og:site_name" content="Belgrave Harriers">'
         f'<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(sh["d"])}">'
         f'<meta property="og:url" content="{e(sh["u"])}">{img}'
-        f'<meta name="twitter:card" content="{"summary_large_image" if sh.get("img") else "summary"}">'
+        f'<meta name="twitter:card" content="summary_large_image">'
         f'<meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(sh["d"])}">'
         f'<link rel="canonical" href="{e(go)}"><script>location.replace({json.dumps(go)})</script></head>'
         f'<body style="font-family:system-ui,sans-serif;padding:24px"><p><a href="{e(go)}">{e(x["name"])} in The Belgravian →</a></p></body></html>')
