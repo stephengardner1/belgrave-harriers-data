@@ -27,9 +27,41 @@ def ev_key(t):
 # all fold into the one Southern Cross Country Championships. Leagues, inter-counties and association races stay apart.
 SOUTHERN_XC = re.compile(r"^(veterans )?southern (counties )?((junior|juniors|youths?|women'?s|ladies|veterans|vets) )?"
                          r"(cross country|c\.?c\.?) championships( \(.*\))?$")
-def event_tag(e):
+# Steve, 7 Nov 2026: three London to Brighton races, each with its variants merged -- the road relay (National and
+# Southern), the walk, and the 52-mile run. A plain "London to Brighton" tag is sorted by what the item says nearby.
+BR_RELAY = re.compile(r"^(national |southern )?(london (to )?)?brighton (road )?relays?( \((national|southern|southern clubs)\))?$")
+BR_WALK = re.compile(r"^(london (to )?)?brighton walk$")
+BR_RUN = re.compile(r"^(r\.?r\.?c\.? )?london (to )?brighton ((road )?(run|race|running race)|52 miles)$")
+def brighton_kind(it):
+    h = (it.get('heading') or '').lower()
+    for w, kind in (('relay', 'Relay'), ('walk', 'Walk'), ('run', 'Run')):
+        if w in h and 'brighton' in h: return kind
+    txt = ' '.join(str(it.get(x) or '') for x in ('heading', 'summary', 'text')).lower()
+    sc = {'Relay': 0, 'Walk': 0, 'Run': 0}
+    for m in re.finditer(r'brighton', txt):
+        win = txt[max(0, m.start() - 120): m.end() + 120]
+        sc['Relay'] += len(re.findall(r'relay|stage|\bleg\b', win))
+        sc['Walk'] += len(re.findall(r'walk', win))
+        sc['Run'] += len(re.findall(r'\brun\b|running race|road run|52 miles|runners? club|r\.r\.c', win))
+    best = max(sc, key=sc.get)
+    if sc[best] and list(sc.values()).count(sc[best]) == 1: return best
+    for w, kind in (('relay', 'Relay'), ('walk', 'Walk'), ('road run', 'Run'), ('running', 'Run')):   # the column it sits in
+        if w in h: return kind
+    sc = {'Relay': len(re.findall(r'relay', txt)), 'Walk': len(re.findall(r'walk', txt)),
+          'Run': len(re.findall(r'\brun\b|running race|road run', txt))}
+    best = max(sc, key=sc.get)
+    return best if sc[best] and list(sc.values()).count(sc[best]) == 1 else None
+def event_tag(e, it=None):
     t = event_tag0(e)
     k = ev_key(t)
+    if BR_RELAY.match(k): return 'London to Brighton Relay'
+    if BR_WALK.match(k): return 'London to Brighton Walk'
+    if BR_RUN.match(k): return 'London to Brighton Run'
+    if re.match(r"^stock exchange (london (to )?)?brighton( walk)?$", k): return 'Stock Exchange London to Brighton Walk'
+    if re.match(r"^london (to )?brighton and back( walk)?$", k): return 'London to Brighton and Back Walk'
+    if k in ('london to brighton', 'london brighton') and it is not None:
+        kind = brighton_kind(it)
+        if kind: return 'London to Brighton ' + kind
     if SOUTHERN_XC.match(k): return 'Southern Cross Country Championships'
     # Steve, 2 Nov 2026: "British League" and "BAL" are the British Athletics League (divisions and qualifying matches
     # included); its cup competitions keep their own names, with BAL / British League spelled out
@@ -61,7 +93,7 @@ for f in sorted(glob.glob(f'{W}/out/B*.json')):
         it.setdefault('regions', [])
         for k in ('tables', 'scans', 'photos', 'people', 'events', 'clubs', 'places', 'sport'):
             it[k] = it.get(k) or []
-        it['events'] = list(dict.fromkeys(event_tag(e) for e in it['events']))
+        it['events'] = list(dict.fromkeys(event_tag(e, it) for e in it['events']))
     json.dump(d, open(f'{OUT}/issues/B{no}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     y = int(str(d['date'])[:4])
     issues.append({'issue': no, 'label': d['label'], 'date': d['date'], 'year': y,
