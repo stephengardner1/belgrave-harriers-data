@@ -594,11 +594,11 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     var D=HOME.decades[d],h='<div class="bv-dec-hd"><h2>THE '+d+'s</h2><span>'+num(D.issues)+' issues · '+num(D.articles)+' articles · '+num(D.nphotos)+' photos</span></div>';
     if(D.photos.length)h+='<section class="bv-sec bv-dec-ph"><div class="bv-sec-hd"><h3>PHOTOGRAPHS</h3><span>'+num(D.nphotos)+' in the '+d+'s</span></div><div class="bv-ph-row">'+
       D.photos.map(function(p){return '<figure style="--r:'+(+p.r||.75)+'"><img '+thumbSrc(p.f)+' alt="'+esc(p.c)+'" loading="lazy" data-lb="'+MEDIA+esc(p.f)+'" data-cap="'+esc(p.cap||p.c)+'"'+(p.id?' data-href="#'+esc(p.id)+'"':'')+' data-w="'+esc(p.w||'')+'"><figcaption>'+esc(p.c)+' <i>'+esc(shortWhen(p.w||''))+'</i></figcaption></figure>'}).join('')+'</div></section>';
-    var by={};D.covers.forEach(function(c){by[c.y]=c});var last=HOME.span[1],slots='';
+    var by={};D.covers.forEach(function(c){by[c.y]=c});var first=HOME.span[0],last=HOME.span[1],slots='';
     for(var y=+d;y<+d+10;y++){var c=by[y];
       slots+=c?'<a href="#'+issueKey(c.no)+'" class="bv-cover-y"><img src="'+pageImg(c.no,1)+'" alt="Cover of The Belgravian, '+esc(c.label)+'" loading="lazy"><b>'+y+'</b></a>':
         (NOISSUE[y]&&NOISSUE[y].no?'<a href="#'+issueKey(NOISSUE[y].no)+'" class="gap"><i>No issue that year<br>(see '+esc(NOISSUE[y].see)+')</i><b>'+y+'</b></a>':
-        '<span class="gap"><i>'+(y>last?'Not in the archive yet':NOISSUE[y]?'No issue that year':'None in the archive')+'</i><b>'+y+'</b></span>')}
+        '<span class="gap"><i>'+(y>last?'Not in the archive yet':y<first?'Coming soon':NOISSUE[y]?'No issue that year':'None in the archive')+'</i><b>'+y+'</b></span>')}
     h+='<div class="bv-dec-cols"><section class="bv-sec"><div class="bv-sec-hd"><h3>ISSUES</h3><a href="#d'+d+'">All '+D.issues+'</a></div><div class="bv-yc">'+slots+'</div></section>';
     h+='<section class="bv-sec"><div class="bv-sec-hd"><h3>ATHLETES</h3></div><div>'+D.athletes.map(function(a){
       return '<a class="bv-row" href="#'+esc(a.id)+'"><span class="who">'+(a.face?'<img class="face" src="'+BASE+esc(a.face)+'" alt="" loading="lazy">':'<span class="ini" aria-hidden="true">'+esc(a.name.split(/\s+/).map(function(w){return w[0]}).join('').slice(0,2))+'</span>')+esc(a.name)+'</span><small>'+num(a.n)+'</small></a>'}).join('')+'</div></section>';
