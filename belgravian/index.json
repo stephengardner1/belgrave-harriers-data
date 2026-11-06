@@ -2,6 +2,38 @@
  "title": "The Belgravian",
  "issues": [
   {
+   "issue": 122,
+   "label": "No. 122",
+   "date": "1955-05",
+   "year": 1955,
+   "pageCount": 20,
+   "items": 37
+  },
+  {
+   "issue": 123,
+   "label": "No. 123",
+   "date": "1955-08",
+   "year": 1955,
+   "pageCount": 20,
+   "items": 30
+  },
+  {
+   "issue": 124,
+   "label": "No. 124",
+   "date": "1955-11",
+   "year": 1955,
+   "pageCount": 20,
+   "items": 32
+  },
+  {
+   "issue": 125,
+   "label": "No. 125",
+   "date": "1956-02",
+   "year": 1956,
+   "pageCount": 16,
+   "items": 27
+  },
+  {
    "issue": 126,
    "label": "No. 126",
    "date": "1956-05",
