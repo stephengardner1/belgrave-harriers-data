@@ -2,6 +2,78 @@
  "title": "The Belgravian",
  "issues": [
   {
+   "issue": 132,
+   "label": "No. 132",
+   "date": "1957-10",
+   "year": 1957,
+   "pageCount": 12,
+   "items": 26
+  },
+  {
+   "issue": 133,
+   "label": "No. 133",
+   "date": "1958-01",
+   "year": 1958,
+   "pageCount": 16,
+   "items": 37
+  },
+  {
+   "issue": 134,
+   "label": "No. 134",
+   "date": "1958-04",
+   "year": 1958,
+   "pageCount": 16,
+   "items": 34
+  },
+  {
+   "issue": 135,
+   "label": "No. 135",
+   "date": "1958-07",
+   "year": 1958,
+   "pageCount": 12,
+   "items": 34
+  },
+  {
+   "issue": 136,
+   "label": "No. 136",
+   "date": "1958-10",
+   "year": 1958,
+   "pageCount": 16,
+   "items": 35
+  },
+  {
+   "issue": 137,
+   "label": "No. 137",
+   "date": "1959-03",
+   "year": 1959,
+   "pageCount": 16,
+   "items": 31
+  },
+  {
+   "issue": 138,
+   "label": "No. 138",
+   "date": "1959-06",
+   "year": 1959,
+   "pageCount": 20,
+   "items": 47
+  },
+  {
+   "issue": 139,
+   "label": "No. 139",
+   "date": "1959-09",
+   "year": 1959,
+   "pageCount": 12,
+   "items": 19
+  },
+  {
+   "issue": 140,
+   "label": "No. 140",
+   "date": "1959-11",
+   "year": 1959,
+   "pageCount": 28,
+   "items": 61
+  },
+  {
    "issue": 141,
    "label": "March 1960",
    "date": "1960-03",
@@ -1046,7 +1118,7 @@
   "1920s",
   "1930s",
   "1940s",
-  "1950s"
+  "1950s (more to come)"
  ],
  "legends": [
   {
@@ -1057,6 +1129,7 @@
   }
  ],
  "searchFiles": [
+  "search-1950s.json",
   "search-1960s.json",
   "search-1970s.json",
   "search-1980s.json",
