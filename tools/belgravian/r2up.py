@@ -7,7 +7,9 @@ root = sys.argv[2]; prefix = sys.argv[3]   # e.g. belgravian/
 files = []
 for sub in sys.argv[4:]:
     for d, _, fs in os.walk(os.path.join(root, sub)):
-        for f in fs: files.append(os.path.join(d, f))
+        for f in fs:
+            if f.endswith(('.orig', '.prered', '.tmp')): continue   # never upload unblurred originals or scratch
+            files.append(os.path.join(d, f))
 existing = set()
 for p in s3.get_paginator('list_objects_v2').paginate(Bucket='belgravian-archive', Prefix=prefix):
     for o in p.get('Contents', []): existing.add((o['Key'], o['Size']))

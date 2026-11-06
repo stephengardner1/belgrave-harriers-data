@@ -928,14 +928,125 @@
    "year": 2007,
    "pageCount": 4,
    "items": 9
+  },
+  {
+   "issue": 257,
+   "label": "No. 257",
+   "date": "2007-06",
+   "year": 2007,
+   "pageCount": 7,
+   "items": 18
+  },
+  {
+   "issue": 258,
+   "label": "No. 258",
+   "date": "2007-09",
+   "year": 2007,
+   "pageCount": 4,
+   "items": 11
+  },
+  {
+   "issue": 259,
+   "label": "No. 259",
+   "date": "2007-10",
+   "year": 2007,
+   "pageCount": 5,
+   "items": 8
+  },
+  {
+   "issue": 260,
+   "label": "No. 260",
+   "date": "2007-10",
+   "year": 2007,
+   "pageCount": 5,
+   "items": 11
+  },
+  {
+   "issue": 261,
+   "label": "No. 261",
+   "date": "2007-11",
+   "year": 2007,
+   "pageCount": 5,
+   "items": 15
+  },
+  {
+   "issue": 262,
+   "label": "No. 262",
+   "date": "2008-01",
+   "year": 2008,
+   "pageCount": 7,
+   "items": 16
+  },
+  {
+   "issue": 263,
+   "label": "No. 263",
+   "date": "2008-03",
+   "year": 2008,
+   "pageCount": 7,
+   "items": 17
+  },
+  {
+   "issue": 264,
+   "label": "No. 264",
+   "date": "2008-05",
+   "year": 2008,
+   "pageCount": 7,
+   "items": 9
+  },
+  {
+   "issue": 265,
+   "label": "No. 265",
+   "date": "2008-11",
+   "year": 2008,
+   "pageCount": 4,
+   "items": 10
+  },
+  {
+   "issue": 266,
+   "label": "No. 266",
+   "date": "2008-12",
+   "year": 2008,
+   "pageCount": 5,
+   "items": 15
+  },
+  {
+   "issue": 267,
+   "label": "No. 267",
+   "date": "2008-12",
+   "year": 2008,
+   "pageCount": 7,
+   "items": 18
+  },
+  {
+   "issue": 268,
+   "label": "No. 268",
+   "date": "2009-02",
+   "year": 2009,
+   "pageCount": 6,
+   "items": 18
+  },
+  {
+   "issue": 269,
+   "label": "No. 269",
+   "date": "2009-03",
+   "year": 2009,
+   "pageCount": 5,
+   "items": 14
+  },
+  {
+   "issue": 270,
+   "label": "No. 270",
+   "date": "2009-05",
+   "year": 2009,
+   "pageCount": 6,
+   "items": 15
   }
  ],
  "coming": [
   "1920s",
   "1930s",
   "1940s",
-  "1950s",
-  "2000s (more to come)"
+  "1950s"
  ],
  "legends": [
   {
