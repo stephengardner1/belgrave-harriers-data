@@ -164,6 +164,10 @@
 .bv-whenchip button{border:0;background:transparent;font:600 15px/1 var(--text);color:var(--slate);cursor:pointer;padding:0 4px}
 .bv-hit p+p{margin-top:4px}
 .bv-prose mark{scroll-margin-top:96px}
+.bv-see{border-left:3px solid var(--claret);background:var(--paper);padding:12px 14px;margin:4px 0;display:grid;gap:4px}
+.bv-see a{font:600 16px/22px var(--text);color:var(--claret);text-decoration:none}
+.bv-see a:hover{text-decoration:underline}
+.bv-see p{font:400 14px/20px var(--text);color:var(--body);margin:0}
 
 /* people */
 .bv-people{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:2px 24px}
@@ -715,6 +719,8 @@
     if(cont){return h+'<p class="cont">Continued from page '+fp+'. <button type="button" data-goitem="'+esc(it.id)+'">Read from the start</button></p></article>'}
     if(!it.heading&&it.summary)h+='<p class="sum">'+esc(it.summary)+'</p>';
     h+=prose(it.heading?dropHead(it.text,it.heading):it.text,hl);
+    /* a pointer to a fuller report elsewhere (e.g. the club website's news archive) -- Steve, 8 Nov 2026 */
+    (it.seeAlso||[]).forEach(function(l){h+='<aside class="bv-see"><span class="label">Read more</span><a href="'+esc(l.url)+'">'+esc(l.label)+' →</a>'+(l.note?'<p>'+esc(l.note)+'</p>':'')+'</aside>'});
     (it.tables||[]).forEach(function(t){h+=tableHtml(t)});
     h+=figs(it.scans,d.issue,'scan')+figs(it.photos,d.issue,'photo');
     if((it.pages||[]).length>1)h+='<p class="cont">Runs over pages '+it.pages.join(', ')+'.</p>';
