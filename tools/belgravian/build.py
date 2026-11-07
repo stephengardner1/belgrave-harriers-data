@@ -72,6 +72,46 @@ def surrey_tag(k):
     if re.search(r"wom[ae]n|ladies", who): return "Surrey Women's Cross Country League"
     if re.search(r'young athletes|junior cross', who + ' ' + k): return 'Surrey Young Athletes Cross Country League'
     return 'Surrey League'
+# Steve, 8 Nov 2026: the Southern championships under their later names (SEAA, South of England) fold into the
+# Southern Cross Country Championships; the inter-counties are split by discipline (sorted like London to Brighton).
+SOUTHERN_MORE = re.compile(r"^((seaa|s\.e\.a\.a\.?|south of england)( aa)? (senior )?(cross country|c\.?c\.?) championships|"
+                           r"southern counties (senior )?c\.? ?c\.?( ?championships)?|southern c\.?c\.?a\.?( race.*)?)$")
+def ic_kind(it):
+    h = (it.get('heading') or '').lower()
+    if re.search(r'cross[- ]country|\bc\.? ?c\.?\b|x-?c\b', h): return 'xc'
+    if re.search(r'\bwalk(s|ing)?\b', h): return 'walk'
+    if re.search(r'track|field|athletic', h): return 'tf'
+    txt = ' '.join(str(it.get(x) or '') for x in ('summary', 'text')).lower()
+    sc = {'xc': 0, 'walk': 0, 'tf': 0}
+    for m in re.finditer(r'inter[- ]?count', txt):
+        win = txt[max(0, m.start() - 150): m.end() + 150]
+        sc['xc'] += len(re.findall(r'cross[- ]country|\bc\.c\.|\bmud|\bcourse\b|parliament hill|\bcountry\b', win))
+        sc['walk'] += len(re.findall(r'\bwalk(s|ing|ed)?\b', win))
+        sc['tf'] += len(re.findall(r'\btrack\b|metres|\d+ ?m\b|yards|hurdles|steeplechase|jump|vault|shot|discus|javelin|hammer|sprint|relay', win))
+    best = max(sc, key=sc.get)
+    if best == 'walk' and sc['tf']: best = 'tf'   # the track championships had walks too
+    if sc[best] and list(sc.values()).count(sc[best]) == 1: return best
+    sp = set(it.get('sport') or [])
+    if sp == {'cross country'}: return 'xc'
+    if sp == {'race walking'}: return 'walk'
+    if sp and sp <= {'track', 'field'}: return 'tf'
+    return None
+IC_NAMES = {'xc': 'Inter-Counties Cross Country Championships', 'walk': 'Inter-Counties Walks',
+            'tf': 'Inter-Counties Track & Field'}
+def ic_tag(k, it):
+    if not re.search(r'inter[- ]?count(y|ies)', k): return None
+    if re.search(r'\bmatch\b|\bmeet\b|meeting|vets|veteran|eastern|battle of britain|national and|aaa|\b10 ?k', k): return None
+    if re.match(r'^(seaa|se |south of england|southern)', k): return 'Southern Inter-Counties'
+    if 'school' in k: return 'Schools Inter-Counties'
+    if re.search(r'\bu\d\d|under|youth|young|\bya\b', k): return None
+    if '20 mile' in k: return 'Inter-Counties 20 Miles'
+    if 'walk' in k: return 'Inter-Counties Walks'
+    if re.search(r'cross country|\bc\.?c\.?\b|^junior inter', k): return IC_NAMES['xc']
+    if re.match(r"^(cau )?inter[- ]?count(y|ies)( (championships?|champs\.?|race|track))?$", k):  # CAU ran both
+        kind = ic_kind(it) if it is not None else None
+        if 'track' in k and kind != 'walk': kind = 'tf'
+        return IC_NAMES[kind] if kind else 'Inter-Counties'
+    return None
 def event_tag(e, it=None):
     t = event_tag0(e)
     k = ev_key(t)
@@ -85,7 +125,9 @@ def event_tag(e, it=None):
         if kind: return 'London to Brighton ' + kind
     st = surrey_tag(k)
     if st: return st
-    if SOUTHERN_XC.match(k): return 'Southern Cross Country Championships'
+    if SOUTHERN_XC.match(k) or SOUTHERN_MORE.match(k): return 'Southern Cross Country Championships'
+    ic = ic_tag(k, it)
+    if ic: return ic
     # Steve, 2 Nov 2026: "British League" and "BAL" are the British Athletics League (divisions and qualifying matches
     # included); its cup competitions keep their own names, with BAL / British League spelled out
     kb = re.sub(r'^(b\.?a\.?l\.?|british league|british athletic league)\b', 'british athletics league', k)
