@@ -2,6 +2,70 @@
  "title": "The Belgravian",
  "issues": [
   {
+   "issue": 107,
+   "label": "No. 107",
+   "date": "1950-01",
+   "year": 1950,
+   "pageCount": 24,
+   "items": 38
+  },
+  {
+   "issue": 108,
+   "label": "No. 108",
+   "date": "1950-04",
+   "year": 1950,
+   "pageCount": 24,
+   "items": 39
+  },
+  {
+   "issue": 109,
+   "label": "No. 109",
+   "date": "1950-08",
+   "year": 1950,
+   "pageCount": 24,
+   "items": 52
+  },
+  {
+   "issue": 110,
+   "label": "No. 110",
+   "date": "1950-12",
+   "year": 1950,
+   "pageCount": 36,
+   "items": 63
+  },
+  {
+   "issue": 111,
+   "label": "No. 111",
+   "date": "1951-03",
+   "year": 1951,
+   "pageCount": 32,
+   "items": 59
+  },
+  {
+   "issue": 112,
+   "label": "No. 112",
+   "date": "1951-08",
+   "year": 1951,
+   "pageCount": 24,
+   "items": 50
+  },
+  {
+   "issue": 113,
+   "label": "No. 113",
+   "date": "1951-12",
+   "year": 1951,
+   "pageCount": 24,
+   "items": 44
+  },
+  {
+   "issue": 114,
+   "label": "No. 114",
+   "date": "1952-04",
+   "year": 1952,
+   "pageCount": 28,
+   "items": 57
+  },
+  {
    "issue": 115,
    "label": "No. 115",
    "date": "1952-08",
@@ -1253,8 +1317,7 @@
  "coming": [
   "1920s",
   "1930s",
-  "1940s",
-  "1950s (more to come)"
+  "1940s"
  ],
  "legends": [
   {
