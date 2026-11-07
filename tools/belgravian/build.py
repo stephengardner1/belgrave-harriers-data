@@ -77,10 +77,10 @@ def event_tag0(e):
     t = re.sub(r'\s+([,)])', r'\1', t); t = re.sub(r'\(\s+', '(', t)
     t = re.sub(r'\s{2,}', ' ', t).strip(' ,-\u2013')
     return t or e
-# Publish only finished issues: the 1960s pilot, plus later issues listed in WORKDIR/published.txt once read AND checked.
+# Publish only finished issues: the 1960s pilot (Nos. 141-172), plus later issues listed in WORKDIR/published.txt once read AND checked.
 PUB = set((int(x) if x.isdigit() else x) for x in open(f'{W}/published.txt').read().split()) if os.path.exists(f'{W}/published.txt') else set()
 def published(no):
-    return (isinstance(no, int) and no <= 172) or no in PUB
+    return (isinstance(no, int) and 141 <= no <= 172) or no in PUB   # 1960s pilot only; everything else must be listed
 
 issues, search = [], []
 for f in sorted(glob.glob(f'{W}/out/B*.json')):
