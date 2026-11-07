@@ -112,6 +112,28 @@ def ic_tag(k, it):
         if 'track' in k and kind != 'walk': kind = 'tf'
         return IC_NAMES[kind] if kind else 'Inter-Counties'
     return None
+# Steve, 8 Nov 2026: the Southern track and field championships (Southern Counties AAA, later SEAA / South of England AA)
+# under one name, the partner of the Southern Cross Country Championships; the few plain "Southern Championships"
+# that are really cross-country are sorted by the heading and the words nearby.
+SOUTHERN_TF = re.compile(r"^(southern( counties)?( a\.?a\.?a\.?| aaa)?|s\.?c\.?a\.?a\.?a\.?|seaa|s\.e\.a\.a\.?|south of england( a\.?a\.?)?)"
+                         r" (senior )?(championships?|champs\.?)$")
+def southern_kind(it):
+    h = (it.get('heading') or '').lower()
+    if re.search(r'cross[- ]country|\bc\.? ?c\.?\b|x-?c\b', h): return 'xc'
+    if re.search(r'track|field|athletic', h): return 'tf'
+    sp = set(it.get('sport') or [])
+    if 'cross country' not in sp and sp & {'track', 'field', 'race walking'}: return 'tf'
+    if sp == {'cross country'}: return 'xc'
+    txt = ' '.join(str(it.get(x) or '') for x in ('summary', 'text')).lower()
+    xc = tf = 0
+    for m in re.finditer(r'southern|s\.?e\.?a\.?a|south of england|s\.c\.a\.a', txt):
+        win = txt[max(0, m.start() - 120): m.end() + 120]
+        xc += len(re.findall(r'cross[- ]country|\bc\.c\.|\bmud|\bcourse\b|parliament hill|\bcountry\b', win))
+        tf += len(re.findall(r'\btrack\b|metres|\d+ ?m\b|yards|hurdles|steeplechase|jump|vault|shot|discus|javelin|hammer|sprint|relay', win))
+    if xc > tf: return 'xc'
+    if tf > xc: return 'tf'
+    sp = set(it.get('sport') or [])
+    return 'xc' if sp == {'cross country'} else 'tf'
 def event_tag(e, it=None):
     t = event_tag0(e)
     k = ev_key(t)
@@ -126,6 +148,8 @@ def event_tag(e, it=None):
     st = surrey_tag(k)
     if st: return st
     if SOUTHERN_XC.match(k) or SOUTHERN_MORE.match(k): return 'Southern Cross Country Championships'
+    if SOUTHERN_TF.match(k):
+        return 'Southern Cross Country Championships' if it is not None and southern_kind(it) == 'xc' else 'Southern Track & Field Championships'
     ic = ic_tag(k, it)
     if ic: return ic
     # Steve, 2 Nov 2026: "British League" and "BAL" are the British Athletics League (divisions and qualifying matches
