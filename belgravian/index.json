@@ -2,6 +2,62 @@
  "title": "The Belgravian",
  "issues": [
   {
+   "issue": 115,
+   "label": "No. 115",
+   "date": "1952-08",
+   "year": 1952,
+   "pageCount": 24,
+   "items": 31
+  },
+  {
+   "issue": 116,
+   "label": "No. 116",
+   "date": "1952-12",
+   "year": 1952,
+   "pageCount": 28,
+   "items": 58
+  },
+  {
+   "issue": 117,
+   "label": "No. 117",
+   "date": "1953-04",
+   "year": 1953,
+   "pageCount": 24,
+   "items": 48
+  },
+  {
+   "issue": 118,
+   "label": "No. 118",
+   "date": "1953-08",
+   "year": 1953,
+   "pageCount": 32,
+   "items": 64
+  },
+  {
+   "issue": 119,
+   "label": "No. 119",
+   "date": "1954-07",
+   "year": 1954,
+   "pageCount": 20,
+   "items": 56
+  },
+  {
+   "issue": 120,
+   "label": "No. 120",
+   "date": "1954-11",
+   "year": 1954,
+   "pageCount": 20,
+   "items": 27
+  },
+  {
+   "issue": 121,
+   "label": "No. 121",
+   "date": "1955-02",
+   "year": 1955,
+   "pageCount": 20,
+   "items": 40
+  },
+  {
    "issue": 122,
    "label": "No. 122",
    "date": "1955-05",
