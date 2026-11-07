@@ -3,7 +3,7 @@ python3 -I build.py WORKDIR REPO_BELGRAVIAN_DIR
 Reads WORKDIR/out/B*.json, WORKDIR/crops, WORKDIR/pages, WORKDIR/people-index.json (optional, built by people.py)
 and writes: issues/B*.json, index.json, search.json, people.json under the repo folder.
 Images (WORKDIR/pages, WORKDIR/crops) go to the R2 bucket belgravian-archive under belgravian/: python3 -I r2up.py r2.env WORKDIR belgravian/ pages crops"""
-import json, os, sys, glob, shutil, re, unicodedata
+import collections, json, os, sys, glob, shutil, re, unicodedata
 
 W, OUT = sys.argv[1], sys.argv[2]
 man = json.load(open('/home/claude/stephengardner1/surrey-league/research/belgravian/manifest_raw.json'))
@@ -51,6 +51,27 @@ def brighton_kind(it):
           'Run': len(re.findall(r'\brun\b|running race|road run', txt))}
     best = max(sc, key=sc.get)
     return best if sc[best] and list(sc.values()).count(sc[best]) == 1 else None
+# Steve, 8 Nov 2026: the Surrey cross-country league under one name, whatever the page printed ("Surrey CC League",
+# "Surrey Cross Country League", "Sweatshop Men's Surrey CC League", divisions, venues, youths and boys). The North
+# Surrey League, the women's league and the young athletes' league stay separate; road, summer and winter leagues too.
+SURREY_ALIASES = {'Surrey League': ['surrey league', 'surrey cross country league', 'surrey cross-country league',
+                                    'surrey cc league', 'surrey c.c. league', 'surrey c. c. league', 'surrey xc league'],
+                  "Surrey Women's Cross Country League": ["women's surrey league", "surrey women's league",
+                                    "surrey women's cross country league", "women's surrey cc league",
+                                    "surrey ladies cross country league"],
+                  'North Surrey League': ['north surrey league']}
+def surrey_tag(k):
+    k = k.replace('\u2019', "'")
+    if 'surrey' not in k or 'league' not in k or k.startswith('belgrave'): return None
+    if re.search(r'road|summer|winter|championships|east surrey|mid surrey', k): return None
+    if 'north surrey league' in k: return 'North Surrey League'
+    m = re.match(r"^(sweatshop )?(men'?s |women'?s |ladies )?surrey (men'?s |women'?s'? |womens'? |ladies |youths?(/boys)? |junior |young athletes )?"
+                 r"(cross country |c\.?c\.? |x\.?c\.? )?league\b(.*)$", k)
+    if not m: return None
+    who = (m.group(2) or '') + (m.group(3) or '') + (m.group(6) or '')
+    if re.search(r"wom[ae]n|ladies", who): return "Surrey Women's Cross Country League"
+    if re.search(r'young athletes|junior cross', who + ' ' + k): return 'Surrey Young Athletes Cross Country League'
+    return 'Surrey League'
 def event_tag(e, it=None):
     t = event_tag0(e)
     k = ev_key(t)
@@ -62,6 +83,8 @@ def event_tag(e, it=None):
     if k in ('london to brighton', 'london brighton') and it is not None:
         kind = brighton_kind(it)
         if kind: return 'London to Brighton ' + kind
+    st = surrey_tag(k)
+    if st: return st
     if SOUTHERN_XC.match(k): return 'Southern Cross Country Championships'
     # Steve, 2 Nov 2026: "British League" and "BAL" are the British Athletics League (divisions and qualifying matches
     # included); its cup competitions keep their own names, with BAL / British League spelled out
@@ -83,6 +106,7 @@ def published(no):
     return (isinstance(no, int) and 141 <= no <= 172) or no in PUB   # 1960s pilot only; everything else must be listed
 
 issues, search = [], []
+VARIANTS = {}
 for f in sorted(glob.glob(f'{W}/out/B*.json')):
     if re.search(r'\.(orig|firstpass)\.json$', f): continue
     d = json.load(open(f))
@@ -93,7 +117,12 @@ for f in sorted(glob.glob(f'{W}/out/B*.json')):
         it.setdefault('regions', [])
         for k in ('tables', 'scans', 'photos', 'people', 'events', 'clubs', 'places', 'sport'):
             it[k] = it.get(k) or []
-        it['events'] = list(dict.fromkeys(event_tag(e, it) for e in it['events']))
+        fin = []
+        for e in it['events']:
+            t = event_tag(e, it); fin.append(t)
+            raw = re.sub(r'\s*\(.*?\)', '', event_tag0(e)).strip().lower().replace('\u2019', "'")
+            if raw and raw != t.lower(): VARIANTS.setdefault(t, set()).add(raw)
+        it['events'] = list(dict.fromkeys(fin))
     json.dump(d, open(f'{OUT}/issues/B{no}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     y = int(str(d['date'])[:4])
     issues.append({'issue': no, 'label': d['label'], 'date': d['date'], 'year': y,
@@ -108,7 +137,7 @@ for f in sorted(glob.glob(f'{W}/out/B*.json')):
                         ' '.join(ppl), ' '.join(it['events'] + it['places'] + it['clubs'])])
         p0 = min(it['pages']) if it.get('pages') else 1
         search.append({'decade': str(y)[:3] + '0s', 'id': it['id'], 'type': it['type'], 'label': d['label'], 'p': p0,
-                       'h': it.get('heading'), 'sum': it.get('summary'),
+                       'h': it.get('heading'), 'sum': it.get('summary'), 'd': d['date'], 'e': it['events'],
                        's': re.sub(r'\s+', ' ', hay).strip()})
     # page images and crops are not copied: they live on Cloudflare R2 (upload with r2up.py from WORKDIR)
 
@@ -128,6 +157,16 @@ idx['searchFiles'] = [f'search-{d}.json' for d in sorted(by_dec)]
 json.dump(idx, open(f'{OUT}/index.json', 'w'), ensure_ascii=False, indent=1)
 for d, xs in by_dec.items():
     json.dump({'items': xs}, open(f'{OUT}/search-{d}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+
+# Steve, 8 Nov 2026: what each competition tag was printed as, so a competition search also finds and highlights
+# the wording inside long results round-ups. Only tags with variants are listed.
+for t, al in SURREY_ALIASES.items(): VARIANTS.setdefault(t, set()).update(al)
+_cnt = collections.Counter(x for v in VARIANTS.values() for x in v)
+_names = {t.lower() for t in VARIANTS} | {e.lower() for it in search for e in it.get('e', [])}
+VARIANTS = {t: {x for x in v if _cnt[x] == 1 and x not in _names and len(x) > 6} | (set(SURREY_ALIASES.get(t, [])) - {t.lower()})
+            for t, v in VARIANTS.items()}
+json.dump({t: sorted(v, key=len)[:40] for t, v in VARIANTS.items() if v},
+          open(f'{OUT}/tag-variants.json', 'w'), ensure_ascii=False, separators=(',', ':'))
 
 # people: light list (people.json) + per-surname-letter shards (people/<letter>.json) + legend profiles
 import string

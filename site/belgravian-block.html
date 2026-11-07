@@ -157,6 +157,13 @@
 .bv-filters{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
 .bv-filters button{font:500 13px/18px var(--text);color:var(--slate);background:var(--paper);border:1px solid var(--rule);border-radius:9999px;padding:4px 12px}
 .bv-filters button[aria-pressed="true"]{color:#fff;background:var(--claret);border-color:var(--claret)}
+.bv-filters .bv-flabel{font:600 12px/26px var(--text);color:var(--slate);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
+.bv-filters button.bv-sort{margin-left:auto;background:transparent}
+.bv-filters button[disabled]{opacity:.45}
+.bv-whenchip{display:inline-flex;gap:8px;align-items:center;font:500 13px/18px var(--text);color:var(--ink);background:var(--sand);border-radius:9999px;padding:4px 6px 4px 12px;margin:0 0 12px}
+.bv-whenchip button{border:0;background:transparent;font:600 15px/1 var(--text);color:var(--slate);cursor:pointer;padding:0 4px}
+.bv-hit p+p{margin-top:4px}
+.bv-prose mark{scroll-margin-top:96px}
 
 /* people */
 .bv-people{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:2px 24px}
@@ -687,7 +694,7 @@
     return text}
   function prose(text,hl){
     if(!text)return '';
-    var re=hl?new RegExp('('+hl.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'):null;
+    var re=hl?new RegExp('('+hl.split('|').filter(Boolean).map(function(w){return w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}).join('|')+')','gi'):null;
     return '<div class="bv-prose">'+String(text).split(/\n\s*\n/).map(function(p){var e=esc(p.trim());if(re)e=e.replace(re,'<mark>$1</mark>');return '<p>'+e+'</p>'}).join('')+'</div>';
   }
   function chips(it){
@@ -792,7 +799,7 @@
   }
   /* open an article: jump straight to it (no long smooth scroll), then re-settle while page images above it load */
   function goItem(id,fp){
-    var find=function(){return pane==='text'?main.querySelector('.bv-item[data-id="'+id+'"]'):sectionEl(fp)};
+    var find=function(){if(pane!=='text')return sectionEl(fp);var el=main.querySelector('.bv-item[data-id="'+id+'"]');var mk=el&&el.querySelector('.bv-prose mark');return mk&&el.getBoundingClientRect().height>window.innerHeight*1.2?mk:el};
     var moved=false,stop=function(){moved=true};['wheel','touchstart','keydown'].forEach(function(ev){window.addEventListener(ev,stop,{once:true,passive:true})});
     [0,250,700,1500,2400].forEach(function(ms,i,all){setTimeout(function(){
       var el=find();
@@ -818,24 +825,73 @@
 
   /* ---------- search ---------- */
   function loadSearch(){if(SEARCH)return Promise.resolve(SEARCH);var files=(IDX&&IDX.searchFiles&&IDX.searchFiles.length)?IDX.searchFiles:['search.json'];return Promise.all(files.map(function(f){return get(f)})).then(function(ds){SEARCH={items:[].concat.apply([],ds.map(function(d){return d.items}))};return SEARCH})}
-  var filter='all';
+  var filter='all',whenDec='',whenYear='',sortOld=false,TAGV=null;
+  /* Steve, 8 Nov 2026: a competition picked from the suggestions (or typed in full) finds every article tagged with it,
+     however the page worded it, plus any that name it; results run newest first and narrow by decade and year; a year
+     ("2002") or season ("01/02", "2001-02") typed with the words narrows to the issues of that time */
+  function loadTagV(){return TAGV?Promise.resolve(TAGV):get('tag-variants.json').then(function(d){TAGV=d||{};return TAGV},function(){TAGV={};return TAGV})}
+  function parseWhen(t){
+    var from='',to='',label='';
+    t=t.replace(/(^|\s)(19|20)?(\d\d)\s*[\/\u2013-]\s*(\d\d)(?=\s|$)/,function(all,sp,c,a,b){var y=c?+(c+a):(+a<=9?2000+(+a):1900+(+a));if((y+1)%100!==+b)return all;from=y+'-09';to=(y+1)+'-12';label=y+'/'+b+' season';return ' '});
+    if(!from)t=t.replace(/(^|\s)(19[2-9]\d|200\d)(?=\s|$)/,function(all,sp,y){from=y+'-01';to=y+'-12';label=y;return ' '});
+    return {rest:t.replace(/\s+/g,' ').trim(),from:from,to:to,label:label}}
+  var MON=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function ym(d){var m=+String(d).slice(5,7);return (m?MON[m-1].slice(0,3)+' ':'')+String(d).slice(0,4)}
+  function findTag(rest){var k=sugNorm(rest).trim();if(!k)return '';var hit='';
+    (SUG||[]).some(function(e){if(sugNorm(e[0]).trim()===k){hit=e[0];return true}});
+    if(!hit)Object.keys(TAGV||{}).some(function(t){if(sugNorm(t).trim()===k||TAGV[t].some(function(v){return sugNorm(v).trim()===k})){hit=t;return true}});
+    return hit}
+  function snips(x,keys){
+    var src=x.s,out=[],from=0,max=x.s.length>6000?3:1;
+    while(out.length<max){var best=-1,len=0;keys.forEach(function(w){var i=x.l.indexOf(w,from);if(i>=0&&(best<0||i<best)){best=i;len=w.length}});
+      if(best<0)break;var a=Math.max(0,best-70),z=Math.min(src.length,best+len+170);out.push((a?'…':'')+src.slice(a,z)+(z<src.length?'…':''));from=z}
+    if(!out.length)out.push(src.slice(0,240)+(src.length>240?'…':''));
+    return out}
   function search(term){
     term=(term||'').trim();crumbsSet([['The Belgravian','shelf'],['Search','']]);
     if(!term){main.innerHTML='<p class="bv-msg">Type a name, race or place to search the digitised issues.</p>';return}
     main.innerHTML='<p class="bv-msg">Searching…</p>';
-    loadSearch().then(function(S){
-      var words=term.toLowerCase().split(/\s+/).filter(Boolean);
+    Promise.all([loadSearch(),loadSug(),loadTagV()]).then(function(r){var S=r[0];
+      var W=parseWhen(term),tag=findTag(W.rest);
+      var words=sugNorm(W.rest).split(' ').filter(Boolean),raw=W.rest.toLowerCase().split(/\s+/).filter(Boolean);
+      var phrases=tag?[tag.toLowerCase()].concat((TAGV[tag]||[])):null;
       S.items.forEach(function(x){if(!x.l)x.l=x.s.toLowerCase()});
-      var hits=S.items.filter(function(x){return words.every(function(w){return x.l.indexOf(w)>=0})});
-      var types={};hits.forEach(function(x){types[x.type]=(types[x.type]||0)+1});
-      var shown=filter==='all'?hits:hits.filter(function(x){return x.type===filter});
-      var h='<h2 style="margin:0 0 6px">'+hits.length+' result'+(hits.length===1?'':'s')+' for “'+esc(term)+'”</h2><p class="bv-msg" style="margin:0 0 14px">In the issues digitised so far.</p>';
-      if(hits.length){h+='<div class="bv-filters"><button type="button" data-filter="all" aria-pressed="'+(filter==='all')+'">All</button>'+Object.keys(types).sort().map(function(t){return '<button type="button" data-filter="'+t+'" aria-pressed="'+(filter===t)+'">'+esc(TYPE[t]||t)+' · '+types[t]+'</button>'}).join('')+'</div>'}
+      var hits=S.items.filter(function(x){
+        if(W.from&&(!x.d||x.d<W.from||x.d>W.to))return false;
+        if(tag)return (x.e&&x.e.indexOf(tag)>=0)||phrases.some(function(p){return x.l.indexOf(p)>=0});
+        if(!raw.length)return true;
+        return raw.every(function(w){return x.l.indexOf(w)>=0})});
+      hits.sort(function(a,b){var c=(a.d||'')<(b.d||'')?-1:(a.d||'')>(b.d||'')?1:0;return sortOld?c:-c});
+      var types={},decs={},years={};
+      /* each row counts what the other rows leave: types within the chosen years, years within the chosen type */
+      hits.forEach(function(x){var y=String(x.d||'').slice(0,4),dc=y.slice(0,3)+'0s',okT=filter==='all'||x.type===filter,okW=(!whenDec||dc===whenDec)&&(!whenYear||y===whenYear);
+        if(okW)types[x.type]=(types[x.type]||0)+1;if(!y||!okT)return;decs[dc]=(decs[dc]||0)+1;if(dc===whenDec)years[y]=(years[y]||0)+1});
+      if(filter!=='all'&&!types[filter])types[filter]=0;
+      if(whenDec&&!decs[whenDec]){whenDec='';whenYear=''}
+      if(whenYear&&!years[whenYear])whenYear='';
+      var shown=hits.filter(function(x){var y=String(x.d||'').slice(0,4);return (filter==='all'||x.type===filter)&&(!whenDec||y.slice(0,3)+'0s'===whenDec)&&(!whenYear||y===whenYear)});
+      var keys=tag?phrases:raw.length?raw:[];
+      var hl=tag?phrases.join('|'):(raw[0]||'');
+      var what=tag?'about the '+esc(tag):'for “'+esc(W.rest||term)+'”';
+      var h='<h2 style="margin:0 0 6px">'+num(hits.length)+' result'+(hits.length===1?'':'s')+' '+what+'</h2>';
+      h+='<p class="bv-msg" style="margin:0 0 14px">'+(tag?'Every article tagged with this competition, plus any that name it'+((TAGV[tag]||[]).length?' (it is also printed as “'+esc(TAGV[tag].slice(0,2).map(function(v){return v.replace(/\b([a-z])/g,function(c){return c.toUpperCase()}).replace(/\b(Cc|Xc|C\.c\.)(?=\s|$)/g,function(c){return c.toUpperCase()}).replace(/'S\b/g,"'s")}).join('”, “'))+'”…)':'')+'. ':'')+'Newest first unless you choose otherwise. In the issues digitised so far.</p>';
+      if(W.label)h+='<div class="bv-whenchip">Issues dated '+esc(ym(W.from))+' to '+esc(ym(W.to))+(String(W.label).indexOf('season')>0?' ('+esc(W.label)+')':'')+'<button type="button" data-clearwhen aria-label="Search all years">×</button></div>';
+      if(hits.length){
+        var dl=Object.keys(decs).sort();
+        if(dl.length>1||whenDec)h+='<div class="bv-filters"><span class="bv-flabel">When</span><button type="button" data-dec="" aria-pressed="'+(!whenDec)+'">All years</button>'+dl.map(function(d){return '<button type="button" data-dec="'+d+'" aria-pressed="'+(whenDec===d)+'">'+d+' · '+decs[d]+'</button>'}).join('')+
+          '<button type="button" class="bv-sort" data-sort aria-label="Change order">'+(sortOld?'Oldest first ↑':'Newest first ↓')+'</button></div>';
+        if(whenDec){var yl=[];for(var yy=+whenDec.slice(0,4);yy<+whenDec.slice(0,4)+10;yy++)yl.push(String(yy));
+          h+='<div class="bv-filters"><span class="bv-flabel">Year</span><button type="button" data-year="" aria-pressed="'+(!whenYear)+'">All of the '+whenDec+'</button>'+yl.map(function(y){return '<button type="button" data-year="'+y+'"'+(years[y]?'':' disabled')+' aria-pressed="'+(whenYear===y)+'">'+y+(years[y]?' · '+years[y]:'')+'</button>'}).join('')+'</div>'}
+        h+='<div class="bv-filters"><span class="bv-flabel">Type</span><button type="button" data-filter="all" aria-pressed="'+(filter==='all')+'">All</button>'+Object.keys(types).sort().map(function(t){return '<button type="button" data-filter="'+t+'" aria-pressed="'+(filter===t)+'">'+esc(TYPE[t]||t)+' · '+types[t]+'</button>'}).join('')+'</div>';
+      }
       h+='<div class="bv-results">'+shown.slice(0,200).map(function(x){
-        var src=x.s,i=x.l.indexOf(words[0]),snip=i>80?'…'+src.slice(i-70,i+170)+'…':src.slice(0,240)+(src.length>240?'…':'');
-        var e=esc(snip);words.forEach(function(w){e=e.replace(new RegExp('('+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'),'<mark>$1</mark>')});
-        return '<a class="bv-hit" href="#'+x.id+'" data-hl="'+esc(words[0])+'"><span class="label">'+esc(TYPE[x.type]||'Item')+' · '+esc(x.label)+' · page '+x.p+'</span><h3>'+esc(x.h||x.sum||'Untitled item')+'</h3><p>'+e+'</p></a>'}).join('')+'</div>';
-      if(shown.length>200)h+='<p class="bv-msg">Showing the first 200. Add another word to narrow the search.</p>';
+        var ps=snips(x,keys).map(function(snip){var e=esc(snip);keys.forEach(function(w){e=e.replace(new RegExp('('+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'),'<mark>$1</mark>')});return '<p>'+e+'</p>'}).join('');
+        return '<a class="bv-hit" href="#'+x.id+'" data-hl="'+esc(hl)+'"><span class="label">'+esc(TYPE[x.type]||'Item')+' · '+esc(/^No\./.test(x.label)&&x.d?ym(x.d)+' ('+x.label+')':x.label)+' · page '+x.p+'</span><h3>'+esc(x.h||x.sum||'Untitled item')+'</h3>'+ps+'</a>'}).join('')+'</div>';
+      if(!shown.length&&hits.length)h+='<p class="bv-msg">Nothing with those filters. Try “All years”.</p>';
+      if(!hits.length&&W.label){var nx=(IDX.issues||[]).filter(function(i){return i.date>W.to})[0],pv=(IDX.issues||[]).filter(function(i){return i.date<W.from}).slice(-1)[0];
+        h+='<p class="bv-msg">Nothing in the issues of that time. The archive has no issue between '+(pv?esc(ym(pv.date)):'the start')+' and '+(nx?esc(ym(nx.date)):'now')+(pv&&nx&&nx.date.slice(0,4)-pv.date.slice(0,4)<1?'':'')+'; news from then was often reported in the next issue.</p>';
+        if(nx)h+='<div class="bv-filters"><button type="button" data-search="'+esc((tag||W.rest)+' '+nx.year)+'">Look in '+esc(ym(nx.date))+' and the rest of '+nx.year+' →</button></div>'}
+      if(shown.length>200)h+='<p class="bv-msg">Showing the first 200. Choose a decade or year, or add another word.</p>';
       main.innerHTML=h;idle();
     }).catch(function(){idle();main.innerHTML='<p class="bv-msg">Search couldn’t be loaded just now. Please try again shortly.</p>'});
   }
@@ -1004,8 +1060,12 @@
     if((t=e.target.closest('.bv-seg [data-pane]'))){setPane(t.dataset.pane);return}
     if((t=e.target.closest('[data-zoom]'))){var b=t.closest('.bv-scanpane').querySelector('.bv-scanbox');b.classList.toggle('zoom');t.textContent=b.classList.contains('zoom')?'Zoom out':'Zoom in';return}
     if((t=e.target.closest('[data-goitem]'))){go(t.dataset.goitem);return}
-    if((t=e.target.closest('[data-search]'))){q.value=t.dataset.search;filter='all';if(location.hash==='#search')search(q.value);else go('search');return}
+    if((t=e.target.closest('[data-search]'))){q.value=t.dataset.search;filter='all';whenDec='';whenYear='';if(location.hash==='#search')search(q.value);else go('search');return}
     if((t=e.target.closest('[data-filter]'))){filter=t.dataset.filter;search(q.value);return}
+    if((t=e.target.closest('[data-dec]'))){whenDec=t.dataset.dec;whenYear='';search(q.value);return}
+    if((t=e.target.closest('[data-year]'))){if(!t.disabled){whenYear=t.dataset.year;search(q.value)}return}
+    if((t=e.target.closest('[data-sort]'))){sortOld=!sortOld;search(q.value);return}
+    if((t=e.target.closest('[data-clearwhen]'))){q.value=parseWhen(q.value).rest;search(q.value);return}
     if((t=e.target.closest('[data-dec]'))){pickDec(t.dataset.dec);return}
     if((t=e.target.closest('[data-ldec]'))){LIST.dec=t.dataset.ldec;LIST.n=200;listShow();return}
     if((t=e.target.closest('.bv-list-more'))){LIST.n+=200;listShow();return}
@@ -1046,7 +1106,7 @@
   function sugMove(d){if(!sugItems.length)return;sugI=(sugI+d+sugItems.length)%sugItems.length;[].forEach.call(sugBox.querySelectorAll('[role=option]'),function(li){var on=+li.dataset.i===sugI;li.setAttribute('aria-selected',on);if(on)li.scrollIntoView({block:'nearest'})});sugIn.setAttribute('aria-activedescendant','bv-sug-'+sugI)}
   function sugPick(i){var it=sugItems[i];if(!it)return;var inp=sugIn;sugHide();
     if(it.kind==='p'){inp.value='';go(it.id);return}
-    inp.value='';q.value=it.label;filter='all';if(location.hash==='#search')search(q.value);else go('search')}
+    inp.value='';q.value=it.label;filter='all';whenDec='';whenYear='';if(location.hash==='#search')search(q.value);else go('search')}
   function sugInput(t){return t&&t.matches&&t.matches('#bv-q,#bv-aq,#bv-cq')?t:null}
   function sugArm(inp){inp.setAttribute('role','combobox');inp.setAttribute('aria-autocomplete','list');inp.setAttribute('aria-controls','bv-sug');inp.setAttribute('aria-expanded','false')}
   sugArm(q);
@@ -1061,8 +1121,8 @@
   root.addEventListener('mousedown',function(e){var li=e.target.closest('.bv-sug [role=option]');if(li){e.preventDefault();sugPick(+li.dataset.i)}});
   root.addEventListener('submit',function(e){var f=e.target.closest('.bv-mini');if(!f)return;e.preventDefault();sugHide();var v=(f.querySelector('input').value||'').trim();if(!v)return;
     if(f.dataset.mini==='people'){PQ=v;if(location.hash==='#people')loadPeople().then(function(){peopleList('')});else go('people')}
-    else{q.value=v;filter='all';if(location.hash==='#search')search(v);else go('search')}});
-  root.querySelector('.bv-search').addEventListener('submit',function(e){e.preventDefault();sugHide();filter='all';if(location.hash==='#search')search(q.value);else go('search')});
+    else{q.value=v;filter='all';whenDec='';whenYear='';if(location.hash==='#search')search(v);else go('search')}});
+  root.querySelector('.bv-search').addEventListener('submit',function(e){e.preventDefault();sugHide();filter='all';whenDec='';whenYear='';if(location.hash==='#search')search(q.value);else go('search')});
   function lbItem(el){return {src:el.dataset.lb,cap:el.dataset.cap||'',href:el.dataset.href||'',w:el.dataset.w||''}}
   /* the photos to step through from a clicked one: the athlete's whole photo row, or the other photos in the same article */
   function lbGroup(t){
