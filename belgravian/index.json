@@ -2,6 +2,54 @@
  "title": "The Belgravian",
  "issues": [
   {
+   "issue": 96,
+   "label": "October 1944",
+   "date": "1944-10",
+   "year": 1944,
+   "pageCount": 32,
+   "items": 31
+  },
+  {
+   "issue": 97,
+   "label": "July 1945",
+   "date": "1945-07",
+   "year": 1945,
+   "pageCount": 28,
+   "items": 48
+  },
+  {
+   "issue": 98,
+   "label": "November 1945",
+   "date": "1945-11",
+   "year": 1945,
+   "pageCount": 28,
+   "items": 58
+  },
+  {
+   "issue": 99,
+   "label": "No. 99",
+   "date": "1946-06",
+   "year": 1946,
+   "pageCount": 32,
+   "items": 61
+  },
+  {
+   "issue": 101,
+   "label": "No. 101",
+   "date": "1947-04",
+   "year": 1947,
+   "pageCount": 24,
+   "items": 41
+  },
+  {
+   "issue": 102,
+   "label": "No. 102",
+   "date": "1947-11",
+   "year": 1947,
+   "pageCount": 40,
+   "items": 72
+  },
+  {
    "issue": 103,
    "label": "No. 103",
    "date": "1948-03",
