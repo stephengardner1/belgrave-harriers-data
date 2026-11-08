@@ -2,6 +2,46 @@
  "title": "The Belgravian",
  "issues": [
   {
+   "issue": 80,
+   "label": "February 1938",
+   "date": "1938-02",
+   "year": 1938,
+   "pageCount": 36,
+   "items": 28
+  },
+  {
+   "issue": 81,
+   "label": "June 1938",
+   "date": "1938-06",
+   "year": 1938,
+   "pageCount": 36,
+   "items": 26
+  },
+  {
+   "issue": 82,
+   "label": "September 1938",
+   "date": "1938-09",
+   "year": 1938,
+   "pageCount": 32,
+   "items": 21
+  },
+  {
+   "issue": 83,
+   "label": "December 1938",
+   "date": "1938-12",
+   "year": 1938,
+   "pageCount": 32,
+   "items": 31
+  },
+  {
+   "issue": 84,
+   "label": "March 1939",
+   "date": "1939-03",
+   "year": 1939,
+   "pageCount": 40,
+   "items": 31
+  },
+  {
    "issue": 86,
    "label": "April 1940",
    "date": "1940-04",
@@ -1475,8 +1515,7 @@
   }
  ],
  "coming": [
-  "1920s",
-  "1930s"
+  "1920s"
  ],
  "legends": [
   {
@@ -1487,6 +1526,7 @@
   }
  ],
  "searchFiles": [
+  "search-1930s.json",
   "search-1940s.json",
   "search-1950s.json",
   "search-1960s.json",
