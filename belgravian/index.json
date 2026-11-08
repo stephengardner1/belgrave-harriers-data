@@ -2,6 +2,22 @@
  "title": "The Belgravian",
  "issues": [
   {
+   "issue": 78,
+   "label": "August 1937",
+   "date": "1937-08",
+   "year": 1937,
+   "pageCount": 28,
+   "items": 22
+  },
+  {
+   "issue": 79,
+   "label": "November 1937",
+   "date": "1937-11",
+   "year": 1937,
+   "pageCount": 28,
+   "items": 22
+  },
+  {
    "issue": 80,
    "label": "February 1938",
    "date": "1938-02",
