@@ -577,7 +577,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   function shelf(){
     crumbsSet([]);
     loadHome().then(function(H){
-      var decs=Object.keys(H.decades).sort();if(!HDEC||!H.decades[HDEC])HDEC=decs[0];
+      var decs=Object.keys(H.decades).sort();if(!HDEC||!H.decades[HDEC])HDEC=H.decades['1960']?'1960':decs[0];/* open on the 1960s: photos (Steve, 9 Nov) */
       var y0=+decs[0],y1=Math.max(2009,H.span[1]),max=1,y;for(y in H.years)max=Math.max(max,H.years[y]);
       var bars='',axis='',bi=0;for(y=y0;y<=y1;y++){var v=H.years[y]||0,d=String(Math.floor(y/10)*10);
         bars+='<button type="button" data-dec="'+d+'" class="'+(v?'':'z ')+(d===HDEC&&v?'on':'')+'" style="--i:'+(bi++)+';height:'+(v?Math.max(3,Math.round(v/max*100)):3)+'%" '+(v?'aria-label="'+y+': '+v+' articles"':'tabindex="-1" aria-hidden="true" disabled')+'></button>';
