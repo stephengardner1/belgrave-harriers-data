@@ -2,6 +2,38 @@
  "title": "The Belgravian",
  "issues": [
   {
+   "issue": 103,
+   "label": "No. 103",
+   "date": "1948-03",
+   "year": 1948,
+   "pageCount": 24,
+   "items": 29
+  },
+  {
+   "issue": 104,
+   "label": "No. 104",
+   "date": "1948-11",
+   "year": 1948,
+   "pageCount": 16,
+   "items": 34
+  },
+  {
+   "issue": 105,
+   "label": "No. 105",
+   "date": "1949-06",
+   "year": 1949,
+   "pageCount": 28,
+   "items": 37
+  },
+  {
+   "issue": 106,
+   "label": "No. 106",
+   "date": "1949-11",
+   "year": 1949,
+   "pageCount": 20,
+   "items": 55
+  },
+  {
    "issue": 107,
    "label": "No. 107",
    "date": "1950-01",
@@ -1316,8 +1348,7 @@
  ],
  "coming": [
   "1920s",
-  "1930s",
-  "1940s"
+  "1930s"
  ],
  "legends": [
   {
@@ -1328,6 +1359,7 @@
   }
  ],
  "searchFiles": [
+  "search-1940s.json",
   "search-1950s.json",
   "search-1960s.json",
   "search-1970s.json",
