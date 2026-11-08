@@ -539,8 +539,8 @@
     if((t=e.target.closest('[data-goitem]'))){go(t.dataset.goitem);return}
     if((t=e.target.closest('[data-search]'))){q.value=t.dataset.search;filter='all';whenDec='';whenYear='';if(location.hash==='#search')search(q.value);else go('search');return}
     if((t=e.target.closest('[data-filter]'))){filter=t.dataset.filter;search(q.value);return}
-    if((t=e.target.closest('[data-dec]'))){whenDec=t.dataset.dec;whenYear='';search(q.value);return}
-    if((t=e.target.closest('[data-year]'))){if(!t.disabled){whenYear=t.dataset.year;search(q.value)}return}
+    if((t=e.target.closest('.bv-filters [data-dec]'))){whenDec=t.dataset.dec;whenYear='';search(q.value);return}
+    if((t=e.target.closest('.bv-filters [data-year]'))){if(!t.disabled){whenYear=t.dataset.year;search(q.value)}return}
     if((t=e.target.closest('[data-sort]'))){sortOld=!sortOld;search(q.value);return}
     if((t=e.target.closest('[data-clearwhen]'))){q.value=parseWhen(q.value).rest;search(q.value);return}
     if((t=e.target.closest('[data-dec]'))){pickDec(t.dataset.dec);return}
