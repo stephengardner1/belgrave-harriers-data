@@ -2,6 +2,46 @@
  "title": "The Belgravian",
  "issues": [
   {
+   "issue": 65,
+   "label": "July-August 1934",
+   "date": "1934-07",
+   "year": 1934,
+   "pageCount": 20,
+   "items": 15
+  },
+  {
+   "issue": 66,
+   "label": "September-October 1934",
+   "date": "1934-09",
+   "year": 1934,
+   "pageCount": 28,
+   "items": 20
+  },
+  {
+   "issue": 67,
+   "label": "January 1935",
+   "date": "1935-01",
+   "year": 1935,
+   "pageCount": 32,
+   "items": 25
+  },
+  {
+   "issue": 68,
+   "label": "February-March 1935",
+   "date": "1935-02",
+   "year": 1935,
+   "pageCount": 32,
+   "items": 20
+  },
+  {
+   "issue": 69,
+   "label": "April-May 1935",
+   "date": "1935-04",
+   "year": 1935,
+   "pageCount": 32,
+   "items": 19
+  },
+  {
    "issue": 70,
    "label": "June-July 1935",
    "date": "1935-06",
