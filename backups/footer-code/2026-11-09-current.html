@@ -1,0 +1,1597 @@
+<!-- 1. Public Sans semi-bold (600) for bold words in running text. Squarespace only loads regular and bold. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@600&display=swap">
+<!-- 2. Short dates ("15 Oct 2026") on articles and news cards -->
+<script>
+(function(){
+  function shorten(){
+    document.querySelectorAll('time.Blog-meta-item--date, time.summary-metadata-item--date, .summary-metadata-item--date time').forEach(function(t){
+      if(t.dataset.bhShort)return;
+      var d=new Date(t.getAttribute('datetime')||t.textContent);
+      if(isNaN(d))return;
+      t.textContent=d.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}).replace('Sept','Sep');
+      t.dataset.bhShort='1';
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',shorten);else shorten();
+  window.addEventListener('load',shorten);
+})();
+</script>
+<!-- 4. Left and right arrow keys move between news articles (Left: newer, Right: older) -->
+<script>
+(function(){
+  document.addEventListener('keydown',function(e){
+    if(e.defaultPrevented||e.altKey||e.ctrlKey||e.metaKey||e.shiftKey)return;
+    if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight')return;
+    if(document.querySelector('.bh-lb.is-open'))return;
+    var el=document.activeElement;
+    if(el&&(el.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName)))return;
+    var link=document.querySelector(e.key==='ArrowLeft'?'.BlogItem-pagination-link--prev':'.BlogItem-pagination-link--next');
+    if(link&&link.href){e.preventDefault();window.location.href=link.href;}
+  });
+})();
+</script>
+<!-- 3. Photos in news articles open full-screen on click or tap -->
+<style>
+.bh-lb{position:fixed;inset:0;z-index:100000;background:rgba(30,26,26,.97);display:none;align-items:center;justify-content:center;flex-direction:column;font-family:"Public Sans",sans-serif;-webkit-font-smoothing:antialiased}
+.bh-lb.is-open{display:flex}
+.bh-lb img{max-width:92vw;max-height:82vh;object-fit:contain;display:block;user-select:none;-webkit-user-drag:none}
+.bh-lb-cap{color:#fff;font-size:14px;line-height:1.5;max-width:92vw;margin:14px 0 0;text-align:center;min-height:21px}
+.bh-lb-count{position:absolute;top:22px;left:24px;color:#fff;font-size:12px;font-weight:600;letter-spacing:.08em}
+.bh-lb button{position:absolute;background:none;border:0;color:#fff;cursor:pointer;padding:12px;line-height:1;font-family:inherit}
+.bh-lb button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.bh-lb-close{top:10px;right:14px;font-size:34px}
+.bh-lb-prev,.bh-lb-next{top:50%;transform:translateY(-50%);font-size:40px}
+.bh-lb-prev{left:10px}.bh-lb-next{right:10px}
+.BlogItem img.bh-lb-target{cursor:zoom-in}
+@media (max-width:640px){.bh-lb-prev,.bh-lb-next{display:none}.bh-lb img{max-width:100vw;max-height:78vh}}
+</style>
+<script>
+(function(){
+  function fullSrc(img){
+    var u=img.getAttribute('data-image')||img.getAttribute('data-src')||img.currentSrc||img.src||'';
+    if(!u)return '';
+    u=u.split('?')[0];
+    return /squarespace-cdn|squarespace\.com/.test(u)?u+'?format=2500w':u;
+  }
+  function captionFor(img){
+    var fig=img.closest('figure, .sqs-block-image, .slide, .sqs-gallery-design-grid-slide');
+    var c=fig&&fig.querySelector('.image-caption, figcaption, .meta-description, .image-caption-wrapper');
+    var t=c?c.textContent.trim():'';
+    if(!t)t=img.getAttribute('alt')||'';
+    return /\.(jpe?g|png|webp|heic)$/i.test(t)?'':t;
+  }
+  function init(){
+    var article=document.querySelector('.BlogItem');
+    if(!article)return;
+    var imgs=[].slice.call(article.querySelectorAll('.sqs-block-image img, .sqs-block-gallery img, .sqs-html-content img')).filter(function(img){
+      var a=img.closest('a');
+      return !(a&&a.getAttribute('href')&&a.getAttribute('href').charAt(0)!=='#');
+    });
+    if(!imgs.length)return;
+    var box=document.createElement('div');
+    box.className='bh-lb';box.setAttribute('role','dialog');box.setAttribute('aria-modal','true');box.setAttribute('aria-label','Photo viewer');
+    box.innerHTML='<span class="bh-lb-count"></span><button class="bh-lb-close" aria-label="Close photo">&times;</button><button class="bh-lb-prev" aria-label="Previous photo">&#8249;</button><img alt=""><p class="bh-lb-cap"></p><button class="bh-lb-next" aria-label="Next photo">&#8250;</button>';
+    document.body.appendChild(box);
+    var big=box.querySelector('img'),cap=box.querySelector('.bh-lb-cap'),count=box.querySelector('.bh-lb-count'),
+        prev=box.querySelector('.bh-lb-prev'),next=box.querySelector('.bh-lb-next'),close=box.querySelector('.bh-lb-close'),
+        i=0,lastFocus=null,multi=imgs.length>1;
+    if(!multi){prev.style.display='none';next.style.display='none';count.style.display='none';}
+    function show(n){
+      i=(n+imgs.length)%imgs.length;
+      var img=imgs[i];
+      big.src=fullSrc(img);big.alt=img.getAttribute('alt')||'';
+      cap.textContent=captionFor(img);
+      count.textContent=(i+1)+' / '+imgs.length;
+    }
+    function open(el){imgs=imgs.filter(function(x){return x.isConnected});lastFocus=document.activeElement;show(Math.max(0,imgs.indexOf(el)));box.classList.add('is-open');document.documentElement.style.overflow='hidden';close.focus();}
+    function shut(){box.classList.remove('is-open');big.removeAttribute('src');document.documentElement.style.overflow='';if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+    imgs.forEach(function(img,n){
+      img.classList.add('bh-lb-target');
+      img.setAttribute('tabindex','0');img.setAttribute('role','button');
+      if(!img.getAttribute('aria-label'))img.setAttribute('aria-label','Open photo full screen');
+      img.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();open(img);},true);
+      img.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(img);}});
+    });
+    close.addEventListener('click',shut);
+    prev.addEventListener('click',function(e){e.stopPropagation();show(i-1);});
+    next.addEventListener('click',function(e){e.stopPropagation();show(i+1);});
+    box.addEventListener('click',function(e){if(e.target===box)shut();});
+    document.addEventListener('keydown',function(e){
+      if(!box.classList.contains('is-open'))return;
+      if(e.key==='Escape')shut();
+      else if(e.key==='ArrowLeft'&&multi)show(i-1);
+      else if(e.key==='ArrowRight'&&multi)show(i+1);
+      else if(e.key==='Tab'){var f=[close,prev,next].filter(function(b){return b.offsetParent!==null;});var k=f.indexOf(document.activeElement);e.preventDefault();f[(k+(e.shiftKey?-1:1)+f.length)%f.length].focus();}
+    });
+    var x0=null;
+    box.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+    box.addEventListener('touchend',function(e){if(x0===null||!multi)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(dx<0?i+1:i-1);x0=null;});
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+<!-- 5. Homepage: no "All news" link with the news carousel (23 Oct 2026). The old link block stays in the page but is hidden. -->
+<style>#block-yui_3_17_2_1_1578249640399_6729{display:none !important}</style>
+
+<!-- 6. Results tables in news articles (23 Oct 2026)
+     Older articles embedded Google Sheets. This replaces each embed with the frozen copy kept at
+     github.com/stephengardner1/belgrave-harriers-data, drawn in the house style.
+     Nothing is reworded, reordered or removed. If a copy can't be found, the original embed stays. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+.bh-res{--ink:#1e1a1a;--body:#4a4343;--slate:#5c5555;--claret:#7a001d;--gold:#d6b97a;--rule:#e6dfd3;--cream:#f5efe4;
+  font-family:"Public Sans",system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;margin:8px 0 28px}
+.bh-res .bh-seg{display:inline-flex;flex-wrap:wrap;background:var(--cream);border-radius:8px;padding:3px;margin:0 0 14px;gap:2px}
+.bh-res .bh-seg button{font:500 14px/20px "Public Sans",sans-serif;color:var(--slate);background:transparent;border:0;border-radius:6px;padding:6px 12px;cursor:pointer;letter-spacing:0;text-transform:none}
+.bh-res .bh-seg button[aria-selected="true"]{background:#fff;color:var(--ink);box-shadow:0 0 0 1px var(--rule)}
+.bh-res .bh-seg button:hover{color:var(--ink)}
+.bh-res button:focus-visible{outline:2px solid var(--claret);outline-offset:2px}
+.bh-res .bh-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.bh-res table{border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:100%;width:auto}
+.bh-res th,.bh-res td{text-align:left;vertical-align:top;padding:7px 10px;border-bottom:1px solid var(--rule);font:400 14px/20px "Public Sans",sans-serif;color:var(--ink);white-space:nowrap}
+.bh-res td.wrap{white-space:normal;min-width:140px}
+.bh-res thead th{font:600 12px/16px "Public Sans",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);vertical-align:bottom;white-space:normal;min-width:2.5em}
+.bh-res thead tr:last-child th{border-bottom:3px solid var(--gold);border-image:linear-gradient(135deg,#e7d8b0 0%,#d6b97a 28%,#d5b271 54%,#d09d55 93%,#ce954a 100%) 1}
+.bh-res .num{font-family:"IBM Plex Mono",ui-monospace,monospace;text-align:right}
+.bh-res thead th.num{font-family:"Public Sans",sans-serif}
+.bh-res tr>:first-child{padding-left:0;position:sticky;left:0;background:#fff;z-index:1}
+.bh-res tr>:last-child{padding-right:0}
+.bh-res tr.us td{background:var(--cream);font-weight:600}
+.bh-res tbody tr:hover td{background:#f3ede2}
+.bh-res tbody tr.us:hover td{background:#eadfc8}
+.bh-res tbody tr.gap:hover td{background:transparent}
+.bh-res tr.gap td{border-bottom:0;padding:4px 0}
+.bh-res td a{color:var(--claret);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.bh-res .bh-more{margin:12px 0 0;background:none;border:0;padding:0;cursor:pointer;font:500 15px/20px "Public Sans",sans-serif;color:var(--claret);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.bh-res .bh-more:hover{text-decoration-thickness:2px}
+.bh-res .bh-src{margin:10px 0 0;font:400 13px/18px "Public Sans",sans-serif;color:var(--slate)}
+.bh-res-gone{font:400 14px/20px "Public Sans",sans-serif;color:#5c5555;margin:8px 0 28px}
+.sqs-html-content>.bh-res{padding-left:0;padding-right:0} /* tables placed under a link sit inside a text block, which is already padded */
+@media (max-width:640px){.bh-res th,.bh-res td{padding:6px 8px;font-size:13px}}
+</style>
+<script>
+(function(){
+  var DATA='https://stephengardner1.github.io/belgrave-harriers-data/results/'; // one small file per article
+  var SHOW=25;
+  var article=document.querySelector('.BlogItem');
+  if(!article)return;
+  var frames=[].slice.call(article.querySelectorAll('iframe[src*="docs.google.com/spreadsheets"]'));
+  // links to results on other sites: a saved copy of the official results is shown under the link,
+  // so the article doesn't depend on that site staying up; the link goes to the official page
+  var links=[].slice.call(article.querySelectorAll('a[href^="http"]'));
+  if(!frames.length&&!links.length)return;
+  var slug=location.pathname.replace(/\/$/,'').split('/').pop();
+
+  function keyOf(src){
+    var m=src.match(/\/d\/(?:e\/)?([^/]+)\//);if(!m)return null;
+    var g=src.match(/gid=(\d+)/);
+    return m[1]+'|'+(/single=true/.test(src)&&g?g[1]:'all');
+  }
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function cell(c){return typeof c==='string'?{t:c,c:1,r:1,h:null}:{t:c[0],c:c[1],r:c[2],h:c[3]}}
+  var NUM=/^[\s\d:.,\-+%()=\/]+$/;
+
+  function table(tab,showAll){
+    var rows=tab.rows||[],head=tab.head||0;
+    if(!head&&rows.length>1){ // no frozen header: treat row 1 as headings only if it is all words
+      var r0=rows[0].map(cell);
+      var words=r0.filter(function(c){return c.t}).length;
+      if(r0.length>1&&words>=r0.length/2&&r0.every(function(c){return !c.t||!NUM.test(c.t)})&&!rows[1].map(cell).every(function(c){return !c.t||!NUM.test(c.t)}))head=1;
+    }
+    var body=rows.slice(head);
+    // numeric columns: mostly figures in the body
+    var cols=Math.max.apply(null,rows.map(function(r){return r.reduce(function(n,c){return n+cell(c).c},0)}).concat([1]));
+    var isNum=[];for(var k=0;k<cols;k++){var n=0,t=0;
+      body.forEach(function(r){var x=0;r.forEach(function(c){c=cell(c);if(x===k&&c.t){t++;if(NUM.test(c.t))n++}x+=c.c})});
+      isNum[k]=t>0&&n/t>.7}
+    function ours(r){return r.some(function(c){var t=cell(c).t.trim();return /belgrave/i.test(t)||/^BEL( [A-D])?$/.test(t)})}
+    var mark=body.filter(function(r){return r.length&&ours(r)}).length<=body.filter(function(r){return r.length}).length/2;
+    function tr(r,tag){
+      if(!r.length)return '<tr class="gap"><td colspan="'+cols+'"></td></tr>';
+      var h='<tr'+(tag==='td'&&mark&&ours(r)?' class="us"':'')+'>',x=0;
+      r.forEach(function(c){c=cell(c);
+        var cls=[];if(isNum[x]&&tag==='td')cls.push('num');if(isNum[x]&&tag==='th')cls.push('num');
+        if(tag==='td'&&c.t.length>40)cls.push('wrap');
+        var txt=esc(c.t).replace(/\n/g,'<br>');
+        if(c.h&&/^https?:/.test(c.h))txt='<a href="'+esc(c.h)+'" target="_blank" rel="noopener">'+txt+'</a>';
+        h+='<'+tag+(cls.length?' class="'+cls.join(' ')+'"':'')+(c.c>1?' colspan="'+c.c+'"':'')+(c.r>1?' rowspan="'+c.r+'"':'')+'>'+txt+'</'+tag+'>';
+        x+=c.c});
+      return h+'</tr>'}
+    var shown=showAll?body:body.slice(0,SHOW);
+    var h='<div class="bh-scroll"><table>';
+    if(head)h+='<thead>'+rows.slice(0,head).map(function(r){return tr(r,'th')}).join('')+'</thead>';
+    h+='<tbody>'+shown.map(function(r){return tr(r,'td')}).join('')+'</tbody></table></div>';
+    var real=body.filter(function(r){return r.length}).length;
+    if(!showAll&&body.length>SHOW)h+='<button type="button" class="bh-more">Show all '+real.toLocaleString('en-GB')+' rows</button>';
+    return h}
+
+  function render(box,embed){
+    var tabs=embed.tabs.filter(function(t){return t.rows});
+    if(!tabs.length){
+      if(embed.tabs.some(function(t){return t.missing})){ // sheet deleted before it could be saved
+        var note=document.createElement('p');note.className='sqs-block bh-res-gone';
+        note.textContent='The results table for this article is no longer available.';
+        box.parentNode.insertBefore(note,box);box.style.display='none';return true}
+      return false}
+    var cur=0,all={};
+    var wrap=document.createElement('div');wrap.className='sqs-block bh-res';
+    function draw(){
+      var h='';
+      if(tabs.length>1){h+='<div class="bh-seg" role="tablist" aria-label="Results tables">';
+        tabs.forEach(function(t,i){h+='<button type="button" role="tab" data-i="'+i+'" aria-selected="'+(i===cur)+'">'+esc(t.name||('Table '+(i+1)))+'</button>'});
+        h+='</div>'}
+      h+='<div role="tabpanel">'+table(tabs[cur],all[cur])+'</div>';
+      wrap.innerHTML=h}
+    wrap.addEventListener('click',function(e){
+      var b=e.target.closest('button');if(!b)return;
+      if(b.dataset.i!=null){cur=+b.dataset.i;draw();fit(wrap);var s=wrap.querySelector('[aria-selected="true"]');s&&s.focus()}
+      else if(b.classList.contains('bh-more')){all[cur]=true;draw();fit(wrap)}
+    });
+    draw();
+    box.parentNode.insertBefore(wrap,box);
+    box.style.display='none';
+    fits.push(wrap);fit(wrap);
+    return true}
+
+  // Wide tables may run past the text column, as far as the page's content edge
+  var fits=[];
+  function edge(){
+    var ref=document.querySelector('.BlogItem-pagination')||document.querySelector('.Main-content');
+    var r=ref.getBoundingClientRect(),cs=getComputedStyle(ref);
+    return ref.classList.contains('Main-content')?r.right-parseFloat(cs.paddingRight):r.right}
+  function fit(w){
+    var sc=w.querySelector('.bh-scroll'),tb=sc&&sc.querySelector('table');if(!tb)return;
+    sc.style.width='';
+    var col=sc.getBoundingClientRect().width,avail=edge()-sc.getBoundingClientRect().left;
+    var need=tb.scrollWidth;
+    if(need>col+1&&avail>col)sc.style.width=Math.min(need,avail)+'px'}
+  var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(function(){fits.forEach(fit)},150)});
+
+  fetch(DATA+encodeURIComponent(slug)+'.json').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
+    var mine=d.embeds.filter(function(e){return e.article===slug});
+    frames.forEach(function(f,i){
+      var k=keyOf(f.getAttribute('src')||'');
+      var e=mine.filter(function(x){return x.key===k})[0]||mine.filter(function(x){return x.embedIndex===i})[0];
+      if(!e)return;
+      var box=f.closest('.sqs-block')||f;
+      render(box,e);
+    });
+    mine.filter(function(x){return x.link}).forEach(function(e){
+      var same=links.filter(function(x){return x.getAttribute('href')===e.link}),a=same[0];if(!a)return;
+      function point(){if(e.linkNow)same.forEach(function(x){x.href=e.linkNow})}
+      if(!e.tabs||!e.tabs.length){point();return} // a saved copy of the results file: just point the link at it
+      var at=a.closest('p')||a,spot=document.createElement('span');
+      at.parentNode.insertBefore(spot,at.nextSibling);
+      if(!render(spot,e))return;
+      point();
+      if(e.credit){var c=document.createElement('p');c.textContent=e.credit;
+        c.style.cssText='font:400 13px/18px "Public Sans",sans-serif;color:#5c5555;margin:-16px 0 28px';
+        spot.parentNode.insertBefore(c,spot)}
+    });
+  }).catch(function(){/* leave the original embeds in place */});
+})();
+</script>
+<!-- 7. Bylines and credit lines on news articles (23 Oct 2026)
+     Display only: nothing in the articles themselves is changed.
+     a) "Administrator" and "Guest User" are not people. Where the article names its writer for the
+        whole piece, that name is shown instead; otherwise the byline is left out.
+     b) Standalone credit lines ("Words by…", "Photos by…", "Photo: …") get one quiet style,
+        wherever the author put them. Same words, same place. -->
+<style>
+.Main-content .sqs-html-content p.bh-credit,
+.Main-content .sqs-html-content p.bh-credit *{
+  font-size:14px !important;line-height:1.5 !important;color:#5c5555 !important;
+  font-style:normal !important;font-weight:400 !important}
+</style>
+<script>
+(function(){
+  var article=document.querySelector('.BlogItem');
+  if(!article)return;
+
+  // a) generic bylines
+  var WRITER={ // articles whose own text credits one writer for the whole piece
+    'belgrave-hosts-club-throwing-champs-and-invitational-match':'Chris Privett',
+    'ukwal-match-3-report-lee-valley':'Jojo Rhodes',
+    'uk-womens-league-match-1-report':'Jojo Rhodes',
+    'uk-womens-league-match-1-wigan-7th-may':'Josephine Rhodes',
+    'surrey-county-10000m-silver-nick-buckle':'Charlie Dickinson',
+    'rosenheim-final-report':'Adam Cameron',
+    'belgrave-harriers-womens-road-and-country-season-review-2013-14':'Will Cockerell'
+  };
+  var GENERIC=/^(administrator|guest user)$/i;
+  var slug=location.pathname.replace(/\/$/,'').split('/').pop();
+  article.querySelectorAll('.BlogItem-meta .Blog-meta-item--author').forEach(function(a){
+    if(!GENERIC.test(a.textContent.trim()))return;
+    var name=WRITER[slug];
+    if(name){var s=document.createElement('span');s.className=a.className;s.textContent=name;a.parentNode.replaceChild(s,a)}
+    else a.parentNode.removeChild(a);
+  });
+
+  // b) credit lines
+  var CREDIT=/^(?:(?:words|report|written|text|article|photos?|pictures?|photography|images?|video)(?:\s+and\s+(?:words|photos?|pictures?))?\s*(?:by|:|credit:?)\s*[^.]{2,60}?(?:\.|$)\s*)+$/i;
+  article.querySelectorAll('.sqs-html-content p').forEach(function(p){
+    var t=p.textContent.replace(/\s+/g,' ').trim();
+    if(!(t&&t.length<=140&&CREDIT.test(t)))return;
+    p.classList.add('bh-credit');
+    [p].concat([].slice.call(p.querySelectorAll('*'))).forEach(function(el){ // beats the standfirst style if a credit comes first
+      el.style.setProperty('font-size','14px','important');el.style.setProperty('line-height','1.5','important');
+      el.style.setProperty('color','#5c5555','important');el.style.setProperty('font-style','normal','important');
+      el.style.setProperty('font-weight','400','important')});
+  });
+})();
+</script>
+<!-- 8. Subheadings typed as bold lines (23 Oct 2026)
+     Display only. A short paragraph that is entirely bold and works as a section label
+     ("RESULTS:", "A TEAM", "Individual times", "Battersea Park, 25 April 2001") is shown as a
+     proper subheading. All-capitals labels are shown in sentence case, keeping abbreviations and
+     names; a trailing colon, full stop or semicolon is not shown. No words are changed.
+     Left alone: names, table fragments, questions, notices, credits and lines that introduce a quote or list. -->
+<script>
+(function(){
+  var article=document.querySelector('.BlogItem');
+  if(!article)return;
+  var LABEL=/^(results?|team results?|teams?|individuals?|individual (results|times|legs)|men|women|address|international|international championships|british championships|historical note|match summary|overall( after .*)?|([‘'’]?[a-d][‘'’]?[ -](team|string))|belgrave [‘'’]?[a-d][‘'’]?)$/i;
+  var NOTICE=/\b(sold out|postage|collection only|tickets?|please|writes|author|to follow|reports|by)\b/i;
+  var TABLEY=/^(pos|pts|points|name|time|club|bel|no\.?|#)$/i;
+  var CREDIT=/^(?:words|report|written|text|article|author|photos?|pictures?|photography|images?|video)(?:\s+and\s+(?:words|photos?|pictures?))?\s*(?:by|:|credit:?)/i;
+  // kept in capitals when a capitals label is put into sentence case
+  var KEEP=/^(SEAA|ERRA|NAL|XC|GB|UK|AAA|BAL|BMAF|UKWAL|EA|ECCC|SL|PB|SB|IAAF|SEAA|NCAA|[UVMW]\d+|\d+\w*)$/;
+  var NAMES={crystal:'Crystal',palace:'Palace',sophie:'Sophie',belgrave:'Belgrave',belles:'Belles',bels:'Bels',
+    surrey:'Surrey',london:'London',southern:'Southern',national:'National',aldershot:'Aldershot',
+    battersea:'Battersea',tooting:'Tooting',bec:'Bec',wimbledon:'Wimbledon',harriers:'Harriers'};
+
+  function promote(t){
+    var s=t.replace(/\s*[:.;]+$/,'').trim();
+    if(!s||s.indexOf('?')>-1||NOTICE.test(s))return false;
+    var w=s.split(/\s+/),letters=s.replace(/[^A-Za-z]/g,''),caps=letters.length>=3&&letters===letters.toUpperCase();
+    if(LABEL.test(s))return true;
+    if(/[:;]\s*-?$/.test(t))return false;
+    if(/\d:\d\d/.test(s)||/^\d+\s/.test(s))return false;
+    if(/^(bel|race|buffet|useful|new athletes)\b/i.test(s))return false;
+    if(w.length===1||TABLEY.test(s))return false;
+    if(caps)return w.length<=5;
+    if(/\.\s*$/.test(t))return false;
+    return w.length>=2&&w.length<=9;
+  }
+  var first;
+  function sentenceCase(s){
+    return s.replace(/[A-Za-z][A-Za-z0-9’']*/g,function(word){
+      var out;
+      if(KEEP.test(word))out=word;
+      else if(NAMES[word.toLowerCase()])out=NAMES[word.toLowerCase()];
+      else out=first?word.charAt(0)+word.slice(1).toLowerCase():word.toLowerCase();
+      first=false;return out});
+  }
+
+  article.querySelectorAll('.sqs-html-content p').forEach(function(p){
+    var t=p.textContent.replace(/\s+/g,' ').trim();
+    if(!t||t.length>60||p.querySelector('a,img')||CREDIT.test(t))return;
+    var bold=[].slice.call(p.querySelectorAll('strong,b')).map(function(b){return b.textContent}).join(' ').replace(/\s+/g,' ').trim();
+    if(bold!==t||!promote(t))return;
+    var letters=t.replace(/[^A-Za-z]/g,''),caps=letters.length>=3&&letters===letters.toUpperCase();
+    var h=document.createElement('h3');h.className='bh-subhead';
+    while(p.firstChild)h.appendChild(p.firstChild);
+    // text changes are display-only: case for capitals labels, and a trailing : . ;
+    var walker=document.createTreeWalker(h,NodeFilter.SHOW_TEXT),nodes=[],n;
+    while((n=walker.nextNode()))nodes.push(n);
+    first=true;if(caps)nodes.forEach(function(x){x.nodeValue=sentenceCase(x.nodeValue)});
+    else nodes.forEach(function(x){ // a stray capitals word inside a mixed-case label: "RESULTS (three scorers)"
+      x.nodeValue=x.nodeValue.replace(/\b[A-Z]{4,}\b/g,function(w,i){
+        if(KEEP.test(w))return w;
+        if(NAMES[w.toLowerCase()])return NAMES[w.toLowerCase()];
+        return i===0&&x===nodes[0]?w.charAt(0)+w.slice(1).toLowerCase():w.toLowerCase()})});
+    for(var i=nodes.length-1;i>=0;i--){
+      if(!nodes[i].nodeValue.trim())continue;
+      nodes[i].nodeValue=nodes[i].nodeValue.replace(/\s*[:.;]+\s*$/,'');break}
+    p.parentNode.replaceChild(h,p);
+  });
+})();
+</script>
+<style>
+.BlogItem h3.bh-subhead strong,.BlogItem h3.bh-subhead b{font-weight:inherit;color:inherit}
+</style>
+<!-- 9. Stray blank lines in news articles (23 Oct 2026)
+     Display only. Empty paragraphs typed to add space are not shown, so the gap between paragraphs is always the same. -->
+<script>
+(function(){
+  var article=document.querySelector('.BlogItem');
+  if(!article)return;
+  article.querySelectorAll('.sqs-html-content p').forEach(function(p){
+    if(p.querySelector('img,iframe,video,svg'))return;
+    if(!p.textContent.replace(/[\s ​]/g,''))p.style.display='none';
+  });
+})();
+</script>
+<!-- 10. Hero photo on news articles (23 Oct 2026)
+     Display only. Each article's featured image (the photo already chosen for its news card) is shown
+     between the headline and the standfirst, framed as a 3:2 landscape at photo width.
+     Skipped when the article already opens with a photo. Where the featured image is only the blank
+     placeholder left by the old site, the article's first photo is used if it is at least 700px wide
+     (checked against the framing data when the page doesn't say).
+     Framing: eyes found by face detection sit on the top-third line; with no faces, the author's focal
+     point is centred. Data: github.com/stephengardner1/belgrave-harriers-data (hero-framing.json).
+     Tapping opens the whole, uncropped photo. -->
+<style>
+.BlogItem .bh-hero{order:3;margin:0 0 28px !important;padding:0 !important;max-width:850px;width:100%;
+  aspect-ratio:3/2;overflow:hidden;background:#f5efe4}
+.BlogItem .bh-hero img{display:block;width:100%;height:100%;max-height:none;object-fit:cover;object-position:50% 30%}
+</style>
+<script>
+(function(){
+  var article=document.querySelector('.BlogItem');
+  if(!article)return;
+  var layout=article.querySelector('.sqs-layout');
+  if(!layout)return;
+  var first=layout.querySelector('.sqs-block');                 // already opens with a photo
+  if(first&&/sqs-block-(image|gallery)/.test(first.className))return;
+  var meta=document.querySelector('meta[property="og:image"]');
+  var src=meta&&meta.getAttribute('content')||'';
+  src=src.replace(/^http:/,'https:').split('?')[0];
+  // a real featured photo is stored with the news posts and has a filename
+  if(src.indexOf('/5deec20d5aff607e8c14cbf2/')<0||/\/$/.test(src)){
+    // older articles whose featured image is a blank placeholder: use the first photo in the article,
+    // if it is big enough to be shown wide
+    src='';
+    var p=layout.querySelector('.sqs-block-image img, .sqs-block-gallery img, .sqs-html-content img');
+    if(p){
+      var dim=(p.getAttribute('data-image-dimensions')||'').split('x');
+      var u=(p.getAttribute('data-image')||p.getAttribute('data-src')||p.src||'').split('?')[0].replace(/^http:/,'https:');
+      // size known on the page: use it; not known (older inline photos): show it, then confirm
+      // against the framing data and withdraw it if the photo is too small to be shown wide
+      if(u&&!/\/$/.test(u)&&(!dim[0]||+dim[0]>=700)){src=u;var check=!dim[0]}
+    }
+    if(!src)return;
+  }
+  var slug=location.pathname.replace(/\/$/,'').split('/').pop();
+  var title=article.querySelector('.BlogItem-title');
+  var box=document.createElement('figure');
+  box.className='bh-hero sqs-block-image';
+  var img=document.createElement('img');
+  img.src=src+'?format=1500w';
+  img.setAttribute('data-image',src);
+  img.alt=title?title.textContent.trim():'';
+  img.decoding='async';
+  box.appendChild(img);
+  if(check)box.style.display='none';        // shown once confirmed, so nothing jumps if withdrawn
+  layout.parentNode.insertBefore(box,layout);
+
+  var spec=null; // {e:[x,y]} eyeline, or {c:[x,y]} centre point
+  function frame(){
+    var w=img.naturalWidth,h=img.naturalHeight;if(!w||!h)return;
+    var p=spec&&(spec.e||spec.c),eyes=!spec||!!spec.e;
+    var fx=p?p[0]:0.5, fy=p?p[1]:(h>w?0.30:0.40);              // no data yet: where eyes usually sit
+    var H=h/w,Hc=2/3,Wc=(w/h)/1.5,py=50,px=50,target=eyes?Hc/3:Hc/2;
+    if(H>Hc)py=Math.max(0,Math.min(1,(fy*H-target)/(H-Hc)))*100;
+    if(Wc>1)px=Math.max(0,Math.min(1,(fx*Wc-0.5)/(Wc-1)))*100;
+    img.style.objectPosition=px.toFixed(1)+'% '+py.toFixed(1)+'%';
+  }
+  img.addEventListener('load',frame);
+  fetch('https://stephengardner1.github.io/belgrave-harriers-data/hero-framing.json')
+    .then(function(r){return r.json()})
+    .then(function(d){spec=(d.items||{})[slug]||null;
+      if(check&&(!spec||spec.small||!spec.u)){box.parentNode&&box.parentNode.removeChild(box);return}
+      if(check)box.style.display='';
+      frame()})
+    .catch(function(){if(check&&box.parentNode)box.parentNode.removeChild(box)});
+})();
+</script>
+
+<!-- 11. Pictures for older news cards (23 Oct 2026)
+     Display only. 548 older articles have only a blank placeholder as their featured image, so their
+     cards on the News page show no picture. Those cards get the article's first photo (framed on the
+     eyeline), or the gold crest on claret when the article has no photos at all.
+     Data: github.com/stephengardner1/belgrave-harriers-data (hero-framing.json). -->
+<style>
+.BlogList-item-image.bh-card{aspect-ratio:16/9;overflow:hidden;background:#7a001d}
+.BlogList-item-image.bh-card a{display:block;width:100%;height:100%}
+.BlogList-item-image.bh-card img{display:block;width:100%;height:100%;object-fit:cover}
+</style>
+<script>
+(function(){
+  var cards=[].slice.call(document.querySelectorAll('.BlogList-item')).filter(function(c){return !c.querySelector('.BlogList-item-image')});
+  if(!cards.length)return;
+  var CREST='https://static1.squarespace.com/static/5deec070549fd531b273558c/t/62cf341fb201ac2f42b0a80d/1657746463125/Circular+gold+crest+1920.jpg';
+  function place(img,spec,w,h){ // eyeline on the top third of a 16:9 frame, or the point centred
+    var p=spec.e||spec.c||[0.5,0.5],eyes=!!spec.e;
+    var R=16/9,H=h/w,Hc=1/R,Wc=(w/h)/R,py=50,px=50,target=eyes?Hc/3:Hc/2;
+    if(H>Hc)py=Math.max(0,Math.min(1,(p[1]*H-target)/(H-Hc)))*100;
+    if(Wc>1)px=Math.max(0,Math.min(1,(p[0]*Wc-0.5)/(Wc-1)))*100;
+    img.style.objectPosition=px.toFixed(1)+'% '+py.toFixed(1)+'%';
+  }
+  fetch('https://stephengardner1.github.io/belgrave-harriers-data/hero-framing.json')
+    .then(function(r){return r.json()})
+    .then(function(d){
+      var items=d.items||{};
+      cards.forEach(function(card){
+        var link=card.querySelector('.BlogList-item-title')||card.querySelector('a');
+        var href=link&&link.getAttribute('href');if(!href)return;
+        var spec=items[href.replace(/\/$/,'').split('/').pop()];
+        if(!spec||!(spec.u||spec.crest))return;
+        var box=document.createElement('div');box.className='BlogList-item-image bh-card';
+        var a=document.createElement('a');a.href=href;a.className='BlogList-item-image-link';a.setAttribute('aria-hidden','true');a.tabIndex=-1;
+        var img=document.createElement('img');img.alt='';img.loading='lazy';
+        if(spec.u){img.src=spec.u+'?format=750w';img.addEventListener('load',function(){place(img,spec,img.naturalWidth,img.naturalHeight)})}
+        else{img.src=CREST+'?format=750w';img.style.objectPosition='50% 50%'}
+        a.appendChild(img);box.appendChild(a);card.insertBefore(box,card.firstChild);
+      });
+    }).catch(function(){});
+})();
+</script>
+
+<!-- 12. Slideshow captions (23 Oct 2026)
+     Display only. Squarespace prints slideshow captions in white on top of the photo, where they are
+     hard to read. They are shown below the photo instead, in the slarchive.org caption style: the
+     caption first, the credit ("Photo: …") on its own line in a quieter grey, and "2 of 5" on the right.
+     The caption text is not changed. -->
+<style>
+.sqs-gallery-block-slideshow .meta{display:none !important}
+.bh-gcap{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin:12px 0 0;padding:0;
+  font:400 14px/20px "Public Sans",system-ui,sans-serif;color:#5c5555;text-align:left;-webkit-font-smoothing:antialiased}
+.bh-gcap p{margin:0 !important;padding:0 !important;font:inherit !important;color:inherit;text-align:left !important}
+.bh-gcap .bh-gcap-text{color:#3a3434}
+.bh-gcap a{color:inherit !important;text-decoration:underline !important;text-decoration-color:#cfc7bb !important;
+  text-decoration-thickness:1px !important;text-underline-offset:2px !important;border:0 !important;background:none !important}
+.bh-gcap a:hover{color:#1e1a1a !important;text-decoration-color:currentColor !important}
+.bh-gcap .bh-gcap-count{flex-shrink:0;color:#857d7d;white-space:nowrap}
+.sqs-gallery-thumbnails{margin-top:14px}
+@media (max-width:640px){.bh-gcap{font-size:12px;line-height:17px;gap:12px;margin-top:8px}}
+</style>
+<script>
+(function(){
+  function build(container){
+    if(container.dataset.bhCap)return;
+    var slides=[].slice.call(container.querySelectorAll('.sqs-gallery > .slide'));
+    if(!slides.length)return;
+    var items=slides.map(function(s){
+      var t=s.querySelector('.meta-title'),d=s.querySelector('.meta-description');
+      var title=t?t.innerHTML.trim():'',html=d?d.innerHTML.trim():'';
+      if(!title&&!d)return null;
+      // the credit goes on its own line: everything from the last "Photo:" or "Photos:"
+      var tmp=document.createElement('div');tmp.innerHTML=html;
+      var text=tmp.textContent,credit='',body=html;
+      var m=html.lastIndexOf('Photo');
+      if(m>-1&&/^Photos?\b/.test(html.slice(m))&&text.trim().indexOf('Photo')>0){
+        body=html.slice(0,m).replace(/(\s|&nbsp;)+$/,'');credit=html.slice(m);
+        // close any paragraph left open on the caption side, open one on the credit side
+        if(/<p[^>]*>(?![\s\S]*<\/p>)/i.test(body))body+='</p>';
+        if(/<\/p>/i.test(credit)&&!/<p[\s>]/i.test(credit))credit='<p>'+credit;
+      }
+      return {title:title,body:body,credit:credit};
+    });
+    if(!items.some(Boolean))return;
+    container.dataset.bhCap='1';
+    var cap=document.createElement('figcaption');cap.className='bh-gcap';cap.setAttribute('aria-live','polite');
+    container.parentNode.insertBefore(cap,container.nextSibling);
+    var last=-1;
+    function render(i){
+      var it=items[i]||{title:'',body:'',credit:''};
+      var h='<span class="bh-gcap-main">';
+      if(it.title||it.body)h+='<span class="bh-gcap-text">'+(it.title?'<strong>'+it.title+'</strong> ':'')+it.body.replace(/^<p[^>]*>|<\/p>$/gi,'')+'</span>';
+      if(it.credit)h+=(it.title||it.body?'<br>':'')+'<span class="bh-gcap-credit">'+it.credit.replace(/^<p[^>]*>|<\/p>$/gi,'')+'</span>';
+      h+='</span>';
+      if(slides.length>1)h+='<span class="bh-gcap-count">'+(i+1)+' of '+slides.length+'</span>';
+      cap.innerHTML=h;
+    }
+    function show(){
+      var i=slides.findIndex(function(s){return s.classList.contains('sqs-active-slide')});
+      if(i<0)i=0;if(i===last)return;last=i;render(i);
+    }
+    // keep the space for the longest caption, so the page doesn't jump between photos
+    function fit(){
+      cap.style.minHeight='';var max=0;
+      for(var k=0;k<slides.length;k++){render(k);max=Math.max(max,cap.offsetHeight)}
+      cap.style.minHeight=max+'px';last=-1;show();
+    }
+    fit();
+    if(document.readyState!=='complete')window.addEventListener('load',fit);
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+    var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(fit,150)});
+    new MutationObserver(show).observe(container.querySelector('.sqs-gallery'),{subtree:true,attributes:true,attributeFilter:['class']});
+  }
+  function init(){document.querySelectorAll('.sqs-gallery-block-slideshow').forEach(build)}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+  window.addEventListener('load',init);
+})();
+</script>
+<!-- 13. Photo captions (23 Oct 2026)
+     Display only. Captions under single photos match the slideshow captions (section 12) and slarchive.org:
+     the caption in dark grey, the credit ("Photo: …") on its own line in a quieter grey, and links with a
+     faint underline. The caption text is not changed. -->
+<style>
+.sqs-block-image .image-caption-wrapper{padding-top:12px !important}
+.sqs-block-image .image-caption,.sqs-block-image .image-caption p{
+  font:400 14px/20px "Public Sans",system-ui,sans-serif !important;color:#3a3434 !important;text-align:left !important;
+  -webkit-font-smoothing:antialiased}
+.sqs-block-image .image-caption p{margin:0 !important}
+.sqs-block-image .image-caption .bh-cap-credit{display:block;color:#5c5555}
+.sqs-block-image .image-caption p:only-child.bh-cap-creditonly,.sqs-block-image .image-caption .bh-cap-creditonly{color:#5c5555 !important}
+.sqs-block-image .image-caption a{color:inherit !important;text-decoration:underline !important;text-decoration-color:#cfc7bb !important;
+  text-decoration-thickness:1px !important;text-underline-offset:2px !important;border:0 !important;padding:0 !important;background:none !important}
+.sqs-block-image .image-caption a:hover{color:#1e1a1a !important;text-decoration-color:currentColor !important}
+@media (max-width:640px){.sqs-block-image .image-caption,.sqs-block-image .image-caption p{font-size:12px !important;line-height:17px !important}
+  .sqs-block-image .image-caption-wrapper{padding-top:8px !important}}
+</style>
+<script>
+(function(){
+  var CREDIT=/\b(Photos?|Pictures?|Photography|Image)\s*(:|by\b)/g;
+  function split(p){
+    if(p.dataset.bhCap)return;p.dataset.bhCap='1';
+    var full=p.textContent,m,at=-1;
+    CREDIT.lastIndex=0;while((m=CREDIT.exec(full)))at=m.index;
+    if(at<0)return;
+    if(!full.slice(0,at).trim()){p.classList.add('bh-cap-creditonly');return}
+    // find the text node and offset where the credit starts
+    var w=document.createTreeWalker(p,NodeFilter.SHOW_TEXT),n,pos=0;
+    while((n=w.nextNode())){
+      if(pos+n.nodeValue.length>at)break;
+      pos+=n.nodeValue.length;
+    }
+    if(!n)return;
+    var r=document.createRange();r.setStart(n,at-pos);r.setEndAfter(p.lastChild);
+    var span=document.createElement('span');span.className='bh-cap-credit';
+    span.appendChild(r.extractContents());p.appendChild(span);
+    // tidy the space left at the end of the caption line
+    var prev=span.previousSibling;
+    if(prev&&prev.nodeType===3)prev.nodeValue=prev.nodeValue.replace(/\s+$/,' ');
+  }
+  function init(){document.querySelectorAll('.sqs-block-image .image-caption p').forEach(split)}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+  window.addEventListener('load',init);
+})();
+</script>
+
+<!-- Hide the basket icon while it is empty (Oct 2026). It reappears as soon as something is added. To undo, delete this block. -->
+<style>.Cart.bh-cart-empty{display:none !important}</style>
+<script>
+(function(){
+  function update(){
+    document.querySelectorAll('.Cart').forEach(function(c){
+      var q=c.querySelector('.sqs-cart-quantity');
+      var n=q?parseInt(q.textContent,10)||0:0;
+      c.classList.toggle('bh-cart-empty', n===0);
+    });
+  }
+  update();
+  document.querySelectorAll('.sqs-cart-quantity').forEach(function(q){
+    new MutationObserver(update).observe(q,{childList:true,characterData:true,subtree:true});
+  });
+  window.addEventListener('load', update);
+})();
+</script>
+<!-- 15. Bylines on restored archive stories (23 Oct 2026)
+     Display only. Restored stories (tagged "Archive") show the writer their own text names
+     (list: github.com/stephengardner1/belgrave-harriers-data, archive/bylines.json);
+     otherwise "Belgrave archive". -->
+<script>
+(function(){
+  var article=document.querySelector('.BlogItem.tag-archive');
+  if(!article)return;
+  var slots=[].slice.call(article.querySelectorAll('.BlogItem-meta .Blog-meta-item--author'))
+    .filter(function(a){return !a.textContent.trim()});
+  if(!slots.length)return;
+  function show(name){slots.forEach(function(a){a.textContent=name})}
+  var slug=location.pathname.replace(/\/$/,'').split('/').pop();
+  fetch('https://stephengardner1.github.io/belgrave-harriers-data/archive/bylines.json')
+    .then(function(r){return r.json()})
+    .then(function(map){show(map[slug]||'Belgrave archive')})
+    .catch(function(){show('Belgrave archive')});
+})();
+</script>
+
+<!-- 14. Related article cards (23 Oct 2026)
+     Display only. Some articles list related articles (for example, earlier wins of the same title).
+     They are shown as cards in the right-hand margin on wide screens, or after the article on narrower
+     ones. The list lives at github.com/stephengardner1/belgrave-harriers-data (related/<article>.json);
+     titles, dates and photos are read live from each article. -->
+<style>
+.bh-rel{font-family:"Public Sans",system-ui,sans-serif;color:#1e1a1a;-webkit-font-smoothing:antialiased}
+.bh-rel-head{font:600 12px/16px "Public Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#5c5555;margin:0 0 12px;padding:0 0 10px;
+  border-bottom:3px solid #d6b97a;border-image:linear-gradient(135deg,#e7d8b0 0%,#d6b97a 28%,#d5b271 54%,#d09d55 93%,#ce954a 100%) 1}
+.bh-rel-card{display:block;text-decoration:none!important;color:inherit;margin:0 0 24px}
+.bh-rel-img{display:block;aspect-ratio:3/2;overflow:hidden;background:#f5efe4;margin:0 0 10px}
+.bh-rel-img img{display:block;width:100%;height:100%;object-fit:cover}
+.bh-rel-date{display:block;font:500 12px/16px "Public Sans",sans-serif;letter-spacing:.04em;color:#5c5555;margin:0 0 4px}
+.bh-rel-title{display:block;font:600 18px/1.25 "Castoro Belgrave",Georgia,serif;color:#1e1a1a}
+.bh-rel-card:hover .bh-rel-title{color:#7a001d}
+.bh-rel-card:focus-visible{outline:2px solid #7a001d;outline-offset:4px}
+.bh-rel.side{position:absolute;z-index:2}
+.bh-rel.below{max-width:850px;width:100%;margin:8px 0 40px;order:6}
+.bh-rel.below .bh-rel-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px}
+.bh-rel.below .bh-rel-card{margin:0}
+</style>
+<script>
+(function(){
+  var article=document.querySelector('.BlogItem');if(!article)return;
+  var layout=article.querySelector('.sqs-layout');if(!layout)return;
+  var slug=location.pathname.replace(/\/$/,'').split('/').pop();
+  var BASE='https://stephengardner1.github.io/belgrave-harriers-data/';
+  var MON=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  fetch(BASE+'related/'+encodeURIComponent(slug)+'.json').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(rel){
+    var list=(rel.articles||[]).slice(0,4);if(!list.length)return;
+    return Promise.all(list.map(function(s){
+      return fetch('/news/'+s+'?format=json').then(function(r){return r.ok?r.json():null}).then(function(j){
+        if(!j||!j.item)return null;var it=j.item;
+        var img=(it.assetUrl||'');if(!/\/[^\/]+\.[a-z]{3,4}$/i.test(img.split('?')[0]))img='';
+        return {slug:s,href:it.fullUrl||('/news/'+s),title:it.title,date:new Date(it.publishOn),img:img};
+      }).catch(function(){return null});
+    })).then(function(cards){
+      cards=cards.filter(Boolean);if(!cards.length)return;
+      var box=document.createElement('aside');box.className='bh-rel';box.setAttribute('aria-label',rel.heading||'Related articles');
+      box.innerHTML='<p class="bh-rel-head">'+esc(rel.heading||'Related articles')+'</p><div class="bh-rel-cards">'+cards.map(function(c){
+        return '<a class="bh-rel-card" href="'+esc(c.href)+'">'+(c.img?'<span class="bh-rel-img"><img src="'+esc(c.img)+'?format=500w" alt="" loading="lazy" data-slug="'+esc(c.slug)+'"></span>':'')+
+          '<span class="bh-rel-date">'+c.date.getDate()+' '+MON[c.date.getMonth()]+' '+c.date.getFullYear()+'</span><span class="bh-rel-title">'+esc(c.title)+'</span></a>'}).join('')+'</div>';
+      // frame each photo with the eyes on the top third, as the hero photos are
+      fetch(BASE+'hero-framing.json').then(function(r){return r.json()}).then(function(d){
+        [].slice.call(box.querySelectorAll('img[data-slug]')).forEach(function(img){
+          var spec=(d.items||{})[img.getAttribute('data-slug')];if(!spec||!(spec.e||spec.c))return;
+          function frame(){var w=img.naturalWidth,h=img.naturalHeight;if(!w||!h)return;
+            var p=spec.e||spec.c,eyes=!!spec.e,H=h/w,Hc=2/3,Wc=(w/h)/1.5,py=50,px=50,target=eyes?Hc/3:Hc/2;
+            if(H>Hc)py=Math.max(0,Math.min(1,(p[1]*H-target)/(H-Hc)))*100;
+            if(Wc>1)px=Math.max(0,Math.min(1,(p[0]*Wc-0.5)/(Wc-1)))*100;
+            img.style.objectPosition=px.toFixed(1)+'% '+py.toFixed(1)+'%'}
+          if(img.complete)frame();else img.addEventListener('load',frame)});
+      }).catch(function(){});
+      function place(){
+        box.classList.remove('side','below');box.style.cssText='';
+        var lr=layout.getBoundingClientRect(),ar=article.getBoundingClientRect();
+        var ref=document.querySelector('.BlogItem-pagination')||document.querySelector('.Main-content');
+        var edge=ref.getBoundingClientRect().right,gap=40,w=Math.min(260,edge-lr.right-gap);
+        if(w>=200){
+          if(box.parentNode!==article)article.appendChild(box);
+          if(getComputedStyle(article).position==='static')article.style.position='relative';
+          box.classList.add('side');box.style.width=w+'px';
+          box.style.left=(lr.right+gap-ar.left)+'px';box.style.top=(lr.top-ar.top)+'px';
+          // stay clear of wide results tables that run into the margin
+          var b=box.getBoundingClientRect(),clash=[].slice.call(article.querySelectorAll('.bh-scroll')).some(function(s){
+            var r=s.getBoundingClientRect();return r.right>b.left&&r.top<b.bottom+24&&r.bottom>b.top});
+          if(!clash)return;
+          box.classList.remove('side');box.style.cssText='';
+        }
+        box.classList.add('below');layout.parentNode.insertBefore(box,layout.nextSibling);
+      }
+      place();
+      var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(place,200)});
+      setTimeout(place,1500); // again once photos and results tables have settled
+    });
+  }).catch(function(){});
+})();
+</script>
+
+<!-- 16. Surrey League results, compendium style (23 Oct 2026)
+     Display only. Some Surrey League match reports carry the full results, laid out as on Steve's
+     Surrey League compendium (slarchive.org) but in Belgrave's typefaces. The results are saved copies
+     kept at github.com/stephengardner1/belgrave-harriers-data (slarchive/<article>.json), so they stay
+     on our page even if the compendium moves. A report on both races gets a Men / Women switch; a report
+     with a "Full results" link per match gets each match's results under its link, and a report with
+     a section per race gets each race's results at the end of its section. -->
+<style>
+.bh-sl{--g9:#1e1a1a;--g7:#3d3838;--g5:#6b6565;--g2:#e7e3dc;--g1:#f3f1ec;font-family:"Public Sans",system-ui,sans-serif;color:var(--g9);
+  -webkit-font-smoothing:antialiased;max-width:850px;width:100%;margin:24px 0 48px;order:5;container:bhsl/inline-size}
+.sqs-html-content .bh-sl{margin:28px 0 36px}
+.bh-sl *{box-sizing:border-box}
+.bh-sl .num{font-variant-numeric:tabular-nums}
+.bh-sl .mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
+.bh-sl-head{margin:0 0 20px}
+.bh-sl-sex{display:inline-flex;padding:2px;border-radius:8px;background:var(--g1);margin:0 0 14px}
+.bh-sl-sex button{font:inherit;font-size:14px;font-weight:500;line-height:20px;border:0;border-radius:6px;background:transparent;color:var(--g5);padding:4px 12px;cursor:pointer}
+.bh-sl-sex button[aria-pressed="true"]{background:#fff;color:var(--g9);box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.bh-sl-meta{font-size:14px;line-height:20px;color:var(--g5);margin:0 0 2px}
+.bh-sl-venue{font:600 28px/1.15 "Castoro Belgrave",Georgia,serif;color:var(--g9);margin:0 0 8px;letter-spacing:-.005em}
+.bh-sl-line{display:flex;align-items:center;gap:6px;font-size:14px;line-height:22px;color:var(--g5);margin:0}
+.bh-sl-line b{font-weight:500;color:var(--g9)}
+.bh-sl-vest{display:inline-block;flex:none;vertical-align:-2px}
+.bh-sl-fq{position:relative;margin:8px 0 0}
+.bh-sl-fq>button{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font:inherit;font-size:12px;line-height:16px;color:#4b4646;
+  background:#fff;border:1px solid var(--g2);border-radius:999px;padding:4px 8px 4px 12px;cursor:pointer}
+.bh-sl-fq>button:hover{border-color:#a8a29e;color:var(--g9)}
+.bh-sl-fq>button b{font-weight:600;color:var(--g9)}
+.bh-sl-bar{display:inline-block;width:32px;height:6px;border-radius:999px;background:var(--g2);overflow:hidden;vertical-align:middle;margin-left:6px}
+.bh-sl-bar i{display:block;height:100%;border-radius:999px;background:#57524f}
+.bh-sl-fq svg.chev{transition:transform .15s}
+.bh-sl-fq.open svg.chev{transform:rotate(180deg)}
+.bh-sl-panel{display:none;position:absolute;z-index:20;left:0;top:calc(100% + 8px);width:min(448px,calc(100vw - 32px));background:#fff;border:1px solid var(--g2);
+  border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.08);padding:12px 14px;font-size:14px;line-height:20px;color:var(--g7)}
+.bh-sl-fq.open .bh-sl-panel{display:block}
+.bh-sl-panel>div{margin:0 0 10px}.bh-sl-panel>div:last-child{margin:0}
+.bh-sl-panel .sm{font-size:12px;line-height:16px;color:var(--g5)}
+.bh-sl-panel .t{color:var(--g9);font-weight:600;margin:0}
+.bh-sl-panel .t span{font-weight:400;color:var(--g5)}
+.bh-sl-panel a{color:#7a001d;text-decoration:none}
+.bh-sl-panel a:hover{text-decoration:underline}
+.bh-sl-tabs{display:none;gap:0;padding:2px;border-radius:8px;background:var(--g1);margin:0 0 8px}
+.bh-sl-tabs button{font:inherit;font-size:13px;font-weight:500;border:0;border-radius:6px;background:transparent;color:var(--g5);padding:4px 10px;cursor:pointer}
+.bh-sl-tabs button[aria-pressed="true"]{background:#fff;color:var(--g9);box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.bh-sl-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0}
+.bh-sl-ind{padding-right:20px;border-right:1px solid var(--g2)}
+.bh-sl-teams{padding-left:20px}
+.bh-sl table{width:100%;border-collapse:collapse;margin:0;font-size:14px;line-height:20px}
+.bh-sl th{text-align:left;font-size:12px;line-height:16px;font-weight:400;color:var(--g5);text-transform:uppercase;padding:6px 6px 6px 0;border-bottom:1px solid var(--g2);white-space:nowrap}
+.bh-sl th.lead{font-weight:600;color:var(--g9);letter-spacing:.025em}
+.bh-sl td{padding:8px 6px 8px 0;border-top:1px solid var(--g1);vertical-align:middle}
+.bh-sl tbody tr:first-child td{border-top:0}
+.bh-sl .ind tbody tr:hover{background:var(--g1)}
+.bh-sl .c-pos{width:44px;color:var(--g7)}
+.bh-sl .c-pts{width:42px;color:var(--g5)}
+.bh-sl .c-club{width:62px;white-space:nowrap}
+.bh-sl .c-club span{font-size:12px;color:var(--g5);margin-left:4px}
+.bh-sl .c-time{width:56px;text-align:right;padding-right:0;color:var(--g7);white-space:nowrap}
+.bh-sl .nm a{color:var(--g9);text-decoration:none}
+.bh-sl .nm a:hover{color:#7a001d}
+.bh-sl .mk{margin-left:6px;font-size:10px;vertical-align:middle;opacity:.55;cursor:default}
+.bh-sl .mk.up{color:#16a34a}.bh-sl .mk.down{color:#dc2626}
+.bh-sl .mk.same{font-size:12px;font-weight:600;color:var(--g5)}
+.bh-sl .mk.new{font-size:14px;line-height:1;color:#1b649e;opacity:.6}
+.bh-sl .mk.emo{font-size:12px;opacity:1;margin-left:4px}
+.bh-sl .tag{color:var(--g5);margin-left:4px}
+.bh-sl .team td{padding-top:7px;padding-bottom:7px}
+.bh-sl .team .c-pos{width:24px;color:var(--g5)}
+.bh-sl .team .c-v{width:22px;padding-right:4px}
+.bh-sl .team .c-tn{font-weight:500;width:46px}
+.bh-sl .team .c-tp{width:44px;text-align:right;padding-right:8px;font-weight:700}
+.bh-sl .sc{display:flex;flex-wrap:wrap;column-gap:2px;font-size:12px;line-height:16px;color:var(--g5)}
+.bh-sl .sc span{width:22px;text-align:center}
+.bh-sl .team+.team{margin-top:36px}
+.bh-sl .pick{display:inline-flex;align-items:center;gap:4px;font:inherit;color:inherit;background:none;border:0;padding:0;margin:0;cursor:pointer;white-space:nowrap}
+.bh-sl .pick:hover span,.bh-sl .pick:hover{color:#7a001d}
+.bh-sl .c-club .pick span{margin-left:0}
+.bh-sl .team .c-v{cursor:pointer}
+.bh-sl .team tr.on td{background:var(--g1)}
+.bh-sl-filter{display:flex;align-items:center;gap:10px;font-size:14px;line-height:20px;color:var(--g5);margin:0 0 10px}
+.bh-sl-filter[hidden]{display:none}
+.bh-sl-chip{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:14px;color:var(--g9);background:var(--g1);border:0;border-radius:6px;padding:4px 8px;cursor:pointer}
+.bh-sl-chip:hover{background:var(--g2)}
+.bh-sl-chip i{font-style:normal;color:var(--g5);font-size:16px;line-height:1;margin-left:2px}
+.bh-sl-more{display:block;width:100%;margin:8px 0 0;padding:10px;font:inherit;font-size:14px;font-weight:500;color:var(--g9);background:var(--g1);border:0;border-radius:8px;cursor:pointer}
+.bh-sl-more:hover{background:var(--g2)}
+.bh-sl-src{font-size:13px;line-height:18px;color:var(--g5);margin:20px 0 0}
+.bh-sl-src a{color:var(--g5);text-decoration:underline;text-decoration-color:#cfc9c0;text-underline-offset:2px}
+.bh-sl-src a:hover{color:#7a001d}
+.bh-sl button:focus-visible,.bh-sl a:focus-visible{outline:2px solid #7a001d;outline-offset:2px}
+@container bhsl (max-width:760px){
+  .bh-sl-tabs{display:inline-flex}
+  .bh-sl-cols{display:block}
+  .bh-sl-ind{padding-right:0;border-right:0}
+  .bh-sl-teams{padding-left:0}
+  .bh-sl [data-pane][hidden]{display:none}
+  .bh-sl .team+.team{margin-top:0}
+  .bh-sl .c-pos{width:34px}.bh-sl .c-pts{width:32px}.bh-sl .c-club{width:58px}
+  .bh-sl .nm{font-size:13px}
+}
+@container bhsl (min-width:761px){.bh-sl [data-pane][hidden]{display:block}}
+@container bhsl (max-width:420px){.bh-sl .sc span{width:20px}.bh-sl .team .c-pos{width:20px}.bh-sl .team .c-tn{width:40px}.bh-sl .team .c-tp{width:40px;padding-right:6px}.bh-sl-venue{font-size:24px}}
+</style>
+<script>
+(function(){
+  var article=document.querySelector('.BlogItem');if(!article)return;
+  var layout=article.querySelector('.sqs-layout');if(!layout)return;
+  var slug=location.pathname.replace(/\/$/,'').split('/').pop();
+  var DATA='https://stephengardner1.github.io/belgrave-harriers-data/slarchive/';
+  var SHOW=50; // finishers shown before "Show all"
+  var n=0;
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function slugName(nm){return nm.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'')}
+  fetch(DATA+encodeURIComponent(slug)+'.json').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(file){
+    if(!document.querySelector('link[href*="IBM+Plex+Mono"]')){var f=document.createElement('link');f.rel='stylesheet';
+      f.href='https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap';document.head.appendChild(f)}
+    var clubs=file.clubs||{};
+    var blocks=file.blocks||[{races:[file]}];
+    blocks.forEach(function(bl){
+      var box=document.createElement('section');box.className='bh-sl';box.setAttribute('aria-label','Results');
+      var races=bl.races||[],cur=0,inner=document.createElement('div');
+      if(races.length>1){
+        var sw=document.createElement('div');sw.className='bh-sl-sex';sw.setAttribute('role','group');sw.setAttribute('aria-label','Race');
+        sw.innerHTML=races.map(function(r,i){return '<button type="button" aria-pressed="'+(i===0)+'">'+esc(r.sex||('Race '+(i+1)))+'</button>'}).join('');
+        [].slice.call(sw.children).forEach(function(b,i){b.addEventListener('click',function(){
+          [].slice.call(sw.children).forEach(function(x,j){x.setAttribute('aria-pressed',j===i)});cur=i;draw(inner,races[i],clubs)})});
+        box.appendChild(sw);
+      }
+      box.appendChild(inner);draw(inner,races[0],clubs);
+      // where it goes: under the article's own link to these results, or at the end of the article
+      var at=null,after=[].concat(bl.after||[]);
+      if(after.length){var a=[].slice.call(article.querySelectorAll('a[href]')).filter(function(x){
+        return after.indexOf(x.getAttribute('href'))>=0||after.indexOf(x.href)>=0})[0];if(a)at=a.closest('p,h1,h2,h3,h4,li')||a}
+      if(!at&&bl.afterText){var norm=function(t){return t.replace(/\s+/g,' ').trim().toLowerCase()},want=norm(bl.afterText);
+        at=[].slice.call(article.querySelectorAll('.sqs-html-content p,.sqs-html-content h2,.sqs-html-content h3,.sqs-html-content h4,.sqs-html-content li')).filter(function(x){return norm(x.textContent).indexOf(want)===0})[0]||null}
+      if(at){at.parentNode.insertBefore(box,at.nextSibling);
+        // a text column is narrower than the article: let the results use the full width
+        var fit=function(){box.style.width='';box.style.maxWidth='';var lw=layout.getBoundingClientRect().width,bw=box.getBoundingClientRect().width;
+          if(lw-bw>40){box.style.width=Math.min(850,lw)+'px';box.style.maxWidth='none'}};
+        fit();var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(fit,150)});
+      } else layout.parentNode.insertBefore(box,layout.nextSibling);
+    });
+  }).catch(function(){});
+
+  function draw(root,d,clubs){
+    clubs=Object.assign({},clubs,d.clubs||{});
+    function vest(c,size){var s=(d.vests||{})[c]||(d.vests||{})[''];if(!s)return'';n++;
+      return s.replace('<svg','<svg class="bh-sl-vest" width="'+size+'" height="'+size+'" aria-hidden="true"').replace(/VID/g,'bhv'+n)}
+    function marks(ms){return (ms||[]).map(function(m){
+      var t=m.t,ti=m.title?' title="'+esc(m.title)+'" aria-label="'+esc(m.title)+'"':'';
+      if(t.charAt(0)==='(')return '<span class="tag">'+esc(t)+'</span>';
+      var k=t==='▲'?'up':t==='▼'?'down':t==='='?'same':t==='✦'?'new':'emo';
+      return '<span class="mk '+k+'"'+ti+'>'+esc(t)+'</span>'}).join('')}
+    function indRow(r,i){
+      var name=r.name==='Unknown'?'<span style="color:var(--g5)">Unknown</span>':'<a href="'+(d.athleteBase||'https://slarchive.org/athlete/')+slugName(r.ath||r.name)+'">'+esc(r.name)+'</a>';
+      return '<tr data-club="'+esc(r.club)+'"'+(i>=SHOW?' hidden':'')+'><td class="c-pos num">'+esc(r.pos)+'</td><td class="c-pts num">'+esc(r.pts)+'</td>'+
+        '<td class="c-club">'+(r.club?'<button type="button" class="pick" data-pick="'+esc(r.club)+'" title="Show only '+esc(clubs[r.club]||r.club)+'">'+vest(r.club,14)+'<span>'+esc(r.club)+'</span></button>':vest('',14))+'</td>'+
+        '<td class="nm">'+name+marks(r.marks)+'</td><td class="c-time mono">'+esc(r.time)+'</td></tr>'}
+    function teamTable(label,rows,pane){
+      if(!rows.length)return ''; // older races: often no B teams on record
+      var hasSc=rows.some(function(t){return t.scores&&t.scores.length});
+      return '<table class="team" data-pane="'+pane+'"><thead><tr><th class="lead" colspan="3">'+label+'</th><th style="text-align:right;padding-right:8px">Pts</th>'+(hasSc?'<th>Scores</th>':'')+'</tr></thead><tbody>'+
+        rows.map(function(t){return '<tr data-team="'+esc(t.club)+'"><td class="c-pos num">'+esc(t.pos)+'</td><td class="c-v" data-pick="'+esc(t.club)+'" title="Show only '+esc(clubs[t.club]||t.club)+'">'+vest(t.club,16)+'</td><td class="c-tn"><button type="button" class="pick" data-pick="'+esc(t.club)+'" title="Show only '+esc(clubs[t.club]||t.club)+'">'+esc(t.club)+'</button>'+
+          '</td><td class="c-tp num">'+esc(t.pts)+'</td>'+(hasSc?'<td><div class="sc num">'+(t.scores||[]).map(function(s){return '<span>'+esc(s)+'</span>'}).join('')+'</div></td>':'')+'</tr>'}).join('')+'</tbody></table>'}
+    var f=d.field,ind=d.individual||[];
+    root.innerHTML=
+      '<div class="bh-sl-head"><div class="bh-sl-meta">'+esc(d.meta)+(d.sex?' · '+esc(d.sex):'')+'</div><div class="bh-sl-venue" role="heading" aria-level="3">'+esc(d.venue)+'</div>'+
+      (d.lines||[]).map(function(l){return '<div class="bh-sl-line">'+vest(l.club,14)+'<span><b>'+esc(l.strong)+'</b> '+esc(l.rest)+'</span></div>'}).join('')+
+      (f?'<div class="bh-sl-fq"><button type="button" aria-expanded="false"><span style="color:var(--g5)">Field quality</span>'+
+        '<span>Stacked <b class="num">'+f.stacked+'</b><span class="bh-sl-bar"><i style="width:'+f.stacked+'%"></i></span></span>'+
+        '<span>Deep <b class="num">'+f.deep+'</b><span class="bh-sl-bar"><i style="width:'+f.deep+'%"></i></span></span>'+
+        '<svg class="chev" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'+
+        '<div class="bh-sl-panel"><div class="sm">'+esc(f.intro)+'</div>'+f.items.map(function(it){return '<div class="t">'+esc(it[0])+' <span>· '+esc(it[1])+'</span></div><div>'+esc(it[2])+'</div>'}).join('')+
+        '<div class="sm">'+esc(f.note)+'</div>'+(f.link?'<div><a href="'+esc(f.link[1])+'">'+esc(f.link[0])+'</a></div>':'')+'</div></div>':'')+
+      '</div>'+
+      '<div class="bh-sl-tabs" role="group" aria-label="Results view"><button type="button" aria-pressed="true" data-show="ind">Individual</button><button type="button" aria-pressed="false" data-show="a">A Teams</button>'+((d.bTeams||[]).length?'<button type="button" aria-pressed="false" data-show="b">B Teams</button>':'')+'</div>'+
+      '<div class="bh-sl-cols"><div class="bh-sl-ind" data-pane="ind"><div class="bh-sl-filter" hidden><span>Showing:</span><button type="button" class="bh-sl-chip" aria-label="Show all clubs"></button></div><table class="ind"><thead><tr><th class="lead c-pos">Pos</th><th class="c-pts">Pts</th><th class="c-club">Club</th><th>Name</th><th class="c-time">Time</th></tr></thead><tbody>'+
+        ind.map(indRow).join('')+'</tbody></table>'+
+        (ind.length>SHOW?'<button type="button" class="bh-sl-more">Show all '+ind.length+' finishers</button>':'')+'</div>'+
+      '<div class="bh-sl-teams">'+teamTable('A Teams',d.aTeams||[],'a')+teamTable('B Teams',d.bTeams||[],'b')+'</div></div>'+
+      '<div class="bh-sl-src">Results from the <a href="'+esc(d.url)+'">Surrey League compendium</a>, with each runner\'s form against their last Surrey League race.</div>';
+    // small spaces: one table at a time, as on the compendium
+    var panes=[].slice.call(root.querySelectorAll('[data-pane]')),tabs=[].slice.call(root.querySelectorAll('.bh-sl-tabs button'));
+    function show(k){panes.forEach(function(p){p.hidden=p.getAttribute('data-pane')!==k});tabs.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-show')===k)})}
+    tabs.forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-show'))})});show('ind');
+    // "Show all" and the club filter, as on the compendium: click a club's vest or letters to see only its runners
+    var more=root.querySelector('.bh-sl-more'),rows=[].slice.call(root.querySelectorAll('.ind tbody tr')),filt=root.querySelector('.bh-sl-filter'),chip=filt.querySelector('.bh-sl-chip');
+    var club=null,all=false;
+    function apply(){
+      rows.forEach(function(r,i){r.hidden=club?r.getAttribute('data-club')!==club:(!all&&i>=SHOW)});
+      if(more)more.hidden=!!club||all;
+      filt.hidden=!club;
+      if(club)chip.innerHTML=vest(club,14)+esc(clubs[club]||club)+'<i aria-hidden="true">×</i>';
+      [].slice.call(root.querySelectorAll('tr[data-team]')).forEach(function(t){t.classList.toggle('on',t.getAttribute('data-team')===club)});
+    }
+    if(more)more.addEventListener('click',function(){all=true;apply()});
+    chip.addEventListener('click',function(){club=null;apply()});
+    root.addEventListener('click',function(e){var p=e.target.closest('[data-pick]');if(!p||!root.contains(p))return;
+      var c=p.getAttribute('data-pick');club=club===c?null:c;apply();
+      if(p.closest('.team')){show('ind');var top=root.querySelector('.bh-sl-ind').getBoundingClientRect().top;if(top<80||top>innerHeight-100)window.scrollBy({top:top-100,behavior:'smooth'})}});
+    apply();
+    var fq=root.querySelector('.bh-sl-fq');
+    if(fq){var fb=fq.querySelector('button');
+      fb.addEventListener('click',function(e){e.stopPropagation();var o=fq.classList.toggle('open');fb.setAttribute('aria-expanded',o)});
+      document.addEventListener('click',function(e){if(!fq.contains(e.target)){fq.classList.remove('open');fb.setAttribute('aria-expanded','false')}});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape'){fq.classList.remove('open');fb.setAttribute('aria-expanded','false')}})}
+  }
+})();
+</script>
+
+<!-- 17. Swipe through the homepage news carousel (23 Oct 2026)
+     Display only. On phones and tablets the news cards follow your finger as you swipe, then settle
+     on the nearest set of cards (a quick flick moves on one set). On a laptop, a sideways two-finger
+     scroll on the trackpad moves one set at a time. The arrows still work as before. -->
+<script>
+(function(){
+  function init(){
+    document.querySelectorAll('.summary-block-setting-design-carousel').forEach(function(block){
+      var list=block.querySelector('.summary-item-list');
+      var next=block.querySelector('.summary-carousel-pager-next'),prev=block.querySelector('.summary-carousel-pager-prev');
+      if(!list||!next||!prev||list.dataset.bhSwipe)return;list.dataset.bhSwipe='1';
+      var STEP=101; // one set of cards, as a percentage of the list's width
+      function pos(){var m=(list.style.transform||'').match(/translateX\((-?[\d.]+)%\)/);return m?parseFloat(m[1]):0}
+      function go(n){var b=n>0?next:prev;for(var i=0;i<Math.abs(n);i++){if(b.classList.contains('sqs-disabled'))break;b.click()}}
+      var x0,y0,t0,base,axis=null,dx=0,moved=false;
+      list.addEventListener('touchstart',function(e){
+        x0=e.touches[0].clientX;y0=e.touches[0].clientY;t0=Date.now();base=pos();axis=null;dx=0;moved=false;
+      },{passive:true});
+      list.addEventListener('touchmove',function(e){
+        var mx=e.touches[0].clientX-x0,my=e.touches[0].clientY-y0;
+        if(!axis){if(Math.abs(mx)<6&&Math.abs(my)<6)return;axis=Math.abs(mx)>Math.abs(my)?'x':'y'}
+        if(axis!=='x')return;
+        e.preventDefault();moved=true;dx=mx;
+        var atStart=prev.classList.contains('sqs-disabled')&&dx>0,atEnd=next.classList.contains('sqs-disabled')&&dx<0;
+        var d=(atStart||atEnd)?dx*0.3:dx; // resist at either end
+        list.style.transition='none';
+        list.style.transform='translateX('+(base+d/list.offsetWidth*100)+'%)';
+      },{passive:false});
+      list.addEventListener('touchend',function(){
+        if(axis!=='x'){axis=null;return}
+        axis=null;list.style.transition='';
+        var w=list.offsetWidth,sets=-dx/w*100/STEP,n=Math.round(sets);
+        var fast=Math.abs(dx)/Math.max(1,Date.now()-t0)>0.4;
+        if(n===0&&(fast||Math.abs(dx)>w*0.2))n=dx<0?1:-1;
+        var before=pos();
+        if(n)go(n);
+        if(pos()===before)list.style.transform='translateX('+base+'%)'; // nowhere to go: settle back
+      });
+      // a swipe should not also open the card it started on
+      list.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
+      var wait=false;
+      list.addEventListener('wheel',function(e){
+        if(Math.abs(e.deltaX)<=Math.abs(e.deltaY)||Math.abs(e.deltaX)<20)return;
+        e.preventDefault();if(wait)return;wait=true;go(e.deltaX>0?1:-1);setTimeout(function(){wait=false},500)
+      },{passive:false});
+    });
+  }
+  if(document.readyState==='complete')init();else window.addEventListener('load',init);
+})();
+</script>
+<!-- 18. Dates in history page headings (24 Oct 2026)
+     Display only. On /history, a heading that starts with a date or period ("1887:", "1930s–1950s:",
+     "Late 1990s–2013:", "Today:") shows that part above the heading in the small gold wayfinding style,
+     leaving the Castoro line for the words. The colon after the date is not shown. No words are changed. -->
+<style>
+#collection-5deecaa75cb2154c11d34151 .bh-h2-date{display:block;font:600 12px/16px "Public Sans",system-ui,sans-serif !important;
+  letter-spacing:.08em !important;text-transform:uppercase !important;color:#7a5e1c !important;margin:0 0 10px !important}
+#collection-5deecaa75cb2154c11d34151 .bh-h2-date .bh-lc{text-transform:none !important}
+</style>
+<script>
+(function(){
+  if(!document.getElementById('collection-5deecaa75cb2154c11d34151'))return;
+  var re=/^((?:Late|Early|Mid)[\s-]+)?(\d{4}s?(?:\s*[–—-]\s*(?:(?:Late|Early|Mid)[\s-]+)?\d{2,4}s?)?)\s*:\s*|^(Today)\s*:\s*/i;
+  function run(){
+    document.querySelectorAll('#collection-5deecaa75cb2154c11d34151 .Main-content .sqs-html-content h2').forEach(function(h){
+      if(h.querySelector('.bh-h2-date'))return;
+      var t=h.firstChild;if(!t||t.nodeType!==3)return;
+      var m=t.nodeValue.match(re);if(!m)return;
+      var label=(m[3]||((m[1]||'')+m[2])).trim();
+      t.nodeValue=t.nodeValue.slice(m[0].length);
+      var s=document.createElement('span');s.className='bh-h2-date';
+      s.innerHTML=label.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/(\d)s\b/g,'$1<span class="bh-lc">s</span>'); // "1990s", not "1990S"
+      h.insertBefore(s,h.firstChild);
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
+})();
+</script>
+<!-- Belgrave phone header (24 Oct 2026): adds bh-scrolled to the page once you scroll down, so Custom CSS can slim the claret bar, fade THE BELGRAVIAN and let the roundel overhang. -->
+<script>
+(function(){var b=document.body,on=false,last=window.pageYOffset||0,acc=0,first=true,mq=window.matchMedia('(max-width: 640px)');function set(s){if(s!==on){on=s;b.classList.toggle('bh-scrolled',s)}}function f(){var y=window.pageYOffset||document.documentElement.scrollTop,d=y-last;last=y;if(first||!mq.matches){first=false;acc=0;set(on?y>20:y>60);return}if(y<=20){acc=0;set(false);return}if(d===0)return;if((d>0)!==(acc>0))acc=0;acc+=d;if(acc>12&&y>60)set(true);else if(acc<-12)set(false)}window.addEventListener('scroll',f,{passive:true});f()})(); /* 1 Nov 2026: on phones the full header (THE BELGRAVIAN and the menu row) comes back as soon as you start scrolling up, not only at the top. (A bottom-docked phone nav was tried 9 Nov 2026 and removed the same day: too low to reach behind mobile browser toolbars.) */
+</script>
+<!-- 19. News page: pointer to the news archive (24 Oct 2026)
+     Display only. On the main News page (not filtered views or articles), a small cream panel sits to
+     the right of the NEWS heading and its subtitle, telling readers about the 774 stories restored from 2000-2013 and
+     linking to the searchable archive at /news-archive. On phones it shrinks to a small label beside the heading. -->
+<style>
+.bh-newshead{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px}
+.bh-newshead-main{flex:1 1 360px;min-width:0}
+.bh-arch{flex:0 1 340px;box-sizing:border-box;background:#f5efe4;border-top:3px double #d6b97a;border-bottom:3px double #d6b97a;padding:14px 18px 15px;font-family:"Public Sans",system-ui,sans-serif;text-align:left}
+.bh-arch-l{display:block;font:600 12px/16px "Public Sans",system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#7a5e1c;margin:0 0 6px}
+.bh-arch-t{display:block;font:400 15px/22px "Public Sans",system-ui,sans-serif;color:#4a4343;margin:0 0 8px}
+.bh-arch a{font:600 15px/22px "Public Sans",system-ui,sans-serif;color:#7a001d !important;text-decoration:none;border-bottom:1px solid rgba(122,0,29,.35)}
+.bh-arch a:hover{border-bottom-color:#7a001d}
+.bh-arch-s{display:none}
+@media (max-width:640px){
+  .bh-newshead{display:grid;grid-template-columns:1fr auto;align-items:center;gap:0 16px}
+  .bh-newshead-main{display:contents}
+  .bh-newshead-main>*{grid-column:1/-1}
+  .bh-newshead-main>h1{grid-column:1;grid-row:1}
+  .bh-arch{grid-column:2;grid-row:1;max-width:150px;padding:8px 10px 9px;border-top-width:3px;border-bottom-width:3px}
+  .bh-arch-l{font-size:10px;line-height:14px;margin:0 0 3px}
+  .bh-arch-t{display:none}
+  .bh-arch a{font-size:13px;line-height:18px}
+  .bh-arch-f{display:none}.bh-arch-s{display:inline}
+}
+</style>
+<script>
+(function(){
+  function add(){
+    if(location.pathname.replace(/\/$/,'')!=='/news'||location.search)return;
+    var h=document.querySelector('[id$="_intro"] h1');
+    if(!h||h.closest('.bh-newshead'))return;
+    var wrap=document.createElement('div');wrap.className='bh-newshead';
+    var main=document.createElement('div');main.className='bh-newshead-main';
+    h.parentNode.insertBefore(wrap,h);wrap.appendChild(main);
+    var n=h;while(n){var nx=n.nextElementSibling;main.appendChild(n);n=nx}
+    var box=document.createElement('aside');box.className='bh-arch';box.setAttribute('aria-label','News archive');
+    box.innerHTML='<span class="bh-arch-l">From the archive</span><span class="bh-arch-t">774 reports and features from 2000 to 2013, restored from the club’s earlier website.</span><a href="/news-archive"><span class="bh-arch-f">Search the news archive</span><span class="bh-arch-s">2000–2013</span> →</a>';
+    wrap.appendChild(box);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',add);else add();
+})();
+</script>
+
+<!-- Phone menu row (28 Oct 2026): builds the sideways-scrolling menu under THE BELGRAVIAN from the site's own menu. Styles are in Custom CSS (bh-mnav). -->
+<script>(function(){
+  function build(){
+    var bar=document.querySelector('.Mobile-bar--top');
+    var src=document.querySelector('.Header--top .Header-nav--primary .Header-nav-inner');
+    var sec=document.querySelector('.Header--top .Header-nav--secondary .Header-nav-inner');
+    if(!bar||!src)return;if(bar.querySelector('.bh-mnav')){document.body.classList.add('bh-has-mnav');return;}
+    var nav=document.createElement('nav');nav.className='bh-mnav';nav.setAttribute('aria-label','Main');
+    var row=document.createElement('div');row.className='bh-mnav-row';nav.appendChild(row);
+    var panel=document.createElement('div');panel.className='bh-mnav-panel';panel.hidden=true;panel.id='bh-mnav-panel';nav.appendChild(panel);
+    var openBtn=null;
+    function close(){if(openBtn){openBtn.setAttribute('aria-expanded','false');openBtn=null;}panel.hidden=true;panel.innerHTML='';}
+    function add(item,member){
+      if(item.tagName==='A'){
+        var a=document.createElement('a');a.href=item.getAttribute('href');a.textContent=item.textContent.trim();
+        a.className='bh-mnav-item'+(member?' bh-mnav-member':'');row.appendChild(a);return;
+      }
+      var title=item.querySelector('.Header-nav-folder-title');if(!title)return;
+      var kids=[].slice.call(item.querySelectorAll('.Header-nav-folder-item'));
+      var b=document.createElement('button');b.type='button';b.className='bh-mnav-item'+(member?' bh-mnav-member':'');
+      b.setAttribute('aria-expanded','false');b.setAttribute('aria-controls','bh-mnav-panel');
+      b.appendChild(document.createTextNode(title.textContent.trim()));
+      var c=document.createElement('span');c.className='bh-caret';c.setAttribute('aria-hidden','true');b.appendChild(c);
+      b._links=kids.map(function(k){return [k.getAttribute('href'),k.textContent.trim()];});
+      b.addEventListener('click',function(e){
+        e.stopPropagation();
+        if(openBtn===b){close();return;}
+        close();openBtn=b;b.setAttribute('aria-expanded','true');
+        b._links.forEach(function(l){var a=document.createElement('a');a.href=l[0];a.textContent=l[1];if(l[0]===location.pathname)a.className='is-active';panel.appendChild(a);});
+        panel.hidden=false;
+      });
+      row.appendChild(b);
+    }
+    [].slice.call(src.children).forEach(function(i){add(i,false);});
+    if(sec)[].slice.call(sec.children).forEach(function(i){add(i,true);});
+    bar.appendChild(nav);document.body.classList.add('bh-has-mnav');
+    document.addEventListener('click',function(e){if(!nav.contains(e.target))close();});
+    window.addEventListener('scroll',close,{passive:true});
+    function mark(){
+      var p=location.pathname;
+      [].slice.call(row.children).forEach(function(el){
+        var hit=el.tagName==='A'?el.getAttribute('href')===p:(el._links||[]).some(function(l){return l[0]===p;});
+        el.classList.toggle('is-active',hit);
+      });
+      var act=row.querySelector('.is-active');if(act&&act.offsetLeft>row.clientWidth-60)row.scrollLeft=act.offsetLeft-20;
+    }
+    mark();bar._bhMark=function(){close();mark();};
+  }
+  window.addEventListener('mercury:load',function(){build();var bar=document.querySelector('.Mobile-bar--top');if(bar&&bar._bhMark)bar._bhMark();});
+  window.addEventListener('load',build);
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',build);else build();
+})();</script>
+
+<!-- Homepage: Defending the double, Coming up, More reports (28 Oct 2026)
+     Built on the homepage from live data each time the page loads:
+     - Match tracker and Coming up: the "Belgrave fixtures backend" Google Sheet (same as /fixtures).
+     - Defending the double cards: news posts tagged "Surrey League", Oct 2026 to Feb 2027.
+     - More reports: the four newest other news posts.
+     To add a match result, edit RESULTS below (e.g. 2:'Men won · Women 2nd').
+     While this is working it hides the "Historic double" banner and the old "Latest reports" carousel (they stay in the page). -->
+<style>
+body.bh-home-live #new-page-37,body.bh-home-live #new-page-3{display:none!important}
+.bh-home{-webkit-text-size-adjust:100%;text-align:left;font-family:"Public Sans",system-ui,sans-serif;color:#4a4343;-webkit-font-smoothing:antialiased}
+.bh-home *{box-sizing:border-box}
+.bh-home a{text-decoration:none}
+.bh-home .bh-in{max-width:1200px;margin:0 auto;padding:0 40px}
+.bh-home .bh-eyebrow{margin:0;font:600 12px/16px "Public Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.bh-home .bh-rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;list-style:none;margin:0;padding:0}
+.bh-home .bh-rail::-webkit-scrollbar{display:none}
+.bh-home .bh-rail>*{scroll-snap-align:start;flex-shrink:0;display:flex;margin:0}
+.bh-home .bh-rail>*>a{flex:1 1 auto}
+/* Defending the double */
+.bh-def{background:#7a001d;padding:56px 0 64px}
+.bh-def .bh-top{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:end;margin-bottom:40px}
+.bh-def .bh-intro{grid-column:span 6;display:flex;flex-direction:column;gap:14px}
+.bh-def .bh-eyebrow{color:#d6b97a}
+.bh-def h2{margin:0;font:300 76px/76px "Castoro Belgrave Titling",Georgia,serif;letter-spacing:-.01em;text-transform:uppercase;color:#fff}
+.bh-def .bh-lede{margin:0;max-width:520px;font:400 18px/27px "Public Sans",sans-serif;color:#fff}
+.bh-matches{grid-column:8/span 5;list-style:none;margin:0;padding:0;border-top:1px solid rgba(214,185,122,.35)}
+.bh-match{display:grid;grid-template-columns:24px 110px 1fr;align-items:center;column-gap:12px;padding:13px 0;border-bottom:1px solid rgba(214,185,122,.35)}
+.bh-match .bh-when{display:flex;flex-direction:column}
+.bh-match .bh-when b{font:600 12px/16px "Public Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#d6b97a}
+.bh-match .bh-when span{font:400 15px/22px "IBM Plex Mono",monospace;color:#fff}
+.bh-match .bh-what{display:flex;align-items:center;justify-content:space-between;gap:8px;font:400 16px/22px "Public Sans",sans-serif;color:#fff}
+.bh-match.is-done .bh-what{font-weight:600}
+.bh-pill{flex-shrink:0;padding:2px 10px;border:1px solid #d6b97a;border-radius:9999px;font:600 10px/14px "Public Sans",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#d6b97a}
+.bh-match .bh-yr{display:inline}
+.bh-def .bh-cards{gap:24px}
+.bh-def .bh-cards>*{width:calc((100% - 48px)/3)}
+.bh-dcard{display:flex;flex-direction:column;border-radius:4px;overflow:hidden;background:#5e0016}
+.bh-dcard img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.bh-dcard .bh-txt{display:flex;flex-direction:column;gap:12px;padding:20px 24px 24px}
+.bh-dcard .bh-eyebrow{color:#d6b97a}
+.bh-dcard .bh-t{font:600 22px/27px "Castoro Belgrave",Georgia,serif;color:#fff}
+.bh-dcard:hover .bh-t{text-decoration:underline;text-decoration-color:#d6b97a;text-underline-offset:4px}
+.bh-dnext{display:flex;flex-direction:column;justify-content:flex-end;gap:10px;padding:20px 24px;border:1px dashed rgba(214,185,122,.6);border-radius:4px}
+.bh-dnext .bh-eyebrow{color:#d6b97a}
+.bh-dnext .bh-t{font:600 22px/27px "Castoro Belgrave",Georgia,serif;color:#fff}
+/* Coming up and More reports */
+.bh-sec{padding:56px 0 0}
+.bh-sec.bh-more{padding:56px 0 64px}
+.bh-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:16px}
+.bh-head h2{margin:0;font:600 22px/28px "franklin-gothic-atf","Libre Franklin","Franklin Gothic Medium",Arial,sans-serif;color:#7a001d;text-transform:none;letter-spacing:0}
+.bh-home .bh-head a{font:500 16px/24px "Public Sans",sans-serif;color:#7a001d;text-decoration:underline;text-underline-offset:4px;white-space:nowrap}
+.bh-fx{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:24px;border-top:3px solid #d6b97a}
+.bh-fx li{display:grid;grid-template-columns:72px 1fr;column-gap:18px;padding:20px 0 22px;border-bottom:1px solid #e6dfd3;margin:0}
+.bh-fx .bh-d{display:flex;flex-direction:column}
+.bh-fx .bh-d b{font:600 32px/36px "IBM Plex Mono",monospace;color:#7a001d}
+.bh-fx .bh-d span{white-space:nowrap;font:600 12px/16px "Public Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#5c5555}
+.bh-fx .bh-n{display:flex;flex-direction:column;gap:6px}
+.bh-fx .bh-n b{font:600 20px/25px "Castoro Belgrave",Georgia,serif;color:#1e1a1a}
+.bh-fx .bh-n span{font:400 15px/22px "Public Sans",sans-serif;color:#5c5555}
+.bh-more .bh-rail{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;overflow:visible}
+.bh-mcard{display:flex;flex-direction:column;border-radius:4px;overflow:hidden;background:#f5efe4}
+.bh-mcard img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.bh-mcard .bh-txt{display:flex;flex-direction:column;gap:10px;padding:16px 18px 20px}
+.bh-mcard .bh-t{font:600 18px/22px "Castoro Belgrave",Georgia,serif;letter-spacing:-.01em;color:#1e1a1a}
+.bh-mcard:hover .bh-t{text-decoration:underline;text-decoration-color:#d6b97a;text-underline-offset:3px}
+.bh-mcard .bh-eyebrow{color:#7a5e1c}
+@media (max-width:900px){
+  .bh-def h2{font-size:56px;line-height:56px}
+  .bh-def .bh-intro{grid-column:span 12}
+  .bh-matches{grid-column:span 12;margin-top:28px}
+  .bh-def .bh-cards>*{width:calc((100% - 24px)/2)}
+  .bh-fx{grid-template-columns:1fr}
+  .bh-more .bh-rail{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .bh-home .bh-in{padding:0 20px}
+  .bh-def{padding:28px 0 36px}
+  .bh-def .bh-top{display:block;margin-bottom:28px}
+  .bh-def .bh-intro{gap:12px}
+  .bh-def h2{font-size:46px;line-height:44px}
+  .bh-def .bh-lede{font-size:16px;line-height:24px}
+  .bh-matches{display:flex;gap:10px;border:0;margin:24px -20px 0;padding:0 20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+  .bh-matches::-webkit-scrollbar{display:none}
+  .bh-match{flex:0 0 138px;scroll-snap-align:start;scroll-margin-left:20px;display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:14px;border:1px solid rgba(214,185,122,.35);border-radius:4px}
+  .bh-match.is-next{border-color:#d6b97a;background:#5e0016}
+  .bh-match .bh-ic{display:flex;align-items:center;justify-content:space-between}
+  .bh-match .bh-what{font-size:14px;line-height:19px;display:block}
+  .bh-match .bh-what .bh-pill{display:none}
+  .bh-match .bh-yr{display:none}
+  .bh-match .bh-sep{display:block;height:0;overflow:hidden}
+  .bh-def .bh-cards,.bh-more .bh-rail{display:flex;gap:12px;margin:0 -20px;padding:0 20px;overflow-x:auto}
+  .bh-def .bh-cards>*{width:270px;scroll-margin-left:20px}
+  .bh-dcard img{aspect-ratio:3/2}
+  .bh-dcard .bh-txt{padding:16px 18px 20px;min-height:118px}
+  .bh-dcard .bh-t,.bh-dnext .bh-t{font-size:18px;line-height:22px}
+  .bh-dnext{padding:20px 18px}
+  .bh-sec{padding:36px 0 0}
+  .bh-sec.bh-more{padding:40px 0 48px}
+  .bh-head{margin-bottom:8px}
+  .bh-more .bh-head{margin-bottom:16px}
+  .bh-head h2{font-size:20px;line-height:25px}
+  .bh-home .bh-head a{font-size:15px;line-height:20px;text-underline-offset:3px}
+  .bh-fx li{grid-template-columns:56px 1fr;column-gap:16px;padding:14px 0}
+  .bh-fx .bh-d b{font-size:26px;line-height:30px}
+  .bh-fx .bh-d .bh-yr{display:none}
+  .bh-fx .bh-n{gap:4px}
+  .bh-fx .bh-n b{font-size:17px;line-height:22px}
+  .bh-fx .bh-n span{font-size:14px;line-height:20px}
+  .bh-more .bh-rail>*{width:280px;scroll-margin-left:20px}
+  .bh-mcard img{aspect-ratio:280/158}
+  .bh-mcard .bh-txt{min-height:108px}
+}
+</style>
+<script>
+(function(){
+  var RESULTS={1:'Men won · Women won'};
+  var SEASON_FROM='2026-09-01',SEASON_TO='2027-03-31';
+  var SHEET='https://docs.google.com/spreadsheets/d/e/2PACX-1vRLAArJIWwibFFLG1Gbp6g_9flEkS1pxG2XWvW6356muqRYDLzX-gpU_1IqT4ptfXwfSf9teEmwWSZ3/pub?gid=1837618612&single=true&output=csv';
+  var IMG='https://stephengardner1.github.io/belgrave-harriers-data/images/';
+  var PHOTOS={
+    '/news/bels-begin-surrey-league-title-defence-with-victory':[IMG+'sl-2026-m1-men.jpg','A Belgrave man leading a group of runners at the first Surrey League match in Wimbledon. Photo: George Parker','50% 50%'],
+    '/news/a-very-good-day-for-the-club':[IMG+'sl-2026-m1-women.jpg','A Belgrave woman, number 45, racing at the first Surrey League match in Wimbledon. Photo: George Parker','50% 50%']
+  };
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function esc(s){return String(s==null?'':s).replace(/&amp;/g,'&').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function iso(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
+  function parts(s){var p=s.split('-');return{y:+p[0],m:+p[1]-1,d:+p[2]}}
+  function csvLine(l){var v=[],c='',q=false;for(var i=0;i<l.length;i++){var ch=l[i];if(ch==='"')q=!q;else if(ch===','&&!q){v.push(c.trim());c=''}else c+=ch}v.push(c.trim());return v}
+  function parseSheet(t){var L=t.trim().split(/\r?\n/),h=csvLine(L[0]).map(function(x){return x.toLowerCase()});return L.slice(1).map(function(l){var v=csvLine(l),o={};h.forEach(function(k,i){o[k]=v[i]||''});return o}).filter(function(o){return /^\d{4}-\d\d-\d\d$/.test(o.date)&&o.name})}
+  function timeout(p,ms){return Promise.race([p,new Promise(function(_,r){setTimeout(function(){r(new Error('timeout'))},ms)})])}
+  function img(it,w){var a=it.assetUrl||'';if(!a)return '';return a+(a.indexOf('?')<0?'?format='+w+'w':'')}
+  function focal(it){var f=it.mediaFocalPoint;return f?Math.round(f.x*100)+'% '+Math.round(f.y*100)+'%':'50% 50%'}
+  function hasTag(it,t){return (it.tags||[]).some(function(x){return x.toLowerCase()===t})}
+  function team(it){var c=(it.categories||[]).join('|').toLowerCase();if(c.indexOf('junior')>=0)return 'Juniors';if(c.indexOf('women')>=0)return 'Women';if(c.indexOf('mens')>=0)return 'Men';return ''}
+  var ICON={done:'<svg width="18" height="18" viewBox="0 0 18 18" role="img" aria-label="Done"><circle cx="9" cy="9" r="8" fill="#d6b97a"/><path d="M5 9.2l2.6 2.6L13 6.4" stroke="#7a001d" stroke-width="2" fill="none"/></svg>',
+    next:'<svg width="18" height="18" viewBox="0 0 18 18" role="img" aria-label="Next"><circle cx="9" cy="9" r="7.5" fill="none" stroke="#d6b97a" stroke-width="2"/><circle cx="9" cy="9" r="3.5" fill="#d6b97a"/></svg>',
+    later:'<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7.5" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.5"/></svg>'};
+
+  function render(news,sheet){
+    var today=iso(new Date());
+    var matches=sheet.filter(function(r){return /^surrey league match \d/i.test(r.name)&&r.date>=SEASON_FROM&&r.date<=SEASON_TO})
+      .map(function(r){return{n:+r.name.match(/match (\d)/i)[1],date:r.date,venue:r.venue}}).sort(function(a,b){return a.date<b.date?-1:1});
+    var next=null;matches.forEach(function(m){m.done=m.date<today;if(!m.done&&!next)next=m});
+    var trackerHTML=matches.map(function(m){var p=parts(m.date),st=m.done?'done':(m===next?'next':'later');
+      var what=m.done?'<span>'+(RESULTS[m.n]||'Result to follow').split(' · ').map(esc).join('<span class="bh-sep"> · </span>')+'</span>':esc(m.venue)+(m===next?'<span class="bh-pill">Next</span>':'');
+      return '<li class="bh-match is-'+st+'"><span class="bh-ic">'+ICON[st]+'</span><span class="bh-when"><b>Match '+m.n+'</b><span>'+p.d+' '+MON[p.m]+'<span class="bh-yr"> '+p.y+'</span></span></span><span class="bh-what">'+what+'</span></li>'}).join('');
+    var from=new Date(SEASON_FROM).getTime(),to=new Date(SEASON_TO+'T23:59:59').getTime();
+    var order={Men:0,Women:1,Juniors:2,'':3};
+    var def=news.filter(function(it){return hasTag(it,'surrey league')&&it.publishOn>=from&&it.publishOn<=to}).map(function(it){
+      var d=iso(new Date(it.publishOn)),m=null;matches.forEach(function(x){if(x.date<=d)m=x});
+      return{it:it,m:m,team:team(it)}}).sort(function(a,b){var an=a.m?a.m.n:0,bn=b.m?b.m.n:0;if(an!==bn)return bn-an;if(order[a.team]!==order[b.team])return order[a.team]-order[b.team];return b.it.publishOn-a.it.publishOn});
+    var used={};
+    var cards=def.map(function(x){var it=x.it;used[it.id]=1;var ph=PHOTOS[it.fullUrl],src=ph?ph[0]:img(it,750),alt=ph?ph[1]:'',pos=ph?ph[2]:focal(it);
+      var label=[x.m?'Match '+x.m.n:'Surrey League',x.team].filter(Boolean).join(' · ');
+      return '<li><a class="bh-dcard" href="'+esc(it.fullUrl)+'">'+(src?'<img src="'+esc(src)+'" alt="'+esc(alt)+'" loading="lazy" style="object-position:'+pos+'">':'')+'<span class="bh-txt"><span class="bh-eyebrow">'+esc(label)+'</span><span class="bh-t">'+esc(it.title)+'</span></span></a></li>'}).join('');
+    if(next){var np=parts(next.date);cards+='<li class="bh-dnext"><span class="bh-eyebrow">Match '+next.n+' · '+np.d+' '+MON[np.m]+'</span><span class="bh-t">Reports from '+esc(next.venue)+' will appear here</span></li>'}
+    var up=sheet.filter(function(r){return r.date>=today}).sort(function(a,b){return a.date<b.date?-1:1}).slice(0,3);
+    var fxHTML=up.map(function(r){var p=parts(r.date);return '<li><span class="bh-d"><b>'+p.d+'</b><span>'+MON[p.m]+'<span class="bh-yr"> '+p.y+'</span></span></span><span class="bh-n"><b>'+esc(r.name.replace(/^Surrey League (Match \d)/i,'Surrey League · $1'))+'</b><span>'+esc(r.venue)+'</span></span></li>'}).join('');
+    var more=news.filter(function(it){return !used[it.id]}).slice(0,4).map(function(it){var p=new Date(it.publishOn),s=img(it,750);
+      return '<li><a class="bh-mcard" href="'+esc(it.fullUrl)+'">'+(s?'<img src="'+esc(s)+'" alt="" loading="lazy" style="object-position:'+focal(it)+'">':'')+'<span class="bh-txt"><span class="bh-t">'+esc(it.title)+'</span><span class="bh-eyebrow">'+p.getDate()+' '+MON[p.getMonth()]+' '+p.getFullYear()+'</span></span></a></li>'}).join('');
+    var h='';
+    h+='<section class="bh-def" aria-labelledby="bh-def-h"><div class="bh-in"><div class="bh-top"><div class="bh-intro"><p class="bh-eyebrow">Surrey League · Winter 2026/27</p><h2 id="bh-def-h">Defending the double</h2><p class="bh-lede">Our men and women are the reigning Surrey League champions. Four matches decide this winter’s titles.</p></div>';
+    if(trackerHTML)h+='<ol class="bh-matches" aria-label="Surrey League matches">'+trackerHTML+'</ol>';
+    h+='</div>';
+    if(cards)h+='<ul class="bh-rail bh-cards" aria-label="Surrey League reports">'+cards+'</ul>';
+    h+='</div></section>';
+    if(fxHTML)h+='<section class="bh-sec" aria-labelledby="bh-fx-h"><div class="bh-in"><div class="bh-head"><h2 id="bh-fx-h">Coming up</h2><a href="/fixtures">All fixtures →</a></div><ol class="bh-fx" aria-label="Next three fixtures">'+fxHTML+'</ol></div></section>';
+    if(more)h+='<section class="bh-sec bh-more" aria-labelledby="bh-more-h"><div class="bh-in"><div class="bh-head"><h2 id="bh-more-h">More reports</h2><a href="/news">All news →</a></div><ul class="bh-rail" aria-label="More reports">'+more+'</ul></div></section>';
+    return h;
+  }
+
+  function build(){
+    var anchor=document.getElementById('new-page-37');
+    if(!anchor||document.querySelector('.bh-home'))return;
+    var newsP=timeout(fetch('/news?format=json',{credentials:'same-origin'}).then(function(r){if(!r.ok)throw 0;return r.json()}),10000).then(function(d){return d.items||[]});
+    var sheetP=timeout(fetch(SHEET).then(function(r){if(!r.ok)throw 0;return r.text()}),10000).then(parseSheet).catch(function(){return []});
+    Promise.all([newsP,sheetP]).then(function(v){
+      if(document.querySelector('.bh-home')||!document.getElementById('new-page-37'))return;
+      var el=document.createElement('div');el.className='bh-home';el.innerHTML=render(v[0],v[1]);
+      anchor.parentNode.insertBefore(el,anchor);document.body.classList.add('bh-home-live');[50,800,2500].forEach(function(t){setTimeout(function(){window.dispatchEvent(new Event('resize'))},t)});
+    }).catch(function(){document.body.classList.add('bh-home-failed')});
+  }
+  window.addEventListener('mercury:load',build);
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',build);else build();
+})();
+</script>
+<!-- 20. Kit history: years above each heading in the gold wayfinding style (30 Oct 2026)
+     Display only. On /claret-and-gold-kit-history, a heading like "2023 - present: Tracksmith" shows
+     "2023 - present" above in small gold capitals (styled in Custom CSS) and "Tracksmith" in Franklin Gothic.
+     Headings with no colon ("1932 - 1982") stay as they are. No words are changed. -->
+<script>
+(function(){
+  if(!document.getElementById('collection-6274fe248393271cc2f0cd34'))return;
+  function run(){
+    document.querySelectorAll('#collection-6274fe248393271cc2f0cd34 .Main-content .sqs-html-content h3').forEach(function(h){
+      if(h.querySelector('.bh-h3-date'))return;
+      var t=h.firstChild;if(!t||t.nodeType!==3)return;
+      var i=t.nodeValue.indexOf(':');if(i<1)return;
+      var label=t.nodeValue.slice(0,i).trim();if(!/\d/.test(label))return;
+      t.nodeValue=t.nodeValue.slice(i+1).replace(/^\s+/,'');
+      var s=document.createElement('span');s.className='bh-h3-date';
+      s.innerHTML=label.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/(\d)s\b/g,'$1<span class="bh-lc">s</span>');
+      h.insertBefore(s,h.firstChild);
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
+})();
+</script>
+<!-- 21. Team honours: scannable rows (30 Oct 2026)
+     Display only. On /honours the accordion sections are read and shown as headline numbers, jump links and one row
+     per competition (wins count, winning years, placed years). The honours are still edited in the accordion block in
+     Squarespace; nothing is reworded. To undo, delete this section. -->
+<style>
+#collection-628760bc16fa611759b4665c .bh-hon-src{display:none!important}
+.bh-hon{--claret:#7a001d;--gold-ink:#7a5e1c;--ink:#1e1a1a;--body:#4a4343;--slate:#6b6262;--rule:#e3ddd2;--rule-soft:#f0ece5;font-family:"Public Sans",system-ui,sans-serif;color:var(--body);margin:8px 0 0}
+.bh-hon *{box-sizing:border-box}
+.bh-hon-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:0 0 8px}
+.bh-hon-stat{padding:18px 20px 18px 0}
+.bh-hon-stat+.bh-hon-stat{padding-left:20px;border-left:1px solid var(--rule)}
+.bh-hon-stat b{display:block;font:300 52px/1 "Castoro Belgrave Titling",Georgia,serif;color:var(--claret);margin-bottom:6px}
+.bh-hon-stat span{display:block;font:600 12px/16px "Public Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+.bh-hon-jump{display:flex;flex-wrap:wrap;gap:6px 22px;padding:14px 0;margin:0 0 4px;border-bottom:1px solid var(--rule);background:#fff;font:600 15px/20px franklin-gothic-atf,"Franklin Gothic Medium",sans-serif}
+.bh-hon-jump a{color:var(--claret)!important;text-decoration:none!important;border:0!important}
+.bh-hon-jump a:hover{text-decoration:underline!important}
+.bh-hon-sec{padding:36px 0 8px;scroll-margin-top:150px}
+.bh-hon-sec h2{font:600 26px/1.2 franklin-gothic-atf,"Franklin Gothic Medium",sans-serif!important;color:var(--claret)!important;margin:0 0 14px!important;text-transform:none!important;letter-spacing:0!important}
+.bh-hon-head,.bh-hon-row{display:grid;grid-template-columns:minmax(0,1.25fr) 52px minmax(0,1.35fr) minmax(0,1.35fr);column-gap:20px}
+.bh-hon-head{font:600 12px/16px "Public Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink);padding:0 0 8px;border-bottom:1px solid var(--rule)}
+.bh-hon-head .n{text-align:right}
+.bh-hon-row{padding:12px 0;border-bottom:1px solid var(--rule-soft);font-size:14px;line-height:1.5}
+.bh-hon-name{font-weight:600;font-size:15px;color:var(--ink)}
+.bh-hon-name em{display:block;font-weight:400;font-size:13px;color:var(--slate)}
+.bh-hon-n{text-align:right;font:300 30px/1 "Castoro Belgrave Titling",Georgia,serif;color:var(--claret)}
+.bh-hon-n.zero{color:transparent}
+.bh-hon-win{color:var(--ink)}
+.bh-hon-placed{color:var(--slate)}
+.bh-hon-lab{display:block;font:600 11px/15px "Public Sans",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);margin-top:2px}
+.bh-hon-lab:first-child{margin-top:0}
+.bh-hon a{color:inherit!important;text-decoration:underline!important;text-decoration-color:var(--rule)!important;text-underline-offset:3px}
+.bh-hon-note{font-size:13px;color:var(--slate);font-style:italic;padding:10px 0;border-bottom:1px solid var(--rule-soft)}
+.bh-hon-fig{margin:28px 0 4px;max-width:720px}
+.bh-hon-fig img{display:block;width:100%;height:auto}
+.bh-hon-fig figcaption{font-size:14px;color:var(--slate);margin-top:8px}
+@media only screen and (max-width:640px){
+.bh-hon-stats{grid-template-columns:1fr 1fr}
+.bh-hon-stat{padding:14px 12px 14px 0}.bh-hon-stat+.bh-hon-stat{padding-left:12px}
+.bh-hon-stat:nth-child(3){padding-left:0;border-left:0;border-top:1px solid var(--rule)}.bh-hon-stat:nth-child(4){border-top:1px solid var(--rule)}
+.bh-hon-stat b{font-size:40px}
+.bh-hon-head{display:none}
+.bh-hon-row{grid-template-columns:minmax(0,1fr) 44px;grid-template-areas:"name n" "win win" "placed placed";row-gap:4px}
+.bh-hon-name{grid-area:name}.bh-hon-n{grid-area:n}.bh-hon-win{grid-area:win}.bh-hon-placed{grid-area:placed}
+.bh-hon-win:not(:empty)::before{content:"Winners";display:block;font:600 11px/15px "Public Sans",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-ink)}
+.bh-hon-placed:not(:empty)::before{content:"Placed";display:block;font:600 11px/15px "Public Sans",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-ink)}
+.bh-hon-sec h2{font-size:22px!important}
+}
+.bh-hon{padding:0 17px}
+.bh-hon-fig{max-width:620px}
+#collection-628760bc16fa611759b4665c .bh-hon-jump a{color:#7a001d!important;text-decoration:none!important;border-bottom:0!important;background:none!important}
+#collection-628760bc16fa611759b4665c .bh-hon-jump a:hover{text-decoration:underline!important}
+@media only screen and (max-width:640px){.bh-hon-jump{gap:6px 16px;font-size:14px}.bh-hon-row{font-size:14px}.bh-hon-win:has(> .bh-hon-lab:first-child)::before,.bh-hon-placed:has(> .bh-hon-lab:first-child)::before{display:none}}
+</style>
+<script>
+(function(){
+  var ROOT=document.getElementById('collection-628760bc16fa611759b4665c');if(!ROOT)return;
+  function slug(s){return 'honours-'+s.toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
+  function years(html){return (html.replace(/<[^>]+>/g,'').match(/\b(1[89]|20)\d{2}\b/g)||[]).length}
+  function parseP(p){
+    var c=p.cloneNode(true);
+    var strongs=[].slice.call(c.querySelectorAll('strong'));
+    if(!strongs.length){return {note:c.innerHTML}}
+    var name=strongs.map(function(s){return s.textContent}).join(' ').replace(/\s+/g,' ').trim();
+    // turn <br> inside strong into plain break markers before removing strongs
+    strongs.forEach(function(s){var hasBr=s.querySelector('br');s.replaceWith(hasBr?document.createElement('br'):document.createTextNode(''))});
+    var parts=c.innerHTML.split(/<br\s*\/?>/i).map(function(x){return x.trim()}).filter(function(x){return x.replace(/<[^>]+>/g,'').trim()});
+    var note='';
+    if(parts.length&&!/\d{4}/.test(parts[0].replace(/<[^>]+>/g,''))){note=parts.shift().replace(/<\/?em>/g,'').trim()}
+    var win=[],placed=[],n=0;
+    parts.forEach(function(line){
+      var txt=line.replace(/<[^>]+>/g,'');
+      var m=txt.match(/^([^0-9]*?)[:\s]*(?=\d{4})/);var label=m?m[1].trim().replace(/:$/,''):'';
+      var body=line;if(label){var idx=line.indexOf(label);body=line.slice(idx+label.length).replace(/^\s*:?\s*/,'')}
+      body=body.replace(/\.\s*$/,'');
+      if(/winner/i.test(label)){n+=years(body);win.push(/^winners?$/i.test(label)?'<span>'+body+'</span>':'<span class="bh-hon-lab">'+label+'</span><span>'+body+'</span>')}
+      else if(/^placed$/i.test(label)){placed.push('<span>'+body+'</span>')}
+      else{placed.push(label?'<span class="bh-hon-lab">'+label+'</span><span>'+body+'</span>':'<span>'+line.replace(/\.\s*$/,'')+'</span>')}
+    });
+    return {name:name,note:note,win:win.join('<br>'),placed:placed.join(placed.length>1&&!/bh-hon-lab/.test(placed.join(''))?', ':'<br>'),n:n};
+  }
+  function run(){
+    var acc=ROOT.querySelector('.sqs-block-accordion');if(!acc||document.querySelector('.bh-hon'))return;
+    var row=acc.closest('.sqs-row')||acc.parentElement;
+    var figs=[].slice.call(row.querySelectorAll('.sqs-block-image'));
+    var out=document.createElement('div');out.className='bh-hon';
+    // headline numbers: taken from the page's own intro sentence
+    var intro=[].slice.call(ROOT.querySelectorAll('.Main-content p')).find(function(p){return /most successful record/.test(p.textContent)});
+    if(intro){var t=intro.textContent;var nums=[[/with\s+(\d+)\s+titles/i,'British Athletics League titles'],[/cross country championships\s+(\w+)\s+times/i,'National cross country championships'],[/cross relays\s+(\w+)\s+times/i,'National cross country relays'],[/total of\s+(\d+)\s+national road relays/i,'National road relays titles']];
+      var w={five:5,four:4,three:3,two:2,six:6,seven:7,eight:8,nine:9,ten:10};var h='';
+      nums.forEach(function(x){var m=t.match(x[0]);if(m){var v=w[m[1].toLowerCase()]||m[1];h+='<div class="bh-hon-stat"><b>'+v+'</b><span>'+x[1]+'</span></div>'}});
+      if(h)out.insertAdjacentHTML('beforeend','<div class="bh-hon-stats">'+h+'</div>');}
+    var items=[].slice.call(acc.querySelectorAll('.accordion-item'));
+    var jump='<nav class="bh-hon-jump" aria-label="Sections">';
+    var secs='';
+    items.forEach(function(it,i){
+      var title=it.querySelector('.accordion-item__title').textContent.trim();var id=slug(title);
+      jump+='<a href="#'+id+'">'+title+'</a>';
+      var rows='';
+      [].slice.call(it.querySelectorAll('.accordion-item__description > p, .accordion-item__description .sqs-html-content > p')).forEach(function(p){
+        if(!p.textContent.trim())return;var r=parseP(p);
+        if(r.note&&!r.name){rows+='<div class="bh-hon-note">'+r.note.replace(/<\/?em>/g,'')+'</div>';return}
+        rows+='<div class="bh-hon-row"><div class="bh-hon-name">'+r.name+(r.note?'<em>'+r.note+'</em>':'')+'</div><div class="bh-hon-n'+(r.n?'':' zero')+'">'+(r.n||'')+'</div><div class="bh-hon-win">'+r.win+'</div><div class="bh-hon-placed">'+r.placed+'</div></div>';
+      });
+      secs+='<section class="bh-hon-sec" id="'+id+'"><h2>'+title+'</h2><div class="bh-hon-head"><span>Competition</span><span class="n">Wins</span><span>Winners</span><span>Placed</span></div>'+rows+'</section><!--fig'+i+'-->';
+    });
+    jump+='</nav>';
+    out.insertAdjacentHTML('beforeend',jump+secs);
+    // photos between sections: British Athletics League photo after Track and field, 12-stage photo after Men's road running
+    figs.forEach(function(f){var img=f.querySelector('img');if(!img)return;var cap=(f.querySelector('figcaption, .image-caption')||{}).textContent||'';
+      var src=img.getAttribute('data-src')||img.currentSrc||img.src;var html='<figure class="bh-hon-fig"><img src="'+src+(src.indexOf('format=')<0?'?format=1500w':'')+'" alt="'+(img.alt||cap).replace(/"/g,'&quot;')+'" loading="lazy"><figcaption>'+cap.trim()+'</figcaption></figure>';
+      var at=/League/i.test(cap)?0:(/road relay/i.test(cap)?3:-1);
+      if(at>=0)out.innerHTML=out.innerHTML.replace('<!--fig'+at+'-->',html);});
+    row.classList.add('bh-hon-src');row.parentNode.insertBefore(out,row.nextSibling);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
+})();
+</script>
+<!-- 22. Sticky header: the crossed keys go to the homepage (30 Oct 2026)
+     On computers the keys in the scrolled-down header are drawn by Custom CSS, so they weren't clickable.
+     This adds an invisible link to the homepage over them, active only while the keys are showing.
+     On phones the keys already sit inside the home link. -->
+<style>
+.bh-keys-home{position:absolute;left:0;top:50%;width:50px;height:36px;transform:translateY(-50%);display:block;pointer-events:none;z-index:2}
+body.bh-scrolled .bh-keys-home{pointer-events:auto;cursor:pointer}
+.bh-keys-home:focus-visible{outline:2px solid #d6b97a;outline-offset:3px}
+</style>
+<script>
+(function(){
+  function run(){
+    var nav=document.querySelector('.Header--top .Header-nav--primary');
+    if(!nav||nav.querySelector('.bh-keys-home'))return;
+    var a=document.createElement('a');a.href='/';a.className='bh-keys-home';a.setAttribute('aria-label','Belgrave Harriers home');
+    nav.insertBefore(a,nav.firstChild);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
+})();
+</script>
+<!-- 23. Homepage: Mansfield podiums section (1 Nov 2026). Replaces the old "Three-peat complete" photo section (#new-page-5, still in the page but hidden).
+     Four cards: this year and the three previous wins at the National XC Relays in Mansfield. To add a year, add a line to PODIUMS (newest first). -->
+<style>
+body.bh-pod-top:not(.bh-home-live):not(.bh-home-failed) #new-page-37{background:#fff!important}
+body.bh-pod-live #new-page-5,body.bh-pod-live .Parallax-item[data-parallax-id="69074ed0191efd5c6e62c75a"]{display:none!important}
+.bh-pod{-webkit-text-size-adjust:100%;text-align:left;font-family:"Public Sans",system-ui,sans-serif;background:#7a001d;padding:56px 0 64px;-webkit-font-smoothing:antialiased}
+.bh-pod *{box-sizing:border-box}
+.bh-pod a{text-decoration:none}
+.bh-pod .bh-in{max-width:1200px;margin:0 auto;padding:0 40px}
+.bh-pod .bh-intro{display:flex;flex-direction:column;gap:14px;max-width:900px;margin-bottom:40px}
+.bh-pod .bh-eyebrow{margin:0;font:600 12px/16px "Public Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#d6b97a}
+.bh-pod h2{margin:0;font:300 76px/76px "Castoro Belgrave Titling",Georgia,serif;letter-spacing:-.01em;text-transform:uppercase;color:#fff}
+.bh-pod ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.bh-pod li{display:flex;margin:0}
+.bh-pcard{flex:1 1 auto;display:flex;flex-direction:column;border-radius:4px;overflow:hidden;background:#5e0016}
+.bh-pcard img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.bh-pcard .bh-txt{display:flex;flex-direction:column;gap:10px;padding:18px 20px 22px}
+.bh-pcard .bh-yr{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.bh-pcard .bh-yr b{font:600 30px/34px "IBM Plex Mono",monospace;color:#d6b97a}
+.bh-pcard .bh-pill{flex-shrink:0;padding:2px 10px;border:1px solid #d6b97a;border-radius:9999px;font:600 10px/14px "Public Sans",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#d6b97a}
+.bh-pcard .bh-t{font:600 19px/24px "Castoro Belgrave",Georgia,serif;color:#fff}
+.bh-pcard:hover .bh-t{text-decoration:underline;text-decoration-color:#d6b97a;text-underline-offset:4px}
+@media (max-width:900px){
+  .bh-pod h2{font-size:56px;line-height:56px}
+  .bh-pod ol{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .bh-pod{padding:28px 0 36px}
+  .bh-pod .bh-in{padding:0 20px}
+  .bh-pod .bh-intro{gap:12px;margin-bottom:24px}
+  .bh-pod h2{font-size:46px;line-height:44px}
+  .bh-pod ol{display:flex;gap:12px;margin:0 -20px;padding:0 20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .bh-pod ol::-webkit-scrollbar{display:none}
+  .bh-pod li{flex:0 0 250px;scroll-snap-align:start;scroll-margin-left:20px}
+  .bh-pcard .bh-txt{padding:14px 16px 18px}
+  .bh-pcard .bh-yr b{font-size:26px;line-height:30px}
+  .bh-pcard .bh-t{font-size:17px;line-height:22px}
+}
+</style>
+<script>
+(function(){
+  var PODIUMS=[
+    {y:'2026',m:'Double silver',u:'/news/double-silver-at-national-xc-relays-2026',t:'Double silver for Belgrave at the National Cross Country Relays',i:'https://stephengardner1.github.io/belgrave-harriers-data/images/mixed-relay-silver-national-xc-relays-2026-card.jpg',e:[0.5,0.5]},
+    {y:'2025',m:'Gold',u:'/news/belles-are-national-cross-country-relays-champions-for-third-consecutive-year',t:'Belles are National Cross Country Relays champions for third consecutive year',i:'https://images.squarespace-cdn.com/content/v1/5deec070549fd531b273558c/1762086470694-D573ZEKZFQY33P9WZ0EM/DSC03134.jpg',e:[0.494,0.42]},
+    {y:'2024',m:'Gold',u:'/news/belles-win-back-to-back-national-xc-relays-titles-at-mansfield',t:'Belles win back to back National XC Relays titles',i:'https://images.squarespace-cdn.com/content/v1/5deec070549fd531b273558c/1730747925978-SAKG9K21TGFR1TAB8NQT/DSC08137.jpg',e:[0.494,0.292]},
+    {y:'2023',m:'Gold',u:'/news/triple-a-belles-win-gold-at-national-xc-relays-in-mansfield',t:'Triple-A Belles win gold at National XC relays in Mansfield',i:'https://images.squarespace-cdn.com/content/v1/5deec070549fd531b273558c/1699222720586-XLQSPC647LLJAI8XF3R7/ASTIN%2CSARAH-1-NatCCrelays2023.jpg',e:[0.496,0.171]}
+  ];
+  var anchor=document.getElementById('new-page-5');
+  if(!anchor||document.querySelector('.bh-pod'))return;
+  function place(img,p){ // eyeline on the top third of a 4:3 frame
+    var w=img.naturalWidth,h=img.naturalHeight;if(!w||!h)return;
+    var R=4/3,H=h/w,Hc=1/R,py=50,px=50,Wc=(w/h)/R;
+    if(H>Hc)py=Math.max(0,Math.min(1,(p[1]*H-Hc/3)/(H-Hc)))*100;
+    if(Wc>1)px=Math.max(0,Math.min(1,(p[0]*Wc-0.5)/(Wc-1)))*100;
+    img.style.objectPosition=px.toFixed(1)+'% '+py.toFixed(1)+'%';
+  }
+  var sec=document.createElement('section');sec.className='bh-pod';sec.setAttribute('aria-labelledby','bh-pod-h');
+  var h='<div class="bh-in"><div class="bh-intro"><p class="bh-eyebrow">National XC relays</p><h2 id="bh-pod-h">Four podiums in a row</h2></div><ol aria-label="Mansfield podiums">';
+  PODIUMS.forEach(function(p){
+    h+='<li><a class="bh-pcard" href="'+p.u+'"><img src="'+p.i+'?format=750w" alt="" loading="lazy"><span class="bh-txt"><span class="bh-yr"><b>'+p.y+'</b><span class="bh-pill">'+p.m+'</span></span><span class="bh-t">'+p.t+'</span></span></a></li>';
+  });
+  sec.innerHTML=h+'</ol></div>';
+  var TOP_UNTIL=Date.parse('2026-11-06T00:00:00Z'),first=document.getElementById('new-page-37');
+  if(Date.now()<TOP_UNTIL&&first){ // until Fri 6 Nov 2026: this section goes to the top and Defending the double moves below More reports
+    first.parentNode.insertBefore(sec,document.querySelector('.bh-home')||first);document.body.classList.add('bh-pod-top');
+    var moveDef=function(){var hm=document.querySelector('.bh-home'),d=hm&&hm.querySelector('.bh-def');if(d&&hm.lastElementChild!==d){hm.appendChild(d)}return !!d};
+    if(!moveDef()){var mo=new MutationObserver(function(){if(moveDef())mo.disconnect()});mo.observe(first.parentNode,{childList:true})}
+  }else anchor.parentNode.insertBefore(sec,anchor);
+  [].slice.call(sec.querySelectorAll('img')).forEach(function(img,n){
+    var go=function(){place(img,PODIUMS[n].e)};
+    if(img.complete)go();else img.addEventListener('load',go);
+  });
+  document.body.classList.add('bh-pod-live');
+  [50,800,2500].forEach(function(t){setTimeout(function(){window.dispatchEvent(new Event('resize'))},t)});
+})();
+</script>
+<!-- 24. Phone header membership icon (1 Nov 2026): a profile icon on the right of THE BELGRAVIAN. Tapping it opens Login and Join, copied from the Membership menu so they stay in sync. Styles are in Custom CSS (bh-mprofile). -->
+<script>(function(){
+  function build(){
+    var bar=document.querySelector('.Mobile-bar--top');
+    var folder=document.querySelector('.Header--top .Header-nav--secondary .Header-nav-folder');
+    if(!bar||!folder||bar.querySelector('.bh-mprofile'))return;
+    var links=[].slice.call(folder.querySelectorAll('.Header-nav-folder-item')).map(function(k){return [k.getAttribute('href'),k.textContent.trim()];});
+    if(!links.length)return;
+    var btn=document.createElement('button');btn.type='button';btn.className='bh-mprofile';
+    btn.setAttribute('aria-label','Membership');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-controls','bh-mprofile-menu');
+    btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.2" r="4"/><path d="M4.2 20.5c.9-3.9 4-6.2 7.8-6.2s6.9 2.3 7.8 6.2"/></svg>';
+    var menu=document.createElement('div');menu.className='bh-mprofile-menu';menu.id='bh-mprofile-menu';menu.hidden=true;
+    links.forEach(function(l){var a=document.createElement('a');a.href=l[0];a.textContent=l[1];if(l[0]===location.pathname)a.className='is-active';menu.appendChild(a);});
+    function close(){menu.hidden=true;btn.setAttribute('aria-expanded','false');}
+    btn.addEventListener('click',function(e){e.stopPropagation();var open=menu.hidden;close();if(open){menu.hidden=false;btn.setAttribute('aria-expanded','true');}});
+    document.addEventListener('click',function(e){if(!menu.contains(e.target)&&e.target!==btn)close();});
+    window.addEventListener('scroll',close,{passive:true});
+    window.addEventListener('mercury:load',close);
+    bar.appendChild(btn);bar.appendChild(menu);document.body.classList.add('bh-has-mprofile');
+  }
+  window.addEventListener('mercury:load',build);
+  window.addEventListener('load',build);
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',build);else build();
+})();</script><script data-sqs-type="imageloader-bootstrapper">if(window.ImageLoader) window.ImageLoader.bootstrap({}, document);</script><script>Squarespace.afterBodyLoad(Y);</script><svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none" data-usage="social-icons-svg"><symbol id="twitter-unauth-icon" viewBox="0 0 64 64"><path d="M48,22.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6 C41.7,19.8,40,19,38.2,19c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5c-5.5-0.3-10.3-2.9-13.5-6.9c-0.6,1-0.9,2.1-0.9,3.3 c0,2.3,1.2,4.3,2.9,5.5c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,2.9,10.1,2.9c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C46,24.5,47.1,23.4,48,22.1z"/></symbol><symbol id="twitter-unauth-mask" viewBox="0 0 64 64"><path d="M0,0v64h64V0H0z M44.7,25.5c0,0.3,0,0.6,0,0.8C44.7,35,38.1,45,26.1,45c-3.7,0-7.2-1.1-10.1-2.9 c0.5,0.1,1,0.1,1.6,0.1c3.1,0,5.9-1,8.2-2.8c-2.9-0.1-5.3-2-6.1-4.6c0.4,0.1,0.8,0.1,1.2,0.1c0.6,0,1.2-0.1,1.7-0.2 c-3-0.6-5.3-3.3-5.3-6.4c0,0,0-0.1,0-0.1c0.9,0.5,1.9,0.8,3,0.8c-1.8-1.2-2.9-3.2-2.9-5.5c0-1.2,0.3-2.3,0.9-3.3 c3.2,4,8.1,6.6,13.5,6.9c-0.1-0.5-0.2-1-0.2-1.5c0-3.6,2.9-6.6,6.6-6.6c1.9,0,3.6,0.8,4.8,2.1c1.5-0.3,2.9-0.8,4.2-1.6 c-0.5,1.5-1.5,2.8-2.9,3.6c1.3-0.2,2.6-0.5,3.8-1C47.1,23.4,46,24.5,44.7,25.5z"/></symbol><symbol id="facebook-unauth-icon" viewBox="0 0 64 64"><path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z"/></symbol><symbol id="facebook-unauth-mask" viewBox="0 0 64 64"><path d="M0,0v64h64V0H0z M39.6,22l-2.8,0c-2.2,0-2.6,1.1-2.6,2.6V28h5.3l-0.7,5.3h-4.6V47h-5.5V33.3H24V28h4.6V24 c0-4.6,2.8-7,6.9-7c2,0,3.6,0.1,4.1,0.2V22z"/></symbol><symbol id="instagram-unauth-icon" viewBox="0 0 64 64"><path d="M46.91,25.816c-0.073-1.597-0.326-2.687-0.697-3.641c-0.383-0.986-0.896-1.823-1.73-2.657c-0.834-0.834-1.67-1.347-2.657-1.73c-0.954-0.371-2.045-0.624-3.641-0.697C36.585,17.017,36.074,17,32,17s-4.585,0.017-6.184,0.09c-1.597,0.073-2.687,0.326-3.641,0.697c-0.986,0.383-1.823,0.896-2.657,1.73c-0.834,0.834-1.347,1.67-1.73,2.657c-0.371,0.954-0.624,2.045-0.697,3.641C17.017,27.415,17,27.926,17,32c0,4.074,0.017,4.585,0.09,6.184c0.073,1.597,0.326,2.687,0.697,3.641c0.383,0.986,0.896,1.823,1.73,2.657c0.834,0.834,1.67,1.347,2.657,1.73c0.954,0.371,2.045,0.624,3.641,0.697C27.415,46.983,27.926,47,32,47s4.585-0.017,6.184-0.09c1.597-0.073,2.687-0.326,3.641-0.697c0.986-0.383,1.823-0.896,2.657-1.73c0.834-0.834,1.347-1.67,1.73-2.657c0.371-0.954,0.624-2.045,0.697-3.641C46.983,36.585,47,36.074,47,32S46.983,27.415,46.91,25.816z M44.21,38.061c-0.067,1.462-0.311,2.257-0.516,2.785c-0.272,0.7-0.597,1.2-1.122,1.725c-0.525,0.525-1.025,0.85-1.725,1.122c-0.529,0.205-1.323,0.45-2.785,0.516c-1.581,0.072-2.056,0.087-6.061,0.087s-4.48-0.015-6.061-0.087c-1.462-0.067-2.257-0.311-2.785-0.516c-0.7-0.272-1.2-0.597-1.725-1.122c-0.525-0.525-0.85-1.025-1.122-1.725c-0.205-0.529-0.45-1.323-0.516-2.785c-0.072-1.582-0.087-2.056-0.087-6.061s0.015-4.48,0.087-6.061c0.067-1.462,0.311-2.257,0.516-2.785c0.272-0.7,0.597-1.2,1.122-1.725c0.525-0.525,1.025-0.85,1.725-1.122c0.529-0.205,1.323-0.45,2.785-0.516c1.582-0.072,2.056-0.087,6.061-0.087s4.48,0.015,6.061,0.087c1.462,0.067,2.257,0.311,2.785,0.516c0.7,0.272,1.2,0.597,1.725,1.122c0.525,0.525,0.85,1.025,1.122,1.725c0.205,0.529,0.45,1.323,0.516,2.785c0.072,1.582,0.087,2.056,0.087,6.061S44.282,36.48,44.21,38.061z M32,24.297c-4.254,0-7.703,3.449-7.703,7.703c0,4.254,3.449,7.703,7.703,7.703c4.254,0,7.703-3.449,7.703-7.703C39.703,27.746,36.254,24.297,32,24.297z M32,37c-2.761,0-5-2.239-5-5c0-2.761,2.239-5,5-5s5,2.239,5,5C37,34.761,34.761,37,32,37z M40.007,22.193c-0.994,0-1.8,0.806-1.8,1.8c0,0.994,0.806,1.8,1.8,1.8c0.994,0,1.8-0.806,1.8-1.8C41.807,22.999,41.001,22.193,40.007,22.193z"/></symbol><symbol id="instagram-unauth-mask" viewBox="0 0 64 64"><path d="M43.693,23.153c-0.272-0.7-0.597-1.2-1.122-1.725c-0.525-0.525-1.025-0.85-1.725-1.122c-0.529-0.205-1.323-0.45-2.785-0.517c-1.582-0.072-2.056-0.087-6.061-0.087s-4.48,0.015-6.061,0.087c-1.462,0.067-2.257,0.311-2.785,0.517c-0.7,0.272-1.2,0.597-1.725,1.122c-0.525,0.525-0.85,1.025-1.122,1.725c-0.205,0.529-0.45,1.323-0.516,2.785c-0.072,1.582-0.087,2.056-0.087,6.061s0.015,4.48,0.087,6.061c0.067,1.462,0.311,2.257,0.516,2.785c0.272,0.7,0.597,1.2,1.122,1.725s1.025,0.85,1.725,1.122c0.529,0.205,1.323,0.45,2.785,0.516c1.581,0.072,2.056,0.087,6.061,0.087s4.48-0.015,6.061-0.087c1.462-0.067,2.257-0.311,2.785-0.516c0.7-0.272,1.2-0.597,1.725-1.122s0.85-1.025,1.122-1.725c0.205-0.529,0.45-1.323,0.516-2.785c0.072-1.582,0.087-2.056,0.087-6.061s-0.015-4.48-0.087-6.061C44.143,24.476,43.899,23.682,43.693,23.153z M32,39.703c-4.254,0-7.703-3.449-7.703-7.703s3.449-7.703,7.703-7.703s7.703,3.449,7.703,7.703S36.254,39.703,32,39.703z M40.007,25.793c-0.994,0-1.8-0.806-1.8-1.8c0-0.994,0.806-1.8,1.8-1.8c0.994,0,1.8,0.806,1.8,1.8C41.807,24.987,41.001,25.793,40.007,25.793z M0,0v64h64V0H0z M46.91,38.184c-0.073,1.597-0.326,2.687-0.697,3.641c-0.383,0.986-0.896,1.823-1.73,2.657c-0.834,0.834-1.67,1.347-2.657,1.73c-0.954,0.371-2.044,0.624-3.641,0.697C36.585,46.983,36.074,47,32,47s-4.585-0.017-6.184-0.09c-1.597-0.073-2.687-0.326-3.641-0.697c-0.986-0.383-1.823-0.896-2.657-1.73c-0.834-0.834-1.347-1.67-1.73-2.657c-0.371-0.954-0.624-2.044-0.697-3.641C17.017,36.585,17,36.074,17,32c0-4.074,0.017-4.585,0.09-6.185c0.073-1.597,0.326-2.687,0.697-3.641c0.383-0.986,0.896-1.823,1.73-2.657c0.834-0.834,1.67-1.347,2.657-1.73c0.954-0.371,2.045-0.624,3.641-0.697C27.415,17.017,27.926,17,32,17s4.585,0.017,6.184,0.09c1.597,0.073,2.687,0.326,3.641,0.697c0.986,0.383,1.823,0.896,2.657,1.73c0.834,0.834,1.347,1.67,1.73,2.657c0.371,0.954,0.624,2.044,0.697,3.641C46.983,27.415,47,27.926,47,32C47,36.074,46.983,36.585,46.91,38.184z M32,27c-2.761,0-5,2.239-5,5s2.239,5,5,5s5-2.239,5-5S34.761,27,32,27z"/></symbol></svg>
+
+  
