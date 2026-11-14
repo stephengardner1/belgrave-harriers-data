@@ -2,6 +2,40 @@
  "note": "Belgravian Moments: draft for Steve to approve (14 Nov 2026). Extracts are exact substrings of the item text. dateSource: printed = day printed in the gazette; year = only the year is known; outside = day from the historical record (event confirmed in the text); issue = only the month of the issue is known.",
  "moments": [
   {
+   "id": "b112-08",
+   "itemId": "B112-08",
+   "issue": "B112",
+   "issueLabel": "August 1951",
+   "issuePrinted": "No. 112",
+   "date": "1887-09",
+   "dateLabel": "September 1887",
+   "dateSource": "printed",
+   "dateNote": "Founder J. H. Martyn's letter (issue Aug 1951): 'at the Oval in September, 1887, Jubilee Year'",
+   "anniversaryNext": null,
+   "headlineModern": "Founder J. H. Martyn recalls how the club began in 1887",
+   "headlinePrinted": "THE FIRST DAYS OF BELGRAVE",
+   "extract": "I am proud of the Belgrave, seeing to what heights it has attained out of a few boys' ideas so long ago.",
+   "extractTrimmed": true,
+   "image": {
+    "file": "moments/img/B112-08.webp",
+    "kind": "page",
+    "source": "pages/B112/B112-p04.webp",
+    "fromItem": "B112-08",
+    "caption": "Page 4 of The Belgravian, August 1951 (printed No. 112)",
+    "w": 790,
+    "h": 909
+   },
+   "credit": null,
+   "category": "club",
+   "why": "The only first-hand account of the club's founding, from founder and first Captain J. H. Martyn, aged 84",
+   "verified": "Letter supports founding by young men at the Oval in Sept 1887, first HQ the King's Head, Ranelagh Road (B121-05 says Kings Arms), name chosen over Pimlico, Portcullis badge and \"Semper Paratus\".",
+   "related": [
+    "B112-03",
+    "B121-05"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B112-08"
+  },
+  {
    "id": "b2-02",
    "itemId": "B2-02",
    "issue": "B2",
