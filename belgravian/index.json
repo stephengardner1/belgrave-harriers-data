@@ -2,6 +2,470 @@
  "title": "The Belgravian",
  "issues": [
   {
+   "issue": 1,
+   "label": "April 1925",
+   "date": "1925-04",
+   "year": 1925,
+   "pageCount": 1,
+   "items": 1
+  },
+  {
+   "issue": 2,
+   "label": "April 1925",
+   "date": "1925-04",
+   "year": 1925,
+   "pageCount": 8,
+   "items": 18
+  },
+  {
+   "issue": 3,
+   "label": "July 1925",
+   "date": "1925-07",
+   "year": 1925,
+   "pageCount": 8,
+   "items": 17
+  },
+  {
+   "issue": 4,
+   "label": "November 1925",
+   "date": "1925-11",
+   "year": 1925,
+   "pageCount": 8,
+   "items": 10
+  },
+  {
+   "issue": 5,
+   "label": "February 1926",
+   "date": "1926-02",
+   "year": 1926,
+   "pageCount": 8,
+   "items": 10
+  },
+  {
+   "issue": 6,
+   "label": "May 1926",
+   "date": "1926-05",
+   "year": 1926,
+   "pageCount": 8,
+   "items": 10
+  },
+  {
+   "issue": 7,
+   "label": "September 1926",
+   "date": "1926-09",
+   "year": 1926,
+   "pageCount": 8,
+   "items": 13
+  },
+  {
+   "issue": 8,
+   "label": "December 1926",
+   "date": "1926-12",
+   "year": 1926,
+   "pageCount": 8,
+   "items": 13
+  },
+  {
+   "issue": 9,
+   "label": "February 1927",
+   "date": "1927-02",
+   "year": 1927,
+   "pageCount": 8,
+   "items": 12
+  },
+  {
+   "issue": 10,
+   "label": "June 1927",
+   "date": "1927-06",
+   "year": 1927,
+   "pageCount": 8,
+   "items": 15
+  },
+  {
+   "issue": 11,
+   "label": "October 1927",
+   "date": "1927-10",
+   "year": 1927,
+   "pageCount": 16,
+   "items": 12
+  },
+  {
+   "issue": 12,
+   "label": "November 1927",
+   "date": "1927-11",
+   "year": 1927,
+   "pageCount": 20,
+   "items": 19
+  },
+  {
+   "issue": 13,
+   "label": "January 1928",
+   "date": "1928-01",
+   "year": 1928,
+   "pageCount": 16,
+   "items": 12
+  },
+  {
+   "issue": 14,
+   "label": "February 1928",
+   "date": "1928-02",
+   "year": 1928,
+   "pageCount": 21,
+   "items": 20
+  },
+  {
+   "issue": 15,
+   "label": "March 1928",
+   "date": "1928-03",
+   "year": 1928,
+   "pageCount": 20,
+   "items": 19
+  },
+  {
+   "issue": 16,
+   "label": "May 1928",
+   "date": "1928-05",
+   "year": 1928,
+   "pageCount": 24,
+   "items": 17
+  },
+  {
+   "issue": 17,
+   "label": "June 1928",
+   "date": "1928-06",
+   "year": 1928,
+   "pageCount": 20,
+   "items": 18
+  },
+  {
+   "issue": 18,
+   "label": "July 1928",
+   "date": "1928-07",
+   "year": 1928,
+   "pageCount": 16,
+   "items": 13
+  },
+  {
+   "issue": 19,
+   "label": "September 1928",
+   "date": "1928-09",
+   "year": 1928,
+   "pageCount": 20,
+   "items": 18
+  },
+  {
+   "issue": 20,
+   "label": "October 1928",
+   "date": "1928-10",
+   "year": 1928,
+   "pageCount": 24,
+   "items": 23
+  },
+  {
+   "issue": 21,
+   "label": "November 1928",
+   "date": "1928-11",
+   "year": 1928,
+   "pageCount": 20,
+   "items": 19
+  },
+  {
+   "issue": 22,
+   "label": "December 1928",
+   "date": "1928-12",
+   "year": 1928,
+   "pageCount": 20,
+   "items": 22
+  },
+  {
+   "issue": 23,
+   "label": "February 1929",
+   "date": "1929-02",
+   "year": 1929,
+   "pageCount": 28,
+   "items": 25
+  },
+  {
+   "issue": 24,
+   "label": "April 1929",
+   "date": "1929-04",
+   "year": 1929,
+   "pageCount": 20,
+   "items": 19
+  },
+  {
+   "issue": 25,
+   "label": "May 1929",
+   "date": "1929-05",
+   "year": 1929,
+   "pageCount": 20,
+   "items": 15
+  },
+  {
+   "issue": 26,
+   "label": "June 1929",
+   "date": "1929-06",
+   "year": 1929,
+   "pageCount": 20,
+   "items": 16
+  },
+  {
+   "issue": 27,
+   "label": "July 1929",
+   "date": "1929-07",
+   "year": 1929,
+   "pageCount": 24,
+   "items": 18
+  },
+  {
+   "issue": 28,
+   "label": "August 1929",
+   "date": "1929-08",
+   "year": 1929,
+   "pageCount": 16,
+   "items": 15
+  },
+  {
+   "issue": 29,
+   "label": "September 1929",
+   "date": "1929-09",
+   "year": 1929,
+   "pageCount": 24,
+   "items": 17
+  },
+  {
+   "issue": 30,
+   "label": "November 1929",
+   "date": "1929-11",
+   "year": 1929,
+   "pageCount": 20,
+   "items": 12
+  },
+  {
+   "issue": 32,
+   "label": "January 1930",
+   "date": "1930-01",
+   "year": 1930,
+   "pageCount": 20,
+   "items": 18
+  },
+  {
+   "issue": 33,
+   "label": "February 1930",
+   "date": "1930-02",
+   "year": 1930,
+   "pageCount": 24,
+   "items": 22
+  },
+  {
+   "issue": 34,
+   "label": "April 1930",
+   "date": "1930-04",
+   "year": 1930,
+   "pageCount": 24,
+   "items": 17
+  },
+  {
+   "issue": 35,
+   "label": "May 1930",
+   "date": "1930-05",
+   "year": 1930,
+   "pageCount": 20,
+   "items": 15
+  },
+  {
+   "issue": 36,
+   "label": "June 1930",
+   "date": "1930-06",
+   "year": 1930,
+   "pageCount": 16,
+   "items": 14
+  },
+  {
+   "issue": 37,
+   "label": "July 1930",
+   "date": "1930-07",
+   "year": 1930,
+   "pageCount": 24,
+   "items": 17
+  },
+  {
+   "issue": 38,
+   "label": "August 1930",
+   "date": "1930-08",
+   "year": 1930,
+   "pageCount": 20,
+   "items": 18
+  },
+  {
+   "issue": 39,
+   "label": "October 1930",
+   "date": "1930-10",
+   "year": 1930,
+   "pageCount": 24,
+   "items": 14
+  },
+  {
+   "issue": 40,
+   "label": "December 1930",
+   "date": "1930-12",
+   "year": 1930,
+   "pageCount": 20,
+   "items": 21
+  },
+  {
+   "issue": 41,
+   "label": "January 1931",
+   "date": "1931-01",
+   "year": 1931,
+   "pageCount": 28,
+   "items": 19
+  },
+  {
+   "issue": 42,
+   "label": "February 1931",
+   "date": "1931-02",
+   "year": 1931,
+   "pageCount": 20,
+   "items": 18
+  },
+  {
+   "issue": 43,
+   "label": "May 1931",
+   "date": "1931-05",
+   "year": 1931,
+   "pageCount": 16,
+   "items": 11
+  },
+  {
+   "issue": 44,
+   "label": "June 1931",
+   "date": "1931-06",
+   "year": 1931,
+   "pageCount": 24,
+   "items": 18
+  },
+  {
+   "issue": 45,
+   "label": "July 1931",
+   "date": "1931-07",
+   "year": 1931,
+   "pageCount": 20,
+   "items": 15
+  },
+  {
+   "issue": 46,
+   "label": "August 1931",
+   "date": "1931-08",
+   "year": 1931,
+   "pageCount": 16,
+   "items": 12
+  },
+  {
+   "issue": 47,
+   "label": "October 1931",
+   "date": "1931-10",
+   "year": 1931,
+   "pageCount": 20,
+   "items": 15
+  },
+  {
+   "issue": 48,
+   "label": "December 1931",
+   "date": "1931-12",
+   "year": 1931,
+   "pageCount": 20,
+   "items": 22
+  },
+  {
+   "issue": 49,
+   "label": "January 1932",
+   "date": "1932-01",
+   "year": 1932,
+   "pageCount": 20,
+   "items": 18
+  },
+  {
+   "issue": 50,
+   "label": "February 1932",
+   "date": "1932-02",
+   "year": 1932,
+   "pageCount": 20,
+   "items": 19
+  },
+  {
+   "issue": 51,
+   "label": "April 1932",
+   "date": "1932-04",
+   "year": 1932,
+   "pageCount": 16,
+   "items": 9
+  },
+  {
+   "issue": 52,
+   "label": "May 1932",
+   "date": "1932-05",
+   "year": 1932,
+   "pageCount": 28,
+   "items": 22
+  },
+  {
+   "issue": 53,
+   "label": "July 1932",
+   "date": "1932-07",
+   "year": 1932,
+   "pageCount": 20,
+   "items": 15
+  },
+  {
+   "issue": 54,
+   "label": "August 1932",
+   "date": "1932-08",
+   "year": 1932,
+   "pageCount": 24,
+   "items": 17
+  },
+  {
+   "issue": 55,
+   "label": "November 1932",
+   "date": "1932-11",
+   "year": 1932,
+   "pageCount": 24,
+   "items": 23
+  },
+  {
+   "issue": 56,
+   "label": "January 1933",
+   "date": "1933-01",
+   "year": 1933,
+   "pageCount": 24,
+   "items": 22
+  },
+  {
+   "issue": 57,
+   "label": "February 1933",
+   "date": "1933-02",
+   "year": 1933,
+   "pageCount": 24,
+   "items": 22
+  },
+  {
+   "issue": 58,
+   "label": "April 1933",
+   "date": "1933-04",
+   "year": 1933,
+   "pageCount": 24,
+   "items": 16
+  },
+  {
+   "issue": 59,
+   "label": "June 1933",
+   "date": "1933-06",
+   "year": 1933,
+   "pageCount": 24,
+   "items": 19
+  },
+  {
    "issue": 60,
    "label": "September 1933",
    "date": "1933-09",
@@ -1170,14 +1634,6 @@
    "items": 75
   },
   {
-   "issue": "207b",
-   "label": "April 1984 (printed as No. 207)",
-   "date": "1984-04",
-   "year": 1984,
-   "pageCount": 48,
-   "items": 93
-  },
-  {
    "issue": 208,
    "label": "October 1984",
    "date": "1984-10",
@@ -1674,9 +2130,7 @@
    "items": 15
   }
  ],
- "coming": [
-  "1920s"
- ],
+ "coming": [],
  "legends": [
   {
    "id": "p-gerry-north",
@@ -1686,6 +2140,7 @@
   }
  ],
  "searchFiles": [
+  "search-1920s.json",
   "search-1930s.json",
   "search-1940s.json",
   "search-1950s.json",

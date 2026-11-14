@@ -305,9 +305,12 @@ _priv = f'{W}/priv/redactions.json'
 PRIV = sorted({r['find'] for r in json.load(open(_priv)) if len(r['find']) > 5} |
               {r['find'].replace('\n', ' ') for r in json.load(open(_priv)) if len(r['find']) > 5}, key=len, reverse=True) if os.path.exists(_priv) else []
 PHONE = re.compile(r'\(?\b0\d{1,4}\)?[\s-]?\d{3,4}[\s-]?\d{3,4}\b|\b\d{3}[\s-]\d{4}\b')
+# a street address ending in a postcode ("60 Green Acres, Park Hill, Croydon CR0 5UX")
+POSTAL = re.compile(r'\b\d{1,4}[A-Za-z]?,? [A-Z][^.;:"]{2,80}?\b[A-Z]{1,2}[\dO][A-Z\d]? ?[\dO][A-Z]{2}\b')
 def scrub(s):
     for a in PRIV:
         if a in s: s = s.replace(a, '…')
+    s = POSTAL.sub('…', s)
     return PHONE.sub('…', s) if re.search(r'(?i)\b(tel|telephone|phone|ring)\b', s) else s
 nprof = 0
 for p in pi:
