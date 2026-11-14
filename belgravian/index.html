@@ -578,14 +578,14 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     crumbsSet([]);
     loadHome().then(function(H){
       var decs=Object.keys(H.decades).sort();if(!HDEC||!H.decades[HDEC])HDEC=H.decades['1960']?'1960':decs[0];/* open on the 1960s: photos (Steve, 9 Nov) */
-      var y0=+decs[0],y1=Math.max(2009,H.span[1]),max=1,y;for(y in H.years)max=Math.max(max,H.years[y]);
+      var y0=+H.span[0],y1=Math.max(2009,H.span[1]),max=1,y;for(y in H.years)max=Math.max(max,H.years[y]);
       var bars='',axis='',bi=0;for(y=y0;y<=y1;y++){var v=H.years[y]||0,d=String(Math.floor(y/10)*10);
         bars+='<button type="button" data-dec="'+d+'" class="'+(v?'':'z ')+(d===HDEC&&v?'on':'')+'" style="--i:'+(bi++)+';height:'+(v?Math.max(3,Math.round(v/max*100)):3)+'%" '+(v?'aria-label="'+y+': '+v+' articles"':'tabindex="-1" aria-hidden="true" disabled')+'></button>';
         axis+='<span class="'+(y%10===0||y===y1?'':(y%5===0?'m5':'m5" style="visibility:hidden'))+'">'+(y%5===0||y===y1?y:'')+'</span>'}
-      var h='<div class="bv-home"><section class="bv-era" aria-label="Choose an era"><div class="bv-era-chart"><div class="bv-era-stub"><b>1925–'+(y0-1)+'</b><span>Coming soon</span></div><div class="bv-era-bars">'+bars+'</div></div>'+
+      var h='<div class="bv-home"><section class="bv-era" aria-label="Choose an era"><div class="bv-era-chart">'+(y0>1925?'<div class="bv-era-stub"><b>1925–'+(y0-1)+'</b><span>Coming soon</span></div>':'')+'<div class="bv-era-bars">'+bars+'</div></div>'+
         '<div class="bv-era-axis" aria-hidden="true">'+axis+'</div><div class="bv-era-tabs" role="tablist" aria-label="Decade">'+
         decs.map(function(d){return '<button type="button" role="tab" data-dec="'+d+'" aria-selected="'+(d===HDEC)+'">'+d+'s</button>'}).join('')+
-        '</div><p class="bv-era-note">1925–'+(y0-1)+' coming soon.</p></section><div class="bv-dec" aria-live="polite">'+decade(HDEC)+'</div>';
+        '</div>'+(y0>1925?'<p class="bv-era-note">1925–'+(y0-1)+' coming soon.</p>':'')+'</section><div class="bv-dec" aria-live="polite">'+decade(HDEC)+'</div>';
       /* the whole archive */
       h+='<div class="bv-browse"><section class="bv-sec" aria-labelledby="bv-az"><div class="bv-sec-hd"><h2 id="bv-az">ATHLETES A–Z</h2></div>'+
         '<form class="bv-mini" data-mini="people" role="search"><label for="bv-aq" class="bv-sr">Find an athlete</label><input id="bv-aq" type="search" placeholder="Find an athlete" autocomplete="off"><button type="submit">Find</button></form>'+
@@ -606,7 +606,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
     if(D.photos.length)h+='<section class="bv-sec bv-dec-ph"><div class="bv-sec-hd"><h3>PHOTOGRAPHS</h3><span>'+num(D.nphotos)+' in the '+d+'s</span></div><div class="bv-ph-row">'+
       D.photos.map(function(p){return '<figure style="--r:'+(+p.r||.75)+'"><img '+thumbSrc(p.f)+' alt="'+esc(p.c)+'" loading="lazy" data-lb="'+MEDIA+esc(p.f)+'" data-cap="'+esc(p.cap||p.c)+'"'+(p.id?' data-href="#'+esc(p.id)+'"':'')+' data-w="'+esc(p.w||'')+'"><figcaption>'+esc(p.c)+' <i>'+esc(shortWhen(p.w||''))+'</i></figcaption></figure>'}).join('')+'</div></section>';
     var by={};D.covers.forEach(function(c){by[c.y]=c});var first=HOME.span[0],last=HOME.span[1],slots='';
-    for(var y=+d;y<+d+10;y++){var c=by[y];
+    for(var y=Math.max(+d,first);y<+d+10;y++){var c=by[y];
       slots+=c?'<a href="#'+issueKey(c.no)+'" class="bv-cover-y"><img src="'+pageImg(c.no,1)+'" alt="Cover of The Belgravian, '+esc(c.label)+'" loading="lazy"><b>'+y+'</b></a>':
         (NOISSUE[y]&&NOISSUE[y].no?'<a href="#'+issueKey(NOISSUE[y].no)+'" class="gap"><i>No issue that year<br>(see '+esc(NOISSUE[y].see)+')</i><b>'+y+'</b></a>':
         '<span class="gap"><i>'+(y>last?'Not in the archive yet':y<first?'Coming soon':NOISSUE[y]?'No issue that year':'None in the archive')+'</i><b>'+y+'</b></span>')}

@@ -83,7 +83,8 @@ decades = {}
 for d in sorted(dec):
     first = {}
     for i in issues:
-        if str(i['year'] // 10 * 10) == d and i['year'] not in first:
+        # No. 1 is W. H. Hare's one-page covering letter, so 1925 shows No. 2, the first gazette
+        if str(i['year'] // 10 * 10) == d and i['year'] not in first and i['issue'] != 1:
             first[i['year']] = {'y': i['year'], 'no': i['issue'], 'label': i['label']}
     photos = []
     for p in picks.get('photos', {}).get(d) or auto[d][:6]:
