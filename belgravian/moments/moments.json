@@ -7,10 +7,10 @@
    "issue": "B112",
    "issueLabel": "August 1951",
    "issuePrinted": "No. 112",
-   "date": "1887-09",
-   "dateLabel": "September 1887",
+   "date": "1887-10-07",
+   "dateLabel": "7 October 1887",
    "dateSource": "printed",
-   "dateNote": "Founder J. H. Martyn's letter (issue Aug 1951): 'at the Oval in September, 1887, Jubilee Year'",
+   "dateNote": "Founding meeting 'Friday, 7th October 1887' (B210-22, Oct 1986); Martyn's letter dates the idea to September 1887; the club kept its 100th birthday on 7 Oct 1987 (B212-16).",
    "anniversaryNext": null,
    "headlineModern": "Founder J. H. Martyn recalls how the club began in 1887",
    "headlinePrinted": "THE FIRST DAYS OF BELGRAVE",
@@ -29,6 +29,7 @@
    "category": "club",
    "why": "The only first-hand account of the club's founding, from founder and first Captain J. H. Martyn, aged 84",
    "verified": "Letter supports founding by young men at the Oval in Sept 1887, first HQ the King's Head, Ranelagh Road (B121-05 says Kings Arms), name chosen over Pimlico, Portcullis badge and \"Semper Paratus\".",
+   "factNote": "Martyn remembers the first headquarters as the King's Head, Ranelagh Road. It was the King's Arms: the club's own 1895-96 rule book (B222-20), early members (B14-08, 1928; B87-02, 1940) and pub directories (licensee N. P. Pethick, 1869-95) all give the King's Arms. The founding meeting was on Friday 7 October 1887 (B210-22); the trip to the Oval that sparked the idea was in September.",
    "related": [
     "B112-03",
     "B121-05"
@@ -63,6 +64,7 @@
    "category": "club",
    "why": "First number of The Belgravian, the club gazette that ran until 2009.",
    "verified": "Introduction states the quarterly plan; the loose covering letter from W. H. Hare (B2-19, 6d. a copy) is in the same issue (no separate B1 in the repo). Hare later wrote that 'the \"Gazette\" is now our history book' (B34-13).",
+   "factNote": null,
    "related": [
     "B2-19",
     "B2-01",
@@ -99,6 +101,7 @@
    "category": "xc",
    "why": "Belgrave win their first cross-country championship, the Surrey County team title, by 2 points from Epsom.",
    "verified": "Text: 'we ran out winners of our first Cross Country Championship by a margin of 2 points'; retained in 1927 (B9-05).",
+   "factNote": null,
    "related": [
     "B9-05",
     "B9-02"
@@ -137,6 +140,7 @@
    "category": "walking",
    "why": "Tommy Green breaks H. V. L. Ross's 21-year-old London to Brighton record; the gazette says it 'will live for ever in the history of the Club'.",
    "verified": "Editorial is short and gives no time; the result in B39-07 prints Green 1st in 8 2 55 and Belchamber says he beat Ross's record by 8 min 19 sec in a storm. Issue is dated Aug-Sep 1930 but appeared after the race.",
+   "factNote": null,
    "related": [
     "B39-07",
     "B38-11",
@@ -176,6 +180,7 @@
    "category": "xc",
    "why": "Arthur Allum finishes 5th in the National and becomes the club's first cross-country international, scoring for the winning England team in Dublin.",
    "verified": "B43-05: 5th, 'the best performance yet by a Belgrave man in this race', selected for England; B43-03: 9th at Baldoyle, sixth English scorer. The text does not say 'first international' outright.",
+   "factNote": null,
    "related": [
     "B43-03"
    ],
@@ -213,6 +218,7 @@
    "category": "international",
    "why": "Two Belgrave members, Tommy Green (50 km walk) and second-claim Tom Hampson (800 m), win Olympic gold at Los Angeles: 'a very definite stage in our Club history'.",
    "verified": "Text congratulates 'our members, T. W. Green and T. Hampson' on Olympic wins; no race report of Los Angeles appears in B54 or B55 (only this note and Belchamber's line in B54-03). Hampson was not first-claim (B29-04).",
+   "factNote": null,
    "related": [
     "B53-03",
     "B54-03",
@@ -253,6 +259,7 @@
    "category": "road",
    "why": "First win in the London to Brighton Relay, the era's premier road relay, beating Poly and Birchfield.",
    "verified": "Stage-by-stage report supports the win in 4:49:55, 2 min 6 sec ahead of Poly; Penny set a club stage record. Photo of Allum breaking the tape is B64-03.",
+   "factNote": null,
    "related": [
     "B64-03",
     "B64-04",
@@ -295,6 +302,7 @@
    "category": "international",
    "why": "Arthur Penny wins the Six Miles for England at the British Empire Games - a Belgrave runner's first major Games title.",
    "verified": "Editorial and B65-12 ('The great high light of the season') support Penny's Empire Games six miles win; B84-23 calls him 'ex-Empire Games 6 miles champion'. Exact date not in text.",
+   "factNote": null,
    "related": [
     "B65-12",
     "B84-23",
@@ -334,6 +342,7 @@
    "category": "xc",
    "why": "Belgrave's first English (National) cross-country title, taking it from Birchfield, holders for seven years; first Southern club to win since before WW1.",
    "verified": "Text supports the win with 97 pts (result B68-05), six scorers 11th-20th, 56 points to spare; B69-04 letters say first Southern winner since pre-war. Text calls the trophy the 'Frank Wynne' Cup, as printed.",
+   "factNote": null,
    "related": [
     "B68-03",
     "B68-05",
@@ -375,6 +384,7 @@
    "category": "club",
    "why": "The club acquires its own headquarters, St. John's Hall, Wimbledon, renamed Belgrave Hall, after years of Building Fund appeals.",
    "verified": "Text supports purchase/lease of St. John's Hall as 'Belgrave Hall' (B74-04 and B83-03 call it a leasehold). Exact completion date not printed.",
+   "factNote": null,
    "related": [
     "B74-04",
     "B79-05",
@@ -417,6 +427,7 @@
    "category": "international",
    "why": "The club's first team trip abroad: Belgrave win the U.S.M. international cross-country at La Croix de Berny, Paris.",
    "verified": "Supports first invitation 'to compete as a team abroad' and a team win (51 pts) over Moroccan and Brussels teams; B79-06 confirms 'For the first time, a Belgrave team went abroad'. Printed day/date inconsistent.",
+   "factNote": null,
    "related": [
     "B76-03",
     "B79-06",
@@ -458,6 +469,7 @@
    "category": "club",
    "why": "The club's Golden Jubilee (1887-1937) celebrated with a dinner and dance for over 200.",
    "verified": "Supports the dinner at the Quadrant Restaurant, Regent Street, with souvenir menu history and E.C.C.U. secretary present. Previous-shortlist item, confirmed; a social rather than sporting moment.",
+   "factNote": null,
    "related": [
     "B76-22",
     "B79-06",
@@ -497,6 +509,7 @@
    "category": "club",
    "why": "The club engages Franz Stampfl, the Austrian coach later famous for Bannister's four-minute mile, as its coach.",
    "verified": "Supports the engagement of 'a Continental coach, Herr F. Stampfl' and his results with field-events men; B83-29 and B84-23 confirm winter classes at Belgrave Hall. The later fame is outside knowledge, not in the text.",
+   "factNote": null,
    "related": [
     "B83-29",
     "B84-23",
@@ -536,6 +549,7 @@
    "category": "club",
    "why": "VE Day: the gazette looks back on how the club kept going through the war with Belgrave Hall open to all",
    "verified": "Editorial supports Hall open to members of other clubs and servicemen, most active members called up; quotes ex-Junior Captain Max Quackenbos from the USA.",
+   "factNote": null,
    "related": [
     "B86-03",
     "B96-04",
@@ -576,6 +590,7 @@
    "category": "xc",
    "why": "First post-war National: Belgrave, the 1939 holders, beat Birchfield by ten points to keep the English cross-country title",
    "verified": "Text gives team result 1 Belgrave 96, 2 Birchfield 106; Len Herbert 7th and into the England team. B99-27 confirms they were holders from 1939.",
+   "factNote": null,
    "related": [
     "B99-27",
     "B99-04"
@@ -614,6 +629,7 @@
    "category": "international",
    "why": "Home Olympics: Nankeville 6th in the 1,500 m, Churcher 5th in the 10,000 m walk, and wartime member Etienne Gailly's famous marathon bronze for Belgium",
    "verified": "Text supports Nankeville 6th in 3:52.6, Churcher won his heat inside Olympic record then 5th, Bill Lucas in 5,000 m, and Gailly (\"Steve\" during the war) led into the stadium and finished third. Gailly ran for Belgium, not Belgrave.",
+   "factNote": null,
    "related": [
     "B104-05",
     "B104-14",
@@ -655,6 +671,7 @@
    "category": "road",
    "why": "Belgrave win the first ever National Road Relay (London to Brighton), a national title the club made its own",
    "verified": "Text confirms first National Road Relay, Mitcham to Brighton, Belgrave 1st in 3.53.38 from Thames Valley; Charlie Smart (home on leave from Germany) set a course record. Year from issue date.",
+   "factNote": null,
    "related": [
     "B111-12",
     "B116-33",
@@ -694,6 +711,7 @@
    "category": "walking",
    "why": "Stan Vickers becomes European 20 km walk champion, the club's first European title in this era",
    "verified": "Editorial and B136-34 confirm gold at Stockholm in the European 20 km; B136-34 quotes chief judge Harold Whitlock calling it \"the best piece of race-walking I have ever seen\". Exact day not in text.",
+   "factNote": null,
    "related": [
     "B136-34",
     "B136-04",
@@ -734,6 +752,7 @@
    "category": "walking",
    "why": "Stan Vickers wins Olympic bronze at Rome; three Belgravians at one Games (Vickers, Eric Hall 10th, Ranjit Bhatia for India) - a club record.",
    "verified": "Text supports bronze in the 20 km walk behind Golubnichiy (49.2 sec), Hall 10th, Bhatia in 5,000/10,000 m for India, and states three Olympians is a club record. Headline is just EDITORIAL.",
+   "factNote": null,
    "related": [
     "B144-41",
     "B144-32",
@@ -773,6 +792,7 @@
    "category": "road",
    "why": "Barry Sawyer sets a world best for 25 miles on the track (2:17:10) - a rare Belgrave world mark outside walking.",
    "verified": "Text supports a \"World's best mark\" for 25 miles in an R.R.C. track race at Walton (world best, not ratified record). Photo is from the Brighton relay report a week earlier in the same issue.",
+   "factNote": null,
    "related": [
     "B153-11"
    ],
@@ -810,6 +830,7 @@
    "category": "walking",
    "why": "Ray Middleton wins Commonwealth Games silver in the 20 miles walk at Kingston, joining Tommy Green and Stan Vickers as Belgrave Games medallists.",
    "verified": "Text supports silver within 30 sec of Ron Wallwork. Photo is from the following issue (B160-02).",
+   "factNote": null,
    "related": [
     "B160-48",
     "B154-08",
@@ -850,6 +871,7 @@
    "category": "other",
    "why": "Club member Ed Lacey, photographer of so many Belgravian pages, takes the Bob Beamon long-jump picture that defined Mexico 1968.",
    "verified": "Text supports Lacey on the Sunday Times Olympic team (his third Olympics), over half the Track & Field News Olympic photos, and the Beamon whole-page shot. Previous-shortlist item - verified.",
+   "factNote": null,
    "related": [
     "B168-48"
    ],
@@ -887,6 +909,7 @@
    "category": "international",
    "why": "Three Belgravians at one Olympics: John Bicourt (GB steeplechase), Wil Wesch (West Germany 20 km walk) and Cliff Brooks (Barbados decathlon).",
    "verified": "Editorial confirms all three selections and results (Bicourt out in heat 8:38.8; Wesch 16th 1:35:20.6; Brooks stopped after no-height in pole vault). Also laments Ray Middleton missing the 50 km place. Day dates not printed.",
+   "factNote": null,
    "related": [
     "B178-01",
     "B178-02",
@@ -927,6 +950,7 @@
    "category": "walking",
    "why": "Ray Middleton breaks 39-year-old world best walking marks for 6, 7 and 8 hours, 40 and 50 miles - with the old record holder judging.",
    "verified": "John Keown's report supports five world bests at New River, White Hart Lane, 53 miles 352 yds in 8 hours; previous records H.W. Whitlock, 5 Oct 1935. Editorial B187-06 also congratulates him.",
+   "factNote": null,
    "related": [
     "B187-01",
     "B187-06",
@@ -966,6 +990,7 @@
    "category": "club",
    "why": "Belgrave ends 89 years as an all-male club; the Ladies Section transforms membership, the Hall and the club's future.",
    "verified": "Unsigned-headed editorial by President Bill Couzens (March 1976) announces the committee decision after a members' questionnaire; first woman member Jane Pritchard is named in B191-58; welcome column B192-58; first track season B195-41.",
+   "factNote": null,
    "related": [
     "B191-58",
     "B192-58",
@@ -1009,6 +1034,7 @@
    "category": "club",
    "why": "Tribute to the founder-editor of The Belgravian (1925) who found St John's Hall in 1921 and started the Building Fund that bought Belgrave Hall - told in the year the Hall was extended.",
    "verified": "Clive Shippen's tribute supports: Secretary/Treasurer from 1921, renting St John's Hall at 7s 6d a time, founding the gazette in April 1925, 'Belgrave Bricks' halfpenny money boxes, leasehold 1936, freehold 1950. Photo caption partly illegible.",
+   "factNote": null,
    "related": [
     "B188-06",
     "B188-07",
@@ -1048,6 +1074,7 @@
    "category": "track",
    "why": "Ernest Obeng beats Olympic champion Don Quarrie and then reaches the Commonwealth Games 100 m final at Edmonton for Ghana.",
    "verified": "Feature supports the win over Quarrie (10.3 to 10.4, hand timed), six club-record improvements, and 8th in the Edmonton final (10.34) after first round on 6 August. Cover of the same issue shows the Quarrie race.",
+   "factNote": null,
    "related": [
     "B197-01",
     "B197-06",
@@ -1087,6 +1114,7 @@
    "category": "club",
    "why": "Surrey AC's men's section closes and merges into Belgrave, which wins its way into the British League amid controversy - the start of the 1980s revival.",
    "verified": "Supported in detail: London AC rejected a three-club merger; Surrey AC men amalgamated; Belgrave won the Luton qualifier with eight ex-Surrey men; BAL AGM voted 28-5 to keep Belgrave in Div.5.",
+   "factNote": null,
    "related": [
     "B205-07",
     "B205-70",
@@ -1126,6 +1154,7 @@
    "category": "club",
    "why": "The club's 100th birthday, celebrated at Belgrave Hall exactly a century after the King's Head meeting of 7 October 1887.",
    "verified": "Clive Shippen's review: ~140 at Belgrave Hall, Bill Webb (93, senior past president) unveiled the Centenary Bell, cake and toast; same item also covers the 1887 sprint re-enactment, Club 20, Thames trip and Centenary Dinner (14 Nov 1987, 250 present, Steve Ovett a guest). Founding date confirmed by B210-22.",
+   "factNote": null,
    "related": [
     "B210-22",
     "B211-13",
@@ -1167,6 +1196,7 @@
    "category": "international",
    "why": "John Regis becomes World Indoor 200m champion - a Belgravian world title.",
    "verified": "Stop-press only (3 sentences): won World Indoor 200m in Budapest in a record 20.54, Britain's first and so far only win at those championships. 'Record' is as printed (championship record).",
+   "factNote": null,
    "related": [
     "B213-41",
     "B212-36",
@@ -1206,6 +1236,7 @@
    "category": "club",
    "why": "Win Shepherd becomes Belgrave's first Lady President, a decade or so after women were first admitted - with Sue Porter (first female General Secretary, from 1 Jan 1988) a landmark for women in the club.",
    "verified": "Text: 'your first Lady President'; profile notes the Ladies Section formed in 1976 and she was first Ladies Secretary. B214-07: Sue Porter says she took over as General Secretary on 1 January 1988 and 'females have only been allowed to be members of the club since 1977' (slight 1976/1977 inconsistency between the two items).",
+   "factNote": null,
    "related": [
     "B214-07",
     "B217-24",
@@ -1245,6 +1276,7 @@
    "category": "track",
    "why": "Belgrave's first British Athletics League title (with the Gold Cup) - the summit of the club's 1980s-90s track rise, sending eight men to the Barcelona Olympics.",
    "verified": "Editorial states 'British League and Cup Champions in 1992' and lists eight Olympians; B219-53 reports the first-ever BAL Division One match win (Birmingham, 9 May 1992) and B219-52 the title-deciding Copthall match of 29 Aug 1992. Gold Cup first won 10 Aug 1991 (B217-74).",
+   "factNote": null,
    "related": [
     "B219-53",
     "B219-52",
@@ -1285,6 +1317,7 @@
    "category": "xc",
    "why": "First Belgravian ever to win an individual English National cross-country title (under-20 race).",
    "verified": "Text says 'the first Belgrave Harrier ever to win an English National Cross Country title'; result 1, K.Tadesse 29:54 in the U20 race. Caveat: a junior (U20) title, not the senior National; year inferred from the issue's 1994 season coverage.",
+   "factNote": null,
    "related": [
     "B222-14",
     "B222-184"
@@ -1323,6 +1356,7 @@
    "category": "international",
    "why": "Du'aine Ladejo wins the European 400m title, beating defending champion Roger Black - a senior European outdoor gold for a Belgravian.",
    "verified": "Text gives the final result '1, D.Ladejo 45.09; 2, R.Black 45.20' and calls it 'a gold for Belgrave'. He had also won the European Indoor 400m in Paris in March 1994 (B222-51).",
+   "factNote": null,
    "related": [
     "B222-51",
     "B222-57",
@@ -1362,6 +1396,7 @@
    "category": "road",
    "why": "Paul Evans wins the Chicago Marathon in 2:08:52, then the third-fastest marathon ever by a Briton, with Gary Staines fifth.",
    "verified": "Text supports: '1, P.Evans (Bel) 2:08:52', 'his first ever marathon win in eleven attempts', 'third fastest ever time by a Briton'. Evans was also 3rd in London 1996 (B224-70).",
+   "factNote": null,
    "related": [
     "B224-70",
     "B223-38",
@@ -1401,6 +1436,7 @@
    "category": "international",
    "why": "Belgrave win Group B of the European Champion Clubs Cup in Liege, earning promotion to Group A (Madrid 2001).",
    "verified": "Report headlined 'BELGRAVE TRIUMPHANT!'; won by 7 points over CA Montreuil 93, decided by the final 4x400m; B229-38 announces Group A in Madrid 26-27 May 2001. Previous-shortlist item; verified.",
+   "factNote": null,
    "related": [
     "B229-38",
     "B228-30",
@@ -1440,6 +1476,7 @@
    "category": "road",
    "why": "First National 12-stage road relay title since 1951, won by the biggest margin in the race's history; it started Belgrave's 2000s relay dynasty.",
    "verified": "Text supports it fully: 'first win in the National 12 Stage since 1951', winning margin 6:26 called 'the greatest winning margin in the history of the race'. Previous-shortlist item.",
+   "factNote": null,
    "related": [
     "B230-20",
     "B230-56",
@@ -1479,6 +1516,7 @@
    "category": "road",
    "why": "A record fifth consecutive National 6-stage road relay title.",
    "verified": "Text: 'So it's a record five consecutive victories'; result 1 Belgrave 1:46:30. Previous-shortlist item.",
+   "factNote": null,
    "related": [
     "B231-38",
     "B261-09",
@@ -1518,6 +1556,7 @@
    "category": "other",
    "why": "Belgrave member Chrissie Wellington, who joined in 2006 to run cross-country for the Belles, becomes Britain's first World Ironman champion as a rookie.",
    "verified": "Text: 'Britain's first ever World Ironman Champion'. Membership confirmed elsewhere: B249-10 welcomes her as a new member (2006) and B250-02/B252-02 show her racing for the Belles. Caveat: the feature gives 9:14:45 but the results roundup (B262-13) gives 9:08:45.",
+   "factNote": null,
    "related": [
     "B249-10",
     "B252-02",
