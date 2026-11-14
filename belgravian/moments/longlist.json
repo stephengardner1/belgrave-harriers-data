@@ -2,6 +2,23 @@
  "note": "Belgravian Moments longlist (14 Nov 2026): every candidate from the full sweep not chosen for moments.json. status reserve = strong enough to swap in; considered = checked and set aside (see note).",
  "items": [
   {
+   "itemId": "B81-03",
+   "date": "1938-06-06",
+   "printedHeadline": null,
+   "modernHeadline": "Walkers win all three national road-walking team titles in one season",
+   "category": "walking",
+   "strength": 5,
+   "why": "Walkers win all three R.W.A. team titles (Junior 10 miles, 20 miles, 50 km) in one season - a first for any club - and hold all five R.W.A. trophies.",
+   "verified": "Editorial states no other club had won all three; Colin Sutton scored in all three; Coleman brothers dead-heated for the Junior title (B81-06).",
+   "extract": "No other club has ever at any time won all three championships; and to do so in the space of three months is almost miraculous.",
+   "photo": null,
+   "onFirstShortlist": false,
+   "status": "reserve",
+   "note": null,
+   "due2027": null,
+   "link": "https://www.belgraveharriers.com/belgravian#B81-03"
+  },
+  {
    "itemId": "B108-07",
    "date": "1950-03-16",
    "printedHeadline": "Our Own Headquarters",
@@ -55,6 +72,27 @@
    "note": null,
    "due2027": null,
    "link": "https://www.belgraveharriers.com/belgravian#B112-08"
+  },
+  {
+   "itemId": "B30-04",
+   "date": "1929-11",
+   "printedHeadline": "AMONGST THE GIANTS.",
+   "modernHeadline": "Belchamber places Tommy Green among the greatest walkers",
+   "category": "walking",
+   "strength": 4,
+   "why": "J. B. Belchamber's long essay ranks Tommy Green among the great walkers since the 1870s professionals: the best piece of writing in the early gazette.",
+   "verified": "12,900-character essay; table of Brighton stage times. Photo of Green (Daily Sketch) is on the facing editorial B30-03, the first photo of him in the gazette.",
+   "extract": "So is it not true that the select few who stand by right upon the peak of the mountain must close in a little in order to make room for our champion?",
+   "photo": {
+    "itemId": "B30-03",
+    "file": "B30-p03-t-w-green.jpg",
+    "caption": "T. W. GREEN, whose fine performances on the road have added considerably to Belgrave prestige and given us ample reason to acclaim him as one of the best long-distance walkers ever."
+   },
+   "onFirstShortlist": false,
+   "status": "reserve",
+   "note": null,
+   "due2027": null,
+   "link": "https://www.belgraveharriers.com/belgravian#B30-04"
   },
   {
    "itemId": "B41-19",
@@ -114,57 +152,6 @@
    "note": null,
    "due2027": null,
    "link": "https://www.belgraveharriers.com/belgravian#B63-04"
-  },
-  {
-   "itemId": "B65-03",
-   "date": "1934-08",
-   "printedHeadline": null,
-   "modernHeadline": "Arthur Penny wins the Empire Games six miles for England",
-   "category": "international",
-   "strength": 4,
-   "why": "Arthur Penny wins the Six Miles for England at the British Empire Games - a Belgrave runner's first major Games title.",
-   "verified": "Editorial and B65-12 ('The great high light of the season') support Penny's Empire Games six miles win; B84-23 calls him 'ex-Empire Games 6 miles champion'. Exact date not in text.",
-   "extract": "There is only one way to commence this issue of our Journal, and that is to extend our very heartiest congratulations to A. W. Penny upon his magnificent win for England in the Six Miles event at the Empire Games.",
-   "photo": null,
-   "onFirstShortlist": false,
-   "status": "reserve",
-   "note": null,
-   "due2027": null,
-   "link": "https://www.belgraveharriers.com/belgravian#B65-03"
-  },
-  {
-   "itemId": "B76-04",
-   "date": "1937-01",
-   "printedHeadline": "AU CROSS DU METRO.",
-   "modernHeadline": "Belgrave's first trip abroad ends in a team win in Paris",
-   "category": "international",
-   "strength": 4,
-   "why": "The club's first team trip abroad: Belgrave win the U.S.M. international cross-country at La Croix de Berny, Paris.",
-   "verified": "Supports first invitation 'to compete as a team abroad' and a team win (51 pts) over Moroccan and Brussels teams; B79-06 confirms 'For the first time, a Belgrave team went abroad'. Printed day/date inconsistent.",
-   "extract": "So, as you all know, Belgrave won their first Continental cross-country race.",
-   "photo": null,
-   "onFirstShortlist": false,
-   "status": "reserve",
-   "note": null,
-   "due2027": null,
-   "link": "https://www.belgraveharriers.com/belgravian#B76-04"
-  },
-  {
-   "itemId": "B82-03",
-   "date": "1938",
-   "printedHeadline": "",
-   "modernHeadline": "Franz Stampfl starts coaching at Belgrave",
-   "category": "club",
-   "strength": 4,
-   "why": "The club engages Franz Stampfl, the Austrian coach later famous for Bannister's four-minute mile, as its coach.",
-   "verified": "Supports the engagement of 'a Continental coach, Herr F. Stampfl' and his results with field-events men; B83-29 and B84-23 confirm winter classes at Belgrave Hall. The later fame is outside knowledge, not in the text.",
-   "extract": "During the past months, however, we were fortunate in securing the services of a Continental coach, Herr F. Stampfl, whose vivacious enthusiasm and expert knowledge soon endeared him to our members.",
-   "photo": null,
-   "onFirstShortlist": false,
-   "status": "reserve",
-   "note": null,
-   "due2027": null,
-   "link": "https://www.belgraveharriers.com/belgravian#B82-03"
   },
   {
    "itemId": "B83-06",
@@ -345,27 +332,6 @@
    "link": "https://www.belgraveharriers.com/belgravian#B154-47"
   },
   {
-   "itemId": "B178-05",
-   "date": "1972-09",
-   "printedHeadline": null,
-   "modernHeadline": "Three Belgrave athletes compete at the Munich Olympics",
-   "category": "international",
-   "strength": 4,
-   "why": "Three Belgravians at one Olympics: John Bicourt (GB steeplechase), Wil Wesch (West Germany 20 km walk) and Cliff Brooks (Barbados decathlon).",
-   "verified": "Editorial confirms all three selections and results (Bicourt out in heat 8:38.8; Wesch 16th 1:35:20.6; Brooks stopped after no-height in pole vault). Also laments Ray Middleton missing the 50 km place. Day dates not printed.",
-   "extract": "Our belated congratulations go out to three Belgravians who achieved selection for the 1972 Olympic Games in Munich.",
-   "photo": {
-    "file": "B178-p01-cover-steeplechase.jpg",
-    "caption": "JOHN BICOURT, who was selected by Great Britain to compete in the 3,000 metres steeplechase at the Olympic Games, Munich 1972, seen here running for Surrey in the Inter-Counties.",
-    "itemId": "B178-01"
-   },
-   "onFirstShortlist": false,
-   "status": "reserve",
-   "note": null,
-   "due2027": null,
-   "link": "https://www.belgraveharriers.com/belgravian#B178-05"
-  },
-  {
    "itemId": "B189-69",
    "date": "1975-03-01",
    "printedHeadline": "TOMMY GREEN",
@@ -415,27 +381,6 @@
    "note": null,
    "due2027": null,
    "link": "https://www.belgraveharriers.com/belgravian#B191-51"
-  },
-  {
-   "itemId": "B195-40",
-   "date": "1977-04-23",
-   "printedHeadline": "THE ACORN PLANTER",
-   "modernHeadline": "Death of Harry Hare, founder of The Belgravian and of the Belgrave Hall building fund",
-   "category": "club",
-   "strength": 4,
-   "why": "Tribute to the founder-editor of The Belgravian (1925) who found St John's Hall in 1921 and started the Building Fund that bought Belgrave Hall - told in the year the Hall was extended.",
-   "verified": "Clive Shippen's tribute supports: Secretary/Treasurer from 1921, renting St John's Hall at 7s 6d a time, founding the gazette in April 1925, 'Belgrave Bricks' halfpenny money boxes, leasehold 1936, freehold 1950. Photo caption partly illegible.",
-   "extract": "And when you, dear Belgravian next enter our modernised headquarters pause awhile and think for a moment - of Harry Hare and his contemporaries - the acorn planters.",
-   "photo": {
-    "file": "B195-p26-harry-hare-battersea-1924.jpg",
-    "caption": "[illegible]arry Hare wins an [illegible]nter-club 1 mile handi[illegible]ap walk at Battersea [illegible]ark in 1924. Our own [illegible]harlie Speechley (now [illegible]0 was second.",
-    "itemId": "B195-40"
-   },
-   "onFirstShortlist": false,
-   "status": "reserve",
-   "note": null,
-   "due2027": "50th, 23 Apr 2027",
-   "link": "https://www.belgraveharriers.com/belgravian#B195-40"
   },
   {
    "itemId": "B198-96",
@@ -556,63 +501,6 @@
    "note": null,
    "due2027": null,
    "link": "https://www.belgraveharriers.com/belgravian#B212-02"
-  },
-  {
-   "itemId": "B216-02",
-   "date": "1990",
-   "printedHeadline": "President of Belgrave Harriers 1990-91 — Win Shepherd writes ...",
-   "modernHeadline": "Win Shepherd becomes Belgrave's first woman President",
-   "category": "club",
-   "strength": 4,
-   "why": "Win Shepherd becomes Belgrave's first Lady President, a decade or so after women were first admitted - with Sue Porter (first female General Secretary, from 1 Jan 1988) a landmark for women in the club.",
-   "verified": "Text: 'your first Lady President'; profile notes the Ladies Section formed in 1976 and she was first Ladies Secretary. B214-07: Sue Porter says she took over as General Secretary on 1 January 1988 and 'females have only been allowed to be members of the club since 1977' (slight 1976/1977 inconsistency between the two items).",
-   "extract": "It gives me great pleasure to send you this message as your first Lady President.",
-   "photo": {
-    "file": "B216-p02-win-shepherd.jpg",
-    "caption": "Win is caught by the lens of Alex Apperley at a recent Club Championship meeting."
-   },
-   "onFirstShortlist": false,
-   "status": "reserve",
-   "note": null,
-   "due2027": null,
-   "link": "https://www.belgraveharriers.com/belgravian#B216-02"
-  },
-  {
-   "itemId": "B222-56",
-   "date": "1994-08",
-   "printedHeadline": "Euro gold for Ladejo — Helsinki, Finland, 7-14 Aug",
-   "modernHeadline": "Du'aine Ladejo wins the European 400m title in Helsinki",
-   "category": "international",
-   "strength": 4,
-   "why": "Du'aine Ladejo wins the European 400m title, beating defending champion Roger Black - a senior European outdoor gold for a Belgravian.",
-   "verified": "Text gives the final result '1, D.Ladejo 45.09; 2, R.Black 45.20' and calls it 'a gold for Belgrave'. He had also won the European Indoor 400m in Paris in March 1994 (B222-51).",
-   "extract": "He had the strength to run down the leader over the last 50m and crossed the line with arms outstretched almost as wide as his smile. Britain 1st and 2nd in a classic confrontation and a 'gold' for Belgrave.",
-   "photo": {
-    "file": "B222-p21-ladejo-gold.jpg",
-    "caption": "The name Du'aine Ladejo became infinitely better known to the public after his golden exploits in Helsinki. Three times the 23 year-old reduced our 400m Club Record in 1994 but it doesn't look as if it's going to stop there for he was quoted after the European Championships final as saying, \"You haven't seen anything yet\"."
-   },
-   "onFirstShortlist": false,
-   "status": "reserve",
-   "note": null,
-   "due2027": null,
-   "link": "https://www.belgraveharriers.com/belgravian#B222-56"
-  },
-  {
-   "itemId": "B5-03",
-   "date": "1926-01-02",
-   "printedHeadline": "CROSS COUNTRY.",
-   "modernHeadline": "First Surrey cross-country team title",
-   "category": "xc",
-   "strength": 3,
-   "why": "Belgrave win their first cross-country championship, the Surrey County team title, by 2 points from Epsom.",
-   "verified": "Text: 'we ran out winners of our first Cross Country Championship by a margin of 2 points'; retained in 1927 (B9-05).",
-   "extract": "Then came the \"turn up\" in J. Andrews who showed wonderful improvement and helped considerably to withstand the efforts of our Epsom friends so that eventually we ran out winners of our first Cross Country Championship by a margin of 2 points.",
-   "photo": null,
-   "onFirstShortlist": false,
-   "status": "reserve",
-   "note": null,
-   "due2027": null,
-   "link": "https://www.belgraveharriers.com/belgravian#B5-03"
   },
   {
    "itemId": "B11-04",
@@ -740,23 +628,6 @@
    "note": null,
    "due2027": null,
    "link": "https://www.belgraveharriers.com/belgravian#B34-08"
-  },
-  {
-   "itemId": "B43-05",
-   "date": "1931-03-14",
-   "printedHeadline": "THE NATIONAL CROSS-COUNTY CHAMPIONSHIP.",
-   "modernHeadline": "Arthur Allum runs for England in the International cross-country",
-   "category": "xc",
-   "strength": 3,
-   "why": "Arthur Allum finishes 5th in the National and becomes the club's first cross-country international, scoring for the winning England team in Dublin.",
-   "verified": "B43-05: 5th, 'the best performance yet by a Belgrave man in this race', selected for England; B43-03: 9th at Baldoyle, sixth English scorer. The text does not say 'first international' outright.",
-   "extract": "This wonderful running—the best performance yet by a Belgrave man in this race—deservedly resulted in Arthur being selected to represent England in the International cross-country race in Ireland.",
-   "photo": null,
-   "onFirstShortlist": false,
-   "status": "reserve",
-   "note": null,
-   "due2027": null,
-   "link": "https://www.belgraveharriers.com/belgravian#B43-05"
   },
   {
    "itemId": "B49-18",
@@ -1428,26 +1299,6 @@
    "note": null,
    "due2027": null,
    "link": "https://www.belgraveharriers.com/belgravian#B229-10"
-  },
-  {
-   "itemId": "B262-14",
-   "date": "2007-10",
-   "printedHeadline": "Chrissie Wellington Wins World Ironman Championship in Hawaii",
-   "modernHeadline": "Belgrave runner Chrissie Wellington wins the World Ironman Championship",
-   "category": "other",
-   "strength": 3,
-   "why": "Belgrave member Chrissie Wellington, who joined in 2006 to run cross-country for the Belles, becomes Britain's first World Ironman champion as a rookie.",
-   "verified": "Text: 'Britain's first ever World Ironman Champion'. Membership confirmed elsewhere: B249-10 welcomes her as a new member (2006) and B250-02/B252-02 show her racing for the Belles. Caveat: the feature gives 9:14:45 but the results roundup (B262-13) gives 9:08:45.",
-   "extract": "She ended 2007 as Britain’s first ever World Ironman Champion, a remarkable feat, deemed to be a near impossible task for any athlete racing as a rookie at their first Ironman World Championships.",
-   "photo": {
-    "file": "B262-p07-chrissie-wellington.jpg",
-    "caption": ""
-   },
-   "onFirstShortlist": false,
-   "status": "reserve",
-   "note": null,
-   "due2027": null,
-   "link": "https://www.belgraveharriers.com/belgravian#B262-14"
   },
   {
    "itemId": "B267-05",
