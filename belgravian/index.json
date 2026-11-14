@@ -2,20 +2,12 @@
  "title": "The Belgravian",
  "issues": [
   {
-   "issue": 1,
-   "label": "April 1925",
-   "date": "1925-04",
-   "year": 1925,
-   "pageCount": 1,
-   "items": 1
-  },
-  {
    "issue": 2,
    "label": "April 1925",
    "date": "1925-04",
    "year": 1925,
-   "pageCount": 8,
-   "items": 18
+   "pageCount": 9,
+   "items": 19
   },
   {
    "issue": 3,

@@ -21,7 +21,9 @@
   function get(path){return fetch(BASE+path).then(function(r){if(!r.ok)throw new Error(path);return r.json()})}
   function slug(s){return String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
   function pad(n){return n<10?'0'+n:''+n}
-  function pageImg(no,p){return MEDIA+'pages/B'+no+'/B'+no+'-p'+pad(p)+'.webp'}
+  /* No. 1 (Apr 1925) is W. H. Hare's covering letter: shown as a loose insert, page 9 of the first gazette (Steve, 14 Nov) */
+  var INSERT={'2-9':'B1/B1-p01'};
+  function pageImg(no,p){return MEDIA+'pages/'+(INSERT[no+'-'+p]||('B'+no+'/B'+no+'-p'+pad(p)))+'.webp'}
   function issueKey(no){return 'B'+no}
   /* issue ids are numbers, except where the club printed a number twice (e.g. "207b") */
   function nid(s){return /\D/.test(s)?s:+s}
@@ -509,6 +511,7 @@
   var BASE_TITLE=document.title,BASE_DESC=(document.querySelector('meta[name="description"]')||{}).content||'';
   function route(){
     var h=(location.hash||'').slice(1),hl=root.dataset.hl||'';root.dataset.hl='';
+    if(/^B1(-p\d+)?$/.test(h)){location.replace('#B2-p09');return}
     if(!/^p-/.test(h))setMeta(BASE_TITLE,BASE_DESC);
     root.classList.toggle('bv-person-mode',/^p-/.test(h));
     root.classList.toggle('bv-home-mode',!h||h==='shelf');
