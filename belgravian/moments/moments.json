@@ -1,0 +1,1188 @@
+{
+ "note": "Belgravian Moments: draft for Steve to approve (14 Nov 2026). Extracts are exact substrings of the item text. dateSource: printed = day printed in the gazette; outside = day from the historical record (event confirmed in the text); issue = only the month of the issue is known.",
+ "moments": [
+  {
+   "id": "b2-02",
+   "itemId": "B2-02",
+   "issue": "B2",
+   "issueLabel": "April 1925",
+   "issuePrinted": "No. 1",
+   "date": "1925-04",
+   "dateLabel": "April 1925",
+   "dateSource": "issue",
+   "dateNote": "masthead B2-01 'No. 1, Vol. 1, April 1925'; Hare's covering letter B2-19 dated 'April, 1925.'",
+   "anniversaryNext": null,
+   "headlineModern": "The first Belgravian is published",
+   "headlinePrinted": "Introduction",
+   "extract": "It is our intention of producing \"The Belgravian\" quarterly throughout this year when we hope to be justified in making a regular monthly appearance.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B2-02.webp",
+    "kind": "page",
+    "source": "pages/B2/B2-p01.webp",
+    "fromItem": "B2-01",
+    "caption": "Page 1 of The Belgravian, April 1925 (printed No. 1)",
+    "w": 818,
+    "h": 368
+   },
+   "credit": null,
+   "category": "club",
+   "why": "First number of The Belgravian, the club gazette that ran until 2009.",
+   "verified": "Introduction states the quarterly plan; the loose covering letter from W. H. Hare (B2-19, 6d. a copy) is in the same issue (no separate B1 in the repo). Hare later wrote that 'the \"Gazette\" is now our history book' (B34-13).",
+   "related": [
+    "B2-19",
+    "B2-01",
+    "B34-13",
+    "B11-03"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B2-02"
+  },
+  {
+   "id": "b30-04",
+   "itemId": "B30-04",
+   "issue": "B30",
+   "issueLabel": "November 1929",
+   "issuePrinted": "9th Edition, 1929",
+   "date": "1929-11",
+   "dateLabel": "November 1929",
+   "dateSource": "issue",
+   "dateNote": "essay printed in the Nov 1929 issue, written just before the Milan race 'on 10th November next'; it discusses Green's Brighton win of 14 Sep 1929 (date from B39-07 table)",
+   "anniversaryNext": {
+    "years": 100,
+    "date": "2029-11",
+    "label": "100th · November 2029"
+   },
+   "headlineModern": "'Amongst the Giants': Tommy Green ranked with the great walkers",
+   "headlinePrinted": "AMONGST THE GIANTS.",
+   "extract": "So is it not true that the select few who stand by right upon the peak of the mountain must close in a little in order to make room for our champion?",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B30-04.webp",
+    "kind": "photo",
+    "source": "crops/B30/B30-p03-t-w-green.jpg",
+    "fromItem": "B30-03",
+    "caption": "T. W. GREEN, whose fine performances on the road have added considerably to Belgrave prestige and given us ample reason to acclaim him as one of the best long-distance walkers ever.",
+    "w": 403,
+    "h": 554
+   },
+   "credit": null,
+   "category": "walking",
+   "why": "J. B. Belchamber's long essay ranks Tommy Green among the great walkers since the 1870s professionals: the best piece of writing in the early gazette.",
+   "verified": "12,900-character essay; table of Brighton stage times. Photo of Green (Daily Sketch) is on the facing editorial B30-03, the first photo of him in the gazette.",
+   "related": [
+    "B30-03",
+    "B29-08",
+    "B30-12"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B30-04"
+  },
+  {
+   "id": "b38-03",
+   "itemId": "B38-03",
+   "issue": "B38",
+   "issueLabel": "August 1930",
+   "issuePrinted": "7th Edition, 1930",
+   "date": "1930-09-13",
+   "dateLabel": "13 September 1930",
+   "dateSource": "printed",
+   "dateNote": "B39-07 split-time table is headed 'T. W. Green 13/9/1930'; B38-11 previews 'the coming London to Brighton race on September 13th'",
+   "anniversaryNext": {
+    "years": 100,
+    "date": "2030-09-13",
+    "label": "100th · 13 September 2030"
+   },
+   "headlineModern": "Tommy Green breaks the London to Brighton walk record",
+   "headlinePrinted": "WELL WALKED, TOMMY!",
+   "extract": "This momentous feat, accomplished in wretched weather conditions, will live for ever in the history of the Club and of Road-walking.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B38-03.webp",
+    "kind": "page",
+    "source": "pages/B38/B38-p03.webp",
+    "fromItem": "B38-03",
+    "caption": "Page 3 of The Belgravian, August 1930 (printed 7th Edition, 1930)",
+    "w": 740,
+    "h": 512
+   },
+   "credit": null,
+   "category": "walking",
+   "why": "Tommy Green breaks H. V. L. Ross's 21-year-old London to Brighton record; the gazette says it 'will live for ever in the history of the Club'.",
+   "verified": "Editorial is short and gives no time; the result in B39-07 prints Green 1st in 8 2 55 and Belchamber says he beat Ross's record by 8 min 19 sec in a storm. Issue is dated Aug-Sep 1930 but appeared after the race.",
+   "related": [
+    "B39-07",
+    "B38-11",
+    "B39-06"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B38-03"
+  },
+  {
+   "id": "b54-04",
+   "itemId": "B54-04",
+   "issue": "B54",
+   "issueLabel": "August 1932",
+   "issuePrinted": "6th Edition, 1932",
+   "date": "1932-08-03",
+   "dateLabel": "3 August 1932",
+   "dateSource": "outside",
+   "dateNote": "Not printed: the issue only says 'since the decision of the Olympic Games'. 3 Aug 1932 is the Los Angeles 50 km walk (Hampson's 800 m was 2 Aug) from outside knowledge.",
+   "anniversaryNext": {
+    "years": 100,
+    "date": "2032-08-03",
+    "label": "100th · 3 August 2032"
+   },
+   "headlineModern": "Tommy Green wins the first Olympic 50 km walk",
+   "headlinePrinted": null,
+   "extract": "It is every athlete's ambition—although it must, of necessity, be denied to thousands of us—to gain a “First” when representing his country in the Olympic Games; and to know that two such are associated with our Club is to fill us with pride, and mark a very definite stage in our Club history.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B54-04.webp",
+    "kind": "photo",
+    "source": "crops/B59/B59-p22-four-famous-walkers.jpg",
+    "fromItem": "B59-19",
+    "caption": "J. C. Bidgood, T. W. Green (in Olympic vest), F. Rickards and F. E. Bentley. \"Four Famous Walkers.\" This was the title given to this photograph when it appeared in the Birmingham Sunday Mercury.",
+    "w": 1000,
+    "h": 842
+   },
+   "credit": null,
+   "category": "international",
+   "why": "Two Belgrave members, Tommy Green (50 km walk) and second-claim Tom Hampson (800 m), win Olympic gold at Los Angeles: 'a very definite stage in our Club history'.",
+   "verified": "Text congratulates 'our members, T. W. Green and T. Hampson' on Olympic wins; no race report of Los Angeles appears in B54 or B55 (only this note and Belchamber's line in B54-03). Hampson was not first-claim (B29-04).",
+   "related": [
+    "B53-03",
+    "B54-03",
+    "B29-04",
+    "B59-19"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B54-04"
+  },
+  {
+   "id": "b64-08",
+   "itemId": "B64-08",
+   "issue": "B64",
+   "issueLabel": "June 1934",
+   "issuePrinted": "3rd Edition, 1934",
+   "date": "1934-04-14",
+   "dateLabel": "14 April 1934",
+   "dateSource": "printed",
+   "dateNote": "B64-04 editorial: 'In breaking the tape on April 14th, 1934'; report says 'The morning of April 14th'",
+   "anniversaryNext": {
+    "years": 100,
+    "date": "2034-04-14",
+    "label": "100th · 14 April 2034"
+   },
+   "headlineModern": "First win in the London to Brighton Relay",
+   "headlinePrinted": "THE BRIGHTON RELAY.",
+   "extract": "What a thrill we experienced as Arthur broke the tape, for we had been waiting and hoping for years to see the Belgrave lead a class field home in this supreme test of team running.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B64-08.webp",
+    "kind": "photo",
+    "source": "crops/B64/B64-p03-arthur-allum.jpg",
+    "fromItem": "B64-03",
+    "caption": "Arthur Allum breaking the tape at Brighton.",
+    "w": 476,
+    "h": 1008
+   },
+   "credit": null,
+   "category": "road",
+   "why": "First win in the London to Brighton Relay, the era's premier road relay, beating Poly and Birchfield.",
+   "verified": "Stage-by-stage report supports the win in 4:49:55, 2 min 6 sec ahead of Poly; Penny set a club stage record. Photo of Allum breaking the tape is B64-03.",
+   "related": [
+    "B64-03",
+    "B64-04",
+    "B64-05",
+    "B64-09",
+    "B69-09",
+    "B73-16"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B64-08"
+  },
+  {
+   "id": "b68-04",
+   "itemId": "B68-04",
+   "issue": "B68",
+   "issueLabel": "February-March 1935",
+   "issuePrinted": "2nd Edition, 1935",
+   "date": "1935-03-09",
+   "dateLabel": "9 March 1935",
+   "dateSource": "printed",
+   "dateNote": "headline 'BEACONSFIELD, MARCH 9th, 1935' (a Saturday)",
+   "anniversaryNext": {
+    "years": 100,
+    "date": "2035-03-09",
+    "label": "100th · 9 March 2035"
+   },
+   "headlineModern": "First English National cross-country title",
+   "headlinePrinted": "THE ENGLISH CROSS-COUNTRY CHAMPIONSHIP, BEACONSFIELD, MARCH 9th, 1935.",
+   "extract": "In the last mile our boys gave all they had, and we had the remarkable scoring sequence of 11th, 14th, 15th, 18th, 19th, 20th places. Better packing can never have been seen before, and the scoring epitomises the team spirit existent in our ranks.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B68-04.webp",
+    "kind": "photo",
+    "source": "crops/B68/B68-p29-winning-team.jpg",
+    "fromItem": "B68-20",
+    "caption": "OUR WINNING TEAM. H. W. Shields. D. Patience. J. Ginty. C. T. Carter. A. E. Taylor. H. E. Footer.",
+    "w": 1000,
+    "h": 607
+   },
+   "credit": null,
+   "category": "xc",
+   "why": "Belgrave's first English (National) cross-country title, taking it from Birchfield, holders for seven years; first Southern club to win since before WW1.",
+   "verified": "Text supports the win with 97 pts (result B68-05), six scorers 11th-20th, 56 points to spare; B69-04 letters say first Southern winner since pre-war. Text calls the trophy the 'Frank Wynne' Cup, as printed.",
+   "related": [
+    "B68-03",
+    "B68-05",
+    "B68-06",
+    "B68-20",
+    "B69-04"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B68-04"
+  },
+  {
+   "id": "b75-03",
+   "itemId": "B75-03",
+   "issue": "B75",
+   "issueLabel": "November 1936",
+   "issuePrinted": "4th Edition, 1936",
+   "date": "1936-11",
+   "dateLabel": "November 1936",
+   "dateSource": "issue",
+   "dateNote": "lease announced 'as we go to press' in August 1936 (B74-04); November 1936 President's message says 'We are now owners'; B79-06 says the leasehold deeds were handed over in the 1936-37 Jubilee Year",
+   "anniversaryNext": {
+    "years": 100,
+    "date": "2036-11",
+    "label": "100th · November 2036"
+   },
+   "headlineModern": "St. John's Hall, Wimbledon, becomes Belgrave Hall",
+   "headlinePrinted": "FROM OUR PRESIDENT.",
+   "extract": "1887—1937, the Club Jubilee Year . . . . Strange that in this very year the hopes of some of the old members are at last realised. We are now owners of our Headquarters following the purchase of St. John's Hall, to be known in the future as \"Belgrave Hall.\"",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B75-03.webp",
+    "kind": "page",
+    "source": "pages/B75/B75-p03.webp",
+    "fromItem": "B75-03",
+    "caption": "Page 3 of The Belgravian, November 1936 (printed 4th Edition, 1936)",
+    "w": 726,
+    "h": 806
+   },
+   "credit": null,
+   "category": "club",
+   "why": "The club acquires its own headquarters, St. John's Hall, Wimbledon, renamed Belgrave Hall, after years of Building Fund appeals.",
+   "verified": "Text supports purchase/lease of St. John's Hall as 'Belgrave Hall' (B74-04 and B83-03 call it a leasehold). Exact completion date not printed.",
+   "related": [
+    "B74-04",
+    "B79-05",
+    "B79-06",
+    "B75-04",
+    "B62-24",
+    "B68-19"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B75-03"
+  },
+  {
+   "id": "b77-04",
+   "itemId": "B77-04",
+   "issue": "B77",
+   "issueLabel": "June 1937",
+   "issuePrinted": "2nd Edition, 1937",
+   "date": "1937-05-01",
+   "dateLabel": "1 May 1937",
+   "dateSource": "printed",
+   "dateNote": "'on Saturday, May 1st' (1 May 1937 was a Saturday)",
+   "anniversaryNext": {
+    "years": 100,
+    "date": "2037-05-01",
+    "label": "100th · 1 May 2037"
+   },
+   "headlineModern": "Golden Jubilee dinner in Regent Street",
+   "headlinePrinted": "THE \"JUBILEE\" DINNER.",
+   "extract": "Over two hundred guests, friends and members attended the Club Jubilee Dinner and Dance, held at The Quadrant Restaurant, Regent Street, on Saturday, May 1st.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B77-04.webp",
+    "kind": "page",
+    "source": "pages/B77/B77-p04.webp",
+    "fromItem": "B77-04",
+    "caption": "Page 4 of The Belgravian, June 1937 (printed 2nd Edition, 1937)",
+    "w": 751,
+    "h": 329
+   },
+   "credit": null,
+   "category": "club",
+   "why": "The club's Golden Jubilee (1887-1937) celebrated with a dinner and dance for over 200.",
+   "verified": "Supports the dinner at the Quadrant Restaurant, Regent Street, with souvenir menu history and E.C.C.U. secretary present. Previous-shortlist item, confirmed; a social rather than sporting moment.",
+   "related": [
+    "B76-22",
+    "B79-06",
+    "B75-03"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B77-04"
+  },
+  {
+   "id": "b81-03",
+   "itemId": "B81-03",
+   "issue": "B81",
+   "issueLabel": "June 1938",
+   "issuePrinted": "2nd Edition, 1938",
+   "date": "1938-06-06",
+   "dateLabel": "6 June 1938",
+   "dateSource": "printed",
+   "dateNote": "treble completed at the R.W.A. 50 kilos at Bradford 'on Whit Monday' (B81-12) = 6 June 1938; 20 miles won 'May 14th, 1938' (B81-11)",
+   "anniversaryNext": {
+    "years": 100,
+    "date": "2038-06-06",
+    "label": "100th · 6 June 2038"
+   },
+   "headlineModern": "Walkers win all three national team titles in one season",
+   "headlinePrinted": null,
+   "extract": "No other club has ever at any time won all three championships; and to do so in the space of three months is almost miraculous.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B81-03.webp",
+    "kind": "page",
+    "source": "pages/B81/B81-p03.webp",
+    "fromItem": "B81-03",
+    "caption": "Page 3 of The Belgravian, June 1938 (printed 2nd Edition, 1938)",
+    "w": 702,
+    "h": 807
+   },
+   "credit": null,
+   "category": "walking",
+   "why": "Walkers win all three R.W.A. team titles (Junior 10 miles, 20 miles, 50 km) in one season - a first for any club - and hold all five R.W.A. trophies.",
+   "verified": "Editorial states no other club had won all three; Colin Sutton scored in all three; Coleman brothers dead-heated for the Junior title (B81-06).",
+   "related": [
+    "B81-06",
+    "B81-11",
+    "B81-12",
+    "B82-08"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B81-03"
+  },
+  {
+   "id": "b97-04",
+   "itemId": "B97-04",
+   "issue": "B97",
+   "issueLabel": "July 1945",
+   "issuePrinted": "No. 97",
+   "date": "1945-05-08",
+   "dateLabel": "8 May 1945",
+   "dateSource": "outside",
+   "dateNote": "editorial: 'As we go to press so comes the good news we have all waited for, Victory in Europe' (issue July 1945)",
+   "anniversaryNext": {
+    "years": 100,
+    "date": "2045-05-08",
+    "label": "100th · 8 May 2045"
+   },
+   "headlineModern": "Victory in Europe: how the club kept going through the war",
+   "headlinePrinted": "EDITORIAL",
+   "extract": "\"It is amazing to me that you fellows are still keeping it up in the most adverse conditions—a lean diet, poor transportation (of which we are beginning to know a little), dark nights and the bombs (which surpass our powers of imagination). But you're not only just keeping it up, you are surpassing yourselves.\"",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B97-04.webp",
+    "kind": "page",
+    "source": "pages/B97/B97-p03.webp",
+    "fromItem": "B97-04",
+    "caption": "Page 3 of The Belgravian, July 1945 (printed No. 97)",
+    "w": 763,
+    "h": 848
+   },
+   "credit": null,
+   "category": "club",
+   "why": "VE Day: the gazette looks back on how the club kept going through the war with Belgrave Hall open to all",
+   "verified": "Editorial supports Hall open to members of other clubs and servicemen, most active members called up; quotes ex-Junior Captain Max Quackenbos from the USA.",
+   "related": [
+    "B86-03",
+    "B96-04",
+    "B98-04",
+    "B88-36"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B97-04"
+  },
+  {
+   "id": "b99-28",
+   "itemId": "B99-28",
+   "issue": "B99",
+   "issueLabel": "June 1946",
+   "issuePrinted": "No. 99",
+   "date": "1946-03-09",
+   "dateLabel": "9 March 1946",
+   "dateSource": "printed",
+   "dateNote": "text: 'held their 59th annual championship at Leamington Spa on March 9th' (issue June 1946)",
+   "anniversaryNext": {
+    "years": 100,
+    "date": "2046-03-09",
+    "label": "100th · 9 March 2046"
+   },
+   "headlineModern": "National cross-country title kept at the first post-war race",
+   "headlinePrinted": "ENGLISH C.C. CHAMPIONSHIP",
+   "extract": "We asked the Birchfield scorer his score and the answer was 106, whoopee, we had won the title once again.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B99-28.webp",
+    "kind": "page",
+    "source": "pages/B99/B99-p18.webp",
+    "fromItem": "B99-28",
+    "caption": "Page 18 of The Belgravian, June 1946 (printed No. 99)",
+    "w": 763,
+    "h": 451
+   },
+   "credit": null,
+   "category": "xc",
+   "why": "First post-war National: Belgrave, the 1939 holders, beat Birchfield by ten points to keep the English cross-country title",
+   "verified": "Text gives team result 1 Belgrave 96, 2 Birchfield 106; Len Herbert 7th and into the England team. B99-27 confirms they were holders from 1939.",
+   "related": [
+    "B99-27",
+    "B99-04"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B99-28"
+  },
+  {
+   "id": "b104-04",
+   "itemId": "B104-04",
+   "issue": "B104",
+   "issueLabel": "November 1948",
+   "issuePrinted": "No. 104",
+   "date": "1948-08-07",
+   "dateLabel": "7 August 1948",
+   "dateSource": "outside",
+   "dateNote": "Olympic notes in Nov 1948 issue; days not printed (London Olympics, Wembley, July-August 1948)",
+   "anniversaryNext": {
+    "years": 100,
+    "date": "2048-08-07",
+    "label": "100th · 7 August 2048"
+   },
+   "headlineModern": "Belgravians at the Wembley Olympics; Gailly's marathon",
+   "headlinePrinted": "Olympic Games.",
+   "extract": "Of Etienne Gailly, running for his country—Belgium—better known to some of us during the war as \"Steve\" and his very gallant effort in the Marathon will probably be talked of in the future almost as much as the memorable \"Dorando\" marathon. Etienne led practically all the way and was first to enter the Stadium but he had run himself to a standstill and was eventually third, his time being 2 hrs. 35 mins. 33 secs.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B104-04.webp",
+    "kind": "photo",
+    "source": "crops/B227/B227-p14-gailly-finish-1948.jpg",
+    "fromItem": "B227-36",
+    "caption": "A shattered Etienne Gailly is led away from the finish of the Olympic Marathon of 1948.",
+    "w": 537,
+    "h": 1432
+   },
+   "credit": null,
+   "category": "international",
+   "why": "Home Olympics: Nankeville 6th in the 1,500 m, Churcher 5th in the 10,000 m walk, and wartime member Etienne Gailly's famous marathon bronze for Belgium",
+   "verified": "Text supports Nankeville 6th in 3:52.6, Churcher won his heat inside Olympic record then 5th, Bill Lucas in 5,000 m, and Gailly (\"Steve\" during the war) led into the stadium and finished third. Gailly ran for Belgium, not Belgrave.",
+   "related": [
+    "B104-05",
+    "B104-14",
+    "B103-06",
+    "B103-04",
+    "B103-07"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B104-04"
+  },
+  {
+   "id": "b112-16",
+   "itemId": "B112-16",
+   "issue": "B112",
+   "issueLabel": "August 1951",
+   "issuePrinted": "No. 112",
+   "date": "1951-04-07",
+   "dateLabel": "7 April 1951",
+   "dateSource": "printed",
+   "dateNote": "text: 'the first National Road Relay being held over the usual Mitcham to Brighton course on April 7th' (issue Aug 1951)",
+   "anniversaryNext": {
+    "years": 100,
+    "date": "2051-04-07",
+    "label": "100th · 7 April 2051"
+   },
+   "headlineModern": "Belgrave win the first National Road Relay",
+   "headlinePrinted": "NATIONAL ROAD RELAY",
+   "extract": "Then came what to Thames Valley was the final nail in their \"coffin\" in the shape of that old-looking runner, Charlie Smart, home on leave from Germany, and he set up a new course record and increased our lead to 3 minutes 27 seconds.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B112-16.webp",
+    "kind": "page",
+    "source": "pages/B112/B112-p09.webp",
+    "fromItem": "B112-16",
+    "caption": "Page 9 of The Belgravian, August 1951 (printed No. 112)",
+    "w": 732,
+    "h": 830
+   },
+   "credit": null,
+   "category": "road",
+   "why": "Belgrave win the first ever National Road Relay (London to Brighton), a national title the club made its own",
+   "verified": "Text confirms first National Road Relay, Mitcham to Brighton, Belgrave 1st in 3.53.38 from Thames Valley; Charlie Smart (home on leave from Germany) set a course record. Year from issue date.",
+   "related": [
+    "B111-12",
+    "B116-33",
+    "B139-08"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B112-16"
+  },
+  {
+   "id": "b136-03",
+   "itemId": "B136-03",
+   "issue": "B136",
+   "issueLabel": "October 1958",
+   "issuePrinted": "No. 136",
+   "date": "1958-08",
+   "dateLabel": "August 1958",
+   "dateSource": "issue",
+   "dateNote": "Editorial (issue Oct 1958) records the Stockholm European 20 km win; the day is not printed (European Championships, August 1958)",
+   "anniversaryNext": {
+    "years": 75,
+    "date": "2033-08",
+    "label": "75th · August 2033"
+   },
+   "headlineModern": "Stan Vickers is European 20 km walk champion",
+   "headlinePrinted": "Editorial",
+   "extract": "We are indeed proud to record the outstanding achievement of Stan Vickers in outclassing the best walkers in Europe to win the gold medal at Stockholm in the European 20 kilos. Championship.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B136-03.webp",
+    "kind": "page",
+    "source": "pages/B136/B136-p02.webp",
+    "fromItem": "B136-03",
+    "caption": "Page 2 of The Belgravian, October 1958 (printed No. 136)",
+    "w": 694,
+    "h": 446
+   },
+   "credit": null,
+   "category": "walking",
+   "why": "Stan Vickers becomes European 20 km walk champion, the club's first European title in this era",
+   "verified": "Editorial and B136-34 confirm gold at Stockholm in the European 20 km; B136-34 quotes chief judge Harold Whitlock calling it \"the best piece of race-walking I have ever seen\". Exact day not in text.",
+   "related": [
+    "B136-34",
+    "B136-04",
+    "B130-24",
+    "B127-23"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B136-03"
+  },
+  {
+   "id": "b143-03",
+   "itemId": "B143-03",
+   "issue": "B143",
+   "issueLabel": "September 1960",
+   "issuePrinted": "No. 143",
+   "date": "1960-09-02",
+   "dateLabel": "2 September 1960",
+   "dateSource": "outside",
+   "dateNote": "Editorial (Sept 1960 issue) reports the Rome Olympic 20 km walk; text gives no day. (Race was 2 Sept 1960 - from outside knowledge, not printed.)",
+   "anniversaryNext": {
+    "years": 75,
+    "date": "2035-09-02",
+    "label": "75th · 2 September 2035"
+   },
+   "headlineModern": "Stan Vickers takes Olympic 20 km walk bronze in Rome",
+   "headlinePrinted": "EDITORIAL",
+   "extract": "Salute STANLEY F. VICKERS! Britain's most reliable athletics competitor brings home to his Club and Country an Olympic bronze medal to rest alongside the European Gold Medal he already holds.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B143-03.webp",
+    "kind": "photo",
+    "source": "crops/B143/B143-p01-vickers-cover.jpg",
+    "fromItem": "B143-01",
+    "caption": "Cover Photo. by E.D.Lacey : S.F. VICKERS",
+    "w": 720,
+    "h": 960
+   },
+   "credit": null,
+   "category": "walking",
+   "why": "Stan Vickers wins Olympic bronze at Rome; three Belgravians at one Games (Vickers, Eric Hall 10th, Ranjit Bhatia for India) - a club record.",
+   "verified": "Text supports bronze in the 20 km walk behind Golubnichiy (49.2 sec), Hall 10th, Bhatia in 5,000/10,000 m for India, and states three Olympians is a club record. Headline is just EDITORIAL.",
+   "related": [
+    "B144-41",
+    "B144-32",
+    "B143-38"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B143-03"
+  },
+  {
+   "id": "b152-57",
+   "itemId": "B152-57",
+   "issue": "B152",
+   "issueLabel": "December 1963",
+   "issuePrinted": "No. 151",
+   "date": "1963-10-19",
+   "dateLabel": "19 October 1963",
+   "dateSource": "printed",
+   "dateNote": "Text: \"at Stompond Lane track, Walton, on October 19th\"; issue Dec 1963.",
+   "anniversaryNext": {
+    "years": 75,
+    "date": "2038-10-19",
+    "label": "75th · 19 October 2038"
+   },
+   "headlineModern": "Barry Sawyer sets a world best for 25 miles",
+   "headlinePrinted": "World Best For SAWYER",
+   "extract": "Another episode in the annals of Belgrave Harriers was recorded at Stompond Lane track, Walton, on October 19th---writes Gordon Doubleday--- when Barry Sawyer, at the peak of form, set a new World's best mark for 25 miles of 2:17:10.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B152-57.webp",
+    "kind": "photo",
+    "source": "crops/B152/B152-p13-barry-sawyer-changeover.jpg",
+    "fromItem": "B152-20",
+    "caption": "LEFT:Barry Sawyer looks for the opposition after giving John Thresher an 8 second lead at the first change-over.",
+    "w": 461,
+    "h": 630
+   },
+   "credit": null,
+   "category": "road",
+   "why": "Barry Sawyer sets a world best for 25 miles on the track (2:17:10) - a rare Belgrave world mark outside walking.",
+   "verified": "Text supports a \"World's best mark\" for 25 miles in an R.R.C. track race at Walton (world best, not ratified record). Photo is from the Brighton relay report a week earlier in the same issue.",
+   "related": [
+    "B153-11"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B152-57"
+  },
+  {
+   "id": "b159-04",
+   "itemId": "B159-04",
+   "issue": "B159",
+   "issueLabel": "August 1966",
+   "issuePrinted": "No. 159",
+   "date": "1966-08",
+   "dateLabel": "August 1966",
+   "dateSource": "issue",
+   "dateNote": "Aug 1966 editorial on the Commonwealth Games in Jamaica; no day printed.",
+   "anniversaryNext": {
+    "years": 75,
+    "date": "2041-08",
+    "label": "75th · August 2041"
+   },
+   "headlineModern": "Ray Middleton wins Commonwealth Games walk silver",
+   "headlinePrinted": "EDITORIAL",
+   "extract": "As a medal winner,Ray now joins that illustrious pair of Belgravians Tommy Green (Olympic Gold) and Stan Vickers (Olympic Bronze and European Gold).",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B159-04.webp",
+    "kind": "photo",
+    "source": "crops/B160/B160-p02-middleton-kingston-opening-ceremony.jpg",
+    "fromItem": "B160-02",
+    "caption": "British Empire and Commonwealth Games silver-medallist Ray Middleton and the opening ceremony of the Games in Kingston, Jamaica.",
+    "w": 1000,
+    "h": 1380
+   },
+   "credit": null,
+   "category": "walking",
+   "why": "Ray Middleton wins Commonwealth Games silver in the 20 miles walk at Kingston, joining Tommy Green and Stan Vickers as Belgrave Games medallists.",
+   "verified": "Text supports silver within 30 sec of Ron Wallwork. Photo is from the following issue (B160-02).",
+   "related": [
+    "B160-48",
+    "B154-08",
+    "B172-61",
+    "B169-56"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B159-04"
+  },
+  {
+   "id": "b168-47",
+   "itemId": "B168-47",
+   "issue": "B168",
+   "issueLabel": "December 1968",
+   "issuePrinted": "No. 168",
+   "date": "1968-10-18",
+   "dateLabel": "18 October 1968",
+   "dateSource": "outside",
+   "dateNote": "Dec 1968 issue on the Mexico Olympics (Oct 1968); no day printed.",
+   "anniversaryNext": {
+    "years": 75,
+    "date": "2043-10-18",
+    "label": "75th · 18 October 2043"
+   },
+   "headlineModern": "Club member Ed Lacey's Beamon photo defines Mexico 1968",
+   "headlinePrinted": "Olympics",
+   "extract": "His shot of Bob Beamon soaring 29'-2½\" across the long jump pit warranted a whole page and is the photograph by which posterity will remember Mexico 1968--and by which Belgravians will be reminded that winning races is not the only way of bringing fame to Belgrave.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B168-47.webp",
+    "kind": "photo",
+    "source": "crops/B168/B168-p35-beamon-keino-ryun.jpg",
+    "fromItem": "B168-47",
+    "caption": "CENTRE:Keino (Ken) beats Ryun (USA) by a 'street' to take 1500m. / CENTRE: The scoop of them all! Bob Beamon (USA) soars to his fantastic world record of 29'-2½\".",
+    "w": 1000,
+    "h": 587
+   },
+   "credit": null,
+   "category": "other",
+   "why": "Club member Ed Lacey, photographer of so many Belgravian pages, takes the Bob Beamon long-jump picture that defined Mexico 1968.",
+   "verified": "Text supports Lacey on the Sunday Times Olympic team (his third Olympics), over half the Track & Field News Olympic photos, and the Beamon whole-page shot. Previous-shortlist item - verified.",
+   "related": [
+    "B168-48"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B168-47"
+  },
+  {
+   "id": "b187-17",
+   "itemId": "B187-17",
+   "issue": "B187",
+   "issueLabel": "December 1974",
+   "issuePrinted": "No. 187",
+   "date": "1974-09-29",
+   "dateLabel": "29 September 1974",
+   "dateSource": "printed",
+   "dateNote": "text: 'On Sunday September 29th' in the December 1974 issue",
+   "anniversaryNext": {
+    "years": 75,
+    "date": "2049-09-29",
+    "label": "75th · 29 September 2049"
+   },
+   "headlineModern": "Ray Middleton sets five world bests in an 8-hour walk",
+   "headlinePrinted": "MIDDLETON SETS WORLD BESTS",
+   "extract": "The previous records had been set by H.W.Whitlock (Met. WC) on October 5th 1935. Harold, now 70 years old, was present on this occasion as walking judge.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B187-17.webp",
+    "kind": "photo",
+    "source": "crops/B187/B187-p01-cover.jpg",
+    "fromItem": "B187-01",
+    "caption": "Front page: 1974 was a good year for Ray Middleton - winner of the London to Brighton, Hastings to Brighton and Accolade 8 Hour walks, setting five new world best performances in the latter.",
+    "w": 963,
+    "h": 1116
+   },
+   "credit": null,
+   "category": "walking",
+   "why": "Ray Middleton breaks 39-year-old world best walking marks for 6, 7 and 8 hours, 40 and 50 miles - with the old record holder judging.",
+   "verified": "John Keown's report supports five world bests at New River, White Hart Lane, 53 miles 352 yds in 8 hours; previous records H.W. Whitlock, 5 Oct 1935. Editorial B187-06 also congratulates him.",
+   "related": [
+    "B187-01",
+    "B187-06",
+    "B187-21"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B187-17"
+  },
+  {
+   "id": "b191-05",
+   "itemId": "B191-05",
+   "issue": "B191",
+   "issueLabel": "March 1976",
+   "issuePrinted": "No. 191",
+   "date": "1976-07-01",
+   "dateLabel": "1 July 1976",
+   "dateSource": "printed",
+   "dateNote": "President's editorial: Ladies Section 'taking effect from 1st July 1976'",
+   "anniversaryNext": {
+    "years": 75,
+    "date": "2051-07-01",
+    "label": "75th · 1 July 2051"
+   },
+   "headlineModern": "The club votes to admit women",
+   "headlinePrinted": null,
+   "extract": "This decision was not taken lightly and when viewed objectively without the sentiment of our all male heritage there is no doubt that the future of club athletics lies in mixed clubs.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B191-05.webp",
+    "kind": "photo",
+    "source": "crops/B192/B192-p44-belles.jpg",
+    "fromItem": "B192-100",
+    "caption": "Back Page: Meet some of the 'Belles'. Left to right - Wendy Richardson, Jane Pritchard, Anna Matthews, Tina Couzens, Joan Samuels, Pat Mead and Win Shepherd.",
+    "w": 1000,
+    "h": 601
+   },
+   "credit": null,
+   "category": "club",
+   "why": "Belgrave ends 89 years as an all-male club; the Ladies Section transforms membership, the Hall and the club's future.",
+   "verified": "Unsigned-headed editorial by President Bill Couzens (March 1976) announces the committee decision after a members' questionnaire; first woman member Jane Pritchard is named in B191-58; welcome column B192-58; first track season B195-41.",
+   "related": [
+    "B191-58",
+    "B192-58",
+    "B192-59",
+    "B192-100",
+    "B192-12",
+    "B192-99",
+    "B195-41"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B191-05"
+  },
+  {
+   "id": "b197-15",
+   "itemId": "B197-15",
+   "issue": "B197",
+   "issueLabel": "October 1978",
+   "issuePrinted": "No. 197",
+   "date": "1978-05-24",
+   "dateLabel": "24 May 1978",
+   "dateSource": "printed",
+   "dateNote": "text: 'Philips International Games 100 metres on May 24th' (Commonwealth final Aug 1978 also covered)",
+   "anniversaryNext": {
+    "years": 50,
+    "date": "2028-05-24",
+    "label": "50th · 24 May 2028"
+   },
+   "headlineModern": "Ernest Obeng beats Olympic champion Don Quarrie",
+   "headlinePrinted": "Great sprinting from Ernest Obeng",
+   "extract": "Ernie stormed down the straight heading the field all the way to defeat Quarrie - 10.3 to 10.4 (photo-electric timing not in use).",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B197-15.webp",
+    "kind": "photo",
+    "source": "crops/B197/B197-p01-cover.jpg",
+    "fromItem": "B197-01",
+    "caption": "Front Cover.\nErnest Obeng of Ghana and Belgrave Harriers beats Olympic 200 metre Champion Don Quarrie of Jamaica over 100 metres at the Philips Night of Athletics, Crystal Palace May 24th.",
+    "w": 960,
+    "h": 1123
+   },
+   "credit": null,
+   "category": "track",
+   "why": "Ernest Obeng beats Olympic champion Don Quarrie and then reaches the Commonwealth Games 100 m final at Edmonton for Ghana.",
+   "verified": "Feature supports the win over Quarrie (10.3 to 10.4, hand timed), six club-record improvements, and 8th in the Edmonton final (10.34) after first round on 6 August. Cover of the same issue shows the Quarrie race.",
+   "related": [
+    "B197-01",
+    "B197-06",
+    "B199-122"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B197-15"
+  },
+  {
+   "id": "b205-11",
+   "itemId": "B205-11",
+   "issue": "B205",
+   "issueLabel": "October 1982",
+   "issuePrinted": "",
+   "date": "1982-08-31",
+   "dateLabel": "31 August 1982",
+   "dateSource": "printed",
+   "dateNote": "text says 'as from August 31st 1982, Surrey men would join with Belgrave'; Luton qualifier 'September 4th'; BAL AGM vote 'October 30th'",
+   "anniversaryNext": {
+    "years": 50,
+    "date": "2032-08-31",
+    "label": "50th · 31 August 2032"
+   },
+   "headlineModern": "Surrey AC men join Belgrave; the club enters the British League",
+   "headlinePrinted": "Welcome — THE \"AMALGAMATION\" - SURREY AC MEN JOIN BELGRAVE.",
+   "extract": "To quote Wellington. \"It was a damned close run thing\".",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B205-11.webp",
+    "kind": "photo",
+    "source": "crops/B205/B205-p24-promotion-team-left.jpg",
+    "fromItem": "B205-47",
+    "caption": "THE WINNING BRITISH LEAGUE PROMOTION TEAM CELEBRATE PRIOR TO CHUCKIN[illegible]AUL RICHLEY(Front) IN THE WATER JUMP. [Photo - Bill Laws]",
+    "w": 1000,
+    "h": 679
+   },
+   "credit": null,
+   "category": "club",
+   "why": "Surrey AC's men's section closes and merges into Belgrave, which wins its way into the British League amid controversy - the start of the 1980s revival.",
+   "verified": "Supported in detail: London AC rejected a three-club merger; Surrey AC men amalgamated; Belgrave won the Luton qualifier with eight ex-Surrey men; BAL AGM voted 28-5 to keep Belgrave in Div.5.",
+   "related": [
+    "B205-07",
+    "B205-70",
+    "B206-10"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B205-11"
+  },
+  {
+   "id": "b212-16",
+   "itemId": "B212-16",
+   "issue": "B212",
+   "issueLabel": "April 1988",
+   "issuePrinted": "No. 212",
+   "date": "1987-10-07",
+   "dateLabel": "7 October 1987",
+   "dateSource": "printed",
+   "dateNote": "text says 'And so to Wednesday 7th October - the Club Birthday'; bell inscription '100th Birthday of the Club 7 October 1987'",
+   "anniversaryNext": {
+    "years": 50,
+    "date": "2037-10-07",
+    "label": "50th · 7 October 2037"
+   },
+   "headlineModern": "The club's 100th birthday",
+   "headlinePrinted": "CENTENARY CELEBRATIONS",
+   "extract": "Bill Webb, at 93 our most senior Past Presidsent, unveiled the new Centenary Bell which had been donated by Charlie Manning.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B212-16.webp",
+    "kind": "photo",
+    "source": "crops/B212/B212-p13-centenary-bell.jpg",
+    "fromItem": "B212-16",
+    "caption": "Bill Webb has got an \"ology\" - Campanology - as he inaugurates the \"Centenary Bell\" which bears the inscription: \"This bell was unveiled by the most Senior past President - W.G.Webb - on the 100th Birthday of the Club 7 October 1987\". The Bell was donated by Chas.Manning Past President.",
+    "w": 1000,
+    "h": 706
+   },
+   "credit": null,
+   "category": "club",
+   "why": "The club's 100th birthday, celebrated at Belgrave Hall exactly a century after the King's Head meeting of 7 October 1887.",
+   "verified": "Clive Shippen's review: ~140 at Belgrave Hall, Bill Webb (93, senior past president) unveiled the Centenary Bell, cake and toast; same item also covers the 1887 sprint re-enactment, Club 20, Thames trip and Centenary Dinner (14 Nov 1987, 250 present, Steve Ovett a guest). Founding date confirmed by B210-22.",
+   "related": [
+    "B210-22",
+    "B211-13",
+    "B212-22",
+    "B211-43",
+    "B211-01"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B212-16"
+  },
+  {
+   "id": "b213-07",
+   "itemId": "B213-07",
+   "issue": "B213",
+   "issueLabel": "March 1989",
+   "issuePrinted": "",
+   "date": "1989-03-04",
+   "dateLabel": "4 March 1989",
+   "dateSource": "printed",
+   "dateNote": "text says 'at Budapest on 4th March' (issue dated March 1989)",
+   "anniversaryNext": {
+    "years": 50,
+    "date": "2039-03-04",
+    "label": "50th · 4 March 2039"
+   },
+   "headlineModern": "John Regis is World Indoor 200m champion",
+   "headlinePrinted": "STOP PRESS - WORLD CHAMPION",
+   "extract": "JOHN REGIS bounced back to his best form when he won the World Indoor 200m with a record 20.54 secs. at Budapest on 4th March. His win was Britain's first and so far only victory in these World Indoor Championships and augurs well for the summer.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B213-07.webp",
+    "kind": "photo",
+    "source": "crops/B209/B209-p01-cover-sprinter.jpg",
+    "fromItem": "B209-01",
+    "caption": "Front Cover. Injured for much of the season John Regis has managed to peak for the big ones and has produced an incredible list of performances including; Winning the Junior AAA's indoor 200m in a CBP, winning the U.K. Senior 200m, gaining an individual bronze in the European Junior 100m, a team gold in the short relay at the same Championship and culminating with a new Club record for the 200m of 20.78.",
+    "w": 1000,
+    "h": 1106
+   },
+   "credit": null,
+   "category": "international",
+   "why": "John Regis becomes World Indoor 200m champion - a Belgravian world title.",
+   "verified": "Stop-press only (3 sentences): won World Indoor 200m in Budapest in a record 20.54, Britain's first and so far only win at those championships. 'Record' is as printed (championship record).",
+   "related": [
+    "B213-41",
+    "B212-36",
+    "B208-13"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B213-07"
+  },
+  {
+   "id": "b219-05",
+   "itemId": "B219-05",
+   "issue": "B219",
+   "issueLabel": "November 1992",
+   "issuePrinted": "No. 219",
+   "date": "1992-08-29",
+   "dateLabel": "29 August 1992",
+   "dateSource": "printed",
+   "dateNote": "Title decided at 'BAL DIVISION 1 MATCH 4, COPTHALL STADIUM, 29 AUG' (results item B219-52); editorial says champions 'in 1992'",
+   "anniversaryNext": {
+    "years": 50,
+    "date": "2042-08-29",
+    "label": "50th · 29 August 2042"
+   },
+   "headlineModern": "British League and Cup champions for the first time",
+   "headlinePrinted": null,
+   "extract": "The irresistable progress of the last dozen years has culminated in Belgrave Harriers becoming British League and Cup Champions in 1992 and has offered us the chance to fight to become European Champions in 1993.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B219-05.webp",
+    "kind": "photo",
+    "source": "crops/B219/B219-p36-gre-gold-cup-winners.jpg",
+    "fromItem": "B219-52",
+    "caption": "GUARDIAN ROYAL EXCHANGE GOLD CUP WINNERS FOR THE SECOND TIME",
+    "w": 1000,
+    "h": 538
+   },
+   "credit": null,
+   "category": "track",
+   "why": "Belgrave's first British Athletics League title (with the Gold Cup) - the summit of the club's 1980s-90s track rise, sending eight men to the Barcelona Olympics.",
+   "verified": "Editorial states 'British League and Cup Champions in 1992' and lists eight Olympians; B219-53 reports the first-ever BAL Division One match win (Birmingham, 9 May 1992) and B219-52 the title-deciding Copthall match of 29 Aug 1992. Gold Cup first won 10 Aug 1991 (B217-74).",
+   "related": [
+    "B219-53",
+    "B219-52",
+    "B217-74",
+    "B219-60"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B219-05"
+  },
+  {
+   "id": "b222-46",
+   "itemId": "B222-46",
+   "issue": "B222",
+   "issueLabel": "February 1995",
+   "issuePrinted": "No. 222",
+   "date": "1994-03-12",
+   "dateLabel": "12 March 1994",
+   "dateSource": "printed",
+   "dateNote": "heading 'English CC Champs North Shields, 12 Mar' in the 1994 season review (issue Feb 1995); 12 Mar 1994 was a Saturday",
+   "anniversaryNext": {
+    "years": 50,
+    "date": "2044-03-12",
+    "label": "50th · 12 March 2044"
+   },
+   "headlineModern": "Kassa Tadesse is the club's first National cross-country champion",
+   "headlinePrinted": "Kassa - our first ever \"National\" winner — English CC Champs North Shields, 12 Mar",
+   "extract": "A very small Belgrave presence at North Shields was treated to a historic occasion as Kassa Tadesse became the first Belgrave Harrier ever to win an English National Cross Country title.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B222-46.webp",
+    "kind": "photo",
+    "source": "crops/B222/B222-p17-tadesse-southern-junior.jpg",
+    "fromItem": "B222-45",
+    "caption": "Above: Kassa Tadesse out on his own on the second lap of the SEAA Junior Cross Country Championship.",
+    "w": 536,
+    "h": 865
+   },
+   "credit": null,
+   "category": "xc",
+   "why": "First Belgravian ever to win an individual English National cross-country title (under-20 race).",
+   "verified": "Text says 'the first Belgrave Harrier ever to win an English National Cross Country title'; result 1, K.Tadesse 29:54 in the U20 race. Caveat: a junior (U20) title, not the senior National; year inferred from the issue's 1994 season coverage.",
+   "related": [
+    "B222-14",
+    "B222-184"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B222-46"
+  },
+  {
+   "id": "b225-116",
+   "itemId": "B225-116",
+   "issue": "B225",
+   "issueLabel": "February 1997",
+   "issuePrinted": "No. 225",
+   "date": "1996-10-20",
+   "dateLabel": "20 October 1996",
+   "dateSource": "printed",
+   "dateNote": "heading prints 'Chicago Marathon, 20 Oct 1996'",
+   "anniversaryNext": {
+    "years": 50,
+    "date": "2046-10-20",
+    "label": "50th · 20 October 2046"
+   },
+   "headlineModern": "Paul Evans wins the Chicago Marathon",
+   "headlinePrinted": "Chicago Marathon, 20 Oct 1996: Evans races to 3rd fastest ever British Marathon time",
+   "extract": "By 23 miles he was a minute up and enjoying the sensation of cruising to his first ever marathon win in eleven attempts.",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B225-116.webp",
+    "kind": "photo",
+    "source": "crops/B225/B225-p31-evans-staines-5000m.jpg",
+    "fromItem": "B225-86",
+    "caption": "4.At Kingsmeadow for BAL match 4 Paul Evans and Gary Staines toy with the opposition in the 5,000 metres before running in together for 'A' and 'B' wins, separated by the electrical timing by 1/100th!",
+    "w": 771,
+    "h": 1160
+   },
+   "credit": null,
+   "category": "road",
+   "why": "Paul Evans wins the Chicago Marathon in 2:08:52, then the third-fastest marathon ever by a Briton, with Gary Staines fifth.",
+   "verified": "Text supports: '1, P.Evans (Bel) 2:08:52', 'his first ever marathon win in eleven attempts', 'third fastest ever time by a Briton'. Evans was also 3rd in London 1996 (B224-70).",
+   "related": [
+    "B224-70",
+    "B223-38",
+    "B224-23"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B225-116"
+  },
+  {
+   "id": "b229-37",
+   "itemId": "B229-37",
+   "issue": "B229",
+   "issueLabel": "February 2001",
+   "issuePrinted": "No. 229",
+   "date": "2000-05-28",
+   "dateLabel": "28 May 2000",
+   "dateSource": "printed",
+   "dateNote": "report prints 'Liege, Belgium - 27/28 May 2000'",
+   "anniversaryNext": {
+    "years": 50,
+    "date": "2050-05-28",
+    "label": "50th · 28 May 2050"
+   },
+   "headlineModern": "European Champion Clubs' Cup win in Liège",
+   "headlinePrinted": "COUPE D'EUROPE des CLUBS CHAMPIONS BELGRAVE TRIUMPHANT!",
+   "extract": "Sean hung on, tackled his opponent at the bottom bend and then came strong in the final stages in the home straight to bring us home by 0.32 seconds and a 7 point win over the whole two days!",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B229-37.webp",
+    "kind": "photo",
+    "source": "crops/B229/B229-p20-darren-campbell-trophies.jpg",
+    "fromItem": "B229-37",
+    "caption": "Left: Sprint Ace Darren Campbell scooped the prizes at the European Champion Clubs Cup competition. Best runner, best overall performance and Captain of the winning Belgrave team!",
+    "w": 828,
+    "h": 656
+   },
+   "credit": null,
+   "category": "international",
+   "why": "Belgrave win Group B of the European Champion Clubs Cup in Liege, earning promotion to Group A (Madrid 2001).",
+   "verified": "Report headlined 'BELGRAVE TRIUMPHANT!'; won by 7 points over CA Montreuil 93, decided by the final 4x400m; B229-38 announces Group A in Madrid 26-27 May 2001. Previous-shortlist item; verified.",
+   "related": [
+    "B229-38",
+    "B228-30",
+    "B224-115"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B229-37"
+  },
+  {
+   "id": "b230-21",
+   "itemId": "B230-21",
+   "issue": "B230",
+   "issueLabel": "June 2003",
+   "issuePrinted": "No. 230",
+   "date": "2002-04-27",
+   "dateLabel": "27 April 2002",
+   "dateSource": "printed",
+   "dateNote": "text prints 'AAA \"National\" 12-Stage Road Relay, Sutton Coldfield, 27 April 2002'",
+   "anniversaryNext": {
+    "years": 25,
+    "date": "2027-04-27",
+    "label": "25th · 27 April 2027"
+   },
+   "headlineModern": "National 12-stage champions again, after 51 years",
+   "headlinePrinted": "The National 12 Stage title returns to Belgrave after 51 years",
+   "extract": "The Bels. predictably took the lead with three laps gone and then spent the next three hours turning the screws to open up the greatest winning margin in the history of the race (6 minutes 26 seconds)",
+   "extractTrimmed": true,
+   "image": {
+    "file": "moments/img/B230-21.webp",
+    "kind": "photo",
+    "source": "crops/B230/B230-p13-winning-12-stage-team.jpg",
+    "fromItem": "B230-21",
+    "caption": "Belgrave's Winning AAA 12-Stage Team at Sutton Park. Back row: Andy Graffin, Spencer Barden, Paul Freary, Stephen Sharp, Alaster Stewart, David Anderson, Allen Graffin, Paul Evans. Front row: Lee Hurst, Mark Miles, Alan Mead (team manager), Richard Ward, Charles Herrington.",
+    "w": 1000,
+    "h": 663
+   },
+   "credit": null,
+   "category": "road",
+   "why": "First National 12-stage road relay title since 1951, won by the biggest margin in the race's history; it started Belgrave's 2000s relay dynasty.",
+   "verified": "Text supports it fully: 'first win in the National 12 Stage since 1951', winning margin 6:26 called 'the greatest winning margin in the history of the race'. Previous-shortlist item.",
+   "related": [
+    "B230-20",
+    "B230-56",
+    "B237-02"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B230-21"
+  },
+  {
+   "id": "b237-02",
+   "itemId": "B237-02",
+   "issue": "B237",
+   "issueLabel": "November 2005",
+   "issuePrinted": "No. 237",
+   "date": "2005-10-22",
+   "dateLabel": "22 October 2005",
+   "dateSource": "printed",
+   "dateNote": "text prints 'AAA Men's 6-Stage Road Relay, Sutton Park, 22 October 2005'",
+   "anniversaryNext": {
+    "years": 25,
+    "date": "2030-10-22",
+    "label": "25th · 22 October 2030"
+   },
+   "headlineModern": "A record fifth National 6-stage win in a row",
+   "headlinePrinted": "Road Relay Glory",
+   "extract": "We set out some ten years ago to attempt to emulate the great road running teams – Tipton, Bingley, Birchfield, Gateshead.  This race was a beauty and although not wishing to show any signs of resting on our laurels, we can surely now say: “We are now up there with the best of them.”",
+   "extractTrimmed": false,
+   "image": {
+    "file": "moments/img/B237-02.webp",
+    "kind": "photo",
+    "source": "crops/B237/B237-p01-spencer-barden-tape.jpg",
+    "fromItem": "B237-02",
+    "caption": "Above: Spencer Barden takes the tape for Belgrave’s fifth consecutive National 6-Stage Road Relay win. Photo by Mark Shearman.",
+    "w": 697,
+    "h": 838
+   },
+   "credit": null,
+   "category": "road",
+   "why": "A record fifth consecutive National 6-stage road relay title.",
+   "verified": "Text: 'So it's a record five consecutive victories'; result 1 Belgrave 1:46:30. Previous-shortlist item.",
+   "related": [
+    "B231-38",
+    "B261-09",
+    "B268-06"
+   ],
+   "link": "https://www.belgraveharriers.com/belgravian#B237-02"
+  }
+ ]
+}
