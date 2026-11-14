@@ -118,7 +118,8 @@ urls = []
 issues = []
 for f in sorted(glob.glob(os.path.join(ROOT, 'issues', 'B*.json'))):
     d = json.load(open(f)); no = d['issue']; issues.append(d)
-    body = f'<span class="label">No. {no}</span><h1>The Belgravian, {e(d["label"])}</h1>'
+    nl = d['printed'] if 'printed' in d else f'No. {no}'   # as the issue prints it (or nothing)
+    body = (f'<span class="label">{e(nl)}</span>' if nl else '') + f'<h1>The Belgravian, {e(d["label"])}</h1>'
     body += f'<p class="meta">{len(d["items"])} items · {d["pageCount"]} pages · <a href="{READER}B{no}">Read beside the original pages</a></p>'
     for it in d['items']:
         body += f'<article id="{e(it["id"])}"><span class="label">{e(TYPE.get(it.get("type"), "Item"))} · page {min(it.get("pages") or [1])}</span>'
@@ -135,7 +136,7 @@ for f in sorted(glob.glob(os.path.join(ROOT, 'issues', 'B*.json'))):
             if n and n not in names: names.append(n)
         if names: body += '<div class="chips">' + ''.join(person_link(n, '../') for n in names) + '</div>'
         body += f'<a class="read" href="{READER}{e(it["id"])}">See it on the printed page →</a></article>'
-    title = f'The Belgravian, {d["label"]} (No. {no}) · Belgrave Harriers'
+    title = f'The Belgravian, {d["label"]}' + (f' ({nl})' if nl else '') + ' · Belgrave Harriers'
     desc = f'Belgrave Harriers club gazette, {d["label"]}: ' + '; '.join(x.get('heading') for x in d['items'] if x.get('heading'))[:150]
     page(f'issues/B{no}.html', title, desc, body, f'issues/B{no}.html'); urls.append(f'issues/B{no}.html')
 
@@ -190,7 +191,7 @@ body += f'<p>The club’s gazette, transcribed issue by issue. {len(issues)} iss
 body += f'Read them beside the original printed pages on <a href="https://www.belgraveharriers.com/belgravian">belgraveharriers.com</a>.</p>'
 for dec in sorted(by):
     body += f'<h3>{dec}</h3><ul class="list">' + ''.join(
-        f'<li><a href="issues/B{d["issue"]}.html">{e(d["label"])}</a> · No. {d["issue"]} · {len(d["items"])} items</li>'
+        f'<li><a href="issues/B{d["issue"]}.html">{e(d["label"])}</a>' + ((' · ' + e(d['printed'])) if d.get('printed') else (f' · No. {d["issue"]}' if 'printed' not in d else '')) + f' · {len(d["items"])} items</li>'
         for d in sorted(by[dec], key=lambda d: d['date'])) + '</ul>'
 named = sorted([p for p in people if p['id'] in PAGE], key=lambda p: detail[p['id']].get('sort') or p['name'].lower())
 letters = sorted({(p.get('s') or p['name'][-1:]).upper()[:1] for p in named if (p.get('s') or '').isalpha()})

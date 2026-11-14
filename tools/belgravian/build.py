@@ -171,6 +171,8 @@ PUB = set((int(x) if x.isdigit() else x) for x in open(f'{W}/published.txt').rea
 def published(no):
     return (isinstance(no, int) and 141 <= no <= 172) or no in PUB   # 1960s pilot only; everything else must be listed
 
+# printed numbering, checked against the mastheads 14 Nov 2026 (Steve: 'match the number to what the print edition calls itself')
+PRINTED = json.load(open(f'{W}/printed.json')) if os.path.exists(f'{W}/printed.json') else {}
 issues, search = [], []
 VARIANTS = {}
 for f in sorted(glob.glob(f'{W}/out/B*.json')):
@@ -189,10 +191,12 @@ for f in sorted(glob.glob(f'{W}/out/B*.json')):
             raw = re.sub(r'\s*\(.*?\)', '', event_tag0(e)).strip().lower().replace('\u2019', "'")
             if raw and raw != t.lower(): VARIANTS.setdefault(t, set()).add(raw)
         it['events'] = list(dict.fromkeys(fin))
+    if str(no) in PRINTED: d['printed'] = PRINTED[str(no)]   # what the issue calls itself ('No. 1', '3rd Edition, 1929', or '' if nothing printed)
     json.dump(d, open(f'{OUT}/issues/B{no}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     y = int(str(d['date'])[:4])
     issues.append({'issue': no, 'label': d['label'], 'date': d['date'], 'year': y,
                    'pageCount': d['pageCount'], 'items': len(d['items'])})
+    if 'printed' in d: issues[-1]['printed'] = d['printed']
     for it in d['items']:
         ppl = []
         for p in it['people']:

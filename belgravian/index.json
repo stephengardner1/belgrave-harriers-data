@@ -7,7 +7,8 @@
    "date": "1925-04",
    "year": 1925,
    "pageCount": 9,
-   "items": 19
+   "items": 19,
+   "printed": "No. 1"
   },
   {
    "issue": 3,
@@ -15,7 +16,8 @@
    "date": "1925-07",
    "year": 1925,
    "pageCount": 8,
-   "items": 17
+   "items": 17,
+   "printed": "No. 2"
   },
   {
    "issue": 4,
@@ -23,7 +25,8 @@
    "date": "1925-11",
    "year": 1925,
    "pageCount": 8,
-   "items": 10
+   "items": 10,
+   "printed": "No. 3"
   },
   {
    "issue": 5,
@@ -31,7 +34,8 @@
    "date": "1926-02",
    "year": 1926,
    "pageCount": 8,
-   "items": 10
+   "items": 10,
+   "printed": "No. 4"
   },
   {
    "issue": 6,
@@ -39,7 +43,8 @@
    "date": "1926-05",
    "year": 1926,
    "pageCount": 8,
-   "items": 10
+   "items": 10,
+   "printed": "No. 5"
   },
   {
    "issue": 7,
@@ -47,7 +52,8 @@
    "date": "1926-09",
    "year": 1926,
    "pageCount": 8,
-   "items": 13
+   "items": 13,
+   "printed": "No. 6"
   },
   {
    "issue": 8,
@@ -55,7 +61,8 @@
    "date": "1926-12",
    "year": 1926,
    "pageCount": 8,
-   "items": 13
+   "items": 13,
+   "printed": "No. 7"
   },
   {
    "issue": 9,
@@ -63,7 +70,8 @@
    "date": "1927-02",
    "year": 1927,
    "pageCount": 8,
-   "items": 12
+   "items": 12,
+   "printed": "No. 8"
   },
   {
    "issue": 10,
@@ -71,7 +79,8 @@
    "date": "1927-06",
    "year": 1927,
    "pageCount": 8,
-   "items": 15
+   "items": 15,
+   "printed": "No. 9"
   },
   {
    "issue": 11,
@@ -79,7 +88,8 @@
    "date": "1927-10",
    "year": 1927,
    "pageCount": 16,
-   "items": 12
+   "items": 12,
+   "printed": "10th Edition"
   },
   {
    "issue": 12,
@@ -87,7 +97,8 @@
    "date": "1927-11",
    "year": 1927,
    "pageCount": 20,
-   "items": 19
+   "items": 19,
+   "printed": "11th Edition"
   },
   {
    "issue": 13,
@@ -95,7 +106,8 @@
    "date": "1928-01",
    "year": 1928,
    "pageCount": 16,
-   "items": 12
+   "items": 12,
+   "printed": "1st Edition, 1928"
   },
   {
    "issue": 14,
@@ -103,7 +115,8 @@
    "date": "1928-02",
    "year": 1928,
    "pageCount": 21,
-   "items": 20
+   "items": 20,
+   "printed": "2nd Edition, 1928"
   },
   {
    "issue": 15,
@@ -111,7 +124,8 @@
    "date": "1928-03",
    "year": 1928,
    "pageCount": 20,
-   "items": 19
+   "items": 19,
+   "printed": "3rd Edition, 1928"
   },
   {
    "issue": 16,
@@ -119,7 +133,8 @@
    "date": "1928-05",
    "year": 1928,
    "pageCount": 24,
-   "items": 17
+   "items": 17,
+   "printed": "4th Edition, 1928"
   },
   {
    "issue": 17,
@@ -127,7 +142,8 @@
    "date": "1928-06",
    "year": 1928,
    "pageCount": 20,
-   "items": 18
+   "items": 18,
+   "printed": "5th Edition, 1928"
   },
   {
    "issue": 18,
@@ -135,7 +151,8 @@
    "date": "1928-07",
    "year": 1928,
    "pageCount": 16,
-   "items": 13
+   "items": 13,
+   "printed": "6th Edition, 1928"
   },
   {
    "issue": 19,
@@ -143,7 +160,8 @@
    "date": "1928-09",
    "year": 1928,
    "pageCount": 20,
-   "items": 18
+   "items": 18,
+   "printed": "7th Edition, 1928"
   },
   {
    "issue": 20,
@@ -151,7 +169,8 @@
    "date": "1928-10",
    "year": 1928,
    "pageCount": 24,
-   "items": 23
+   "items": 23,
+   "printed": "8th Edition, 1928"
   },
   {
    "issue": 21,
@@ -159,7 +178,8 @@
    "date": "1928-11",
    "year": 1928,
    "pageCount": 20,
-   "items": 19
+   "items": 19,
+   "printed": "9th Edition, 1928"
   },
   {
    "issue": 22,
@@ -167,7 +187,8 @@
    "date": "1928-12",
    "year": 1928,
    "pageCount": 20,
-   "items": 22
+   "items": 22,
+   "printed": "1st Edition, 1929"
   },
   {
    "issue": 23,
@@ -175,7 +196,8 @@
    "date": "1929-02",
    "year": 1929,
    "pageCount": 28,
-   "items": 25
+   "items": 25,
+   "printed": "2nd Edition, 1929"
   },
   {
    "issue": 24,
@@ -183,7 +205,8 @@
    "date": "1929-04",
    "year": 1929,
    "pageCount": 20,
-   "items": 19
+   "items": 19,
+   "printed": "3rd Edition, 1929"
   },
   {
    "issue": 25,
@@ -191,7 +214,8 @@
    "date": "1929-05",
    "year": 1929,
    "pageCount": 20,
-   "items": 15
+   "items": 15,
+   "printed": "4th Edition, 1929"
   },
   {
    "issue": 26,
@@ -199,7 +223,8 @@
    "date": "1929-06",
    "year": 1929,
    "pageCount": 20,
-   "items": 16
+   "items": 16,
+   "printed": "5th Edition, 1929"
   },
   {
    "issue": 27,
@@ -207,7 +232,8 @@
    "date": "1929-07",
    "year": 1929,
    "pageCount": 24,
-   "items": 18
+   "items": 18,
+   "printed": "6th Edition, 1929"
   },
   {
    "issue": 28,
@@ -215,7 +241,8 @@
    "date": "1929-08",
    "year": 1929,
    "pageCount": 16,
-   "items": 15
+   "items": 15,
+   "printed": "7th Edition, 1929"
   },
   {
    "issue": 29,
@@ -223,7 +250,8 @@
    "date": "1929-09",
    "year": 1929,
    "pageCount": 24,
-   "items": 17
+   "items": 17,
+   "printed": "8th Edition, 1929"
   },
   {
    "issue": 30,
@@ -231,7 +259,8 @@
    "date": "1929-11",
    "year": 1929,
    "pageCount": 20,
-   "items": 12
+   "items": 12,
+   "printed": "9th Edition, 1929"
   },
   {
    "issue": 32,
@@ -239,7 +268,8 @@
    "date": "1930-01",
    "year": 1930,
    "pageCount": 20,
-   "items": 18
+   "items": 18,
+   "printed": "1st Edition, 1930"
   },
   {
    "issue": 33,
@@ -247,7 +277,8 @@
    "date": "1930-02",
    "year": 1930,
    "pageCount": 24,
-   "items": 22
+   "items": 22,
+   "printed": "2nd Edition, 1930"
   },
   {
    "issue": 34,
@@ -255,7 +286,8 @@
    "date": "1930-04",
    "year": 1930,
    "pageCount": 24,
-   "items": 17
+   "items": 17,
+   "printed": "3rd Edition, 1930"
   },
   {
    "issue": 35,
@@ -263,7 +295,8 @@
    "date": "1930-05",
    "year": 1930,
    "pageCount": 20,
-   "items": 15
+   "items": 15,
+   "printed": "4th Edition, 1930"
   },
   {
    "issue": 36,
@@ -271,7 +304,8 @@
    "date": "1930-06",
    "year": 1930,
    "pageCount": 16,
-   "items": 14
+   "items": 14,
+   "printed": "5th Edition, 1930"
   },
   {
    "issue": 37,
@@ -279,7 +313,8 @@
    "date": "1930-07",
    "year": 1930,
    "pageCount": 24,
-   "items": 17
+   "items": 17,
+   "printed": "6th Edition, 1930"
   },
   {
    "issue": 38,
@@ -287,7 +322,8 @@
    "date": "1930-08",
    "year": 1930,
    "pageCount": 20,
-   "items": 18
+   "items": 18,
+   "printed": "7th Edition, 1930"
   },
   {
    "issue": 39,
@@ -295,7 +331,8 @@
    "date": "1930-10",
    "year": 1930,
    "pageCount": 24,
-   "items": 14
+   "items": 14,
+   "printed": "8th Edition, 1930"
   },
   {
    "issue": 40,
@@ -303,7 +340,8 @@
    "date": "1930-12",
    "year": 1930,
    "pageCount": 20,
-   "items": 21
+   "items": 21,
+   "printed": "9th Edition, 1930"
   },
   {
    "issue": 41,
@@ -311,7 +349,8 @@
    "date": "1931-01",
    "year": 1931,
    "pageCount": 28,
-   "items": 19
+   "items": 19,
+   "printed": "1st Edition, 1931"
   },
   {
    "issue": 42,
@@ -319,7 +358,8 @@
    "date": "1931-02",
    "year": 1931,
    "pageCount": 20,
-   "items": 18
+   "items": 18,
+   "printed": "2nd Edition, 1931"
   },
   {
    "issue": 43,
@@ -327,7 +367,8 @@
    "date": "1931-05",
    "year": 1931,
    "pageCount": 16,
-   "items": 11
+   "items": 11,
+   "printed": "3rd Edition, 1931"
   },
   {
    "issue": 44,
@@ -335,7 +376,8 @@
    "date": "1931-06",
    "year": 1931,
    "pageCount": 24,
-   "items": 18
+   "items": 18,
+   "printed": "4th Edition, 1931"
   },
   {
    "issue": 45,
@@ -343,7 +385,8 @@
    "date": "1931-07",
    "year": 1931,
    "pageCount": 20,
-   "items": 15
+   "items": 15,
+   "printed": "5th Edition, 1931"
   },
   {
    "issue": 46,
@@ -351,7 +394,8 @@
    "date": "1931-08",
    "year": 1931,
    "pageCount": 16,
-   "items": 12
+   "items": 12,
+   "printed": "6th Edition, 1931"
   },
   {
    "issue": 47,
@@ -359,7 +403,8 @@
    "date": "1931-10",
    "year": 1931,
    "pageCount": 20,
-   "items": 15
+   "items": 15,
+   "printed": "7th Edition, 1931"
   },
   {
    "issue": 48,
@@ -367,7 +412,8 @@
    "date": "1931-12",
    "year": 1931,
    "pageCount": 20,
-   "items": 22
+   "items": 22,
+   "printed": "8th Edition, 1931"
   },
   {
    "issue": 49,
@@ -375,7 +421,8 @@
    "date": "1932-01",
    "year": 1932,
    "pageCount": 20,
-   "items": 18
+   "items": 18,
+   "printed": "1st Edition, 1932"
   },
   {
    "issue": 50,
@@ -383,7 +430,8 @@
    "date": "1932-02",
    "year": 1932,
    "pageCount": 20,
-   "items": 19
+   "items": 19,
+   "printed": "2nd Edition, 1932"
   },
   {
    "issue": 51,
@@ -391,7 +439,8 @@
    "date": "1932-04",
    "year": 1932,
    "pageCount": 16,
-   "items": 9
+   "items": 9,
+   "printed": "3rd Edition, 1932"
   },
   {
    "issue": 52,
@@ -399,7 +448,8 @@
    "date": "1932-05",
    "year": 1932,
    "pageCount": 28,
-   "items": 22
+   "items": 22,
+   "printed": "4th Edition, 1932"
   },
   {
    "issue": 53,
@@ -407,7 +457,8 @@
    "date": "1932-07",
    "year": 1932,
    "pageCount": 20,
-   "items": 15
+   "items": 15,
+   "printed": "5th Edition, 1932"
   },
   {
    "issue": 54,
@@ -415,7 +466,8 @@
    "date": "1932-08",
    "year": 1932,
    "pageCount": 24,
-   "items": 17
+   "items": 17,
+   "printed": "6th Edition, 1932"
   },
   {
    "issue": 55,
@@ -423,7 +475,8 @@
    "date": "1932-11",
    "year": 1932,
    "pageCount": 24,
-   "items": 23
+   "items": 23,
+   "printed": "7th Edition, 1932"
   },
   {
    "issue": 56,
@@ -431,7 +484,8 @@
    "date": "1933-01",
    "year": 1933,
    "pageCount": 24,
-   "items": 22
+   "items": 22,
+   "printed": "1st Edition, 1933"
   },
   {
    "issue": 57,
@@ -439,7 +493,8 @@
    "date": "1933-02",
    "year": 1933,
    "pageCount": 24,
-   "items": 22
+   "items": 22,
+   "printed": "2nd Edition, 1933"
   },
   {
    "issue": 58,
@@ -447,7 +502,8 @@
    "date": "1933-04",
    "year": 1933,
    "pageCount": 24,
-   "items": 16
+   "items": 16,
+   "printed": "3rd Edition, 1933"
   },
   {
    "issue": 59,
@@ -455,7 +511,8 @@
    "date": "1933-06",
    "year": 1933,
    "pageCount": 24,
-   "items": 19
+   "items": 19,
+   "printed": "4th Edition, 1933"
   },
   {
    "issue": 60,
@@ -463,7 +520,8 @@
    "date": "1933-09",
    "year": 1933,
    "pageCount": 28,
-   "items": 18
+   "items": 18,
+   "printed": "5th Edition, 1933"
   },
   {
    "issue": 61,
@@ -471,7 +529,8 @@
    "date": "1933-11",
    "year": 1933,
    "pageCount": 28,
-   "items": 22
+   "items": 22,
+   "printed": "6th Edition, 1933"
   },
   {
    "issue": 62,
@@ -479,7 +538,8 @@
    "date": "1934-01",
    "year": 1934,
    "pageCount": 24,
-   "items": 24
+   "items": 24,
+   "printed": "1st Edition, 1934"
   },
   {
    "issue": 63,
@@ -487,7 +547,8 @@
    "date": "1934-03",
    "year": 1934,
    "pageCount": 24,
-   "items": 11
+   "items": 11,
+   "printed": "2nd Edition, 1934"
   },
   {
    "issue": 64,
@@ -495,7 +556,8 @@
    "date": "1934-06",
    "year": 1934,
    "pageCount": 32,
-   "items": 17
+   "items": 17,
+   "printed": "3rd Edition, 1934"
   },
   {
    "issue": 65,
@@ -503,7 +565,8 @@
    "date": "1934-07",
    "year": 1934,
    "pageCount": 20,
-   "items": 15
+   "items": 15,
+   "printed": "4th Edition, 1934"
   },
   {
    "issue": 66,
@@ -511,7 +574,8 @@
    "date": "1934-09",
    "year": 1934,
    "pageCount": 28,
-   "items": 20
+   "items": 20,
+   "printed": "5th Edition, 1934"
   },
   {
    "issue": 67,
@@ -519,7 +583,8 @@
    "date": "1935-01",
    "year": 1935,
    "pageCount": 32,
-   "items": 25
+   "items": 25,
+   "printed": "1st Edition, 1935"
   },
   {
    "issue": 68,
@@ -527,7 +592,8 @@
    "date": "1935-02",
    "year": 1935,
    "pageCount": 32,
-   "items": 20
+   "items": 20,
+   "printed": "2nd Edition, 1935"
   },
   {
    "issue": 69,
@@ -535,7 +601,8 @@
    "date": "1935-04",
    "year": 1935,
    "pageCount": 32,
-   "items": 19
+   "items": 19,
+   "printed": "3rd Edition, 1935"
   },
   {
    "issue": 70,
@@ -543,7 +610,8 @@
    "date": "1935-06",
    "year": 1935,
    "pageCount": 24,
-   "items": 14
+   "items": 14,
+   "printed": "4th Edition, 1935"
   },
   {
    "issue": 71,
@@ -551,7 +619,8 @@
    "date": "1935-11",
    "year": 1935,
    "pageCount": 32,
-   "items": 23
+   "items": 23,
+   "printed": "5th Edition, 1935"
   },
   {
    "issue": 72,
@@ -559,7 +628,8 @@
    "date": "1936-02",
    "year": 1936,
    "pageCount": 24,
-   "items": 18
+   "items": 18,
+   "printed": "1st Edition, 1936"
   },
   {
    "issue": 73,
@@ -567,7 +637,8 @@
    "date": "1936-05",
    "year": 1936,
    "pageCount": 24,
-   "items": 20
+   "items": 20,
+   "printed": "2nd Edition, 1936"
   },
   {
    "issue": 74,
@@ -575,7 +646,8 @@
    "date": "1936-08",
    "year": 1936,
    "pageCount": 28,
-   "items": 26
+   "items": 26,
+   "printed": "3rd Edition, 1936"
   },
   {
    "issue": 75,
@@ -583,7 +655,8 @@
    "date": "1936-11",
    "year": 1936,
    "pageCount": 32,
-   "items": 34
+   "items": 34,
+   "printed": "4th Edition, 1936"
   },
   {
    "issue": 76,
@@ -591,7 +664,8 @@
    "date": "1937-02",
    "year": 1937,
    "pageCount": 28,
-   "items": 27
+   "items": 27,
+   "printed": "1st Edition, 1937"
   },
   {
    "issue": 77,
@@ -599,7 +673,8 @@
    "date": "1937-06",
    "year": 1937,
    "pageCount": 32,
-   "items": 26
+   "items": 26,
+   "printed": "2nd Edition, 1937"
   },
   {
    "issue": 78,
@@ -607,7 +682,8 @@
    "date": "1937-08",
    "year": 1937,
    "pageCount": 28,
-   "items": 22
+   "items": 22,
+   "printed": "3rd Edition, 1937"
   },
   {
    "issue": 79,
@@ -615,7 +691,8 @@
    "date": "1937-11",
    "year": 1937,
    "pageCount": 28,
-   "items": 22
+   "items": 22,
+   "printed": "4th Edition, 1937"
   },
   {
    "issue": 80,
@@ -623,7 +700,8 @@
    "date": "1938-02",
    "year": 1938,
    "pageCount": 36,
-   "items": 28
+   "items": 28,
+   "printed": "1st Edition, 1938"
   },
   {
    "issue": 81,
@@ -631,7 +709,8 @@
    "date": "1938-06",
    "year": 1938,
    "pageCount": 36,
-   "items": 26
+   "items": 26,
+   "printed": "2nd Edition, 1938"
   },
   {
    "issue": 82,
@@ -639,7 +718,8 @@
    "date": "1938-09",
    "year": 1938,
    "pageCount": 32,
-   "items": 21
+   "items": 21,
+   "printed": "3rd Edition, 1938"
   },
   {
    "issue": 83,
@@ -647,7 +727,8 @@
    "date": "1938-12",
    "year": 1938,
    "pageCount": 32,
-   "items": 31
+   "items": 31,
+   "printed": "4th Edition, 1938"
   },
   {
    "issue": 84,
@@ -655,7 +736,8 @@
    "date": "1939-03",
    "year": 1939,
    "pageCount": 40,
-   "items": 31
+   "items": 31,
+   "printed": "1st Edition, 1939"
   },
   {
    "issue": 86,
@@ -663,7 +745,8 @@
    "date": "1940-04",
    "year": 1940,
    "pageCount": 20,
-   "items": 35
+   "items": 35,
+   "printed": "1st Edition, 1940"
   },
   {
    "issue": 87,
@@ -671,7 +754,8 @@
    "date": "1940-12",
    "year": 1940,
    "pageCount": 12,
-   "items": 21
+   "items": 21,
+   "printed": "2nd Edition, 1940"
   },
   {
    "issue": 88,
@@ -679,7 +763,8 @@
    "date": "1941-06",
    "year": 1941,
    "pageCount": 16,
-   "items": 38
+   "items": 38,
+   "printed": ""
   },
   {
    "issue": 89,
@@ -687,7 +772,8 @@
    "date": "1941-11",
    "year": 1941,
    "pageCount": 20,
-   "items": 24
+   "items": 24,
+   "printed": ""
   },
   {
    "issue": 90,
@@ -695,7 +781,8 @@
    "date": "1942-05",
    "year": 1942,
    "pageCount": 16,
-   "items": 36
+   "items": 36,
+   "printed": ""
   },
   {
    "issue": 91,
@@ -703,7 +790,8 @@
    "date": "1942-10",
    "year": 1942,
    "pageCount": 28,
-   "items": 31
+   "items": 31,
+   "printed": ""
   },
   {
    "issue": 92,
@@ -711,7 +799,8 @@
    "date": "1943-05",
    "year": 1943,
    "pageCount": 24,
-   "items": 51
+   "items": 51,
+   "printed": ""
   },
   {
    "issue": 93,
@@ -719,7 +808,8 @@
    "date": "1943-10",
    "year": 1943,
    "pageCount": 26,
-   "items": 32
+   "items": 32,
+   "printed": ""
   },
   {
    "issue": 95,
@@ -727,7 +817,8 @@
    "date": "1944-05",
    "year": 1944,
    "pageCount": 32,
-   "items": 62
+   "items": 62,
+   "printed": "No. 95"
   },
   {
    "issue": 96,
@@ -735,7 +826,8 @@
    "date": "1944-10",
    "year": 1944,
    "pageCount": 32,
-   "items": 31
+   "items": 31,
+   "printed": "No. 96"
   },
   {
    "issue": 97,
@@ -743,7 +835,8 @@
    "date": "1945-07",
    "year": 1945,
    "pageCount": 28,
-   "items": 48
+   "items": 48,
+   "printed": "No. 97"
   },
   {
    "issue": 98,
@@ -751,7 +844,8 @@
    "date": "1945-11",
    "year": 1945,
    "pageCount": 28,
-   "items": 58
+   "items": 58,
+   "printed": "No. 98"
   },
   {
    "issue": 99,
@@ -759,7 +853,8 @@
    "date": "1946-06",
    "year": 1946,
    "pageCount": 32,
-   "items": 61
+   "items": 61,
+   "printed": "No. 99"
   },
   {
    "issue": 100,
@@ -767,7 +862,8 @@
    "date": "1946-12",
    "year": 1946,
    "pageCount": 40,
-   "items": 70
+   "items": 70,
+   "printed": "No. 100"
   },
   {
    "issue": 101,
@@ -775,7 +871,8 @@
    "date": "1947-04",
    "year": 1947,
    "pageCount": 24,
-   "items": 41
+   "items": 41,
+   "printed": "No. 101"
   },
   {
    "issue": 102,
@@ -783,7 +880,8 @@
    "date": "1947-11",
    "year": 1947,
    "pageCount": 40,
-   "items": 72
+   "items": 72,
+   "printed": ""
   },
   {
    "issue": 103,
@@ -791,7 +889,8 @@
    "date": "1948-03",
    "year": 1948,
    "pageCount": 24,
-   "items": 29
+   "items": 29,
+   "printed": "No. 103"
   },
   {
    "issue": 104,
@@ -799,7 +898,8 @@
    "date": "1948-11",
    "year": 1948,
    "pageCount": 16,
-   "items": 34
+   "items": 34,
+   "printed": "No. 104"
   },
   {
    "issue": 105,
@@ -807,7 +907,8 @@
    "date": "1949-06",
    "year": 1949,
    "pageCount": 28,
-   "items": 37
+   "items": 37,
+   "printed": "No. 105"
   },
   {
    "issue": 106,
@@ -815,7 +916,8 @@
    "date": "1949-11",
    "year": 1949,
    "pageCount": 20,
-   "items": 55
+   "items": 55,
+   "printed": "No. 106"
   },
   {
    "issue": 107,
@@ -823,7 +925,8 @@
    "date": "1950-01",
    "year": 1950,
    "pageCount": 24,
-   "items": 38
+   "items": 38,
+   "printed": "No. 107"
   },
   {
    "issue": 108,
@@ -831,7 +934,8 @@
    "date": "1950-04",
    "year": 1950,
    "pageCount": 24,
-   "items": 39
+   "items": 39,
+   "printed": "No. 108"
   },
   {
    "issue": 109,
@@ -839,7 +943,8 @@
    "date": "1950-08",
    "year": 1950,
    "pageCount": 24,
-   "items": 52
+   "items": 52,
+   "printed": "No. 109"
   },
   {
    "issue": 110,
@@ -847,7 +952,8 @@
    "date": "1950-12",
    "year": 1950,
    "pageCount": 36,
-   "items": 63
+   "items": 63,
+   "printed": "No. 110"
   },
   {
    "issue": 111,
@@ -855,7 +961,8 @@
    "date": "1951-03",
    "year": 1951,
    "pageCount": 32,
-   "items": 59
+   "items": 59,
+   "printed": "No. 111"
   },
   {
    "issue": 112,
@@ -863,7 +970,8 @@
    "date": "1951-08",
    "year": 1951,
    "pageCount": 24,
-   "items": 50
+   "items": 50,
+   "printed": "No. 112"
   },
   {
    "issue": 113,
@@ -871,7 +979,8 @@
    "date": "1951-12",
    "year": 1951,
    "pageCount": 24,
-   "items": 44
+   "items": 44,
+   "printed": "No. 113"
   },
   {
    "issue": 114,
@@ -879,7 +988,8 @@
    "date": "1952-04",
    "year": 1952,
    "pageCount": 28,
-   "items": 57
+   "items": 57,
+   "printed": "No. 114"
   },
   {
    "issue": 115,
@@ -887,7 +997,8 @@
    "date": "1952-08",
    "year": 1952,
    "pageCount": 24,
-   "items": 45
+   "items": 45,
+   "printed": "No. 115"
   },
   {
    "issue": 116,
@@ -895,7 +1006,8 @@
    "date": "1952-12",
    "year": 1952,
    "pageCount": 28,
-   "items": 58
+   "items": 58,
+   "printed": "No. 116"
   },
   {
    "issue": 117,
@@ -903,7 +1015,8 @@
    "date": "1953-04",
    "year": 1953,
    "pageCount": 24,
-   "items": 48
+   "items": 48,
+   "printed": "No. 117"
   },
   {
    "issue": 118,
@@ -911,7 +1024,8 @@
    "date": "1953-08",
    "year": 1953,
    "pageCount": 32,
-   "items": 64
+   "items": 64,
+   "printed": "No. 118"
   },
   {
    "issue": 119,
@@ -919,7 +1033,8 @@
    "date": "1954-07",
    "year": 1954,
    "pageCount": 20,
-   "items": 56
+   "items": 56,
+   "printed": "No. 119"
   },
   {
    "issue": 120,
@@ -927,7 +1042,8 @@
    "date": "1954-11",
    "year": 1954,
    "pageCount": 20,
-   "items": 27
+   "items": 27,
+   "printed": "No. 120"
   },
   {
    "issue": 121,
@@ -935,7 +1051,8 @@
    "date": "1955-02",
    "year": 1955,
    "pageCount": 20,
-   "items": 40
+   "items": 40,
+   "printed": "No. 121"
   },
   {
    "issue": 122,
@@ -943,7 +1060,8 @@
    "date": "1955-05",
    "year": 1955,
    "pageCount": 20,
-   "items": 37
+   "items": 37,
+   "printed": "No. 122"
   },
   {
    "issue": 123,
@@ -951,7 +1069,8 @@
    "date": "1955-08",
    "year": 1955,
    "pageCount": 20,
-   "items": 30
+   "items": 30,
+   "printed": "No. 123"
   },
   {
    "issue": 124,
@@ -959,7 +1078,8 @@
    "date": "1955-11",
    "year": 1955,
    "pageCount": 20,
-   "items": 32
+   "items": 32,
+   "printed": "No. 124"
   },
   {
    "issue": 125,
@@ -967,7 +1087,8 @@
    "date": "1956-02",
    "year": 1956,
    "pageCount": 16,
-   "items": 27
+   "items": 27,
+   "printed": "No. 125"
   },
   {
    "issue": 126,
@@ -975,7 +1096,8 @@
    "date": "1956-05",
    "year": 1956,
    "pageCount": 20,
-   "items": 34
+   "items": 34,
+   "printed": "No. 126"
   },
   {
    "issue": 127,
@@ -983,7 +1105,8 @@
    "date": "1956-08",
    "year": 1956,
    "pageCount": 20,
-   "items": 37
+   "items": 37,
+   "printed": "No. 127"
   },
   {
    "issue": 128,
@@ -991,7 +1114,8 @@
    "date": "1956-10",
    "year": 1956,
    "pageCount": 16,
-   "items": 34
+   "items": 34,
+   "printed": "No. 128"
   },
   {
    "issue": 129,
@@ -999,7 +1123,8 @@
    "date": "1957-01",
    "year": 1957,
    "pageCount": 16,
-   "items": 35
+   "items": 35,
+   "printed": "No. 129"
   },
   {
    "issue": 130,
@@ -1007,7 +1132,8 @@
    "date": "1957-04",
    "year": 1957,
    "pageCount": 16,
-   "items": 32
+   "items": 32,
+   "printed": "No. 130"
   },
   {
    "issue": 131,
@@ -1015,7 +1141,8 @@
    "date": "1957-07",
    "year": 1957,
    "pageCount": 20,
-   "items": 35
+   "items": 35,
+   "printed": "No. 131"
   },
   {
    "issue": 132,
@@ -1023,7 +1150,8 @@
    "date": "1957-10",
    "year": 1957,
    "pageCount": 12,
-   "items": 26
+   "items": 26,
+   "printed": "No. 132"
   },
   {
    "issue": 133,
@@ -1031,7 +1159,8 @@
    "date": "1958-01",
    "year": 1958,
    "pageCount": 16,
-   "items": 37
+   "items": 37,
+   "printed": "No. 133"
   },
   {
    "issue": 134,
@@ -1039,7 +1168,8 @@
    "date": "1958-04",
    "year": 1958,
    "pageCount": 16,
-   "items": 34
+   "items": 34,
+   "printed": "No. 134"
   },
   {
    "issue": 135,
@@ -1047,7 +1177,8 @@
    "date": "1958-07",
    "year": 1958,
    "pageCount": 12,
-   "items": 34
+   "items": 34,
+   "printed": "No. 135"
   },
   {
    "issue": 136,
@@ -1055,7 +1186,8 @@
    "date": "1958-10",
    "year": 1958,
    "pageCount": 16,
-   "items": 35
+   "items": 35,
+   "printed": "No. 136"
   },
   {
    "issue": 137,
@@ -1063,7 +1195,8 @@
    "date": "1959-03",
    "year": 1959,
    "pageCount": 16,
-   "items": 31
+   "items": 31,
+   "printed": "No. 137"
   },
   {
    "issue": 138,
@@ -1071,7 +1204,8 @@
    "date": "1959-06",
    "year": 1959,
    "pageCount": 20,
-   "items": 47
+   "items": 47,
+   "printed": "No. 138"
   },
   {
    "issue": 139,
@@ -1079,7 +1213,8 @@
    "date": "1959-09",
    "year": 1959,
    "pageCount": 12,
-   "items": 19
+   "items": 19,
+   "printed": "No. 139"
   },
   {
    "issue": 140,
@@ -1087,7 +1222,8 @@
    "date": "1959-11",
    "year": 1959,
    "pageCount": 28,
-   "items": 61
+   "items": 61,
+   "printed": "No. 140"
   },
   {
    "issue": 141,
@@ -1095,7 +1231,8 @@
    "date": "1960-03",
    "year": 1960,
    "pageCount": 20,
-   "items": 53
+   "items": 53,
+   "printed": "No. 141"
   },
   {
    "issue": 142,
@@ -1103,7 +1240,8 @@
    "date": "1960-05",
    "year": 1960,
    "pageCount": 20,
-   "items": 28
+   "items": 28,
+   "printed": "No. 142"
   },
   {
    "issue": 143,
@@ -1111,7 +1249,8 @@
    "date": "1960-09",
    "year": 1960,
    "pageCount": 24,
-   "items": 45
+   "items": 45,
+   "printed": "No. 143"
   },
   {
    "issue": 144,
@@ -1119,7 +1258,8 @@
    "date": "1961-01",
    "year": 1961,
    "pageCount": 28,
-   "items": 51
+   "items": 51,
+   "printed": "No. 144"
   },
   {
    "issue": 145,
@@ -1127,7 +1267,8 @@
    "date": "1961-07",
    "year": 1961,
    "pageCount": 28,
-   "items": 64
+   "items": 64,
+   "printed": "No. 145"
   },
   {
    "issue": 146,
@@ -1135,7 +1276,8 @@
    "date": "1962-01",
    "year": 1962,
    "pageCount": 28,
-   "items": 77
+   "items": 77,
+   "printed": "No. 146"
   },
   {
    "issue": 147,
@@ -1143,7 +1285,8 @@
    "date": "1962-05",
    "year": 1962,
    "pageCount": 28,
-   "items": 58
+   "items": 58,
+   "printed": "No. 147"
   },
   {
    "issue": 148,
@@ -1151,7 +1294,8 @@
    "date": "1962-11",
    "year": 1962,
    "pageCount": 32,
-   "items": 71
+   "items": 71,
+   "printed": ""
   },
   {
    "issue": 149,
@@ -1159,7 +1303,8 @@
    "date": "1963-02",
    "year": 1963,
    "pageCount": 28,
-   "items": 55
+   "items": 55,
+   "printed": "No. 149"
   },
   {
    "issue": 150,
@@ -1167,7 +1312,8 @@
    "date": "1963-05",
    "year": 1963,
    "pageCount": 24,
-   "items": 41
+   "items": 41,
+   "printed": "No. 150"
   },
   {
    "issue": 151,
@@ -1175,7 +1321,8 @@
    "date": "1963-08",
    "year": 1963,
    "pageCount": 28,
-   "items": 60
+   "items": 60,
+   "printed": "No. 151"
   },
   {
    "issue": 152,
@@ -1183,7 +1330,8 @@
    "date": "1963-12",
    "year": 1963,
    "pageCount": 36,
-   "items": 67
+   "items": 67,
+   "printed": "No. 151"
   },
   {
    "issue": 153,
@@ -1191,7 +1339,8 @@
    "date": "1964-04",
    "year": 1964,
    "pageCount": 36,
-   "items": 71
+   "items": 71,
+   "printed": "No. 153"
   },
   {
    "issue": 154,
@@ -1199,7 +1348,8 @@
    "date": "1964-11",
    "year": 1964,
    "pageCount": 32,
-   "items": 68
+   "items": 68,
+   "printed": "No. 154"
   },
   {
    "issue": 155,
@@ -1207,7 +1357,8 @@
    "date": "1965-02",
    "year": 1965,
    "pageCount": 32,
-   "items": 57
+   "items": 57,
+   "printed": "No. 155"
   },
   {
    "issue": 156,
@@ -1215,7 +1366,8 @@
    "date": "1965-08",
    "year": 1965,
    "pageCount": 40,
-   "items": 126
+   "items": 126,
+   "printed": "No. 156"
   },
   {
    "issue": 157,
@@ -1223,7 +1375,8 @@
    "date": "1965-11",
    "year": 1965,
    "pageCount": 36,
-   "items": 82
+   "items": 82,
+   "printed": "No. 157"
   },
   {
    "issue": 158,
@@ -1231,7 +1384,8 @@
    "date": "1966-03",
    "year": 1966,
    "pageCount": 36,
-   "items": 68
+   "items": 68,
+   "printed": "No. 158"
   },
   {
    "issue": 159,
@@ -1239,7 +1393,8 @@
    "date": "1966-08",
    "year": 1966,
    "pageCount": 40,
-   "items": 94
+   "items": 94,
+   "printed": "No. 159"
   },
   {
    "issue": 160,
@@ -1247,7 +1402,8 @@
    "date": "1966-12",
    "year": 1966,
    "pageCount": 44,
-   "items": 81
+   "items": 81,
+   "printed": "No. 160"
   },
   {
    "issue": 161,
@@ -1255,7 +1411,8 @@
    "date": "1967-03",
    "year": 1967,
    "pageCount": 44,
-   "items": 70
+   "items": 70,
+   "printed": "No. 161"
   },
   {
    "issue": 162,
@@ -1263,7 +1420,8 @@
    "date": "1967-06",
    "year": 1967,
    "pageCount": 40,
-   "items": 78
+   "items": 78,
+   "printed": "No. 162"
   },
   {
    "issue": 163,
@@ -1271,7 +1429,8 @@
    "date": "1967-09",
    "year": 1967,
    "pageCount": 36,
-   "items": 88
+   "items": 88,
+   "printed": "No. 163"
   },
   {
    "issue": 164,
@@ -1279,7 +1438,8 @@
    "date": "1967-12",
    "year": 1967,
    "pageCount": 44,
-   "items": 89
+   "items": 89,
+   "printed": "No. 164"
   },
   {
    "issue": 165,
@@ -1287,7 +1447,8 @@
    "date": "1968-03",
    "year": 1968,
    "pageCount": 36,
-   "items": 66
+   "items": 66,
+   "printed": "No. 165"
   },
   {
    "issue": 166,
@@ -1295,7 +1456,8 @@
    "date": "1968-06",
    "year": 1968,
    "pageCount": 44,
-   "items": 93
+   "items": 93,
+   "printed": "No. 166"
   },
   {
    "issue": 167,
@@ -1303,7 +1465,8 @@
    "date": "1968-09",
    "year": 1968,
    "pageCount": 40,
-   "items": 68
+   "items": 68,
+   "printed": "No. 167"
   },
   {
    "issue": 168,
@@ -1311,7 +1474,8 @@
    "date": "1968-12",
    "year": 1968,
    "pageCount": 48,
-   "items": 63
+   "items": 63,
+   "printed": "No. 168"
   },
   {
    "issue": 169,
@@ -1319,7 +1483,8 @@
    "date": "1969-03",
    "year": 1969,
    "pageCount": 36,
-   "items": 76
+   "items": 76,
+   "printed": "No. 169"
   },
   {
    "issue": 170,
@@ -1327,7 +1492,8 @@
    "date": "1969-06",
    "year": 1969,
    "pageCount": 40,
-   "items": 66
+   "items": 66,
+   "printed": "No. 170"
   },
   {
    "issue": 171,
@@ -1335,7 +1501,8 @@
    "date": "1969-09",
    "year": 1969,
    "pageCount": 36,
-   "items": 66
+   "items": 66,
+   "printed": "No. 171"
   },
   {
    "issue": 172,
@@ -1343,7 +1510,8 @@
    "date": "1969-12",
    "year": 1969,
    "pageCount": 48,
-   "items": 91
+   "items": 91,
+   "printed": "No. 172"
   },
   {
    "issue": 173,
@@ -1351,7 +1519,8 @@
    "date": "1970-03",
    "year": 1970,
    "pageCount": 44,
-   "items": 91
+   "items": 91,
+   "printed": "No. 173"
   },
   {
    "issue": 174,
@@ -1359,7 +1528,8 @@
    "date": "1970-06",
    "year": 1970,
    "pageCount": 40,
-   "items": 68
+   "items": 68,
+   "printed": "No. 174"
   },
   {
    "issue": 175,
@@ -1367,7 +1537,8 @@
    "date": "1970-09",
    "year": 1970,
    "pageCount": 40,
-   "items": 56
+   "items": 56,
+   "printed": "No. 175"
   },
   {
    "issue": 176,
@@ -1375,7 +1546,8 @@
    "date": "1970-12",
    "year": 1970,
    "pageCount": 44,
-   "items": 79
+   "items": 79,
+   "printed": "No. 176"
   },
   {
    "issue": 177,
@@ -1383,7 +1555,8 @@
    "date": "1971-06",
    "year": 1971,
    "pageCount": 48,
-   "items": 115
+   "items": 115,
+   "printed": "No. 177"
   },
   {
    "issue": 178,
@@ -1391,7 +1564,8 @@
    "date": "1972-09",
    "year": 1972,
    "pageCount": 64,
-   "items": 151
+   "items": 151,
+   "printed": "No. 178"
   },
   {
    "issue": 179,
@@ -1399,7 +1573,8 @@
    "date": "1972-12",
    "year": 1972,
    "pageCount": 52,
-   "items": 104
+   "items": 104,
+   "printed": "No. 179"
   },
   {
    "issue": 180,
@@ -1407,7 +1582,8 @@
    "date": "1973-03",
    "year": 1973,
    "pageCount": 56,
-   "items": 97
+   "items": 97,
+   "printed": "No. 180"
   },
   {
    "issue": 181,
@@ -1415,7 +1591,8 @@
    "date": "1973-06",
    "year": 1973,
    "pageCount": 48,
-   "items": 89
+   "items": 89,
+   "printed": "No. 181"
   },
   {
    "issue": 182,
@@ -1423,7 +1600,8 @@
    "date": "1973-09",
    "year": 1973,
    "pageCount": 44,
-   "items": 76
+   "items": 76,
+   "printed": "No. 182"
   },
   {
    "issue": 183,
@@ -1431,7 +1609,8 @@
    "date": "1973-12",
    "year": 1973,
    "pageCount": 32,
-   "items": 69
+   "items": 69,
+   "printed": "No. 183"
   },
   {
    "issue": 184,
@@ -1439,7 +1618,8 @@
    "date": "1974-03",
    "year": 1974,
    "pageCount": 36,
-   "items": 86
+   "items": 86,
+   "printed": "No. 184"
   },
   {
    "issue": 185,
@@ -1447,7 +1627,8 @@
    "date": "1974-06",
    "year": 1974,
    "pageCount": 36,
-   "items": 72
+   "items": 72,
+   "printed": "No. 185"
   },
   {
    "issue": 186,
@@ -1455,7 +1636,8 @@
    "date": "1974-09",
    "year": 1974,
    "pageCount": 44,
-   "items": 88
+   "items": 88,
+   "printed": "No. 186"
   },
   {
    "issue": 187,
@@ -1463,7 +1645,8 @@
    "date": "1974-12",
    "year": 1974,
    "pageCount": 32,
-   "items": 67
+   "items": 67,
+   "printed": "No. 187"
   },
   {
    "issue": 188,
@@ -1471,7 +1654,8 @@
    "date": "1975-03",
    "year": 1975,
    "pageCount": 32,
-   "items": 83
+   "items": 83,
+   "printed": "No. 188"
   },
   {
    "issue": 189,
@@ -1479,7 +1663,8 @@
    "date": "1975-07",
    "year": 1975,
    "pageCount": 36,
-   "items": 90
+   "items": 90,
+   "printed": "No. 189"
   },
   {
    "issue": 190,
@@ -1487,7 +1672,8 @@
    "date": "1975-11",
    "year": 1975,
    "pageCount": 44,
-   "items": 97
+   "items": 97,
+   "printed": "No. 190"
   },
   {
    "issue": 191,
@@ -1495,7 +1681,8 @@
    "date": "1976-03",
    "year": 1976,
    "pageCount": 44,
-   "items": 97
+   "items": 97,
+   "printed": "No. 191"
   },
   {
    "issue": 192,
@@ -1503,7 +1690,8 @@
    "date": "1976-08",
    "year": 1976,
    "pageCount": 44,
-   "items": 100
+   "items": 100,
+   "printed": "No. 192"
   },
   {
    "issue": 193,
@@ -1511,7 +1699,8 @@
    "date": "1976-12",
    "year": 1976,
    "pageCount": 44,
-   "items": 93
+   "items": 93,
+   "printed": "No. 193"
   },
   {
    "issue": 194,
@@ -1519,7 +1708,8 @@
    "date": "1977-04",
    "year": 1977,
    "pageCount": 60,
-   "items": 112
+   "items": 112,
+   "printed": "No. 194"
   },
   {
    "issue": 195,
@@ -1527,7 +1717,8 @@
    "date": "1977-10",
    "year": 1977,
    "pageCount": 60,
-   "items": 102
+   "items": 102,
+   "printed": "No. 195"
   },
   {
    "issue": 196,
@@ -1535,7 +1726,8 @@
    "date": "1978-04",
    "year": 1978,
    "pageCount": 44,
-   "items": 104
+   "items": 104,
+   "printed": ""
   },
   {
    "issue": 197,
@@ -1543,7 +1735,8 @@
    "date": "1978-10",
    "year": 1978,
    "pageCount": 52,
-   "items": 103
+   "items": 103,
+   "printed": "No. 197"
   },
   {
    "issue": 198,
@@ -1551,7 +1744,8 @@
    "date": "1979-04",
    "year": 1979,
    "pageCount": 56,
-   "items": 112
+   "items": 112,
+   "printed": "No. 198"
   },
   {
    "issue": 199,
@@ -1559,7 +1753,8 @@
    "date": "1979-10",
    "year": 1979,
    "pageCount": 52,
-   "items": 130
+   "items": 130,
+   "printed": "No. 199"
   },
   {
    "issue": 200,
@@ -1567,7 +1762,8 @@
    "date": "1980-04",
    "year": 1980,
    "pageCount": 48,
-   "items": 119
+   "items": 119,
+   "printed": "No. 200"
   },
   {
    "issue": 201,
@@ -1575,7 +1771,8 @@
    "date": "1980-10",
    "year": 1980,
    "pageCount": 52,
-   "items": 96
+   "items": 96,
+   "printed": "No. 201"
   },
   {
    "issue": 202,
@@ -1583,7 +1780,8 @@
    "date": "1981-04",
    "year": 1981,
    "pageCount": 36,
-   "items": 101
+   "items": 101,
+   "printed": "No. 202"
   },
   {
    "issue": 203,
@@ -1591,7 +1789,8 @@
    "date": "1981-10",
    "year": 1981,
    "pageCount": 48,
-   "items": 99
+   "items": 99,
+   "printed": "No. 203"
   },
   {
    "issue": 204,
@@ -1599,7 +1798,8 @@
    "date": "1982-04",
    "year": 1982,
    "pageCount": 44,
-   "items": 124
+   "items": 124,
+   "printed": "No. 204"
   },
   {
    "issue": 205,
@@ -1607,7 +1807,8 @@
    "date": "1982-10",
    "year": 1982,
    "pageCount": 48,
-   "items": 114
+   "items": 114,
+   "printed": ""
   },
   {
    "issue": 206,
@@ -1615,7 +1816,8 @@
    "date": "1983-04",
    "year": 1983,
    "pageCount": 44,
-   "items": 73
+   "items": 73,
+   "printed": "No. 206"
   },
   {
    "issue": 207,
@@ -1623,7 +1825,8 @@
    "date": "1983-10",
    "year": 1983,
    "pageCount": 52,
-   "items": 75
+   "items": 75,
+   "printed": "No. 207"
   },
   {
    "issue": 208,
@@ -1631,7 +1834,8 @@
    "date": "1984-10",
    "year": 1984,
    "pageCount": 56,
-   "items": 129
+   "items": 129,
+   "printed": "No. 208"
   },
   {
    "issue": 209,
@@ -1639,7 +1843,8 @@
    "date": "1985-10",
    "year": 1985,
    "pageCount": 80,
-   "items": 160
+   "items": 160,
+   "printed": "No. 209"
   },
   {
    "issue": 210,
@@ -1647,7 +1852,8 @@
    "date": "1986-10",
    "year": 1986,
    "pageCount": 76,
-   "items": 110
+   "items": 110,
+   "printed": "No. 210"
   },
   {
    "issue": 211,
@@ -1655,7 +1861,8 @@
    "date": "1987-06",
    "year": 1987,
    "pageCount": 44,
-   "items": 79
+   "items": 79,
+   "printed": "No. 211"
   },
   {
    "issue": 212,
@@ -1663,7 +1870,8 @@
    "date": "1988-04",
    "year": 1988,
    "pageCount": 68,
-   "items": 57
+   "items": 57,
+   "printed": "No. 212"
   },
   {
    "issue": 213,
@@ -1671,7 +1879,8 @@
    "date": "1989-03",
    "year": 1989,
    "pageCount": 60,
-   "items": 145
+   "items": 145,
+   "printed": ""
   },
   {
    "issue": 214,
@@ -1679,7 +1888,8 @@
    "date": "1991-03",
    "year": 1991,
    "pageCount": 68,
-   "items": 125
+   "items": 125,
+   "printed": "No. 214"
   },
   {
    "issue": 216,
@@ -1687,7 +1897,8 @@
    "date": "1991-07",
    "year": 1991,
    "pageCount": 28,
-   "items": 56
+   "items": 56,
+   "printed": "No. 216"
   },
   {
    "issue": 217,
@@ -1695,7 +1906,8 @@
    "date": "1991-12",
    "year": 1991,
    "pageCount": 40,
-   "items": 142
+   "items": 142,
+   "printed": "No. 217"
   },
   {
    "issue": 218,
@@ -1703,7 +1915,8 @@
    "date": "1992-05",
    "year": 1992,
    "pageCount": 44,
-   "items": 94
+   "items": 94,
+   "printed": "No. 218"
   },
   {
    "issue": 219,
@@ -1711,7 +1924,8 @@
    "date": "1992-11",
    "year": 1992,
    "pageCount": 52,
-   "items": 85
+   "items": 85,
+   "printed": "No. 219"
   },
   {
    "issue": 220,
@@ -1719,7 +1933,8 @@
    "date": "1993-04",
    "year": 1993,
    "pageCount": 40,
-   "items": 90
+   "items": 90,
+   "printed": "No. 220"
   },
   {
    "issue": 221,
@@ -1727,7 +1942,8 @@
    "date": "1993-12",
    "year": 1993,
    "pageCount": 60,
-   "items": 177
+   "items": 177,
+   "printed": "No. 221"
   },
   {
    "issue": 222,
@@ -1735,7 +1951,8 @@
    "date": "1995-02",
    "year": 1995,
    "pageCount": 76,
-   "items": 189
+   "items": 189,
+   "printed": "No. 222"
   },
   {
    "issue": 223,
@@ -1743,7 +1960,8 @@
    "date": "1995-11",
    "year": 1995,
    "pageCount": 80,
-   "items": 153
+   "items": 153,
+   "printed": "No. 223"
   },
   {
    "issue": 224,
@@ -1751,7 +1969,8 @@
    "date": "1996-06",
    "year": 1996,
    "pageCount": 48,
-   "items": 124
+   "items": 124,
+   "printed": "No. 224"
   },
   {
    "issue": 225,
@@ -1759,7 +1978,8 @@
    "date": "1997-02",
    "year": 1997,
    "pageCount": 60,
-   "items": 131
+   "items": 131,
+   "printed": "No. 225"
   },
   {
    "issue": 226,
@@ -1767,7 +1987,8 @@
    "date": "1998-03",
    "year": 1998,
    "pageCount": 64,
-   "items": 133
+   "items": 133,
+   "printed": "No. 226"
   },
   {
    "issue": 227,
@@ -1775,7 +1996,8 @@
    "date": "1999-03",
    "year": 1999,
    "pageCount": 68,
-   "items": 124
+   "items": 124,
+   "printed": "No. 227"
   },
   {
    "issue": 228,
@@ -1783,7 +2005,8 @@
    "date": "2000-05",
    "year": 2000,
    "pageCount": 68,
-   "items": 126
+   "items": 126,
+   "printed": "No. 228"
   },
   {
    "issue": 229,
@@ -1791,7 +2014,8 @@
    "date": "2001-02",
    "year": 2001,
    "pageCount": 56,
-   "items": 125
+   "items": 125,
+   "printed": "No. 229"
   },
   {
    "issue": 230,
@@ -1799,7 +2023,8 @@
    "date": "2003-06",
    "year": 2003,
    "pageCount": 60,
-   "items": 60
+   "items": 60,
+   "printed": "No. 230"
   },
   {
    "issue": 231,
@@ -1807,7 +2032,8 @@
    "date": "2003-12",
    "year": 2003,
    "pageCount": 36,
-   "items": 46
+   "items": 46,
+   "printed": "No. 231"
   },
   {
    "issue": 232,
@@ -1815,7 +2041,8 @@
    "date": "2005-07",
    "year": 2005,
    "pageCount": 6,
-   "items": 12
+   "items": 12,
+   "printed": "No. 232"
   },
   {
    "issue": 233,
@@ -1823,7 +2050,8 @@
    "date": "2005-08",
    "year": 2005,
    "pageCount": 4,
-   "items": 10
+   "items": 10,
+   "printed": "No. 233"
   },
   {
    "issue": 234,
@@ -1831,7 +2059,8 @@
    "date": "2005-08",
    "year": 2005,
    "pageCount": 4,
-   "items": 11
+   "items": 11,
+   "printed": "No. 234"
   },
   {
    "issue": 235,
@@ -1839,7 +2068,8 @@
    "date": "2005-09",
    "year": 2005,
    "pageCount": 6,
-   "items": 15
+   "items": 15,
+   "printed": "No. 235"
   },
   {
    "issue": 236,
@@ -1847,7 +2077,8 @@
    "date": "2005-10",
    "year": 2005,
    "pageCount": 7,
-   "items": 14
+   "items": 14,
+   "printed": "No. 236"
   },
   {
    "issue": 237,
@@ -1855,7 +2086,8 @@
    "date": "2005-11",
    "year": 2005,
    "pageCount": 6,
-   "items": 12
+   "items": 12,
+   "printed": "No. 237"
   },
   {
    "issue": 238,
@@ -1863,7 +2095,8 @@
    "date": "2005-12",
    "year": 2005,
    "pageCount": 4,
-   "items": 14
+   "items": 14,
+   "printed": "No. 238"
   },
   {
    "issue": 239,
@@ -1871,7 +2104,8 @@
    "date": "2006-01",
    "year": 2006,
    "pageCount": 6,
-   "items": 19
+   "items": 19,
+   "printed": "No. 239"
   },
   {
    "issue": 240,
@@ -1879,7 +2113,8 @@
    "date": "2006-03",
    "year": 2006,
    "pageCount": 8,
-   "items": 21
+   "items": 21,
+   "printed": "No. 240"
   },
   {
    "issue": 241,
@@ -1887,7 +2122,8 @@
    "date": "2006-04",
    "year": 2006,
    "pageCount": 4,
-   "items": 7
+   "items": 7,
+   "printed": "No. 241"
   },
   {
    "issue": 242,
@@ -1895,7 +2131,8 @@
    "date": "2006-04",
    "year": 2006,
    "pageCount": 9,
-   "items": 17
+   "items": 17,
+   "printed": "No. 242"
   },
   {
    "issue": 243,
@@ -1903,7 +2140,8 @@
    "date": "2006-05",
    "year": 2006,
    "pageCount": 6,
-   "items": 11
+   "items": 11,
+   "printed": "No. 243"
   },
   {
    "issue": 244,
@@ -1911,7 +2149,8 @@
    "date": "2006-06",
    "year": 2006,
    "pageCount": 8,
-   "items": 20
+   "items": 20,
+   "printed": "No. 244"
   },
   {
    "issue": 245,
@@ -1919,7 +2158,8 @@
    "date": "2006-09",
    "year": 2006,
    "pageCount": 6,
-   "items": 9
+   "items": 9,
+   "printed": "No. 245"
   },
   {
    "issue": 246,
@@ -1927,7 +2167,8 @@
    "date": "2006-09",
    "year": 2006,
    "pageCount": 4,
-   "items": 15
+   "items": 15,
+   "printed": "No. 246"
   },
   {
    "issue": 247,
@@ -1935,7 +2176,8 @@
    "date": "2006-09",
    "year": 2006,
    "pageCount": 4,
-   "items": 6
+   "items": 6,
+   "printed": "No. 247"
   },
   {
    "issue": 248,
@@ -1943,7 +2185,8 @@
    "date": "2006-10",
    "year": 2006,
    "pageCount": 4,
-   "items": 8
+   "items": 8,
+   "printed": "No. 248"
   },
   {
    "issue": 249,
@@ -1951,7 +2194,8 @@
    "date": "2006-10",
    "year": 2006,
    "pageCount": 4,
-   "items": 10
+   "items": 10,
+   "printed": "No. 249"
   },
   {
    "issue": 250,
@@ -1959,7 +2203,8 @@
    "date": "2006-11",
    "year": 2006,
    "pageCount": 5,
-   "items": 8
+   "items": 8,
+   "printed": "No. 250"
   },
   {
    "issue": 251,
@@ -1967,7 +2212,8 @@
    "date": "2007-01",
    "year": 2007,
    "pageCount": 5,
-   "items": 15
+   "items": 15,
+   "printed": "No. 251"
   },
   {
    "issue": 252,
@@ -1975,7 +2221,8 @@
    "date": "2007-01",
    "year": 2007,
    "pageCount": 2,
-   "items": 6
+   "items": 6,
+   "printed": "No. 252"
   },
   {
    "issue": 253,
@@ -1983,7 +2230,8 @@
    "date": "2007-02",
    "year": 2007,
    "pageCount": 5,
-   "items": 14
+   "items": 14,
+   "printed": "No. 253"
   },
   {
    "issue": 254,
@@ -1991,7 +2239,8 @@
    "date": "2007-03",
    "year": 2007,
    "pageCount": 5,
-   "items": 12
+   "items": 12,
+   "printed": "No. 254"
   },
   {
    "issue": 255,
@@ -1999,7 +2248,8 @@
    "date": "2007-05",
    "year": 2007,
    "pageCount": 6,
-   "items": 8
+   "items": 8,
+   "printed": "No. 255"
   },
   {
    "issue": 256,
@@ -2007,7 +2257,8 @@
    "date": "2007-05",
    "year": 2007,
    "pageCount": 4,
-   "items": 9
+   "items": 9,
+   "printed": "No. 256"
   },
   {
    "issue": 257,
@@ -2015,7 +2266,8 @@
    "date": "2007-06",
    "year": 2007,
    "pageCount": 7,
-   "items": 18
+   "items": 18,
+   "printed": "No. 257"
   },
   {
    "issue": 258,
@@ -2023,7 +2275,8 @@
    "date": "2007-09",
    "year": 2007,
    "pageCount": 4,
-   "items": 11
+   "items": 11,
+   "printed": "No. 258"
   },
   {
    "issue": 259,
@@ -2031,7 +2284,8 @@
    "date": "2007-10",
    "year": 2007,
    "pageCount": 5,
-   "items": 8
+   "items": 8,
+   "printed": "No. 259"
   },
   {
    "issue": 260,
@@ -2039,7 +2293,8 @@
    "date": "2007-10",
    "year": 2007,
    "pageCount": 5,
-   "items": 11
+   "items": 11,
+   "printed": "No. 260"
   },
   {
    "issue": 261,
@@ -2047,7 +2302,8 @@
    "date": "2007-11",
    "year": 2007,
    "pageCount": 5,
-   "items": 15
+   "items": 15,
+   "printed": "No. 261"
   },
   {
    "issue": 262,
@@ -2055,7 +2311,8 @@
    "date": "2008-01",
    "year": 2008,
    "pageCount": 7,
-   "items": 16
+   "items": 16,
+   "printed": "No. 262"
   },
   {
    "issue": 263,
@@ -2063,7 +2320,8 @@
    "date": "2008-03",
    "year": 2008,
    "pageCount": 7,
-   "items": 17
+   "items": 17,
+   "printed": "No. 263"
   },
   {
    "issue": 264,
@@ -2071,7 +2329,8 @@
    "date": "2008-05",
    "year": 2008,
    "pageCount": 7,
-   "items": 9
+   "items": 9,
+   "printed": "No. 264"
   },
   {
    "issue": 265,
@@ -2079,7 +2338,8 @@
    "date": "2008-11",
    "year": 2008,
    "pageCount": 4,
-   "items": 10
+   "items": 10,
+   "printed": "No. 265"
   },
   {
    "issue": 266,
@@ -2087,7 +2347,8 @@
    "date": "2008-12",
    "year": 2008,
    "pageCount": 5,
-   "items": 15
+   "items": 15,
+   "printed": "No. 266"
   },
   {
    "issue": 267,
@@ -2095,7 +2356,8 @@
    "date": "2008-12",
    "year": 2008,
    "pageCount": 7,
-   "items": 18
+   "items": 18,
+   "printed": "No. 267"
   },
   {
    "issue": 268,
@@ -2103,7 +2365,8 @@
    "date": "2009-02",
    "year": 2009,
    "pageCount": 6,
-   "items": 18
+   "items": 18,
+   "printed": "No. 268"
   },
   {
    "issue": 269,
@@ -2111,7 +2374,8 @@
    "date": "2009-03",
    "year": 2009,
    "pageCount": 5,
-   "items": 14
+   "items": 14,
+   "printed": "No. 269"
   },
   {
    "issue": 270,
@@ -2119,7 +2383,8 @@
    "date": "2009-05",
    "year": 2009,
    "pageCount": 6,
-   "items": 15
+   "items": 15,
+   "printed": "No. 270"
   }
  ],
  "coming": [],

@@ -25,6 +25,8 @@
   var INSERT={'2-9':'B1/B1-p01'};
   function pageImg(no,p){return MEDIA+'pages/'+(INSERT[no+'-'+p]||('B'+no+'/B'+no+'-p'+pad(p)))+'.webp'}
   function issueKey(no){return 'B'+no}
+  /* the number as the issue prints it: 'No. 1', '3rd Edition, 1929', or nothing (Steve, 14 Nov) */
+  function numLab(x){return x&&('printed' in x)?x.printed:'No. '+(x?x.issue:'')}
   /* issue ids are numbers, except where the club printed a number twice (e.g. "207b") */
   function nid(s){return /\D/.test(s)?s:+s}
   function go(h){if(location.hash==='#'+h)route();else location.hash=h}
@@ -94,7 +96,7 @@
   /* every cover of one decade (the old shelf), from "All 32" */
   function coversHtml(list){var ys=[],byY={};list.forEach(function(x){if(!byY[x.year]){byY[x.year]=[];ys.push(x.year)}byY[x.year].push(x)});
     return '<div class="bv-covers">'+ys.map(function(y){return '<div class="bv-yrow"><h3>'+y+'</h3><div class="bv-yrow-list">'+byY[y].map(function(x){var short=String(x.label).replace(/\s*\d{4}(\/\d{2,4})?\s*$/,'')||x.label;
-      return '<a class="bv-cover" href="#'+issueKey(x.issue)+'"><img src="'+pageImg(x.issue,1)+'" alt="Cover of The Belgravian, '+esc(x.label)+'" loading="lazy"><b>'+esc(x.label)+'</b><i>'+esc(short)+'</i><span>No. '+x.issue+'</span></a>'}).join('')+'</div></div>'}).join('')+'</div>'}
+      return '<a class="bv-cover" href="#'+issueKey(x.issue)+'"><img src="'+pageImg(x.issue,1)+'" alt="Cover of The Belgravian, '+esc(x.label)+'" loading="lazy"><b>'+esc(x.label)+'</b><i>'+esc(short)+'</i>'+(numLab(x)?'<span>'+esc(numLab(x))+'</span>':'')+'</a>'}).join('')+'</div></div>'}).join('')+'</div>'}
   function decadeAll(d){
     var list=IDX.issues.filter(function(x){return Math.floor(x.year/10)*10===+d}).sort(function(a,b){return a.date<b.date?-1:1});
     crumbsSet([['The Belgravian','shelf'],['The '+d+'s','']]);
@@ -138,7 +140,7 @@
   function issueInfo(no){return (IDX&&IDX.issues||[]).filter(function(x){return x.issue===no})[0]}
   function showOpening(no){
     if(ISSUES[no])return;var x=issueInfo(no);
-    main.innerHTML='<div class="bv-loading" role="status"><img src="'+pageImg(no,1)+'" alt=""><div><p>Opening '+(x?esc(x.label)+' \u00b7 ':'')+'No. '+no+'\u2026</p><p class="bv-msg">Fetching the pages and the readable text.</p></div></div>';
+    main.innerHTML='<div class="bv-loading" role="status"><img src="'+pageImg(no,1)+'" alt=""><div><p>Opening '+(x?esc(x.label)+(numLab(x)?' \u00b7 '+esc(numLab(x)):''):'No. '+no)+'\u2026</p><p class="bv-msg">Fetching the pages and the readable text.</p></div></div>';
     root.scrollIntoView({block:'start'});
   }
   /* start fetching an issue as soon as the pointer or finger lands on a link to it */
@@ -220,7 +222,7 @@
     var d=ISSUES[cur.no];if(!d)return;
     var sel=main.querySelector('#bv-page');if(sel)sel.value=p;
     main.querySelectorAll('.bv-pager [data-step]').forEach(function(btn){var n=p+(+btn.dataset.step);btn.disabled=n<1||n>d.pageCount});
-    crumbsSet([['The Belgravian','shelf'],[d.label+' \u00b7 No. '+d.issue,issueKey(cur.no)],['Page '+p,'']]);
+    crumbsSet([['The Belgravian','shelf'],[d.label+(numLab(d)?' \u00b7 '+numLab(d):''),issueKey(cur.no)],['Page '+p,'']]);
     var h='#'+issueKey(cur.no)+'-p'+pad(p);if(location.hash!==h&&history.replaceState)history.replaceState(null,'',h);
   }
   function pageSection(d,p,hl){
@@ -252,7 +254,7 @@
       if(fresh){
         cur.no=no;cur.page=0;main.dataset.shown='';
         var opts='';for(var i=1;i<=d.pageCount;i++)opts+='<option value="'+i+'">Page '+i+' of '+d.pageCount+'</option>';
-        var h='<div class="bv-issuehead"><div><span class="label">No. '+d.issue+'</span><h2>'+esc(d.label)+'</h2><p class="meta">'+d.items.length+' items \u00b7 '+d.pageCount+' pages \u00b7 scroll to read on'+(d.officers&&d.officers.President?' \u00b7 President '+esc(d.officers.President):'')+'</p></div>'+
+        var h='<div class="bv-issuehead"><div>'+(numLab(d)?'<span class="label">'+esc(numLab(d))+'</span>':'')+'<h2>'+esc(d.label)+'</h2><p class="meta">'+d.items.length+' items \u00b7 '+d.pageCount+' pages \u00b7 scroll to read on'+(d.officers&&d.officers.President?' \u00b7 President '+esc(d.officers.President):'')+'</p></div>'+
           '<div class="bv-pager"><button type="button" data-step="-1" aria-label="Previous page">\u2190</button><select id="bv-page" aria-label="Jump to page">'+opts+'</select><button type="button" data-step="1" aria-label="Next page">\u2192</button></div></div>';
         h+='<div class="bv-seg" role="tablist" aria-label="View"><button role="tab" data-pane="text" aria-selected="'+(pane==='text')+'">Readable</button><button role="tab" data-pane="scan" aria-selected="'+(pane==='scan')+'">Original</button></div>';
         h+='<div class="bv-flow" data-pane="'+pane+'">';

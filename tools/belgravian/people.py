@@ -71,6 +71,7 @@ def slug(s):
     return re.sub(r'[^a-z0-9]+', '-', key(s)).strip('-')
 
 mentions = []
+PRINTED = json.load(open(f'{W}/printed.json')) if os.path.exists(f'{W}/printed.json') else {}   # as each issue prints its number
 PUB = set((int(x) if x.isdigit() else x) for x in open(f'{W}/published.txt').read().split()) if os.path.exists(f'{W}/published.txt') else set()
 for f in sorted(glob.glob(f'{W}/out/B*.json')):
     if re.search(r'\.(orig|firstpass)\.json$', f): continue
@@ -190,7 +191,7 @@ for k, e in people.items():
                 side[ROLE_LIST[r]].append({'id': m['item'], 'when': m['label'], 'p': m['p'], 'h': m['h']})
             continue
         ath = [x for x in byitem[m['item']] if (x.get('role') or 'athlete') not in ROLE_LIST]
-        ms.append({'id': m['item'], 'when': m['label'], 'label': f"No. {m['issue']}", 'p': m['p'], 'h': m['h'], 'sum': m['sum'], 'note': (ath or [m])[0]['note']})
+        ms.append({'id': m['item'], 'when': m['label'], 'label': PRINTED.get(str(m['issue']), f"No. {m['issue']}"), 'p': m['p'], 'h': m['h'], 'sum': m['sum'], 'note': (ath or [m])[0]['note']})
     photos = []
     for m in e['ms']:
         for ph in m['photos']:
