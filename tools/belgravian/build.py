@@ -174,6 +174,85 @@ def published(no):
 
 # printed numbering, checked against the mastheads 14 Nov 2026 (Steve: 'match the number to what the print edition calls itself')
 PRINTED = json.load(open(f'{W}/printed.json')) if os.path.exists(f'{W}/printed.json') else {}
+# ---- competitions and venues tidy-up (Steve, 14 Nov 2026) ----
+# 1. Tags that differ only in capitals, punctuation, quotes, "Championship"/"Championships"/"Champs.", "C.C."/
+#    "Cross-Country", dotted initials (A.A.A. = AAA, T.V.H. = TVH), "the", "&"/"and", a final plural, or the club's own
+#    name in front ("Belgrave Harriers Club Championships" = "Club Championships") are one tag; it shows the form printed
+#    most often. Venues the same way ("Battersea Pk." = "Battersea Park", "St. Albans" = "St Albans").
+# 2. Renamed competitions and venues (AAA Championships -> British Championships, British Empire Games -> Commonwealth
+#    Games, Crystal Palace National Sports Centre -> Crystal Palace) are decided one by one, with evidence, in
+#    tag-merges.json beside this script; only entries with "apply": true act. Age-group versions stay apart (Steve).
+#    A town stays apart from the parks and tracks in it (Steve).
+# House numbers are left out of venue tags ("34 Lower Kenwood Avenue, Enfield" -> "Lower Kenwood Avenue, Enfield").
+def _acr(k):   # join dotted or spaced initials: "a a a" -> "aaa"
+    out, buf = [], ''
+    for w in k.split():
+        if len(w) == 1 and w.isalpha(): buf += w
+        else:
+            if buf: out.append(buf); buf = ''
+            out.append(w)
+    if buf: out.append(buf)
+    return ' '.join(out)
+def FRAC(t):   # keep 5½ and 5¾ apart from 5
+    return t.replace('\u00bd', ' and-a-half ').replace('\u00be', ' and-three-quarters ').replace('\u00bc', ' and-a-quarter ').replace('-', ' ') if re.search('[\u00bc-\u00be]', t) else t
+def ev_norm(t):
+    k = FRAC(t)
+    k = unicodedata.normalize('NFD', k).encode('ascii', 'ignore').decode().lower().replace('&', ' and ')
+    k = re.sub(r"cross[- ]country", 'cross country', k)
+    k = re.sub(r"\b(c\.? ?c|x\.? ?c)\b\.?(?! ?[a-z]\.)", 'cross country', k)
+    k = re.sub(r"\bchamp(s|ionship|ionships)?\b\.?", 'championships', k)
+    k = re.sub(r"[^a-z0-9 ]", ' ', k.replace("'", '').replace('.', ' '))
+    k = _acr(re.sub(r"\b(the|and)\b", ' ', k))
+    w = k.split()
+    if w and len(w[-1]) > 4 and w[-1].endswith('s') and not w[-1].endswith('ss'): w[-1] = w[-1][:-1]
+    k = ' '.join(w)
+    while True:   # the club's own name in front
+        k2 = re.sub(r"^(belgrave harriers|belgrave|bels|bh|club|annual)\s+", '', k)
+        if k2 == k or not k2: break
+        k = k2
+    return k
+STREET = r"(?:Road|Rd\.?|Street|St\.?|Avenue|Ave\.?|Gardens|Close|Lane|Drive|Crescent|Way|Grove|Terrace|Place|Rise|Walk|Mews|Square)"
+def place_clean(p):
+    return re.sub(r"\b\d{1,4}[A-Za-z]?,?\s+(?=(?:[A-Z][a-z]+\.?\s){1,3}" + STREET + r"(?:\W|$))", '', p).strip(' ,')
+def pl_norm(t):
+    k = unicodedata.normalize('NFD', FRAC(t)).encode('ascii', 'ignore').decode().lower().replace('&', ' and ')
+    k = re.sub(r"\bst\b\.?\s+(?=[a-z])", 'saint ', k)
+    k = re.sub(r"\bpk\b\.?", 'park', k); k = re.sub(r"\brd\b\.?", 'road', k)
+    k = re.sub(r"[^a-z0-9 ]", ' ', k.replace("'", '').replace('.', ' '))
+    return _acr(re.sub(r"\bthe\b", ' ', k))
+_tm = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tag-merges.json')
+TAGM = json.load(open(_tm)) if os.path.exists(_tm) else {'competitions': [], 'venues': []}
+def _table(kind, norm):
+    out = collections.defaultdict(list)
+    for x in TAGM.get(kind, []):
+        if x.get('apply'):
+            for f in x['forms']: out[norm(f)].append((x.get('from') or 0, x.get('to') or 9999, x['into']))
+    return out
+EV_T, PL_T = _table('competitions', ev_norm), _table('venues', pl_norm)
+_ev_n, _pl_n = collections.Counter(), collections.Counter()
+_pub0 = set((int(x) if x.isdigit() else x) for x in open(f'{W}/published.txt').read().split()) if os.path.exists(f'{W}/published.txt') else set()
+for f in sorted(glob.glob(f'{W}/out/B*.json')):
+    if re.search(r'\.(orig|firstpass)\.json$', f): continue
+    d0 = json.load(open(f))
+    if not ((isinstance(d0['issue'], int) and 141 <= d0['issue'] <= 172) or d0['issue'] in _pub0): continue
+    for it in d0['items']:
+        for e in it.get('events') or []: _ev_n[event_tag(e, it)] += 1
+        for p in it.get('places') or []: _pl_n[place_clean(p)] += 1
+def _reps(cnt, norm):
+    g = collections.defaultdict(list)
+    for t, n in cnt.items(): g[norm(t)].append(t)
+    return {k: sorted(v, key=lambda t: (-cnt[t], t != t.strip('"\''), t.islower(), t))[0] for k, v in g.items()}
+EV_REP, PL_REP = _reps(_ev_n, ev_norm), _reps(_pl_n, pl_norm)
+def _tidy(t, y, norm, rep, table):
+    k = norm(t)
+    for y0, y1, into in table.get(k, []):
+        if y0 <= y <= y1: return into
+    k2 = norm(rep.get(k, t))
+    for y0, y1, into in table.get(k2, []):
+        if y0 <= y <= y1: return into
+    return rep.get(k, t)
+def tidy_event(t, y): return _tidy(t, y, ev_norm, EV_REP, EV_T)
+def tidy_place(p, y): return _tidy(place_clean(p), y, pl_norm, PL_REP, PL_T)
 issues, search = [], []
 VARIANTS = {}
 for f in sorted(glob.glob(f'{W}/out/B*.json')):
@@ -187,11 +266,13 @@ for f in sorted(glob.glob(f'{W}/out/B*.json')):
         for k in ('tables', 'scans', 'photos', 'people', 'events', 'clubs', 'places', 'sport'):
             it[k] = it.get(k) or []
         fin = []
+        y_ = int(str(d['date'])[:4])
         for e in it['events']:
-            t = event_tag(e, it); fin.append(t)
+            t = tidy_event(event_tag(e, it), y_); fin.append(t)
             raw = re.sub(r'\s*\(.*?\)', '', event_tag0(e)).strip().lower().replace('\u2019', "'")
             if raw and raw != t.lower(): VARIANTS.setdefault(t, set()).add(raw)
         it['events'] = list(dict.fromkeys(fin))
+        it['places'] = list(dict.fromkeys(tidy_place(p, y_) for p in it['places']))
     if str(no) in PRINTED: d['printed'] = PRINTED[str(no)]   # what the issue calls itself ('No. 1', '3rd Edition, 1929', or '' if nothing printed)
     json.dump(d, open(f'{OUT}/issues/B{no}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     y = int(str(d['date'])[:4])
@@ -232,6 +313,13 @@ for d, xs in by_dec.items():
 # Steve, 8 Nov 2026: what each competition tag was printed as, so a competition search also finds and highlights
 # the wording inside long results round-ups. Only tags with variants are listed.
 for t, al in SURREY_ALIASES.items(): VARIANTS.setdefault(t, set()).update(al)
+# keep the variants already published (a rebuild from the public issue copies no longer sees the raw wording), moving
+# those of a renamed tag to its new name, with the old name itself as a variant
+if os.path.exists(f'{OUT}/tag-variants.json'):
+    for t, v in json.load(open(f'{OUT}/tag-variants.json')).items():
+        t2 = tidy_event(t, 2000) if not TAGM.get('competitions') else next((x['into'] for x in TAGM['competitions'] if x.get('apply') and ev_norm(t) in {ev_norm(f) for f in x['forms']}), tidy_event(t, 2000))
+        VARIANTS.setdefault(t2, set()).update(v)
+        if t2 != t: VARIANTS[t2].add(t.lower())
 _cnt = collections.Counter(x for v in VARIANTS.values() for x in v)
 _names = {t.lower() for t in VARIANTS} | {e.lower() for it in search for e in it.get('e', [])}
 VARIANTS = {t: {x for x in v if _cnt[x] == 1 and x not in _names and len(x) > 6} | (set(SURREY_ALIASES.get(t, [])) - {t.lower()})

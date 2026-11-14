@@ -1,0 +1,725 @@
+{
+ "about": "Competition and venue tidy-up for the Belgravian (Steve, 14 Nov 2026). build.py reads this file. Each entry renames the tags in 'forms' (matched loosely: capitals, punctuation, 'Championship(s)', a final plural) to 'into'; 'from'/'to' limit the years. Only entries with apply: true act; medium and low ones wait for Steve's yes/no. Steve's earlier rules in build.py (Southern, Surrey League, Inter-Counties, London to Brighton, British Athletics League) still come first. Age-group versions stay apart; a town stays apart from the venues in it.",
+ "competitions": [
+  {
+   "id": "aaa-british",
+   "forms": [
+    "AAA Championships",
+    "British Championships",
+    "British Athletics Championships",
+    "Norwich Union European Trials & AAA Championships",
+    "European Trials & UK Championships",
+    "Aviva European Trials & UK Championships",
+    "British Championships & European Trials"
+   ],
+   "into": "AAA / British Championships",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "Steve, 14 Nov 2026: the AAA Championships became the British Championships",
+    "Wikipedia, AAA Championships: the AAA Championships (to 2006) 'served as the de facto British Championships'; Wikipedia, British Athletics Championships: 'established in 2007, replacing the AAA Championships' (https://en.wikipedia.org/wiki/AAA_Championships, https://en.wikipedia.org/wiki/British_Athletics_Championships)",
+    "The archive prints 'Norwich Union European Trials & AAA Championships' (2006) and 'British Championships' (2006) for the same meeting",
+    "The separate UK Championships (1977-93, 1997) ran alongside the AAA and are kept apart"
+   ]
+  },
+  {
+   "id": "commonwealth",
+   "forms": [
+    "British Empire Games",
+    "Empire Games",
+    "British Empire and Commonwealth Games",
+    "British Empire & Commonwealth Games",
+    "British Commonwealth Games",
+    "Commonwealth Games"
+   ],
+   "into": "Commonwealth Games",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "One Games under its successive names: British Empire Games (1930-50), British Empire and Commonwealth Games (1954-66), British Commonwealth Games (1970-74), Commonwealth Games (1978 on) (https://en.wikipedia.org/wiki/Commonwealth_Games)",
+    "The archive uses each name in its own years (Empire Games 1929-1950s, British Empire and Commonwealth 1962-66, British Commonwealth 1969-74, Commonwealth 1970 on); later mentions of the older names are look-backs"
+   ]
+  },
+  {
+   "id": "intl-world-xc",
+   "forms": [
+    "International Cross Country Championships",
+    "International Cross-Country Championship",
+    "World Cross Country Championships",
+    "World Cross-Country Championships",
+    "IAAF World Cross Country Championships"
+   ],
+   "into": "International / World Cross Country Championships",
+   "confidence": "medium",
+   "apply": false,
+   "evidence": [
+    "The International Cross Country Championships (1903-72) became the IAAF World Cross Country Championships from 1973 (https://en.wikipedia.org/wiki/World_Athletics_Cross_Country_Championships)",
+    "Recommend YES if you see them as one race, as with the AAA; NO keeps the old International (home countries) and the World event apart"
+   ]
+  },
+  {
+   "id": "english-national-xc",
+   "forms": [
+    "English Cross Country Championships",
+    "English Cross-Country Championship",
+    "English National Cross Country Championships",
+    "E.C.C.U. Championships",
+    "ECCA National"
+   ],
+   "into": "National Cross Country Championships",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The 'National' is the English Cross Country Championships (English Cross Country Association/Union); the archive uses both names 1935-2007, same senior/junior/youth races and venues",
+    "442 items say National, 21 say English; no item uses both for different races"
+   ]
+  },
+  {
+   "id": "southern-12-stage",
+   "forms": [
+    "Southern 12 Stage Road Relay",
+    "SEAA 12-Stage Road Relay",
+    "Southern 12-Stage Road Relay",
+    "SEAA 12 Stage Road Relay",
+    "South of England 12 Stage Road Relay"
+   ],
+   "into": "Southern 12-Stage Road Relay",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "Southern became SEAA (South of England AA); you already merged the Southern/SEAA cross-country and track championships (8 Nov 2026) on the same basis",
+    "Southern 12 Stage 1979-2003, SEAA 12-Stage 1998-2008: the same road relay"
+   ]
+  },
+  {
+   "id": "southern-6-stage",
+   "forms": [
+    "Southern 6 Stage Road Relay",
+    "SEAA 6-Stage Road Relay",
+    "Southern 6-Stage Road Relay",
+    "SEAA 6 Stage Road Relay"
+   ],
+   "into": "Southern 6-Stage Road Relay",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "Southern became SEAA; same 6-stage road relay under both names"
+   ]
+  },
+  {
+   "id": "national-12-stage",
+   "forms": [
+    "AAA 12-Stage Road Relay",
+    "National 12-Stage Road Relay",
+    "National 12 Stage Road Relay"
+   ],
+   "into": "National Road Relay",
+   "confidence": "medium",
+   "apply": false,
+   "evidence": [
+    "The National Road Relay (12 stages, Sutton Park from the 1970s) is run by the AAA/England Athletics; 'AAA 12-Stage Road Relay' 2000-05 and 'National Road Relay' are held at Sutton Coldfield/Sutton Park",
+    "'National Road Relay Championship' (1966-70, Leicester) is left out: before 1967 'national road relay' can mean the London to Brighton relay"
+   ]
+  },
+  {
+   "id": "aaa-6-stage",
+   "forms": [
+    "AAA 6-Stage Road Relay",
+    "National 6-Stage Road Relay",
+    "National 6 Stage Road Relay"
+   ],
+   "into": "National 6-Stage Road Relay",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The AAA (later England Athletics) National 6-stage road relay under its two names"
+   ]
+  },
+  {
+   "id": "uk-womens-league",
+   "forms": [
+    "UK Women's League",
+    "UK Women's Athletics League",
+    "UK Womens League",
+    "UK Women’s Athletics League"
+   ],
+   "into": "UK Women's League",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "One league, printed with and without 'Athletics' (2003-08)"
+   ]
+  },
+  {
+   "id": "southern-womens-league",
+   "forms": [
+    "Southern Women's League",
+    "Women's Southern League",
+    "Ladies Southern League",
+    "Southern Ladies League"
+   ],
+   "into": "Southern Women's League",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The same league with the words in either order (1977-2008); 'Ladies' used once in 1991"
+   ]
+  },
+  {
+   "id": "young-athletes-league",
+   "forms": [
+    "Young Athletes League",
+    "Young Athletes' League",
+    "National Young Athletes League",
+    "National Young Athletes' League",
+    "National YA League",
+    "Dunlop Young Athletes League",
+    "Girobank Young Athletes League",
+    "Woolworth's Young Athletes League",
+    "Woolworths Young Athletes League",
+    "McDonalds Young Athletes League",
+    "McDonald's Young Athletes League",
+    "McDonald's YA League",
+    "YA League"
+   ],
+   "into": "Young Athletes League",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The national Young Athletes' League under its sponsors' names: Dunlop (1983-85), Girobank (1989), Woolworth's (1991-92), McDonald's (1995-99), then 'National YA League' (to 2006): the same track and field matches (Deangate, Crawley, Guildford, Battersea)",
+    "The Lily B League (girls) and the Surrey Young Athletes cross-country league are left apart"
+   ]
+  },
+  {
+   "id": "gold-cup",
+   "forms": [
+    "GRE Cup",
+    "GRE Gold Cup",
+    "Guardian Gold Cup",
+    "Guardian Insurance Gold Cup",
+    "Gold Cup"
+   ],
+   "into": "Gold Cup",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The national club cup under its sponsors' names: GRE (Guardian Royal Exchange) Cup / Gold Cup 1981-95, Guardian (Insurance) Gold Cup 1995-97, then Gold Cup: same track and field club cup",
+    "The Jubilee Cup (the lower-tier cup) is left apart"
+   ]
+  },
+  {
+   "id": "bal-gold-cup",
+   "forms": [
+    "British Athletics League Gold Cup"
+   ],
+   "into": "Gold Cup",
+   "confidence": "medium",
+   "apply": false,
+   "evidence": [
+    "1998-2001 Gold Cup rounds printed as 'British Athletics League Gold Cup'; probably the same cup, run with the league"
+   ]
+  },
+  {
+   "id": "jubilee-cup",
+   "forms": [
+    "GRE Jubilee Cup",
+    "Guardian Jubilee Cup",
+    "Jubilee Cup"
+   ],
+   "into": "Jubilee Cup",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The lower-tier national club cup under its sponsors' names (GRE, Guardian)"
+   ]
+  },
+  {
+   "id": "european-clubs",
+   "forms": [
+    "European Clubs Cup",
+    "European Clubs' Cup",
+    "European Champion Clubs Cup",
+    "European Clubs Championship",
+    "European Clubs' Championship"
+   ],
+   "into": "European Clubs Cup",
+   "confidence": "medium",
+   "apply": false,
+   "evidence": [
+    "1992-2007: the European Champion Clubs Cup; 'Championship' and 'Cup' look like the same competition in the same years (1993-97)"
+   ]
+  },
+  {
+   "id": "southern-league-saal",
+   "forms": [
+    "Southern Amateur Athletic League"
+   ],
+   "into": "Southern League",
+   "confidence": "medium",
+   "apply": false,
+   "evidence": [
+    "'Southern Amateur Athletic League' is used for current matches up to 1968 (later only in look-backs, B175-14, B181-11); 'Southern League' starts in 1969 (B172-13), same track and field club matches and venues (Battersea Park, Croydon, White City)",
+    "I could not confirm that the 1969 league was the old league renamed rather than a new one: please say yes or no"
+   ]
+  },
+  {
+   "id": "polytechnic-marathon",
+   "forms": [
+    "Polytechnic Marathon",
+    "Poly Marathon",
+    "Poly. Marathon",
+    "Polytechnic Harriers Marathon",
+    "Poly. Marathon meeting",
+    "Polytechnic Marathon meeting",
+    "Windsor to Chiswick Marathon"
+   ],
+   "into": "Polytechnic Marathon",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The Polytechnic Harriers' marathon (Windsor to Chiswick), 'Poly' for short, 1929-2007"
+   ]
+  },
+  {
+   "id": "rwa",
+   "forms": [
+    "Road Walking Association Junior Championship",
+    "Race Walking Association Junior Championship"
+   ],
+   "into": "RWA Junior Championship",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "R.W.A. = Road Walking Association (later Race Walking Association): the same championship"
+   ]
+  },
+  {
+   "id": "tvh-relay",
+   "forms": [
+    "Thames Valley Harriers Road Relay",
+    "Thames Valley Road Relay"
+   ],
+   "into": "TVH Road Relay",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "T.V.H. = Thames Valley Harriers: same road relay 1946-2003"
+   ]
+  },
+  {
+   "id": "hogs-back",
+   "forms": [
+    "Hog's Back Road Race",
+    "Hog's Back",
+    "Hogs Back Race",
+    "Hogs Back Road Race"
+   ],
+   "into": "Hog's Back Road Race",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The same Hog's Back road race, 1959-2009"
+   ]
+  },
+  {
+   "id": "hastings-brighton",
+   "forms": [
+    "Hastings to Brighton Open Walk",
+    "Hastings to Brighton",
+    "Hastings to Brighton Walk"
+   ],
+   "into": "Hastings to Brighton Walk",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The same walk (1930-2006); 'Hastings to Brighton' alone is used for the walk"
+   ]
+  },
+  {
+   "id": "county-champs-surrey",
+   "forms": [
+    "Surrey County Championships",
+    "Surrey County AAA Championships",
+    "Surrey AAA Championships",
+    "Surrey A.A.A. Championships"
+   ],
+   "into": "Surrey Championships",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "Both are the Surrey (County AAA) track and field championships 1926-2008: same events (track, field, walks) and grounds (Motspur Park, Battersea Park, Crystal Palace)",
+    "Cross-country is tagged separately as Surrey Cross Country Championships",
+    "'Surrey AAA Championships' (1967-89) is the same meeting under its organiser's name"
+   ]
+  },
+  {
+   "id": "county-xc-surrey",
+   "forms": [
+    "Surrey County Cross Country Championships"
+   ],
+   "into": "Surrey Cross Country Championships",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "Same Surrey cross-country championships 1926-2009 with or without 'County'"
+   ]
+  },
+  {
+   "id": "county-champs-middx",
+   "forms": [
+    "Middlesex County Championships"
+   ],
+   "into": "Middlesex Championships",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "Same Middlesex track and field championships 1928-2008 with or without 'County'"
+   ]
+  },
+  {
+   "id": "county-xc-middx",
+   "forms": [
+    "Middlesex County Cross Country Championships"
+   ],
+   "into": "Middlesex Cross Country Championships",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "Same Middlesex cross-country championships with or without 'County'"
+   ]
+  },
+  {
+   "id": "county-champs-kent",
+   "forms": [
+    "Kent County Championships"
+   ],
+   "into": "Kent Championships",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "Same Kent championships 1930-2008 with or without 'County'"
+   ]
+  },
+  {
+   "id": "surrey-road-relay",
+   "forms": [
+    "Surrey County Road Relay",
+    "Surrey County Road Relays",
+    "Surrey Road Relays"
+   ],
+   "into": "Surrey Road Relay",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The Surrey road relay with or without 'County', singular or plural, 1948-2008"
+   ]
+  },
+  {
+   "id": "national-relay-short",
+   "forms": [
+    "National Relay"
+   ],
+   "into": "National Road Relay",
+   "confidence": "low",
+   "apply": false,
+   "evidence": [
+    "Two mentions 1957-59; before 1967 the 'national road relay' may mean the London to Brighton relay: please check"
+   ]
+  },
+  {
+   "id": "uk-pearl",
+   "forms": [
+    "Pearl Assurance British Championships"
+   ],
+   "into": "UK Championships",
+   "confidence": "medium",
+   "apply": false,
+   "evidence": [
+    "1993 was the last annual UK Championships (Wikipedia, UK Athletics Championships), sponsored at the time; recommend YES"
+   ]
+  },
+  {
+   "id": "bupa-1998",
+   "forms": [
+    "BUPA British Championships"
+   ],
+   "into": "AAA / British Championships",
+   "confidence": "medium",
+   "apply": false,
+   "evidence": [
+    "One 1998 mention; in 1998 the AAA Championships were the national championships and trials; recommend YES"
+   ]
+  },
+  {
+   "id": "uk-2007",
+   "forms": [
+    "UK Championships"
+   ],
+   "into": "AAA / British Championships",
+   "confidence": "medium",
+   "apply": false,
+   "evidence": [
+    "From 2007 the British Championships replaced the AAA; a 2007 'UK Championships' mention is probably them; recommend YES for 2007 only"
+   ],
+   "from": 2007
+  }
+ ],
+ "venues": [
+  {
+   "id": "crystal-palace",
+   "forms": [
+    "Crystal Palace",
+    "Crystal Palace National Sports Centre",
+    "Crystal Palace Sports Centre",
+    "National Sports Centre",
+    "Crystal Palace N.S.C.",
+    "Crystal Palace Stadium",
+    "National Sports Centre, Crystal Palace",
+    "Crystal Palace Track"
+   ],
+   "into": "Crystal Palace",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The National Sports Centre (opened 1964) is the Crystal Palace track; all forms are the same ground"
+   ]
+  },
+  {
+   "id": "white-city",
+   "forms": [
+    "White City",
+    "White City Stadium",
+    "White City Track"
+   ],
+   "into": "White City",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The White City Stadium (AAA championships 1932-70) under its three printed forms"
+   ]
+  },
+  {
+   "id": "parliament-hill",
+   "forms": [
+    "Parliament Hill",
+    "Parliament Hill Fields"
+   ],
+   "into": "Parliament Hill",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The cross-country course on Parliament Hill Fields, printed with and without 'Fields', 1940-2009"
+   ]
+  },
+  {
+   "id": "parliament-hill-track",
+   "forms": [
+    "Parliament Hill Track",
+    "Parliament Hill Lido Track"
+   ],
+   "into": "Parliament Hill",
+   "confidence": "medium",
+   "apply": false,
+   "evidence": [
+    "The athletics track on Parliament Hill Fields (1941-50); same ground as the cross-country course, but a track rather than the course"
+   ]
+  },
+  {
+   "id": "copthall",
+   "forms": [
+    "Copthall",
+    "Copthall Stadium",
+    "Barnet Copthall Stadium"
+   ],
+   "into": "Copthall Stadium",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "Copthall Stadium (Barnet), 1968-2008; 'Copthall' alone means the stadium"
+   ]
+  },
+  {
+   "id": "new-river",
+   "forms": [
+    "New River",
+    "New River Stadium",
+    "New River Sports Centre"
+   ],
+   "into": "New River Stadium",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The New River Sports Centre/Stadium, Wood Green, 1974-2006"
+   ]
+  },
+  {
+   "id": "motspur",
+   "forms": [
+    "Motspur Park Track",
+    "Motspur Park"
+   ],
+   "into": "Motspur Park",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The University of London ground at Motspur Park; 'Track' added once"
+   ]
+  },
+  {
+   "id": "kingsmeadow",
+   "forms": [
+    "Kingsmeadow",
+    "Kingsmeadow Track",
+    "Kingsmeadow Stadium"
+   ],
+   "into": "Kingsmeadow",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The Kingsmeadow athletics track, Kingston, 1991-2008"
+   ]
+  },
+  {
+   "id": "stamford-bridge",
+   "forms": [
+    "Stamford Bridge",
+    "Stamford Bridge Track"
+   ],
+   "into": "Stamford Bridge",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The Stamford Bridge track (AAA championships to 1931)"
+   ]
+  },
+  {
+   "id": "meadowbank",
+   "forms": [
+    "Meadowbank",
+    "Meadowbank Stadium"
+   ],
+   "into": "Meadowbank",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "Meadowbank Stadium, Edinburgh"
+   ]
+  },
+  {
+   "id": "west-london",
+   "forms": [
+    "West London Stadium",
+    "West London"
+   ],
+   "into": "West London Stadium",
+   "confidence": "medium",
+   "apply": false,
+   "evidence": [
+    "'West London' (1966-2006) is used for meetings at the West London Stadium (Wormwood Scrubs); recommend YES"
+   ]
+  },
+  {
+   "id": "battersea-track",
+   "forms": [
+    "Battersea Park Track"
+   ],
+   "into": "Battersea Park",
+   "confidence": "medium",
+   "apply": false,
+   "evidence": [
+    "The track in Battersea Park (1925-95); same ground as 'Battersea Park', but you may want the track kept apart from cross-country in the park; recommend YES"
+   ]
+  },
+  {
+   "id": "tooting-bec-track",
+   "forms": [
+    "Tooting Bec Track",
+    "Tooting Track"
+   ],
+   "into": "Tooting Bec",
+   "confidence": "low",
+   "apply": false,
+   "evidence": [
+    "The track on Tooting Bec Common vs the Common itself (cross-country): recommend NO, keep apart"
+   ]
+  },
+  {
+   "id": "wimbledon-park-track",
+   "forms": [
+    "Wimbledon Park Track"
+   ],
+   "into": "Wimbledon Park",
+   "confidence": "medium",
+   "apply": false,
+   "evidence": [
+    "The track at Wimbledon Park (1953-73), same ground; recommend YES"
+   ]
+  },
+  {
+   "id": "hurlingham",
+   "forms": [
+    "Hurlingham Track",
+    "Hurlingham Park Track",
+    "Hurlingham Park"
+   ],
+   "into": "Hurlingham",
+   "confidence": "medium",
+   "apply": false,
+   "evidence": [
+    "The Hurlingham Park track, Fulham; 'Hurlingham' is used for the same track meetings (1942-2003); recommend YES"
+   ]
+  },
+  {
+   "id": "herne-hill",
+   "forms": [
+    "Herne Hill Track",
+    "Herne Hill Stadium"
+   ],
+   "into": "Herne Hill",
+   "confidence": "medium",
+   "apply": false,
+   "evidence": [
+    "The Herne Hill track (1929-37); 'Herne Hill' is also the district; recommend YES"
+   ]
+  },
+  {
+   "id": "charlton-park",
+   "forms": [
+    "Charlton Park Track"
+   ],
+   "into": "Charlton Park",
+   "confidence": "medium",
+   "apply": false,
+   "evidence": [
+    "The track in Charlton Park (1946-53); recommend YES"
+   ]
+  },
+  {
+   "id": "drayton-green",
+   "forms": [
+    "Drayton Green Track",
+    "Drayton Green"
+   ],
+   "into": "Drayton Green",
+   "confidence": "medium",
+   "apply": false,
+   "evidence": [
+    "The Drayton Green track (Ealing), 1931-2007; recommend YES"
+   ]
+  },
+  {
+   "id": "belgrave-hall",
+   "forms": [
+    "Belgrave Hall",
+    "Belgrave Hall, Denmark Road, S.W.19",
+    "Belgrave Hall, Denmark Road"
+   ],
+   "into": "Belgrave Hall",
+   "confidence": "high",
+   "apply": true,
+   "evidence": [
+    "The club's own Belgrave Hall; the street address is left out of the tag"
+   ]
+  }
+ ]
+}
