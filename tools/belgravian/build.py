@@ -6,7 +6,8 @@ Images (WORKDIR/pages, WORKDIR/crops) go to the R2 bucket belgravian-archive und
 import collections, json, os, sys, glob, shutil, re, unicodedata
 
 W, OUT = sys.argv[1], sys.argv[2]
-man = json.load(open('/home/claude/stephengardner1/surrey-league/research/belgravian/manifest_raw.json'))
+_man = '/home/claude/stephengardner1/surrey-league/research/belgravian/manifest_raw.json'
+man = json.load(open(_man)) if os.path.exists(_man) else []   # without it, each issue keeps the pdfUrl it already has
 urls = {x['no']: x['url'].split('?')[0] for x in man if not x['eharrier']}
 os.makedirs(f'{OUT}/issues', exist_ok=True)
 
@@ -272,6 +273,25 @@ for f in sorted(glob.glob(f'{OUT}/issues/B*.json')):
     for it in d['items']:
         item_src[it['id']] = it
 os.makedirs(f'{OUT}/people/x', exist_ok=True)
+# what is published now: old ids (so links to a merged-away profile still open the merged one) and old passages
+# (so a rebuild from the public issue copies, without the private redaction list, reuses the passages that were
+# checked when they were first published instead of cutting new ones)
+OLD_ROWS = json.load(open(f'{OUT}/people.json'))['people'] if os.path.exists(f'{OUT}/people.json') else []
+OLD_ITEMS, OLD_X = {}, {}
+for r in OLD_ROWS:
+    if r.get('to'): continue
+    fp = f"{OUT}/people/p/{r['id']}.json"
+    if not os.path.exists(fp): continue
+    try: op = json.load(open(fp))
+    except Exception: continue
+    OLD_ITEMS[r['id']] = [m['id'] for m in op.get('mentions') or []]
+    fx = f"{OUT}/people/x/{r['id']}.json"
+    if os.path.exists(fx):
+        OLD_X[r['id']] = dict(zip(OLD_ITEMS[r['id']], json.load(open(fx))['x']))
+X_BY_ITEM = collections.defaultdict(list)
+for pid, d_ in OLD_X.items():
+    for i_, x_ in d_.items():
+        if x_: X_BY_ITEM[i_].append(x_)
 for old in glob.glob(f'{OUT}/people/x/*.json'): os.remove(old)
 SENT = re.compile(r'(?<=[.!?])\s+(?=[A-Z"\'(])|\n+')
 def passage(it, forms, surname):
@@ -311,6 +331,8 @@ PRIV = sorted({r['find'] for r in json.load(open(_priv)) if len(r['find']) > 5} 
 PHONE = re.compile(r'\(?\b0\d{1,4}\)?[\s-]?\d{3,4}[\s-]?\d{3,4}\b|\b\d{3}[\s-]\d{4}\b')
 # a street address ending in a postcode ("60 Green Acres, Park Hill, Croydon CR0 5UX")
 POSTAL = re.compile(r'\b\d{1,4}[A-Za-z]?,? [A-Z][^.;:"]{2,80}?\b[A-Z]{1,2}[\dO][A-Z\d]? ?[\dO][A-Z]{2}\b')
+# without the private list, also leave out anything that reads like a street address ("24 Fryston Avenue, Coulsdon")
+ADDR = re.compile(r"\b\d{1,4}[A-Za-z]?,? [A-Z][a-z]+(?: [A-Z][a-z]+)? (?:Road|Rd|Street|St|Avenue|Ave|Gardens|Close|Lane|Drive|Crescent|Way|Grove|Place|Terrace|Court|Hill|Rise|Park|Walk|Mews|Square)\b[^.;]{0,60}")
 def scrub(s):
     for a in PRIV:
         if a in s: s = s.replace(a, '…')
@@ -322,7 +344,14 @@ for p in pi:
     surname = re.sub(r'[^A-Za-z\'-]', '', p['name'].split()[-1]) or p['name']
     forms = sorted({a for a in (p.get('aka') or []) + [p['name']] if surname.lower() in a.lower() and len(a) > len(surname) + 1},
                    key=len, reverse=True)
-    x = [scrub(passage(item_src.get(m['id'], {}), forms, surname)) for m in p['mentions']]
+    def one(m):
+        if not PRIV:   # public rebuild: reuse a passage already published for this item and this person
+            if m['id'] in OLD_X.get(p['id'], {}): return OLD_X[p['id']][m['id']]
+            for x_ in X_BY_ITEM.get(m['id'], []):
+                if any(f in x_ for f in forms): return x_
+        x_ = scrub(passage(item_src.get(m['id'], {}), forms, surname))
+        return ADDR.sub('…', x_) if not PRIV else x_
+    x = [one(m) for m in p['mentions']]
     if any(x):
         json.dump({'x': x}, open(f"{OUT}/people/x/{p['id']}.json", 'w'), ensure_ascii=False, separators=(',', ':'))
         p['x'] = 1; nprof += 1
@@ -387,8 +416,36 @@ for ps in shards.values():
         fn = f"{OUT}/people/p/{p['id']}.json"; keep.add(fn)
         s_ = json.dumps(p, ensure_ascii=False, separators=(',', ':'))
         if not os.path.exists(fn) or open(fn).read() != s_: open(fn, 'w').write(s_)
+# a profile id that no longer exists (its person was merged, Steve 14 Nov 2026) still opens: its file becomes a copy
+# of the person it went into, and a nameless row in people.json (n 0, letter '~', 'to' the new id) lets old links
+# and chips resolve without listing the person twice
+new_ids = {p['id']: p for ps in shards.values() for p in ps}
+item_owner = collections.defaultdict(list)
+for pid, p in new_ids.items():
+    for m in p['mentions'] + p.get('official', []) + p.get('wrote', []) + p.get('credits', []): item_owner[m['id']].append(pid)
+alias = {}
+for r in OLD_ROWS:
+    oid = r['id']
+    if oid in new_ids: continue
+    if r.get('to'):
+        alias[oid] = r['to']; continue
+    votes = collections.Counter(q for i in OLD_ITEMS.get(oid, []) for q in item_owner.get(i, []))
+    if votes: alias[oid] = votes.most_common(1)[0][0]
+for oid in list(alias):            # follow chains; drop any that lead nowhere
+    t, seen = alias[oid], set()
+    while t not in new_ids and t in alias and t not in seen: seen.add(t); t = alias[t]
+    if t in new_ids: alias[oid] = t
+    else: del alias[oid]
+for oid, t in sorted(alias.items()):
+    fn = f"{OUT}/people/p/{oid}.json"; keep.add(fn)
+    s_ = json.dumps(new_ids[t], ensure_ascii=False, separators=(',', ':'))
+    if not os.path.exists(fn) or open(fn).read() != s_: open(fn, 'w').write(s_)
+    if new_ids[t].get('x') and os.path.exists(f"{OUT}/people/x/{t}.json"):
+        shutil.copy(f"{OUT}/people/x/{t}.json", f"{OUT}/people/x/{oid}.json")
+    light.append({'id': oid, 'name': '', 'n': 0, 's': '~', 'to': t})
 for old in glob.glob(f'{OUT}/people/p/*.json'):
     if old not in keep: os.remove(old)
+print(len(alias), 'old profile ids now open the person they were merged into')
 json.dump({'people': light}, open(f'{OUT}/people.json', 'w'), ensure_ascii=False, separators=(',', ':'))
 for l in legends:
     src = f"{W}/../legend/{l['id'][2:]}.json"

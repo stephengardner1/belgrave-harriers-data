@@ -106,6 +106,8 @@ PAGE = {}
 for p in people:
     if p['id'] in detail and real_name(p['name']):
         PAGE[p['id']] = 'people/' + slug(p['id'][2:]) + '.html'
+for p in people:   # an old id merged into another person links to that person's page
+    if p.get('to') and p['to'] in PAGE: PAGE[p['id']] = PAGE[p['to']]
 def person_link(name, prefix):
     pid = 'p-' + slug(name)
     return f'<a href="{prefix}{PAGE[pid]}">{e(name)}</a>' if pid in PAGE else f'<span>{e(name)}</span>'
@@ -143,7 +145,7 @@ for f in sorted(glob.glob(os.path.join(ROOT, 'issues', 'B*.json'))):
 when = {d['issue']: d['label'] for d in issues}
 # ---- people pages ----
 for p in people:
-    if p['id'] not in PAGE: continue
+    if p['id'] not in PAGE or p.get('to'): continue
     x = detail[p['id']]
     body = f'<span class="label">In The Belgravian</span><h1>{e(x["name"])}</h1>'
     aka = [a for a in (x.get('aka') or []) if a != x['name']]
@@ -164,7 +166,7 @@ for p in people:
 os.makedirs(os.path.join(OUT, 'share'), exist_ok=True)
 nshare = 0
 for p in people:
-    x = detail.get(p['id']); sh = (x or {}).get('share')
+    x = detail.get(p.get('to') or p['id']); sh = (x or {}).get('share')
     if not sh: continue
     title = f"{x['name']} · The Belgravian · Belgrave Harriers"
     go = READER + p['id']
@@ -193,7 +195,7 @@ for dec in sorted(by):
     body += f'<h3>{dec}</h3><ul class="list">' + ''.join(
         f'<li><a href="issues/B{d["issue"]}.html">{e(d["label"])}</a>' + ((' · ' + e(d['printed'])) if d.get('printed') else (f' · No. {d["issue"]}' if 'printed' not in d else '')) + f' · {len(d["items"])} items</li>'
         for d in sorted(by[dec], key=lambda d: d['date'])) + '</ul>'
-named = sorted([p for p in people if p['id'] in PAGE], key=lambda p: detail[p['id']].get('sort') or p['name'].lower())
+named = sorted([p for p in people if p['id'] in PAGE and not p.get('to')], key=lambda p: detail[p['id']].get('sort') or p['name'].lower())
 letters = sorted({(p.get('s') or p['name'][-1:]).upper()[:1] for p in named if (p.get('s') or '').isalpha()})
 body += '<h3>People</h3><div class="az">' + ''.join(f'<a href="people/index-{l.lower()}.html">{l}</a>' for l in letters) + '</div>'
 page('index.html', 'The Belgravian archive · Belgrave Harriers', 'Every issue of The Belgravian, the Belgrave Harriers club gazette, transcribed and searchable.', body, 'index.html')

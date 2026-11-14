@@ -100,7 +100,7 @@ for d in sorted(dec):
 
 years = [i['year'] for i in issues]
 home = {
-    'totals': {'issues': len(issues), 'articles': tot_items, 'photos': tot_photos, 'names': len(P)},
+    'totals': {'issues': len(issues), 'articles': tot_items, 'photos': tot_photos, 'names': sum(1 for p in P if not p.get('to'))},
     'span': [min(years), max(years)],
     'years': {str(y): per_year[y] for y in sorted(per_year)},
     'decades': decades,
