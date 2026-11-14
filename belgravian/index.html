@@ -208,17 +208,17 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
 /* front page (direction E, Nov 2026): folio, timeline picks a decade, then photos, issues, athletes,
    competitions; then the whole archive by surname, discipline and kind. Section heads in titling capitals. */
 .bv-home{display:grid}
-.bv-era{background:var(--cream);padding:16px;display:grid;gap:12px}
+.bv-era{background:var(--cream);padding:16px;display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
 .bv-era-chart{display:grid}
 .bv-era-stub{display:none}
-.bv-era-bars{display:flex;align-items:flex-end;gap:1px;height:64px}
-.bv-era-bars button{flex:1 1 0;min-width:0;padding:0;border:0;border-radius:1px 1px 0 0;background:#d9c7a6}
+.bv-era-chart>*{min-width:0}.bv-era-chart.nostub{grid-template-columns:minmax(0,1fr)}.bv-era-bars{display:flex;align-items:flex-end;gap:1px;height:64px;min-width:0;overflow:hidden}
+.bv-era-bars button{flex:1 1 0;min-width:0!important;width:auto;padding:0!important;margin:0;border:0;border-radius:1px 1px 0 0;background:#d9c7a6}
 .bv-era-bars button.z{background:var(--rule);cursor:default}
 .bv-era-bars button.on{background:var(--claret)}
 .bv-era-axis{display:flex;margin-top:-6px}
 .bv-era-axis span{flex:1 1 0;min-width:0;overflow:visible;white-space:nowrap;font:400 11px/14px var(--mono);color:var(--slate)}
 .bv-era-axis span.m5{visibility:hidden}
-.bv-era-axis span:last-child{direction:rtl}
+.bv-era-axis span:last-child{direction:rtl}.bv-era-axis span:last-child:not([data-keep]){visibility:hidden}
 .bv-era-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}
 .bv-era-tabs button{height:44px;border:1px solid var(--rule);border-radius:3px;background:var(--paper);color:var(--ink);font:600 15px/20px var(--text);padding:0 6px}
 .bv-era-tabs button[aria-selected=true]{background:var(--claret);border-color:var(--claret);color:#fff}
@@ -275,9 +275,9 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
   .bv-era-bars{height:120px;gap:3px}
   .bv-era-bars button:not(.z){cursor:pointer}
   .bv-era-bars button:not(.z):not(.on):hover{background:var(--gold-ink)}
-  .bv-era-axis{margin:0 0 0 158px}
+  .bv-era-axis{margin:0 0 0 158px}.bv-era-chart.nostub{grid-template-columns:minmax(0,1fr)}.bv-era-chart.nostub+.bv-era-axis{margin-left:0}
   .bv-era-axis span{font-size:12px}
-  .bv-era-axis span.m5{visibility:visible}
+  .bv-era-axis span.m5{visibility:visible}.bv-era-axis span:last-child:not([data-keep]){visibility:visible}
   .bv-era-tabs{display:flex;gap:6px}
   .bv-era-tabs button{padding:0 20px;font-size:16px}
   .bv-era-note{display:none}
@@ -584,7 +584,7 @@ body{margin:0;background:#fff}#bh-belgravian{padding:24px max(16px,env(safe-area
       var bars='',axis='',bi=0;for(y=y0;y<=y1;y++){var v=H.years[y]||0,d=String(Math.floor(y/10)*10);
         bars+='<button type="button" data-dec="'+d+'" class="'+(v?'':'z ')+(d===HDEC&&v?'on':'')+'" style="--i:'+(bi++)+';height:'+(v?Math.max(3,Math.round(v/max*100)):3)+'%" '+(v?'aria-label="'+y+': '+v+' articles"':'tabindex="-1" aria-hidden="true" disabled')+'></button>';
         axis+='<span class="'+(y%10===0||y===y1?'':(y%5===0?'m5':'m5" style="visibility:hidden'))+'">'+(y%5===0||y===y1?y:'')+'</span>'}
-      var h='<div class="bv-home"><section class="bv-era" aria-label="Choose an era"><div class="bv-era-chart">'+(y0>1925?'<div class="bv-era-stub"><b>1925–'+(y0-1)+'</b><span>Coming soon</span></div>':'')+'<div class="bv-era-bars">'+bars+'</div></div>'+
+      var h='<div class="bv-home"><section class="bv-era" aria-label="Choose an era"><div class="bv-era-chart'+(y0>1925?'':' nostub')+'">'+(y0>1925?'<div class="bv-era-stub"><b>1925–'+(y0-1)+'</b><span>Coming soon</span></div>':'')+'<div class="bv-era-bars">'+bars+'</div></div>'+
         '<div class="bv-era-axis" aria-hidden="true">'+axis+'</div><div class="bv-era-tabs" role="tablist" aria-label="Decade">'+
         decs.map(function(d){return '<button type="button" role="tab" data-dec="'+d+'" aria-selected="'+(d===HDEC)+'">'+d+'s</button>'}).join('')+
         '</div>'+(y0>1925?'<p class="bv-era-note">1925–'+(y0-1)+' coming soon.</p>':'')+'</section><div class="bv-dec" aria-live="polite">'+decade(HDEC)+'</div>';
