@@ -1,0 +1,44 @@
+
+<!-- 26. Homepage "Defending the double": every Surrey League report in a sideways rail (19 Nov 2026)
+     Display only. The section already lists every Surrey League report of the season in a sideways-scrolling row,
+     but on desktop only three fitted and nothing showed there were more. Now the next card peeks in from the right,
+     and on screens wider than a phone, round arrow buttons under the row scroll it one card at a time
+     (greyed out at either end). Phones swipe as before. -->
+<style>
+@media (min-width:641px){
+  .bh-def .bh-cards{scroll-padding-left:0}
+  .bh-def .bh-cards>*{width:calc((100% - 72px)/3.25) !important}
+}
+@media (min-width:641px) and (max-width:900px){
+  .bh-def .bh-cards>*{width:calc((100% - 48px)/2.25) !important}
+}
+.bh-railnav{display:flex;justify-content:flex-end;gap:12px;margin:20px 0 0}
+.bh-railnav[hidden]{display:none}
+.bh-railnav button{width:44px;height:44px;border-radius:50%;border:1px solid rgba(214,185,122,.7);background:transparent;color:#d6b97a;
+  display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;transition:background .15s,color .15s}
+.bh-railnav button:hover:not(:disabled){background:#d6b97a;color:#7a001d}
+.bh-railnav button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.bh-railnav button:disabled{opacity:.35;cursor:default}
+@media (max-width:640px){.bh-railnav{display:none}}
+</style>
+<script>
+(function(){
+  function wire(rail){
+    if(rail.getAttribute('data-bh-nav'))return;rail.setAttribute('data-bh-nav','1');
+    var nav=document.createElement('div');nav.className='bh-railnav';
+    var arrow=function(d){return '<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="'+(d<0?'M11 3.5L5.5 9l5.5 5.5':'M7 3.5L12.5 9 7 14.5')+'" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'};
+    nav.innerHTML='<button type="button" aria-label="Earlier reports">'+arrow(-1)+'</button><button type="button" aria-label="More reports">'+arrow(1)+'</button>';
+    rail.parentNode.insertBefore(nav,rail.nextSibling);
+    var prev=nav.children[0],next=nav.children[1];
+    function step(){var c=rail.children[0];if(!c)return rail.clientWidth;var g=parseFloat(getComputedStyle(rail).columnGap||getComputedStyle(rail).gap)||24;return c.getBoundingClientRect().width+g}
+    function update(){var max=rail.scrollWidth-rail.clientWidth;nav.hidden=max<4;prev.disabled=rail.scrollLeft<4;next.disabled=rail.scrollLeft>max-4}
+    prev.addEventListener('click',function(){rail.scrollBy({left:-step(),behavior:'smooth'})});
+    next.addEventListener('click',function(){rail.scrollBy({left:step(),behavior:'smooth'})});
+    rail.addEventListener('scroll',function(){window.requestAnimationFrame(update)},{passive:true});
+    window.addEventListener('resize',update);update();setTimeout(update,500);
+  }
+  function look(){var r=document.querySelector('.bh-def .bh-cards');if(r){wire(r);return true}return false}
+  function start(){if(look())return;var mo=new MutationObserver(function(){if(look())mo.disconnect()});mo.observe(document.body,{childList:true,subtree:true});setTimeout(function(){mo.disconnect()},20000)}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+})();
+</script>
