@@ -1,0 +1,38 @@
+
+<!-- 25. Hero photo captions (19 Nov 2026)
+     Display only. The hero photo at the top of an article (section 10) comes from the featured image, which has
+     no caption field in Squarespace. To caption it, write a paragraph in the article that starts "Main photo:",
+     e.g. "Main photo: Larry Ryan (19) leads the chase. Photo: George Parker". That paragraph is shown under the
+     hero photo, in the same style as other photo captions (credit on its own line), instead of in the text.
+     If there is no hero photo, the paragraph stays where it was written, without "Main photo:". -->
+<style>
+.BlogItem .bh-hero.bh-hero-captioned{margin-bottom:0 !important}
+.BlogItem .bh-hero-cap{order:3;max-width:850px;width:100%;margin:0 0 28px !important;padding:0 !important}
+.BlogItem .bh-hero-cap .image-caption-wrapper{padding-top:12px !important}
+</style>
+<script>
+(function(){
+  function run(){
+    var article=document.querySelector('.BlogItem');if(!article)return;
+    var RX=/^\s*(main|top|hero|header|featured|lead)\s+(photo|picture|image|pic)\s*:\s*/i;
+    var p=[].slice.call(article.querySelectorAll('.sqs-html-content p')).filter(function(x){return RX.test(x.textContent)})[0];
+    if(!p)return;
+    var text=p.textContent.replace(RX,'').replace(/\s+/g,' ').trim();
+    var hero=article.querySelector('.bh-hero');
+    if(!hero||hero.style.display==='none'){p.textContent=text;return}
+    var m=text.match(/^(.*?)\s*((?:photos?|pictures?|images?)\s*(?::|by)\s*.+)$/i), cap=m?m[1]:text, credit=m?m[2]:'';
+    var box=document.createElement('div');box.className='bh-hero-cap sqs-block-image';
+    var w=document.createElement('div');w.className='image-caption-wrapper';
+    var c=document.createElement('div');c.className='image-caption';
+    var para=document.createElement('p');
+    if(cap)para.appendChild(document.createTextNode(cap));
+    if(credit){var s=document.createElement('span');s.className=cap?'bh-cap-credit':'bh-cap-creditonly';s.textContent=credit;para.appendChild(s)}
+    c.appendChild(para);w.appendChild(c);box.appendChild(w);
+    hero.classList.add('bh-hero-captioned');hero.parentNode.insertBefore(box,hero.nextSibling);
+    var img=hero.querySelector('img');if(img&&!img.getAttribute('data-caption'))img.setAttribute('data-caption',text);
+    p.style.display='none';
+  }
+  // the hero photo is added by section 10 as the page loads
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(run,0)});else setTimeout(run,0);
+})();
+</script>
