@@ -1,0 +1,4046 @@
+{
+ "source": "Surrey League compendium, slarchive.org",
+ "url": "https://slarchive.org/race/2627-2",
+ "copied": "2026-11-19",
+ "meta": "14 Nov 2026 · Match 2 · 2026/27",
+ "venue": "Beckenham Place Park",
+ "division": "Division 1 men",
+ "lines": [
+  {
+   "club": "HOL",
+   "strong": "Jack Kavanagh's",
+   "rest": "5th of 5 wins in Div 1"
+  },
+  {
+   "club": "THH",
+   "strong": "Thames Hare & Hounds",
+   "rest": "won the match"
+  }
+ ],
+ "field": {
+  "stacked": 82,
+  "deep": 65,
+  "intro": "How this field compares with all 54 men's Division 1 races since 2012/13, on a scale where 100 is the strongest of them.",
+  "items": [
+   [
+    "Stacked 82",
+    "7th of 54",
+    "The ten strongest runners averaged 993 World Athletics points. 4 were in the UK 5K top 100."
+   ],
+   [
+    "Deep 65",
+    "18th of 54",
+    "The 100th-best runner in the field scored 650 points, and 37 finishers were in the UK 5K top 1,000."
+   ]
+  ],
+  "note": "World Athletics points put any time at any distance on one scale (800 is about 15:03 for a man over 5K, 18:25 for a woman). They're adjusted for how much faster the same runners have become since 2016, so seasons compare fairly. This race isn’t on Power of 10, so runners were matched by name and a few may be missing.",
+  "link": [
+   "Compare every race in the field depth analysis →",
+   "https://slarchive.org/analysis"
+  ]
+ },
+ "clubs": {
+  "HOL": "Holland Sports",
+  "H/W": "Hercules Wimbledon",
+  "HHH": "Herne Hill Harriers",
+  "THH": "Thames Hares & Hounds",
+  "BEL": "Belgrave Harriers",
+  "G&G": "Guildford & Godalming",
+  "KEN": "Kent AC",
+  "DUL": "Dulwich Runners",
+  "WOK": "Woking AC",
+  "RAN": "Ranelagh Harriers"
+ },
+ "vests": {
+  "HOL": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#2a4ea6\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#fff\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "HHH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"0\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"6\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"12\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"18\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "THH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><line x1=\"6\" y1=\"5\" x2=\"14\" y2=\"15\" stroke=\"#1a1a1a\" stroke-width=\"2\"></line><line x1=\"14\" y1=\"5\" x2=\"6\" y2=\"15\" stroke=\"#1a1a1a\" stroke-width=\"2\"></line><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "BEL": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#7A001D\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"7\" width=\"20\" height=\"4\" fill=\"#CCAD6A\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "G&G": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#228b22\"></path><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "KEN": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#1c4b88\"></path><path d=\"M11 5.5 L15 5.5 L15 7.5 C15 8.5 14 9 13 9.5 C12 9 11 8.5 11 7.5 Z\" fill=\"#dc2626\"></path><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "H/W": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#f4c430\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><polygon points=\"0,0 6,0 20,20 14,20\" fill=\"#c41e3a\"></polygon></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "DUL": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"7\" width=\"20\" height=\"1.9\" fill=\"#2563eb\"></rect><rect x=\"0\" y=\"10.1\" width=\"20\" height=\"1.9\" fill=\"#2563eb\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "WOK": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#ff6600\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#32CD32\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "RAN": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#1e3a8a\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#f4c430\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+  "": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#9ba099\"></path><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>"
+ },
+ "individual": [
+  {
+   "pos": "1",
+   "pts": "1",
+   "club": "HOL",
+   "name": "Jack Kavanagh",
+   "marks": [
+    {
+     "t": "🐐",
+     "title": "Is Holland Sports's greatest A-team scorer of all time"
+    },
+    {
+     "t": "=",
+     "title": "Last race: 1st at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "23:30"
+  },
+  {
+   "pos": "2",
+   "pts": "2",
+   "club": "HHH",
+   "name": "Sam Bramwell",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 3rd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "24:20"
+  },
+  {
+   "pos": "3",
+   "pts": "3",
+   "club": "THH",
+   "name": "Oliver Fox",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 4th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "24:35"
+  },
+  {
+   "pos": "4",
+   "pts": "4",
+   "club": "THH",
+   "name": "Nathan Mapperley",
+   "marks": [
+    {
+     "t": "(2C)",
+     "title": ""
+    },
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "24:38"
+  },
+  {
+   "pos": "5",
+   "pts": "5",
+   "club": "BEL",
+   "name": "Larry Ryan",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 6th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "24:40"
+  },
+  {
+   "pos": "6",
+   "pts": "6",
+   "club": "THH",
+   "name": "Ethan McColgan",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 8th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "24:43"
+  },
+  {
+   "pos": "7",
+   "pts": "7",
+   "club": "HOL",
+   "name": "Andrew Green",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 10th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "24:50"
+  },
+  {
+   "pos": "8",
+   "pts": "8",
+   "club": "G&G",
+   "name": "Cameron Reilly",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 19th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "24:53"
+  },
+  {
+   "pos": "9",
+   "pts": "9",
+   "club": "G&G",
+   "name": "Tom Foster",
+   "ath": "Tom Foster (G&G)",
+   "marks": [
+    {
+     "t": "🐐",
+     "title": "Is Guildford & Godalming's greatest A-team scorer of all time"
+    },
+    {
+     "t": "▼",
+     "title": "Last race: 7th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "24:56"
+  },
+  {
+   "pos": "10",
+   "pts": "10",
+   "club": "KEN",
+   "name": "Jonathan Collier",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 9th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "24:58"
+  },
+  {
+   "pos": "11",
+   "pts": "11",
+   "club": "BEL",
+   "name": "Fintan Pearce",
+   "marks": [
+    {
+     "t": "(2C)",
+     "title": ""
+    },
+    {
+     "t": "▲",
+     "title": "Last race: 13th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:00"
+  },
+  {
+   "pos": "12",
+   "pts": "12",
+   "club": "THH",
+   "name": "Alex Howard",
+   "marks": [
+    {
+     "t": "(2C)",
+     "title": ""
+    },
+    {
+     "t": "▲",
+     "title": "Last race: 16th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:01"
+  },
+  {
+   "pos": "13",
+   "pts": "13",
+   "club": "THH",
+   "name": "Jared Martin",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 14th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:02"
+  },
+  {
+   "pos": "14",
+   "pts": "14",
+   "club": "BEL",
+   "name": "Gavin Eccles",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 61st at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:03"
+  },
+  {
+   "pos": "15",
+   "pts": "15",
+   "club": "HHH",
+   "name": "Daniel Shaw",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 17th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:05"
+  },
+  {
+   "pos": "16",
+   "pts": "16",
+   "club": "H/W",
+   "name": "Jack Dickson",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 21st at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:08"
+  },
+  {
+   "pos": "17",
+   "pts": "17",
+   "club": "THH",
+   "name": "Jacob Brockmann",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 51st at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "25:10"
+  },
+  {
+   "pos": "18",
+   "pts": "18",
+   "club": "HOL",
+   "name": "Hugo Hewitt",
+   "marks": [
+    {
+     "t": "(2C)",
+     "title": ""
+    },
+    {
+     "t": "▼",
+     "title": "Last race: 12th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:13"
+  },
+  {
+   "pos": "19",
+   "pts": "19",
+   "club": "HOL",
+   "name": "Kieran Barnes",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 25th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:14"
+  },
+  {
+   "pos": "20",
+   "pts": "20",
+   "club": "BEL",
+   "name": "Simon Coppard",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 102nd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:16"
+  },
+  {
+   "pos": "21",
+   "pts": "21",
+   "club": "DUL",
+   "name": "Edward Chuck",
+   "marks": [
+    {
+     "t": "🐐",
+     "title": "Is Dulwich Runners's greatest A-team scorer of all time"
+    },
+    {
+     "t": "▲",
+     "title": "Last race: 44th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:18"
+  },
+  {
+   "pos": "22",
+   "pts": "22",
+   "club": "G&G",
+   "name": "Ollie Jermy",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 16th at Hurst Green (Oct 2025)"
+    }
+   ],
+   "time": "25:18"
+  },
+  {
+   "pos": "23",
+   "pts": "23",
+   "club": "THH",
+   "name": "James Hoad",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 34th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:20"
+  },
+  {
+   "pos": "24",
+   "pts": "24",
+   "club": "BEL",
+   "name": "Sam Gebreselassie",
+   "ath": "Samuel Gebreselassie",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 18th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:23"
+  },
+  {
+   "pos": "25",
+   "pts": "25",
+   "club": "HOL",
+   "name": "Jack Woods",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 5th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:23"
+  },
+  {
+   "pos": "26",
+   "pts": "26",
+   "club": "THH",
+   "name": "Thomas Renshaw",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 33rd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:26"
+  },
+  {
+   "pos": "27",
+   "pts": "27",
+   "club": "KEN",
+   "name": "Isaac Parker",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 23rd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:30"
+  },
+  {
+   "pos": "28",
+   "pts": "28",
+   "club": "H/W",
+   "name": "George Mallett",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 24th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:31"
+  },
+  {
+   "pos": "29",
+   "pts": "29",
+   "club": "H/W",
+   "name": "Archie Walton",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 61st at Wimbledon Common (Oct 2024)"
+    }
+   ],
+   "time": "25:33"
+  },
+  {
+   "pos": "30",
+   "pts": "30",
+   "club": "WOK",
+   "name": "John Hutchins",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 41st at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:34"
+  },
+  {
+   "pos": "31",
+   "pts": "31",
+   "club": "BEL",
+   "name": "Sam Sommerville",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 48th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:34"
+  },
+  {
+   "pos": "32",
+   "pts": "32",
+   "club": "HHH",
+   "name": "Oliver Mills",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 38th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "25:36"
+  },
+  {
+   "pos": "33",
+   "pts": "33",
+   "club": "H/W",
+   "name": "James Stockings",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 67th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:37"
+  },
+  {
+   "pos": "34",
+   "pts": "34",
+   "club": "HHH",
+   "name": "Rowan Board",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 29th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:37"
+  },
+  {
+   "pos": "35",
+   "pts": "35",
+   "club": "WOK",
+   "name": "Jack Dormer",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 42nd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:40"
+  },
+  {
+   "pos": "36",
+   "pts": "36",
+   "club": "H/W",
+   "name": "Fred Slemeck",
+   "marks": [
+    {
+     "t": "⭐",
+     "title": "Has won individual Surrey League title(s)"
+    },
+    {
+     "t": "▼",
+     "title": "Last race: 22nd at Hurst Green (Oct 2025)"
+    }
+   ],
+   "time": "25:41"
+  },
+  {
+   "pos": "37",
+   "pts": "37",
+   "club": "THH",
+   "name": "George Gathercole",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 49th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:42"
+  },
+  {
+   "pos": "38",
+   "pts": "38",
+   "club": "BEL",
+   "name": "Conall McNally",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 30th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:43"
+  },
+  {
+   "pos": "39",
+   "pts": "39",
+   "club": "G&G",
+   "name": "Adrien Royer",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 28th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:45"
+  },
+  {
+   "pos": "40",
+   "pts": "40",
+   "club": "G&G",
+   "name": "Sam Martin",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "25:45"
+  },
+  {
+   "pos": "41",
+   "pts": "41",
+   "club": "HHH",
+   "name": "Ben Fitzpatrick",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "25:48"
+  },
+  {
+   "pos": "42",
+   "pts": "42",
+   "club": "RAN",
+   "name": "Callum Olden",
+   "marks": [
+    {
+     "t": "(2C)",
+     "title": ""
+    },
+    {
+     "t": "▲",
+     "title": "Last race: 107th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:49"
+  },
+  {
+   "pos": "43",
+   "pts": "43",
+   "club": "BEL",
+   "name": "Findlay Dyer",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 68th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:50"
+  },
+  {
+   "pos": "44",
+   "pts": "44",
+   "club": "HHH",
+   "name": "Harry Roberts",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 59th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:51"
+  },
+  {
+   "pos": "45",
+   "pts": "45",
+   "club": "H/W",
+   "name": "Ed Mallett",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 38th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:51"
+  },
+  {
+   "pos": "46",
+   "pts": "46",
+   "club": "DUL",
+   "name": "Rob Armstrong",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 84th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "25:55"
+  },
+  {
+   "pos": "47",
+   "pts": "47",
+   "club": "BEL",
+   "name": "Andrew Johnstone",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 88th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:00"
+  },
+  {
+   "pos": "48",
+   "pts": "48",
+   "club": "KEN",
+   "name": "Alex Hamlet",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 28th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "26:01"
+  },
+  {
+   "pos": "49",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Jake Richardson",
+   "marks": [
+    {
+     "t": "(N/S)",
+     "title": ""
+    },
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "26:01"
+  },
+  {
+   "pos": "50",
+   "pts": "49",
+   "club": "H/W",
+   "name": "Jack Hobden",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 11th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:04"
+  },
+  {
+   "pos": "51",
+   "pts": "50",
+   "club": "H/W",
+   "name": "Eoin Brady",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 65th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:06"
+  },
+  {
+   "pos": "52",
+   "pts": "51",
+   "club": "G&G",
+   "name": "Marcus Etheridge",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 43rd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:07"
+  },
+  {
+   "pos": "53",
+   "pts": "52",
+   "club": "HOL",
+   "name": "Sam Burgoyne",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 66th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "26:07"
+  },
+  {
+   "pos": "54",
+   "pts": "53",
+   "club": "KEN",
+   "name": "Dame Dibaba",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 27th at Beckenham Place Park (Nov 2025)"
+    }
+   ],
+   "time": "26:08"
+  },
+  {
+   "pos": "55",
+   "pts": "54",
+   "club": "BEL",
+   "name": "Jonny Neville",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 61st at Beckenham Place Park (Nov 2025)"
+    }
+   ],
+   "time": "26:14"
+  },
+  {
+   "pos": "56",
+   "pts": "55",
+   "club": "HHH",
+   "name": "Joseph Grehan Bradley",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 83rd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:15"
+  },
+  {
+   "pos": "57",
+   "pts": "56",
+   "club": "KEN",
+   "name": "Olly Buck",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 27th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:16"
+  },
+  {
+   "pos": "58",
+   "pts": "57",
+   "club": "RAN",
+   "name": "Joe Killip",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 62nd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:19"
+  },
+  {
+   "pos": "59",
+   "pts": "58",
+   "club": "KEN",
+   "name": "Dan Pettitt",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 54th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:23"
+  },
+  {
+   "pos": "60",
+   "pts": "59",
+   "club": "G&G",
+   "name": "Ed Brewer",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 48th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "26:24"
+  },
+  {
+   "pos": "61",
+   "pts": "-",
+   "club": "BEL",
+   "name": "James Preston",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 77th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:26"
+  },
+  {
+   "pos": "62",
+   "pts": "60",
+   "club": "G&G",
+   "name": "Colin High",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 73rd at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "26:27"
+  },
+  {
+   "pos": "63",
+   "pts": "61",
+   "club": "G&G",
+   "name": "Nick Lightfoot",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 64th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:27"
+  },
+  {
+   "pos": "64",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Thomas Gandee",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 55th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:28"
+  },
+  {
+   "pos": "65",
+   "pts": "62",
+   "club": "HHH",
+   "name": "Sam Brashaw",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 80th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "26:29"
+  },
+  {
+   "pos": "66",
+   "pts": "63",
+   "club": "KEN",
+   "name": "Bert Royle",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 71st at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:31"
+  },
+  {
+   "pos": "67",
+   "pts": "64",
+   "club": "HHH",
+   "name": "Ashley Goncalves",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 57th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:32"
+  },
+  {
+   "pos": "68",
+   "pts": "65",
+   "club": "KEN",
+   "name": "Nick Torry",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 99th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:33"
+  },
+  {
+   "pos": "69",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Daniel Wolff",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 66th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:34"
+  },
+  {
+   "pos": "70",
+   "pts": "66",
+   "club": "G&G",
+   "name": "Will Ford",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 86th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:34"
+  },
+  {
+   "pos": "71",
+   "pts": "67",
+   "club": "KEN",
+   "name": "Callum Anderson",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "26:35"
+  },
+  {
+   "pos": "72",
+   "pts": "68",
+   "club": "WOK",
+   "name": "Thomas Skentos",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 101st at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:37"
+  },
+  {
+   "pos": "73",
+   "pts": "69",
+   "club": "KEN",
+   "name": "James Ewing",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 125th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "26:39"
+  },
+  {
+   "pos": "74",
+   "pts": "70",
+   "club": "HOL",
+   "name": "Phil Swinburn",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 87th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:45"
+  },
+  {
+   "pos": "75",
+   "pts": "71",
+   "club": "H/W",
+   "name": "Chris Mcllroy",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 106th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:46"
+  },
+  {
+   "pos": "76",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Alex Friscia",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 164th at Mitcham Common (Jan 2026)"
+    }
+   ],
+   "time": "26:47"
+  },
+  {
+   "pos": "77",
+   "pts": "72",
+   "club": "HHH",
+   "name": "Olmo Velayos Hernando",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "26:49"
+  },
+  {
+   "pos": "78",
+   "pts": "73",
+   "club": "DUL",
+   "name": "Ben Howe",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 47th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "26:50"
+  },
+  {
+   "pos": "79",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Ronan Tanguy",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 93rd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:50"
+  },
+  {
+   "pos": "80",
+   "pts": "74",
+   "club": "RAN",
+   "name": "Aaron Bruce",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 112th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:51"
+  },
+  {
+   "pos": "81",
+   "pts": "-",
+   "club": "HHH",
+   "name": "George Withers",
+   "marks": [
+    {
+     "t": "(2C)",
+     "title": ""
+    },
+    {
+     "t": "▼",
+     "title": "Last race: 53rd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:52"
+  },
+  {
+   "pos": "82",
+   "pts": "75",
+   "club": "THH",
+   "name": "Oliver Garner",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 127th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:54"
+  },
+  {
+   "pos": "83",
+   "pts": "-",
+   "club": "THH",
+   "name": "Neil Chisholm",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 111th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:57"
+  },
+  {
+   "pos": "84",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Michael McCarthy",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 108th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "26:58"
+  },
+  {
+   "pos": "85",
+   "pts": "76",
+   "club": "DUL",
+   "name": "Jack Ramm",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 46th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:00"
+  },
+  {
+   "pos": "86",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Ben Palmer",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 138th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:01"
+  },
+  {
+   "pos": "87",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Joe Hartley",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 81st at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:02"
+  },
+  {
+   "pos": "88",
+   "pts": "77",
+   "club": "DUL",
+   "name": "Nick Impey",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 118th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:02"
+  },
+  {
+   "pos": "89",
+   "pts": "78",
+   "club": "RAN",
+   "name": "Peter Robins",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 124th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:03"
+  },
+  {
+   "pos": "90",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Nic Lukies",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 80th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:04"
+  },
+  {
+   "pos": "91",
+   "pts": "79",
+   "club": "HOL",
+   "name": "Chris Blackburn",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 149th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:04"
+  },
+  {
+   "pos": "92",
+   "pts": "-",
+   "club": "THH",
+   "name": "James McMullan",
+   "marks": [
+    {
+     "t": "⭐",
+     "title": "Has won individual Surrey League title(s)"
+    },
+    {
+     "t": "▲",
+     "title": "Last race: 96th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "27:08"
+  },
+  {
+   "pos": "93",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Mathew Speed",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 75th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:09"
+  },
+  {
+   "pos": "94",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Oliver Pritchard",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "27:11"
+  },
+  {
+   "pos": "95",
+   "pts": "80",
+   "club": "DUL",
+   "name": "Adrian Russell",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 113th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:12"
+  },
+  {
+   "pos": "96",
+   "pts": "81",
+   "club": "H/W",
+   "name": "Thomas Wright",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "27:13"
+  },
+  {
+   "pos": "97",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Barnaby Day",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 104th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:19"
+  },
+  {
+   "pos": "98",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Thomas Holland",
+   "marks": [
+    {
+     "t": "(2C)",
+     "title": ""
+    },
+    {
+     "t": "▲",
+     "title": "Last race: 120th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:20"
+  },
+  {
+   "pos": "99",
+   "pts": "82",
+   "club": "HOL",
+   "name": "Mark Burchett",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 122nd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:22"
+  },
+  {
+   "pos": "100",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Joe Elliott",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 68th at Epsom Downs (Feb 2025)"
+    }
+   ],
+   "time": "27:23"
+  },
+  {
+   "pos": "101",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Samuel Dames",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 129th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:24"
+  },
+  {
+   "pos": "102",
+   "pts": "83",
+   "club": "DUL",
+   "name": "James Blackwood",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 69th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:26"
+  },
+  {
+   "pos": "103",
+   "pts": "84",
+   "club": "WOK",
+   "name": "George Cotton",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 79th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:29"
+  },
+  {
+   "pos": "104",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Harry Turner",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 78th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:30"
+  },
+  {
+   "pos": "105",
+   "pts": "85",
+   "club": "DUL",
+   "name": "Eoin Cremen",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "27:31"
+  },
+  {
+   "pos": "106",
+   "pts": "86",
+   "club": "WOK",
+   "name": "Ntando Brummer",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 97th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:33"
+  },
+  {
+   "pos": "107",
+   "pts": "-",
+   "club": "KEN",
+   "name": "David Morgan",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 134th at Mitcham Common (Jan 2026)"
+    }
+   ],
+   "time": "27:35"
+  },
+  {
+   "pos": "108",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Matthew Houchell",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 167th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:36"
+  },
+  {
+   "pos": "109",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Rhys Powell",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 69th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "27:39"
+  },
+  {
+   "pos": "110",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Luca Powell",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "27:40"
+  },
+  {
+   "pos": "111",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Jack Brotchie",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 123rd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:42"
+  },
+  {
+   "pos": "112",
+   "pts": "87",
+   "club": "HOL",
+   "name": "Benjamin Hilson",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 79th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "27:44"
+  },
+  {
+   "pos": "113",
+   "pts": "-",
+   "club": "H/W",
+   "name": "Hector Revill",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 159th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:46"
+  },
+  {
+   "pos": "114",
+   "pts": "-",
+   "club": "H/W",
+   "name": "Jackson Creegan",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 131st at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:48"
+  },
+  {
+   "pos": "115",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Russell Drummond",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "27:51"
+  },
+  {
+   "pos": "116",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Alex Gutteridge",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 119th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:53"
+  },
+  {
+   "pos": "117",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Ryan Hickey",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 104th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "27:53"
+  },
+  {
+   "pos": "118",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Chris Threadgold",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 91st at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:55"
+  },
+  {
+   "pos": "119",
+   "pts": "-",
+   "club": "THH",
+   "name": "Richard Ollington",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 92nd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:57"
+  },
+  {
+   "pos": "120",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Sam Davis",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 151st at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:57"
+  },
+  {
+   "pos": "121",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Euan Turner",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 98th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "27:58"
+  },
+  {
+   "pos": "122",
+   "pts": "88",
+   "club": "WOK",
+   "name": "Charlie Cunningham",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 130th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:01"
+  },
+  {
+   "pos": "123",
+   "pts": "89",
+   "club": "RAN",
+   "name": "Gareth Hopkins",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 116th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:02"
+  },
+  {
+   "pos": "124",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Will Arnel",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "28:03"
+  },
+  {
+   "pos": "125",
+   "pts": "-",
+   "club": "BEL",
+   "name": "James Thomas",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 237th at Epsom Downs (Feb 2025)"
+    }
+   ],
+   "time": "28:05"
+  },
+  {
+   "pos": "126",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Callum Job",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 70th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:08"
+  },
+  {
+   "pos": "127",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Dan Southam",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "28:09"
+  },
+  {
+   "pos": "128",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Fintan Kearney",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 173rd at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "28:11"
+  },
+  {
+   "pos": "129",
+   "pts": "90",
+   "club": "DUL",
+   "name": "Mathew Trueman",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 143rd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:13"
+  },
+  {
+   "pos": "130",
+   "pts": "-",
+   "club": "THH",
+   "name": "Jack Lancefield",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 152nd at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "28:14"
+  },
+  {
+   "pos": "131",
+   "pts": "91",
+   "club": "DUL",
+   "name": "Jon Phillips",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 135th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:15"
+  },
+  {
+   "pos": "132",
+   "pts": "-",
+   "club": "H/W",
+   "name": "Kyle Spelman",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 308th at Wimbledon Common (Jan 2024)"
+    }
+   ],
+   "time": "28:19"
+  },
+  {
+   "pos": "133",
+   "pts": "-",
+   "club": "HOL",
+   "name": "Luke Davis",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 145th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:20"
+  },
+  {
+   "pos": "134",
+   "pts": "92",
+   "club": "RAN",
+   "name": "Ted Mockett",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 137th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:22"
+  },
+  {
+   "pos": "135",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Ross Christie",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 120th at Mitcham Common (Jan 2026)"
+    }
+   ],
+   "time": "28:24"
+  },
+  {
+   "pos": "136",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Ben Scott",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 134th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "28:24"
+  },
+  {
+   "pos": "137",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Nick Tearle",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 140th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:28"
+  },
+  {
+   "pos": "138",
+   "pts": "93",
+   "club": "WOK",
+   "name": "Ben Goddard",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 150th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:29"
+  },
+  {
+   "pos": "139",
+   "pts": "-",
+   "club": "H/W",
+   "name": "Sam Todd",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 74th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:30"
+  },
+  {
+   "pos": "140",
+   "pts": "-",
+   "club": "DUL",
+   "name": "Andrew Cumine",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 114th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:34"
+  },
+  {
+   "pos": "141",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Cillian Roots",
+   "marks": [
+    {
+     "t": "(2C)",
+     "title": ""
+    },
+    {
+     "t": "▲",
+     "title": "Last race: 174th at Beckenham Place Park (Nov 2025)"
+    }
+   ],
+   "time": "28:36"
+  },
+  {
+   "pos": "142",
+   "pts": "-",
+   "club": "BEL",
+   "name": "George Mallinson",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 130th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "28:37"
+  },
+  {
+   "pos": "143",
+   "pts": "94",
+   "club": "RAN",
+   "name": "David Lawley",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 154th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:38"
+  },
+  {
+   "pos": "144",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Michael Alwin",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 133rd at Beckenham Place Park (Nov 2025)"
+    }
+   ],
+   "time": "28:39"
+  },
+  {
+   "pos": "145",
+   "pts": "-",
+   "club": "HOL",
+   "name": "Tom Thornley",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 146th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:39"
+  },
+  {
+   "pos": "146",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Zach Nolan",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 176th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:42"
+  },
+  {
+   "pos": "147",
+   "pts": "95",
+   "club": "WOK",
+   "name": "Matthew Butt",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 160th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:43"
+  },
+  {
+   "pos": "148",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Stephen McLeod",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 144th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:44"
+  },
+  {
+   "pos": "149",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Robert Laing",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 129th at Mitcham Common (Jan 2026)"
+    }
+   ],
+   "time": "28:45"
+  },
+  {
+   "pos": "150",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Matthew Edgar",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 142nd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:48"
+  },
+  {
+   "pos": "151",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Matthew Reeves",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 211th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:50"
+  },
+  {
+   "pos": "152",
+   "pts": "96",
+   "club": "WOK",
+   "name": "Hugh Nurse",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 170th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "28:52"
+  },
+  {
+   "pos": "153",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Oscar Holbourn",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "28:56"
+  },
+  {
+   "pos": "154",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Nick Ostrowski",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 161st at Beckenham Place Park (Nov 2025)"
+    }
+   ],
+   "time": "28:58"
+  },
+  {
+   "pos": "155",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Peter Lighting",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 154th at Richmond Park (Oct 2023)"
+    }
+   ],
+   "time": "28:59"
+  },
+  {
+   "pos": "156",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Falilou Kebe",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 180th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "29:00"
+  },
+  {
+   "pos": "157",
+   "pts": "-",
+   "club": "THH",
+   "name": "Jamie Darling",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 156th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "29:06"
+  },
+  {
+   "pos": "158",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Phil Sanders",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 130th at Beckenham Place Park (Nov 2025)"
+    }
+   ],
+   "time": "29:08"
+  },
+  {
+   "pos": "159",
+   "pts": "-",
+   "club": "THH",
+   "name": "Angus Harrington",
+   "marks": [
+    {
+     "t": "(N/S)",
+     "title": ""
+    },
+    {
+     "t": "(2C)",
+     "title": ""
+    },
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "29:10"
+  },
+  {
+   "pos": "160",
+   "pts": "-",
+   "club": "H/W",
+   "name": "Richard Jones",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 193rd at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "29:11"
+  },
+  {
+   "pos": "161",
+   "pts": "-",
+   "club": "THH",
+   "name": "Jack Oliver",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 145th at Beckenham Place Park (Nov 2025)"
+    }
+   ],
+   "time": "29:14"
+  },
+  {
+   "pos": "162",
+   "pts": "-",
+   "club": "G&G",
+   "name": "George Glennon",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "29:18"
+  },
+  {
+   "pos": "163",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Josh Snow",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 187th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "29:20"
+  },
+  {
+   "pos": "164",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Dominic Le Mare",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 132nd at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "29:22"
+  },
+  {
+   "pos": "165",
+   "pts": "-",
+   "club": "HOL",
+   "name": "Sam Long",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 163rd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "29:24"
+  },
+  {
+   "pos": "166",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Richard Giles",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 177th at Mitcham Common (Jan 2026)"
+    }
+   ],
+   "time": "29:28"
+  },
+  {
+   "pos": "167",
+   "pts": "97",
+   "club": "WOK",
+   "name": "Caden Rogers-Everitt",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 157th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "29:30"
+  },
+  {
+   "pos": "168",
+   "pts": "98",
+   "club": "RAN",
+   "name": "Rudy Sawtell",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 223rd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "29:31"
+  },
+  {
+   "pos": "169",
+   "pts": "-",
+   "club": "DUL",
+   "name": "Jack Leafe",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 173rd at Epsom Downs (Feb 2025)"
+    }
+   ],
+   "time": "29:31"
+  },
+  {
+   "pos": "170",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Adam Justice",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 230th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "29:32"
+  },
+  {
+   "pos": "171",
+   "pts": "-",
+   "club": "KEN",
+   "name": "George Russell",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 213th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "29:33"
+  },
+  {
+   "pos": "172",
+   "pts": "-",
+   "club": "THH",
+   "name": "Daniel Watchorn",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 177th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "29:42"
+  },
+  {
+   "pos": "173",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Enzo Vellin",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 176th at Wimbledon Common (Oct 2024)"
+    }
+   ],
+   "time": "29:44"
+  },
+  {
+   "pos": "174",
+   "pts": "-",
+   "club": "KEN",
+   "name": "James Lawson-Murray",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 209th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "29:45"
+  },
+  {
+   "pos": "175",
+   "pts": "-",
+   "club": "WOK",
+   "name": "Callum Balharrie",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 202nd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "29:49"
+  },
+  {
+   "pos": "176",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Oliver Young",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 210th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "29:50"
+  },
+  {
+   "pos": "177",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Rory Knight",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 145th at Beckenham Place Park (Nov 2024)"
+    }
+   ],
+   "time": "29:51"
+  },
+  {
+   "pos": "178",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Will Brown",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 217th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "29:52"
+  },
+  {
+   "pos": "179",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Oliver Daniel",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 232nd at Wimbledon Common (Jan 2024)"
+    }
+   ],
+   "time": "29:53"
+  },
+  {
+   "pos": "180",
+   "pts": "-",
+   "club": "HOL",
+   "name": "James Ellis",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 190th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "29:55"
+  },
+  {
+   "pos": "181",
+   "pts": "99",
+   "club": "RAN",
+   "name": "Matthew Hirschler",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 245th at Wimbledon Common (Jan 2024)"
+    }
+   ],
+   "time": "29:56"
+  },
+  {
+   "pos": "182",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Michael Longley",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 222nd at Beckenham Place Park (Nov 2025)"
+    }
+   ],
+   "time": "30:04"
+  },
+  {
+   "pos": "183",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Matthew Thomas",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 204th at Beckenham Place Park (Nov 2025)"
+    }
+   ],
+   "time": "30:06"
+  },
+  {
+   "pos": "184",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Oliver Rose",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 114th at Mitcham Common (Nov 2023)"
+    }
+   ],
+   "time": "30:07"
+  },
+  {
+   "pos": "185",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Ian Acreman",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 178th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "30:08"
+  },
+  {
+   "pos": "186",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Alex Janiaud",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 195th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "30:10"
+  },
+  {
+   "pos": "187",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Jack Rathborn",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 250th at Beckenham Place Park (Nov 2025)"
+    }
+   ],
+   "time": "30:11"
+  },
+  {
+   "pos": "188",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Deron Fagan",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 237th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "30:15"
+  },
+  {
+   "pos": "189",
+   "pts": "100",
+   "club": "RAN",
+   "name": "Graham Weller",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 155th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "30:17"
+  },
+  {
+   "pos": "190",
+   "pts": "-",
+   "club": "WOK",
+   "name": "Matt Winn-Smith",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 181st at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "30:19"
+  },
+  {
+   "pos": "191",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Stevyn Mills",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 185th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "30:23"
+  },
+  {
+   "pos": "192",
+   "pts": "-",
+   "club": "WOK",
+   "name": "Juan Gonzalez",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 194th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "30:26"
+  },
+  {
+   "pos": "193",
+   "pts": "-",
+   "club": "THH",
+   "name": "Edward Chisholm",
+   "marks": [
+    {
+     "t": "(N/S)",
+     "title": ""
+    },
+    {
+     "t": "(2C)",
+     "title": ""
+    },
+    {
+     "t": "▲",
+     "title": "Last race: 218th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "30:29"
+  },
+  {
+   "pos": "194",
+   "pts": "-",
+   "club": "THH",
+   "name": "Jamie Bell",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 224th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "30:33"
+  },
+  {
+   "pos": "195",
+   "pts": "-",
+   "club": "HHH",
+   "name": "James Brown",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 206th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "30:37"
+  },
+  {
+   "pos": "196",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Ian Ellwood",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 235th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "30:40"
+  },
+  {
+   "pos": "197",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Laurie Oliver",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 226th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "30:41"
+  },
+  {
+   "pos": "198",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Lee Davies",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 186th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "30:42"
+  },
+  {
+   "pos": "199",
+   "pts": "-",
+   "club": "H/W",
+   "name": "Isaac Lutaya",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 200th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "30:43"
+  },
+  {
+   "pos": "200",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Tom Foster",
+   "ath": "Tom Foster (HHH)",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 205th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "30:46"
+  },
+  {
+   "pos": "201",
+   "pts": "-",
+   "club": "THH",
+   "name": "Patrick Nevill",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 239th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "30:48"
+  },
+  {
+   "pos": "202",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Phil Woodford-Smith",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 192nd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "31:04"
+  },
+  {
+   "pos": "203",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Scott Morrison",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 216th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "31:07"
+  },
+  {
+   "pos": "204",
+   "pts": "-",
+   "club": "HHH",
+   "name": "John Foxall",
+   "marks": [
+    {
+     "t": "(2C)",
+     "title": ""
+    },
+    {
+     "t": "▲",
+     "title": "Last race: 233rd at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "31:10"
+  },
+  {
+   "pos": "205",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Adrian Lowther",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 87th at Lloyd Park (Feb 2020)"
+    }
+   ],
+   "time": "31:12"
+  },
+  {
+   "pos": "206",
+   "pts": "-",
+   "club": "HHH",
+   "name": "James Daly",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 237th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "31:15"
+  },
+  {
+   "pos": "207",
+   "pts": "-",
+   "club": "BEL",
+   "name": "Miles Horn",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 257th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "31:20"
+  },
+  {
+   "pos": "208",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Arif Merali",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 228th at Mitcham Common (Jan 2026)"
+    }
+   ],
+   "time": "31:23"
+  },
+  {
+   "pos": "209",
+   "pts": "-",
+   "club": "RAN",
+   "name": "Eliott Wells",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 245th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "31:25"
+  },
+  {
+   "pos": "210",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Sam Kyffin",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "31:27"
+  },
+  {
+   "pos": "211",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Muhamud Haile",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 252nd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "31:29"
+  },
+  {
+   "pos": "212",
+   "pts": "-",
+   "club": "RAN",
+   "name": "Ed Smith",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 132nd at Reigate (Oct 2017)"
+    }
+   ],
+   "time": "31:31"
+  },
+  {
+   "pos": "213",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Finn Hammersley",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "31:34"
+  },
+  {
+   "pos": "214",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Mark Preskett",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 250th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "31:37"
+  },
+  {
+   "pos": "215",
+   "pts": "-",
+   "club": "RAN",
+   "name": "Edmund Perry",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 225th at Wimbledon Common (Jan 2024)"
+    }
+   ],
+   "time": "31:43"
+  },
+  {
+   "pos": "216",
+   "pts": "-",
+   "club": "WOK",
+   "name": "Thomas Critchlow",
+   "marks": [
+    {
+     "t": "=",
+     "title": "Last race: 216th at Epsom Downs (Feb 2025)"
+    }
+   ],
+   "time": "31:44"
+  },
+  {
+   "pos": "217",
+   "pts": "-",
+   "club": "H/W",
+   "name": "Seth Higgins",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 273rd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "31:46"
+  },
+  {
+   "pos": "218",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Frank Boyce",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "31:47"
+  },
+  {
+   "pos": "219",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Guy Holcroft",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 266th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "31:52"
+  },
+  {
+   "pos": "220",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Lee Lintern",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 233rd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "31:56"
+  },
+  {
+   "pos": "221",
+   "pts": "-",
+   "club": "RAN",
+   "name": "Ed Forbes",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 251st at Wimbledon Common (Jan 2024)"
+    }
+   ],
+   "time": "31:58"
+  },
+  {
+   "pos": "222",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Norman Urquia",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 248th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "32:00"
+  },
+  {
+   "pos": "223",
+   "pts": "-",
+   "club": "THH",
+   "name": "Simon Barrett",
+   "marks": [
+    {
+     "t": "(N/S)",
+     "title": ""
+    },
+    {
+     "t": "(2C)",
+     "title": ""
+    },
+    {
+     "t": "▲",
+     "title": "Last race: 234th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "32:01"
+  },
+  {
+   "pos": "224",
+   "pts": "-",
+   "club": "DUL",
+   "name": "Joe Farrington-Douglas",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 219th at West Horsley Place (Jan 2025)"
+    }
+   ],
+   "time": "32:02"
+  },
+  {
+   "pos": "225",
+   "pts": "-",
+   "club": "RAN",
+   "name": "James Riley",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 246th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "32:05"
+  },
+  {
+   "pos": "226",
+   "pts": "-",
+   "club": "HOL",
+   "name": "Julien Paillard",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 234th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "32:08"
+  },
+  {
+   "pos": "227",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Michael Gibson",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 229th at West Horsley Place (Feb 2024)"
+    }
+   ],
+   "time": "32:16"
+  },
+  {
+   "pos": "228",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Jamie Harvie",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "32:30"
+  },
+  {
+   "pos": "229",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Daniel Rosier",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 298th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "32:31"
+  },
+  {
+   "pos": "230",
+   "pts": "-",
+   "club": "H/W",
+   "name": "Austin Hall",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 172nd at Mitcham Common (Jan 2026)"
+    }
+   ],
+   "time": "32:38"
+  },
+  {
+   "pos": "231",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Ben Friend",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 277th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "32:50"
+  },
+  {
+   "pos": "232",
+   "pts": "-",
+   "club": "H/W",
+   "name": "James Hamilton",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 243rd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "32:51"
+  },
+  {
+   "pos": "233",
+   "pts": "-",
+   "club": "DUL",
+   "name": "Rob Meadows",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 249th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "33:06"
+  },
+  {
+   "pos": "234",
+   "pts": "-",
+   "club": "RAN",
+   "name": "Tom Cameron",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 200th at West Horsley Place (Feb 2024)"
+    }
+   ],
+   "time": "33:08"
+  },
+  {
+   "pos": "235",
+   "pts": "-",
+   "club": "HOL",
+   "name": "Nick Hickman",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 240th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "33:16"
+  },
+  {
+   "pos": "236",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Philip Pryke",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 267th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "33:20"
+  },
+  {
+   "pos": "237",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Ian Davies",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 261st at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "33:24"
+  },
+  {
+   "pos": "238",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Ash Green",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 269th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "33:32"
+  },
+  {
+   "pos": "239",
+   "pts": "-",
+   "club": "RAN",
+   "name": "Andy Starr",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 228th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "33:36"
+  },
+  {
+   "pos": "240",
+   "pts": "-",
+   "club": "WOK",
+   "name": "James Morris",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 167th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "33:43"
+  },
+  {
+   "pos": "241",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Alistair Wilkie",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 229th at West Horsley Place (Jan 2025)"
+    }
+   ],
+   "time": "33:48"
+  },
+  {
+   "pos": "242",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Dan Lineham",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 284th at Beckenham Place Park (Nov 2025)"
+    }
+   ],
+   "time": "33:55"
+  },
+  {
+   "pos": "243",
+   "pts": "-",
+   "club": "THH",
+   "name": "Will Scott",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 264th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "33:56"
+  },
+  {
+   "pos": "244",
+   "pts": "-",
+   "club": "RAN",
+   "name": "Mike Thomas",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 250th at West Horsley Place (Feb 2024)"
+    }
+   ],
+   "time": "33:59"
+  },
+  {
+   "pos": "245",
+   "pts": "-",
+   "club": "DUL",
+   "name": "Ed Simmons",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 261st at Beckenham Place Park (Nov 2025)"
+    }
+   ],
+   "time": "34:03"
+  },
+  {
+   "pos": "246",
+   "pts": "-",
+   "club": "RAN",
+   "name": "Hadi Khatamizadeh",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 254th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "34:05"
+  },
+  {
+   "pos": "247",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Ope Idowu",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 260th at Beckenham Place Park (Nov 2025)"
+    }
+   ],
+   "time": "34:11"
+  },
+  {
+   "pos": "248",
+   "pts": "-",
+   "club": "HOL",
+   "name": "Aziouz Lammali",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 261st at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "34:19"
+  },
+  {
+   "pos": "249",
+   "pts": "-",
+   "club": "WOK",
+   "name": "Mark Rose",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 221st at West Horsley Place (Jan 2025)"
+    }
+   ],
+   "time": "34:45"
+  },
+  {
+   "pos": "250",
+   "pts": "-",
+   "club": "HHH",
+   "name": "Simon Banfield",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 284th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "34:58"
+  },
+  {
+   "pos": "251",
+   "pts": "-",
+   "club": "HOL",
+   "name": "Thomas Rady",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 280th at Wimbledon Common (Feb 2026)"
+    }
+   ],
+   "time": "35:03"
+  },
+  {
+   "pos": "252",
+   "pts": "-",
+   "club": "H/W",
+   "name": "Hugh Billane",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 299th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "35:04"
+  },
+  {
+   "pos": "253",
+   "pts": "-",
+   "club": "THH",
+   "name": "Thomas Westran",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 298th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "35:06"
+  },
+  {
+   "pos": "254",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Ed Osborne",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 280th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "35:14"
+  },
+  {
+   "pos": "255",
+   "pts": "-",
+   "club": "RAN",
+   "name": "James Ritchie",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 289th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "35:15"
+  },
+  {
+   "pos": "256",
+   "pts": "-",
+   "club": "DUL",
+   "name": "Sumrit Mattu",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 262nd at Beckenham Place Park (Nov 2025)"
+    }
+   ],
+   "time": "35:17"
+  },
+  {
+   "pos": "257",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Robert Harvey",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 276th at Beckenham Place Park (Nov 2025)"
+    }
+   ],
+   "time": "35:23"
+  },
+  {
+   "pos": "258",
+   "pts": "-",
+   "club": "HOL",
+   "name": "Neil Jones",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 278th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "35:46"
+  },
+  {
+   "pos": "259",
+   "pts": "-",
+   "club": "H/W",
+   "name": "Unknown",
+   "marks": [],
+   "time": "35:49"
+  },
+  {
+   "pos": "260",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Clive Harvey",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "35:59"
+  },
+  {
+   "pos": "261",
+   "pts": "-",
+   "club": "HOL",
+   "name": "Rob Jupp",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 288th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "36:06"
+  },
+  {
+   "pos": "262",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Stephen Jones",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 294th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "36:16"
+  },
+  {
+   "pos": "263",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Andrew Flanagan",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 286th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "36:18"
+  },
+  {
+   "pos": "264",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Charlie Alger",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 297th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "36:49"
+  },
+  {
+   "pos": "265",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Pertrice Billy-Huggins",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 285th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "37:02"
+  },
+  {
+   "pos": "266",
+   "pts": "-",
+   "club": "H/W",
+   "name": "Craig Howard",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 314th at Beckenham Place Park (Nov 2025)"
+    }
+   ],
+   "time": "37:50"
+  },
+  {
+   "pos": "267",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Hugh Stickland",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 303rd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "38:00"
+  },
+  {
+   "pos": "268",
+   "pts": "-",
+   "club": "KEN",
+   "name": "Martin Morgan",
+   "marks": [
+    {
+     "t": "▼",
+     "title": "Last race: 221st at Lloyd Park (Feb 2023)"
+    }
+   ],
+   "time": "38:40"
+  },
+  {
+   "pos": "269",
+   "pts": "-",
+   "club": "KEN",
+   "name": "James Turner",
+   "ath": "James Turner (KEN)",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 302nd at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "38:55"
+  },
+  {
+   "pos": "270",
+   "pts": "-",
+   "club": "G&G",
+   "name": "Brian O'Kane",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 306th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "40:09"
+  },
+  {
+   "pos": "271",
+   "pts": "-",
+   "club": "DUL",
+   "name": "David Spindler",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 307th at Mitcham Common (Jan 2026)"
+    }
+   ],
+   "time": "40:20"
+  },
+  {
+   "pos": "272",
+   "pts": "-",
+   "club": "RAN",
+   "name": "Andrew McLauchlan",
+   "marks": [
+    {
+     "t": "▲",
+     "title": "Last race: 304th at Wimbledon Common (Oct 2026)"
+    }
+   ],
+   "time": "40:32"
+  },
+  {
+   "pos": "273",
+   "pts": "-",
+   "club": "RAN",
+   "name": "Simon Grant",
+   "marks": [
+    {
+     "t": "✦",
+     "title": "First Div 1 race on record"
+    }
+   ],
+   "time": "42:22"
+  }
+ ],
+ "aTeams": [
+  {
+   "pos": "1",
+   "club": "THH",
+   "pts": "216",
+   "scores": [
+    "3",
+    "4",
+    "6",
+    "12",
+    "13",
+    "17",
+    "23",
+    "26",
+    "37",
+    "75"
+   ]
+  },
+  {
+   "pos": "2",
+   "club": "BEL",
+   "pts": "287",
+   "scores": [
+    "5",
+    "11",
+    "14",
+    "20",
+    "24",
+    "31",
+    "38",
+    "43",
+    "47",
+    "54"
+   ]
+  },
+  {
+   "pos": "3",
+   "club": "G&G",
+   "pts": "415",
+   "scores": [
+    "8",
+    "9",
+    "22",
+    "39",
+    "40",
+    "51",
+    "59",
+    "60",
+    "61",
+    "66"
+   ]
+  },
+  {
+   "pos": "4",
+   "club": "HHH",
+   "pts": "421",
+   "scores": [
+    "2",
+    "15",
+    "32",
+    "34",
+    "41",
+    "44",
+    "55",
+    "62",
+    "64",
+    "72"
+   ]
+  },
+  {
+   "pos": "5",
+   "club": "H/W",
+   "pts": "438",
+   "scores": [
+    "16",
+    "28",
+    "29",
+    "33",
+    "36",
+    "45",
+    "49",
+    "50",
+    "71",
+    "81"
+   ]
+  },
+  {
+   "pos": "6",
+   "club": "HOL",
+   "pts": "440",
+   "scores": [
+    "1",
+    "7",
+    "18",
+    "19",
+    "25",
+    "52",
+    "70",
+    "79",
+    "82",
+    "87"
+   ]
+  },
+  {
+   "pos": "7",
+   "club": "KEN",
+   "pts": "516",
+   "scores": [
+    "10",
+    "27",
+    "48",
+    "53",
+    "56",
+    "58",
+    "63",
+    "65",
+    "67",
+    "69"
+   ]
+  },
+  {
+   "pos": "8",
+   "club": "DUL",
+   "pts": "722",
+   "scores": [
+    "21",
+    "46",
+    "73",
+    "76",
+    "77",
+    "80",
+    "83",
+    "85",
+    "90",
+    "91"
+   ]
+  },
+  {
+   "pos": "9",
+   "club": "WOK",
+   "pts": "772",
+   "scores": [
+    "30",
+    "35",
+    "68",
+    "84",
+    "86",
+    "88",
+    "93",
+    "95",
+    "96",
+    "97"
+   ]
+  },
+  {
+   "pos": "10",
+   "club": "RAN",
+   "pts": "823",
+   "scores": [
+    "42",
+    "57",
+    "74",
+    "78",
+    "89",
+    "92",
+    "94",
+    "98",
+    "99",
+    "100"
+   ]
+  }
+ ],
+ "bTeams": [
+  {
+   "pos": "1",
+   "club": "BEL",
+   "pts": "135",
+   "scores": [
+    "1",
+    "2",
+    "3",
+    "8",
+    "11",
+    "16",
+    "19",
+    "22",
+    "23",
+    "30"
+   ]
+  },
+  {
+   "pos": "2",
+   "club": "HHH",
+   "pts": "225",
+   "scores": [
+    "5",
+    "6",
+    "9",
+    "17",
+    "24",
+    "27",
+    "28",
+    "29",
+    "35",
+    "45"
+   ]
+  },
+  {
+   "pos": "3",
+   "club": "G&G",
+   "pts": "315",
+   "scores": [
+    "4",
+    "14",
+    "21",
+    "32",
+    "33",
+    "34",
+    "39",
+    "43",
+    "47",
+    "48"
+   ]
+  },
+  {
+   "pos": "4",
+   "club": "KEN",
+   "pts": "315",
+   "scores": [
+    "10",
+    "13",
+    "15",
+    "18",
+    "20",
+    "42",
+    "46",
+    "49",
+    "50",
+    "52"
+   ]
+  },
+  {
+   "pos": "5",
+   "club": "THH",
+   "pts": "455",
+   "scores": [
+    "7",
+    "12",
+    "31",
+    "36",
+    "51",
+    "54",
+    "57",
+    "62",
+    "64",
+    "81"
+   ]
+  },
+  {
+   "pos": "6",
+   "club": "H/W",
+   "pts": "550",
+   "scores": [
+    "25",
+    "26",
+    "37",
+    "40",
+    "53",
+    "63",
+    "69",
+    "74",
+    "75",
+    "88"
+   ]
+  },
+  {
+   "pos": "7",
+   "club": "HOL",
+   "pts": "702",
+   "scores": [
+    "38",
+    "44",
+    "55",
+    "59",
+    "73",
+    "78",
+    "85",
+    "87",
+    "91",
+    "92"
+   ]
+  },
+  {
+   "pos": "8",
+   "club": "RAN",
+   "pts": "751",
+   "scores": [
+    "65",
+    "66",
+    "67",
+    "70",
+    "72",
+    "77",
+    "79",
+    "82",
+    "84",
+    "89"
+   ]
+  },
+  {
+   "pos": "9",
+   "club": "WOK",
+   "pts": "801",
+   "scores": [
+    "58",
+    "60",
+    "61",
+    "68",
+    "80",
+    "86",
+    "*",
+    "*",
+    "*",
+    "*"
+   ]
+  },
+  {
+   "pos": "10",
+   "club": "DUL",
+   "pts": "801",
+   "scores": [
+    "41",
+    "56",
+    "71",
+    "76",
+    "83",
+    "90",
+    "93",
+    "*",
+    "*",
+    "*"
+   ]
+  }
+ ],
+ "sex": "Men"
+}
