@@ -1,44 +1,7 @@
 {
+ "article": "surrey-league-match-two",
  "source": "Surrey League compendium, slarchive.org",
- "url": "https://slarchive.org/women/race/2627-2",
  "copied": "2026-11-19",
- "meta": "14 Nov 2026 · Match 2 · 2026/27",
- "venue": "Beckenham Place Park",
- "division": "Division 1 women",
- "lines": [
-  {
-   "club": "HHH",
-   "strong": "Lucy Jones'",
-   "rest": "1st of 5 wins in Div 1"
-  },
-  {
-   "club": "HHH",
-   "strong": "Herne Hill Harriers",
-   "rest": "won the match"
-  }
- ],
- "field": {
-  "stacked": 99,
-  "deep": 89,
-  "intro": "How this field compares with all 58 women's Division 1 races since 2010/11, on a scale where 100 is the strongest of them.",
-  "items": [
-   [
-    "Stacked 99",
-    "1st of 58",
-    "The ten strongest runners averaged 1,017 World Athletics points. 6 were in the UK 5K top 100."
-   ],
-   [
-    "Deep 89",
-    "6th of 58",
-    "The 100th-best runner in the field scored 680 points, and 39 finishers were in the UK 5K top 1,000."
-   ]
-  ],
-  "note": "World Athletics points put any time at any distance on one scale (800 is about 15:03 for a man over 5K, 18:25 for a woman). They're adjusted for how much faster the same runners have become since 2016, so seasons compare fairly. This race isn’t on Power of 10, so runners were matched by name and a few may be missing.",
-  "link": [
-   "Compare every race in the field depth analysis →",
-   "https://slarchive.org/analysis"
-  ]
- },
  "clubs": {
   "HOL": "Holland Sports",
   "H/W": "Hercules Wimbledon",
@@ -56,3543 +19,3590 @@
   "REI": "Reigate Priory",
   "VAC": "Veterans AC"
  },
- "vests": {
-  "HHH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"0\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"6\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"12\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"18\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
-  "BEL": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#7A001D\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"7\" width=\"20\" height=\"4\" fill=\"#CCAD6A\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
-  "G&G": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#228b22\"></path><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
-  "THH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><line x1=\"6\" y1=\"5\" x2=\"14\" y2=\"15\" stroke=\"#1a1a1a\" stroke-width=\"2\"></line><line x1=\"14\" y1=\"5\" x2=\"6\" y2=\"15\" stroke=\"#1a1a1a\" stroke-width=\"2\"></line><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
-  "KEN": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#1c4b88\"></path><path d=\"M11 5.5 L15 5.5 L15 7.5 C15 8.5 14 9 13 9.5 C12 9 11 8.5 11 7.5 Z\" fill=\"#dc2626\"></path><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
-  "STR": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#f4c430\"></path><text x=\"10\" y=\"13\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#1a1a1a\">S</text><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
-  "SLH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"13\" y=\"0\" width=\"4\" height=\"20\" fill=\"#800020\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
-  "H/W": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#f4c430\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><polygon points=\"0,0 6,0 20,20 14,20\" fill=\"#c41e3a\"></polygon></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
-  "RAN": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#1e3a8a\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#f4c430\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
-  "HOL": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#2a4ea6\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#fff\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
-  "WOK": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#ff6600\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#32CD32\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
-  "C/C": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"10\" width=\"20\" height=\"10\" fill=\"#1e3a8a\"></rect><rect x=\"0\" y=\"9\" width=\"20\" height=\"2\" fill=\"#228b22\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
-  "W/W": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#1a1a1a\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"4\" fill=\"#dc2626\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
-  "REI": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><polygon points=\"0,0 6,0 20,14 20,20 14,20 0,6\" fill=\"#87CEEB\"></polygon></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
-  "VAC": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
-  "": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#9ba099\"></path><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>"
- },
- "individual": [
-  {
-   "pos": "1",
-   "pts": "1",
-   "club": "HHH",
-   "name": "Lucy Jones",
-   "marks": [
-    {
-     "t": "⭐",
-     "title": "Has won individual Surrey League title(s)"
-    },
-    {
-     "t": "=",
-     "title": "Last race: 1st at Beckenham Place Park (Nov 2025)"
-    }
-   ],
-   "time": "19:58"
-  },
-  {
-   "pos": "2",
-   "pts": "2",
-   "club": "HHH",
-   "name": "Molly Smith",
-   "marks": [
-    {
-     "t": "=",
-     "title": "Last race: 2nd at Beckenham Place Park (Nov 2025)"
-    }
-   ],
-   "time": "20:11"
-  },
-  {
-   "pos": "3",
-   "pts": "3",
-   "club": "HHH",
-   "name": "Ruby Carter",
-   "marks": [
-    {
-     "t": "⭐",
-     "title": "Has won individual Surrey League title(s)"
-    },
-    {
-     "t": "▼",
-     "title": "Last race: 1st at Mitcham Common (Jan 2026)"
-    }
-   ],
-   "time": "20:22"
-  },
-  {
-   "pos": "4",
-   "pts": "4",
-   "club": "HHH",
-   "name": "Sophie Tooley",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 7th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "20:23"
-  },
-  {
-   "pos": "5",
-   "pts": "5",
-   "club": "BEL",
-   "name": "Abbey Brooke",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 13th at Beckenham Place Park (Nov 2025)"
-    }
-   ],
-   "time": "20:24"
-  },
-  {
-   "pos": "6",
-   "pts": "6",
-   "club": "BEL",
-   "name": "Juliet Hodder",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 11th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "20:25"
-  },
-  {
-   "pos": "7",
-   "pts": "7",
-   "club": "BEL",
-   "name": "Alex Barbour",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 16th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "20:45"
-  },
-  {
-   "pos": "8",
-   "pts": "8",
-   "club": "HHH",
-   "name": "Margaret Coogan",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 4th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "20:50"
-  },
-  {
-   "pos": "9",
-   "pts": "9",
-   "club": "G&G",
-   "name": "Suzie Harvey",
-   "marks": [
-    {
-     "t": "⭐",
-     "title": "Has won individual Surrey League title(s)"
-    },
-    {
-     "t": "🐐",
-     "title": "Is Guildford & Godalming's greatest A-team scorer of all time"
-    },
-    {
-     "t": "▼",
-     "title": "Last race: 3rd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "20:51"
-  },
-  {
-   "pos": "10",
-   "pts": "10",
-   "club": "G&G",
-   "name": "Evie Warren",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 22nd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "20:52"
-  },
-  {
-   "pos": "11",
-   "pts": "11",
-   "club": "THH",
-   "name": "Florence Wiggins",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 13th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "20:54"
-  },
-  {
-   "pos": "12",
-   "pts": "12",
-   "club": "BEL",
-   "name": "Ruby Whyte-Wilding",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 6th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "20:56"
-  },
-  {
-   "pos": "13",
-   "pts": "13",
-   "club": "HHH",
-   "name": "Helena Keenan",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 18th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "20:57"
-  },
-  {
-   "pos": "14",
-   "pts": "14",
-   "club": "BEL",
-   "name": "Katrina Robinson",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "21:05"
-  },
-  {
-   "pos": "15",
-   "pts": "15",
-   "club": "KEN",
-   "name": "Amy Clements",
-   "marks": [
-    {
-     "t": "⭐",
-     "title": "Has won individual Surrey League title(s)"
-    },
-    {
-     "t": "▲",
-     "title": "Last race: 17th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "21:08"
-  },
-  {
-   "pos": "16",
-   "pts": "16",
-   "club": "BEL",
-   "name": "Emily Bradley",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 24th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "21:16"
-  },
-  {
-   "pos": "17",
-   "pts": "17",
-   "club": "BEL",
-   "name": "Isabel Hodder",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 13th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "21:29"
-  },
-  {
-   "pos": "18",
-   "pts": "18",
-   "club": "STR",
-   "name": "Lisa Bailey",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 14th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "21:30"
-  },
-  {
-   "pos": "19",
-   "pts": "19",
-   "club": "G&G",
-   "name": "Emma Bond",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 5th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "21:36"
-  },
-  {
-   "pos": "20",
-   "pts": "20",
-   "club": "HHH",
-   "name": "Olivia Stillman",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 10th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "21:39"
-  },
-  {
-   "pos": "21",
-   "pts": "21",
-   "club": "KEN",
-   "name": "Lara Bromilow",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 38th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "21:42"
-  },
-  {
-   "pos": "22",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Emily Lowery",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 49th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "21:45"
-  },
-  {
-   "pos": "23",
-   "pts": "22",
-   "club": "STR",
-   "name": "Eliza Hawthorn",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 43rd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "21:46"
-  },
-  {
-   "pos": "24",
-   "pts": "23",
-   "club": "SLH",
-   "name": "Georgie Bruinvels",
-   "marks": [
-    {
-     "t": "⭐",
-     "title": "Has won individual Surrey League title(s)"
-    },
-    {
-     "t": "▼",
-     "title": "Last race: 6th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "21:52"
-  },
-  {
-   "pos": "25",
-   "pts": "24",
-   "club": "G&G",
-   "name": "Eleanor Harrison",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 33rd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "21:55"
-  },
-  {
-   "pos": "26",
-   "pts": "25",
-   "club": "H/W",
-   "name": "Emma Lord",
-   "marks": [
-    {
-     "t": "=",
-     "title": "Last race: 26th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "21:56"
-  },
-  {
-   "pos": "27",
-   "pts": "26",
-   "club": "G&G",
-   "name": "Emma Howsham",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 19th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "21:57"
-  },
-  {
-   "pos": "28",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Jessica Rusby",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 40th at Beckenham Place Park (Nov 2025)"
-    }
-   ],
-   "time": "22:00"
-  },
-  {
-   "pos": "29",
-   "pts": "-",
-   "club": "HHH",
-   "name": "Cali Brannan",
-   "marks": [
-    {
-     "t": "=",
-     "title": "Last race: 29th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "22:03"
-  },
-  {
-   "pos": "30",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Billie McClosky",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 19th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "22:04"
-  },
-  {
-   "pos": "31",
-   "pts": "27",
-   "club": "THH",
-   "name": "Bethanie Murray",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 23rd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "22:14"
-  },
-  {
-   "pos": "32",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Alex Gandee",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 20th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "22:19"
-  },
-  {
-   "pos": "33",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Lucy Peters",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 27th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "22:24"
-  },
-  {
-   "pos": "34",
-   "pts": "28",
-   "club": "RAN",
-   "name": "Suzy Whatmough",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 59th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "22:29"
-  },
-  {
-   "pos": "35",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Samantha Munday",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 31st at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "22:31"
-  },
-  {
-   "pos": "36",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Rose Pittman",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "22:34"
-  },
-  {
-   "pos": "37",
-   "pts": "29",
-   "club": "H/W",
-   "name": "Alexandra Carr",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 41st at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "22:38"
-  },
-  {
-   "pos": "38",
-   "pts": "30",
-   "club": "G&G",
-   "name": "Olivia Kelly",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 88th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "22:41"
-  },
-  {
-   "pos": "39",
-   "pts": "31",
-   "club": "SLH",
-   "name": "Sarah Overington",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 51st at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "22:42"
-  },
-  {
-   "pos": "40",
-   "pts": "32",
-   "club": "HOL",
-   "name": "Brittney Stewart",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "22:50"
-  },
-  {
-   "pos": "41",
-   "pts": "33",
-   "club": "H/W",
-   "name": "Claire Grima",
-   "marks": [
-    {
-     "t": "🐐",
-     "title": "Is Hercules Wimbledon's greatest A-team scorer of all time"
-    },
-    {
-     "t": "=",
-     "title": "Last race: 41st at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "22:52"
-  },
-  {
-   "pos": "42",
-   "pts": "-",
-   "club": "HHH",
-   "name": "Laura Gent",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 14th at Beckenham Place Park (Nov 2025)"
-    }
-   ],
-   "time": "22:55"
-  },
-  {
-   "pos": "43",
-   "pts": "-",
-   "club": "HHH",
-   "name": "Madelaine Parmar",
-   "marks": [
-    {
-     "t": "(N/S)",
-     "title": ""
-    },
-    {
-     "t": "▲",
-     "title": "Last race: 78th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:03"
-  },
-  {
-   "pos": "44",
-   "pts": "-",
-   "club": "HHH",
-   "name": "Antara Jain",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "23:11"
-  },
-  {
-   "pos": "45",
-   "pts": "34",
-   "club": "KEN",
-   "name": "Iona Cousland",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 39th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:12"
-  },
-  {
-   "pos": "46",
-   "pts": "35",
-   "club": "G&G",
-   "name": "Alice Cheng",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 52nd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:15"
-  },
-  {
-   "pos": "47",
-   "pts": "36",
-   "club": "THH",
-   "name": "Chloe Beckett",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 82nd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:15"
-  },
-  {
-   "pos": "48",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Ella King Powrie",
-   "marks": [
-    {
-     "t": "(N/S)",
-     "title": ""
-    },
-    {
-     "t": "▼",
-     "title": "Last race: 45th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:16"
-  },
-  {
-   "pos": "49",
-   "pts": "37",
-   "club": "KEN",
-   "name": "Alexa Parker",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 33rd at Wimbledon Common (Oct 2024)"
-    }
-   ],
-   "time": "23:17"
-  },
-  {
-   "pos": "50",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Emma Rowland",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 57th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:22"
-  },
-  {
-   "pos": "51",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Orla Walsh",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 42nd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:23"
-  },
-  {
-   "pos": "52",
-   "pts": "38",
-   "club": "H/W",
-   "name": "Poppy Robson",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 46th at Beckenham Place Park (Nov 2025)"
-    }
-   ],
-   "time": "23:24"
-  },
-  {
-   "pos": "53",
-   "pts": "39",
-   "club": "KEN",
-   "name": "Aisling Ahern",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 66th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:24"
-  },
-  {
-   "pos": "54",
-   "pts": "40",
-   "club": "WOK",
-   "name": "Louise Mills",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 36th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:25"
-  },
-  {
-   "pos": "55",
-   "pts": "-",
-   "club": "G&G",
-   "name": "Eloise Bull",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 92nd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:25"
-  },
-  {
-   "pos": "56",
-   "pts": "41",
-   "club": "HOL",
-   "name": "Lucy Berryman",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 57th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "23:26"
-  },
-  {
-   "pos": "57",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Penny Oliver",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 77th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:28"
-  },
-  {
-   "pos": "58",
-   "pts": "42",
-   "club": "KEN",
-   "name": "Amelia Pettitt",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 136th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:30"
-  },
-  {
-   "pos": "59",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Bethan Goddard",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 99th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:32"
-  },
-  {
-   "pos": "60",
-   "pts": "43",
-   "club": "THH",
-   "name": "Felicity Hayward",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 35th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:34"
-  },
-  {
-   "pos": "61",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Maia Broughton",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "23:36"
-  },
-  {
-   "pos": "62",
-   "pts": "44",
-   "club": "SLH",
-   "name": "Nicola Archer",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 64th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "23:38"
-  },
-  {
-   "pos": "63",
-   "pts": "45",
-   "club": "H/W",
-   "name": "Polly Gammon",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "23:39"
-  },
-  {
-   "pos": "64",
-   "pts": "46",
-   "club": "THH",
-   "name": "Samantha Unsworth-white",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 100th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:41"
-  },
-  {
-   "pos": "65",
-   "pts": "47",
-   "club": "STR",
-   "name": "Sarah Palmer",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 53rd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:42"
-  },
-  {
-   "pos": "66",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Mhairi Hall",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 70th at West Horsley Place (Jan 2025)"
-    }
-   ],
-   "time": "23:43"
-  },
-  {
-   "pos": "67",
-   "pts": "48",
-   "club": "STR",
-   "name": "Lucy Chambers",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 95th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:44"
-  },
-  {
-   "pos": "68",
-   "pts": "49",
-   "club": "H/W",
-   "name": "Sophie Wakeford",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "23:45"
-  },
-  {
-   "pos": "69",
-   "pts": "50",
-   "club": "C/C",
-   "name": "Abbie Bulbulian",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 81st at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:46"
-  },
-  {
-   "pos": "70",
-   "pts": "-",
-   "club": "HHH",
-   "name": "Lily Kitto",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "23:48"
-  },
-  {
-   "pos": "71",
-   "pts": "-",
-   "club": "HHH",
-   "name": "Shannon Sinclair",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 80th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:49"
-  },
-  {
-   "pos": "72",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Gemma Newport",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 104th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:49"
-  },
-  {
-   "pos": "73",
-   "pts": "-",
-   "club": "HHH",
-   "name": "Maeve Minielly",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 101st at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:50"
-  },
-  {
-   "pos": "74",
-   "pts": "51",
-   "club": "WOK",
-   "name": "Georgie Furze",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 50th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:50"
-  },
-  {
-   "pos": "75",
-   "pts": "52",
-   "club": "KEN",
-   "name": "Annaka Charters",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "23:51"
-  },
-  {
-   "pos": "76",
-   "pts": "-",
-   "club": "HHH",
-   "name": "Karen Ellison",
-   "marks": [
-    {
-     "t": "🐐",
-     "title": "Is Herne Hill Harriers's greatest A-team scorer of all time"
-    },
-    {
-     "t": "▼",
-     "title": "Last race: 59th at Mitcham Common (Jan 2026)"
-    }
-   ],
-   "time": "23:55"
-  },
-  {
-   "pos": "77",
-   "pts": "-",
-   "club": "HHH",
-   "name": "Chloe Wright",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 84th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:56"
-  },
-  {
-   "pos": "78",
-   "pts": "53",
-   "club": "RAN",
-   "name": "Aoife Kilpatrick",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 73rd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "23:59"
-  },
-  {
-   "pos": "79",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Amy White",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 66th at Wimbledon Common (Jan 2024)"
-    }
-   ],
-   "time": "24:00"
-  },
-  {
-   "pos": "80",
-   "pts": "54",
-   "club": "RAN",
-   "name": "Lizzie Broughton",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 56th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:02"
-  },
-  {
-   "pos": "81",
-   "pts": "55",
-   "club": "W/W",
-   "name": "Amedea Kelly-Taglianini",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 107th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:02"
-  },
-  {
-   "pos": "82",
-   "pts": "56",
-   "club": "THH",
-   "name": "Claire Altmann",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 117th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:04"
-  },
-  {
-   "pos": "83",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Hayley Cherry",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 115th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:09"
-  },
-  {
-   "pos": "84",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Lauren Liversidge",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 93rd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:11"
-  },
-  {
-   "pos": "85",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Vic Cartwright",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 76th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "24:12"
-  },
-  {
-   "pos": "86",
-   "pts": "57",
-   "club": "RAN",
-   "name": "Natalie Haarer",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 94th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:16"
-  },
-  {
-   "pos": "87",
-   "pts": "58",
-   "club": "H/W",
-   "name": "Ava McAndie",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 85th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:17"
-  },
-  {
-   "pos": "88",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Claire Oxlade",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 68th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:26"
-  },
-  {
-   "pos": "89",
-   "pts": "-",
-   "club": "SLH",
-   "name": "Katie Mooney",
-   "marks": [
-    {
-     "t": "(N/S)",
-     "title": ""
-    },
-    {
-     "t": "▼",
-     "title": "Last race: 83rd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:26"
-  },
-  {
-   "pos": "90",
-   "pts": "59",
-   "club": "C/C",
-   "name": "Imogen Fawcett",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 89th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "24:29"
-  },
-  {
-   "pos": "91",
-   "pts": "60",
-   "club": "C/C",
-   "name": "Vicki Falck",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 152nd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:31"
-  },
-  {
-   "pos": "92",
-   "pts": "-",
-   "club": "H/W",
-   "name": "Matilde Lomba",
-   "marks": [
-    {
-     "t": "=",
-     "title": "Last race: 92nd at Epsom Downs (Feb 2025)"
-    }
-   ],
-   "time": "24:32"
-  },
-  {
-   "pos": "93",
-   "pts": "-",
-   "club": "HHH",
-   "name": "Suzanne Swaine",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 46th at Mitcham Common (Jan 2026)"
-    }
-   ],
-   "time": "24:32"
-  },
-  {
-   "pos": "94",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Sara Ridmy",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 89th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:34"
-  },
-  {
-   "pos": "95",
-   "pts": "61",
-   "club": "HOL",
-   "name": "Ruby Masson",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 89th at Beckenham Place Park (Nov 2025)"
-    }
-   ],
-   "time": "24:35"
-  },
-  {
-   "pos": "96",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Luiza Farache Trajano",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 111th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:37"
-  },
-  {
-   "pos": "97",
-   "pts": "62",
-   "club": "C/C",
-   "name": "Eleanor Andrews",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 74th at Mitcham Common (Jan 2026)"
-    }
-   ],
-   "time": "24:39"
-  },
-  {
-   "pos": "98",
-   "pts": "63",
-   "club": "THH",
-   "name": "Vikki Filsell",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 128th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:39"
-  },
-  {
-   "pos": "99",
-   "pts": "-",
-   "club": "HHH",
-   "name": "Charlotte Davies",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 62nd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:43"
-  },
-  {
-   "pos": "100",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Nesrin Sabanci",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 142nd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:45"
-  },
-  {
-   "pos": "101",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Parris Williams",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 134th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:53"
-  },
-  {
-   "pos": "102",
-   "pts": "64",
-   "club": "WOK",
-   "name": "Kath Taylor",
-   "marks": [
-    {
-     "t": "=",
-     "title": "Last race: 102nd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:55"
-  },
-  {
-   "pos": "103",
-   "pts": "-",
-   "club": "G&G",
-   "name": "Izzy White",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 131st at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "24:59"
-  },
-  {
-   "pos": "104",
-   "pts": "-",
-   "club": "H/W",
-   "name": "Molly Pocock",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 66th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "25:00"
-  },
-  {
-   "pos": "105",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Jemima D'Arcy",
-   "marks": [
-    {
-     "t": "=",
-     "title": "Last race: 105th at Beckenham Place Park (Jan 2023)"
-    }
-   ],
-   "time": "25:03"
-  },
-  {
-   "pos": "106",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Teresa Murphy",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 104th at Beckenham Place Park (Nov 2025)"
-    }
-   ],
-   "time": "25:05"
-  },
-  {
-   "pos": "107",
-   "pts": "65",
-   "club": "C/C",
-   "name": "Lizzi Milbourne",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "25:13"
-  },
-  {
-   "pos": "108",
-   "pts": "66",
-   "club": "SLH",
-   "name": "Alana Smith",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 159th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:14"
-  },
-  {
-   "pos": "109",
-   "pts": "67",
-   "club": "RAN",
-   "name": "Liz Wynn",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 175th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:17"
-  },
-  {
-   "pos": "110",
-   "pts": "68",
-   "club": "C/C",
-   "name": "Clare Harris",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 143rd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:19"
-  },
-  {
-   "pos": "111",
-   "pts": "69",
-   "club": "RAN",
-   "name": "Samantha Martyn",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 139th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:20"
-  },
-  {
-   "pos": "112",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Elinor Skinner",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 88th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "25:27"
-  },
-  {
-   "pos": "113",
-   "pts": "70",
-   "club": "RAN",
-   "name": "Agnes Nagy",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 107th at Beckenham Place Park (Nov 2025)"
-    }
-   ],
-   "time": "25:28"
-  },
-  {
-   "pos": "114",
-   "pts": "71",
-   "club": "REI",
-   "name": "Emily Jeanes",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 145th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:29"
-  },
-  {
-   "pos": "115",
-   "pts": "72",
-   "club": "WOK",
-   "name": "Olivia Farrow",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 133rd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:29"
-  },
-  {
-   "pos": "116",
-   "pts": "73",
-   "club": "C/C",
-   "name": "Jo Hargreaves",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 125th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:30"
-  },
-  {
-   "pos": "117",
-   "pts": "74",
-   "club": "REI",
-   "name": "Unknown",
-   "marks": [],
-   "time": "25:35"
-  },
-  {
-   "pos": "118",
-   "pts": "75",
-   "club": "WOK",
-   "name": "Amy Johnson",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 151st at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:39"
-  },
-  {
-   "pos": "119",
-   "pts": "-",
-   "club": "RAN",
-   "name": "Maria Jovani",
-   "marks": [
-    {
-     "t": "(N/S)",
-     "title": ""
-    },
-    {
-     "t": "▲",
-     "title": "Last race: 160th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:41"
-  },
-  {
-   "pos": "120",
-   "pts": "76",
-   "club": "HOL",
-   "name": "Kirsty Cutting",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 154th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:42"
-  },
-  {
-   "pos": "121",
-   "pts": "-",
-   "club": "RAN",
-   "name": "Robyn Smith",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 147th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "25:42"
-  },
-  {
-   "pos": "122",
-   "pts": "77",
-   "club": "STR",
-   "name": "Claire Curtin",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 118th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:43"
-  },
-  {
-   "pos": "123",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Lianne Lefreniere",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "25:44"
-  },
-  {
-   "pos": "124",
-   "pts": "-",
-   "club": "THH",
-   "name": "Freya Billinghurst",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 164th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:44"
-  },
-  {
-   "pos": "125",
-   "pts": "78",
-   "club": "W/W",
-   "name": "Abigail Craig",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 157th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:45"
-  },
-  {
-   "pos": "126",
-   "pts": "-",
-   "club": "H/W",
-   "name": "Blue Thorpe",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "25:45"
-  },
-  {
-   "pos": "127",
-   "pts": "-",
-   "club": "C/C",
-   "name": "Holly Govey",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 149th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:46"
-  },
-  {
-   "pos": "128",
-   "pts": "79",
-   "club": "WOK",
-   "name": "Lauren Chadwick",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 146th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:48"
-  },
-  {
-   "pos": "129",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Jo Wint",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 198th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "25:49"
-  },
-  {
-   "pos": "130",
-   "pts": "80",
-   "club": "W/W",
-   "name": "Annie Troung",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 119th at West Horsley Place (Feb 2024)"
-    }
-   ],
-   "time": "25:49"
-  },
-  {
-   "pos": "131",
-   "pts": "81",
-   "club": "SLH",
-   "name": "Lucy Connolly",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 114th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:50"
-  },
-  {
-   "pos": "132",
-   "pts": "-",
-   "club": "RAN",
-   "name": "Edel McKeever",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 113th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "25:51"
-  },
-  {
-   "pos": "133",
-   "pts": "82",
-   "club": "SLH",
-   "name": "Fiona Park",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 135th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "25:52"
-  },
-  {
-   "pos": "134",
-   "pts": "83",
-   "club": "SLH",
-   "name": "Debbie Jackson",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 92nd at Mitcham Common (Nov 2023)"
-    }
-   ],
-   "time": "26:04"
-  },
-  {
-   "pos": "135",
-   "pts": "84",
-   "club": "HOL",
-   "name": "Amy Kearney",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 150th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "26:04"
-  },
-  {
-   "pos": "136",
-   "pts": "-",
-   "club": "G&G",
-   "name": "Isla Stock",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "26:06"
-  },
-  {
-   "pos": "137",
-   "pts": "-",
-   "club": "SLH",
-   "name": "Ruth Hutton",
-   "marks": [
-    {
-     "t": "🐐",
-     "title": "Is South London Harriers's greatest A-team scorer of all time"
-    },
-    {
-     "t": "▲",
-     "title": "Last race: 161st at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "26:07"
-  },
-  {
-   "pos": "138",
-   "pts": "-",
-   "club": "THH",
-   "name": "Ianthe Hill",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "26:08"
-  },
-  {
-   "pos": "139",
-   "pts": "85",
-   "club": "W/W",
-   "name": "Roz Burton",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 156th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "26:12"
-  },
-  {
-   "pos": "140",
-   "pts": "86",
-   "club": "WOK",
-   "name": "Hennie Owen",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 144th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "26:14"
-  },
-  {
-   "pos": "141",
-   "pts": "87",
-   "club": "STR",
-   "name": "Nicole Hamilton",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 113th at Wimbledon Common (Oct 2024)"
-    }
-   ],
-   "time": "26:17"
-  },
-  {
-   "pos": "142",
-   "pts": "88",
-   "club": "REI",
-   "name": "Joanna Davey",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 141st at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "26:18"
-  },
-  {
-   "pos": "143",
-   "pts": "-",
-   "club": "C/C",
-   "name": "Vinh-Phuong Hoang",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 158th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "26:25"
-  },
-  {
-   "pos": "144",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Florence Ingram",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "26:28"
-  },
-  {
-   "pos": "145",
-   "pts": "-",
-   "club": "SLH",
-   "name": "Alice Smith",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 178th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "26:31"
-  },
-  {
-   "pos": "146",
-   "pts": "89",
-   "club": "HOL",
-   "name": "Emma Proto",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 102nd at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "26:32"
-  },
-  {
-   "pos": "147",
-   "pts": "-",
-   "club": "RAN",
-   "name": "Fiona Smith",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 148th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "26:34"
-  },
-  {
-   "pos": "148",
-   "pts": "-",
-   "club": "SLH",
-   "name": "Sophie Barrowman",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "26:35"
-  },
-  {
-   "pos": "149",
-   "pts": "-",
-   "club": "WOK",
-   "name": "Tash Griffiths",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 199th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "26:36"
-  },
-  {
-   "pos": "150",
-   "pts": "-",
-   "club": "THH",
-   "name": "Emma Lepinay",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 193rd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "26:37"
-  },
-  {
-   "pos": "151",
-   "pts": "90",
-   "club": "HOL",
-   "name": "Gemma Hall",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 165th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "26:39"
-  },
-  {
-   "pos": "152",
-   "pts": "-",
-   "club": "THH",
-   "name": "Jessica Davies",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 210th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "26:40"
-  },
-  {
-   "pos": "153",
-   "pts": "91",
-   "club": "REI",
-   "name": "Natanya Freedman",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 132nd at Epsom Downs (Feb 2025)"
-    }
-   ],
-   "time": "26:42"
-  },
-  {
-   "pos": "154",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Sally Urquhart",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 174th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "26:44"
-  },
-  {
-   "pos": "155",
-   "pts": "92",
-   "club": "REI",
-   "name": "Ginevra Stoneley",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 99th at Epsom Downs (Feb 2025)"
-    }
-   ],
-   "time": "26:51"
-  },
-  {
-   "pos": "156",
-   "pts": "93",
-   "club": "VAC",
-   "name": "Lucy Woolhouse",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 180th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "26:54"
-  },
-  {
-   "pos": "157",
-   "pts": "94",
-   "club": "VAC",
-   "name": "Lisa Thomas",
-   "marks": [
-    {
-     "t": "🐐",
-     "title": "Is Veterans AC's greatest A-team scorer of all time"
-    },
-    {
-     "t": "▲",
-     "title": "Last race: 176th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "26:56"
-  },
-  {
-   "pos": "158",
-   "pts": "-",
-   "club": "C/C",
-   "name": "Elle Mecrow",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 150th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "26:59"
-  },
-  {
-   "pos": "159",
-   "pts": "95",
-   "club": "STR",
-   "name": "Pam Whitter",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 179th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "27:05"
-  },
-  {
-   "pos": "160",
-   "pts": "96",
-   "club": "REI",
-   "name": "Linda Rodriguez",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 172nd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "27:06"
-  },
-  {
-   "pos": "161",
-   "pts": "-",
-   "club": "SLH",
-   "name": "Diana Dolce",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 136th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "27:10"
-  },
-  {
-   "pos": "162",
-   "pts": "-",
-   "club": "H/W",
-   "name": "Wenjia Chen",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 130th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "27:11"
-  },
-  {
-   "pos": "163",
-   "pts": "-",
-   "club": "WOK",
-   "name": "Claire Brittain",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 141st at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "27:17"
-  },
-  {
-   "pos": "164",
-   "pts": "-",
-   "club": "SLH",
-   "name": "Jessica Booth",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 186th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "27:19"
-  },
-  {
-   "pos": "165",
-   "pts": "-",
-   "club": "C/C",
-   "name": "Maddie Spellman",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 202nd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "27:24"
-  },
-  {
-   "pos": "166",
-   "pts": "97",
-   "club": "W/W",
-   "name": "Claire Boynton",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 168th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "27:26"
-  },
-  {
-   "pos": "167",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Suze Spalding",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 204th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "27:28"
-  },
-  {
-   "pos": "168",
-   "pts": "-",
-   "club": "SLH",
-   "name": "Hayley Rand",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 185th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "27:31"
-  },
-  {
-   "pos": "169",
-   "pts": "98",
-   "club": "W/W",
-   "name": "Lizzie Wright",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 170th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "27:35"
-  },
-  {
-   "pos": "170",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Susanna Davies",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 168th at Beckenham Place Park (Nov 2025)"
-    }
-   ],
-   "time": "27:48"
-  },
-  {
-   "pos": "171",
-   "pts": "-",
-   "club": "WOK",
-   "name": "Rohini Keites",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 173rd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "27:50"
-  },
-  {
-   "pos": "172",
-   "pts": "-",
-   "club": "HOL",
-   "name": "Sarah Anderson",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 197th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "27:51"
-  },
-  {
-   "pos": "173",
-   "pts": "-",
-   "club": "HOL",
-   "name": "Sarah O'Neill",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 190th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "27:55"
-  },
-  {
-   "pos": "174",
-   "pts": "-",
-   "club": "RAN",
-   "name": "Rebecca Bissell",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 195th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "27:56"
-  },
-  {
-   "pos": "175",
-   "pts": "-",
-   "club": "STR",
-   "name": "Lucy Hoseason",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 146th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "27:59"
-  },
-  {
-   "pos": "176",
-   "pts": "-",
-   "club": "BEL",
-   "name": "Josie Oliver",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "28:01"
-  },
-  {
-   "pos": "177",
-   "pts": "-",
-   "club": "STR",
-   "name": "Tara Holt",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 213th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "28:03"
-  },
-  {
-   "pos": "178",
-   "pts": "-",
-   "club": "G&G",
-   "name": "Laura Locatelli",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "28:04"
-  },
-  {
-   "pos": "179",
-   "pts": "-",
-   "club": "STR",
-   "name": "Anna Diamantopolous",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 194th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "28:12"
-  },
-  {
-   "pos": "180",
-   "pts": "-",
-   "club": "RAN",
-   "name": "Emily Fenwick",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "28:13"
-  },
-  {
-   "pos": "181",
-   "pts": "-",
-   "club": "HOL",
-   "name": "Sophie Lovie",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 217th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "28:16"
-  },
-  {
-   "pos": "182",
-   "pts": "-",
-   "club": "RAN",
-   "name": "Wiebke Kortum",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 196th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "28:17"
-  },
-  {
-   "pos": "183",
-   "pts": "-",
-   "club": "SLH",
-   "name": "Pippa Major",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 215th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "28:18"
-  },
-  {
-   "pos": "184",
-   "pts": "-",
-   "club": "STR",
-   "name": "Louise Lancaster",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "28:34"
-  },
-  {
-   "pos": "185",
-   "pts": "-",
-   "club": "H/W",
-   "name": "Jacqueline Richardson",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 203rd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "28:38"
-  },
-  {
-   "pos": "186",
-   "pts": "-",
-   "club": "THH",
-   "name": "Jessica Pye",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 144th at Effingham Common (Oct 2022)"
-    }
-   ],
-   "time": "28:40"
-  },
-  {
-   "pos": "187",
-   "pts": "-",
-   "club": "HOL",
-   "name": "Katherine Ellis",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 207th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "28:56"
-  },
-  {
-   "pos": "188",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Rebecca Palser",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "29:02"
-  },
-  {
-   "pos": "189",
-   "pts": "-",
-   "club": "C/C",
-   "name": "Lauren Wood",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "29:03"
-  },
-  {
-   "pos": "190",
-   "pts": "-",
-   "club": "STR",
-   "name": "Ellie Jackson",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 225th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "29:15"
-  },
-  {
-   "pos": "191",
-   "pts": "99",
-   "club": "W/W",
-   "name": "Alice Evans",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 222nd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "29:16"
-  },
-  {
-   "pos": "192",
-   "pts": "100",
-   "club": "REI",
-   "name": "Ruth Willis",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 93rd at Epsom Downs (Feb 2025)"
-    }
-   ],
-   "time": "29:20"
-  },
-  {
-   "pos": "193",
-   "pts": "-",
-   "club": "SLH",
-   "name": "Pam Iannella",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 219th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "29:21"
-  },
-  {
-   "pos": "194",
-   "pts": "-",
-   "club": "W/W",
-   "name": "Christina Haralambous",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "29:29"
-  },
-  {
-   "pos": "195",
-   "pts": "-",
-   "club": "STR",
-   "name": "Rachel Simpson",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 182nd at Wimbledon Common (Jan 2024)"
-    }
-   ],
-   "time": "29:30"
-  },
-  {
-   "pos": "196",
-   "pts": "-",
-   "club": "STR",
-   "name": "Pamela McHutchon",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 223rd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "29:34"
-  },
-  {
-   "pos": "197",
-   "pts": "-",
-   "club": "THH",
-   "name": "Holly Boyle",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "29:35"
-  },
-  {
-   "pos": "198",
-   "pts": "-",
-   "club": "C/C",
-   "name": "Marisa Pineo",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 171st at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "29:42"
-  },
-  {
-   "pos": "199",
-   "pts": "-",
-   "club": "W/W",
-   "name": "Jane Hardie",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "29:53"
-  },
-  {
-   "pos": "200",
-   "pts": "-",
-   "club": "C/C",
-   "name": "Elizabeth Watson",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 266th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "30:04"
-  },
-  {
-   "pos": "201",
-   "pts": "-",
-   "club": "H/W",
-   "name": "Liz Legge",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 207th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "30:06"
-  },
-  {
-   "pos": "202",
-   "pts": "-",
-   "club": "HOL",
-   "name": "Adrianne Gibbins",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 201st at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "30:09"
-  },
-  {
-   "pos": "203",
-   "pts": "-",
-   "club": "C/C",
-   "name": "Helen Jaques",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 188th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "30:22"
-  },
-  {
-   "pos": "204",
-   "pts": "-",
-   "club": "W/W",
-   "name": "Charlotte Wright",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "30:30"
-  },
-  {
-   "pos": "205",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Johanna Cartledge",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "30:33"
-  },
-  {
-   "pos": "206",
-   "pts": "-",
-   "club": "C/C",
-   "name": "Sally Marr",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "30:38"
-  },
-  {
-   "pos": "207",
-   "pts": "-",
-   "club": "HHH",
-   "name": "Mary Setyabule",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 234th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "30:44"
-  },
-  {
-   "pos": "208",
-   "pts": "-",
-   "club": "C/C",
-   "name": "Beth Clarke",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 222nd at Beckenham Place Park (Nov 2025)"
-    }
-   ],
-   "time": "30:47"
-  },
-  {
-   "pos": "209",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Karina Box",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 114th at Mitcham Common (Jan 2026)"
-    }
-   ],
-   "time": "30:48"
-  },
-  {
-   "pos": "210",
-   "pts": "-",
-   "club": "STR",
-   "name": "Rachel Baranska",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 224th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "30:51"
-  },
-  {
-   "pos": "211",
-   "pts": "-",
-   "club": "H/W",
-   "name": "Regina Reti",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "31:01"
-  },
-  {
-   "pos": "212",
-   "pts": "-",
-   "club": "C/C",
-   "name": "Katy Goodhead",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "31:04"
-  },
-  {
-   "pos": "213",
-   "pts": "-",
-   "club": "W/W",
-   "name": "Lindsay Doy",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 194th at Wimbledon Common (Jan 2024)"
-    }
-   ],
-   "time": "31:07"
-  },
-  {
-   "pos": "214",
-   "pts": "-",
-   "club": "W/W",
-   "name": "Deborah Ghadially",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "31:13"
-  },
-  {
-   "pos": "215",
-   "pts": "-",
-   "club": "RAN",
-   "name": "Aurelie Zahm",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 236th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "31:17"
-  },
-  {
-   "pos": "216",
-   "pts": "101",
-   "club": "VAC",
-   "name": "Gina Coulson",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 227th at Richmond Park (Feb 2020)"
-    }
-   ],
-   "time": "31:41"
-  },
-  {
-   "pos": "217",
-   "pts": "-",
-   "club": "W/W",
-   "name": "Amelia Ashton-Jones",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 246th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "31:53"
-  },
-  {
-   "pos": "218",
-   "pts": "-",
-   "club": "C/C",
-   "name": "Molly Laycock",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 240th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "32:21"
-  },
-  {
-   "pos": "219",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Sarah Parry",
-   "marks": [
-    {
-     "t": "✦",
-     "title": "First Div 1 race on record"
-    }
-   ],
-   "time": "32:27"
-  },
-  {
-   "pos": "220",
-   "pts": "-",
-   "club": "H/W",
-   "name": "Allie Donoghue-Hunt",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 238th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "32:59"
-  },
-  {
-   "pos": "221",
-   "pts": "-",
-   "club": "H/W",
-   "name": "Sarah Twaite",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 131st at Mitcham Common (Jan 2026)"
-    }
-   ],
-   "time": "33:00"
-  },
-  {
-   "pos": "222",
-   "pts": "-",
-   "club": "REI",
-   "name": "Annette Morris",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 206th at Richmond Park (Feb 2020)"
-    }
-   ],
-   "time": "33:20"
-  },
-  {
-   "pos": "223",
-   "pts": "-",
-   "club": "W/W",
-   "name": "Chiara Samele",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 252nd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "33:43"
-  },
-  {
-   "pos": "224",
-   "pts": "-",
-   "club": "STR",
-   "name": "Emily Barrow",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 134th at West Horsley Place (Feb 2024)"
-    }
-   ],
-   "time": "33:53"
-  },
-  {
-   "pos": "225",
-   "pts": "-",
-   "club": "C/C",
-   "name": "Rebecca Spencer",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 253rd at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "34:10"
-  },
-  {
-   "pos": "226",
-   "pts": "-",
-   "club": "G&G",
-   "name": "Elizabeth Davies",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 214th at Hurst Green (Oct 2025)"
-    }
-   ],
-   "time": "34:20"
-  },
-  {
-   "pos": "227",
-   "pts": "-",
-   "club": "C/C",
-   "name": "Reema Ismail",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 220th at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "35:06"
-  },
-  {
-   "pos": "228",
-   "pts": "-",
-   "club": "W/W",
-   "name": "Claire Morgan",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 259th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "35:35"
-  },
-  {
-   "pos": "229",
-   "pts": "-",
-   "club": "C/C",
-   "name": "Abby Halfacre",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 260th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "35:36"
-  },
-  {
-   "pos": "230",
-   "pts": "-",
-   "club": "W/W",
-   "name": "Flora Blake-Parsons",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 257th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "35:56"
-  },
-  {
-   "pos": "231",
-   "pts": "-",
-   "club": "W/W",
-   "name": "Anne Davies",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 238th at Wimbledon Common (Jan 2024)"
-    }
-   ],
-   "time": "36:36"
-  },
-  {
-   "pos": "232",
-   "pts": "102",
-   "club": "VAC",
-   "name": "Gillian Wheeldon",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 246th at Wimbledon Common (Nov 2021)"
-    }
-   ],
-   "time": "40:41"
-  },
-  {
-   "pos": "233",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Zoë Gaffen",
-   "marks": [
-    {
-     "t": "▲",
-     "title": "Last race: 270th at Wimbledon Common (Oct 2026)"
-    }
-   ],
-   "time": "40:56"
-  },
-  {
-   "pos": "234",
-   "pts": "-",
-   "club": "KEN",
-   "name": "Annabelle Hadlow",
-   "marks": [
-    {
-     "t": "▼",
-     "title": "Last race: 231st at Wimbledon Common (Feb 2026)"
-    }
-   ],
-   "time": "41:14"
+ "blocks": [
+  {
+   "afterText": "B teams:",
+   "races": [
+    {
+     "url": "https://slarchive.org/women/race/2627-2",
+     "meta": "14 Nov 2026 · Match 2 · 2026/27",
+     "venue": "Beckenham Place Park",
+     "division": "Division 1 women",
+     "lines": [
+      {
+       "club": "HHH",
+       "strong": "Lucy Jones'",
+       "rest": "1st of 5 wins in Div 1"
+      },
+      {
+       "club": "HHH",
+       "strong": "Herne Hill Harriers",
+       "rest": "won the match"
+      }
+     ],
+     "field": {
+      "stacked": 99,
+      "deep": 89,
+      "intro": "How this field compares with all 58 women's Division 1 races since 2010/11, on a scale where 100 is the strongest of them.",
+      "items": [
+       [
+        "Stacked 99",
+        "1st of 58",
+        "The ten strongest runners averaged 1,017 World Athletics points. 6 were in the UK 5K top 100."
+       ],
+       [
+        "Deep 89",
+        "6th of 58",
+        "The 100th-best runner in the field scored 680 points, and 39 finishers were in the UK 5K top 1,000."
+       ]
+      ],
+      "note": "World Athletics points put any time at any distance on one scale (800 is about 15:03 for a man over 5K, 18:25 for a woman). They're adjusted for how much faster the same runners have become since 2016, so seasons compare fairly. This race isn’t on Power of 10, so runners were matched by name and a few may be missing.",
+      "link": [
+       "Compare every race in the field depth analysis →",
+       "https://slarchive.org/analysis"
+      ]
+     },
+     "vests": {
+      "HHH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"0\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"6\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"12\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect><rect x=\"0\" y=\"18\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+      "BEL": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#7A001D\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"7\" width=\"20\" height=\"4\" fill=\"#CCAD6A\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+      "G&G": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#228b22\"></path><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+      "THH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><line x1=\"6\" y1=\"5\" x2=\"14\" y2=\"15\" stroke=\"#1a1a1a\" stroke-width=\"2\"></line><line x1=\"14\" y1=\"5\" x2=\"6\" y2=\"15\" stroke=\"#1a1a1a\" stroke-width=\"2\"></line><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+      "KEN": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#1c4b88\"></path><path d=\"M11 5.5 L15 5.5 L15 7.5 C15 8.5 14 9 13 9.5 C12 9 11 8.5 11 7.5 Z\" fill=\"#dc2626\"></path><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+      "STR": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#f4c430\"></path><text x=\"10\" y=\"13\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#1a1a1a\">S</text><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+      "SLH": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"13\" y=\"0\" width=\"4\" height=\"20\" fill=\"#800020\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+      "H/W": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#f4c430\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><polygon points=\"0,0 6,0 20,20 14,20\" fill=\"#c41e3a\"></polygon></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+      "RAN": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#1e3a8a\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#f4c430\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+      "HOL": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#2a4ea6\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#fff\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+      "WOK": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#ff6600\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#32CD32\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+      "C/C": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"10\" width=\"20\" height=\"10\" fill=\"#1e3a8a\"></rect><rect x=\"0\" y=\"9\" width=\"20\" height=\"2\" fill=\"#228b22\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+      "W/W": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#1a1a1a\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"4\" fill=\"#dc2626\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+      "REI": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#dc2626\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><polygon points=\"0,0 6,0 20,14 20,20 14,20 0,6\" fill=\"#87CEEB\"></polygon></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+      "VAC": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#fff\"></path><clipPath id=\"VID\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\"></path></clipPath><g clip-path=\"url(#VID)\"><rect x=\"0\" y=\"8\" width=\"20\" height=\"3\" fill=\"#1a1a1a\"></rect></g><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>",
+      "": "<svg viewBox=\"0 0 20 20\"><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"#9ba099\"></path><path d=\"M3 0 L6 0 Q7 4 10 5 Q13 4 14 0 L17 0 L17 20 L3 20 Z\" fill=\"none\" stroke=\"#3c403a\" stroke-width=\"0.5\"></path></svg>"
+     },
+     "individual": [
+      {
+       "pos": "1",
+       "pts": "1",
+       "club": "HHH",
+       "name": "Lucy Jones",
+       "marks": [
+        {
+         "t": "⭐",
+         "title": "Has won individual Surrey League title(s)"
+        },
+        {
+         "t": "=",
+         "title": "Last race: 1st at Beckenham Place Park (Nov 2025)"
+        }
+       ],
+       "time": "19:58"
+      },
+      {
+       "pos": "2",
+       "pts": "2",
+       "club": "HHH",
+       "name": "Molly Smith",
+       "marks": [
+        {
+         "t": "=",
+         "title": "Last race: 2nd at Beckenham Place Park (Nov 2025)"
+        }
+       ],
+       "time": "20:11"
+      },
+      {
+       "pos": "3",
+       "pts": "3",
+       "club": "HHH",
+       "name": "Ruby Carter",
+       "marks": [
+        {
+         "t": "⭐",
+         "title": "Has won individual Surrey League title(s)"
+        },
+        {
+         "t": "▼",
+         "title": "Last race: 1st at Mitcham Common (Jan 2026)"
+        }
+       ],
+       "time": "20:22"
+      },
+      {
+       "pos": "4",
+       "pts": "4",
+       "club": "HHH",
+       "name": "Sophie Tooley",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 7th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "20:23"
+      },
+      {
+       "pos": "5",
+       "pts": "5",
+       "club": "BEL",
+       "name": "Abbey Brooke",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 13th at Beckenham Place Park (Nov 2025)"
+        }
+       ],
+       "time": "20:24"
+      },
+      {
+       "pos": "6",
+       "pts": "6",
+       "club": "BEL",
+       "name": "Juliet Hodder",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 11th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "20:25"
+      },
+      {
+       "pos": "7",
+       "pts": "7",
+       "club": "BEL",
+       "name": "Alex Barbour",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 16th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "20:45"
+      },
+      {
+       "pos": "8",
+       "pts": "8",
+       "club": "HHH",
+       "name": "Margaret Coogan",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 4th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "20:50"
+      },
+      {
+       "pos": "9",
+       "pts": "9",
+       "club": "G&G",
+       "name": "Suzie Harvey",
+       "marks": [
+        {
+         "t": "⭐",
+         "title": "Has won individual Surrey League title(s)"
+        },
+        {
+         "t": "🐐",
+         "title": "Is Guildford & Godalming's greatest A-team scorer of all time"
+        },
+        {
+         "t": "▼",
+         "title": "Last race: 3rd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "20:51"
+      },
+      {
+       "pos": "10",
+       "pts": "10",
+       "club": "G&G",
+       "name": "Evie Warren",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 22nd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "20:52"
+      },
+      {
+       "pos": "11",
+       "pts": "11",
+       "club": "THH",
+       "name": "Florence Wiggins",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 13th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "20:54"
+      },
+      {
+       "pos": "12",
+       "pts": "12",
+       "club": "BEL",
+       "name": "Ruby Whyte-Wilding",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 6th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "20:56"
+      },
+      {
+       "pos": "13",
+       "pts": "13",
+       "club": "HHH",
+       "name": "Helena Keenan",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 18th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "20:57"
+      },
+      {
+       "pos": "14",
+       "pts": "14",
+       "club": "BEL",
+       "name": "Katrina Robinson",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "21:05"
+      },
+      {
+       "pos": "15",
+       "pts": "15",
+       "club": "KEN",
+       "name": "Amy Clements",
+       "marks": [
+        {
+         "t": "⭐",
+         "title": "Has won individual Surrey League title(s)"
+        },
+        {
+         "t": "▲",
+         "title": "Last race: 17th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "21:08"
+      },
+      {
+       "pos": "16",
+       "pts": "16",
+       "club": "BEL",
+       "name": "Emily Bradley",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 24th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "21:16"
+      },
+      {
+       "pos": "17",
+       "pts": "17",
+       "club": "BEL",
+       "name": "Isabel Hodder",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 13th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "21:29"
+      },
+      {
+       "pos": "18",
+       "pts": "18",
+       "club": "STR",
+       "name": "Lisa Bailey",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 14th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "21:30"
+      },
+      {
+       "pos": "19",
+       "pts": "19",
+       "club": "G&G",
+       "name": "Emma Bond",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 5th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "21:36"
+      },
+      {
+       "pos": "20",
+       "pts": "20",
+       "club": "HHH",
+       "name": "Olivia Stillman",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 10th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "21:39"
+      },
+      {
+       "pos": "21",
+       "pts": "21",
+       "club": "KEN",
+       "name": "Lara Bromilow",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 38th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "21:42"
+      },
+      {
+       "pos": "22",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Emily Lowery",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 49th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "21:45"
+      },
+      {
+       "pos": "23",
+       "pts": "22",
+       "club": "STR",
+       "name": "Eliza Hawthorn",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 43rd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "21:46"
+      },
+      {
+       "pos": "24",
+       "pts": "23",
+       "club": "SLH",
+       "name": "Georgie Bruinvels",
+       "marks": [
+        {
+         "t": "⭐",
+         "title": "Has won individual Surrey League title(s)"
+        },
+        {
+         "t": "▼",
+         "title": "Last race: 6th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "21:52"
+      },
+      {
+       "pos": "25",
+       "pts": "24",
+       "club": "G&G",
+       "name": "Eleanor Harrison",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 33rd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "21:55"
+      },
+      {
+       "pos": "26",
+       "pts": "25",
+       "club": "H/W",
+       "name": "Emma Lord",
+       "marks": [
+        {
+         "t": "=",
+         "title": "Last race: 26th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "21:56"
+      },
+      {
+       "pos": "27",
+       "pts": "26",
+       "club": "G&G",
+       "name": "Emma Howsham",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 19th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "21:57"
+      },
+      {
+       "pos": "28",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Jessica Rusby",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 40th at Beckenham Place Park (Nov 2025)"
+        }
+       ],
+       "time": "22:00"
+      },
+      {
+       "pos": "29",
+       "pts": "-",
+       "club": "HHH",
+       "name": "Cali Brannan",
+       "marks": [
+        {
+         "t": "=",
+         "title": "Last race: 29th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "22:03"
+      },
+      {
+       "pos": "30",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Billie McClosky",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 19th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "22:04"
+      },
+      {
+       "pos": "31",
+       "pts": "27",
+       "club": "THH",
+       "name": "Bethanie Murray",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 23rd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "22:14"
+      },
+      {
+       "pos": "32",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Alex Gandee",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 20th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "22:19"
+      },
+      {
+       "pos": "33",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Lucy Peters",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 27th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "22:24"
+      },
+      {
+       "pos": "34",
+       "pts": "28",
+       "club": "RAN",
+       "name": "Suzy Whatmough",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 59th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "22:29"
+      },
+      {
+       "pos": "35",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Samantha Munday",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 31st at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "22:31"
+      },
+      {
+       "pos": "36",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Rose Pittman",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "22:34"
+      },
+      {
+       "pos": "37",
+       "pts": "29",
+       "club": "H/W",
+       "name": "Alexandra Carr",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 41st at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "22:38"
+      },
+      {
+       "pos": "38",
+       "pts": "30",
+       "club": "G&G",
+       "name": "Olivia Kelly",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 88th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "22:41"
+      },
+      {
+       "pos": "39",
+       "pts": "31",
+       "club": "SLH",
+       "name": "Sarah Overington",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 51st at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "22:42"
+      },
+      {
+       "pos": "40",
+       "pts": "32",
+       "club": "HOL",
+       "name": "Brittney Stewart",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "22:50"
+      },
+      {
+       "pos": "41",
+       "pts": "33",
+       "club": "H/W",
+       "name": "Claire Grima",
+       "marks": [
+        {
+         "t": "🐐",
+         "title": "Is Hercules Wimbledon's greatest A-team scorer of all time"
+        },
+        {
+         "t": "=",
+         "title": "Last race: 41st at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "22:52"
+      },
+      {
+       "pos": "42",
+       "pts": "-",
+       "club": "HHH",
+       "name": "Laura Gent",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 14th at Beckenham Place Park (Nov 2025)"
+        }
+       ],
+       "time": "22:55"
+      },
+      {
+       "pos": "43",
+       "pts": "-",
+       "club": "HHH",
+       "name": "Madelaine Parmar",
+       "marks": [
+        {
+         "t": "(N/S)",
+         "title": ""
+        },
+        {
+         "t": "▲",
+         "title": "Last race: 78th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:03"
+      },
+      {
+       "pos": "44",
+       "pts": "-",
+       "club": "HHH",
+       "name": "Antara Jain",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "23:11"
+      },
+      {
+       "pos": "45",
+       "pts": "34",
+       "club": "KEN",
+       "name": "Iona Cousland",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 39th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:12"
+      },
+      {
+       "pos": "46",
+       "pts": "35",
+       "club": "G&G",
+       "name": "Alice Cheng",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 52nd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:15"
+      },
+      {
+       "pos": "47",
+       "pts": "36",
+       "club": "THH",
+       "name": "Chloe Beckett",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 82nd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:15"
+      },
+      {
+       "pos": "48",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Ella King Powrie",
+       "marks": [
+        {
+         "t": "(N/S)",
+         "title": ""
+        },
+        {
+         "t": "▼",
+         "title": "Last race: 45th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:16"
+      },
+      {
+       "pos": "49",
+       "pts": "37",
+       "club": "KEN",
+       "name": "Alexa Parker",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 33rd at Wimbledon Common (Oct 2024)"
+        }
+       ],
+       "time": "23:17"
+      },
+      {
+       "pos": "50",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Emma Rowland",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 57th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:22"
+      },
+      {
+       "pos": "51",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Orla Walsh",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 42nd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:23"
+      },
+      {
+       "pos": "52",
+       "pts": "38",
+       "club": "H/W",
+       "name": "Poppy Robson",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 46th at Beckenham Place Park (Nov 2025)"
+        }
+       ],
+       "time": "23:24"
+      },
+      {
+       "pos": "53",
+       "pts": "39",
+       "club": "KEN",
+       "name": "Aisling Ahern",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 66th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:24"
+      },
+      {
+       "pos": "54",
+       "pts": "40",
+       "club": "WOK",
+       "name": "Louise Mills",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 36th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:25"
+      },
+      {
+       "pos": "55",
+       "pts": "-",
+       "club": "G&G",
+       "name": "Eloise Bull",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 92nd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:25"
+      },
+      {
+       "pos": "56",
+       "pts": "41",
+       "club": "HOL",
+       "name": "Lucy Berryman",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 57th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "23:26"
+      },
+      {
+       "pos": "57",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Penny Oliver",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 77th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:28"
+      },
+      {
+       "pos": "58",
+       "pts": "42",
+       "club": "KEN",
+       "name": "Amelia Pettitt",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 136th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:30"
+      },
+      {
+       "pos": "59",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Bethan Goddard",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 99th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:32"
+      },
+      {
+       "pos": "60",
+       "pts": "43",
+       "club": "THH",
+       "name": "Felicity Hayward",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 35th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:34"
+      },
+      {
+       "pos": "61",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Maia Broughton",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "23:36"
+      },
+      {
+       "pos": "62",
+       "pts": "44",
+       "club": "SLH",
+       "name": "Nicola Archer",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 64th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "23:38"
+      },
+      {
+       "pos": "63",
+       "pts": "45",
+       "club": "H/W",
+       "name": "Polly Gammon",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "23:39"
+      },
+      {
+       "pos": "64",
+       "pts": "46",
+       "club": "THH",
+       "name": "Samantha Unsworth-white",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 100th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:41"
+      },
+      {
+       "pos": "65",
+       "pts": "47",
+       "club": "STR",
+       "name": "Sarah Palmer",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 53rd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:42"
+      },
+      {
+       "pos": "66",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Mhairi Hall",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 70th at West Horsley Place (Jan 2025)"
+        }
+       ],
+       "time": "23:43"
+      },
+      {
+       "pos": "67",
+       "pts": "48",
+       "club": "STR",
+       "name": "Lucy Chambers",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 95th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:44"
+      },
+      {
+       "pos": "68",
+       "pts": "49",
+       "club": "H/W",
+       "name": "Sophie Wakeford",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "23:45"
+      },
+      {
+       "pos": "69",
+       "pts": "50",
+       "club": "C/C",
+       "name": "Abbie Bulbulian",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 81st at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:46"
+      },
+      {
+       "pos": "70",
+       "pts": "-",
+       "club": "HHH",
+       "name": "Lily Kitto",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "23:48"
+      },
+      {
+       "pos": "71",
+       "pts": "-",
+       "club": "HHH",
+       "name": "Shannon Sinclair",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 80th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:49"
+      },
+      {
+       "pos": "72",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Gemma Newport",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 104th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:49"
+      },
+      {
+       "pos": "73",
+       "pts": "-",
+       "club": "HHH",
+       "name": "Maeve Minielly",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 101st at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:50"
+      },
+      {
+       "pos": "74",
+       "pts": "51",
+       "club": "WOK",
+       "name": "Georgie Furze",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 50th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:50"
+      },
+      {
+       "pos": "75",
+       "pts": "52",
+       "club": "KEN",
+       "name": "Annaka Charters",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "23:51"
+      },
+      {
+       "pos": "76",
+       "pts": "-",
+       "club": "HHH",
+       "name": "Karen Ellison",
+       "marks": [
+        {
+         "t": "🐐",
+         "title": "Is Herne Hill Harriers's greatest A-team scorer of all time"
+        },
+        {
+         "t": "▼",
+         "title": "Last race: 59th at Mitcham Common (Jan 2026)"
+        }
+       ],
+       "time": "23:55"
+      },
+      {
+       "pos": "77",
+       "pts": "-",
+       "club": "HHH",
+       "name": "Chloe Wright",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 84th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:56"
+      },
+      {
+       "pos": "78",
+       "pts": "53",
+       "club": "RAN",
+       "name": "Aoife Kilpatrick",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 73rd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "23:59"
+      },
+      {
+       "pos": "79",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Amy White",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 66th at Wimbledon Common (Jan 2024)"
+        }
+       ],
+       "time": "24:00"
+      },
+      {
+       "pos": "80",
+       "pts": "54",
+       "club": "RAN",
+       "name": "Lizzie Broughton",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 56th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:02"
+      },
+      {
+       "pos": "81",
+       "pts": "55",
+       "club": "W/W",
+       "name": "Amedea Kelly-Taglianini",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 107th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:02"
+      },
+      {
+       "pos": "82",
+       "pts": "56",
+       "club": "THH",
+       "name": "Claire Altmann",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 117th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:04"
+      },
+      {
+       "pos": "83",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Hayley Cherry",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 115th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:09"
+      },
+      {
+       "pos": "84",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Lauren Liversidge",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 93rd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:11"
+      },
+      {
+       "pos": "85",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Vic Cartwright",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 76th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "24:12"
+      },
+      {
+       "pos": "86",
+       "pts": "57",
+       "club": "RAN",
+       "name": "Natalie Haarer",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 94th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:16"
+      },
+      {
+       "pos": "87",
+       "pts": "58",
+       "club": "H/W",
+       "name": "Ava McAndie",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 85th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:17"
+      },
+      {
+       "pos": "88",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Claire Oxlade",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 68th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:26"
+      },
+      {
+       "pos": "89",
+       "pts": "-",
+       "club": "SLH",
+       "name": "Katie Mooney",
+       "marks": [
+        {
+         "t": "(N/S)",
+         "title": ""
+        },
+        {
+         "t": "▼",
+         "title": "Last race: 83rd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:26"
+      },
+      {
+       "pos": "90",
+       "pts": "59",
+       "club": "C/C",
+       "name": "Imogen Fawcett",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 89th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "24:29"
+      },
+      {
+       "pos": "91",
+       "pts": "60",
+       "club": "C/C",
+       "name": "Vicki Falck",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 152nd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:31"
+      },
+      {
+       "pos": "92",
+       "pts": "-",
+       "club": "H/W",
+       "name": "Matilde Lomba",
+       "marks": [
+        {
+         "t": "=",
+         "title": "Last race: 92nd at Epsom Downs (Feb 2025)"
+        }
+       ],
+       "time": "24:32"
+      },
+      {
+       "pos": "93",
+       "pts": "-",
+       "club": "HHH",
+       "name": "Suzanne Swaine",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 46th at Mitcham Common (Jan 2026)"
+        }
+       ],
+       "time": "24:32"
+      },
+      {
+       "pos": "94",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Sara Ridmy",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 89th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:34"
+      },
+      {
+       "pos": "95",
+       "pts": "61",
+       "club": "HOL",
+       "name": "Ruby Masson",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 89th at Beckenham Place Park (Nov 2025)"
+        }
+       ],
+       "time": "24:35"
+      },
+      {
+       "pos": "96",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Luiza Farache Trajano",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 111th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:37"
+      },
+      {
+       "pos": "97",
+       "pts": "62",
+       "club": "C/C",
+       "name": "Eleanor Andrews",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 74th at Mitcham Common (Jan 2026)"
+        }
+       ],
+       "time": "24:39"
+      },
+      {
+       "pos": "98",
+       "pts": "63",
+       "club": "THH",
+       "name": "Vikki Filsell",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 128th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:39"
+      },
+      {
+       "pos": "99",
+       "pts": "-",
+       "club": "HHH",
+       "name": "Charlotte Davies",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 62nd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:43"
+      },
+      {
+       "pos": "100",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Nesrin Sabanci",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 142nd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:45"
+      },
+      {
+       "pos": "101",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Parris Williams",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 134th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:53"
+      },
+      {
+       "pos": "102",
+       "pts": "64",
+       "club": "WOK",
+       "name": "Kath Taylor",
+       "marks": [
+        {
+         "t": "=",
+         "title": "Last race: 102nd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:55"
+      },
+      {
+       "pos": "103",
+       "pts": "-",
+       "club": "G&G",
+       "name": "Izzy White",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 131st at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "24:59"
+      },
+      {
+       "pos": "104",
+       "pts": "-",
+       "club": "H/W",
+       "name": "Molly Pocock",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 66th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "25:00"
+      },
+      {
+       "pos": "105",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Jemima D'Arcy",
+       "marks": [
+        {
+         "t": "=",
+         "title": "Last race: 105th at Beckenham Place Park (Jan 2023)"
+        }
+       ],
+       "time": "25:03"
+      },
+      {
+       "pos": "106",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Teresa Murphy",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 104th at Beckenham Place Park (Nov 2025)"
+        }
+       ],
+       "time": "25:05"
+      },
+      {
+       "pos": "107",
+       "pts": "65",
+       "club": "C/C",
+       "name": "Lizzi Milbourne",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "25:13"
+      },
+      {
+       "pos": "108",
+       "pts": "66",
+       "club": "SLH",
+       "name": "Alana Smith",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 159th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:14"
+      },
+      {
+       "pos": "109",
+       "pts": "67",
+       "club": "RAN",
+       "name": "Liz Wynn",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 175th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:17"
+      },
+      {
+       "pos": "110",
+       "pts": "68",
+       "club": "C/C",
+       "name": "Clare Harris",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 143rd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:19"
+      },
+      {
+       "pos": "111",
+       "pts": "69",
+       "club": "RAN",
+       "name": "Samantha Martyn",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 139th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:20"
+      },
+      {
+       "pos": "112",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Elinor Skinner",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 88th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "25:27"
+      },
+      {
+       "pos": "113",
+       "pts": "70",
+       "club": "RAN",
+       "name": "Agnes Nagy",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 107th at Beckenham Place Park (Nov 2025)"
+        }
+       ],
+       "time": "25:28"
+      },
+      {
+       "pos": "114",
+       "pts": "71",
+       "club": "REI",
+       "name": "Emily Jeanes",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 145th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:29"
+      },
+      {
+       "pos": "115",
+       "pts": "72",
+       "club": "WOK",
+       "name": "Olivia Farrow",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 133rd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:29"
+      },
+      {
+       "pos": "116",
+       "pts": "73",
+       "club": "C/C",
+       "name": "Jo Hargreaves",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 125th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:30"
+      },
+      {
+       "pos": "117",
+       "pts": "74",
+       "club": "REI",
+       "name": "Unknown",
+       "marks": [],
+       "time": "25:35"
+      },
+      {
+       "pos": "118",
+       "pts": "75",
+       "club": "WOK",
+       "name": "Amy Johnson",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 151st at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:39"
+      },
+      {
+       "pos": "119",
+       "pts": "-",
+       "club": "RAN",
+       "name": "Maria Jovani",
+       "marks": [
+        {
+         "t": "(N/S)",
+         "title": ""
+        },
+        {
+         "t": "▲",
+         "title": "Last race: 160th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:41"
+      },
+      {
+       "pos": "120",
+       "pts": "76",
+       "club": "HOL",
+       "name": "Kirsty Cutting",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 154th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:42"
+      },
+      {
+       "pos": "121",
+       "pts": "-",
+       "club": "RAN",
+       "name": "Robyn Smith",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 147th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "25:42"
+      },
+      {
+       "pos": "122",
+       "pts": "77",
+       "club": "STR",
+       "name": "Claire Curtin",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 118th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:43"
+      },
+      {
+       "pos": "123",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Lianne Lefreniere",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "25:44"
+      },
+      {
+       "pos": "124",
+       "pts": "-",
+       "club": "THH",
+       "name": "Freya Billinghurst",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 164th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:44"
+      },
+      {
+       "pos": "125",
+       "pts": "78",
+       "club": "W/W",
+       "name": "Abigail Craig",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 157th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:45"
+      },
+      {
+       "pos": "126",
+       "pts": "-",
+       "club": "H/W",
+       "name": "Blue Thorpe",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "25:45"
+      },
+      {
+       "pos": "127",
+       "pts": "-",
+       "club": "C/C",
+       "name": "Holly Govey",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 149th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:46"
+      },
+      {
+       "pos": "128",
+       "pts": "79",
+       "club": "WOK",
+       "name": "Lauren Chadwick",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 146th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:48"
+      },
+      {
+       "pos": "129",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Jo Wint",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 198th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "25:49"
+      },
+      {
+       "pos": "130",
+       "pts": "80",
+       "club": "W/W",
+       "name": "Annie Troung",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 119th at West Horsley Place (Feb 2024)"
+        }
+       ],
+       "time": "25:49"
+      },
+      {
+       "pos": "131",
+       "pts": "81",
+       "club": "SLH",
+       "name": "Lucy Connolly",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 114th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:50"
+      },
+      {
+       "pos": "132",
+       "pts": "-",
+       "club": "RAN",
+       "name": "Edel McKeever",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 113th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "25:51"
+      },
+      {
+       "pos": "133",
+       "pts": "82",
+       "club": "SLH",
+       "name": "Fiona Park",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 135th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "25:52"
+      },
+      {
+       "pos": "134",
+       "pts": "83",
+       "club": "SLH",
+       "name": "Debbie Jackson",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 92nd at Mitcham Common (Nov 2023)"
+        }
+       ],
+       "time": "26:04"
+      },
+      {
+       "pos": "135",
+       "pts": "84",
+       "club": "HOL",
+       "name": "Amy Kearney",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 150th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "26:04"
+      },
+      {
+       "pos": "136",
+       "pts": "-",
+       "club": "G&G",
+       "name": "Isla Stock",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "26:06"
+      },
+      {
+       "pos": "137",
+       "pts": "-",
+       "club": "SLH",
+       "name": "Ruth Hutton",
+       "marks": [
+        {
+         "t": "🐐",
+         "title": "Is South London Harriers's greatest A-team scorer of all time"
+        },
+        {
+         "t": "▲",
+         "title": "Last race: 161st at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "26:07"
+      },
+      {
+       "pos": "138",
+       "pts": "-",
+       "club": "THH",
+       "name": "Ianthe Hill",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "26:08"
+      },
+      {
+       "pos": "139",
+       "pts": "85",
+       "club": "W/W",
+       "name": "Roz Burton",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 156th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "26:12"
+      },
+      {
+       "pos": "140",
+       "pts": "86",
+       "club": "WOK",
+       "name": "Hennie Owen",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 144th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "26:14"
+      },
+      {
+       "pos": "141",
+       "pts": "87",
+       "club": "STR",
+       "name": "Nicole Hamilton",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 113th at Wimbledon Common (Oct 2024)"
+        }
+       ],
+       "time": "26:17"
+      },
+      {
+       "pos": "142",
+       "pts": "88",
+       "club": "REI",
+       "name": "Joanna Davey",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 141st at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "26:18"
+      },
+      {
+       "pos": "143",
+       "pts": "-",
+       "club": "C/C",
+       "name": "Vinh-Phuong Hoang",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 158th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "26:25"
+      },
+      {
+       "pos": "144",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Florence Ingram",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "26:28"
+      },
+      {
+       "pos": "145",
+       "pts": "-",
+       "club": "SLH",
+       "name": "Alice Smith",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 178th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "26:31"
+      },
+      {
+       "pos": "146",
+       "pts": "89",
+       "club": "HOL",
+       "name": "Emma Proto",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 102nd at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "26:32"
+      },
+      {
+       "pos": "147",
+       "pts": "-",
+       "club": "RAN",
+       "name": "Fiona Smith",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 148th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "26:34"
+      },
+      {
+       "pos": "148",
+       "pts": "-",
+       "club": "SLH",
+       "name": "Sophie Barrowman",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "26:35"
+      },
+      {
+       "pos": "149",
+       "pts": "-",
+       "club": "WOK",
+       "name": "Tash Griffiths",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 199th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "26:36"
+      },
+      {
+       "pos": "150",
+       "pts": "-",
+       "club": "THH",
+       "name": "Emma Lepinay",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 193rd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "26:37"
+      },
+      {
+       "pos": "151",
+       "pts": "90",
+       "club": "HOL",
+       "name": "Gemma Hall",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 165th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "26:39"
+      },
+      {
+       "pos": "152",
+       "pts": "-",
+       "club": "THH",
+       "name": "Jessica Davies",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 210th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "26:40"
+      },
+      {
+       "pos": "153",
+       "pts": "91",
+       "club": "REI",
+       "name": "Natanya Freedman",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 132nd at Epsom Downs (Feb 2025)"
+        }
+       ],
+       "time": "26:42"
+      },
+      {
+       "pos": "154",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Sally Urquhart",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 174th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "26:44"
+      },
+      {
+       "pos": "155",
+       "pts": "92",
+       "club": "REI",
+       "name": "Ginevra Stoneley",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 99th at Epsom Downs (Feb 2025)"
+        }
+       ],
+       "time": "26:51"
+      },
+      {
+       "pos": "156",
+       "pts": "93",
+       "club": "VAC",
+       "name": "Lucy Woolhouse",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 180th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "26:54"
+      },
+      {
+       "pos": "157",
+       "pts": "94",
+       "club": "VAC",
+       "name": "Lisa Thomas",
+       "marks": [
+        {
+         "t": "🐐",
+         "title": "Is Veterans AC's greatest A-team scorer of all time"
+        },
+        {
+         "t": "▲",
+         "title": "Last race: 176th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "26:56"
+      },
+      {
+       "pos": "158",
+       "pts": "-",
+       "club": "C/C",
+       "name": "Elle Mecrow",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 150th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "26:59"
+      },
+      {
+       "pos": "159",
+       "pts": "95",
+       "club": "STR",
+       "name": "Pam Whitter",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 179th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "27:05"
+      },
+      {
+       "pos": "160",
+       "pts": "96",
+       "club": "REI",
+       "name": "Linda Rodriguez",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 172nd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "27:06"
+      },
+      {
+       "pos": "161",
+       "pts": "-",
+       "club": "SLH",
+       "name": "Diana Dolce",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 136th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "27:10"
+      },
+      {
+       "pos": "162",
+       "pts": "-",
+       "club": "H/W",
+       "name": "Wenjia Chen",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 130th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "27:11"
+      },
+      {
+       "pos": "163",
+       "pts": "-",
+       "club": "WOK",
+       "name": "Claire Brittain",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 141st at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "27:17"
+      },
+      {
+       "pos": "164",
+       "pts": "-",
+       "club": "SLH",
+       "name": "Jessica Booth",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 186th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "27:19"
+      },
+      {
+       "pos": "165",
+       "pts": "-",
+       "club": "C/C",
+       "name": "Maddie Spellman",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 202nd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "27:24"
+      },
+      {
+       "pos": "166",
+       "pts": "97",
+       "club": "W/W",
+       "name": "Claire Boynton",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 168th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "27:26"
+      },
+      {
+       "pos": "167",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Suze Spalding",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 204th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "27:28"
+      },
+      {
+       "pos": "168",
+       "pts": "-",
+       "club": "SLH",
+       "name": "Hayley Rand",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 185th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "27:31"
+      },
+      {
+       "pos": "169",
+       "pts": "98",
+       "club": "W/W",
+       "name": "Lizzie Wright",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 170th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "27:35"
+      },
+      {
+       "pos": "170",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Susanna Davies",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 168th at Beckenham Place Park (Nov 2025)"
+        }
+       ],
+       "time": "27:48"
+      },
+      {
+       "pos": "171",
+       "pts": "-",
+       "club": "WOK",
+       "name": "Rohini Keites",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 173rd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "27:50"
+      },
+      {
+       "pos": "172",
+       "pts": "-",
+       "club": "HOL",
+       "name": "Sarah Anderson",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 197th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "27:51"
+      },
+      {
+       "pos": "173",
+       "pts": "-",
+       "club": "HOL",
+       "name": "Sarah O'Neill",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 190th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "27:55"
+      },
+      {
+       "pos": "174",
+       "pts": "-",
+       "club": "RAN",
+       "name": "Rebecca Bissell",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 195th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "27:56"
+      },
+      {
+       "pos": "175",
+       "pts": "-",
+       "club": "STR",
+       "name": "Lucy Hoseason",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 146th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "27:59"
+      },
+      {
+       "pos": "176",
+       "pts": "-",
+       "club": "BEL",
+       "name": "Josie Oliver",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "28:01"
+      },
+      {
+       "pos": "177",
+       "pts": "-",
+       "club": "STR",
+       "name": "Tara Holt",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 213th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "28:03"
+      },
+      {
+       "pos": "178",
+       "pts": "-",
+       "club": "G&G",
+       "name": "Laura Locatelli",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "28:04"
+      },
+      {
+       "pos": "179",
+       "pts": "-",
+       "club": "STR",
+       "name": "Anna Diamantopolous",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 194th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "28:12"
+      },
+      {
+       "pos": "180",
+       "pts": "-",
+       "club": "RAN",
+       "name": "Emily Fenwick",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "28:13"
+      },
+      {
+       "pos": "181",
+       "pts": "-",
+       "club": "HOL",
+       "name": "Sophie Lovie",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 217th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "28:16"
+      },
+      {
+       "pos": "182",
+       "pts": "-",
+       "club": "RAN",
+       "name": "Wiebke Kortum",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 196th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "28:17"
+      },
+      {
+       "pos": "183",
+       "pts": "-",
+       "club": "SLH",
+       "name": "Pippa Major",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 215th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "28:18"
+      },
+      {
+       "pos": "184",
+       "pts": "-",
+       "club": "STR",
+       "name": "Louise Lancaster",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "28:34"
+      },
+      {
+       "pos": "185",
+       "pts": "-",
+       "club": "H/W",
+       "name": "Jacqueline Richardson",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 203rd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "28:38"
+      },
+      {
+       "pos": "186",
+       "pts": "-",
+       "club": "THH",
+       "name": "Jessica Pye",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 144th at Effingham Common (Oct 2022)"
+        }
+       ],
+       "time": "28:40"
+      },
+      {
+       "pos": "187",
+       "pts": "-",
+       "club": "HOL",
+       "name": "Katherine Ellis",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 207th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "28:56"
+      },
+      {
+       "pos": "188",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Rebecca Palser",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "29:02"
+      },
+      {
+       "pos": "189",
+       "pts": "-",
+       "club": "C/C",
+       "name": "Lauren Wood",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "29:03"
+      },
+      {
+       "pos": "190",
+       "pts": "-",
+       "club": "STR",
+       "name": "Ellie Jackson",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 225th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "29:15"
+      },
+      {
+       "pos": "191",
+       "pts": "99",
+       "club": "W/W",
+       "name": "Alice Evans",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 222nd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "29:16"
+      },
+      {
+       "pos": "192",
+       "pts": "100",
+       "club": "REI",
+       "name": "Ruth Willis",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 93rd at Epsom Downs (Feb 2025)"
+        }
+       ],
+       "time": "29:20"
+      },
+      {
+       "pos": "193",
+       "pts": "-",
+       "club": "SLH",
+       "name": "Pam Iannella",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 219th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "29:21"
+      },
+      {
+       "pos": "194",
+       "pts": "-",
+       "club": "W/W",
+       "name": "Christina Haralambous",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "29:29"
+      },
+      {
+       "pos": "195",
+       "pts": "-",
+       "club": "STR",
+       "name": "Rachel Simpson",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 182nd at Wimbledon Common (Jan 2024)"
+        }
+       ],
+       "time": "29:30"
+      },
+      {
+       "pos": "196",
+       "pts": "-",
+       "club": "STR",
+       "name": "Pamela McHutchon",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 223rd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "29:34"
+      },
+      {
+       "pos": "197",
+       "pts": "-",
+       "club": "THH",
+       "name": "Holly Boyle",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "29:35"
+      },
+      {
+       "pos": "198",
+       "pts": "-",
+       "club": "C/C",
+       "name": "Marisa Pineo",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 171st at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "29:42"
+      },
+      {
+       "pos": "199",
+       "pts": "-",
+       "club": "W/W",
+       "name": "Jane Hardie",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "29:53"
+      },
+      {
+       "pos": "200",
+       "pts": "-",
+       "club": "C/C",
+       "name": "Elizabeth Watson",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 266th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "30:04"
+      },
+      {
+       "pos": "201",
+       "pts": "-",
+       "club": "H/W",
+       "name": "Liz Legge",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 207th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "30:06"
+      },
+      {
+       "pos": "202",
+       "pts": "-",
+       "club": "HOL",
+       "name": "Adrianne Gibbins",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 201st at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "30:09"
+      },
+      {
+       "pos": "203",
+       "pts": "-",
+       "club": "C/C",
+       "name": "Helen Jaques",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 188th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "30:22"
+      },
+      {
+       "pos": "204",
+       "pts": "-",
+       "club": "W/W",
+       "name": "Charlotte Wright",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "30:30"
+      },
+      {
+       "pos": "205",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Johanna Cartledge",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "30:33"
+      },
+      {
+       "pos": "206",
+       "pts": "-",
+       "club": "C/C",
+       "name": "Sally Marr",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "30:38"
+      },
+      {
+       "pos": "207",
+       "pts": "-",
+       "club": "HHH",
+       "name": "Mary Setyabule",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 234th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "30:44"
+      },
+      {
+       "pos": "208",
+       "pts": "-",
+       "club": "C/C",
+       "name": "Beth Clarke",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 222nd at Beckenham Place Park (Nov 2025)"
+        }
+       ],
+       "time": "30:47"
+      },
+      {
+       "pos": "209",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Karina Box",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 114th at Mitcham Common (Jan 2026)"
+        }
+       ],
+       "time": "30:48"
+      },
+      {
+       "pos": "210",
+       "pts": "-",
+       "club": "STR",
+       "name": "Rachel Baranska",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 224th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "30:51"
+      },
+      {
+       "pos": "211",
+       "pts": "-",
+       "club": "H/W",
+       "name": "Regina Reti",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "31:01"
+      },
+      {
+       "pos": "212",
+       "pts": "-",
+       "club": "C/C",
+       "name": "Katy Goodhead",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "31:04"
+      },
+      {
+       "pos": "213",
+       "pts": "-",
+       "club": "W/W",
+       "name": "Lindsay Doy",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 194th at Wimbledon Common (Jan 2024)"
+        }
+       ],
+       "time": "31:07"
+      },
+      {
+       "pos": "214",
+       "pts": "-",
+       "club": "W/W",
+       "name": "Deborah Ghadially",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "31:13"
+      },
+      {
+       "pos": "215",
+       "pts": "-",
+       "club": "RAN",
+       "name": "Aurelie Zahm",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 236th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "31:17"
+      },
+      {
+       "pos": "216",
+       "pts": "101",
+       "club": "VAC",
+       "name": "Gina Coulson",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 227th at Richmond Park (Feb 2020)"
+        }
+       ],
+       "time": "31:41"
+      },
+      {
+       "pos": "217",
+       "pts": "-",
+       "club": "W/W",
+       "name": "Amelia Ashton-Jones",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 246th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "31:53"
+      },
+      {
+       "pos": "218",
+       "pts": "-",
+       "club": "C/C",
+       "name": "Molly Laycock",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 240th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "32:21"
+      },
+      {
+       "pos": "219",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Sarah Parry",
+       "marks": [
+        {
+         "t": "✦",
+         "title": "First Div 1 race on record"
+        }
+       ],
+       "time": "32:27"
+      },
+      {
+       "pos": "220",
+       "pts": "-",
+       "club": "H/W",
+       "name": "Allie Donoghue-Hunt",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 238th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "32:59"
+      },
+      {
+       "pos": "221",
+       "pts": "-",
+       "club": "H/W",
+       "name": "Sarah Twaite",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 131st at Mitcham Common (Jan 2026)"
+        }
+       ],
+       "time": "33:00"
+      },
+      {
+       "pos": "222",
+       "pts": "-",
+       "club": "REI",
+       "name": "Annette Morris",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 206th at Richmond Park (Feb 2020)"
+        }
+       ],
+       "time": "33:20"
+      },
+      {
+       "pos": "223",
+       "pts": "-",
+       "club": "W/W",
+       "name": "Chiara Samele",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 252nd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "33:43"
+      },
+      {
+       "pos": "224",
+       "pts": "-",
+       "club": "STR",
+       "name": "Emily Barrow",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 134th at West Horsley Place (Feb 2024)"
+        }
+       ],
+       "time": "33:53"
+      },
+      {
+       "pos": "225",
+       "pts": "-",
+       "club": "C/C",
+       "name": "Rebecca Spencer",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 253rd at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "34:10"
+      },
+      {
+       "pos": "226",
+       "pts": "-",
+       "club": "G&G",
+       "name": "Elizabeth Davies",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 214th at Hurst Green (Oct 2025)"
+        }
+       ],
+       "time": "34:20"
+      },
+      {
+       "pos": "227",
+       "pts": "-",
+       "club": "C/C",
+       "name": "Reema Ismail",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 220th at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "35:06"
+      },
+      {
+       "pos": "228",
+       "pts": "-",
+       "club": "W/W",
+       "name": "Claire Morgan",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 259th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "35:35"
+      },
+      {
+       "pos": "229",
+       "pts": "-",
+       "club": "C/C",
+       "name": "Abby Halfacre",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 260th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "35:36"
+      },
+      {
+       "pos": "230",
+       "pts": "-",
+       "club": "W/W",
+       "name": "Flora Blake-Parsons",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 257th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "35:56"
+      },
+      {
+       "pos": "231",
+       "pts": "-",
+       "club": "W/W",
+       "name": "Anne Davies",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 238th at Wimbledon Common (Jan 2024)"
+        }
+       ],
+       "time": "36:36"
+      },
+      {
+       "pos": "232",
+       "pts": "102",
+       "club": "VAC",
+       "name": "Gillian Wheeldon",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 246th at Wimbledon Common (Nov 2021)"
+        }
+       ],
+       "time": "40:41"
+      },
+      {
+       "pos": "233",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Zoë Gaffen",
+       "marks": [
+        {
+         "t": "▲",
+         "title": "Last race: 270th at Wimbledon Common (Oct 2026)"
+        }
+       ],
+       "time": "40:56"
+      },
+      {
+       "pos": "234",
+       "pts": "-",
+       "club": "KEN",
+       "name": "Annabelle Hadlow",
+       "marks": [
+        {
+         "t": "▼",
+         "title": "Last race: 231st at Wimbledon Common (Feb 2026)"
+        }
+       ],
+       "time": "41:14"
+      }
+     ],
+     "aTeams": [
+      {
+       "pos": "1",
+       "club": "HHH",
+       "pts": "51",
+       "scores": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "8",
+        "13",
+        "20"
+       ]
+      },
+      {
+       "pos": "2",
+       "club": "BEL",
+       "pts": "77",
+       "scores": [
+        "5",
+        "6",
+        "7",
+        "12",
+        "14",
+        "16",
+        "17"
+       ]
+      },
+      {
+       "pos": "3",
+       "club": "G&G",
+       "pts": "153",
+       "scores": [
+        "9",
+        "10",
+        "19",
+        "24",
+        "26",
+        "30",
+        "35"
+       ]
+      },
+      {
+       "pos": "4",
+       "club": "KEN",
+       "pts": "240",
+       "scores": [
+        "15",
+        "21",
+        "34",
+        "37",
+        "39",
+        "42",
+        "52"
+       ]
+      },
+      {
+       "pos": "5",
+       "club": "H/W",
+       "pts": "277",
+       "scores": [
+        "25",
+        "29",
+        "33",
+        "38",
+        "45",
+        "49",
+        "58"
+       ]
+      },
+      {
+       "pos": "6",
+       "club": "THH",
+       "pts": "282",
+       "scores": [
+        "11",
+        "27",
+        "36",
+        "43",
+        "46",
+        "56",
+        "63"
+       ]
+      },
+      {
+       "pos": "7",
+       "club": "STR",
+       "pts": "394",
+       "scores": [
+        "18",
+        "22",
+        "47",
+        "48",
+        "77",
+        "87",
+        "95"
+       ]
+      },
+      {
+       "pos": "8",
+       "club": "RAN",
+       "pts": "398",
+       "scores": [
+        "28",
+        "53",
+        "54",
+        "57",
+        "67",
+        "69",
+        "70"
+       ]
+      },
+      {
+       "pos": "9",
+       "club": "SLH",
+       "pts": "410",
+       "scores": [
+        "23",
+        "31",
+        "44",
+        "66",
+        "81",
+        "82",
+        "83"
+       ]
+      },
+      {
+       "pos": "10",
+       "club": "C/C",
+       "pts": "437",
+       "scores": [
+        "50",
+        "59",
+        "60",
+        "62",
+        "65",
+        "68",
+        "73"
+       ]
+      },
+      {
+       "pos": "11",
+       "club": "WOK",
+       "pts": "467",
+       "scores": [
+        "40",
+        "51",
+        "64",
+        "72",
+        "75",
+        "79",
+        "86"
+       ]
+      },
+      {
+       "pos": "12",
+       "club": "HOL",
+       "pts": "473",
+       "scores": [
+        "32",
+        "41",
+        "61",
+        "76",
+        "84",
+        "89",
+        "90"
+       ]
+      },
+      {
+       "pos": "13",
+       "club": "W/W",
+       "pts": "592",
+       "scores": [
+        "55",
+        "78",
+        "80",
+        "85",
+        "97",
+        "98",
+        "99"
+       ]
+      },
+      {
+       "pos": "14",
+       "club": "REI",
+       "pts": "612",
+       "scores": [
+        "71",
+        "74",
+        "88",
+        "91",
+        "92",
+        "96",
+        "100"
+       ]
+      },
+      {
+       "pos": "15",
+       "club": "VAC",
+       "pts": "702",
+       "scores": [
+        "93",
+        "94",
+        "101",
+        "102",
+        "*",
+        "*",
+        "*"
+       ]
+      }
+     ],
+     "bTeams": [
+      {
+       "pos": "1",
+       "club": "BEL",
+       "pts": "33",
+       "scores": [
+        "1",
+        "2",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+       ]
+      },
+      {
+       "pos": "2",
+       "club": "HHH",
+       "pts": "76",
+       "scores": [
+        "3",
+        "9",
+        "10",
+        "12",
+        "13",
+        "14",
+        "15"
+       ]
+      },
+      {
+       "pos": "3",
+       "club": "KEN",
+       "pts": "138",
+       "scores": [
+        "16",
+        "17",
+        "18",
+        "19",
+        "21",
+        "22",
+        "25"
+       ]
+      },
+      {
+       "pos": "4",
+       "club": "SLH",
+       "pts": "297",
+       "scores": [
+        "32",
+        "35",
+        "37",
+        "42",
+        "45",
+        "47",
+        "59"
+       ]
+      },
+      {
+       "pos": "5",
+       "club": "H/W",
+       "pts": "325",
+       "scores": [
+        "20",
+        "24",
+        "28",
+        "43",
+        "61",
+        "73",
+        "76"
+       ]
+      },
+      {
+       "pos": "6",
+       "club": "RAN",
+       "pts": "336",
+       "scores": [
+        "26",
+        "30",
+        "36",
+        "51",
+        "56",
+        "58",
+        "79"
+       ]
+      },
+      {
+       "pos": "7",
+       "club": "C/C",
+       "pts": "356",
+       "scores": [
+        "29",
+        "34",
+        "41",
+        "46",
+        "64",
+        "70",
+        "72"
+       ]
+      },
+      {
+       "pos": "8",
+       "club": "THH",
+       "pts": "364.5",
+       "scores": [
+        "27",
+        "33",
+        "39",
+        "40",
+        "62",
+        "69",
+        "*"
+       ]
+      },
+      {
+       "pos": "9",
+       "club": "G&G",
+       "pts": "391",
+       "scores": [
+        "11",
+        "23",
+        "31",
+        "54",
+        "83",
+        "*",
+        "*"
+       ]
+      },
+      {
+       "pos": "10",
+       "club": "STR",
+       "pts": "420",
+       "scores": [
+        "52",
+        "53",
+        "55",
+        "60",
+        "65",
+        "67",
+        "68"
+       ]
+      },
+      {
+       "pos": "11",
+       "club": "HOL",
+       "pts": "482",
+       "scores": [
+        "49",
+        "50",
+        "57",
+        "63",
+        "74",
+        "*",
+        "*"
+       ]
+      },
+      {
+       "pos": "12",
+       "club": "WOK",
+       "pts": "508",
+       "scores": [
+        "38",
+        "44",
+        "48",
+        "*",
+        "*",
+        "*",
+        "*"
+       ]
+      },
+      {
+       "pos": "13",
+       "club": "W/W",
+       "pts": "529",
+       "scores": [
+        "66",
+        "71",
+        "75",
+        "77",
+        "78",
+        "80",
+        "82"
+       ]
+      },
+      {
+       "pos": "14",
+       "club": "REI",
+       "pts": "648",
+       "scores": [
+        "81",
+        "*",
+        "*",
+        "*",
+        "*",
+        "*",
+        "*"
+       ]
+      },
+      {
+       "pos": "15",
+       "club": "VAC",
+       "pts": "661.5",
+       "scores": [
+        "*",
+        "*",
+        "*",
+        "*",
+        "*",
+        "*",
+        "*"
+       ]
+      }
+     ],
+     "athleteBase": "https://slarchive.org/women/athlete/",
+     "sex": "Women"
+    }
+   ]
   }
- ],
- "aTeams": [
-  {
-   "pos": "1",
-   "club": "HHH",
-   "pts": "51",
-   "scores": [
-    "1",
-    "2",
-    "3",
-    "4",
-    "8",
-    "13",
-    "20"
-   ]
-  },
-  {
-   "pos": "2",
-   "club": "BEL",
-   "pts": "77",
-   "scores": [
-    "5",
-    "6",
-    "7",
-    "12",
-    "14",
-    "16",
-    "17"
-   ]
-  },
-  {
-   "pos": "3",
-   "club": "G&G",
-   "pts": "153",
-   "scores": [
-    "9",
-    "10",
-    "19",
-    "24",
-    "26",
-    "30",
-    "35"
-   ]
-  },
-  {
-   "pos": "4",
-   "club": "KEN",
-   "pts": "240",
-   "scores": [
-    "15",
-    "21",
-    "34",
-    "37",
-    "39",
-    "42",
-    "52"
-   ]
-  },
-  {
-   "pos": "5",
-   "club": "H/W",
-   "pts": "277",
-   "scores": [
-    "25",
-    "29",
-    "33",
-    "38",
-    "45",
-    "49",
-    "58"
-   ]
-  },
-  {
-   "pos": "6",
-   "club": "THH",
-   "pts": "282",
-   "scores": [
-    "11",
-    "27",
-    "36",
-    "43",
-    "46",
-    "56",
-    "63"
-   ]
-  },
-  {
-   "pos": "7",
-   "club": "STR",
-   "pts": "394",
-   "scores": [
-    "18",
-    "22",
-    "47",
-    "48",
-    "77",
-    "87",
-    "95"
-   ]
-  },
-  {
-   "pos": "8",
-   "club": "RAN",
-   "pts": "398",
-   "scores": [
-    "28",
-    "53",
-    "54",
-    "57",
-    "67",
-    "69",
-    "70"
-   ]
-  },
-  {
-   "pos": "9",
-   "club": "SLH",
-   "pts": "410",
-   "scores": [
-    "23",
-    "31",
-    "44",
-    "66",
-    "81",
-    "82",
-    "83"
-   ]
-  },
-  {
-   "pos": "10",
-   "club": "C/C",
-   "pts": "437",
-   "scores": [
-    "50",
-    "59",
-    "60",
-    "62",
-    "65",
-    "68",
-    "73"
-   ]
-  },
-  {
-   "pos": "11",
-   "club": "WOK",
-   "pts": "467",
-   "scores": [
-    "40",
-    "51",
-    "64",
-    "72",
-    "75",
-    "79",
-    "86"
-   ]
-  },
-  {
-   "pos": "12",
-   "club": "HOL",
-   "pts": "473",
-   "scores": [
-    "32",
-    "41",
-    "61",
-    "76",
-    "84",
-    "89",
-    "90"
-   ]
-  },
-  {
-   "pos": "13",
-   "club": "W/W",
-   "pts": "592",
-   "scores": [
-    "55",
-    "78",
-    "80",
-    "85",
-    "97",
-    "98",
-    "99"
-   ]
-  },
-  {
-   "pos": "14",
-   "club": "REI",
-   "pts": "612",
-   "scores": [
-    "71",
-    "74",
-    "88",
-    "91",
-    "92",
-    "96",
-    "100"
-   ]
-  },
-  {
-   "pos": "15",
-   "club": "VAC",
-   "pts": "702",
-   "scores": [
-    "93",
-    "94",
-    "101",
-    "102",
-    "*",
-    "*",
-    "*"
-   ]
-  }
- ],
- "bTeams": [
-  {
-   "pos": "1",
-   "club": "BEL",
-   "pts": "33",
-   "scores": [
-    "1",
-    "2",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8"
-   ]
-  },
-  {
-   "pos": "2",
-   "club": "HHH",
-   "pts": "76",
-   "scores": [
-    "3",
-    "9",
-    "10",
-    "12",
-    "13",
-    "14",
-    "15"
-   ]
-  },
-  {
-   "pos": "3",
-   "club": "KEN",
-   "pts": "138",
-   "scores": [
-    "16",
-    "17",
-    "18",
-    "19",
-    "21",
-    "22",
-    "25"
-   ]
-  },
-  {
-   "pos": "4",
-   "club": "SLH",
-   "pts": "297",
-   "scores": [
-    "32",
-    "35",
-    "37",
-    "42",
-    "45",
-    "47",
-    "59"
-   ]
-  },
-  {
-   "pos": "5",
-   "club": "H/W",
-   "pts": "325",
-   "scores": [
-    "20",
-    "24",
-    "28",
-    "43",
-    "61",
-    "73",
-    "76"
-   ]
-  },
-  {
-   "pos": "6",
-   "club": "RAN",
-   "pts": "336",
-   "scores": [
-    "26",
-    "30",
-    "36",
-    "51",
-    "56",
-    "58",
-    "79"
-   ]
-  },
-  {
-   "pos": "7",
-   "club": "C/C",
-   "pts": "356",
-   "scores": [
-    "29",
-    "34",
-    "41",
-    "46",
-    "64",
-    "70",
-    "72"
-   ]
-  },
-  {
-   "pos": "8",
-   "club": "THH",
-   "pts": "364.5",
-   "scores": [
-    "27",
-    "33",
-    "39",
-    "40",
-    "62",
-    "69",
-    "*"
-   ]
-  },
-  {
-   "pos": "9",
-   "club": "G&G",
-   "pts": "391",
-   "scores": [
-    "11",
-    "23",
-    "31",
-    "54",
-    "83",
-    "*",
-    "*"
-   ]
-  },
-  {
-   "pos": "10",
-   "club": "STR",
-   "pts": "420",
-   "scores": [
-    "52",
-    "53",
-    "55",
-    "60",
-    "65",
-    "67",
-    "68"
-   ]
-  },
-  {
-   "pos": "11",
-   "club": "HOL",
-   "pts": "482",
-   "scores": [
-    "49",
-    "50",
-    "57",
-    "63",
-    "74",
-    "*",
-    "*"
-   ]
-  },
-  {
-   "pos": "12",
-   "club": "WOK",
-   "pts": "508",
-   "scores": [
-    "38",
-    "44",
-    "48",
-    "*",
-    "*",
-    "*",
-    "*"
-   ]
-  },
-  {
-   "pos": "13",
-   "club": "W/W",
-   "pts": "529",
-   "scores": [
-    "66",
-    "71",
-    "75",
-    "77",
-    "78",
-    "80",
-    "82"
-   ]
-  },
-  {
-   "pos": "14",
-   "club": "REI",
-   "pts": "648",
-   "scores": [
-    "81",
-    "*",
-    "*",
-    "*",
-    "*",
-    "*",
-    "*"
-   ]
-  },
-  {
-   "pos": "15",
-   "club": "VAC",
-   "pts": "661.5",
-   "scores": [
-    "*",
-    "*",
-    "*",
-    "*",
-    "*",
-    "*",
-    "*"
-   ]
-  }
- ],
- "athleteBase": "https://slarchive.org/women/athlete/",
- "sex": "Women"
+ ]
 }
